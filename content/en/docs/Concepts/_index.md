@@ -1,17 +1,33 @@
 ---
-title: "Concepts"
-linkTitle: "Concepts"
+title: "Architecture"
+linkTitle: "Architecture"
 weight: 4
 description: >
   What does your user need to understand about your project in order to use it - or potentially contribute to it? 
 ---
 
-{{% pageinfo %}}
-This is a placeholder page that shows you how to use this template site.
-{{% /pageinfo %}}
+# Layers
+vnm: [https://github.com/NeuroDesk/vnm](https://github.com/NeuroDesk/vnm)
+* docker container with interface modifications
+* contains tools necessary to manage containers: vscode, git, niype, octave?
+* CI: builds docker image and tests if it runs
 
-For many projects, users may not need much information beyond the information in the [Overview](/docs/overview/), so this section is **optional**. However if there are areas where your users will need a more detailed understanding of a given term or feature in order to do anything useful with your project (or to not make mistakes when using it) put that information in this section. For example, you may want to add some conceptual pages if you have a large project with many components and a complex architecture.
+neurodesk: [https://github.com/NeuroDesk/neurodesk](https://github.com/NeuroDesk/neurodesk)
+* script to install and manage multiple containers using transparent singularity on any linux system
+* this repo would also handle the creation of menu entries in a general form applicable to different desktop environments
+* this repo can be re-used in other projects like CVL and the imaging workstations
+* CI: tests if containers can be installed
 
-Remember to focus on what the user needs to know, not just what you think is interesting about your project! If they don’t need to understand your original design decisions to use or contribute to the project, don’t put them in, or include your design docs in your repo and link to them. Similarly, most users will probably need to know more about how features work when in use rather than how they are implemented. Consider a separate architecture page for more detailed implementation and system design information that potential project contributors can consult.
+transparent-singularity: [https://github.com/NeuroDesk/transparent-singularity](https://github.com/NeuroDesk/transparent-singularity)
+* script to install neuro-sub-containers, installers are called by neurodesk script 
+* this repo could provide a simple way of using our containers on HPCs for large scale processing of the pipelines build in VNM
+* CI: test if exposing of binaries work
 
+caid: [https://github.com/NeuroDesk/caid](https://github.com/NeuroDesk/caid)
+* build scripts for neuro-sub-containers 
+* CI: building, pushing and testing of containers 
 
+neuro-docker: [https://github.com/NeuroDesk/neurodocker](https://github.com/NeuroDesk/neurodocker)
+* provides recipes for containers built using caid 
+* we are providing pull requests back of recipes
+* CI: handled by [neurodocker](https://github.com/ReproNim/neurodocker) - testing of generating container recipes
