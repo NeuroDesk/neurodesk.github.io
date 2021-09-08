@@ -8,17 +8,46 @@ menu:
     weight: 20
 ---
 
-{{% pageinfo %}}
-This is a placeholder page that shows you how to use this template site.
-{{% /pageinfo %}}
+# Neurodesktop
+
+_Easiest way to run Neurodesk_
+
+Neurodesktop is a compact Docker container with a browser-accessible environment for reproducible neuroimaging analysis. Only the required applications, already pre-installed, are downloaded from a public library (downloaded as containers).
+
+[2-minutes tutorial video from OHBM 2021](https://www.youtube.com/watch?v=JLv_5fycugw)
+
+[More information on Neurodesktop](https://neurodesk.github.io/docs/neurodesktop)
+
+# Neurocommand
+_Recommended for Advanced users_
+
+Installer that turns the host into a flexible, scalable, and easy to use data analysis environment for reproducible neuroimaging. Neurodesktop pre-installs Neurocommand in an Ubuntu docker container providing simple access to the powerful capabilities of Neurodesk.
+
+Requires a Linux host machine, WSL for Windows, or a virtual machine.
+
+[Neurodesk architecture](https://neurodesk.github.io/docs/architecture)
+
+[More information on Neurocommand](https://neurodesk.github.io/docs/neurocommand)
 
 
-This section is where the user documentation for your project lives - all the information your users need to understand and successfully use your project. 
+# Feedback & Inquiries
 
-For large documentation sets we recommend adding content under the headings in this section, though if some or all of them don’t apply to your project feel free to remove them or add your own. You can see an example of a smaller Docsy documentation site in the [Docsy User Guide](https://docsy.dev/docs/), which lives in the [Docsy theme repo](https://github.com/google/docsy/tree/master/userguide) if you'd like to copy its docs section. 
+You're welcome to complete [this survey](https://forms.gle/deKy85yniJLP4hDM8) to help guide future additions to the software library
 
-Other content such as marketing material, case studies, and community updates should live in the [About](/about/) and [Community](/community/) pages.
+For inquiries, please open a [new issue](https://github.com/NeuroDesk/neurodesk/issues), or contact [Steffen Bollmann](https://github.com/stebo85) or [Oren Civier](https://github.com/civier) or [Aswin Narayanan](https://github.com/aswinnarayanan).
 
-Find out how to use the Docsy theme in the [Docsy User Guide](https://docsy.dev/docs/). You can learn more about how to organize your documentation (and how we organized this site) in [Organizing Your Content](https://docsy.dev/docs/best-practices/organizing-content/).
+## Acknowledgments
+<!-- <img src="/assets/img/nif.png" width="250">
+<img src="/assets/img/uq_logo.png" width="250">
+<img src="/assets/img/swinburne_uni_logo.svg" width="250">
+<img src="/assets/img/liege_uni_logo.svg" width="250"> -->
 
+## Funding
+Thank you to Oracle for Research for providing Oracle Cloud credits and related resources to support this project.
 
+<img src="https://user-images.githubusercontent.com/4021595/119061922-db877080-ba18-11eb-9882-d53a25ec88ee.png" width="250">
+
+This project is supported by an Australian Research Data Commons (ARDC) Platform project “Australian
+Electrophysiology Data Analytics PlaTform (AEDAPT)”.
+
+<img src="https://user-images.githubusercontent.com/4021595/119062104-3caf4400-ba19-11eb-8211-e2e9ce831a16.png" width="250">
