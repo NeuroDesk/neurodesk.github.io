@@ -1,6 +1,7 @@
 ---
 title: "MacOS"
 linkTitle: "MacOS"
+weight: 2
 description: >
   Installation
 ---

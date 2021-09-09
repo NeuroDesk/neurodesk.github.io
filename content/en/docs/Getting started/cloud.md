@@ -1,6 +1,7 @@
 ---
 title: "Cloud"
 linkTitle: "Cloud"
+weight: 5
 description: >
   Installation
 ---

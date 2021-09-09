@@ -1,6 +1,7 @@
 ---
 title: "HPC"
 linkTitle: "HPC"
+weight: 4
 description: >
   Installation
 ---
