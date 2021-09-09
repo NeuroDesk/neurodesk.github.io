@@ -1,7 +1,7 @@
 ---
 title: "Advanced"
 linkTitle: "Advanced"
-weight: 4
+weight: 3
 description: >
   Advanced usage
 ---
