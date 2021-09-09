@@ -3,10 +3,8 @@ title: "Neurocommand"
 linkTitle: "Neurocommand"
 weight: 2
 description: >
-  Here's where your user finds out if your project is for them.
+  Setup of Neurocommand
 ---
-
-_For running Neurodesk in a Docker container, refer to [https://github.com/NeuroDesk/vnm](https://neurodesk.github.io/docs/vnm)_
 
 Requires a Linux host machine, virtual machine or WSL for Windows.
 

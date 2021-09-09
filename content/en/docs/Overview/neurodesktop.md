@@ -8,55 +8,12 @@ description: >
 
 
 
-## Minimum System Requirements
-1. Atleast 3GB free space for neuromachine base image
-2. Docker requirements. Details found under https://docs.docker.com/get-docker/
-3. (Windows Users) If installing docker using WSL, atleast 20GB space recommended for WSL with Ubuntu
+For operating system specific instructions see Getting started
+https://neurodesk.github.io/docs/getting-started/
 
-## Quickstart
-1. Install Docker from here: https://docs.docker.com/get-docker/ (Mac, Windows, Linux; for HPC/supercomputer: https://github.com/NeuroDesk/neurodesk)
 
-2. Create a local folder where the downloaded applications will be stored, e.g. ~/vnm in Mac and Linux, or C:\vnm in Windows 
+## How to access files from your Host computer?
+The `-v C:/neurodesktop:/neurodesktop` part of the docker command links the directory "neurodesktop" on the "C drive" of your Windows computer to the directory /neurodesktop inside the Desktop environment. Everything you store in there will be available inside VNM and on the host computer. You can also mount additional directories by adding another -v parameter set (e.g. `-v D:/moredata:/data`) - this will mount the directory moredata from your D drive to /data inside VNM. 
 
-3. Open a terminal, and type the folowing command to automatically download the neuromachine container and run it (Mac, Windows, Linux commands listed below) 
-
-* Mac:
-```
-docker run --shm-size=1gb -it --privileged --name neuromachine -v ~/vnm:/vnm -e USER=user -p 8080:8080 vnmd/neuromachine:latest
-```
-(notice: There is a bug in docker 3.3.0 for Mac that makes this command not run correctly and there will be no application menu when you start the desktop. Update your docker version when you see this!)
-
-* Windows:
-```
-docker run --shm-size=1gb -it --privileged --name neuromachine -v C:/vnm:/vnm -e USER=user -p 8080:8080 vnmd/neuromachine:latest
-```
-* Linux:
-```
-sudo docker run --shm-size=1gb -it --privileged --name neuromachine -v ~/vnm:/vnm -e USER=user -p 8080:8080 vnmd/neuromachine:latest
-```
-(notice: if you get errors in neuromachine then check if the ~/vnm directory is writable to all users, otherwise run `chmod a+rwx ~/vnm`)
-
-4. Once neuromachine is downloaded i.e. `guacd[77]: INFO:        Listening on host 127.0.0.1, port 4822` is displayed in terminal, open a browser and go to:
-```
-http://localhost:8080/#/?username=user&password=password
-```
-or open a VNC Client and connect to port 5901 (for this -p 5901:5901 has to be added to the docker call)
-
-5. neuromachine is ready to use!
-- User is `user`
-- Password is `password`
-
-## Stopping neuromachine:
-When done processing your data it is important to stop and remove the container - otherwise the next start or container update will give an error ("... The container name "/neuromachine" is already in use...")
-1. Click on the terminal from which you ran neuromachine
-
-2. Press control-C
-
-3. Type:
-```
-docker stop neuromachine
-```
-4. Type:
-```
-docker rm neuromachine
-```
+## How to launch/download applications
+Click on the Launcher icon in bottom-left corner and navigate to the "Neurodesktop" menu, then select the application and version you wish to launch. If it is the first time you launch the application, it will be downloaded to your desktop environment. The application is ready to use when the "Singularity>" propmpt appears in the terminal window that opens. If you chose in the menu the GUI of the application (e.g., fsleyesGUI 6.0.3), it will open automatically. If you chose tha application itself (e.g., fsl 6.0.3), a terminal window will open, and you can use it to run any of the utilities packaged with the application, including the grphical utilities (e.g., typing "fsl" to run FSL's main menu).
