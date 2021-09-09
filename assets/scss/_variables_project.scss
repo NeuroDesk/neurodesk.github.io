@@ -15,20 +15,3 @@ $enable-shadows: false;
 $td-enable-google-fonts: true;
 $google_font_name: "Open Sans";
 $google_font_family: "Open+Sans:300,300i,400,400i,700,700i";
-
-
-.nav-shadow {
-    box-shadow: 0 2px 2px -2px rgba(0,0,0,.2);
-}
-
-// .navbar-brand {
-//     color: white !important
-// }
-
-.navbar-bg-onscroll {
-    box-shadow: 0 2px 2px -2px rgba(0,0,0,.2);
-}
-
-.control-bar {
-    display: none;
-}
