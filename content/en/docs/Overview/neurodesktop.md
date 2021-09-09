@@ -9,32 +9,32 @@ description: >
 
 
 ## Minimum System Requirements
-1. Atleast 3GB free space for neuromachine base image
+1. At least 3GB free space for neuromachine base image
 2. Docker requirements. Details found under https://docs.docker.com/get-docker/
 3. (Windows Users) If installing docker using WSL, atleast 20GB space recommended for WSL with Ubuntu
 
 ## Quickstart
 1. Install Docker from here: https://docs.docker.com/get-docker/ (Mac, Windows, Linux; for HPC/supercomputer: https://github.com/NeuroDesk/neurodesk)
 
-2. Create a local folder where the downloaded applications will be stored, e.g. ~/vnm in Mac and Linux, or C:\vnm in Windows 
+2. Create a local folder where the downloaded applications will be stored, e.g. ~/neurodesktop in Mac and Linux, or C:\neurodesktop in Windows 
 
 3. Open a terminal, and type the folowing command to automatically download the neuromachine container and run it (Mac, Windows, Linux commands listed below) 
 
 * Mac:
 ```
-docker run --shm-size=1gb -it --privileged --name neuromachine -v ~/vnm:/vnm -e USER=user -p 8080:8080 vnmd/neuromachine:latest
+docker run --shm-size=1gb -it --privileged --name neuromachine -v ~/neurodesktop:/neurodesktop -e USER=user -p 8080:8080 vnmd/neuromachine:latest
 ```
 (notice: There is a bug in docker 3.3.0 for Mac that makes this command not run correctly and there will be no application menu when you start the desktop. Update your docker version when you see this!)
 
 * Windows:
 ```
-docker run --shm-size=1gb -it --privileged --name neuromachine -v C:/vnm:/vnm -e USER=user -p 8080:8080 vnmd/neuromachine:latest
+docker run --shm-size=1gb -it --privileged --name neuromachine -v C:/neurodesktop:/neurodesktop -e USER=user -p 8080:8080 vnmd/neuromachine:latest
 ```
 * Linux:
 ```
-sudo docker run --shm-size=1gb -it --privileged --name neuromachine -v ~/vnm:/vnm -e USER=user -p 8080:8080 vnmd/neuromachine:latest
+sudo docker run --shm-size=1gb -it --privileged --name neuromachine -v ~/neurodesktop:/neurodesktop -e USER=user -p 8080:8080 vnmd/neuromachine:latest
 ```
-(notice: if you get errors in neuromachine then check if the ~/vnm directory is writable to all users, otherwise run `chmod a+rwx ~/vnm`)
+(notice: if you get errors in neuromachine then check if the ~/neurodesktop directory is writable to all users, otherwise run `chmod a+rwx ~/neurodesktop`)
 
 4. Once neuromachine is downloaded i.e. `guacd[77]: INFO:        Listening on host 127.0.0.1, port 4822` is displayed in terminal, open a browser and go to:
 ```

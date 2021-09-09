@@ -6,7 +6,7 @@ description: >
   Here's where your user finds out if your project is for them.
 ---
 
-_For running Neurodesk in a Docker container, refer to [https://github.com/NeuroDesk/vnm](https://neurodesk.github.io/docs/vnm)_
+_For running Neurodesk in a Docker container, refer to [https://neurodesk.github.io/docs/overview/neurodesktop/](https://neurodesk.github.io/docs/overview/neurodesktop/)_
 
 Requires a Linux host machine, virtual machine or WSL for Windows.
 
