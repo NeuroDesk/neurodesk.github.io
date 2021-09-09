@@ -6,7 +6,6 @@ description: >
   Installation
 ---
 
-
 ## Minimum System Requirements
 1. At least 3GB free space for neuromachine base image
 2. Docker requirements. Details found under https://docs.docker.com/get-docker/

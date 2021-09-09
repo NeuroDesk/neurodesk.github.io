@@ -6,8 +6,4 @@ description: >
   Installation
 ---
 
-{{% pageinfo %}}
-This is a placeholder page.
-{{% /pageinfo %}}
-
-Instructions
+One way of running this project on HPCs is via [Neurocommand]https://neurodesk.github.io/docs/overview/neurocommand/

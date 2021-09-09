@@ -19,3 +19,8 @@ Please test and add if working :)
 | macOS Catalina (10.15.5)           |              | docker           | yes   | firefox, safari, chrome | Jakub   |
 | HPC Centos 6                       |              | singularity      | no    |                         | Steffen |
 | Ubuntu 18.04 on OpenStack (NECTAR) |              | docker           | yes   | firefox                 | Oren    |
+
+
+# Run Neurodesk VNM for free on cloud providers
+* [Oracle OCI](https://mri.sbollmann.net/index.php/2020/12/08/run-neurodesk-on-oracle-cloud-free-tier)
+* [Microsoft Azure](https://henryjburg.medium.com/neurodesk-running-on-azure-3e38c590a152)
