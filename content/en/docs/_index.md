@@ -6,29 +6,15 @@ weight: 20
 menu:
   main:
     weight: 20
+description: >
+  A flexible, scalable and easy to use data analysis environment for reproducible neuroimaging.
 ---
 
-# Neurodesktop
+# Overview
+For an overview of the Neurodesk platform, go to: [Overview](/docs/overview/)
 
-_Easiest way to run Neurodesk_
-
-Neurodesktop is a compact Docker container with a browser-accessible environment for reproducible neuroimaging analysis. Only the required applications, already pre-installed, are downloaded from a public library (downloaded as containers).
-
-[2-minutes tutorial video from OHBM 2021](https://www.youtube.com/watch?v=JLv_5fycugw)
-
-[More information on Neurodesktop](https://neurodesk.github.io/docs/neurodesktop)
-
-# Neurocommand
-_Recommended for Advanced users_
-
-Installer that turns the host into a flexible, scalable, and easy to use data analysis environment for reproducible neuroimaging. Neurodesktop pre-installs Neurocommand in an Ubuntu docker container providing simple access to the powerful capabilities of Neurodesk.
-
-Requires a Linux host machine, WSL for Windows, or a virtual machine.
-
-[Neurodesk architecture](https://neurodesk.github.io/docs/architecture)
-
-[More information on Neurocommand](https://neurodesk.github.io/docs/neurocommand)
-
+# Quick Start
+To install the Neurodesktop container, go to: [Getting Started](/docs/getting-started)
 
 # Feedback & Inquiries
 
