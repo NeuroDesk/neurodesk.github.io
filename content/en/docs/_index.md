@@ -11,10 +11,10 @@ description: >
 ---
 
 # Overview
-For an overview of the Neurodesk platform, go to: [Overview](/docs/Overview/)
+For an overview of the Neurodesk platform, go to: [Overview](/docs/overview/)
 
 # Quick Start
-To install the Neurodesktop container, go to: [Getting Started](/docs/Neurodesktop/Getting Started)
+To install the Neurodesktop container, go to: [Getting Started](/docs/neurodesktop/getting-started)
 
 # Feedback & Inquiries
 
