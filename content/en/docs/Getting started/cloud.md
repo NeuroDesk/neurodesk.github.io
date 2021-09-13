@@ -6,6 +6,12 @@ description: >
   Installation
 ---
 
+
+| Cloud provider | link                                                                                    |
+|----------------|-----------------------------------------------------------------------------------------|
+| Oracle         | https://mri.sbollmann.net/index.php/2020/12/08/run-neurodesk-on-oracle-cloud-free-tier/ |
+| Azure          | https://henryjburg.medium.com/neurodesk-running-on-azure-3e38c590a152                   |
+
 ## Minimum System Requirements
 1. At least 3GB free space for neuromachine base image
 2. Docker requirements. Details found under https://docs.docker.com/get-docker/
