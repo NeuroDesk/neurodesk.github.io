@@ -3,7 +3,7 @@ title: "Cloud"
 linkTitle: "Cloud"
 weight: 5
 description: >
-  Installation
+  Run neurodesktop using Oracle or Azure cloud computing
 ---
 
 

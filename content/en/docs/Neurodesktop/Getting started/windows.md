@@ -3,7 +3,7 @@ title: "Windows"
 linkTitle: "Windows"
 weight: 3
 description: >
-  Installation
+  Install neurodesktop on Windows
 ---
 
 ## Minimum System Requirements
@@ -19,7 +19,7 @@ description: >
 3. Open a terminal, and type the folowing command to automatically download the neuromachine container and run it
 
 ```
-docker run --shm-size=1gb -it --privileged --name neuromachine -v C:/neurodesktop:/neurodesktop -e USER=user -p 8080:8080 vnmd/neuromachine:latest
+docker run --shm-size=1gb -it --privileged --name neuromachine -v C:/neurodesktop:/neurodesktop -e USER=user -p 8080:8080 vnmd/neuromachine:20210708
 ```
 
 4. Once neuromachine is downloaded i.e. `guacd[77]: INFO:        Listening on host 127.0.0.1, port 4822` is displayed in terminal, open a browser and go to:

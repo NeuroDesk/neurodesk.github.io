@@ -6,6 +6,8 @@ description: >-
      Congratulations! You've installed Neurodesktop. What happens next?
 ---
 
+Click [here](https://www.youtube.com/watch?v=JLv_5fycugw) to watch a 2 minute tutorial video from OHBM 2021
+
 ## How to access files from your Host computer?
 The `-v C:/neurodesktop:/neurodesktop` part of the docker command links the directory "neurodesktop" on the "C drive" of your Windows computer to the directory /neurodesktop inside the Desktop environment. Everything you store in there will be available inside VNM and on the host computer. You can also mount additional directories by adding another -v parameter set (e.g. `-v D:/moredata:/data`) - this will mount the directory moredata from your D drive to /data inside VNM. 
 

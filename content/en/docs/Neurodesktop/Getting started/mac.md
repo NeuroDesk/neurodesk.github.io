@@ -3,7 +3,7 @@ title: "MacOS"
 linkTitle: "MacOS"
 weight: 2
 description: >
-  Installation
+  Install neurodesktop on MacOS
 ---
 
 ## Minimum System Requirements

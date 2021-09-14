@@ -22,7 +22,7 @@ The Neurodesk ecosystem includes a number of tools for containerised analysis of
 
 > If you’re new to Neurodesk, we recommend you begin with Neurodesktop.
 
-_Neurodesktop_ is a compact Docker container with a browser-accessible virtual desktop that allows you develop and implement data analysis pipelines as though you’re on your own computer. The _Neurodesktop_ container has the basic tools required for the analysis of fMRI and EEG data pre-installed. 
+_Neurodesktop_ is a compact Docker container with a browser-accessible virtual desktop that allows you develop and implement data analysis pipelines as though you’re on your own computer. The _neurodesktop_ container has the basic tools required for the analysis of fMRI and EEG data pre-installed. 
 To get started, see: [Neurodesktop](/content/en/docs/Neurodesktop/)
 
 ### Neurocommand
@@ -33,7 +33,7 @@ To get started, see: [Neurocommand](/content/en/docs/Neurocommand/)
 
 ### Transparent-singularity
 
-The applications pre-installed in _neurdesktop_ and _neurocommand_ are accessible through _transparent-singularity_, which allows users to transparently use containerised software as through it were installed natively. 
+The applications pre-installed in _neurodesktop_ and _neurocommand_ are accessible through _transparent-singularity_, which allows users to transparently use containerised software as through it were installed natively. 
 
 To find out more about this open-source project, see: [transparent-singularity](https://github.com/NeuroDesk/transparent-singularity)
 
