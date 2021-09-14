@@ -3,7 +3,7 @@ title: "Windows"
 linkTitle: "Windows"
 weight: 2
 description: >
-  Installation
+  Install neurocommand on Windows
 ---
 
 ## Windows
