@@ -13,7 +13,7 @@ Now that you’ve installed and launched neurodesktop, you should see a virtual 
 In this linux desktop environment, you can access the menu, launch programs, write analysis code, use version control software (i.e. git) and develop analysis pipelines as though you were on your own computer.
 
 ## Release
-Keep a note of the release number of the container image that you installed. Regardless of what operating system you installed neurodesktop into, the version number would have been at the end of the _docker run_ command: 
+Keep a note of the release date of the container image that you installed. Regardless of what operating system you installed neurodesktop into, the release date would have been at the end of the _docker run_ command: 
 
 ![version](/version.png 'version')
 
@@ -22,7 +22,7 @@ We regularly update neurodesktop to make sure it’s running well and has up-to-
 ## Video tutorial
 Click [here](https://www.youtube.com/watch?v=JLv_5fycugw) to watch a 2 minute tutorial video from OHBM 2021
 
-## How to access files from your Host computer?
+## How to access files from your Host computer
 The `-v C:/neurodesktop:/neurodesktop` part of the docker command links the directory "neurodesktop" on the "C drive" of your Windows computer to the directory /neurodesktop inside the Desktop environment. Everything you store in there will be available inside neurodesktop and on the host computer. You can also mount additional directories by adding another -v parameter set (e.g. `-v D:/moredata:/data`) - this will mount the directory moredata from your D drive to /data inside neurodesktop. 
 
 ## How to launch/download applications
