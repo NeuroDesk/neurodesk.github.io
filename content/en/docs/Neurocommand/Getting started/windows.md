@@ -1,7 +1,7 @@
 ---
 title: "Windows"
 linkTitle: "Windows"
-weight: 3
+weight: 2
 description: >
   Installation
 ---

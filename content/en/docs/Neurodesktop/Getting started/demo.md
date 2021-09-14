@@ -2,7 +2,7 @@
 title: "Demo"
 linkTitle: "Demo"
 description: >
-  Installation
+  Run a demo of neurodesktop _without_ installing Docker
 ---
 
 {{% pageinfo %}}

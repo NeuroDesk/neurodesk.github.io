@@ -16,7 +16,7 @@ The Neurodesk environment allows users to build and use containers for analysing
 
 The Neurodesk ecosystem includes a number of tools for containerised analysis of neuroimaging data. These include:
 
-![Architecture image](/static/architecture.png)
+<img src="/assets/img/NeurodeskArchitecture.png" width="400">
 
 ### Neurodesktop
 
