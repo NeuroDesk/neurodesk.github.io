@@ -1,6 +1,6 @@
 ---
-title: "How to use Neurodesktop"
-linkTitle: "How to use Neurodesktop"
+title: "What's next?"
+linkTitle: "What's next?"
 weight: 2
 description: >-
      Congratulations! You've installed Neurodesktop. What happens next?

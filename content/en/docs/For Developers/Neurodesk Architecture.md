@@ -1,9 +1,9 @@
 ---
-title: "Architecture"
-linkTitle: "Architecture"
-weight: 4
+title: "Neurodesk Architecture"
+linkTitle: "Neurodesk Architecture"
+weight: 1
 description: >
-  The neurodesk architecture 
+  The architecture of the Neurodesk ecosystem
 ---
 
 # Layers

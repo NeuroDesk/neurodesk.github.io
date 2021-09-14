@@ -1,7 +1,7 @@
 ---
-title: "Development"
-linkTitle: "Development"
-date: 2017-01-05
+title: "For Developers"
+linkTitle: "For Developers"
+weight: 5
 description: >
   Developer guide
 ---
