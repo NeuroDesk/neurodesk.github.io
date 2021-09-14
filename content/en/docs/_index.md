@@ -26,8 +26,8 @@ For inquiries, please open a [new issue](https://github.com/NeuroDesk/neurodesk/
 
 ![nif](/nif.png 'nif')
 ![uq](/uq_logo.png 'uq')
-![swinburne](/swinburne_uni_logo.svg 'swinburne')
-![liege](/liege_uni_logo.svg 'liege')
+![swinburne](/swinburne_uni_logo.png 'swinburne')
+![liege](/liege_uni_logo.png 'liege')
 <!--  <img src="/assets/img/nif.png" width="250">
 <img src="/assets/img/uq_logo.png" width="250">
 <img src="/assets/img/swinburne_uni_logo.svg" width="250">
