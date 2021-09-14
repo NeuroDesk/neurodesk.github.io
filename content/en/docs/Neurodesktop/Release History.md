@@ -1,9 +1,9 @@
 ---
-title: "What's in the box?"
-linkTitle: "What's in the box?"
-weight: 3
+title: "Release History"
+linkTitle: "Release History"
+weight: 4
 description: >-
-     A list of the software available in neurodesktop
+     Previous releases of neurodesktop
 ---
 
 {{% pageinfo %}}

@@ -1,12 +1,12 @@
 ---
-title: "What's in the box?"
-linkTitle: "What's in the box?"
-weight: 3
+title: "Troubleshooting"
+linkTitle: "Troubleshooting"
+weight: 5
 description: >-
-     A list of the software available in neurodesktop
+     Are you experiencing issues with neurodesktop?
 ---
 
-{{% pageinfo %}}
-Coming Soon
-{{% /pageinfo %}}
+## Other
+
+Neurodesktop is an open-source project that is always evolving. If you are experiencing an issue not listed here, please open a [new issue](https://github.com/NeuroDesk/neurodesk/issues), so that we can aim to solve it and update our help documentation. 
 
