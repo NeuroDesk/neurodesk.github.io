@@ -3,7 +3,7 @@ title: "Storage"
 linkTitle: "Storage"
 weight: 4
 description: >
-  Storage
+  Add additional storage
 ---
 
 ## Mount volume using SSHFS

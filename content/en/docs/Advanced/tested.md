@@ -1,12 +1,12 @@
 ---
-title: "Tested"
+title: "System Testing"
 linkTitle: "Tested"
 weight: 4
 description: >
-  Advanced usage
+  Tested and working Neurodesk setups
 ---
 
-Please test and add if working :)
+## Please test and add if working :)
 
 |                                    | hypervisor   | container engine | build | client                  | who     |
 |------------------------------------|--------------|------------------|-------|-------------------------|---------|
@@ -21,6 +21,6 @@ Please test and add if working :)
 | Ubuntu 18.04 on OpenStack (NECTAR) |              | docker           | yes   | firefox                 | Oren    |
 
 
-# Run Neurodesk VNM for free on cloud providers
+## Run Neurodesk VNM for free on cloud providers
 * [Oracle OCI](https://mri.sbollmann.net/index.php/2020/12/08/run-neurodesk-on-oracle-cloud-free-tier)
 * [Microsoft Azure](https://henryjburg.medium.com/neurodesk-running-on-azure-3e38c590a152)
