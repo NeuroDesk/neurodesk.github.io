@@ -3,16 +3,18 @@ title: "Add tool"
 linkTitle: "Add tool"
 weight: 4
 description: >
-  Add tool
+  Add a tool to neurodesktop
 ---
 
-The goal of *VNM* is to provide users with a large choice of tools to use in their pipelines.
-Here is how you can add a tool to *VNM*. 
+The goal of *neurodesktop* is to provide users with a large choice of tools to use in their pipelines.
+Use the guide below to add a tool to *neurodesktop*. 
 
-To decide if a tool should be packaged in a singularity container, or being installed in the main VNM container we are currently following these guiding principles:
-1) VNM is not a package manager. This means we are not distribution tools in containers that can easily be installed via a standard package manager 
-2) VNM allows users to have multiple versions of tools in parallel via lmod, this means that if different versions of tool can't be installed in parallel we package it inside a container.
-3) VNM aims to provide simple tooling to link tools from different containers. This means that if a tool if required to coordinate container-tools, it should be in the main image.
+## Guiding principles 
+To decide if a tool should be packaged in a singularity container or be installed in the main neurodesktop container we are currently following these guiding principles:
+1) Neurodesktop is not a package manager. This means we are not distributing tools in containers that can easily be installed via a standard package manager 
+2) Neurodesktop allows users to have multiple versions of tools in parallel via [lmod]( https://lmod.readthedocs.io/en/latest/), this means that if different versions of tool can't be installed in parallel we package the tool inside a container.
+3) Neurodesktop aims to provide simple tooling to link tools from different containers. This means that if a tool is required to coordinate container-tools, it should be in the main image.
+
 
 Examples:
 |            | easy install | coordinates containers | small in size | latest version is ok | useful more most users | Conclusion                     |
@@ -29,13 +31,15 @@ Examples:
 | freesurfer | no           | no                     | no            | no                   | no                     | container                      |
 
 
-Build container:
-1) add recipe to neurodocker if relevant https://github.com/NeuroDesk/neurodocker and create pull request to neurodocker
-2) build container here https://github.com/NeuroDesk/caid
-3) test container and if successful add container to Readme table here https://github.com/NeuroDesk/neurodesk
+## Build container
+To build a container:
+1) Add recipe to neurodocker if relevant (https://github.com/NeuroDesk/neurodocker) and create a pull request to neurodocker
+2) Build the container [here]( https://github.com/NeuroDesk/caid)
+3) Test the container, and if successful add the container to the Readme table [here](https://github.com/NeuroDesk/neurodesk)
 
 
-As we want to propose several versions of the tools, each peace of software should have its own submenu under `VNM Neuroimaging`.
+## Menu entry
+As we want to propose several versions of the tools, each piece of software should have its own submenu under `VNM Neuroimaging`.
 To do so, you first have to add a submenu to `menus/vnm-applications.menu` by adding:
 ```xml
 <!-- [[Tool Name]] submenu -->
@@ -49,7 +53,7 @@ To do so, you first have to add a submenu to `menus/vnm-applications.menu` by ad
     </Include>
 </Menu> <!-- End [[Tool Name]] -->
 ```
-The following table showns what to replace by what:
+The following table shows the formatting rules to follow:
 
 Placeholder | Rule | Example
 ------------|------|---------
@@ -57,7 +61,7 @@ Placeholder | Rule | Example
 `[[tool-name]]` | Lower case, no spaces (use `-` instead) | `itk-snap` or `itksnap`
 `[[Tool-name]]` | Capitalized, no spaces (use `-` instead) | `ITK-snap`
 
-Next, we have to create the submenu itself as we referenced it by `vnm-[[tool-name]].directory`. To do so, create the file `menus/submenus`vnm-[[tool-name]].directory` and add the following information inside:
+Next, we have to create the submenu itself as we referenced it by `vnm-[[tool-name]].directory`. To do so, create the file `menus/submenus/vnm-[[tool-name]].directory` and add the following information inside:
 ```ini
 [Desktop Entry]
 Name=[[Tool Name]]
@@ -66,6 +70,8 @@ Icon=/home/neuro/.config/lxpanel/LXDE/icons/[[icon-name]].png
 Type=Directory
 ```
 If a specific icon is available in the `menus/icons` directory, replace `[[icon-name]]` by its name. Otherwise, use `vnm`.
+
+## Create the application
 
 Finally, we have to create the actual application by creating the file `menus/applications/vnm-[[tool-name]]-[[0.0.0]].desktop`. The name of this file must contain the version of the tool (once again to allow multiple versions to live inside the same directory). Add the following description to this file:
 ```ini
@@ -80,7 +86,7 @@ Categories=[[Tool-name]]
 Terminal=true # or false
 ```
 
-The important part here is the value of `Exec`. If the tool is in the form of a singularity image, you should the following command:
+The important part here is the value of `Exec`. If the tool is in the form of a singularity image, you should run the following command:
 ```shell
 bash /usr/share/fetch_and_run.sh [[tool-name]] [[0.0.0]] [[YYYYMMDD]] [[cmd]] [[args]]
 ```
