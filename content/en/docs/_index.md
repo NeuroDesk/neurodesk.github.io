@@ -18,9 +18,7 @@ To install the Neurodesktop container, go to: [Getting Started](/docs/neurodeskt
 
 ## Feedback & Inquiries
 
-We invite you to complete [this survey](https://forms.gle/deKy85yniJLP4hDM8) to help guide future additions to the software library
-
-To ask questions or suggest new features, [join the discussion](https://github.com/NeuroDesk/neurodesk.github.io/discussions) on github. For issues with the _Neurodesk_ platform, please open a [new issue](https://github.com/NeuroDesk/neurodesk/issues), or contact [Steffen Bollmann](https://github.com/stebo85), [Oren Civier](https://github.com/civier) or [Aswin Narayanan](https://github.com/aswinnarayanan).
+To ask questions or suggest new features, [join the discussion](https://github.com/NeuroDesk/neurodesk.github.io/discussions) on github. For issues with the _Neurodesk_ platform, please open a [new issue](https://github.com/NeuroDesk/neurodesk.github.io/issues).
 
 ## Acknowledgments
 
