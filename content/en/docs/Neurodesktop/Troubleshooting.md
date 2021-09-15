@@ -25,3 +25,6 @@ However, if WSL is missing or incorrectly configured, the _Resources_ tab of the
 ![Docker_WSL_incorrect](/Docker_WSL_incorrect.png 'Docker_WSL_incorrect')
 
 If this is the case, follow the manual install instructions to install [WSL 2]( https://docs.microsoft.com/en-us/windows/wsl/install-win10) (including installation of Ubuntu through Microsoft Store). 
+
+## Not enough free space on the partition in Windows and WSL2
+This could help: https://yjmantilla.github.io/tutorials/wsl2-move-vhdx.html
