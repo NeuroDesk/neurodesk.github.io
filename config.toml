@@ -202,3 +202,15 @@ enable = false
 	# icon = "fa fa-envelope"
     #     desc = "Discuss development issues around the project"
 
+[[menu.main]]
+    name = "GitHub"
+    weight = 2
+    url = "https://github.com/NeuroDesk"
+    pre = "<i class='fab fa-github'></i>"
+	
+[[menu.main]]
+    name = "Documentation"
+    weight = 1
+    url = "/docs"
+    pre = "<i class='fas fa-book'></i>"
+
