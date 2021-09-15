@@ -1,7 +1,7 @@
 ---
 title: "For Developers"
 linkTitle: "For Developers"
-weight: 5
+weight: 6
 description: >
   Developer guide
 ---

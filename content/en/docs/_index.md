@@ -18,15 +18,18 @@ To install the Neurodesktop container, go to: [Getting Started](/docs/getting-st
 
 ## Feedback & Inquiries
 
-You're welcome to complete [this survey](https://forms.gle/deKy85yniJLP4hDM8) to help guide future additions to the software library
+We invite you to complete [this survey](https://forms.gle/deKy85yniJLP4hDM8) to help guide future additions to the software library
 
-For inquiries, please open a [new issue](https://github.com/NeuroDesk/neurodesk/issues), or contact [Steffen Bollmann](https://github.com/stebo85) or [Oren Civier](https://github.com/civier) or [Aswin Narayanan](https://github.com/aswinnarayanan).
+To ask questions or suggest new features, [join the discussion](https://github.com/NeuroDesk/neurodesk.github.io/discussions) on github. For issues with the Neurodesk platform, please open a [new issue](https://github.com/NeuroDesk/neurodesk/issues), or contact [Steffen Bollmann](https://github.com/stebo85), [Oren Civier](https://github.com/civier) or [Aswin Narayanan](https://github.com/aswinnarayanan).
 
 ## Acknowledgments
 
 ![nif](/nif.png 'nif')
+
 ![uq](/uq_logo.png 'uq')
+
 ![swinburne](/swinburne_uni_logo.png 'swinburne')
+
 ![liege](/liege_uni_logo.png 'liege')
 
 <!--  <img src="/assets/img/nif.png" width="250">

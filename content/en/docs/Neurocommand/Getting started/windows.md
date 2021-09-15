@@ -6,12 +6,10 @@ description: >
   Install neurocommand on Windows
 ---
 
-## Windows
-
-### WSL (w/ Ubuntu + LXDE)
+## WSL (w/ Ubuntu + LXDE)
 For more information on WSL: [https://docs.microsoft.com/en-us/windows/wsl](https://docs.microsoft.com/en-us/windows/wsl)
 
-#### Setting up
+### Setting up
 1. Setup WSL2 using the following instructions _(Ubuntu 18.04 recommended)_  
 [https://docs.microsoft.com/en-us/windows/wsl/install-win10](https://docs.microsoft.com/en-us/windows/wsl/install-win10)
 _Proceed until a Ubuntu bash shell is available from the Windows Host_  
@@ -23,7 +21,7 @@ _Run the remaining commands in the Bash shell_
 Change `port=3389` to `port=3390` and save
 6. Run `echo startlxde > ~/.xsession`
 
-#### Running
+### Running
 1. `sudo service xrdp start` to start xrdp server
 2. Open Microsoft Remote Desktop Connection in Windows host
 3. Connect to `localhost:3390`
