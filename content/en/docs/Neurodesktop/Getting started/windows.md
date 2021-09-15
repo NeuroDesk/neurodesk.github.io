@@ -16,7 +16,7 @@ description: >
 
 2. Create a local folder where the downloaded applications will be stored, e.g. C:\neurodesktop
 
-3. Open a terminal, and type the folowing command to automatically download the neuromachine container and run it
+3. Open a terminal, and type the folowing command to automatically download the neurodesktop container and run it
 
 ```
 docker run --shm-size=1gb -it --privileged --name neuromachine -v C:/neurodesktop:/neurodesktop -e USER=user -p 8080:8080 vnmd/neuromachine:20210708
@@ -28,13 +28,13 @@ http://localhost:8080/#/?username=user&password=password
 ```
 or open a VNC Client and connect to port 5901 (for this -p 5901:5901 has to be added to the docker call)
 
-5. neuromachine is ready to use!
+5. neurodesktop is ready to use!
 - User is `user`
 - Password is `password`
 
-## Stopping neuromachine:
-When done processing your data it is important to stop and remove the container - otherwise the next start or container update will give an error ("... The container name "/neuromachine" is already in use...")
-1. Click on the terminal from which you ran neuromachine
+## Stopping neurodesktop:
+When done processing your data it is important to stop and remove the container - otherwise the next start or container update will give an error ("... The container name "/neurodesktop" is already in use...")
+1. Click on the terminal from which you ran neurodesktop
 
 2. Press control-C
 
