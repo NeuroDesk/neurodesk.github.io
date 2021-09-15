@@ -8,18 +8,21 @@ description: >
 
 ## Requirements:
 ### Required
-- python [https://docs.conda.io/en/latest/miniconda.html#linux-installers](https://docs.conda.io/en/latest/miniconda.html#linux-installers)
+- python 3.6+ [https://docs.conda.io/en/latest/miniconda.html#linux-installers](https://docs.conda.io/en/latest/miniconda.html#linux-installers)
 - singularity [https://sylabs.io/guides/3.5/user-guide/quick_start.html](https://sylabs.io/guides/3.5/user-guide/quick_start.html)
+- git
 
 ### Optional
 - lmod [https://lmod.readthedocs.io/en/latest/](https://sylabs.io/guides/3.5/user-guide/quick_start.html)
 
-## Inital install
 ### command line mode - For non-desktop experience (e.g. running on an HPC)  
 If running on cli only ... 
 - Load singularity and for best performance it should be 3.x e.g. `module load singularity/3.5.0` 
-- Run `git clone https://github.com/NeuroDesk/neurodesk.git` to clone the repository - make sure to clone this to a directory with enough storage, write permissions and NOT a symbolic link (to be sure run cd \`pwd -P\`)!
-- Run `cd neurodesk` to change into the directory
+- Load or install aria2 to optimize the download performance of our containers e.g. `module load aria2c`
+- make sure the current directory is not a symlink (singularity bug): `pwd -P` and then cd there
+- Run `git clone https://github.com/NeuroDesk/neurocommand.git` to clone the repository - make sure to clone this to a directory with enough storage, write permissions and NOT a symbolic link (to be sure run cd \`pwd -P\`)!
+- Run `cd neurocommand` to change into the directory
+- Run `pip3 install -r neurodesk/requirements.txt --user` to install pre-requisite python packages
 - Run `bash build.sh --cli` to install in cli mode  
 - Run `bash containers.sh` for installing indiviual containers or `bash containers.sh --all` for installing all containers
 - Run `module use $PWD/local/containers/modules/` to add the containers to your module search path. Add this to your .bashrc if working.
