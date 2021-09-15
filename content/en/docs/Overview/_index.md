@@ -27,7 +27,7 @@ To get started, see: [Neurodesktop](/docs/neurodesktop/)
 
 ### Neurocommand
 
-_Neurocommand_ offers to option of install and manage multiple distinct containers for more advanced users who prefer a command-line interface. _Neurocommand_ is the recommended interface for users seeking to use Neurodesk in high performance computing (HPC) environments. 
+_Neurocommand_ offers the option to install and manage multiple distinct containers for more advanced users who prefer a command-line interface. _Neurocommand_ is the recommended interface for users seeking to use Neurodesk in high performance computing (HPC) environments. 
 
 To get started, see: [Neurocommand](/docs/neurocommand/)
 
