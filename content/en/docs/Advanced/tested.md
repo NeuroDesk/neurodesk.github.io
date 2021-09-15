@@ -1,6 +1,6 @@
 ---
 title: "System Testing"
-linkTitle: "Tested"
+linkTitle: "System Testing"
 weight: 4
 description: >
   Tested and working Neurodesk setups

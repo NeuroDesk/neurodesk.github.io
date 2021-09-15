@@ -12,7 +12,7 @@ To ask questions or suggest new features, [join the discussion](https://github.c
 
 ## Windows users: WSL not installed properly
 
-The Docker engine relies on the Windows subsystem for Linux [(WSL)]( https://docs.microsoft.com/en-us/windows/wsl/install-win10) to run on a windows machine. 
+The Docker engine relies on the Windows subsystem for Linux ([WSL]( https://docs.microsoft.com/en-us/windows/wsl/install-win10)) to run on a windows machine. 
 
 {{< alert title="Note" >}}We recommend the _manual_ install instructions, as the simplified install requires an upgrade to a preview build of Windows that may be unstable.{{< /alert >}}
 

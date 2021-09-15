@@ -8,11 +8,9 @@ description: >
 
 ## Automatic container building and testing
 
-The containers can for be used in combination with our transparent singularity or neurocommand tool, that wrap the executables inside a container to make them easily available for pipelines:
-https://github.com/NeuroDesk/transparent-singularity/
-https://github.com/NeuroDesk/neurocommand/
+The containers can for be used in combination with our [transparent singularity](https://github.com/NeuroDesk/transparent-singularity/) or [neurocommand](https://github.com/NeuroDesk/neurocommand/) tool, that wrap the executables inside a container to make them easily available for pipelines:
 
-The containers are hosted on dockerhub (https://hub.docker.com/orgs/vnmd/repositories) or on https://github.com/NeuroDesk/neurocontainers/packages
+The containers are hosted on [dockerhub](https://hub.docker.com/orgs/vnmd/repositories) or on [github](https://github.com/NeuroDesk/neurocontainers/packages)
 
 ## Pull containers
 e.g. for a julia container
@@ -29,8 +27,8 @@ singularity build julia_1.6.1.simg docker://vnmd/julia_1.6.1
 Replace `julia_1.6.1` with your selected application
 
 ## Adding new recipes
-Refer to neurodocker for more information on neurodocker recipes  
-https://github.com/NeuroDesk/neurodocker  
+Refer to [neurodocker](https://github.com/NeuroDesk/neurodocker) for more information on neurodocker recipes  
+
 To add an application (e.g. _newapp_), follow these steps.
 1. Clone the repository
 2. Copy the directory template and rename to _newapp_ in `caid/recipes`

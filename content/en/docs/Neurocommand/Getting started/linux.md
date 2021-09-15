@@ -32,7 +32,7 @@ Run `bash build.sh --lxde --edit`
 ### For Mate desktops
 Run `bash build.sh --init`  (or `bash build.sh --lxde --edit`)  
 lxde/mate: Mate  
-installdir: Where all the neurodesk files will be stored (Default: ./local)  
+installdir: Where all the neurocommand files will be stored (Default: ./local)  
 appmenu: The linux menu xml file.  (Usually /etc/xdg/menus/\*\*\*\*-applications.menu)  
 appdir: Location for the .desktop files for this linux desktop (Usually /usr/share/applications)  
 deskdir: Location for the .directory files for this linux desktop (Typically /usr/share/desktop-directories)  
