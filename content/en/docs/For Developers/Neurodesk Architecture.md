@@ -2,6 +2,9 @@
 title: "Neurodesk Architecture"
 linkTitle: "Neurodesk Architecture"
 weight: 1
+_build:
+ list: false
+ render: false
 description: >
   The architecture of the Neurodesk ecosystem
 ---
