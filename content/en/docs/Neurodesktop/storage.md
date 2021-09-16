@@ -40,10 +40,12 @@ Rclone is a command line tool that enables the interaction with various cloud se
 - or upload data to CloudStor: `rclone copy --progress --transfers 8 . CloudStor:/data-processed`
 
 ## Globus
-We also provide the globus client, so you can transfer large amounts of data between globus endpoints and Neurodesk. You can configure it by running:
+We also provide the globus client, so you can transfer large amounts of data between globus endpoints and Neurodesktop. You can configure it by running:
 ```
 /opt/globusconnectpersonal/globusconnectpersonal-*/globusconnectpersonal
 ```
+
+Once authenticated you can go to the globus file-manager https://app.globus.org/file-manager and your neurodesktop instance will be an endpoint for globus.
 
 # Mounting network storage on your host-computer
 The -v C:/neurodesk:/neurodesk part of the docker command links the directory “neurodesk” on the “C drive” of your Windows computer to the directory /neurodesk inside the Desktop environment. Everything you store in there will be available inside neurodesk and on the host computer. You can also mount additional directories by adding another -v parameter set (e.g. -v D:/moredata:/data) - this will mount the directory moredata from your D drive to /data inside neurodesktop. If you have network storage mounted in a similar way you can also pass this into the Neurodesktop tool.
