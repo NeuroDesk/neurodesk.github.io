@@ -16,7 +16,7 @@ Neurodesktop comes with the essential software required for neuroimaging data an
      * Git
 * Workflow systems:
      * Nipype (including GraphVis)
-* Data Syncronisation tools:
+* Data Syncronisation tools: (See our Storage section for more information: )
      * Rsync
      * Rclone https://rclone.org/
      * Nextcloud client
