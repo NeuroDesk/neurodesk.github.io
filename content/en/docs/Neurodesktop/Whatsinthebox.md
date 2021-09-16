@@ -22,6 +22,7 @@ Neurodesktop comes with the essential software required for neuroimaging data an
      * Nextcloud client
      * Owncloud client
      * Globus personal connect https://docs.globus.org/how-to/globus-connect-personal-linux/
+          * installed in /opt/globusconnectpersonal/
 * System Management:
      * Lmod (inlcuding Lua)
      * Singularity
