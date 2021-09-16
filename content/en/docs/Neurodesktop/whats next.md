@@ -23,7 +23,7 @@ We regularly update neurodesktop to make sure it’s running well and has up-to-
 Click [here](https://www.youtube.com/watch?v=JLv_5fycugw) to watch a 2 minute tutorial video from OHBM 2021
 
 ## How to access files from your Host computer
-There are various ways of connecting your data to to Neurodesktop. For more information see our Storage section: [Storage](/docs/neurodesktop/storage.md)
+There are various ways of connecting your data to to Neurodesktop. For more information see our Storage section: [Storage](/docs/neurodesktop/storage)
 
 ## How to launch/download applications
 Click on the Launcher icon in bottom-left corner and navigate to the "Neurodesk" menu, then select the application and version you wish to launch. If it is the first time you launch the application, it will be downloaded to your desktop environment. The application is ready to use when the "Singularity>" prompt appears in the terminal window that opens. If you chose in the menu the GUI of the application (e.g., fsleyesGUI 6.0.3), it will open automatically. If you chose that application itself (e.g., fsl 6.0.3), a terminal window will open, and you can use it to run any of the utilities packaged with the application, including the graphical utilities (e.g., typing "fsl" to run FSL's main menu).
