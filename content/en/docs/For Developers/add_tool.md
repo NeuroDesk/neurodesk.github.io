@@ -1,6 +1,6 @@
 ---
-title: "Add tool"
-linkTitle: "Add tool"
+title: "Add tools"
+linkTitle: "Add tools"
 weight: 4
 description: >
   Add a tool to neurodesktop
