@@ -7,7 +7,7 @@ description: >
 ---
 
 ## Minimum System Requirements
-1. At least 3GB free space for neuromachine base image
+1. At least 3GB free space for neurodesktop base image
 2. Docker requirements. Details found under https://docs.docker.com/get-docker/
 3. If installing docker using WSL, atleast 20GB space recommended for WSL with Ubuntu
 
@@ -19,10 +19,10 @@ description: >
 3. Open a terminal, and type the folowing command to automatically download the neurodesktop container and run it
 
 ```
-docker run --shm-size=1gb -it --privileged --name neuromachine -v C:/neurodesktop:/neurodesktop -e USER=user -p 8080:8080 vnmd/neuromachine:20210708
+docker run --shm-size=1gb -it --privileged --name neurodesktop -v C:/neurodesktop:/neurodesktop -e USER=user -p 8080:8080 vnmd/neurodesktop:20210915
 ```
 
-4. Once neuromachine is downloaded i.e. `guacd[77]: INFO:        Listening on host 127.0.0.1, port 4822` is displayed in terminal, open a browser and go to:
+4. Once neurodesktop is downloaded i.e. `guacd[77]: INFO:        Listening on host 127.0.0.1, port 4822` is displayed in terminal, open a browser and go to:
 ```
 http://localhost:8080/#/?username=user&password=password
 ```
@@ -40,9 +40,9 @@ When done processing your data it is important to stop and remove the container 
 
 3. Type:
 ```
-docker stop neuromachine
+docker stop neurodesktop
 ```
 4. Type:
 ```
-docker rm neuromachine
+docker rm neurodesktop
 ```

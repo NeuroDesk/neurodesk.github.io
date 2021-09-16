@@ -7,7 +7,7 @@ description: >
 ---
 
 ## Minimum System Requirements
-1. At least 3GB free space for neuromachine base image
+1. At least 3GB free space for neurodesktop base image
 2. Docker requirements. Details found under https://docs.docker.com/get-docker/
 
 ## Quickstart
@@ -38,7 +38,7 @@ newgrp docker
 4. Open a terminal, and type the folowing command to automatically download the neurodesktop container and run it (Mac, Windows, Linux commands listed below) 
 
 ```
-sudo docker run --shm-size=1gb -it --privileged --name neuromachine -v ~/neurodesktop:/neurodesktop -e USER=user -p 8080:8080 vnmd/neuromachine:latest
+sudo docker run --shm-size=1gb -it --privileged --name neurodesktop -v ~/neurodesktop:/neurodesktop -e USER=user -p 8080:8080 vnmd/neurodesktop:20210915
 ```
 (notice: if you get errors in neurodesktop then check if the ~/neurodesktop directory is writable to all users, otherwise run `chmod a+rwx ~/neurodesktop`)
 
@@ -60,11 +60,11 @@ When done processing your data it is important to stop and remove the container 
 
 3. Type:
 ```
-docker stop neuromachine
+docker stop neurodesktop
 ```
 4. Type:
 ```
-docker rm neuromachine
+docker rm neurodesktop
 ```
 
 
