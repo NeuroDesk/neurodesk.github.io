@@ -42,7 +42,8 @@ sudo docker run \
   --shm-size=1gb -it --privileged --name neurodesktop \
   -v ~/neurodesktop-storage:/neurodesktop-storage \
   -e HOST_UID="$(id -u)" -e HOST_GID="$(id -g)" \
-  -p 8080:8080 vnmd/neurodesktop:{{< params/neurodesktop/version >}}
+  -p 8080:8080 -h neurodesktop-{{< params/neurodesktop/version >}} \
+  vnmd/neurodesktop:{{< params/neurodesktop/version >}}
 ```
 <!-- neurodesktop version found in neurodesk.github.io/data/neurodesktop.toml -->
 
