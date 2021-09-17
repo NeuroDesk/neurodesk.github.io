@@ -6,25 +6,24 @@ description: >
   Add a tool to neurodesktop
 ---
 
-The goal of *neurodesktop* is to provide users with a large choice of tools to use in their pipelines.
-Use the guide below to add a tool to *neurodesktop*. 
+The goal of *neurodesk* is to provide users with a large choice of tools to use in their pipelines.
+Use the guide below to add a tool to *neurodesktop* or *neurocontainers*. 
 
 ## Guiding principles 
-To decide if a tool should be packaged in a singularity container or be installed in the main neurodesktop container we are currently following these guiding principles:
-1) Neurodesktop is not a package manager. This means we are not distributing tools in containers that can easily be installed via a standard package manager 
-2) Neurodesktop allows users to have multiple versions of tools in parallel via [lmod]( https://lmod.readthedocs.io/en/latest/), this means that if different versions of tool can't be installed in parallel we package the tool inside a container.
-3) Neurodesktop aims to provide simple tooling to link tools from different containers. This means that if a tool is required to coordinate container-tools, it should be in the main image.
+To decide if a tool should be packaged in a singularity container in *neurocontainers* or be installed in the *neurodesktop* container we are currently following these guiding principles:
+1) *neurodesk* is not a package manager. This means we are not distributing tools in containers that can easily be installed via a standard package manager 
+2) *neurodesk* allows users to have multiple versions of tools in parallel via [lmod]( https://lmod.readthedocs.io/en/latest/), this means that if different versions of a tool can't be installed in parallel we package the tool inside a container.
+3) *neurodesk* aims to provide tooling to link tools from different containers (such as workflow managers like nipype or nextflow). This means that if a tool is required to coordinate various container-tools, it should be in the *neurodesktop* container.
 
 
 Examples:
 |            | easy install | coordinates containers | small in size | latest version is ok | useful more most users | Conclusion                     |
 |------------|--------------|------------------------|---------------|----------------------|------------------------|--------------------------------|
-| git        | yes          | yes                    | yes           | yes                  | yes                    | base                           |
-| lmod       | no           | yes                    | yes           | yes                  | yes                    | base                           |
-| nipype     | yes          | yes                    | yes           | yes                  | yes                    | base                           |
-| vscode     | yes          | yes                    | yes           | yes                  | yes                    | base                           |
-| itksnap    | yes          | no                     | yes           | yes                  | yes                    | container -> could be in base? |
-| matlab     | yes          | yes                    | no            | no                   | no                     | container due to size?         |
+| git        | yes          | yes                    | yes           | yes                  | yes                    | neurodesktop                   |
+| lmod       | no           | yes                    | yes           | yes                  | yes                    | neurodesktop                   |
+| nipype     | yes          | yes                    | yes           | yes                  | yes                    | neurodesktop                   |
+| vscode     | yes          | yes                    | yes           | yes                  | yes                    | neurodesktop                   |
+| itksnap    | yes          | no                     | yes           | yes                  | yes                    | container?                     |
 | convert3D  | yes          | no                     | yes           | no                   | no                     | container                      |
 | fsl        | no           | no                     | no            | no                   | no                     | container                      |
 | mrtrix     | no           | no                     | no            | no                   | no                     | container                      |
@@ -34,11 +33,11 @@ Examples:
 ## Build container
 To build a container:
 1) Add recipe to neurodocker if relevant (https://github.com/NeuroDesk/neurodocker) and create a pull request to neurodocker
-2) Build the container [here]( https://github.com/NeuroDesk/caid)
-3) Test the container, and if successful add the container to the Readme table [here](https://github.com/NeuroDesk/neurodesk)
+2) Build the container [https://github.com/NeuroDesk/neurocontainers](https://github.com/NeuroDesk/neurocontainers)
+3) Test the container, and if successful add the container to the apps.json file: https://github.com/NeuroDesk/neurocommand/blob/main/neurodesk/apps.json
 
-
-## Menu entry
+## Advanced section
+### Menu entry
 As we want to propose several versions of the tools, each piece of software should have its own submenu under `VNM Neuroimaging`.
 To do so, you first have to add a submenu to `menus/vnm-applications.menu` by adding:
 ```xml
@@ -71,7 +70,7 @@ Type=Directory
 ```
 If a specific icon is available in the `menus/icons` directory, replace `[[icon-name]]` by its name. Otherwise, use `vnm`.
 
-## Create the application
+### Create the application
 
 Finally, we have to create the actual application by creating the file `menus/applications/vnm-[[tool-name]]-[[0.0.0]].desktop`. The name of this file must contain the version of the tool (once again to allow multiple versions to live inside the same directory). Add the following description to this file:
 ```ini
