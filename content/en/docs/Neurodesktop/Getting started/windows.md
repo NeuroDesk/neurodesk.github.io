@@ -14,7 +14,7 @@ description: >
 ## Quickstart
 1. Install Docker from here: https://docs.docker.com/get-docker/
 
-2. Create a local folder where the downloaded applications will be stored, e.g. C:\neurodesktop
+2. Create a local folder where the downloaded applications will be stored, e.g. C:\neurodesktop-storage
 
 3. Open a terminal, and type the folowing command to automatically download the neurodesktop container and run it
 
