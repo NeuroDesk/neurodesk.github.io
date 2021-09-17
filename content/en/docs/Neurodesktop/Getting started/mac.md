@@ -13,16 +13,16 @@ description: >
 ## Quickstart
 1. Install Docker from here: https://docs.docker.com/get-docker/ 
 
-2. Create a local folder where the downloaded applications will be stored, e.g. ~/neurodesktop 
+2. Create a local folder where the downloaded applications will be stored, e.g. ~/neurodesktop-storage 
 
 3. Open a terminal, and type the folowing command to automatically download the neurodesktop container and run it
 
 ```
-docker run --shm-size=1gb -it --privileged --name neurodesktop -v ~/neurodesktop:/neurodesktop -p 8080:8080 vnmd/neurodesktop:20210917
+docker run --shm-size=1gb -it --privileged --name neurodesktop -v ~/neurodesktop-storage:/neurodesktop-storage -p 8080:8080 vnmd/neurodesktop:20210917
 ```
 (notice: There is a bug in docker 3.3.0 for Mac that makes this command not run correctly and there will be no application menu when you start the desktop. Update your docker version when you see this!)
 
-if you get errors in neurodesktop then check if the ~/neurodesktop directory is writable to all users, otherwise run `chmod a+rwx ~/neurodesktop`
+if you get errors in neurodesktop then check if the ~/neurodesktop-storage directory is writable to all users, otherwise run `chmod a+rwx ~/neurodesktop-storage`
 
 4. Once neurodesktop is downloaded i.e. `guacd[77]: INFO:        Listening on host 127.0.0.1, port 4822` is displayed in terminal, open a browser and go to:
 ```

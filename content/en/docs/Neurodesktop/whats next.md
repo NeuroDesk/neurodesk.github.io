@@ -33,5 +33,5 @@ To increase speed and reliability of Neurodesktop we mount the application conta
 
 For windows an example would look like this:
 ```
-docker run --shm-size=1gb -it --privileged --name neurodesktop -v C:/neurodesktop:/neurodesktop -e CVMFS_DISABLE=true -p 8080:8080 neurodesktop:20210917
+docker run --shm-size=1gb -it --privileged --name neurodesktop -v C:/neurodesktop-storage:/neurodesktop-storage -e CVMFS_DISABLE=true -p 8080:8080 neurodesktop:20210917
 ```

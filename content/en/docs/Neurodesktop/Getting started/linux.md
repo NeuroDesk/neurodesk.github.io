@@ -28,14 +28,14 @@ sudo chown root:docker /var/run/docker.sock
 newgrp docker
 ```
 
-2. Create a local folder where the downloaded applications will be stored, e.g. ~/neurodesktop
+2. Create a local folder where the downloaded applications will be stored, e.g. ~/neurodesktop-storage
 
 3. Open a terminal, and type the folowing command to automatically download the neurodesktop container and run it (Mac, Windows, Linux commands listed below) 
 
 ```
-sudo docker run --shm-size=1gb -it --privileged --name neurodesktop -v ~/neurodesktop:/neurodesktop -e HOST_UID="$(id -u)" -e HOST_GID="$(id -g)" -p 8080:8080 vnmd/neurodesktop:20210917
+sudo docker run --shm-size=1gb -it --privileged --name neurodesktop -v ~/neurodesktop-storage:/neurodesktop-storage -e HOST_UID="$(id -u)" -e HOST_GID="$(id -g)" -p 8080:8080 vnmd/neurodesktop:20210917
 ```
-(notice: if you get errors in neurodesktop then check if the ~/neurodesktop directory is writable to all users, otherwise run `chmod a+rwx ~/neurodesktop`)
+(notice: if you get errors in neurodesktop then check if the ~/neurodesktop-storage directory is writable to all users, otherwise run `chmod a+rwx ~/neurodesktop-storage`)
 
 4. Once neurodesktop is downloaded i.e. `guacd[77]: INFO:        Listening on host 127.0.0.1, port 4822` is displayed in terminal, open a browser and go to:
 ```
