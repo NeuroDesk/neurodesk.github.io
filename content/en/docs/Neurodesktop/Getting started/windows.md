@@ -19,7 +19,7 @@ description: >
 3. Open a terminal, and type the folowing command to automatically download the neurodesktop container and run it
 
 ```
-docker run --shm-size=1gb -it --privileged --name neurodesktop -v C:/neurodesktop:/neurodesktop -p 8080:8080 vnmd/neurodesktop:20210916
+docker run --shm-size=1gb -it --privileged --name neurodesktop -v C:/neurodesktop:/neurodesktop -p 8080:8080 vnmd/neurodesktop:20210917
 ```
 
 4. Once neurodesktop is downloaded i.e. `guacd[77]: INFO:        Listening on host 127.0.0.1, port 4822` is displayed in terminal, open a browser and go to:
