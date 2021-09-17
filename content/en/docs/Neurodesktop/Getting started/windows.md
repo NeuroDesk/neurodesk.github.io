@@ -21,7 +21,7 @@ description: >
 ```
 docker run --shm-size=1gb -it --privileged --name neurodesktop -v C:/neurodesktop-storage:/neurodesktop-storage -p 8080:8080 vnmd/neurodesktop:{{< params/neurodesktop/version >}}
 ```
-
+<!-- neurodesktop version found in neurodesk.github.io/data/neurodesktop.toml -->
 4. Once neurodesktop is downloaded i.e. `guacd[77]: INFO:        Listening on host 127.0.0.1, port 4822` is displayed in terminal, open a browser and go to:
 ```
 http://localhost:8080/#/?username=user&password=password
