@@ -18,8 +18,9 @@ description: >
 3. Open a terminal, and type the folowing command to automatically download the neurodesktop container and run it
 
 ```
-docker run --shm-size=1gb -it --privileged --name neurodesktop -v ~/neurodesktop-storage:/neurodesktop-storage -p 8080:8080 vnmd/neurodesktop:20210917
+docker run --shm-size=1gb -it --privileged --name neurodesktop -v ~/neurodesktop-storage:/neurodesktop-storage -p 8080:8080 vnmd/neurodesktop:{{< params/neurodesktop/version >}}
 ```
+<!-- neurodesktop version found in neurodesk.github.io/data/neurodesktop.toml -->
 (notice: There is a bug in docker 3.3.0 for Mac that makes this command not run correctly and there will be no application menu when you start the desktop. Update your docker version when you see this!)
 
 if you get errors in neurodesktop then check if the ~/neurodesktop-storage directory is writable to all users, otherwise run `chmod a+rwx ~/neurodesktop-storage`

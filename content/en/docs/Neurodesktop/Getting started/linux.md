@@ -33,8 +33,13 @@ newgrp docker
 3. Open a terminal, and type the folowing command to automatically download the neurodesktop container and run it (Mac, Windows, Linux commands listed below) 
 
 ```
-sudo docker run --shm-size=1gb -it --privileged --name neurodesktop -v ~/neurodesktop-storage:/neurodesktop-storage -e HOST_UID="$(id -u)" -e HOST_GID="$(id -g)" -p 8080:8080 vnmd/neurodesktop:20210917
+sudo docker run \
+  --shm-size=1gb -it --privileged --name neurodesktop \
+  -v ~/neurodesktop-storage:/neurodesktop-storage \
+  -e HOST_UID="$(id -u)" -e HOST_GID="$(id -g)" \
+  -p 8080:8080 vnmd/neurodesktop:{{< params/neurodesktop/version >}}
 ```
+<!-- neurodesktop version found in neurodesk.github.io/data/neurodesktop.toml -->
 (notice: if you get errors in neurodesktop then check if the ~/neurodesktop-storage directory is writable to all users, otherwise run `chmod a+rwx ~/neurodesktop-storage`)
 
 4. Once neurodesktop is downloaded i.e. `guacd[77]: INFO:        Listening on host 127.0.0.1, port 4822` is displayed in terminal, open a browser and go to:
