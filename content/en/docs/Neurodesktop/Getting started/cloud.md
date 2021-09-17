@@ -38,7 +38,7 @@ newgrp docker
 4. Open a terminal, and type the folowing command to automatically download the neurodesktop container and run it (Mac, Windows, Linux commands listed below) 
 
 ```
-sudo docker run --shm-size=1gb -it --privileged --name neurodesktop -v ~/neurodesktop:/neurodesktop -e USER=user -p 8080:8080 vnmd/neurodesktop:20210916
+sudo docker run --shm-size=1gb -it --privileged --name neurodesktop -v ~/neurodesktop:/neurodesktop -e HOST_UID="$(id -u)" -e HOST_GID="$(id -g)" -p 8080:8080 vnmd/neurodesktop:20210916
 ```
 (notice: if you get errors in neurodesktop then check if the ~/neurodesktop directory is writable to all users, otherwise run `chmod a+rwx ~/neurodesktop`)
 
