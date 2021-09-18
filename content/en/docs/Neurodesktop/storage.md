@@ -56,7 +56,7 @@ It is theoretically possible to mount an SSH target inside Neurodesktop, but it'
 sshfs -o allow_root USER@TARGET_HOST:TARGET_PATH SOURCE_PATH
 ```
 
-Another option is to utilize scp and copy data from an SSH endpoint:
+A better option is to use `scp` and copy data from an SSH endpoint:
 ```
 scp /neurodesk/myfile user@remoteserver:/data/
 ```
