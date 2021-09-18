@@ -6,6 +6,9 @@ description: >-
      Previous releases of neurodesktop
 ---
 
+## 20210918
+- added mriqc 0.16.1 and mrtrix 3.0.3
+
 ## 20210917
 - included more tools for connecting to cloud storage services (rclone, owncloud, nextcloud, davfs2, globus). For more info: [Storage](/docs/neurodesktop/storage)
 - styling of desktop interface, including background wallpaper and colour scheme in terminal window
