@@ -1,7 +1,7 @@
 ---
 title: "September 2021"
 linkTitle: "September 2021"
-date: 2021-05-20
+date: 2021-09-20
 description: >-
   ANZ ISMRM reproducibility workshop
 ---
