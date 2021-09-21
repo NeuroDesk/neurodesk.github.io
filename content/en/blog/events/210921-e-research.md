@@ -1,7 +1,7 @@
 ---
 title: "October 2021"
 linkTitle: "October 2021"
-date: 2021-09-22
+date: 2021-09-21
 description: >-
   E-research conference 2021
 ---
