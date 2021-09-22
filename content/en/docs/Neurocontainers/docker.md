@@ -21,7 +21,3 @@ singularity build julia_1.6.1.simg docker://vnmd/julia_1.6.1
 ```
 
 Replace `julia_1.6.1` with your selected application
-
-
-## Transparent Singularity
-The containers can be used in combination with our [transparent singularity](https://github.com/NeuroDesk/transparent-singularity/) tool, that wrap the executables inside a container to make them easily available for pipelines.
