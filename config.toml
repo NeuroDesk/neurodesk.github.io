@@ -204,7 +204,7 @@ enable = false
 
 [[menu.main]]
     name = "GitHub"
-    weight = 20
+    weight = 40
     url = "https://github.com/NeuroDesk"
     pre = "<i class='fab fa-github'></i>"
 	
