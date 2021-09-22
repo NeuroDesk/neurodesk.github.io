@@ -5,7 +5,7 @@ linkTitle: "Developers"
 weight: 1
 menu:
   main:
-    weight: 2
+    weight: 1
 description: >
   Documentation for Developers
 ---
