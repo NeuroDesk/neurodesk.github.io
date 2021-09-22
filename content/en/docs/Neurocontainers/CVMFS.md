@@ -1,9 +1,9 @@
 ---
-title: "Neurocontainers"
-linkTitle: "Neurocontainers"
+title: "CVMFS"
+linkTitle: "CVMFS"
 weight: 4
 description: >
-  Singularity Containers on CVMFS
+  Neurodesk Singularity Containers on CVMFS
 ---
 
 # Install CVMFS on Windows subsystem for linux

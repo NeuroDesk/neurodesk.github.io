@@ -3,7 +3,7 @@ title: "Singularity"
 linkTitle: "Singularity"
 weight: 4
 description: >
-  Singularity Containers
+  Neurodesk Singularity Containers
 ---
 
 Our docker containers are converted to singularity containers and stored on Object storage.
