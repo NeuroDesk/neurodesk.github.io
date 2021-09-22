@@ -1,7 +1,7 @@
 ---
 title: "How to add new tools"
 linkTitle: "How to add new tools"
-weight: 6
+weight: 2
 description: >
   Developer guide
 ---
