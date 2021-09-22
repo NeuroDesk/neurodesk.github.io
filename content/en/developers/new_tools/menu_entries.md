@@ -1,6 +1,6 @@
 ---
-title: "Add tools"
-linkTitle: "Add tools"
+title: "Menu entries"
+linkTitle: "Menu entries"
 weight: 1
 description: >
   Menu entries in neurodesktop

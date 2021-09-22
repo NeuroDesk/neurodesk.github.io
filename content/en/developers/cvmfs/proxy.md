@@ -1,9 +1,9 @@
 ---
-title: "Setup Stratum 1 server"
-linkTitle: "Stratum 1"
+title: "Setup CVMFS Proxy"
+linkTitle: "Proxy"
 weight: 1
 description: >
-  Host a Stratum 1 server
+  Setup CVMFS Proxy server
 ---
 
 If you want more speed in a region one way could be to setup another Stratum 1 server or a proxy. We currently don't run any proxy servers but it would be important for using it on a cluster.
