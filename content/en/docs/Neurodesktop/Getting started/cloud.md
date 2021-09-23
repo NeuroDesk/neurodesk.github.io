@@ -66,14 +66,12 @@ When done processing your data it is important to stop and remove the container 
 2. Press control-C
 
 3. Type:
-```shell
-sudo docker stop neurodesktop
-```shell
-4. Type:
 ```
-sudo docker rm neurodesktop
+sudo docker stop neurodesktop && sudo docker rm neurodesktop
 ```
 
+## Portforwarding to an iOS ipad 
+You can also connect to this cloud instance from your iOS device :) For this install https://webssh.net/documentation/help/networking/port-forwarding/ and create a tunnel (the tool is free for one connection). Start the docker container in a screen session and then connect to it from your ios device in the browser.
 
 ## Cloud-provider specific Tutorials 
 | Cloud provider | link                                                                                    |
