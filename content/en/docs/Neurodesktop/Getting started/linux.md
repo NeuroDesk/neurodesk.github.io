@@ -14,7 +14,7 @@ description: >
 1. Install Docker from here: https://docs.docker.com/get-docker/ 
 
 one example to install docker in a yum-based distribution could look like this:
-```
+```shell
 sudo dnf install -y yum-utils 
 sudo yum-config-manager --add-repo https://download.docker.com/linux/centos/docker-ce.repo
 sudo dnf install docker-ce docker-ce-cli containerd.io
@@ -32,7 +32,7 @@ newgrp docker
 
 3. Open a terminal, and type the folowing command to automatically download the neurodesktop container and run it (Mac, Windows, Linux commands listed below) 
 
-```
+```shell
 sudo docker run \
   --shm-size=1gb -it --privileged --name neurodesktop \
   -v ~/neurodesktop-storage:/neurodesktop-storage \

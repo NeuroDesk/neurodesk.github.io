@@ -10,7 +10,7 @@ description: >
 First you need to install CVMFS. Follow the official instructions here: https://cvmfs.readthedocs.io/en/stable/cpt-quickstart.html#getting-the-software
 
 one example for Windows Subsystem for Linux (WSL) could look like this:
-```bash
+```bash {linenos=table}
 sudo apt-get install lsb-release
 wget https://ecsft.cern.ch/dist/cvmfs/cvmfs-release/cvmfs-release-latest_all.deb
 sudo dpkg -i cvmfs-release-latest_all.deb
@@ -67,7 +67,7 @@ cvmfs_config stat -v neurodesk.ardc.edu.au
 
 # use of Neurodesk CVMFS containers
 The containers are now available in /cvmfs/neurodesk.ardc.edu.au/containers/ and can be started with:
-```
+```bash {linenos=table}
 singularity shell --no-home /cvmfs/neurodesk.ardc.edu.au/containers/itksnap_3.8.0_20201208/itksnap_3.8.0_20201208.simg
 ```
 

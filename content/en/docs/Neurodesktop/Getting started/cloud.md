@@ -12,14 +12,14 @@ description: >
 
 ## Quickstart
 1. Open an SSH connection to your cloud instance with port forwarding
-```
+```shell
 ssh -L 8080:127.0.0.1:8080 opc@133.71.33.71
 ```
 
 2. Install Docker from here: https://docs.docker.com/get-docker/ 
 
 one example to install docker in a yum-based distribution could look like this:
-```
+```shell
 sudo dnf install -y yum-utils 
 sudo yum-config-manager --add-repo https://download.docker.com/linux/centos/docker-ce.repo
 sudo dnf install docker-ce docker-ce-cli containerd.io
@@ -37,7 +37,7 @@ newgrp docker
 
 4. Open a terminal, and type the folowing command to automatically download the neurodesktop container and run it (Mac, Windows, Linux commands listed below) 
 
-```
+```shell
 sudo docker run \
   --shm-size=1gb -it --privileged --name neurodesktop \
   -v ~/neurodesktop-storage:/neurodesktop-storage \
@@ -66,9 +66,9 @@ When done processing your data it is important to stop and remove the container 
 2. Press control-C
 
 3. Type:
-```
+```shell
 sudo docker stop neurodesktop
-```
+```shell
 4. Type:
 ```
 sudo docker rm neurodesktop

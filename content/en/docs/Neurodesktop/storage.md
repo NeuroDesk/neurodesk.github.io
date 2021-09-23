@@ -20,7 +20,7 @@ Then generate an app-password here: https://cloudstor.aarnet.edu.au/plus/setting
 ## Mounting webdav storage using davfs2
 Another option is to directly mount webdav storage. Here is an example how to mount CloudStor into Neurodesktop:
 
-```
+```shell
 sudo mount -t davfs https://cloudstor.aarnet.edu.au/plus/remote.php/webdav/ /data/
 ```
 It then asks you for a username and password, which you can generate here: https://cloudstor.aarnet.edu.au/plus/settings/personal?sectionid=security
@@ -46,7 +46,7 @@ Rclone is a command line tool that enables the interaction with various cloud se
 
 ## Globus
 We also provide the globus client, so you can transfer large amounts of data between globus endpoints and Neurodesktop. You can configure it by running:
-```
+```shell
 /opt/globusconnectpersonal/globusconnectpersonal-*/globusconnectpersonal
 ```
 
@@ -57,12 +57,12 @@ The -v C:/neurodesktop-storage:/neurodesktop-storage part of the docker command 
 
 # Mount volume using SSHFS
 It is theoretically possible to mount an SSH target inside Neurodesktop, but it's not a very reliable way of mounting storage:
-```
+```shell
 sshfs -o allow_root USER@TARGET_HOST:TARGET_PATH SOURCE_PATH
 ```
 
 A better option is to use `scp` and copy data from an SSH endpoint:
-```
+```shell
 scp /neurodesk/myfile user@remoteserver:/data/
 ```
 

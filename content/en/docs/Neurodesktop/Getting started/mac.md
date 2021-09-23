@@ -17,7 +17,7 @@ description: >
 
 3. Open a terminal, and type the folowing command to automatically download the neurodesktop container and run it
 
-```
+```shell
 docker run --shm-size=1gb -it --privileged --name neurodesktop -v ~/neurodesktop-storage:/neurodesktop-storage -p 8080:8080 -h neurodesktop-{{< params/neurodesktop/version >}} vnmd/neurodesktop:{{< params/neurodesktop/version >}}
 ```
 <!-- neurodesktop version found in neurodesk.github.io/data/neurodesktop.toml -->
