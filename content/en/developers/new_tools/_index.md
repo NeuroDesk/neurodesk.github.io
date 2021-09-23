@@ -3,7 +3,7 @@ title: "How to add new tools"
 linkTitle: "How to add new tools"
 weight: 2
 description: >
-  Developer guide
+  How to add new tools to neurodesk
 ---
 
 

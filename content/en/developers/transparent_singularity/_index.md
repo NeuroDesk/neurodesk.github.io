@@ -34,6 +34,12 @@ cd convert3d_1.0.0_20210104
 ./run_transparent_singularity.sh convert3d_1.0.0_20210104
 ```
 
+## Options for Transparent singularity:
+- `--storage` - this
+- `--container` - this option can be used to explicitly define the container name to be downloaded 
+- `--unpack` - this will unpack the singularity container so it can be used on systems that do not allow to open simg / sif files for security reasons, e.g.: `--unpack true`
+- `--singularity-opts` - this will be passed on to the singularity call, e.g.: `--singularity-opts '--bind /cvmfs'`
+
 # Use in module system LMOD
 Add the module folder path to $MODULEPATH
 
