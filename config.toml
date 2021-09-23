@@ -26,6 +26,8 @@ pygmentsUseClassic = false
 #pygmentsOptions = "linenos=table"
 # See https://help.farbox.com/pygments.html
 pygmentsStyle = "tango"
+codeFences = true
+guessSyntax = true
 
 # Configure how URLs look like per section.
 [permalinks]
