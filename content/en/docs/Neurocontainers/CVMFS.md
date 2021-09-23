@@ -63,7 +63,6 @@ sudo cvmfs_talk -i neurodesk.ardc.edu.au host info
 
 cvmfs_config stat -v neurodesk.ardc.edu.au
 ```
-{{< / highlight >}}
 
 
 # use of Neurodesk CVMFS containers
