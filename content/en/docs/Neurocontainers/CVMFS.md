@@ -22,8 +22,7 @@ sudo apt-get install cvmfs
 # Configure CVMFS
 
 Once installed create the keys and configure the servers used:
-{{< highlight }}
-```
+```bash {linenos=table,linenostart=1}
 sudo mkdir -p /etc/cvmfs/keys/ardc.edu.au/
 
 
