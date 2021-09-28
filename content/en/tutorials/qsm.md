@@ -1,12 +1,12 @@
 ---
 title: "Quantitative Susceptibility Mapping"
-linkTitle: "Quantitative Susceptibility Mapping"
+linkTitle: "QSM"
 weight: 1
 description: >
   Example workflow for Quantitative Susceptibility Mapping
 ---
 
-# Quantitative Susceptibility Mapping
+# Quantitative Susceptibility Mapping in QSMxT
 
 Neurodesk includes QSMxT, a complete and end-to-end QSM processing and analysis framework that excels at automatically reconstructing and processing QSM for large groups of participants. 
 
