@@ -6,6 +6,14 @@ description: >-
      Previous releases of neurodesktop
 ---
 
+## 20210929
+- fixed naming of aidmri to aidamri and added new category "Rodent Imaging"
+- updated all tool icons and updated neurodesk icon including background image
+- VScode now stores settings in persistent storage /neurodesktop-storage and with this keeps extensions and settings across different neurodesktop versions
+- docker layers are now cached, so updating the desktop to the next version is very fast and consumes less disk space locally
+- default theme of terminal changed from Solarized to Tango as the old theme was hiding information in tools like htop (same font colour on same background...)
+
+
 ## 20210923
 - removed faulty mriqc 0.15.2 container
 - neurodesk.github.io is now starting page in firefox browser
