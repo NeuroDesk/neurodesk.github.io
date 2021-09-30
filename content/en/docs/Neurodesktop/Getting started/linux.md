@@ -68,3 +68,32 @@ docker stop neurodesktop
 ```
 docker rm neurodesktop
 ```
+
+## GPU support
+```
+sudo yum install nvidia-container-toolkit -y
+
+sudo docker run \
+  --shm-size=1gb -it --privileged --name neurodesktop \
+  -v ~/neurodesktop-storage:/neurodesktop-storage \
+  -e HOST_UID="$(id -u)" -e HOST_GID="$(id -g)" \
+  -e NVIDIA_VISIBLE_DEVICES=all \
+  -p 8080:8080 -h neurodesktop-{{< params/neurodesktop/version >}} \
+  vnmd/neurodesktop:{{< params/neurodesktop/version >}}
+```
+<!-- neurodesktop version found in neurodesk.github.io/data/neurodesktop.toml -->
+
+Then inside the desktop container:
+```
+sudo apt update
+sudo apt install libcudart10.1
+```
+
+Test:
+```
+python 
+import tensorflow as tf
+print("Num GPUs Available: ", len(tf.config.list_physical_devices('GPU')))
+```
+
+![image](https://user-images.githubusercontent.com/4021595/135446560-d135f6ce-b699-4e46-8534-b72b4d9f2d41.png)
