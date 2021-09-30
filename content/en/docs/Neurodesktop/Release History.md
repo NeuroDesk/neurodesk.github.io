@@ -1,7 +1,7 @@
 ---
 title: "Release History"
 linkTitle: "Release History"
-weight: 5
+weight: 10
 description: >-
      Previous releases of neurodesktop
 ---
