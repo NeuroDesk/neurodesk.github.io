@@ -89,7 +89,7 @@ sudo apt update
 sudo apt install libcudart10.1
 ```
 
-Test:
+Test in desktop image:
 ```
 python 
 import tensorflow as tf
@@ -97,3 +97,13 @@ print("Num GPUs Available: ", len(tf.config.list_physical_devices('GPU')))
 ```
 
 ![image](https://user-images.githubusercontent.com/4021595/135446560-d135f6ce-b699-4e46-8534-b72b4d9f2d41.png)
+
+
+Test in singularity container running inside desktop container:
+```
+singularity pull docker://tensorflow/tensorflow:latest-gpu
+singularity run --nv tensorflow_latest-gpu.sif
+python 
+import tensorflow as tf
+print("Num GPUs Available: ", len(tf.config.list_physical_devices('GPU')))
+```
