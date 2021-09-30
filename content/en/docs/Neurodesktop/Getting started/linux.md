@@ -13,6 +13,20 @@ description: >
 ## Quickstart
 1. Install Docker from here: https://docs.docker.com/get-docker/ 
 
+{{< prismjs lang="bash" prompt=" $" command-line="true" output="12" >}}
+sudo dnf install -y yum-utils 
+sudo yum-config-manager --add-repo https://download.docker.com/linux/centos/docker-ce.repo
+sudo dnf install docker-ce docker-ce-cli containerd.io
+sudo systemctl enable docker
+sudo systemctl start docker
+sudo docker version
+sudo docker info
+sudo groupadd docker
+sudo usermod -aG docker $USER
+sudo chown root:docker /var/run/docker.sock
+newgrp docker{{< /prismjs >}}
+
+
 one example to install docker in a yum-based distribution could look like this:
 ```shell
 sudo dnf install -y yum-utils 
@@ -31,6 +45,14 @@ newgrp docker
 2. Create a local folder where the downloaded applications will be stored, e.g. ~/neurodesktop-storage
 
 3. Open a terminal, and type the folowing command to automatically download the neurodesktop container and run it (Mac, Windows, Linux commands listed below) 
+
+{{< prismjs lang="bash" line="" command-line="true" host="host" user="user" output="2-6" >}}
+sudo docker run \
+  --shm-size=1gb -it --privileged --name neurodesktop \
+  -v ~/neurodesktop-storage:/neurodesktop-storage \
+  -e HOST_UID="$(id -u)" -e HOST_GID="$(id -g)" \
+  -p 8080:8080 -h neurodesktop-{{< params/neurodesktop/version >}} \
+  vnmd/neurodesktop:{{< params/neurodesktop/version >}}{{< /prismjs >}}
 
 ```shell
 sudo docker run \
