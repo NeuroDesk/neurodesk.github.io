@@ -193,20 +193,20 @@ enable = false
     #     desc = "Practical questions and curated answers"
 # Developer relevant links. These will show up on right side of footer and in the community page if you have one.
 [[params.links.developer]]
-	# name = "GitHub"
-	# url = "https://github.com/google/docsy"
-	# icon = "fab fa-github"
-    #     desc = "Development takes place here!"
+	name = "GitHub"
+	url = "https://github.com/NeuroDesk"
+	icon = "fab fa-github"
+    desc = "Development takes place here!"
 [[params.links.developer]]
 	# name = "Slack"
 	# url = "https://example.org/slack"
 	# icon = "fab fa-slack"
     #     desc = "Chat with other project developers"
 [[params.links.developer]]
-	# name = "Developer mailing list"
-	# url = "https://example.org/mail"
-	# icon = "fa fa-envelope"
-    #     desc = "Discuss development issues around the project"
+	name = "Dicussion Forum (requires github login)"
+	url = "https://github.com/NeuroDesk/neurodesk.github.io/discussions"
+ 	icon = "fa fa-envelope"
+    desc = "Discuss development issues around the project"
 
 [[menu.main]]
     name = "GitHub"
