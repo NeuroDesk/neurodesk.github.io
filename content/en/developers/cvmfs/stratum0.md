@@ -9,7 +9,7 @@ description: >
 
 ## Setup a Stratum 0 server:
 ### Setup Storage 
-(would object storage bet better -> see comment below)
+(would object storage be better? -> see comment below under next iteration ideas)
 ```bash
 lsblk -l
 sudo mkfs.ext4 /dev/vdb
