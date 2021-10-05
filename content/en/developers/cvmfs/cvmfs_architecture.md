@@ -1,6 +1,6 @@
 ---
 title: "CVMFS architecture"
-linkTitle: "CVMFS architecture"
+linkTitle: "Setup"
 weight: 1
 description: >
   CVMFS architecture
