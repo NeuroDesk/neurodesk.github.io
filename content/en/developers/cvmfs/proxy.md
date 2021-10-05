@@ -9,7 +9,7 @@ description: >
 If you want more speed in a region one way could be to setup another Stratum 1 server or a proxy. We currently don't run any proxy servers but it would be important for using it on a cluster.
 
 # Setup a CVMFS proxy server
-```bash {linenos=table}
+```bash
 sudo yum install -y squid
 
 sudo vi /etc/squid/squid.conf

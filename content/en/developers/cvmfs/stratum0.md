@@ -9,7 +9,7 @@ description: >
 
 ## Setup a Stratum 0 server:
 ### Setup Storage (would object storage bet better -> see comment below)
-```bash {linenos=table}
+```bash
 lsblk -l
 sudo mkfs.ext4 /dev/vdb
 sudo mkdir /storage
@@ -22,7 +22,7 @@ sudo vi /etc/fstab
 ```
 
 ### Setup server
-```bash {linenos=table}
+```bash
 sudo yum install vim htop gcc git screen
 sudo timedatectl set-timezone Australia/Brisbane
 
