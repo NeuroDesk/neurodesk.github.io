@@ -10,18 +10,23 @@ description: >
 ## Setup a Stratum 0 server:
 ### Setup Storage 
 (would object storage be better? -> see comment below under next iteration ideas)
-<pre class="language-shell command-line" data-prompt="$"><code>lsblk -l
+<pre class="language-shell command-line" data-prompt="$">
+<code>lsblk -l
 sudo mkfs.ext4 /dev/vdb
 sudo mkdir /storage
 sudo mount /dev/vdb /storage/ -t auto
 sudo chown ec2-user /storage/
-sudo chmod a+rwx /storage/</code></pre>
+sudo chmod a+rwx /storage/</code>
+</pre>
 
-<pre class="language-shell command-line" data-prompt="$" data-output="2"><code>sudo vi /etc/fstab
-/dev/vdb  /storage    auto    defaults,nofail   0  2</code></pre>
+<pre class="language-shell command-line" data-prompt="$" data-output="2">
+<code>sudo vi /etc/fstab
+/dev/vdb  /storage    auto    defaults,nofail   0  2</code>
+</pre>
 
 ### Setup server
-<pre class="language-shell command-line" data-prompt="$" data-output="41, 44-52"><code>sudo yum install vim htop gcc git screen
+<pre class="language-shell command-line" data-prompt="$" data-output="41, 44-52">
+<code>sudo yum install vim htop gcc git screen
 sudo timedatectl set-timezone Australia/Brisbane
 
 sudo yum install -y https://ecsft.cern.ch/dist/cvmfs/cvmfs-release/cvmfs-release-latest.noarch.rpm
@@ -58,20 +63,31 @@ sudo ln -s  /storage/spool/cvmfs .
 
 cvmfs_server transaction neurodesk.ardc.edu.au
 
-cvmfs_server publish neurodesk.ardc.edu.au</code></pre>
+cvmfs_server publish neurodesk.ardc.edu.au</code>
+</pre>
 
-<pre class="language-shell command-line" data-prompt="$" data-ouput="2"><code>sudo vi /etc/cron.d/cvmfs_resign</code></pre>
-<pre class="language-shell"><code>0 11 * * 1 root /usr/bin/cvmfs_server resign neurodesk.ardc.edu.au</code></pre>
+<pre class="language-shell command-line" data-prompt="$" data-ouput="2">
+<code>sudo vi /etc/cron.d/cvmfs_resign</code>
+</pre>
 
-<pre class="language-shell command-line" data-prompt="$" data-ouput="2"><code>cat /etc/cvmfs/keys/neurodesk.ardc.edu.au.pub</code></pre>
-<pre class="language-shell"><code>MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAuV9JBs9uXBR83qUs7AiE
+<pre class="language-shell">
+<code>0 11 * * 1 root /usr/bin/cvmfs_server resign neurodesk.ardc.edu.au</code>
+</pre>
+
+<pre class="language-shell command-line" data-prompt="$" data-ouput="2">
+<code>cat /etc/cvmfs/keys/neurodesk.ardc.edu.au.pub</code>
+</pre>
+
+<pre class="language-shell">
+<code>MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAuV9JBs9uXBR83qUs7AiE
 nSQfvh6VCdNigVzOfRMol5cXsYq3cFy/Vn1Nt+7SGpDTQArQieZo4eWC9ww2oLq0
 vY1pWyAms3Y4i+IUmMbwNifDU4GQ1KN9u4zl9Peun2YQCLE7mjC0ZLQtLM7Q0Z8h
 NwP8jRJTN+u8mRKzkyxfSMLscVMKhm2pAwnT1zB9i3bzVV+FSnidXq8rnnzNHMgv
 tfqx1h0gVyTeodToeFeGG5vq69wGZlwEwBJWVRGzzr+a8dWNBFMJ1HxamrBEBW4P
 AxOKGHmQHTGbo+tdV/K6ZxZ2Ry+PVedNmbON/EPaGlI8Vd0fascACfByqqeUEhAB
 dQIDAQAB
------END PUBLIC KEY-----</code></pre>
+-----END PUBLIC KEY-----</code>
+</pre>
 
 ## Next iteration of this:
 ### use object storage?
@@ -92,7 +108,8 @@ Extended attributes of files, such as file capabilities and SElinux attributes, 
 We tested the DUCC tool in the beginning, but it was leading to too many docker pulls and we therefore replaced it with our own script: https://github.com/NeuroDesk/neurocommand/blob/main/cvmfs/sync_containers_to_cvmfs.sh
 
 This is the old DUCC setup
-<pre class="language-shell command-line" data-prompt="$"><code>sudo yum install cvmfs-ducc.x86_64
+<pre class="language-shell command-line" data-prompt="$">
+<code>sudo yum install cvmfs-ducc.x86_64
 sudo -i
 dnf install -y yum-utils 
 yum-config-manager --add-repo https://download.docker.com/linux/centos/docker-ce.repo
@@ -119,7 +136,7 @@ cvmfs_ducc convert recipe_neurodesk_auto.yaml
 cd ..
 
 
- chmod +x convert_appsjson_to_wishlist.sh
+chmod +x convert_appsjson_to_wishlist.sh
 
 git clone https://github.com/NeuroDesk/neurodesk/
 
@@ -141,4 +158,5 @@ sudo vi /etc/cron.d/cvmfs_dockerpull
 
 
 #cvmfs_ducc convert recipe_neurodesk.yaml
-#cvmfs_ducc convert recipe_unpacked.yaml</code></pre>
+#cvmfs_ducc convert recipe_unpacked.yaml</code>
+</pre>
