@@ -13,7 +13,10 @@ description: >
 ## Quickstart
 1. Install Docker from here: https://docs.docker.com/get-docker/ 
 
-{{< prismjs lang="bash" prompt=" $" command-line="true" output="12" >}}
+<pre class="language-bash" data-prompt="test"><code>sudo dnf install -y yum-utils
+sudo dnf install -y yum-utils</code></pre>
+
+{{< prismjs lang="bash" prompt="$" command-line="true" output="12" >}}
 sudo dnf install -y yum-utils 
 sudo yum-config-manager --add-repo https://download.docker.com/linux/centos/docker-ce.repo
 sudo dnf install docker-ce docker-ce-cli containerd.io
@@ -46,7 +49,7 @@ newgrp docker
 
 3. Open a terminal, and type the folowing command to automatically download the neurodesktop container and run it (Mac, Windows, Linux commands listed below) 
 
-{{< prismjs lang="bash" line="" command-line="true" host="host" user="user" output="2-6" >}}
+{{< prismjs lang="bash" prompt="$" command-line="true" output="2-6" >}}
 sudo docker run \
   --shm-size=1gb -it --privileged --name neurodesktop \
   -v ~/neurodesktop-storage:/neurodesktop-storage \

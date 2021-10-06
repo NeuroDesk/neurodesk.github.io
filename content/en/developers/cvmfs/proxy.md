@@ -8,22 +8,16 @@ description: >
 
 If you want more speed in a region one way could be to setup another Stratum 1 server or a proxy. We currently don't run any proxy servers but it would be important for using it on a cluster.
 
-
-
-{{< prismjs lang="powershell" line-numbers="1" prompt=">>" command-line="false" output="2-4">}}
-docker run --shm-size=1gb -it --privileged --name neurodesktop `
+<pre class="language-batch command-line" data-prompt=">" data-output="2-4"><code>docker run --shm-size=1gb -it --privileged --name neurodesktop `
 -v C:/neurodesktop-storage:/neurodesktop-storage -p 8080:8080 `
 -h neurodesktop-{{< params/neurodesktop/version >}} `
-vnmd/neurodesktop:{{< params/neurodesktop/version >}}{{< /prismjs >}}
-
+vnmd/neurodesktop:{{< params/neurodesktop/version >}}</code></pre>
 
 # Setup a CVMFS proxy server
-```bash
-sudo yum install -y squid
-
-sudo vi /etc/squid/squid.conf
-
-# List of local IP addresses (separate IPs and/or CIDR notation) allowed to access your local proxy
+<pre class="language-shell command-line" data-prompt="$"><code>sudo yum install -y squid</code></pre>
+Open the `squid.conf`and use the following configuration
+<pre class="language-shell command-line" data-prompt="$"><code>sudo vi /etc/squid/squid.conf</code></pre>
+<pre class="language-shell"><code># List of local IP addresses (separate IPs and/or CIDR notation) allowed to access your local proxy
 #acl local_nodes src YOUR_CLIENT_IPS
 
 # Destination domains that are allowed
@@ -51,17 +45,10 @@ cache_mem 128 MB
 maximum_object_size_in_memory 128 KB
 # 5 GB disk cache
 cache_dir ufs /var/spool/squid 5000 16 256
+</code></pre>
 
-
-
-sudo squid -k parse
-
+<pre class="language-shell command-line" data-prompt="$"><code>sudo squid -k parse
 sudo systemctl start squid
 sudo systemctl enable squid
 sudo systemctl status squid
-sudo systemctl restart squid
-```
-
-
-
-
+sudo systemctl restart squid</code></pre>
