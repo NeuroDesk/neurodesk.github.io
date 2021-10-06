@@ -18,7 +18,7 @@ vnmd/neurodesktop:{{< params/neurodesktop/version >}}{{< /prismjs >}}
 
 
 # Setup a CVMFS proxy server
-```bash {linenos=table}
+```bash
 sudo yum install -y squid
 
 sudo vi /etc/squid/squid.conf

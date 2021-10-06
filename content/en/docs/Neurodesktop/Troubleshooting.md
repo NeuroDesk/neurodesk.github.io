@@ -1,7 +1,7 @@
 ---
 title: "Troubleshooting"
 linkTitle: "Troubleshooting"
-weight: 4
+weight: 9
 description: >-
      Are you experiencing issues with neurodesktop?
 ---

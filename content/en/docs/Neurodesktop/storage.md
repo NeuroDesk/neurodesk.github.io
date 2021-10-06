@@ -12,7 +12,10 @@ The easiest way to get your data into Neurodesktop is to use a cloud storage pro
 ## Nextcloud and Owncloud desktop clients
 Under the menu item "Accessories" you can find "Nextcloud" and "ownCloud" desktop sync clients that you can configure with your cloud service accounts.
 
-To connect for example to your AARNET cloudstor account you can start the ownCloud client and enter the Server Address: `https://cloudstor.aarnet.edu.au/plus/` 
+To connect for example to your AARNET cloudstor account you can start the ownCloud client and enter the Server Address: 
+```
+https://cloudstor.aarnet.edu.au/plus/
+``` 
 
 Then generate an app-password here: https://cloudstor.aarnet.edu.au/plus/settings/personal?sectionid=security
 

@@ -1,6 +1,6 @@
 ---
 title: "CVMFS architecture"
-linkTitle: "CVMFS architecture"
+linkTitle: "Setup"
 weight: 1
 description: >
   CVMFS architecture
@@ -13,3 +13,10 @@ It gets called by a cronjob on the CVMFS Stratum 0 server and relies on the log.
 The Stratum 1 servers then pull this repo from Stratum 0 and our desktops mount these repos (configured here: https://github.com/NeuroDesk/neurodesktop/blob/main/Dockerfile)
 
 The startup script (https://github.com/NeuroDesk/neurodesktop/blob/main/config/startup.sh) sets up CVMFS and tests which server is fastest during the container startup.
+
+This can also be done manually:
+```
+sudo cvmfs_talk -i neurodesk.ardc.edu.au host info
+sudo cvmfs_talk -i neurodesk.ardc.edu.au host probe
+cvmfs_config stat -v neurodesk.ardc.edu.au
+```

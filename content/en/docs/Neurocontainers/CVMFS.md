@@ -67,7 +67,32 @@ cvmfs_config stat -v neurodesk.ardc.edu.au
 
 # use of Neurodesk CVMFS containers
 The containers are now available in /cvmfs/neurodesk.ardc.edu.au/containers/ and can be started with:
-```bash {linenos=table}
+```bash
+singularity shell /cvmfs/neurodesk.ardc.edu.au/containers/itksnap_3.8.0_20201208/itksnap_3.8.0_20201208.simg
+```
+make sure that SINGULARITY_BINDPATH include the directories you want to work with:
+```bash
+export SINGULARITY_BINDPATH='/cvmfs,/mnt,/home'
+```
+
+# WSL doesn't support homedirectory - so don't mount this
+```bash
 singularity shell --no-home /cvmfs/neurodesk.ardc.edu.au/containers/itksnap_3.8.0_20201208/itksnap_3.8.0_20201208.simg
+```
+or configure permanently:
+```
+sudo vi /etc/singularity/singularity.conf
+```
+set
+```
+mount home = no
+```
+
+# use of containers in the module system:
+```
+export SINGULARITY_BINDPATH='/cvmfs,/mnt,/home'
+module use /cvmfs/neurodesk.ardc.edu.au/neurodesk-modules/*
+ml fsl
+fslmaths
 ```
 

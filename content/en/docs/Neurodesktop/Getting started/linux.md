@@ -90,3 +90,43 @@ docker stop neurodesktop
 ```
 docker rm neurodesktop
 ```
+
+## GPU support
+```
+sudo yum install nvidia-container-toolkit -y
+
+sudo docker run \
+  --shm-size=1gb -it --privileged --name neurodesktop \
+  -v ~/neurodesktop-storage:/neurodesktop-storage \
+  -e HOST_UID="$(id -u)" -e HOST_GID="$(id -g)" \
+  -e NVIDIA_VISIBLE_DEVICES=all \
+  -p 8080:8080 -h neurodesktop-{{< params/neurodesktop/version >}} \
+  vnmd/neurodesktop:{{< params/neurodesktop/version >}}
+```
+<!-- neurodesktop version found in neurodesk.github.io/data/neurodesktop.toml -->
+
+Then inside the desktop container:
+```
+sudo apt update
+sudo apt install libcudart10.1
+```
+
+Test in desktop image:
+```
+python 
+import tensorflow as tf
+print("Num GPUs Available: ", len(tf.config.list_physical_devices('GPU')))
+```
+
+![image](https://user-images.githubusercontent.com/4021595/135446560-d135f6ce-b699-4e46-8534-b72b4d9f2d41.png)
+
+
+Test in singularity container running inside desktop container:
+```
+singularity pull docker://tensorflow/tensorflow:latest-gpu
+singularity run --nv tensorflow_latest-gpu.sif
+python 
+import tensorflow as tf
+print("Num GPUs Available: ", len(tf.config.list_physical_devices('GPU')))
+```
+![image](https://user-images.githubusercontent.com/4021595/135449288-6c3e9bbd-fe5f-4f43-aa4a-8a798ba629e6.png)
