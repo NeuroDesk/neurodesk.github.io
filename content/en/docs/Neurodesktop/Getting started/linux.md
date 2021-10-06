@@ -84,7 +84,7 @@ When done processing your data it is important to stop and remove the container 
   vnmd/neurodesktop:{{< params/neurodesktop/version >}}</code>
 </pre>
 
-> True the following if there issues with the previous command
+> Try the following if there are issues with the previous command
 <pre class="language-shell command-line" data-prompt="$" data-output="2-9">
 <code>sudo docker run \
   --shm-size=1gb -it --privileged --name neurodesktop \
