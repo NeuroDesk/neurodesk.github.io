@@ -15,8 +15,6 @@ The Stratum 1 servers then pull this repo from Stratum 0 and our desktops mount 
 The startup script (https://github.com/NeuroDesk/neurodesktop/blob/main/config/startup.sh) sets up CVMFS and tests which server is fastest during the container startup.
 
 This can also be done manually:
-```
-sudo cvmfs_talk -i neurodesk.ardc.edu.au host info
+<pre class="language-shell command-line" data-prompt="$"><code>sudo cvmfs_talk -i neurodesk.ardc.edu.au host info
 sudo cvmfs_talk -i neurodesk.ardc.edu.au host probe
-cvmfs_config stat -v neurodesk.ardc.edu.au
-```
+cvmfs_config stat -v neurodesk.ardc.edu.au</code></pre>
