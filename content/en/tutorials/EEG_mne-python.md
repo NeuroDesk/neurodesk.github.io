@@ -35,13 +35,13 @@ Once your new environment is activated, in the top right corner of your empty ju
 
 ![EEGtut4](/EEG_Tutorial/EEGtut4.png 'EEGtut4')
 
-Then, select the instance of Python associated with the environment you have just selected (“mne”):
+Then, select the instance of Python associated with the environment you have just created (“mne”):
 
 ![EEGtut5](/EEG_Tutorial/EEGtut5.png 'EEGtut5')
 
 At this point you may also be prompted to install the vscode packages for python. Once you have installed these, you’re ready to rumble!
 
-## Download Sample Data
+## Download sample data
 
 In the terminal, input the following code to download some BIDS formatted sample EEG data:
 
@@ -91,10 +91,10 @@ This data file did not include a montage. Lets create one using standard values 
 ```
 # Create montage
 montage = {'Iz':  [0, -110, -40],
-               'Oz': [0, -105, -15],
-               'POz': [0,   -100, 15],
-               'O1': [-40, -106, -15],
-               'O2':  [40, -106, -15],
+            'Oz': [0, -105, -15],
+            'POz': [0,   -100, 15],
+            'O1': [-40, -106, -15],
+            'O2':  [40, -106, -15],
  }
 
 montageuse = mne.channels.make_dig_montage(ch_pos=montage, lpa=[-82.5, -19.2, -46], nasion=[0, 83.2, -38.3], rpa=[82.2, -19.2, -46]) # based on mne help file on setting 10-20 montage
@@ -105,7 +105,7 @@ Next, lets visualise the data.
 raw.plot()
 ```
 
-This should open an interactive window in which you can scroll through the data. There are many ways to customise this function to preopen your data with scalings and colourings that fit your usecase. See the MNE documentation for more help. 
+This should open an interactive window in which you can scroll through the data. See the MNE documentation for help on how to customise this plot. 
 
 ![EEGtut6](/EEG_Tutorial/EEGtut6.png 'EEGtut6')
 
@@ -157,24 +157,24 @@ eeg_data_interp.plot(events=events, duration=10.0, scalings=dict(eeg=0.00005), c
 That’s looking good! We can even see hints of the frequency tagging. It’s about time to epoch our data. 
 ```
 # Epoch to events of interest
-event_id = {'attend 6Hz K': 23, 'attend 7.5Hz K':  27}  # will be different triggers for training days
+event_id = {'attend 6Hz K': 23, 'attend 7.5Hz K':  27}  
 
-# Extract 15 s epochs relative to events, baseline correct, linear detrend, and reject epochs where eeg amplitude is > 400
+# Extract 15 s epochs relative to events, baseline correct, linear detrend, and reject 
+# epochs where eeg amplitude is > 400
 epochs = mne.Epochs(eeg_data_interp, events, event_id=event_id, tmin=0,
-                    tmax=15,
-                    baseline=(0, 0), # picks=np.arange(settings.num_electrodes),
-                    reject=dict(eeg=0.000400), detrend=1)  #
+                    tmax=15, baseline=(0, 0), reject=dict(eeg=0.000400), detrend=1)  
 
 # Drop bad trials
 epochs.drop_bad()
 ```
 
-And visualise our ERPs:
+We can average these epochs to form Event Related Potentials (ERPs):
 ```
+# Average erpochs to form ERPs
 attend6 = epochs['attend 6Hz K'].average()
 attend75 = epochs['attend 7.5Hz K'].average()
 
-
+# Plot ERPs
 evokeds = dict(attend6=list(epochs['attend 6Hz K'].iter_evoked()),
                attend75=list(epochs['attend 7.5Hz K'].iter_evoked()))
 mne.viz.plot_compare_evokeds(evokeds, combine='mean')
