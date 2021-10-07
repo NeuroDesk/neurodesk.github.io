@@ -17,8 +17,9 @@ description: >
 2. Open a terminal, and type the folowing command to automatically download the neurodesktop container and run it
 
 
-{{< code language="batch" prompt=">" command-line="true">}}
-docker run --shm-size=1gb -it --privileged --name neurodesktop -v C:/neurodesktop-storage:/neurodesktop-storage -p 8080:8080 -h neurodesktop-{{< params/neurodesktop/version >}} vnmd/neurodesktop:{{< params/neurodesktop/version >}}{{< /code >}}
+<pre class="language-shell command-line" data-prompt="$">
+<code>docker run --shm-size=1gb -it --privileged --name neurodesktop -v C:/neurodesktop-storage:/neurodesktop-storage -p 8080:8080 -h neurodesktop-{{< params/neurodesktop/version >}} vnmd/neurodesktop:{{< params/neurodesktop/version >}}</code>
+</pre>
 
 <!-- neurodesktop version found in neurodesk.github.io/data/neurodesktop.toml -->
 3. Once neurodesktop is downloaded i.e. `guacd[77]: INFO:        Listening on host 127.0.0.1, port 4822` is displayed in terminal, open a browser and go to:
