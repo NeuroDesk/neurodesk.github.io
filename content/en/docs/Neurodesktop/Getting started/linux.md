@@ -14,7 +14,7 @@ description: >
 1. Install Docker from here: https://docs.docker.com/get-docker/ 
 
 one example to install docker in a yum-based distribution could look like this:
-<pre class="language-shell command-line" data-prompt="$" data-output="2-6">
+<pre class="language-shell command-line" data-prompt="$">
 <code>sudo dnf install -y yum-utils 
 sudo yum-config-manager --add-repo https://download.docker.com/linux/centos/docker-ce.repo
 sudo dnf install docker-ce docker-ce-cli containerd.io
