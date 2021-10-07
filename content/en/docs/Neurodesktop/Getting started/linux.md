@@ -71,22 +71,12 @@ When done processing your data it is important to stop and remove the container 
 </pre>
 
 ## GPU support
+
+### RHEL/CentOS (yum-based)
 <pre class="language-shell command-line" data-prompt="$" data-output="4-9">
 <code>sudo yum install nvidia-container-toolkit -y</code>
 </pre>
-
-<pre class="language-shell command-line" data-prompt="$" data-output="2-9">
-<code>sudo docker run \
-  --shm-size=1gb -it --privileged --name neurodesktop \
-  -v ~/neurodesktop-storage:/neurodesktop-storage \
-  -e HOST_UID="$(id -u)" -e HOST_GID="$(id -g)" \
-  -e NVIDIA_VISIBLE_DEVICES=all \
-  -p 8080:8080 -h neurodesktop-{{< params/neurodesktop/version >}} \
-  vnmd/neurodesktop:{{< params/neurodesktop/version >}}</code>
-</pre>
-
-> Try the following if there are issues with the previous command
-
+### Running neurodesktop container with GPU
 <pre class="language-shell command-line" data-prompt="$" data-output="2-9">
 <code>sudo docker run \
   --shm-size=1gb -it --privileged --name neurodesktop \
@@ -94,28 +84,31 @@ When done processing your data it is important to stop and remove the container 
   -e HOST_UID="$(id -u)" -e HOST_GID="$(id -g)" \
   -e NVIDIA_VISIBLE_DEVICES=all \
   -e NVIDIA_DISABLE_REQUIRE=1 \
-  --gpus all \
   -p 8080:8080 -h neurodesktop-{{< params/neurodesktop/version >}} \
   vnmd/neurodesktop:{{< params/neurodesktop/version >}}</code>
 </pre>
 
 <!-- neurodesktop version found in neurodesk.github.io/data/neurodesktop.toml -->
 
-Then inside the desktop container:
+Then inside the neurodesktop container run:
 <pre class="language-shell command-line" data-prompt="$">
 <code>sudo apt update
 sudo apt install libcudart10.1</code>
 </pre>
 
-Test in desktop image:
+#### Running tensorflow (w/ GPU)
+Tensorflow pre-requisites
 <pre class="language-shell command-line" data-prompt="$">
-<code>python 
-import tensorflow as tf
+<code>pip install tensorflow-gpu
+# OR conda install tensorflow-gpu
+python</code>
+</pre>
+<pre class="language-shell command-line" data-prompt=">>>">
+<code>import tensorflow as tf
 print("Num GPUs Available: ", len(tf.config.list_physical_devices('GPU')))</code>
 </pre>
 
 ![image](https://user-images.githubusercontent.com/4021595/135446560-d135f6ce-b699-4e46-8534-b72b4d9f2d41.png)
-
 
 Test in singularity container running inside desktop container:
 <pre class="language-shell command-line" data-prompt="$">
