@@ -14,7 +14,7 @@
       {{- /* command-line plugin */ -}}
       {{- if .Get "prompt" }} data-prompt="{{ .Get "prompt" }}"{{ end }}
       {{- if .Get "output" }} data-output="{{ .Get "output" }}"{{ end }}
-      ><code {{ if .Get "language" }}class="language-{{ .Get "lang" }}"{{ end }}
+      ><code {{ if .Get "lang" }}class="language-{{ .Get "lang" }}"{{ end }}
       >{{ $inner }}</code></pre>
   {{ else }}
     <pre class="language-{{ .Get 0 }}">
