@@ -13,8 +13,11 @@ description: >
 ## Quickstart
 1. Install Docker from here: https://docs.docker.com/get-docker/ 
 
-one example to install docker in a yum-based distribution could look like this:
-<pre class="language-shell command-line" data-prompt="$" data-output="2-6">
+### RHEL/CentOS (yum-based)
+Refer to https://docs.docker.com/engine/install/centos/
+
+One example to install docker in a yum-based distribution could look like this:
+<pre class="language-shell command-line" data-prompt="$">
 <code>sudo dnf install -y yum-utils 
 sudo yum-config-manager --add-repo https://download.docker.com/linux/centos/docker-ce.repo
 sudo dnf install docker-ce docker-ce-cli containerd.io
@@ -28,7 +31,21 @@ sudo chown root:docker /var/run/docker.sock
 newgrp docker</code>
 </pre>
 
-2. Create a local folder where the downloaded applications will be stored, e.g. ~/neurodesktop-storage
+### Ubuntu/Debian (apt-based)
+Refer to https://docs.docker.com/engine/install/ubuntu/
+
+One example to install docker in a apt-based distribution could look like this:
+<pre class="language-shell command-line" data-prompt="$" data-output="5">
+<code>sudo apt-get update
+sudo apt-get install apt-transport-https ca-certificates curl gnupg lsb-release
+curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /usr/share/keyrings/docker-archive-keyring.gpg
+echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/docker-archive-keyring.gpg] https://download.docker.com/linux/ubuntu \
+  $(lsb_release -cs) stable" | sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
+sudo apt-get update
+sudo apt-get install docker-ce docker-ce-cli containerd.io</code>
+</pre>
+
+2. Create a local folder where the downloaded applications will be stored, e.g. `~/neurodesktop-storage`
 
 3. Open a terminal, and type the folowing command to automatically download the neurodesktop container and run it (Mac, Windows, Linux commands listed below) 
 
@@ -58,14 +75,14 @@ or open a VNC Client and connect to port 5901 (for this -p 5901:5901 has to be a
 When done processing your data it is important to stop and remove the container - otherwise the next start or container update will give an error ("... The container name "/neurodesktop" is already in use...")
 1. Click on the terminal from which you ran neurodesktop
 
-2. Press control-C
+2. Press `Ctrl-C`
 
-3. Type:
+3. Run:
 <pre class="language-shell command-line" data-prompt="$">
 <code>docker stop neurodesktop</code>
 </pre>
 
-4. Type:
+4. Run:
 <pre class="language-shell command-line" data-prompt="$">
 <code>docker rm neurodesktop</code>
 </pre>
@@ -97,25 +114,26 @@ sudo apt install libcudart10.1</code>
 </pre>
 
 #### Running tensorflow (w/ GPU)
-Tensorflow pre-requisites
+##### Using tensorflow (python)
 <pre class="language-shell command-line" data-prompt="$">
 <code>pip install tensorflow-gpu
 # OR conda install tensorflow-gpu
 python</code>
 </pre>
-<pre class="language-shell command-line" data-prompt=">>>">
+<pre class="language-python command-line" data-prompt=">>>">
 <code>import tensorflow as tf
 print("Num GPUs Available: ", len(tf.config.list_physical_devices('GPU')))</code>
 </pre>
 
 ![image](https://user-images.githubusercontent.com/4021595/135446560-d135f6ce-b699-4e46-8534-b72b4d9f2d41.png)
-
-Test in singularity container running inside desktop container:
+##### Using tensorflow (singularity container in neurodesktop)
 <pre class="language-shell command-line" data-prompt="$">
 <code>singularity pull docker://tensorflow/tensorflow:latest-gpu
 singularity run --nv tensorflow_latest-gpu.sif
-python 
-import tensorflow as tf
+python</code>
+</pre>
+<pre class="language-python command-line" data-prompt=">>>">
+<code>import tensorflow as tf
 print("Num GPUs Available: ", len(tf.config.list_physical_devices('GPU')))</code>
 </pre>
 

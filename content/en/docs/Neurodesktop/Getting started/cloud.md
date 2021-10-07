@@ -18,7 +18,10 @@ description: >
 
 2. Install Docker from here: https://docs.docker.com/get-docker/ 
 
-one example to install docker in a yum-based distribution could look like this:
+### RHEL/CentOS (yum-based)
+Refer to https://docs.docker.com/engine/install/centos/
+
+One example to install docker in a yum-based distribution could look like this:
 <pre class="language-shell command-line" data-prompt="$">
 <code>sudo dnf install -y yum-utils 
 sudo yum-config-manager --add-repo https://download.docker.com/linux/centos/docker-ce.repo
@@ -31,6 +34,20 @@ sudo groupadd docker
 sudo usermod -aG docker $USER
 sudo chown root:docker /var/run/docker.sock
 newgrp docker</code>
+</pre>
+
+### Ubuntu/Debian (apt-based)
+Refer to https://docs.docker.com/engine/install/ubuntu/
+
+One example to install docker in a apt-based distribution could look like this:
+<pre class="language-shell command-line" data-prompt="$" data-output="5">
+<code>sudo apt-get update
+sudo apt-get install apt-transport-https ca-certificates curl gnupg lsb-release
+curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /usr/share/keyrings/docker-archive-keyring.gpg
+echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/docker-archive-keyring.gpg] https://download.docker.com/linux/ubuntu \
+  $(lsb_release -cs) stable" | sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
+sudo apt-get update
+sudo apt-get install docker-ce docker-ce-cli containerd.io</code>
 </pre>
 
 3. Create a local folder where the downloaded applications will be stored, e.g. ~/neurodesktop-storage
@@ -63,9 +80,9 @@ or open a VNC Client and connect to port 5901 (for this -p 5901:5901 has to be a
 When done processing your data it is important to stop and remove the container - otherwise the next start or container update will give an error ("... The container name "/neurodesktop" is already in use...")
 1. Click on the terminal from which you ran neurodesktop
 
-2. Press control-C
+2. Press Ctrl-C
 
-3. Type:
+3. Run:
 <pre class="language-shell command-line" data-prompt="$">
 <code>sudo docker stop neurodesktop && sudo docker rm neurodesktop</code>
 </pre>
