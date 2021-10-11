@@ -5,7 +5,7 @@ weight: 1
 description: >
   Example workflow for MRIQC
 _build:
-  render: false
+  render: never
 ---
 
 ## Download demo data
