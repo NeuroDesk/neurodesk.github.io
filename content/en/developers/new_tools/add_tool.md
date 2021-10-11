@@ -17,7 +17,7 @@ To decide if a tool should be packaged in a singularity container in *neuroconta
 
 
 Examples:
-|            | easy install | coordinates containers | small in size | latest version is ok | useful more most users | Conclusion                     |
+|            | easy install | coordinates containers | small in size | latest version is ok | useful to most users   | Conclusion                     |
 |------------|--------------|------------------------|---------------|----------------------|------------------------|--------------------------------|
 | git        | yes          | yes                    | yes           | yes                  | yes                    | neurodesktop                   |
 | lmod       | no           | yes                    | yes           | yes                  | yes                    | neurodesktop                   |
