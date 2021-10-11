@@ -4,6 +4,8 @@ linkTitle: "fMRI BIDS"
 weight: 1
 description: >
   Example workflow for fMRI BIDS
+_build:
+    render: false
 ---
 
 ## Download demo data
@@ -15,4 +17,7 @@ datalad create bids-conversion
 cd bids-conversion/
 datalad clone --dataset . https://github.com/datalad/example-dicom-functional.git inputs/rawdata
 ```
+
+Use this data set?:
+https://www.fil.ion.ucl.ac.uk/spm/data/mmfaces/
 
