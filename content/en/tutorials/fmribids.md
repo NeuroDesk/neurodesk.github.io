@@ -6,6 +6,7 @@ description: >
   Example workflow for fMRI BIDS
 _build:
     render: never
+    list: never
 ---
 
 ## Download demo data
