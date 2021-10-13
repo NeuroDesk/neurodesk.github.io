@@ -17,7 +17,7 @@ To decide if a tool should be packaged in a singularity container in *neuroconta
 
 
 Examples:
-|            | easy install | coordinates containers | small in size | latest version is ok | useful more most users | Conclusion                     |
+|            | easy install | coordinates containers | small in size | latest version is ok | useful to most users   | Conclusion                     |
 |------------|--------------|------------------------|---------------|----------------------|------------------------|--------------------------------|
 | git        | yes          | yes                    | yes           | yes                  | yes                    | neurodesktop                   |
 | lmod       | no           | yes                    | yes           | yes                  | yes                    | neurodesktop                   |
@@ -73,9 +73,13 @@ git push</code></pre>
 10) Go to neurocontainers/actions. Check that the most recent workflow run in the list terminated successfully (green). Otherwise, click on it, click on “build docker”, and the line that caused the error will be highlighted
 11) Check that the package shows up in repository
 Go to https://github.com/orgs/NeuroDesk/packages?repo_name=neurocontainers and check that the new package is listed
-12) Try to manually download the package to your Machine or VNM
-<pre class="language-shell command-line" data-prompt="$"><code>bash /neurodesk/local/fetch_and_run.sh newapp newappversion builddate
+12) Try to manually download the package to Neurodesktop (the version and date can be found in the github action under "Set image varibables")
+<pre class="language-shell command-line" data-prompt="$"><code>bash /neurocommand/local/fetch_and_run.sh newapp newappversion builddate
 ml newapp/newappversion</code></pre>
 13) Test the new container. Run some commands, to see all is good
 14) send a pull request to add the container to the apps.json file: https://github.com/NeuroDesk/neurocommand/blob/main/neurodesk/apps.json
 15) (once pull request is merged this will trigger an action to build the singularity container, distribute it in all object storage locations and on CVMFS, and it will update the menus in the desktop image on the next daily build)
+16) Check in the dev build if everything is ok before releasing a new version of Neurodesktop:
+<pre class="language-shell command-line" data-prompt="$"><code>
+sudo docker pull vnmd/neurodesktop-dev:latest && sudo docker run   --shm-size=1gb -it --privileged --name neurodesktop   -v ~/neurodesktop-storage:/neurodesktop-storage   -e HOST_UID="$(id -u)" -e HOST_GID="$(id -g)"   -p 8080:8080 -h neurodesktop-dev   vnmd/neurodesktop-dev:latest
+</code></pre>

@@ -3,7 +3,7 @@ title: "Transparent Singularity"
 linkTitle: "Transparent Singularity"
 weight: 3
 description: >
-  For more advanced users who to use Transparent Singularity directly
+  For more advanced users who wish to use Transparent Singularity directly
 ---
 
 Transparent singularity is here https://github.com/NeuroDesk/transparent-singularity/
