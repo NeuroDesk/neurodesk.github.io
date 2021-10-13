@@ -73,7 +73,7 @@ git push</code></pre>
 10) Go to neurocontainers/actions. Check that the most recent workflow run in the list terminated successfully (green). Otherwise, click on it, click on “build docker”, and the line that caused the error will be highlighted
 11) Check that the package shows up in repository
 Go to https://github.com/orgs/NeuroDesk/packages?repo_name=neurocontainers and check that the new package is listed
-12) Try to manually download the package to your Machine or Neurodesktop
+12) Try to manually download the package to Neurodesktop (the version and date can be found in the github action under "Set image varibables")
 <pre class="language-shell command-line" data-prompt="$"><code>bash /neurocommand/local/fetch_and_run.sh newapp newappversion builddate
 ml newapp/newappversion</code></pre>
 13) Test the new container. Run some commands, to see all is good
