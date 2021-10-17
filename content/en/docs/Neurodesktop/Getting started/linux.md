@@ -116,8 +116,8 @@ sudo apt install libcudart10.1</code>
 #### Running tensorflow (w/ GPU)
 ##### Using tensorflow (python)
 <pre class="language-shell command-line" data-prompt="$">
-<code>pip install tensorflow-gpu
-# OR conda install tensorflow-gpu
+<code>
+conda install tensorflow-gpu
 python</code>
 </pre>
 <pre class="language-python command-line" data-prompt=">>>">
