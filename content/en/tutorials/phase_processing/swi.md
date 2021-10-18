@@ -24,6 +24,7 @@ cd /neurodesktop-storage/
 vi clearswi.jl
 ```
 
+hit a or i and then paste this:
 ```
 using CLEARSWI
 
@@ -44,6 +45,10 @@ savenii(swi, "/neurodesktop-storage/swi-demo/swi.nii"; header=mag.header)
 savenii(mip, "/neurodesktop-storage/swi-demo/mip.nii"; header=mag.header)
 ```
 
+hit SHIFT-Z-Z and run:
 ```
 julia clearswi.jl
 ```
+
+Open ITK snap from the Visualization Application's menu and inspect the results (the outputs are in swi-demo/swi.nii and mip.nii)
+![image](https://user-images.githubusercontent.com/4021595/137708852-6b7dd2c7-3e6f-42fd-88e6-06afe87a72a9.png)
