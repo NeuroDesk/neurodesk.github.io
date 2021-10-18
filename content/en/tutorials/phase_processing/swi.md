@@ -18,7 +18,12 @@ unzip /neurodesktop-storage/swi-demo/01_bids.zip -d /neurodesktop-storage/swi-de
 
 Open the CLEARSWI tool from the application menu:
 
-paste this julia script and execute
+paste this julia script in a julia file and execute:
+```
+cd /neurodesktop-storage/
+vi clearswi.jl
+```
+
 ```
 using CLEARSWI
 
@@ -37,4 +42,8 @@ mip = createMIP(swi); # shorthand for createIntensityProjection(swi, minimum)
 
 savenii(swi, "/neurodesktop-storage/swi-demo/swi.nii"; header=mag.header) 
 savenii(mip, "/neurodesktop-storage/swi-demo/mip.nii"; header=mag.header)
+```
+
+```
+julia clearswi.jl
 ```
