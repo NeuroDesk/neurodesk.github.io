@@ -6,6 +6,14 @@ description: >-
      Previous releases of neurodesktop
 ---
 
+## 20211018
+- added Rstudio, R and multiple R packages (plotly, car, tidyverse, ...)
+- added ClearSWI and ROMEO for MRI phase processing (including new Tutorials: https://neurodesk.github.io/tutorials/phase_processing/)
+- added more categories in applications menu (Body, Electrophysiology, Hippocampus, Phase Processing, Rodent Imaging, Shape Analysis, Spine, Statistics)
+- bugfix: improved startup time of the desktop container (miniconda in homedirectory was causing chmod slowdown)
+- bugfix: ssh, vnc and rdp servers are now restarted in case the container was stopped and started again (e.g. on Standby)
+
+
 ## 20210929
 - fixed naming of aidmri to aidamri and added new category "Rodent Imaging"
 - updated all tool icons and updated neurodesk icon including background image
