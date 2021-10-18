@@ -7,3 +7,5 @@ description: >-
 ---
 
 We are invited to present Neurodesk at the eResearch Australasisa conference 2021 on the 14th of October: Make sure to sign up here https://conference.eresearch.edu.au/
+
+The talk can be watched here: https://youtu.be/2ATgTOsiGdY
