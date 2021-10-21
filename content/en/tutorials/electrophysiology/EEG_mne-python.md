@@ -35,7 +35,7 @@ Once your new environment is activated, in the top right corner of your empty ju
 
 ![EEGtut4](/EEG_Tutorial/EEGtut4.png 'EEGtut4')
 
-Then, select the instance of Python associated with the environment you have just created (“mne”):
+Then, select the instance of Python associated with the environment you have just created (“mne”). If your new environment does not appear in the list, you may need to restart vscode:
 
 ![EEGtut5](/EEG_Tutorial/EEGtut5.png 'EEGtut5')
 
