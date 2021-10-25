@@ -72,35 +72,32 @@ Copy the token displayed on the screen into a file, so you’ll have it later
 git push</code></pre>
 10) Go to neurocontainers/actions. Check that the most recent workflow run in the list terminated successfully (green). Otherwise, click on it, click on “build docker”, and the line that caused the error will be highlighted
 11) Find your new package under https://github.com/orgs/NeuroDesk/packages?repo_name=neurocontainers
-12) For testing the new package in neurodesktop, you need to know the
-  - toolName
-  - toolVersion
-  - buildDate
-  
-  These can be found on the package listing in under the package listing in the previous step.
-  The standard format is shown below
-  <pre class="language-shell command-line" data-prompt="$"><code>docker pull ghcr.io/neurodesk/caid/toolName_toolVersion:builddate</code></pre>
-  For example (using itksnap)
-  <pre class="language-shell command-line" data-prompt="$"><code>docker pull ghcr.io/neurodesk/caid/itksnap_3.8.0:20210322</code></pre>
-  gives you
-  - toolName = itksnap
-  - toolVersion = 3.8.0
-  - buildDate = 20210322
-  
-  Try to manually download the package onto Neurodesktop using
+    
+    Enter the name of the package in the search box, and verify that the full package name shows up in the format _toolName_toolVersion_
+12) Obtain _buildDate_ by clicking on the full package name that came up in the search. The build date will be the newest date shown under **Recent tagged image versions**
+13) Use _toolName_, _toolVersion_ and _buildDate_ from the previous two steps to manually download the package by typing the following in a terminal open in Neurodesktop 
   <pre class="language-shell command-line" data-prompt="$"><code>bash /neurocommand/local/fetch_and_run.sh toolName toolVersion buildDate
-ml newapp/newappversion</code></pre>
+ml toolName/toolVersion</code></pre>
+
+  For example: 
+  If the full package name that comes up in the step 11 is itksnap_3.8.0, and the newest date under **Recent tagged image versions** is 20210322
+  
+  The command to use in a terminal open in Neurodesktop is:
+<pre class="language-shell command-line" data-prompt="$"><code>bash /neurodesk/local/fetch_and_run.sh itksnap 3.8.0 20210322
+ml toolName/toolVersion</code></pre>
 
 {{% alert title="Depreciation notice" color="warning" %}}
 For VNM users use:
 <pre class="language-shell command-line" data-prompt="$"><code>bash /neurodesk/local/fetch_and_run.sh toolName toolVersion buildDate
-ml newapp/newappversion</code></pre>
-{{% /alert %}}13) Test the new container. Run some commands, to see all is good
+ml toolName/toolVersion</code></pre>
+{{% /alert %}}
 
-14) send a pull request to add the container to the apps.json file: https://github.com/NeuroDesk/neurocommand/blob/main/neurodesk/apps.json and include an icon file: https://github.com/NeuroDesk/neurocommand/tree/main/neurodesk/icons
-15) (once pull request is merged this will trigger an action to build the singularity container, distribute it in all object storage locations and on CVMFS, and it will update the menus in the desktop image on the next daily build)
-16) Check in the dev build if everything is ok before releasing a new version of Neurodesktop:
+14) Test the new container. Run some commands, to see all is good
+
+15) send a pull request to add the container to the apps.json file: https://github.com/NeuroDesk/neurocommand/blob/main/neurodesk/apps.json and include an icon file: https://github.com/NeuroDesk/neurocommand/tree/main/neurodesk/icons
+16) (once pull request is merged this will trigger an action to build the singularity container, distribute it in all object storage locations and on CVMFS, and it will update the menus in the desktop image on the next daily build)
+17) Check in the dev build if everything is ok before releasing a new version of Neurodesktop:
 <pre class="language-shell command-line" data-prompt="$"><code>
 sudo docker pull vnmd/neurodesktop-dev:latest && sudo docker run   --shm-size=1gb -it --privileged --name neurodesktop   -v ~/neurodesktop-storage:/neurodesktop-storage   -e HOST_UID="$(id -u)" -e HOST_GID="$(id -g)"   -p 8080:8080 -h neurodesktop-dev   vnmd/neurodesktop-dev:latest
 </code></pre>
-17) Consider contributing a tutorial about the new tool: https://github.com/NeuroDesk/neurodesk.github.io/tree/hugo-docsy/content/en/tutorials
+18) Consider contributing a tutorial about the new tool: https://github.com/NeuroDesk/neurodesk.github.io/tree/hugo-docsy/content/en/tutorials
