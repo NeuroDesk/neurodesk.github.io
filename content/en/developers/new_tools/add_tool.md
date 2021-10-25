@@ -83,7 +83,7 @@ ml toolName/toolVersion</code></pre>
   If the full package name that comes up in the step 11 is itksnap_3.8.0, and the newest date under **Recent tagged image versions** is 20210322
   
   The command to use in a terminal open in Neurodesktop is:
-<pre class="language-shell command-line" data-prompt="$"><code>bash /neurodesk/local/fetch_and_run.sh itksnap 3.8.0 20210322
+<pre class="language-shell command-line" data-prompt="$"><code>bash /neurocommand/local/fetch_and_run.sh itksnap 3.8.0 20210322
 ml toolName/toolVersion</code></pre>
 
 {{% alert title="Depreciation notice" color="warning" %}}
