@@ -73,7 +73,7 @@ git push</code></pre>
 10) Go to neurocontainers/actions. Check that the most recent workflow run in the list terminated successfully (green). Otherwise, click on it, click on “build docker”, and the line that caused the error will be highlighted
 11) Find your new package under https://github.com/orgs/NeuroDesk/packages?repo_name=neurocontainers
 12) For testing the new package in neurodesktop, you need to know the
-  - toolName
+  - toolName (identical to newapp in the previous steps)
   - toolVersion
   - buildDate
   
@@ -89,12 +89,12 @@ git push</code></pre>
   
   Try to manually download the package onto Neurodesktop using
   <pre class="language-shell command-line" data-prompt="$"><code>bash /neurocommand/local/fetch_and_run.sh toolName toolVersion buildDate
-ml newapp/newappversion</code></pre>
+ml toolName/toolVersion</code></pre>
 
 {{% alert title="Depreciation notice" color="warning" %}}
 For VNM users use:
 <pre class="language-shell command-line" data-prompt="$"><code>bash /neurodesk/local/fetch_and_run.sh toolName toolVersion buildDate
-ml newapp/newappversion</code></pre>
+ml toolName/toolVersion</code></pre>
 {{% /alert %}}13) Test the new container. Run some commands, to see all is good
 
 14) send a pull request to add the container to the apps.json file: https://github.com/NeuroDesk/neurocommand/blob/main/neurodesk/apps.json and include an icon file: https://github.com/NeuroDesk/neurocommand/tree/main/neurodesk/icons
