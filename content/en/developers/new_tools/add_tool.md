@@ -71,17 +71,32 @@ Copy the token displayed on the screen into a file, so you’ll have it later
 <pre class="language-shell command-line" data-prompt="$"><code>git pull
 git push</code></pre>
 10) Go to neurocontainers/actions. Check that the most recent workflow run in the list terminated successfully (green). Otherwise, click on it, click on “build docker”, and the line that caused the error will be highlighted
-11) Check that the package shows up in repository
-Go to https://github.com/orgs/NeuroDesk/packages?repo_name=neurocontainers and check that the new package is listed
-12) Try to manually download the package to Neurodesktop (the version and date can be found in the github action under "Set image varibables"; take the version from the part of the IMAGENAME field the follows the underscore, and click through "Run IMAGLIST=()", and take the date from the BUILDDATE field)
+11) Find your new package under https://github.com/orgs/NeuroDesk/packages?repo_name=neurocontainers
+12) For testing the new package in neurodesktop, you need to know the
+  - toolName
+  - toolVersion
+  - buildDate
+  
+  These can be found on the package listing in under the package listing in the previous step.
+  The standard format is shown below
+  <pre class="language-shell command-line" data-prompt="$"><code>docker pull ghcr.io/neurodesk/caid/toolName_toolVersion:builddate</code></pre>
+  For example (using itksnap)
+  <pre class="language-shell command-line" data-prompt="$"><code>docker pull ghcr.io/neurodesk/caid/itksnap_3.8.0:20210322</code></pre>
+  gives you
+  - toolName = itksnap
+  - toolVersion = 3.8.0
+  - buildDate = 20210322
+  
+  Try to manually download the package onto Neurodesktop using
+  <pre class="language-shell command-line" data-prompt="$"><code>bash /neurocommand/local/fetch_and_run.sh toolName toolVersion buildDate
+ml newapp/newappversion</code></pre>
 
-For Neurodesktop:
-<pre class="language-shell command-line" data-prompt="$"><code>bash /neurocommand/local/fetch_and_run.sh newapp newappversion builddate
+{{% alert title="Depreciation notice" color="warning" %}}
+For VNM users use:
+<pre class="language-shell command-line" data-prompt="$"><code>bash /neurodesk/local/fetch_and_run.sh toolName toolVersion buildDate
 ml newapp/newappversion</code></pre>
-For VNM:
-<pre class="language-shell command-line" data-prompt="$"><code>bash /neurodesk/local/fetch_and_run.sh newapp newappversion builddate
-ml newapp/newappversion</code></pre>
-13) Test the new container. Run some commands, to see all is good
+{{% /alert %}}13) Test the new container. Run some commands, to see all is good
+
 14) send a pull request to add the container to the apps.json file: https://github.com/NeuroDesk/neurocommand/blob/main/neurodesk/apps.json and include an icon file: https://github.com/NeuroDesk/neurocommand/tree/main/neurodesk/icons
 15) (once pull request is merged this will trigger an action to build the singularity container, distribute it in all object storage locations and on CVMFS, and it will update the menus in the desktop image on the next daily build)
 16) Check in the dev build if everything is ok before releasing a new version of Neurodesktop:
