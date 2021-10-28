@@ -6,6 +6,11 @@ description: >-
      Previous releases of neurodesktop
 ---
 
+<!-- don't forget to copy addition to blog/releases -->
+
+## 20211028
+- added EEGLAB
+
 ## 20211018
 - added Rstudio, R and multiple R packages (plotly, car, tidyverse, ...)
 - added ClearSWI and ROMEO for MRI phase processing (including new Tutorials: https://neurodesk.github.io/tutorials/phase_processing/)
