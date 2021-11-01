@@ -182,6 +182,52 @@ mne.viz.plot_compare_evokeds(evokeds, combine='mean')
 
 ![EEGtut9](/EEG_Tutorial/EEGtut9.png 'EEGtut9')
 
-From this point, we can export our data to numpy arrays or keep it in the MNE data format for any further analyses we would like to run. 
+In the ERP plot, we can see that the data are frequency tagged. The participant was performing an attention task in which a two visual stimuli were flickering at 6 Hz and 7.5 Hz respectively. On each trial the participant was cued to monitor one of these two stimuli for brief bursts of motion. From previous research, we expect that the steady-state visual evoked potential (SSVEP) should be larger at the attended frequency than the unattended frequency. Lets check if this is true. 
+
+We'll begin by eporting our epoched EEG data to a numpy array
+
+```
+# Preallocate
+n_samples = attend6.data.shape[1]
+sampling_freq = 1200 # sampling frequency
+epochs_np = np.empty((n_samples, 2) )
+
+# Get data - averaging across EEG channels
+epochs_np[:,0] = attend6.data.mean(axis=0)
+epochs_np[:,1] = attend75.data.mean(axis=0)
+
+```
+
+Next, we can use a Fast Fourier Transform (FFT) to transform the data from the time domain to the frequency domain. For this, we'll need to import the FFT packages from scipy:
+
+```
+from scipy.fft import fft, fftfreq, fftshift
+
+# Get FFT
+fftdat = np.abs(fft(epochs_np, axis=0)) / n_samples
+freq = fftfreq(n_samples, d=1 / sampling_freq)  # get frequency bins
+
+```
+
+Now that we have our frequency transformed data, we can plot our two conditions to assess whether attention altered the SSVEP amplitudes:
+
+```
+import matplotlib.pyplot as plt
+
+fig,ax = plt.subplots(1, 1)
+
+ax.plot(freq, fftdat[:,0], '-', label='attend 6Hz', color=[78 / 255, 185 / 255, 159 / 255])  
+ax.plot(freq, fftdat[:,1], '-', label='attend 7.5Hz', color=[236 / 255, 85 / 255, 58 / 255])  
+ax.set_xlim(4, 17)
+ax.set_ylim(0, 1e-6)
+ax.set_title('Frequency Spectrum')
+ax.legend()
+
+
+```
+
+This plot shows that the SSVEPs were indeed modulated by attention in the direction we would expect!
+
+![EEGtut10](/EEG_Tutorial/EEGtut9.png 'EEGtut10')
 
 Congratulations! You’ve run your first analysis of EEG data in neurodesktop.
