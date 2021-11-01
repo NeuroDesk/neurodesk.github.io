@@ -182,9 +182,9 @@ mne.viz.plot_compare_evokeds(evokeds, combine='mean')
 
 ![EEGtut9](/EEG_Tutorial/EEGtut9.png 'EEGtut9')
 
-In the ERP plot, we can see that the data are frequency tagged. The participant was performing an attention task in which a two visual stimuli were flickering at 6 Hz and 7.5 Hz respectively. On each trial the participant was cued to monitor one of these two stimuli for brief bursts of motion. From previous research, we expect that the steady-state visual evoked potential (SSVEP) should be larger at the attended frequency than the unattended frequency. Lets check if this is true. 
+In this plot, we can see that the data are frequency tagged. While these data were collected, the participant was performing an attention task in which two visual stimuli were flickering at 6 Hz and 7.5 Hz respectively. On each trial the participant was cued to monitor one of these two stimuli for brief bursts of motion. From previous research, we expect that the steady-state visual evoked potential (SSVEP) should be larger at the attended frequency than the unattended frequency. Lets check if this is true. 
 
-We'll begin by eporting our epoched EEG data to a numpy array
+We'll begin by exporting our epoched EEG data to a numpy array
 
 ```
 # Preallocate
@@ -225,9 +225,6 @@ ax.legend()
 
 
 ```
+![EEGtut10](/EEG_Tutorial/EEGtut10.png 'EEGtut10')
 
-This plot shows that the SSVEPs were indeed modulated by attention in the direction we would expect!
-
-![EEGtut10](/EEG_Tutorial/EEGtut9.png 'EEGtut10')
-
-Congratulations! You’ve run your first analysis of EEG data in neurodesktop.
+This plot shows that the SSVEPs were indeed modulated by attention in the direction we would expect! Congratulations! You’ve run your first analysis of EEG data in neurodesktop.
