@@ -225,6 +225,6 @@ ax.legend()
 
 
 ```
-![EEGtut10](/EEG_Tutorial/EEGtut10.png 'EEGtut10')
+![EEGtut10](/EEG_Tutorial/EEGtut10.PNG 'EEGtut10')
 
 This plot shows that the SSVEPs were indeed modulated by attention in the direction we would expect! Congratulations! You’ve run your first analysis of EEG data in neurodesktop.
