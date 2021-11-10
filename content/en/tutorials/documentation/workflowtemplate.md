@@ -19,23 +19,27 @@ Once you've filled out those details, you can delete this comment block.
 -->
 
 > _This tutorial was created by Name X. Nameson._ 
+>
 > _Email: n.nameson@institution.edu.au_
+>
 > _Github: @Namehandle_
+>
 > _Twitter: @Namehandle_
+>
 <!-- Fill in your personal details above so that we can credit the tutorial to you. Feel free to add any additional contact details i.e. website, or remove those that are irrelevant -->
 
 Welcome to the workflow template, which you can use to contribute your own neurodesk workflow to our documentation. We aim to collect a wide variety of workflows representing the spectrum of tools available under the neurodesk architechture and the diversity in how researchers might apply them. Please add plently of descriptive detail and make sure that all steps of the workflow work before submitting the tutorial. 
 
 You can embelish your text in this tutorial using markdown conventions; text can be **bold**, _italic_, or ~~strikethrough~~. You can also add [Links](https://neurodesk.github.io/).
 
-## Headings
+## Level 2 heading
 
 You can organise your tutorial with headers, starting at level 2 (the page title is a level 1 header). You can also include progressively smaller subheadings:
 
-### Subheading 1
+### Level 3 heading
 Some more detailed information. 
 
-#### Subheading 2
+#### Level 4 heading
 Even more detailed information. 
 
 ## Code blocks
@@ -59,7 +63,7 @@ b = np.array([3, 4])
 print(a+b)
 ```
 
-You can also ass code snippets like `var foo = "bar";` to be shown inline.
+You can also add code snippets, e.g. `var foo = "bar";`, which will be shown inline.
 
 ## Images
 
@@ -72,6 +76,7 @@ To add screenshots to your tutorial, create a subfolder in `neurodesk.github.io/
 You can grab reader's attention to particularly important information with quoteblocks, alerts and titles:
 
 > This is a quoteblock
+
 {{< alert >}}This is an alert.{{< /alert >}}
 {{< alert title="Note" >}}This is an alert with a title.{{< /alert >}}
 {{< alert color="warning" >}}This is a warning.{{< /alert >}}
@@ -94,8 +99,8 @@ This is a placeholder. Replace it with your own content.
 
 You may want to order information in a table as follows:
 
-| Neuroscientist    | Notable for     | lifetime |
-|-------------------|-----------------|------|
+| Neuroscientist           | Notable work                                         | Lifetime  |
+|--------------------------|------------------------------------------------------|-----------|
 | Santiago Ramón y Cajal   | Investigations on microscopic structure of the brain | 1852–1934 |
 | Rita Levi-Montalcini     | Discovery of nerve growth factor (NGF)               | 1909–2012 |
 | Anne Treisman            | Feature integration theory of attention              | 1935–2018 |
@@ -143,7 +148,6 @@ And a nested list:
   * .raw
   * .kdf
 
+## Thanks 
 
-  ## Thanks 
-
-  Thanks so much for taking the time to contribute your workflow to the Neurodesk community! If you have any feedback on the process, please let us know on [github discussions](https://github.com/NeuroDesk/neurodesk.github.io/discussions).
+Thanks so much for taking the time to contribute your workflow to the Neurodesk community! If you have any feedback on the process, please let us know on [github discussions](https://github.com/NeuroDesk/neurodesk.github.io/discussions).
