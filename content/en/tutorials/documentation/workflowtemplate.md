@@ -22,9 +22,9 @@ Once you've filled out those details, you can delete this comment block.
 >
 > _Email: n.nameson@institution.edu.au_
 >
-> _Github: @Namehandle_
+> _Github: @Namesgit_
 >
-> _Twitter: @Namehandle_
+> _Twitter: @Nameshandle_
 >
 <!-- Fill in your personal details above so that we can credit the tutorial to you. Feel free to add any additional contact details i.e. website, or remove those that are irrelevant -->
 
@@ -73,7 +73,7 @@ To add screenshots to your tutorial, create a subfolder in `neurodesk.github.io/
 
 ## Alets and warnings
 
-You can grab reader's attention to particularly important information with quoteblocks, alerts and titles:
+You can grab reader's attention to particularly important information with quoteblocks, alerts and warnings:
 
 > This is a quoteblock
 
