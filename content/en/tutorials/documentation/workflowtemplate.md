@@ -3,6 +3,7 @@ title: "Template for workflow creation"
 linkTitle: "Workflow template"
 weight: 1
 tags: ["template", "documentation"]
+author: Angela I. Renton
 description: > 
   Follow this template to contribute your own workflow to the Neurodesk documentation.
 ---
@@ -18,13 +19,13 @@ description: > a short description of your workflow. This will form the subheadi
 Once you've filled out those details, you can delete this comment block. 
 -->
 
-> _This tutorial was created by Name X. Nameson._ 
+> _This tutorial was created by Name P. Namington._ 
 >
-> _Email: n.nameson@institution.edu.au_
+> Email: n.namington@institution.edu.au
 >
-> _Github: @Namesgit_
+> Github: @Namesgit
 >
-> _Twitter: @Nameshandle_
+> Twitter: @Nameshandle
 >
 <!-- Fill in your personal details above so that we can credit the tutorial to you. Feel free to add any additional contact details i.e. website, or remove those that are irrelevant -->
 
