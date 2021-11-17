@@ -64,6 +64,16 @@ b = np.array([3, 4])
 print(a+b)
 ```
 
+Advanced code or command line formatting using this html snippet:
+<pre class="language-shell command-line" data-prompt=">>>" data-output="6">
+<code># Some example code
+import numpy as np
+a = np.array([1, 2])
+b = np.array([3, 4])
+print(a+b)
+[4 6]</code>
+</pre>
+
 You can also add code snippets, e.g. `var foo = "bar";`, which will be shown inline.
 
 ## Images
