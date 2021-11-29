@@ -11,10 +11,14 @@ description: >
 2. Docker requirements. Details found under https://docs.docker.com/get-docker/
 3. If installing docker using WSL, atleast 20GB space recommended for WSL with Ubuntu
 
+{{< alert title="Note" >}}
+The docker installation will reboot your computer a few times and there might be warnings regardings WSL2 and this also might require a few more installation steps that unfortunatley differ for every system. Please get in touch if you are stuck and have a look at our troubleshoot page.
+{{< /alert >}}
+
 ## Quickstart
 1. Install Docker from here: https://docs.docker.com/get-docker/
 
-2. Open a terminal, and type the folowing command to automatically download the neurodesktop container and run it
+2. Open a terminal (e.g. Powershell), and type the folowing command to automatically download the neurodesktop container and run it
 
 <pre class="language-batch command-line" data-prompt=">">
 <code>docker run --shm-size=1gb -it --privileged --name neurodesktop -v C:/neurodesktop-storage:/neurodesktop-storage -p 8080:8080 -h neurodesktop-{{< params/neurodesktop/version >}} vnmd/neurodesktop:{{< params/neurodesktop/version >}}</code>
