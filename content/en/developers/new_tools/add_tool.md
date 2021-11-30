@@ -50,6 +50,11 @@ cp -R template newapp</code></pre>
 5) Run update-builders.sh - This will auto-create the CI workflow for the application (or manually duplicate the template file and rename all occurances of template to _newapp_)
 <pre class="language-shell command-line" data-prompt="$"><code>cd ../..
 sh update-builders.sh</code></pre>
+
+> if the CI build runs out of space, add the application to the following txt to add additional space.
+https://github.com/NeuroDesk/neurocontainers/blob/master/.github/workflows/free-up-space-list.txt.
+Note this, significantly increases CI run time, only use in cases of space errors.
+
 6) Build the container locally (e.g. running the build script with the --debug flag: https://github.com/NeuroDesk/neurocontainers/blob/master/recipes/lcmodel/build.sh)
 7) updated changes in local git repository
 <pre class="language-shell command-line" data-prompt="$"><code>git add recipes/newapp/build.sh recipes/newapp/README.md .github/workflows/newapp.yml
