@@ -38,7 +38,17 @@ Refer to [neurodocker](https://github.com/NeuroDesk/neurodocker) for more inform
 ## Build container
 To build a container:
 1) Pull-in latest changes from Neurodocker upstream into our fork: https://github.com/NeuroDesk/neurodocker - add recipe to neurodocker if relevant for their project (https://github.com/NeuroDesk/neurodocker) and create a pull request to neurodocker (add new tool in a branch!)
-2) Clone the neurocontainers repository https://github.com/NeuroDesk/neurocontainers
+2) Clone the neurocontainers repository: 
+{{< alert >}}Optional: Fork neurocontainers and setup github actions
+
+1. Fork https://github.com/NeuroDesk/neurocontainers into your account.
+2. Go to your neurocontainers fork.
+3. If Actions tab is missing, go to Settings > Actions. Select Allow all actions. Then Save.
+4. In the actions tab, select "I understand my workflows, go ahead and enable them"
+Pushes to the recipes in your fork will now trigger actions to build the respective docker container, and push them to your Github Packages.
+{{< /alert >}}
+
+https://github.com/NeuroDesk/neurocontainers
 <pre class="language-shell command-line" data-prompt="$"><code>git clone https://github.com/NeuroDesk/neurocontainers/</code></pre>
 3) Copy the directory template and rename to _newapp_ in `neurocontainers/recipes`
 <pre class="language-shell command-line" data-prompt="$"><code>cd neurocontainers/recipes
