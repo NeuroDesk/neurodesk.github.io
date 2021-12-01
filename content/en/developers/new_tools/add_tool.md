@@ -45,6 +45,7 @@ To build a container:
 2. Go to your neurocontainers fork.
 3. If Actions tab is missing, go to Settings > Actions. Select Allow all actions. Then Save.
 4. In the actions tab, select "I understand my workflows, go ahead and enable them"
+
 Pushes to the recipes in your fork will now trigger actions to build the respective docker container, and push them to your Github Packages.
 {{< /alert >}}
 
