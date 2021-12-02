@@ -38,9 +38,9 @@ Refer to [neurodocker](https://github.com/NeuroDesk/neurodocker) for more inform
 ## Build container
 To build a container:
 1) Sync/modify Neurodocker, the dependency we are using to build containers:
-  a) Press "Fetch upstream" in https://github.com/NeuroDesk/neurodocker to check if our fork of Neurodocker is already up-to-date
-  b) If there are upstream commits that are not synced yet, open an issue in https://github.com/NeuroDesk/neurocontainers/issues, requesting one of Neurodesk admins to pull-in latest changes from Neurodocker upstream into our fork of Neurodocker
-  c) If relevant to your project, add recipe to neurodocker (https://github.com/NeuroDesk/neurodocker) and create a pull request to neurodocker (add new tool in a branch!)
+   1) Press "Fetch upstream" in https://github.com/NeuroDesk/neurodocker to check if our fork of Neurodocker is already up-to-date
+   2) If there are upstream commits that are not synced yet, open an issue in https://github.com/NeuroDesk/neurocontainers/issues, requesting one of Neurodesk admins to pull-in latest changes from Neurodocker upstream into our fork of Neurodocker
+   3) If relevant to your project, add recipe to neurodocker (https://github.com/NeuroDesk/neurodocker) and create a pull request to neurodocker (add new tool in a branch!)
 2) Clone the neurocontainers repository: 
 {{< alert >}}Optional: Fork neurocontainers and setup github actions
 
