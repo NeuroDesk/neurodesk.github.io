@@ -36,7 +36,11 @@ Refer to [neurodocker](https://github.com/NeuroDesk/neurodocker) for more inform
 
 
 ## Build container
-To build a container:
+To build a container, set up environment with:
+1) Docker, the version in our CI environment
+2) Python, the version in our CI environment
+
+And then follow these steps:
 1) Sync/modify Neurodocker, the dependency we are using to build containers:
    1) Press "Fetch upstream" in https://github.com/NeuroDesk/neurodocker to check if our fork of Neurodocker is already up-to-date
    2) If there are upstream commits that are not synced yet, open an issue in https://github.com/NeuroDesk/neurocontainers/issues, requesting one of Neurodesk admins to pull-in latest changes from Neurodocker upstream into our fork of Neurodocker
@@ -69,7 +73,13 @@ sh update-builders.sh</code></pre>
 https://github.com/NeuroDesk/neurocontainers/blob/master/.github/workflows/free-up-space-list.txt.
 Note this, significantly increases CI run time, only use in cases of space errors.
 
-6) Build the container locally (e.g. running the build script with the --debug flag: https://github.com/NeuroDesk/neurocontainers/blob/master/recipes/lcmodel/build.sh)
+6) Build and test the container locally 
+
+1. clone our fork of Neurodocker: git clone https://github.com/NeuroDesk/neurodocker/
+2. install neurodocker: cd neurodocker; python -m pip install .
+3. run the build script with the --debug flag: https://github.com/NeuroDesk/neurocontainers/blob/master/recipes/lcmodel/build.sh
+4. test running some commands within the container that should be avaialble in your local docker container repository
+
 7) updated changes in local git repository
 <pre class="language-shell command-line" data-prompt="$"><code>git add recipes/newapp/build.sh recipes/newapp/README.md .github/workflows/newapp.yml
 git config user.email "the email that you use for github"
