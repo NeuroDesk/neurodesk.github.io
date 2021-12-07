@@ -89,6 +89,7 @@ weight = 1
 
 # Comment out if you don't want the "print entire section" link enabled.
 [outputs]
+home = ["HTML", "RSS", "JSON"]
 section = ["HTML", "print", "RSS"]
 
 [params]
@@ -129,13 +130,13 @@ github_project_repo = "https://github.com/NeuroDesk/neurodesk.github.io"
 github_branch= "hugo-docsy"
 
 # Google Custom Search Engine ID. Remove or comment out to disable search.
-gcs_engine_id = "5b38591c9187748b9"
+# gcs_engine_id = "5b38591c9187748b9"
 
 # Enable Algolia DocSearch
 algolia_docsearch = false
 
 # Enable Lunr.js offline search
-offlineSearch = false
+offlineSearch = true
 
 # Enable syntax highlighting and copy buttons on code blocks with Prism
 prism_syntax_highlighting = true

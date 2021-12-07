@@ -1,0 +1,304 @@
+{
+    "list": [
+        {
+            "application": "afni_21.2.00_20210714",
+            "categories": [
+                "functional imaging"
+            ]
+        },
+        {
+            "application": "aidamri_1.1_20210708",
+            "categories": [
+                "rodent imaging"
+            ]
+        },
+        {
+            "application": "ants_2.3.4_20210104",
+            "categories": [
+                "image registration"
+            ]
+        },
+        {
+            "application": "aslprep_0.2.7_20210323",
+            "categories": [
+                "quantitative imaging"
+            ]
+        },
+        {
+            "application": "ashs_2.0.0_20210105",
+            "categories": [
+                "hippocampus"
+            ]
+        },
+        {
+            "application": "bart_0.7.00_20210302",
+            "categories": [
+                "image reconstruction"
+            ]
+        },
+        {
+            "application": "bidstools_1.0.0_20201208",
+            "categories": [
+                "data organisation"
+            ]
+        },
+        {
+            "application": "clearswi_1.0.0_20211018",
+            "categories": [
+                "phase processing"
+            ]
+        },
+        {
+            "application": "condaenvs_1.0.0_20211011",
+            "categories": [
+                "programming",
+                "electrophysiology"
+            ]
+        },
+        {
+            "application": "conn_20b_20210109",
+            "categories": [
+                "functional imaging"
+            ]
+        },
+        {
+            "application": "connectomeworkbench_1.4.2_20201119",
+            "categories": [
+                "functional imaging",
+                "data organisation"
+            ]
+        },
+        {
+            "application": "convert3d_1.0.0_20210104",
+            "categories": [
+                "data organisation"
+            ]
+        },
+        {
+            "application": "datalad_0.15.3_20211130",
+            "categories": [
+                "data organisation"
+            ]
+        },
+        {
+            "application": "dsistudio_2020.10_20210109",
+            "categories": [
+                "diffusion imaging"
+            ]
+        },
+        {
+            "application": "eeglab_2020.0_20211026",
+            "categories": [
+                "electrophysiology"
+            ]
+        },
+        {
+            "application": "fatsegnet_1.0.gpu_20201212",
+            "categories": [
+                "body"
+            ]
+        },
+        {
+            "application": "fmriprep_20.1.3_20201118",
+            "categories": [
+                "functional imaging"
+            ]
+        },
+        {
+            "application": "fmriprep_20.2.3_20210917",
+            "categories": [
+                "functional imaging"
+            ]
+        },
+        {
+            "application": "freesurfer_7.1.1_20210225",
+            "categories": [
+                "image segmentation"
+            ]
+        },
+        {
+            "application": "freesurfer_7.2.0_20211130",
+            "categories": [
+                "image segmentation"
+            ]
+        },
+        {
+            "application": "fsl_6.0.3_20200905",
+            "categories": [
+                "functional imaging",
+                "structural imaging",
+                "diffusion imaging",
+                "image segmentation",
+                "image registration"
+            ]
+        },
+        {
+            "application": "fsl_6.0.4_20210105",
+            "categories": [
+                "functional imaging",
+                "structural imaging",
+                "diffusion imaging",
+                "image segmentation",
+                "image registration"
+            ]
+        },
+        {
+            "application": "gimp_2.10.18_20210104",
+            "categories": [
+                "visualization"
+            ]
+        },
+        {
+            "application": "hdbet_1.0.0_20210318",
+            "categories": [
+                "image segmentation"
+            ]
+        },
+        {
+            "application": "itksnap_3.8.0_20201208",
+            "categories": [
+                "image segmentation",
+                "visualization"
+            ]
+        },
+        {
+            "application": "julia_1.4.1_20210105",
+            "categories": [
+                "programming"
+            ]
+        },
+        {
+            "application": "minc_1.9.17_20210105",
+            "categories": [
+                "image segmentation",
+                "image registration",
+                "structural imaging"
+            ]
+        },
+        {
+            "application": "mriqc_0.16.1_20210917",
+            "categories": [
+                "data organisation",
+                "functional imaging",
+                "quality control"
+            ]
+        },
+        {
+            "application": "mrtrix3_3.0.1_20200908",
+            "categories": [
+                "diffusion imaging"
+            ]
+        },
+        {
+            "application": "mrtrix3_3.0.2_20201125",
+            "categories": [
+                "diffusion imaging"
+            ]
+        },
+        {
+            "application": "mrtrix3_3.0.3_20210917",
+            "categories": [
+                "diffusion imaging"
+            ]
+        },
+        {
+            "application": "mrtrix3tissue_5.2.8_20201111",
+            "categories": [
+                "diffusion imaging"
+            ]
+        },
+        {
+            "application": "lcmodel_6.3_20210302",
+            "categories": [
+                "spectroscopy"
+            ]
+        },
+        {
+            "application": "lashis_1.0_20210105",
+            "categories": [
+                "hippocampus"
+            ]
+        },
+        {
+            "application": "lashis_2.0_20210211",
+            "categories": [
+                "hippocampus"
+            ]
+        },
+        {
+            "application": "qsmxt_1.1.6_20210623",
+            "categories": [
+                "phase processing",
+                "quantitative imaging"
+            ]
+        },
+        {
+            "application": "romeo_3.2.4_20211015",
+            "categories": [
+                "phase processing"
+            ]
+        },
+        {
+            "application": "root_6.22.02_20201104",
+            "categories": [
+                "programming"
+            ]
+        },
+        {
+            "application": "rstudio_1.4.1106_20211014",
+            "categories": [
+                "statistics"
+            ]
+        },
+        {
+            "application": "slicer_4.11.20200930_20201108",
+            "categories": [
+                "image segmentation",
+                "image registration"
+            ]
+        },
+        {
+            "application": "slicersalt_3.0.0_20210301",
+            "categories": [
+                "shape analysis"
+            ]
+        },
+        {
+            "application": "spinalcordtoolbox_4.3_20201108",
+            "categories": [
+                "spine"
+            ]
+        },
+        {
+            "application": "spinalcordtoolbox_5.1.0_20210222",
+            "categories": [
+                "spine"
+            ]
+        },
+        {
+            "application": "spinalcordtoolbox_5.2.0_20210226",
+            "categories": [
+                "spine"
+            ]
+        },
+        {
+            "application": "spinalcordtoolbox_5.3.0_20210614",
+            "categories": [
+                "spine"
+            ]
+        },
+        {
+            "application": "spm12_r7219_20201120",
+            "categories": [
+                "functional imaging"
+            ]
+        },
+        {
+            "application": "tgvqsm_1.0.0_20210629",
+            "categories": [
+                "quantitative imaging",
+                "phase processing"
+            ]
+        }
+    ]
+}
