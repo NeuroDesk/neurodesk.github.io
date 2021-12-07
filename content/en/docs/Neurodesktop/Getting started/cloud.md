@@ -16,43 +16,11 @@ description: >
 <code>ssh -L 8080:127.0.0.1:8080 opc@133.71.33.71</code>
 </pre>
 
-2. Install Docker from here: https://docs.docker.com/get-docker/ 
+2. Install Docker on the cloud instance from here: https://docs.docker.com/get-docker/. Additional information available here: https://neurodesk.github.io/docs/neurodesktop/getting-started/linux/#installing-docker 
 
-### RHEL/CentOS (yum-based)
-Refer to https://docs.docker.com/engine/install/centos/
+3. Create a local folder on the cloud instance where the downloaded applications will be stored, e.g. ~/neurodesktop-storage
 
-One example to install docker in a yum-based distribution could look like this:
-<pre class="language-shell command-line" data-prompt="$">
-<code>sudo dnf install -y yum-utils 
-sudo yum-config-manager --add-repo https://download.docker.com/linux/centos/docker-ce.repo
-sudo dnf install docker-ce docker-ce-cli containerd.io
-sudo systemctl enable docker
-sudo systemctl start docker
-sudo docker version
-sudo docker info
-sudo groupadd docker
-sudo usermod -aG docker $USER
-sudo chown root:docker /var/run/docker.sock
-newgrp docker</code>
-</pre>
-
-### Ubuntu/Debian (apt-based)
-Refer to https://docs.docker.com/engine/install/ubuntu/
-
-One example to install docker in a apt-based distribution could look like this:
-<pre class="language-shell command-line" data-prompt="$" data-output="5">
-<code>sudo apt-get update
-sudo apt-get install apt-transport-https ca-certificates curl gnupg lsb-release
-curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /usr/share/keyrings/docker-archive-keyring.gpg
-echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/docker-archive-keyring.gpg] https://download.docker.com/linux/ubuntu \
-  $(lsb_release -cs) stable" | sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
-sudo apt-get update
-sudo apt-get install docker-ce docker-ce-cli containerd.io</code>
-</pre>
-
-3. Create a local folder where the downloaded applications will be stored, e.g. ~/neurodesktop-storage
-
-4. Open a terminal, and type the folowing command to automatically download the neurodesktop container and run it (Mac, Windows, Linux commands listed below) 
+4. Type the folowing command on the cloud instance to automatically download the neurodesktop container and run it (Mac, Windows, Linux commands listed below) 
 
 <pre class="language-shell command-line" data-prompt="$" data-output="2-9">
 <code>sudo docker run \
@@ -66,15 +34,19 @@ sudo apt-get install docker-ce docker-ce-cli containerd.io</code>
 
 (notice: if you get errors in neurodesktop then check if the ~/neurodesktop-storage directory is writable to all users, otherwise run `chmod a+rwx ~/neurodesktop-storage`)
 
-5. Once neurodesktop is downloaded i.e. `guacd[77]: INFO:        Listening on host 127.0.0.1, port 4822` is displayed in terminal, open a browser and go to:
+5. Once neurodesktop is downloaded to the cloud instance (`guacd[77]: INFO:        Listening on host 127.0.0.1, port 4822` is displayed in terminal), leave the terminal open and neurodesktop running (i.e., do not press CTRL+C)
+
+6. Open a browser on your computer, and go to:
 ```
 http://localhost:8080/#/?username=user&password=password
 ```
 or open a VNC Client and connect to port 5901 (for this -p 5901:5901 has to be added to the docker call)
 
-6. neurodesktop is ready to use!
+7. neurodesktop is ready to use!
 - User is `user`
 - Password is `password`
+
+8. if your computer hibernated/rebooted/etc., if the network connnection has been temprarily lost, or if you want to connect to the same instance of Neurodesktop from another computer, only repeat steps 1 and 6, and you will be reconnected to neurodesktop
 
 ## Stopping neurodesktop:
 When done processing your data it is important to stop and remove the container - otherwise the next start or container update will give an error ("... The container name "/neurodesktop" is already in use...")
