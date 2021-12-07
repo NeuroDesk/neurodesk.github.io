@@ -8,6 +8,14 @@ description: >-
 
 <!-- don't forget to copy addition to blog/releases -->
 
+## 20211207
+- Physio toolbox compiled and added to SPM + update of SPM
+- added brainstorm 
+- new neurodesktop container management scripts for Linux, Mac and Windows: https://github.com/NeuroDesk/neurodesktop 
+- added fieldtrip 
+- Datalad is now in the main image, so datalad run should work
+- added Oshy-X segmentation tool
+
 ## 20211028
 - added EEGLAB
 
