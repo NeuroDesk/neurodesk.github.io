@@ -15,6 +15,8 @@ description: >
 The docker installation will reboot your computer a few times and there might be warnings regardings WSL2 and this also might require a few more installation steps that unfortunatley differ for every system. Please get in touch if you are stuck and have a look at our troubleshoot page.
 {{< /alert >}}
 
+
+
 ## Quickstart
 1. Install Docker from here: https://docs.docker.com/get-docker/
 
@@ -30,6 +32,10 @@ The docker installation will reboot your computer a few times and there might be
 http://localhost:8080/#/?username=user&password=password
 ```
 or open a VNC Client and connect to port 5901 (for this -p 5901:5901 has to be added to the docker call)
+
+{{< alert title="Note" >}}
+We do not recommend the use of the Firefox browser for accessing Neurodesktop, as this may lead to performance issues. 
+{{< /alert >}}
 
 4. neurodesktop is ready to use!
 - User is `user`
