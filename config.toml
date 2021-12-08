@@ -181,12 +181,12 @@ enable = false
 	name ="Twitter"
 	url = "https://twitter.com/neuro_desk"
 	icon = "fab fa-twitter"
-        desc = "Follow us on Twitter to get the latest news!"
+	desc = "Follow us on Twitter to get the latest news!"
 [[params.links.user]]
 	name ="RSS"
 	url = "https://neurodesk.github.io/blog/index.xml"
 	icon = "fas fa-rss"
-        desc = "Follow us on RSS to get the latest news!"
+	desc = "Follow us on RSS to get the latest news!"
 [[params.links.user]]
 	# name = "Stack Overflow"
 	# url = "https://example.org/stack"
@@ -214,4 +214,10 @@ enable = false
     weight = 40
     url = "https://github.com/NeuroDesk"
     pre = "<i class='fab fa-github'></i>"
+
+[[menu.main]]
+    name = "Twitter"
+    weight = 50
+    url = "https://twitter.com/neuro_desk"
+    pre = "<i class='fab fa-twitter'></i>"
 	
