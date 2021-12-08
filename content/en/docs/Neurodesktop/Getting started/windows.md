@@ -11,15 +11,12 @@ description: >
 2. Docker requirements. Details found under https://docs.docker.com/get-docker/
 3. If installing docker using WSL, atleast 20GB space recommended for WSL with Ubuntu
 
-{{< alert title="Note" >}}
-The docker installation will reboot your computer a few times and there might be warnings regardings WSL2 and this also might require a few more installation steps that unfortunatley differ for every system. Please get in touch if you are stuck and have a look at our troubleshoot page.
-{{< /alert >}}
-
-
-
 ## Quickstart
 ### 1. Install Docker
 Install Docker from here: https://docs.docker.com/get-docker/
+{{< alert >}}
+The docker installation will reboot your computer a few times and there might be warnings regardings WSL2 and this also might require a few more installation steps that unfortunatley differ for every system. Please get in touch if you are stuck and have a look at our troubleshoot page.
+{{< /alert >}}
 
 ### 2. Run Neurodesktop
 Use one of the following options to run Neurodesktop:

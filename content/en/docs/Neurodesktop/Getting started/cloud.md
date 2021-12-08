@@ -11,16 +11,24 @@ description: >
 2. Docker requirements. Details found under https://docs.docker.com/get-docker/
 
 ## Quickstart
-1. Open an SSH connection to your cloud instance with port forwarding (USER should be substituted with a username that has admin privileges on the cloud instance, and IP should be substituted with the IP address of the cloud instance)
+### 1. Connect to cloud server
+Open an SSH connection to your cloud instance with port forwarding (USER should be substituted with a username that has admin privileges on the cloud instance, and IP should be substituted with the IP address of the cloud instance)
 ```
 ssh -L 8080:127.0.0.1:8080 USER@IP
 ```
 
-2. Install Docker on the cloud instance from here: https://docs.docker.com/get-docker/. Additional information available here: https://neurodesk.github.io/docs/neurodesktop/getting-started/linux/#installing-docker 
+### 2. Install Docker
+Install Docker on the cloud instance from here: https://docs.docker.com/get-docker/. Additional information available here: https://neurodesk.github.io/docs/neurodesktop/getting-started/linux/#installing-docker 
 
-3. Create a local folder on the cloud instance where the downloaded applications will be stored, e.g. ~/neurodesktop-storage
+### 3. Run Neurodesktop
+Create a local folder on the cloud instance where the downloaded applications will be stored, e.g. ~/neurodesktop-storage
 
-4. Type the folowing command on the cloud instance to automatically download the neurodesktop container and run it (Mac, Windows, Linux commands listed below) 
+#### Option 1: NeuroDesktop.run
+Download and run the following executable
+https://github.com/NeuroDesk/neurodesktop/raw/main/Linux_run_Neurodesk/NeuroDesktop.run
+
+#### Option 2: Using Terminal
+1. Type the folowing command on the cloud instance to automatically download the neurodesktop container and run it (Mac, Windows, Linux commands listed below) 
 
 <pre class="language-shell command-line" data-prompt="$" data-output="2-9">
 <code>sudo docker run \
@@ -34,19 +42,19 @@ ssh -L 8080:127.0.0.1:8080 USER@IP
 
 (notice: if you get errors in neurodesktop then check if the ~/neurodesktop-storage directory is writable to all users, otherwise run `chmod a+rwx ~/neurodesktop-storage`)
 
-5. Once neurodesktop is downloaded to the cloud instance (`guacd[77]: INFO:        Listening on host 127.0.0.1, port 4822` is displayed in terminal), leave the terminal open and neurodesktop running (i.e., do not press CTRL+C)
+2. Once neurodesktop is downloaded to the cloud instance (`guacd[77]: INFO:        Listening on host 127.0.0.1, port 4822` is displayed in terminal), leave the terminal open and neurodesktop running (i.e., do not press CTRL+C)
 
-6. Open a browser on your computer, and go to:
+3. Open a browser on your computer, and go to:
 ```
 http://localhost:8080/#/?username=user&password=password
 ```
 or open a VNC Client and connect to port 5901 (for this -p 5901:5901 has to be added to the docker call)
 
-7. neurodesktop is ready to use!
+4. neurodesktop is ready to use!
 - User is `user`
 - Password is `password`
 
-8. if your computer hibernated/rebooted/etc., if the network connnection has been temprarily lost, or if you want to connect to the same instance of Neurodesktop from another computer, only repeat steps 1 and 6, and you will be reconnected to neurodesktop
+5. if your computer hibernated/rebooted/etc., if the network connnection has been temprarily lost, or if you want to connect to the same instance of Neurodesktop from another computer, only repeat steps 1 and 6, and you will be reconnected to neurodesktop
 
 ## Stopping neurodesktop:
 When done processing your data it is important to stop and remove the container - otherwise the next start or container update will give an error ("... The container name "/neurodesktop" is already in use...")

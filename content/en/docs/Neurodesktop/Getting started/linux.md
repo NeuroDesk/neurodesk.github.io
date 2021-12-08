@@ -11,11 +11,20 @@ description: >
 2. Docker requirements. Details found under https://docs.docker.com/get-docker/
 
 ## Quickstart
-1. Install Docker from here: https://docs.docker.com/get-docker/. Additional information available [below](#installing-docker)
+### 1. Install Docker
+Install Docker from here: https://docs.docker.com/get-docker/. Additional information available [below](#installing-docker)
 
-2. Create a local folder where the downloaded applications will be stored, e.g. `~/neurodesktop-storage`
+### 2. Run Neurodesktop
+Before the first run, create a local folder where the downloaded applications will be stored, e.g. `~/neurodesktop-storage`
 
-3. Open a terminal, and type the folowing command to automatically download the neurodesktop container and run it (Mac, Windows, Linux commands listed below) 
+Then use one of the following options to run Neurodesktop:
+
+#### Option 1: NeuroDesktop.run
+Download and run the following executable
+https://github.com/NeuroDesk/neurodesktop/raw/main/Linux_run_Neurodesk/NeuroDesktop.run
+
+#### Option 2: Using Terminal
+1. Open a terminal, and type the folowing command to automatically download the neurodesktop container and run it (Mac, Windows, Linux commands listed below) 
 
 <pre class="language-shell command-line" data-prompt="$" data-output="2-6">
 <code>sudo docker run \
@@ -29,13 +38,13 @@ description: >
 
 (notice: if you get errors in neurodesktop then check if the ~/neurodesktop-storage directory is writable to all users, otherwise run `chmod a+rwx ~/neurodesktop-storage`)
 
-4. Once neurodesktop is downloaded i.e. `guacd[77]: INFO:        Listening on host 127.0.0.1, port 4822` is displayed in terminal, open a browser and go to:
+3. Once neurodesktop is downloaded i.e. `guacd[77]: INFO:        Listening on host 127.0.0.1, port 4822` is displayed in terminal, open a browser and go to:
 ```
 http://localhost:8080/#/?username=user&password=password
 ```
 or open a VNC Client and connect to port 5901 (for this -p 5901:5901 has to be added to the docker call)
 
-5. neurodesktop is ready to use!
+4. neurodesktop is ready to use!
 - User is `user`
 - Password is `password`
 
