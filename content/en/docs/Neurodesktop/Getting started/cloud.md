@@ -12,9 +12,9 @@ description: >
 
 ## Quickstart
 1. Open an SSH connection to your cloud instance with port forwarding (USER should be substituted with a username that has admin privileges on the cloud instance, and IP should be substituted with the IP address of the cloud instance)
-<pre class="language-shell command-line" data-prompt="$">
-<code>ssh -L 8080:127.0.0.1:8080 USER@IP</code>
-</pre>
+```
+ssh -L 8080:127.0.0.1:8080 USER@IP
+```
 
 2. Install Docker on the cloud instance from here: https://docs.docker.com/get-docker/. Additional information available here: https://neurodesk.github.io/docs/neurodesktop/getting-started/linux/#installing-docker 
 
