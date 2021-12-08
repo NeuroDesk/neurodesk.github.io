@@ -18,16 +18,25 @@ The docker installation will reboot your computer a few times and there might be
 
 
 ## Quickstart
-1. Install Docker from here: https://docs.docker.com/get-docker/
+### 1. Install Docker
+Install Docker from here: https://docs.docker.com/get-docker/
 
-2. Open a terminal (e.g. Powershell), and type the folowing command to automatically download the neurodesktop container and run it
+### 2. Run Neurodesktop
+Use one of the following options to run Neurodesktop:
+
+#### Option 1: NeuroDesktop.exe
+Download and run the following executable
+https://github.com/NeuroDesk/neurodesktop/raw/main/Windows_run_Neurodesk/NeuroDesktop.exe
+
+#### Option 2: Using Terminal
+1. Open a terminal (e.g. Powershell), and type the folowing command to automatically download the neurodesktop container and run it
 
 <pre class="language-batch command-line" data-prompt=">">
 <code>docker run --shm-size=1gb -it --privileged --name neurodesktop -v C:/neurodesktop-storage:/neurodesktop-storage -p 8080:8080 -h neurodesktop-{{< params/neurodesktop/version >}} vnmd/neurodesktop:{{< params/neurodesktop/version >}}</code>
 </pre>
 
 <!-- neurodesktop version found in neurodesk.github.io/data/neurodesktop.toml -->
-3. Once neurodesktop is downloaded i.e. `guacd[77]: INFO:        Listening on host 127.0.0.1, port 4822` is displayed in terminal, open a browser and go to:
+2. Once neurodesktop is downloaded i.e. `guacd[77]: INFO:        Listening on host 127.0.0.1, port 4822` is displayed in terminal, open a browser and go to:
 ```
 http://localhost:8080/#/?username=user&password=password
 ```
@@ -37,7 +46,7 @@ or open a VNC Client and connect to port 5901 (for this -p 5901:5901 has to be a
 We do not recommend the use of the Firefox browser for accessing Neurodesktop, as this may lead to performance issues. 
 {{< /alert >}}
 
-4. neurodesktop is ready to use!
+3. neurodesktop is ready to use!
 - User is `user`
 - Password is `password`
 
