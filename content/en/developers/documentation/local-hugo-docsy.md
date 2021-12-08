@@ -39,3 +39,9 @@ Extract hugo binary (hugo.exe) to your neurodesk.github.io dir
 Run server for windows: `.\hugo.exe server --disableFastRender`
 
 Once started, dev website will be accessible via http://localhost:1313
+
+### Update docsy theme submodule
+<pre class="language-shell command-line" data-prompt="$"><code>git submodule update --remote
+git add themes/
+git commit -m "Updating theme submodule"
+git push origin hugo-docsy</code></pre>
