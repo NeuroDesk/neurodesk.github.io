@@ -65,6 +65,8 @@ cp -R template newapp</code></pre>
 <pre class="language-shell command-line" data-prompt="$" data-output="2-3"><code>cd newapp
 (edit build.sh as required)
 (edit README.md as required)</code></pre>
+Upload your application to object storage first if needed, so you can then download it in build.sh (ask for instructions about this if you don't know the key, and never share it anywhere public!)
+
 5) Run update-builders.sh - This will auto-create the CI workflow for the application (or manually duplicate the template file and rename all occurances of template to _newapp_)
 <pre class="language-shell command-line" data-prompt="$"><code>cd ../..
 sh update-builders.sh</code></pre>
@@ -75,16 +77,20 @@ Note this, significantly increases CI run time, only use in cases of space error
 
 6) Build and test the container locally 
 
-1. clone our fork of Neurodocker: git clone https://github.com/NeuroDesk/neurodocker/
-2. install neurodocker: cd neurodocker; python -m pip install .
-3. run the build script with the --debug flag: https://github.com/NeuroDesk/neurocontainers/blob/master/recipes/lcmodel/build.sh
-4. test running some commands within the container that should be avaialble in your local docker container repository
+   1. clone our fork of Neurodocker: git clone https://github.com/NeuroDesk/neurodocker/
+   2. install neurodocker: cd neurodocker; python -m pip install .
+   3. run the build script with the --debug flag: https://github.com/NeuroDesk/neurocontainers/blob/master/recipes/lcmodel/build.sh
+   <pre class="language-shell command-line" data-prompt="$"><code>chmod +x build.sh
+   ./build.sh -debug</code></pre>
+   4. test running some commands within the container that should be available in your local docker container repository
+   5. if your application requires a Matlab Runtime and you get an error about shared library "libmwlaunchermain.so" not found, check which version of the runtime was installed by the build script
 
-7) updated changes in local git repository
+7) Update changes in local git repository
 <pre class="language-shell command-line" data-prompt="$"><code>git add recipes/newapp/build.sh recipes/newapp/README.md .github/workflows/newapp.yml
 git config user.email "the email that you use for github"
 git config user.name "your name"
 git commit</code></pre>
+
 8) Generate git personal access token (if you don’t have one already)
 ```
 Browse to https://github.com/NeuroDesk/neurocontainers/
