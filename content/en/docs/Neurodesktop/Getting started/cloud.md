@@ -44,19 +44,25 @@ https://github.com/NeuroDesk/neurodesktop/raw/main/Linux_run_Neurodesk/NeuroDesk
 If you get errors in neurodesktop then check if the ~/neurodesktop-storage directory is writable to all users, otherwise run `chmod a+rwx ~/neurodesktop-storage`
 {{< /alert >}}
 
-2. Once neurodesktop is downloaded to the cloud instance (`guacd[77]: INFO:        Listening on host 127.0.0.1, port 4822` is displayed in terminal), leave the terminal open and neurodesktop running (i.e., do not press CTRL+C)
+### 4. Wait for Neurodesktop to be downloaded to the cloud instance and start
 
-3. Open a browser on your computer, and go to:
+Once neurodesktop has been downloaded and initiated (`guacd[77]: INFO:        Listening on host 127.0.0.1, port 4822` is displayed in terminal), leave the terminal open and neurodesktop running (i.e., do not press CTRL+C)
+
+### 5. Connect to Neurodesktop from your computer for the first time
+
+Open a web browser on your computer, and go to:
 ```
 http://localhost:8080/#/?username=user&password=password
 ```
-or open a VNC Client and connect to port 5901 (for this -p 5901:5901 has to be added to the docker call)
+Click on the underlying remote desktop protocol that you want to use for the connections: RDP or VNC
 
-4. neurodesktop is ready to use!
-- User is `user`
-- Password is `password`
+Neurodesktop is now ready to be used!
 
-5. if your computer hibernated/rebooted/etc., if the network connnection has been temprarily lost, or if you want to connect to the same instance of Neurodesktop from another computer, only repeat steps 1 and 6, and you will be reconnected to neurodesktop
+An alternartive to using a web browser, is to use a VNC Client and connect to port 5901 (for this -p 5901:5901 has to be added to the docker call in Option 2 above). User is 'user', Password is 'password'
+
+### 6. Reconnecting to Neurodesktop from your/other computer
+
+If your computer hibernated/rebooted/etc., if the network connnection has been temprarily lost, or if you want to connect to the same instance of Neurodesktop from another computer, only repeat steps 1 and 5, and you will be reconnected to neurodesktop
 
 ## Stopping neurodesktop:
 When done processing your data it is important to stop and remove the container - otherwise the next start or container update will give an error ("... The container name "/neurodesktop" is already in use...")
