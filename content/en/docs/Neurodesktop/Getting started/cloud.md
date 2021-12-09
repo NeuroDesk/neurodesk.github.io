@@ -24,7 +24,7 @@ Install Docker on the cloud instance from here: https://docs.docker.com/get-dock
 Create a local folder on the cloud instance where the downloaded applications will be stored, e.g. ~/neurodesktop-storage
 
 #### Option 1: NeuroDesktop.run
-Download and run the following executable
+Download and run the following executable on the cloud instance
 https://github.com/NeuroDesk/neurodesktop/raw/main/Linux_run_Neurodesk/NeuroDesktop.run
 
 #### Option 2: Using Terminal
