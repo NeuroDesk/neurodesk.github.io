@@ -21,10 +21,10 @@ ssh -L 8080:127.0.0.1:8080 USER@IP
 Install Docker on the cloud instance from here: https://docs.docker.com/get-docker/. Additional information available here: https://neurodesk.github.io/docs/neurodesktop/getting-started/linux/#installing-docker 
 
 ### 3. Run Neurodesktop
-Create a local folder on the cloud instance where the downloaded applications will be stored, e.g. ~/neurodesktop-storage
+Create a local folder on the cloud instance to store persistent data (data that will not disappear if neurodesktop is stopped), e.g. ~/neurodesktop-storage
 
 #### Option 1: NeuroDesktop.run
-Download and run the following executable on the cloud instance
+Download and run the following executable
 https://github.com/NeuroDesk/neurodesktop/raw/main/Linux_run_Neurodesk/NeuroDesktop.run
 
 #### Option 2: Using Terminal
