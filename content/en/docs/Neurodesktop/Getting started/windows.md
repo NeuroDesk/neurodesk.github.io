@@ -37,7 +37,6 @@ https://github.com/NeuroDesk/neurodesktop/raw/main/Windows_run_Neurodesk/NeuroDe
 ```
 http://localhost:8080/#/?username=user&password=password
 ```
-or open a VNC Client and connect to port 5901 (for this -p 5901:5901 has to be added to the docker call)
 
 {{< alert title="Note" >}}
 We do not recommend the use of the Firefox browser for accessing Neurodesktop, as this may lead to performance issues. 
