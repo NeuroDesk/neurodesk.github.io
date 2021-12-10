@@ -50,7 +50,6 @@ If you get errors in neurodesktop then check if the ~/neurodesktop-storage direc
 ```
 http://localhost:8080/#/?username=user&password=password
 ```
-or open a VNC Client and connect to port 5901 (for this -p 5901:5901 has to be added to the docker call)
 
 4. neurodesktop is ready to use!
 - User is `user`
