@@ -61,3 +61,38 @@ docker stop neurodesktop
 ```
 docker rm neurodesktop
 ```
+
+## Using an RDP Client
+Startup Neurodesktop using the following command:
+
+<pre class="language-batch command-line" data-prompt=">">
+<code>docker run --shm-size=1gb -it --privileged --name neurodesktop -v C:/neurodesktop-storage:/neurodesktop-storage -p 3390:3389 -p 8080:8080 -h neurodesktop-{{< params/neurodesktop/version >}} vnmd/neurodesktop:{{< params/neurodesktop/version >}}</code>
+</pre>
+{{< alert >}}
+If you want to connect via RDP using a different port, replace 3390 in the previous and next step with your port
+{{< /alert >}}
+
+Open Windows Remote Desktop Connection and connect to Computer `localhost:3390` as shown below. 
+
+
+![win-rdp-1](/neurodesktop/getting-started/win-rdp-1.png 'win-rdp-1')
+
+Resolution and multi-monitor settings can be set from the Display tab. 
+
+Once ready, click Connect. This will take you to the following prompt
+
+![win-rdp-1](/neurodesktop/getting-started/win-rdp-2.png 'win-rdp-2')
+
+Use the following details to login
+```
+Session: Xorg
+username: user
+password: password
+```
+
+<!-- 
+## Using a VNC Client
+<pre class="language-batch command-line" data-prompt=">">
+<code>docker run --shm-size=1gb -it --privileged --name neurodesktop -v C:/neurodesktop-storage:/neurodesktop-storage -e VNC_ENABLE=1 -p 5901:5901 -p 8080:8080 -h neurodesktop-{{< params/neurodesktop/version >}} vnmd/neurodesktop:{{< params/neurodesktop/version >}}</code>
+</pre>
+or open a VNC Client and connect to port 5901 (for this -p 5901:5901 has to be added to the docker call) -->
