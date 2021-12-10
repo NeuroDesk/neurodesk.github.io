@@ -162,3 +162,33 @@ print("Num GPUs Available: ", len(tf.config.list_physical_devices('GPU')))</code
 </pre>
 
 ![image](https://user-images.githubusercontent.com/4021595/135449288-6c3e9bbd-fe5f-4f43-aa4a-8a798ba629e6.png)
+
+## Using an RDP Client
+Startup Neurodesktop using the following command:
+
+<pre class="language-shell command-line" data-prompt="$" data-output="2-6">
+<code>sudo docker run \
+  --shm-size=1gb -it --privileged --name neurodesktop \
+  -v ~/neurodesktop-storage:/neurodesktop-storage \
+  -e HOST_UID="$(id -u)" -e HOST_GID="$(id -g)" \
+  -p 3390:3389 -p 8080:8080 -h neurodesktop-{{< params/neurodesktop/version >}} \
+  vnmd/neurodesktop:{{< params/neurodesktop/version >}}</code>
+</pre>
+{{< alert >}}
+If you want to connect via RDP using a different port, replace 3390 in the previous and next step with your port
+{{< /alert >}}
+
+Open your RDP client and connect to Computer `localhost:3390`
+
+Use the following details to login if prompted
+```
+username: user
+password: password
+```
+
+<!-- 
+## Using a VNC Client
+<pre class="language-batch command-line" data-prompt=">">
+<code>docker run --shm-size=1gb -it --privileged --name neurodesktop -v C:/neurodesktop-storage:/neurodesktop-storage -e VNC_ENABLE=1 -p 5901:5901 -p 8080:8080 -h neurodesktop-{{< params/neurodesktop/version >}} vnmd/neurodesktop:{{< params/neurodesktop/version >}}</code>
+</pre>
+or open a VNC Client and connect to port 5901 (for this -p 5901:5901 has to be added to the docker call) -->

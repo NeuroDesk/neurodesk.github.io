@@ -76,3 +76,31 @@ You can also connect to this cloud instance from your iOS device :) For this ins
 |----------------|-----------------------------------------------------------------------------------------|
 | Oracle         | https://mri.sbollmann.net/index.php/2020/12/08/run-neurodesk-on-oracle-cloud-free-tier/ |
 | Azure          | https://henryjburg.medium.com/neurodesk-running-on-azure-3e38c590a152                   |
+
+## Using an RDP Client
+Open an SSH connection to your cloud instance with the following command
+```
+ssh -L 3390:127.0.0.1:3390 USER@IP
+```
+
+Startup Neurodesktop using the following command:
+
+<pre class="language-shell command-line" data-prompt="$" data-output="2-6">
+<code>sudo docker run \
+  --shm-size=1gb -it --privileged --name neurodesktop \
+  -v ~/neurodesktop-storage:/neurodesktop-storage \
+  -e HOST_UID="$(id -u)" -e HOST_GID="$(id -g)" \
+  -p 3390:3389 -p 8080:8080 -h neurodesktop-{{< params/neurodesktop/version >}} \
+  vnmd/neurodesktop:{{< params/neurodesktop/version >}}</code>
+</pre>
+{{< alert >}}
+If you want to connect via RDP using a different port, replace 3390 in the previous two steps and next step with your port
+{{< /alert >}}
+
+Open your RDP client and connect to Computer `localhost:3390`
+
+Use the following details to login if prompted
+```
+username: user
+password: password
+```
