@@ -34,7 +34,6 @@ if you get errors in neurodesktop then check if the ~/neurodesktop-storage direc
 ```
 http://localhost:8080/#/?username=user&password=password
 ```
-or open a VNC Client and connect to port 5901 (for this -p 5901:5901 has to be added to the docker call)
 
 3. neurodesktop is ready to use!
 - User is `user`
@@ -54,3 +53,28 @@ docker stop neurodesktop
 ```
 docker rm neurodesktop
 ```
+
+## Using an RDP Client
+Startup Neurodesktop using the following command:
+
+```shell
+docker run --shm-size=1gb -it --privileged --name neurodesktop -v ~/neurodesktop-storage:/neurodesktop-storage -p 3390:3389 -p 8080:8080 -h neurodesktop-{{< params/neurodesktop/version >}} vnmd/neurodesktop:{{< params/neurodesktop/version >}}
+```
+{{< alert >}}
+If you want to connect via RDP using a different port, replace 3390 in the previous and next step with your port
+{{< /alert >}}
+
+Open your RDP client and connect to Computer `localhost:3390`
+
+Use the following details to login if prompted
+```
+username: user
+password: password
+```
+
+<!-- 
+## Using a VNC Client
+<pre class="language-batch command-line" data-prompt=">">
+<code>docker run --shm-size=1gb -it --privileged --name neurodesktop -v C:/neurodesktop-storage:/neurodesktop-storage -e VNC_ENABLE=1 -p 5901:5901 -p 8080:8080 -h neurodesktop-{{< params/neurodesktop/version >}} vnmd/neurodesktop:{{< params/neurodesktop/version >}}</code>
+</pre>
+or open a VNC Client and connect to port 5901 (for this -p 5901:5901 has to be added to the docker call) -->
