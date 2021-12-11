@@ -29,7 +29,7 @@ Once you've filled out those details, you can delete this comment block.
 >
 <!-- Fill in your personal details above so that we can credit the tutorial to you. Feel free to add any additional contact details i.e. website, or remove those that are irrelevant -->
 
-Welcome to the workflow template, which you can use to contribute your own neurodesk workflow to our documentation. We aim to collect a wide variety of workflows representing the spectrum of tools available under the neurodesk architechture and the diversity in how researchers might apply them. Please add plently of descriptive detail and make sure that all steps of the workflow work before submitting the tutorial. 
+Welcome to the workflow template, which you can use to contribute your own neurodesk workflow to our documentation. We aim to collect a wide variety of workflows representing the spectrum of tools available under the neurodesk architechture and the diversity in how researchers might apply them. Please add plenty of descriptive detail and make sure that all steps of the workflow work before submitting the tutorial. 
 
 You can embelish your text in this tutorial using markdown conventions; text can be **bold**, _italic_, or ~~strikethrough~~. You can also add [Links](https://neurodesk.github.io/).
 
@@ -82,7 +82,7 @@ To add screenshots to your tutorial, create a subfolder in `neurodesk.github.io/
 
 ![EEGtut1](/EEG_Tutorial/EEGtut1.png 'EEGtut1') <!-- ![filename without extension](/subfolder_name/filename.png '[filename without extension')  -->
 
-## Alets and warnings
+## Alerts and warnings
 
 You can grab reader's attention to particularly important information with quoteblocks, alerts and warnings:
 
@@ -101,7 +101,7 @@ There's a horizontal rule above and below this.
 
 ----------------
 
-Of add page information:
+Or add page information:
 {{% pageinfo %}}
 This is a placeholder. Replace it with your own content.
 {{% /pageinfo %}}
