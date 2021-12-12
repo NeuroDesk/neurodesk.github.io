@@ -61,7 +61,7 @@ If you cannot find the example data there:
 
 4. For now, load an existing example (or previously created SPM Batch File) as follows: It is most convenient to change the working directory of SPM to the location of the physiological logfiles
     - In the Batch Editor GUI, lowest row, choose 'CD' from the 'Utils..' dropdown menu
-    - Navigate to any of the example folders, e.g., `/home/Desktop/neurodesktop-storage/examples/Philips/ECG3T/` and select it
+    - Navigate to any of the example folders, e.g., `/opt/spm12/examples/Philips/ECG3T/` and select it
     - NB: you can skip this part, if you later manually update all input files in the Batch Editor window (resp/cardiac/scan timing and realignment parameter file further down)
     - Any other example should also work the same way, just CD to its folder before the next step
 5. Select File -> Load Batch from the top row menu of the Batch Editor window
