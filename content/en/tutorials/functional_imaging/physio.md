@@ -44,7 +44,7 @@ If you cannot find the example data there:
 ## Copy your own data
 
 - On Windows, the folder `C:\neurodesktop-storage` should have been automatically created when starting NeuroDesk
-- This is your direct link to the NeuroDesk environment, and anything you put in there should end up within the NeuroDesk desktop in `/home/user/Desktop/neurodesktop-storage/`
+- This is your direct link to the NeuroDesk environment, and anything you put in there should end up within the NeuroDesk desktop in `/neurodesktop-storage/`
 
 
 ## Example: Running PhysIO in the GUI
