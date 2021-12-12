@@ -30,7 +30,7 @@ many things including an analysis project. Let's go to the Neurodesktop storage
 and create a dataset for some project. Open a terminal and enter these commands:
 
 ```
-$ cd Desktop/neurodesktop-storage
+$ cd /neurodesktop-storage
 
 $ datalad create -c yoda SomeProject
 [INFO   ] Creating a new annex repo at /home/user/Desktop/neurodesktop-storage/SomeProject
@@ -150,7 +150,7 @@ URL if you were really someone else.
 ```
 $ cd ~
 
-$ datalad install -s ~/Desktop/neurodesktop-storage/SomeProject
+$ datalad install -s /neurodesktop-storage/SomeProject
 install(ok): /home/user/SomeProject (dataset)
 
 $ cd SomeProject
