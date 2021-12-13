@@ -49,7 +49,7 @@ Finally, contribute your new workflow to the official documentation!:
 2. Navigate to your forked version of the repository on github.
 3. Before you proceed, make sure you are up to date with our upstream documentation, you may need to [fetch upstream changes](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/working-with-forks/syncing-a-fork).
 3. To contribute your changes, click "Contribute", and then ["Open pull request"](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/about-pull-requests).
-4. Give your pull request a title (e.g. "Document Physio workflow"), leave a comment briefly describing what you have done, and then create the pull request. 
+4. Give your pull request a title (e.g. "Document PhysIO workflow"), leave a comment briefly describing what you have done, and then create the pull request. 
 5. Someone from the Neurodesk team will review and accept your workflow and it will appear on our website soon!. 
 
 Thanks so much for taking the time to contribute your workflow to the Neurodesk community! If you have any feedback on the process, please let us know on [github discussions](https://github.com/NeuroDesk/neurodesk.github.io/discussions).
