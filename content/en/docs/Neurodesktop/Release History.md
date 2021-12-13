@@ -8,7 +8,9 @@ description: >-
 
 ## development
 - neurodesktop can now be accessed via native RDP client as well (e.g. for multi-monitor support): https://neurodesk.github.io/docs/neurodesktop/getting-started/windows/#using-an-rdp-client
-- 
+- there is a new Help button in the menu :)
+- updates of ants 2.3.4 (now includes Scripts as well) + newly added 2.3.5
+
 
 ## 20211207
 - Physio toolbox compiled and added to SPM + update of SPM
@@ -17,6 +19,7 @@ description: >-
 - added fieldtrip 
 - Datalad is now in the main image, so datalad run should work
 - added Oshy-X segmentation tool
+- updated freesurfer 7.2.0
 
 ## 20211028
 - added EEGLAB
