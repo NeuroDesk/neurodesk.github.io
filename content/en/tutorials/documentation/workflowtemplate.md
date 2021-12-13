@@ -31,19 +31,46 @@ Once you've filled out those details, you can delete this comment block.
 
 Welcome to the workflow template, which you can use to contribute your own neurodesk workflow to our documentation. We aim to collect a wide variety of workflows representing the spectrum of tools available under the neurodesk architechture and the diversity in how researchers might apply them. Please add plenty of descriptive detail and make sure that all steps of the workflow work before submitting the tutorial. 
 
-You can embelish your text in this tutorial using markdown conventions; text can be **bold**, _italic_, or ~~strikethrough~~. You can also add [Links](https://neurodesk.github.io/).
+## How to contribute a new workflow
+
+Begin by creating a copy of our documentation that you can edit:
+1. Visit the github repository for the Neurodesk documentation (https://github.com/NeuroDesk/neurodesk.github.io).
+2. Fork the repository (see [here](https://docs.github.com/en/get-started/quickstart/fork-a-repo) for more information on forking github repositories).
+- _You should now have your own copy of the documentation, which you can alter without affecting our official documentation. You should see a panel stating "This branch is up to date with Neurodesk:hugo-docsy." If someone else makes a change to the official documentation, the statement will change to reflect this. You can bring your repository up to date by clicking "Fetch upstream"._ 
+
+Next, create your workflow:
+1. Clone your forked version of our documentation to a location of your choice on your computer (see [here](https://docs.github.com/en/get-started/quickstart/fork-a-repo#cloning-your-forked-repository) for more info). 
+2. In this new folder, navigate to "neurodesk.github.io/content/en/tutorials" and then navigate to the subfolder you believe your workflow belongs in (e.g. "/functional_imaging"). 
+3. Create a new, appropriately named markdown file to house your workflow. (e.g. "/physio.md")
+4. Open this file in the editor of your choice (we recommend [vscode](https://code.visualstudio.com/)) and populate it with your workflow! Please use this template as a style guide, it can be located at "neurodesk.github.io\content\en\tutorials\documentation\workflowtemplate.md". You're also welcome to have a look at other the workflows already documented on our website for inspiration. 
+
+Finally, contribute your new workflow to the official documentation!:
+1. Once you are happy with your workflow, make sure you [commit](https://github.com/git-guides/git-commit) all your changes and [push](https://github.com/git-guides/git-push) these local commits to github.
+2. Navigate to your forked version of the repository on github.
+3. Before you proceed, make sure you are up to date with our upstream documentation, you may need to fetch upstream changes (see [here](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/working-with-forks/syncing-a-fork) for more info on syncing a fork).
+3. To contribute your changes, click "Contribute", and then "Open pull request". (see [here](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/about-pull-requests) for more information about pull requests). 
+4. Give your pull request a title (e.g. "Document Physio workflow"), leave a comment briefly describing what you have done, and then create the pull request. 
+5. Someone from the Neurodesk team will review and accept your workflow and it will appear on our website soon!. 
+
+Thanks so much for taking the time to contribute your workflow to the Neurodesk community! If you have any feedback on the process, please let us know on [github discussions](https://github.com/NeuroDesk/neurodesk.github.io/discussions).
+
+## Formatting guidelines
+
+You can embelish your text in this tutorial using markdown conventions; text can be **bold**, _italic_, or ~~strikethrough~~. You can also add [Links](https://neurodesk.github.io/), and you can organise your tutorial with headers, starting at level 2 (the page title is a level 1 header):
 
 ## Level 2 heading
 
-You can organise your tutorial with headers, starting at level 2 (the page title is a level 1 header). You can also include progressively smaller subheadings:
+You can also include progressively smaller subheadings:
 
 ### Level 3 heading
+
 Some more detailed information. 
 
 #### Level 4 heading
+
 Even more detailed information. 
 
-## Code blocks
+### Code blocks
 
 You can add codeblocks to your tutorial as follows:
 
@@ -76,13 +103,13 @@ print(a+b)
 
 You can also add code snippets, e.g. `var foo = "bar";`, which will be shown inline.
 
-## Images
+### Images
 
 To add screenshots to your tutorial, create a subfolder in `neurodesk.github.io/static` with the same link name as your tutorial. Add your screenshot to this folder, keeping in mind that you may want to adjust your screenshot to a reasonable size before uploading. You can then embed these images in your tutorial using the following convention: 
 
 ![EEGtut1](/EEG_Tutorial/EEGtut1.png 'EEGtut1') <!-- ![filename without extension](/subfolder_name/filename.png '[filename without extension')  -->
 
-## Alerts and warnings
+### Alerts and warnings
 
 You can grab reader's attention to particularly important information with quoteblocks, alerts and warnings:
 
@@ -106,7 +133,7 @@ Or add page information:
 This is a placeholder. Replace it with your own content.
 {{% /pageinfo %}}
 
-## Tables
+### Tables
 
 You may want to order information in a table as follows:
 
@@ -116,7 +143,7 @@ You may want to order information in a table as follows:
 | Rita Levi-Montalcini     | Discovery of nerve growth factor (NGF)               | 1909–2012 |
 | Anne Treisman            | Feature integration theory of attention              | 1935–2018 |
 
-## Lists
+### Lists
 
 You may want to organise information in a list as follows:
 
@@ -159,6 +186,3 @@ And a nested list:
   * .raw
   * .kdf
 
-## Thanks 
-
-Thanks so much for taking the time to contribute your workflow to the Neurodesk community! If you have any feedback on the process, please let us know on [github discussions](https://github.com/NeuroDesk/neurodesk.github.io/discussions).
