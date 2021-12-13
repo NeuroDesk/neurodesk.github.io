@@ -6,7 +6,9 @@ description: >-
      Previous releases of neurodesktop
 ---
 
-<!-- don't forget to copy addition to blog/releases -->
+## development
+- neurodesktop can now be accessed via native RDP client as well (e.g. for multi-monitor support): https://neurodesk.github.io/docs/neurodesktop/getting-started/windows/#using-an-rdp-client
+- 
 
 ## 20211207
 - Physio toolbox compiled and added to SPM + update of SPM
