@@ -110,7 +110,7 @@ Removing hello.txt
 ```
 
 {{< alert title="git" >}}`git clean` is for removing new, untracked files. For
-resetting existing, modified files to the last saved version, you woul need
+resetting existing, modified files to the last saved version, you would need
 `git reset --hard`.{{< /alert >}}
 
 When the dataset is clean, we are ready to `datalad run`!
@@ -157,7 +157,7 @@ $ cd SomeProject
 ```
 
 Because a DataLad dataset is a Git repository, people who download your dataset
-can see exactly how `outputs/hello.txt` was created using git's logs.
+can see exactly how `outputs/hello.txt` was created using Git's logs.
 
 ```
 $ git log outputs/hello.txt
@@ -199,7 +199,7 @@ action summary:
   save (notneeded: 1)
 ```
 
-{{< alert title="git" >}}In Git, each commit (save state) is assigned a very
+{{< alert title="git" >}}In Git, each commit (save state) is assigned a long,
 unique machine-generated ID. `52cf` refers to the commit with ID that starts
 with those characters. Usually 4 is the minimum needed to uniquely identify a
 commit. Of course, this ID is probably different for you, so change this
@@ -214,5 +214,5 @@ argument to match your commit.{{< /alert >}}
 * DataLad is only available on the terminal. For a detailed introduction on the
   Bash terminal, check the [BashGuide](https://mywiki.wooledge.org/BashGuide).
 * For even more reproducibility, you can include _containers_ with your dataset
-  to run analyses in. DataLad has an extension to support container script
-  execution. See [here](http://handbook.datalad.org/en/latest/basics/101-133-containersrun.html).
+  to run analyses in. DataLad has an extension to support script execution in
+  containers. See [here](http://handbook.datalad.org/en/latest/basics/101-133-containersrun.html).
