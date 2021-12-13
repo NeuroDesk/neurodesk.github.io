@@ -35,11 +35,11 @@ Welcome to the workflow template, which you can use to contribute your own neuro
 
 Begin by creating a copy of our documentation that you can edit:
 1. Visit the github repository for the Neurodesk documentation (https://github.com/NeuroDesk/neurodesk.github.io).
-2. Fork the repository (see [here](https://docs.github.com/en/get-started/quickstart/fork-a-repo) for more information on forking github repositories).
+2. [Fork](https://docs.github.com/en/get-started/quickstart/fork-a-repo) the repository.
 - _You should now have your own copy of the documentation, which you can alter without affecting our official documentation. You should see a panel stating "This branch is up to date with Neurodesk:hugo-docsy." If someone else makes a change to the official documentation, the statement will change to reflect this. You can bring your repository up to date by clicking "Fetch upstream"._ 
 
 Next, create your workflow:
-1. Clone your forked version of our documentation to a location of your choice on your computer (see [here](https://docs.github.com/en/get-started/quickstart/fork-a-repo#cloning-your-forked-repository) for more info). 
+1. [Clone](https://docs.github.com/en/get-started/quickstart/fork-a-repo#cloning-your-forked-repository) your forked version of our documentation to a location of your choice on your computer. 
 2. In this new folder, navigate to "neurodesk.github.io/content/en/tutorials" and then navigate to the subfolder you believe your workflow belongs in (e.g. "/functional_imaging"). 
 3. Create a new, appropriately named markdown file to house your workflow. (e.g. "/physio.md")
 4. Open this file in the editor of your choice (we recommend [vscode](https://code.visualstudio.com/)) and populate it with your workflow! Please use this template as a style guide, it can be located at "neurodesk.github.io\content\en\tutorials\documentation\workflowtemplate.md". You're also welcome to have a look at other the workflows already documented on our website for inspiration. 
@@ -47,8 +47,8 @@ Next, create your workflow:
 Finally, contribute your new workflow to the official documentation!:
 1. Once you are happy with your workflow, make sure you [commit](https://github.com/git-guides/git-commit) all your changes and [push](https://github.com/git-guides/git-push) these local commits to github.
 2. Navigate to your forked version of the repository on github.
-3. Before you proceed, make sure you are up to date with our upstream documentation, you may need to fetch upstream changes (see [here](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/working-with-forks/syncing-a-fork) for more info on syncing a fork).
-3. To contribute your changes, click "Contribute", and then "Open pull request". (see [here](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/about-pull-requests) for more information about pull requests). 
+3. Before you proceed, make sure you are up to date with our upstream documentation, you may need to [fetch upstream changes](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/working-with-forks/syncing-a-fork).
+3. To contribute your changes, click "Contribute", and then ["Open pull request"](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/about-pull-requests).
 4. Give your pull request a title (e.g. "Document Physio workflow"), leave a comment briefly describing what you have done, and then create the pull request. 
 5. Someone from the Neurodesk team will review and accept your workflow and it will appear on our website soon!. 
 
