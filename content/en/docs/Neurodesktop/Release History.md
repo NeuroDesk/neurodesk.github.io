@@ -10,6 +10,8 @@ description: >-
 - neurodesktop can now be accessed via native RDP client as well (e.g. for multi-monitor support): https://neurodesk.github.io/docs/neurodesktop/getting-started/windows/#using-an-rdp-client
 - there is a new Help button in the menu :)
 - updates of ants 2.3.4 (now includes Scripts as well) + newly added 2.3.5
+- new version of QSMxT 1.1.8 20211211
+- new version of Spinal Cord Toolbox 5.4
 
 
 ## 20211207
