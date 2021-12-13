@@ -48,9 +48,11 @@ Finally, contribute your new workflow to the official documentation!:
 1. Once you are happy with your workflow, make sure you [commit](https://github.com/git-guides/git-commit) all your changes and [push](https://github.com/git-guides/git-push) these local commits to github.
 2. Navigate to your forked version of the repository on github.
 3. Before you proceed, make sure you are up to date with our upstream documentation, you may need to [fetch upstream changes](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/working-with-forks/syncing-a-fork).
-3. To contribute your changes, click "Contribute", and then ["Open pull request"](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/about-pull-requests).
-4. Give your pull request a title (e.g. "Document PhysIO workflow"), leave a comment briefly describing what you have done, and then create the pull request. 
-5. Someone from the Neurodesk team will review and accept your workflow and it will appear on our website soon!. 
+4. Now you can preview the changes before contributing them upstream. For this click on the "Actions" tab and enable the Actions ("I understand my workflows..."). The first build will fail (due to a bug with the Github token), but the second build will work.
+5. Then you need to open the settings of the repository and check that Pages points to gh-pages and when clicking on the link the site should be there.
+6. To contribute your changes, click "Contribute", and then ["Open pull request"](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/about-pull-requests).
+7. Give your pull request a title (e.g. "Document PhysIO workflow"), leave a comment briefly describing what you have done, and then create the pull request. 
+8. Someone from the Neurodesk team will review and accept your workflow and it will appear on our website soon!. 
 
 Thanks so much for taking the time to contribute your workflow to the Neurodesk community! If you have any feedback on the process, please let us know on [github discussions](https://github.com/NeuroDesk/neurodesk.github.io/discussions).
 
