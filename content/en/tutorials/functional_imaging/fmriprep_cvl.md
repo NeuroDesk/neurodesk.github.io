@@ -36,15 +36,15 @@ description: >
 
 From the applications go Neurodesk -> Functional Imaging -> fmriprep and select the latest version of fmriprep. This should take you to a terminal window with fmriprep loaded.
 
-![fprepw](/fmriprep_cvl/fmriprep_window.png 'fprepw') <!-- ![filename without extension](/fmriprep_cvl/fmriprep_window.png '[filename without extension')  -->
+![fprepw](/fmriprep_cvl/fmriprep_window.png 'fprepw') <!-- ![fmriprep_window](/fmriprep_cvl/fmriprep_window.png '[fmriprep_window]')  -->
 
 ## Setting up fmriprep command
 
 If you like, you can enter the following fmriprep command straight into the command line in the newly opened terminal. However, as with increasing options and preferences the command can get rather verbose, I instead opted to create an executable bash script that I can run straight from the command line, with minimal editing inbetween runs. If you're not interested in this option you can skip straight to copying/adjusting the code from `fmriprep` to `-v` below.
 
-    - open a new file in your editor of choice but really you know it should be Visual Studio Code
-    - save that file with your chosen name without an extension, e.g. run_fmriprep
-    - paste in the following and update with your details
+- open a new file in your editor of choice but really you know it should be Visual Studio Code
+- save that file with your chosen name without an extension, e.g. run_fmriprep
+- paste in the following and update with your details
 
 ```go
 #!/bin/bash
