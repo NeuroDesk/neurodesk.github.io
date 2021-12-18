@@ -1,5 +1,5 @@
 ---
-title: "Using fmriprep with neurodesk on HPC (CVL)"
+title: "Using fmriprep with neurodesk on an HPC"
 linkTitle: "fmriprep"
 weight: 1
 tags: ["fmriprep", "documentation", "preprocessing"]
@@ -24,7 +24,7 @@ description: >
 
 # Assumptions
 
-- [ ] Your data is already in BIDS format (https://github.com/NeuroDesk/neurodesk.github.io).
+- [ ] Your data is already in BIDS format
 - [ ] You plan to run fmriprep using Neurodesk
 - [ ] You have a local copy of the freesurfer license file (freesurfer.txt)
 
@@ -44,7 +44,7 @@ If you like, you can enter the following fmriprep command straight into the comm
 - save that file with your chosen name without an extension, e.g. run_fmriprep
 - paste in the following and update with your details
 
-```go
+```bash
 #!/bin/bash
 #
 # written by A. Name - the purpose of this code is to run fmriprep with neurodesk
@@ -63,13 +63,13 @@ fmriprep /path/to/your/data \ # this is the top level of your data folder
 ```
 To make the file executable, navigate to this file via the command line in terminal and type
 
-```go
+```bash
 chmod u+x run_fmriprep # this tells the system to make your new file executable
 ```
 
 Then to run your new executable, return to your terminal window for fmriprep (that opened when you navigated to fmriprep) and type:
 
-```go
+```bash
 ./run_fmriprep
 ```
 fmriprep should now be merrily working away on your data :)
