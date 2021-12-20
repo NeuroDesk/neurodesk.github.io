@@ -6,6 +6,11 @@ description: >-
      Previous releases of neurodesktop
 ---
 
+## Development
+- vesselapp 0.3.1 20211216
+- palm bash /neurocommand/local/fetch_and_run.sh palm alpha119 20211220
+- niistat bash /neurocommand/local/fetch_and_run.sh niistat 1.0.20191216 20211220
+
 ## 20211220
 - neurodesktop can now be accessed via native RDP client as well (e.g. for multi-monitor support): https://neurodesk.github.io/docs/neurodesktop/getting-started/windows/#using-an-rdp-client
 - there is a new Help button in the menu :)
