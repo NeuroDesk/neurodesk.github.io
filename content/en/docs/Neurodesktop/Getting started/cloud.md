@@ -104,3 +104,39 @@ Use the following details to login if prompted
 username: user
 password: password
 ```
+
+## Using VNC
+
+To enable VNC and disable RDP
+
+<pre class="language-shell command-line" data-prompt="$" data-output="2-6">
+<code>sudo docker run \
+  --shm-size=1gb -it --privileged --name neurodesktop \
+  -v ~/neurodesktop-storage:/neurodesktop-storage \
+  -e VNC_ENABLE=true -e HOST_UID="$(id -u)" -e HOST_GID="$(id -g)" \
+  -p 8080:8080 -h neurodesktop-{{< params/neurodesktop/version >}} \
+  vnmd/neurodesktop:{{< params/neurodesktop/version >}}</code>
+</pre>
+
+{{< alert >}}
+VNC allows for multiple desktop connections to same instance
+
+Note: Neurodesktop VNC on the browser currently does not support auto-resolution 
+{{< /alert >}}
+
+### Using VNC Client
+
+{{< alert color="warning" >}}
+Needs testing
+{{< /alert >}}
+
+<pre class="language-shell command-line" data-prompt="$" data-output="2-6">
+<code>sudo docker run \
+  --shm-size=1gb -it --privileged --name neurodesktop \
+  -v ~/neurodesktop-storage:/neurodesktop-storage \
+  -e VNC_ENABLE=true -e HOST_UID="$(id -u)" -e HOST_GID="$(id -g)" \
+  -p 5901:5901 -p 8080:8080 -h neurodesktop-{{< params/neurodesktop/version >}} \
+  vnmd/neurodesktop:{{< params/neurodesktop/version >}}</code>
+</pre>
+
+Open a VNC Client and connect to port 5901
