@@ -188,7 +188,7 @@ password: password
 
 ## Using VNC
 
-To enable VNC and disable RDP
+To enable VNC and disable RDP, startup Neurodesktop using the following command:
 
 <pre class="language-shell command-line" data-prompt="$" data-output="2-6">
 <code>sudo docker run \
@@ -205,11 +205,13 @@ VNC allows for multiple desktop connections to same instance
 Note: Neurodesktop VNC on the browser currently does not support auto-resolution 
 {{< /alert >}}
 
-### Using VNC Client
+### Using a VNC Client
 
 {{< alert color="warning" >}}
 Needs testing
 {{< /alert >}}
+
+Startup Neurodesktop using the following command:
 
 <pre class="language-shell command-line" data-prompt="$" data-output="2-6">
 <code>sudo docker run \
