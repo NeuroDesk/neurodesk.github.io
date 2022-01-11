@@ -6,10 +6,13 @@ description: >-
      Previous releases of neurodesktop
 ---
 
-## Development
-- vesselapp 0.3.1 20211216
-- palm bash /neurocommand/local/fetch_and_run.sh palm alpha119 20211220
-- niistat bash /neurocommand/local/fetch_and_run.sh niistat 1.0.20191216 20211220
+## 20220111
+- a deep learning based vessel segmentation algorithm "vesselapp" was added in version 0.3.1
+- palm - Permutation Analysis of Linear Models - was added in version alpha119
+- niistat running in octave was added with version 1.0.20191216
+- MRIcroGL was updated to a version with included python support, so the scripting is now working
+- rabies - Rodent Automated Bold Improvement of EPI Sequences was added with version 0.3.5
+- oshyx was updated to 0.3
 
 ## 20211220
 - neurodesktop can now be accessed via native RDP client as well (e.g. for multi-monitor support): https://neurodesk.github.io/docs/neurodesktop/getting-started/windows/#using-an-rdp-client
