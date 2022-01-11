@@ -45,6 +45,15 @@ If you get errors in neurodesktop then check if the ~/neurodesktop-storage direc
 http://localhost:8080/#/?username=user&password=password
 ```
 
+{{< alert >}}
+If using Chrome, a pop-up may open with the text: 
+```
+"http://localhost:8080 wants to
+See text and images copied to the clipboard".
+```
+You should press "Allow"
+{{< alert >}}
+
 4. neurodesktop is ready to use!
 - User is `user`
 - Password is `password`
