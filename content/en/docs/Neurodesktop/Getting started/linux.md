@@ -52,7 +52,7 @@ If using Chrome, a pop-up may open with the text:
 See text and images copied to the clipboard".
 ```
 You should press "Allow"
-{{< alert >}}
+{{< /alert >}}
 
 4. neurodesktop is ready to use!
 - User is `user`
