@@ -55,8 +55,13 @@ We also provide the globus client, so you can transfer large amounts of data bet
 
 Once authenticated you can go to the globus file-manager https://app.globus.org/file-manager and your neurodesktop instance will be an endpoint for globus.
 
-# Mounting network storage on your host-computer
+# Mounting external storage on your host-computer
 The -v C:/neurodesktop-storage:/neurodesktop-storage part of the docker command links the directory "neurodesktop-storage" on the “C drive” of your Windows computer to the directory /neurodesktop-storage inside the Desktop environment. Everything you store in there will be available inside the desktop and on the host computer. You can also mount additional directories by adding another -v parameter set (e.g. -v D:/moredata:/data) - this will mount the directory moredata from your D drive to /data inside neurodesktop. Improtant: the mountpoint inside neurodesktop should be named /data (or anything from this list: https://github.com/NeuroDesk/neurocontainers/blob/master/recipes/globalMountPointList.txt) - otherwise most of the tools will not be able to access the data.
+
+Here is an example for Windows adding another storage directory:
+<pre class="language-batch command-line" data-prompt=">">
+<code>docker run --shm-size=1gb -it --privileged --name neurodesktop -v C:/neurodesktop-storage:/neurodesktop-storage -v D:/moredata:/data -p 8080:8080 -h neurodesktop-{{< params/neurodesktop/version >}} vnmd/neurodesktop:{{< params/neurodesktop/version >}}</code>
+</pre>
 
 # Mount volume using SSHFS
 It is theoretically possible to mount an SSH target inside Neurodesktop, but it's not a very reliable way of mounting storage:
