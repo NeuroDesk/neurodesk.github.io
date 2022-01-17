@@ -12,7 +12,7 @@ description: >
 
 ## Quickstart
 ### 1. Connect to cloud server
-Open an SSH connection to your cloud instance with port forwarding (USER should be substituted with a username that has admin privileges on the cloud instance, and IP should be substituted with the IP address of the cloud instance)
+On the computer from which you want to access Neurodesktop, open an SSH connection to your cloud instance with port forwarding (USER should be substituted with a username that has admin privileges on the cloud instance, and IP should be substituted with the IP address of the cloud instance)
 ```
 ssh -L 8080:127.0.0.1:8080 USER@IP
 ```
@@ -24,11 +24,11 @@ Install Docker on the cloud instance from here: https://docs.docker.com/get-dock
 Create a local folder ~/neurodesktop-storage on the cloud instance to store persistent data (data that will not disappear if neurodesktop is stopped)
 
 #### Option 1: NeuroDesktop.run
-Download and run the following executable
+Download and run the following executable on the cloud instance
 https://github.com/NeuroDesk/neurodesktop/raw/main/Linux_run_Neurodesk/NeuroDesktop.run
 
 #### Option 2: Using Terminal
-1. Type the folowing command on the cloud instance to automatically download the neurodesktop container and run it (Mac, Windows, Linux commands listed below) 
+1. Type the folowing command on the cloud instance to automatically download the neurodesktop container and run it 
 
 <pre class="language-shell command-line" data-prompt="$" data-output="2-9">
 <code>sudo docker run \
@@ -46,10 +46,11 @@ If you get errors in neurodesktop then check if the ~/neurodesktop-storage direc
 
 2. Once neurodesktop is downloaded to the cloud instance (`guacd[77]: INFO:        Listening on host 127.0.0.1, port 4822` is displayed in terminal), leave the terminal open and neurodesktop running (i.e., do not press CTRL+C)
 
-3. Open a browser on your computer, and go to:
+3. Open a browser on the computer from which you want to access Neurodesktop, and go to:
 ```
 http://localhost:8080/#/?username=user&password=password
 ```
+If the computer runs Linux, check specific instructions at https://neurodesk.github.io/docs/neurodesktop/getting-started/linux/, Option 2, Step 3.
 
 4. neurodesktop is ready to use!
 - User is `user`
@@ -104,3 +105,41 @@ Use the following details to login if prompted
 username: user
 password: password
 ```
+
+## Using VNC
+
+To enable VNC and disable RDP, startup Neurodesktop using the following command:
+
+<pre class="language-shell command-line" data-prompt="$" data-output="2-6">
+<code>sudo docker run \
+  --shm-size=1gb -it --privileged --name neurodesktop \
+  -v ~/neurodesktop-storage:/neurodesktop-storage \
+  -e VNC_ENABLE=true -e HOST_UID="$(id -u)" -e HOST_GID="$(id -g)" \
+  -p 8080:8080 -h neurodesktop-{{< params/neurodesktop/version >}} \
+  vnmd/neurodesktop:{{< params/neurodesktop/version >}}</code>
+</pre>
+
+{{< alert >}}
+VNC allows for multiple desktop connections to same instance
+
+Note: Neurodesktop VNC on the browser currently does not support auto-resolution 
+{{< /alert >}}
+
+### Using a VNC Client
+
+{{< alert color="warning" >}}
+Needs testing
+{{< /alert >}}
+
+Startup Neurodesktop using the following command:
+
+<pre class="language-shell command-line" data-prompt="$" data-output="2-6">
+<code>sudo docker run \
+  --shm-size=1gb -it --privileged --name neurodesktop \
+  -v ~/neurodesktop-storage:/neurodesktop-storage \
+  -e VNC_ENABLE=true -e HOST_UID="$(id -u)" -e HOST_GID="$(id -g)" \
+  -p 5901:5901 -p 8080:8080 -h neurodesktop-{{< params/neurodesktop/version >}} \
+  vnmd/neurodesktop:{{< params/neurodesktop/version >}}</code>
+</pre>
+
+Open a VNC Client and connect to port 5901

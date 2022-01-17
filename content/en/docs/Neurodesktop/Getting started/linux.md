@@ -45,6 +45,15 @@ If you get errors in neurodesktop then check if the ~/neurodesktop-storage direc
 http://localhost:8080/#/?username=user&password=password
 ```
 
+{{< alert >}}
+If using Chrome, a pop-up may open with the text: 
+```
+"http://localhost:8080 wants to
+See text and images copied to the clipboard".
+```
+You should press "Allow"
+{{< /alert >}}
+
 4. neurodesktop is ready to use!
 - User is `user`
 - Password is `password`
@@ -186,9 +195,40 @@ username: user
 password: password
 ```
 
-<!-- 
-## Using a VNC Client
-<pre class="language-batch command-line" data-prompt=">">
-<code>docker run --shm-size=1gb -it --privileged --name neurodesktop -v C:/neurodesktop-storage:/neurodesktop-storage -e VNC_ENABLE=1 -p 5901:5901 -p 8080:8080 -h neurodesktop-{{< params/neurodesktop/version >}} vnmd/neurodesktop:{{< params/neurodesktop/version >}}</code>
+## Using VNC
+
+To enable VNC and disable RDP, startup Neurodesktop using the following command:
+
+<pre class="language-shell command-line" data-prompt="$" data-output="2-6">
+<code>sudo docker run \
+  --shm-size=1gb -it --privileged --name neurodesktop \
+  -v ~/neurodesktop-storage:/neurodesktop-storage \
+  -e VNC_ENABLE=true -e HOST_UID="$(id -u)" -e HOST_GID="$(id -g)" \
+  -p 8080:8080 -h neurodesktop-{{< params/neurodesktop/version >}} \
+  vnmd/neurodesktop:{{< params/neurodesktop/version >}}</code>
 </pre>
-or open a VNC Client and connect to port 5901 (for this -p 5901:5901 has to be added to the docker call) -->
+
+{{< alert >}}
+VNC allows for multiple desktop connections to same instance
+
+Note: Neurodesktop VNC on the browser currently does not support auto-resolution 
+{{< /alert >}}
+
+### Using a VNC Client
+
+{{< alert color="warning" >}}
+Needs testing
+{{< /alert >}}
+
+Startup Neurodesktop using the following command:
+
+<pre class="language-shell command-line" data-prompt="$" data-output="2-6">
+<code>sudo docker run \
+  --shm-size=1gb -it --privileged --name neurodesktop \
+  -v ~/neurodesktop-storage:/neurodesktop-storage \
+  -e VNC_ENABLE=true -e HOST_UID="$(id -u)" -e HOST_GID="$(id -g)" \
+  -p 5901:5901 -p 8080:8080 -h neurodesktop-{{< params/neurodesktop/version >}} \
+  vnmd/neurodesktop:{{< params/neurodesktop/version >}}</code>
+</pre>
+
+Open a VNC Client and connect to port 5901
