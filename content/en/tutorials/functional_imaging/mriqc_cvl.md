@@ -1,5 +1,5 @@
 ---
-title: "Using mriqc with neurodesk on HPC (CVL)"
+title: "Using mriqc with neurodesk on HPC"
 linkTitle: "mriqc"
 weight: 1
 tags: ["mriqc", "documentation", "preprocessing"]
