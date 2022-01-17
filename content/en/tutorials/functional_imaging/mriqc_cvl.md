@@ -75,7 +75,7 @@ mriqc /path/to/your/data \ # this is the top level of your data folder
 
 To make either of yours files executable, navigate via the terminal to the same folder in which this file is saved. If you list the files in the folder by using the command `ls` you should see your file with the name printed in white. 
 
-![mriqc command pre executable](/static/mriqc_cvl/pre_exec.png)
+![mriqc command pre executable](../../../../static/mriqc_cvl/pre_exec.png)
 
 Now type the following command:
 
