@@ -24,7 +24,7 @@ description: >
 
 # Assumptions
 
-- [ ] Your data is already in BIDS format (https://github.com/NeuroDesk/neurodesk.github.io).
+- [ ] Your data is already in BIDS format
 - [ ] You plan to run mriqc using Neurodesk
 
 ---
@@ -35,7 +35,7 @@ description: >
 
 From the applications go Neurodesk -> Functional Imaging -> mriqc and select the latest version of mriqc. This should take you to a terminal window with mriqc loaded. <p>
 
-![mriqc terminal](/static/mriqc_cvl/mriqc_terminal.png)
+![mriqc terminal](/neurodesk.github.io/static/mriqc_cvl/mriqc_terminal.png)
 
 ## Setting up mriqc command
 
