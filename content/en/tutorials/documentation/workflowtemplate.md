@@ -109,6 +109,8 @@ You can also add code snippets, e.g. `var foo = "bar";`, which will be shown inl
 
 To add screenshots to your tutorial, create a subfolder in `neurodesk.github.io/static` with the same link name as your tutorial. Add your screenshot to this folder, keeping in mind that you may want to adjust your screenshot to a reasonable size before uploading. You can then embed these images in your tutorial using the following convention: 
 
+`![alttext4img](/tutorial_subfolder_name/filename.png 'filename_without_extension')`
+
 ![EEGtut1](/EEG_Tutorial/EEGtut1.png 'EEGtut1') <!-- ![filename without extension](/subfolder_name/filename.png '[filename without extension')  -->
 
 ### Alerts and warnings

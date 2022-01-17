@@ -35,7 +35,7 @@ description: >
 
 From the applications go Neurodesk -> Functional Imaging -> mriqc and select the latest version of mriqc. This should take you to a terminal window with mriqc loaded. <p>
 
-![mriqc terminal](/neurodesk.github.io/static/mriqc_cvl/mriqc_terminal.png)
+![mriqcterminal](/mriqc_cvl/mriqc_terminal.png 'mriqc_terminal')
 
 ## Setting up mriqc command
 
@@ -75,7 +75,7 @@ mriqc /path/to/your/data \ # this is the top level of your data folder
 
 To make either of yours files executable, navigate via the terminal to the same folder in which this file is saved. If you list the files in the folder by using the command `ls` you should see your file with the name printed in white. 
 
-![mriqc command pre executable](../../../../static/mriqc_cvl/pre_exec.png)
+![mriqcPreExec](/mriqc_cvl/pre_exec.png 'pre_exec')
 
 Now type the following command:
 
@@ -84,7 +84,7 @@ chmod u+x run_mriqc_participant # this tells the system to make your new file ex
 ```
 To know this worked, list the files again. If you have successfully made your file executable then it will be listed in green.
 
-![mriqc command now executable](static/mriqc_cvl/mriqc_post_exec.png)
+![mriqcPostExec](/mriqc_cvl/mriqc_post_exec.png 'mriqc_post_exec')
 
 Then to run your new executable, return to your terminal window for mriqc (that opened when you navigated to mriqc), navigate to the directory where your executable file is stored and type:
 
