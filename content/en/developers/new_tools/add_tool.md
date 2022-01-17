@@ -129,6 +129,10 @@ ml toolName/toolVersion</code></pre>
 
 14) Test the new container. Run some commands, to see all is good
 
+If the container doesn't work yet, it's sometimes useful to try and troubleshoot it and install missing libraries. This can be achieved by running it in a writable mode with fakeroot enabled:
+
+<pre class="language-shell command-line" data-prompt="$"><code>SINGULARITY_BINDPATH=''; singularity shell --writable --fakeroot /neurodesktop-storage/containers/toolName_toolVersion_buildDate/toolName_toolVersion_buildDate.simg</code></pre>
+
 15) Fork https://github.com/NeuroDesk/neurocommand/ to your Github account 
 16) Edit an entry for your package in your fork of neurocommand/blob/main/neurodesk/apps.json based on one of the other entries (generating one menu item for opening a terminal inside the containers, and one menu item for the GUI, if relevant). Notice that in the json file, the version field should contain the _buildDate_
 17) Include an icon file in your fork of neurocommand/tree/main/neurodesk/icons
