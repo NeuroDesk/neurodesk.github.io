@@ -6,12 +6,12 @@ description: >
   Use Neurocontainers on Windows 11 with WSL and Wayland Display Server
 ---
 
-# 1. Install WSL
+## 1. Install WSL
 Follow the instructions to enable Windows Subsystem for Linux 2 in Windows 11: https://docs.microsoft.com/en-us/windows/wsl/install
 
-# 2. Configure CVFMS, Singularity and LMOD (only needs to be done once)
+## 2. Configure CVFMS, Singularity and LMOD (only needs to be done once)
 
-## Install singularity
+### Install singularity
 <pre class="language-batch command-line" data-prompt=">">
 <code>export SINGULARITY_VERSION=3.9.3 VERSION=1.17.2 OS=linux ARCH=amd64
 wget -q https://dl.google.com/go/go$VERSION.$OS-$ARCH.tar.gz 
@@ -33,22 +33,22 @@ rm -rf /usr/local/go $GOPATH
 ln -s /usr/local/singularity/bin/singularity /bin/ </code>
 </pre>
 
-## Setup Bindpaths for Singularity (e.g. in .bashrc)
+### Setup Bindpaths for Singularity (e.g. in .bashrc)
 <pre class="language-batch command-line" data-prompt=">">
 <code>export SINGULARITY_BINDPATH='/cvmfs,/mnt,/home'</code>
 </pre>
 
-## CVMFS
+### CVMFS
 Follow the instructions here: https://neurodesk.github.io/docs/neurocontainers/cvmfs/
 
-## LMOD
+### LMOD
 <pre class="language-batch command-line" data-prompt=">">
 <code>apt install lmod</code>
 </pre>
 
 
 
-# 3. Use Neurodesk containers
+## 3. Use Neurodesk containers
 <pre class="language-batch command-line" data-prompt=">">
 <code>module use /cvmfs/neurodesk.ardc.edu.au/neurodesk-modules/*
 ml av
