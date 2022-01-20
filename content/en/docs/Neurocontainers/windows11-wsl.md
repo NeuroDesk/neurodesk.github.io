@@ -11,8 +11,7 @@ Follow the instructions to enable Windows Subsystem for Linux 2 in Windows 11: h
 
 # 2. Configure CVFMS, Singularity and LMOD (only needs to be done once)
 
-## Singularity
-# Install singularity
+## Install singularity
 <pre class="language-batch command-line" data-prompt=">">
 <code>export SINGULARITY_VERSION=3.9.3 VERSION=1.17.2 OS=linux ARCH=amd64
 wget -q https://dl.google.com/go/go$VERSION.$OS-$ARCH.tar.gz 
