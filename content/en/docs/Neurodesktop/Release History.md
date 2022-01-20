@@ -6,6 +6,11 @@ description: >-
      Previous releases of neurodesktop
 ---
 
+## Development
+- MNE Python container including VScode
+- VScode container including Python/Julia/Extensions
+- update of fsl 6.0.5.1
+
 ## 20220111
 - a deep learning based vessel segmentation algorithm "vesselapp" was added in version 0.3.1
 - palm - Permutation Analysis of Linear Models - was added in version alpha119
