@@ -31,8 +31,12 @@ make -C builddir install
 cd .. 
 rm -rf singularity-ce-${SINGULARITY_VERSION} 
 rm -rf /usr/local/go $GOPATH 
-ln -s /usr/local/singularity/bin/singularity /bin/ 
-</code>
+ln -s /usr/local/singularity/bin/singularity /bin/ </code>
+</pre>
+
+## Setup Bindpaths for Singularity (e.g. in .bashrc)
+<pre class="language-batch command-line" data-prompt=">">
+<code>export SINGULARITY_BINDPATH='/cvmfs,/mnt,/home'</code>
 </pre>
 
 ## CVMFS
@@ -40,8 +44,7 @@ Follow the instructions here: https://neurodesk.github.io/docs/neurocontainers/c
 
 ## LMOD
 <pre class="language-batch command-line" data-prompt=">">
-<code>apt install lmod
-</code>
+<code>apt install lmod</code>
 </pre>
 
 
@@ -51,6 +54,5 @@ Follow the instructions here: https://neurodesk.github.io/docs/neurocontainers/c
 <code>module use /cvmfs/neurodesk.ardc.edu.au/neurodesk-modules/*
 ml av
 ml fsl
-fsleyes
-</code>
+fsleyes</code>
 </pre>
