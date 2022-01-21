@@ -6,10 +6,11 @@ description: >-
      Previous releases of neurodesktop
 ---
 
-## Development
-- MNE Python container including VScode
-- VScode container including Python/Julia/Extensions
-- update of fsl 6.0.5.1
+## 20220121
+- MNE Python 0.23.4 container including VScode and extensions
+- VScode container including Python/Julia Extensions and singularity to test "Inception Mode" (Running singularity containers withtin singularity containers)
+- update of fsl to 6.0.5.1
+- added CAT12 (a software that allows estimation of tissue volumes (and additional surface parameters such as cortical thickness, gyrification or fractal dimension) for different volume and surface-based atlas maps)
 
 ## 20220111
 - a deep learning based vessel segmentation algorithm "vesselapp" was added in version 0.3.1
