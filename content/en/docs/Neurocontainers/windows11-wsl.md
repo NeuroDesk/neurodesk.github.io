@@ -13,7 +13,9 @@ Follow the instructions to enable Windows Subsystem for Linux 2 in Windows 11: h
 
 ### Install singularity
 <pre class="language-batch command-line" data-prompt=">">
-<code>export SINGULARITY_VERSION=3.9.3 VERSION=1.17.2 OS=linux ARCH=amd64
+<code>
+sudo apt install make
+export SINGULARITY_VERSION=3.9.3 VERSION=1.17.2 OS=linux ARCH=amd64
 wget -q https://dl.google.com/go/go$VERSION.$OS-$ARCH.tar.gz 
 sudo tar -C /usr/local -xzvf go$VERSION.$OS-$ARCH.tar.gz 
 rm go$VERSION.$OS-$ARCH.tar.gz 
@@ -26,11 +28,10 @@ tar -xzvf singularity-ce-${SINGULARITY_VERSION}.tar.gz
 cd singularity-ce-${SINGULARITY_VERSION} 
 ./mconfig --prefix=/usr/local/singularity 
 make -C builddir 
-make -C builddir install 
+sudo make -C builddir install 
 cd .. 
-rm -rf singularity-ce-${SINGULARITY_VERSION} 
-rm -rf /usr/local/go $GOPATH 
-ln -s /usr/local/singularity/bin/singularity /bin/ </code>
+sudo rm -rf singularity-ce-${SINGULARITY_VERSION} 
+sudo rm -rf /usr/local/go $GOPATH </code>
 </pre>
 
 ### Setup Bindpaths for Singularity (e.g. in .bashrc)
