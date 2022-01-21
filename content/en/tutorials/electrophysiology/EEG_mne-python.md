@@ -8,7 +8,9 @@ description: >
 
 ## Getting started
 
-Open Visual Studio Code:
+To begin, navigate to Neurodesk->Electrophysiology->mne->vscodeGUI 0.23.4 in the menu. This version of vscode has been installed in a software container together with the a conda environment containing MNE-python. Note that if you open any other version of vscode in Neurodesk, you will not be able to access the MNE conda environment. 
+
+![EEGtut0](/EEG_Tutorial/EEGtut1.png 'EEGtut0')
 
 ![EEGtut1](/EEG_Tutorial/EEGtut1.png 'EEGtut1')
 
@@ -16,34 +18,39 @@ Open the folder: “/home/user/Desktop/neurodesktop-storage” or a subfolder in
 
 ![EEGtut2](/EEG_Tutorial/EEGtut2.png 'EEGtut2')
 
-If this is your first time opening a Jupyter notebook on vscode in neurodesktop, you will see the following popup. If so, click “install” to install the vscode extensions for Jupyter.
+If this is your first time opening a Jupyter notebook on vscode in neurodesktop, you may see the following popup. If so, click “install” to install the vscode extensions for Jupyter.
 
 ![EEGtut3](/EEG_Tutorial/EEGtut3.png 'EEGtut3')
 
-## Set up an environment
+## Select MNE python kernel
 
-> Coming soon! Neurodesktop will soon feature a number of built in conda environments for standard analyses of behavioural, physiological, and encephalographic data. 
-
-From the top menu in vscode, select Terminal->New Terminal, or hit [Ctrl]+[Shift]+[`]. From this terminal, create and activate a new conda environment in which to run mne-python. 
-
-```
-conda create --name=mne --channel=conda-forge mne python=3 jupyter nb_conda_kernels 
-conda activate mne
-```
-
-Once your new environment is activated, in the top right corner of your empty jupyter notebook, click “Select Kernel”:
+Next, we need to direct vscode to use the python kernel associated with MNE. In the top right corner of your empty jupyter notebook, click “Select Kernel”:
 
 ![EEGtut4](/EEG_Tutorial/EEGtut4.png 'EEGtut4')
 
-Then, select the instance of Python associated with the environment you have just created (“mne”). If your new environment does not appear in the list, you may need to restart vscode:
+Then, select mne-0.23.4 from the dropdown menu, which should look something like this:
 
 ![EEGtut5](/EEG_Tutorial/EEGtut5.png 'EEGtut5')
 
-At this point you may also be prompted to install the vscode packages for python. Once you have installed these, you’re ready to rumble!
+## Activate the MNE conda environment in the terminal
+
+Next, we'll activate the same MNE environment in a terminal. From the top menu in vscode, select Terminal->New Terminal, or hit [Ctrl]+[Shift]+[`]. 
+
+If this is your first time using vscode in this container, you may have to initialise conda by typing `conda init bash` the bash terminal. After initialising bash, you will have to close and then reopen the terminal. 
+
+Once you have initialised conda, you can activate the MNE environment in the terminal:
+
+```
+conda activate mne-0.23.4
+```
+
+You should now see "(mne-0.23.4)" ahead of the current line in the terminal. 
 
 ## Download sample data
 
-In the terminal, input the following code to download some BIDS formatted sample EEG data:
+In the terminal (in which you have activated the MNE environment), input the following code to download some BIDS formatted sample EEG data:
+
+> Remember to update the path to the location you are storing this tutorial! 
 
 ```
 pip install osfclient
@@ -74,7 +81,7 @@ import numpy as np
 import mne
 
 # Load data
-sample_data_folder = '/home/user/Desktop/neurodesktop-storage/EEGDemo/Data_sample'
+sample_data_folder = '/home/user/neurodesktop-storage/EEGDemo/Data_sample'
 sample_data_raw_file = os.path.join(sample_data_folder, 'sub-01', 'eeg',
                                     'sub-01_task-FeatAttnDec_eeg.vhdr')
 raw = mne.io.read_raw_brainvision(sample_data_raw_file , preload=True)
@@ -117,7 +124,8 @@ raw.info['bads'] = ['POz']
 Next, we’ll extract our events. The trigger channel in this file is incorrectly scaled, so we’ll correct that before we extract our events:
 ```
 # Correct trigger scaling
-trigchan = raw.pick('TRIG').copy()
+trigchan = raw.copy()
+trigchan = trigchan.pick('TRIG')
 trigchan._data = trigchan._data*1000000
 
 # Extract events
