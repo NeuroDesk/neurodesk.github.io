@@ -24,16 +24,9 @@ Download and run the following executable
 https://github.com/NeuroDesk/neurodesktop/raw/main/Linux_run_Neurodesk/NeuroDesktop.run
 
 #### Option 2: Using Terminal
-1. Open a terminal, and type the folowing command to automatically download the neurodesktop container and run it (Mac, Windows, Linux commands listed below) 
+1. Open a terminal, and type the folowing command to automatically download the neurodesktop container and run it (Mac, Windows, Linux commands listed below)
 
-<pre class="language-shell command-line" data-prompt="$" data-output="2-6">
-<code>sudo docker run \
-  --shm-size=1gb -it --privileged --name neurodesktop \
-  -v ~/neurodesktop-storage:/neurodesktop-storage \
-  -e HOST_UID="$(id -u)" -e HOST_GID="$(id -g)" \
-  -p 8080:8080 -h neurodesktop-{{< params/neurodesktop/version >}} \
-  vnmd/neurodesktop:{{< params/neurodesktop/version >}}</code>
-</pre>
+{{< params/neurodesktop/linux/default >}}
 <!-- neurodesktop version found in neurodesk.github.io/data/neurodesktop.toml -->
 
 {{< alert >}}
@@ -175,14 +168,7 @@ print("Num GPUs Available: ", len(tf.config.list_physical_devices('GPU')))</code
 ## Using an RDP Client
 Startup Neurodesktop using the following command:
 
-<pre class="language-shell command-line" data-prompt="$" data-output="2-6">
-<code>sudo docker run \
-  --shm-size=1gb -it --privileged --name neurodesktop \
-  -v ~/neurodesktop-storage:/neurodesktop-storage \
-  -e HOST_UID="$(id -u)" -e HOST_GID="$(id -g)" \
-  -p 3390:3389 -p 8080:8080 -h neurodesktop-{{< params/neurodesktop/version >}} \
-  vnmd/neurodesktop:{{< params/neurodesktop/version >}}</code>
-</pre>
+{{< params/neurodesktop/linux/rdpclient >}}
 {{< alert >}}
 If you want to connect via RDP using a different port, replace 3390 in the previous and next step with your port
 {{< /alert >}}
@@ -199,14 +185,11 @@ password: password
 
 To enable VNC and disable RDP, startup Neurodesktop using the following command:
 
-<pre class="language-shell command-line" data-prompt="$" data-output="2-6">
-<code>sudo docker run \
-  --shm-size=1gb -it --privileged --name neurodesktop \
-  -v ~/neurodesktop-storage:/neurodesktop-storage \
-  -e VNC_ENABLE=true -e HOST_UID="$(id -u)" -e HOST_GID="$(id -g)" \
-  -p 8080:8080 -h neurodesktop-{{< params/neurodesktop/version >}} \
-  vnmd/neurodesktop:{{< params/neurodesktop/version >}}</code>
-</pre>
+{{< params/neurodesktop/linux/vnc >}}
+
+To enable both VNC and RDP, startup Neurodesktop using the following command:
+
+{{< params/neurodesktop/linux/vncrdp >}}
 
 {{< alert >}}
 VNC allows for multiple desktop connections to same instance
@@ -222,13 +205,6 @@ Needs testing
 
 Startup Neurodesktop using the following command:
 
-<pre class="language-shell command-line" data-prompt="$" data-output="2-6">
-<code>sudo docker run \
-  --shm-size=1gb -it --privileged --name neurodesktop \
-  -v ~/neurodesktop-storage:/neurodesktop-storage \
-  -e VNC_ENABLE=true -e HOST_UID="$(id -u)" -e HOST_GID="$(id -g)" \
-  -p 5901:5901 -p 8080:8080 -h neurodesktop-{{< params/neurodesktop/version >}} \
-  vnmd/neurodesktop:{{< params/neurodesktop/version >}}</code>
-</pre>
+{{< params/neurodesktop/linux/vncclient >}}
 
 Open a VNC Client and connect to port 5901

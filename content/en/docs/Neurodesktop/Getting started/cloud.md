@@ -96,7 +96,11 @@ password: password
 
 To enable VNC and disable RDP, startup Neurodesktop using the following command:
 
-{{< params/neurodesktop/linux/vnc>}}
+{{< params/neurodesktop/linux/vnc >}}
+
+To enable both VNC and RDP, startup Neurodesktop using the following command:
+
+{{< params/neurodesktop/linux/vncrdp >}}
 
 {{< alert >}}
 VNC allows for multiple desktop connections to same instance
