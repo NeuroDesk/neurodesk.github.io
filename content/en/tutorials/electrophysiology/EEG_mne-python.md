@@ -10,7 +10,7 @@ description: >
 
 To begin, navigate to Neurodesk->Electrophysiology->mne->vscodeGUI 0.23.4 in the menu. This version of vscode has been installed in a software container together with the a conda environment containing MNE-python. Note that if you open any other version of vscode in Neurodesk, you will not be able to access the MNE conda environment. 
 
-![EEGtut0](/EEG_Tutorial/EEGtut1.png 'EEGtut0')
+![EEGtut0](/EEG_Tutorial/EEGtut0.png 'EEGtut0')
 
 ![EEGtut1](/EEG_Tutorial/EEGtut1.png 'EEGtut1')
 
@@ -36,7 +36,7 @@ Then, select mne-0.23.4 from the dropdown menu, which should look something like
 
 Next, we'll activate the same MNE environment in a terminal. From the top menu in vscode, select Terminal->New Terminal, or hit [Ctrl]+[Shift]+[`]. 
 
-If this is your first time using vscode in this container, you may have to initialise conda by typing `conda init bash` the bash terminal. After initialising bash, you will have to close and then reopen the terminal. 
+If this is your first time using vscode in this container, you may have to initialise conda by typing `conda init bash` in the bash terminal. After initialising bash, you will have to close and then reopen the terminal. 
 
 Once you have initialised conda, you can activate the MNE environment in the terminal:
 
