@@ -51,8 +51,13 @@ If the computer runs Linux, check specific instructions at https://neurodesk.git
 
 5. if your computer hibernated/rebooted/etc., if the network connnection has been temprarily lost, or if you want to connect to the same instance of Neurodesktop from another computer, only repeat steps 1 and 6, and you will be reconnected to neurodesktop
 
-## Stopping neurodesktop:
+## Deleting neurodesktop:
 When done processing your data it is important to stop and remove the container - otherwise the next start or container update will give an error ("... The container name "/neurodesktop" is already in use...")
+
+{{< alert title="Note" >}}
+Notice that any data that were saved outside of /neurodesktop-storage would be lost. Please make sure to move all your data to that folder before deleting neurodesktop.
+{{< /alert >}}
+
 1. Click on the terminal from which you ran neurodesktop
 
 2. Press Ctrl-C
