@@ -39,8 +39,13 @@ http://localhost:8080/#/?username=user&password=password
 - User is `user`
 - Password is `password`
 
-## Stopping neurodesktop:
+## Deleting neurodesktop:
 When done processing your data it is important to stop and remove the container - otherwise the next start or container update will give an error ("... The container name "/neurodesktop" is already in use...")
+
+{{< alert title="Note" >}}
+Notice that any data that were saved outside of /neurodesktop-storage would be lost. Please make sure to move all your data to that folder before deleting neurodesktop.
+{{< /alert >}}
+
 1. Click on the terminal from which you ran neurodesktop
 
 2. Press control-C
