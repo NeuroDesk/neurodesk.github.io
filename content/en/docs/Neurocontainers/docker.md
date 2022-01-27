@@ -20,4 +20,4 @@ build singularity image from dockerhub
 singularity build julia_1.6.1.simg docker://vnmd/julia_1.6.1
 ```
 
-Replace `julia_1.6.1` with your selected application
+Replace `julia_1.6.1` with your selected application. You can find the available containers here: https://neurodesk.github.io/applications/
