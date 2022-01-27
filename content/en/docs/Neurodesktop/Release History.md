@@ -6,6 +6,10 @@ description: >-
      Previous releases of neurodesktop
 ---
 
+## Development
+- update of spinalcordtoolbox to 5.5
+
+
 ## 20220121
 - MNE Python 0.23.4 container including VScode and extensions
 - VScode container including Python/Julia Extensions and singularity to test "Inception Mode" (Running singularity containers withtin singularity containers)
