@@ -6,9 +6,9 @@ description: >-
      Previous releases of neurodesktop
 ---
 
-## Development
-- update of spinalcordtoolbox to 5.5
-
+## 20220128
+- update of Spinalcordtoolbox to 5.5
+- update of CAT12 to r1933
 
 ## 20220121
 - MNE Python 0.23.4 container including VScode and extensions
