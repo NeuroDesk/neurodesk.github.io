@@ -1,6 +1,6 @@
 ---
 title: "Analysing M/EEG Data with FieldTrip"
-linkTitle: "FieldTrip"
+linkTitle: "fieldtrip"
 weight: 1
 tags: ["fieldtrip", "documentation"]
 author: Judy D Zhu
@@ -28,7 +28,7 @@ Please note that this container uses a compiled version of FieldTrip to run scri
 
 ![1_menu](/static/fieldtrip/1_menu.png '1_menu')
 
-Once the window below is loaded, you are ready to go:
+Once this window is loaded, you are ready to go:
 
 ![2_container](/static/fieldtrip/2_container.png '2_container')
 
