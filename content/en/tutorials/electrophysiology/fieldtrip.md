@@ -42,4 +42,4 @@ For example, here we ran a script to browser some raw data:
 
 ![3_running](/static/fieldtrip/3_running.PNG '3_running')
 
-The fieldtrip GUI functions as it normally would when running inside Matlab.
+The fieldtrip GUI is displayed automatically and functions as it normally would when running inside Matlab.
