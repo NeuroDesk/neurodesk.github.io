@@ -19,8 +19,8 @@ description: >
 
 ---
 
-Please note that this container uses a compiled version of FieldTrip to run scripts (without needing a Matlab license). Code development is not currently supported within the container and needs to be carried out separatedly in Matlab.
-
+Please note that this container uses a compiled version of FieldTrip to run scripts (without needing a Matlab license). Code development is not currently supported within the container and needs to be carried out separatedly in Matlab.  
+<br/>
 
 ## Getting started
 
@@ -30,15 +30,16 @@ Please note that this container uses a compiled version of FieldTrip to run scri
 
 Once this window is loaded, you are ready to go:
 
-![2_container](/static/fieldtrip/2_container.png '2_container')
+![2_container](/static/fieldtrip/2_container.PNG '2_container')
 
+<br/>
 
 2. Type the following into the command window (replacing "yourscript.m" with the name of your custom script - note that you may also need to supply the full path):
 ```bash
 run_fieldtrip.sh /opt/MCR/v99 yourscript.m
 ```
-Here we ran an example script to browser some raw data:
+For example, here we ran a script to browser some raw data:
 
-![3_running](/static/fieldtrip/3_running.png '3_running')
+![3_running](/static/fieldtrip/3_running.PNG '3_running')
 
-The GUI functions as it normally would when running inside Matlab.
+The fieldtrip GUI functions as it normally would when running inside Matlab.
