@@ -26,11 +26,11 @@ Please note that this container uses a compiled version of FieldTrip to run scri
 
 1. Navigate to Neurodesk->Electrophysiology->fieldtrip->fieldtrip20211114 in the menu:
 
-![1_menu](/static/fieldtrip/1_menu.png '1_menu')
+![1_menu](/fieldtrip/1_menu.png '1_menu')
 
 Once this window is loaded, you are ready to go:
 
-![2_container](/static/fieldtrip/2_container.PNG '2_container')
+![2_container](/fieldtrip/2_container.PNG '2_container')
 
 <br/>
 
@@ -40,6 +40,6 @@ run_fieldtrip.sh /opt/MCR/v99 yourscript.m
 ```
 For example, here we ran a script to browser some raw data:
 
-![3_running](/static/fieldtrip/3_running.PNG '3_running')
+![3_running](/fieldtrip/3_running.PNG '3_running')
 
 The fieldtrip GUI is displayed automatically and functions as it normally would when running inside Matlab.
