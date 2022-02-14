@@ -38,7 +38,7 @@ Once this window is loaded, you are ready to go:
 ```bash
 run_fieldtrip.sh /opt/MCR/v99 yourscript.m
 ```
-For example, here we ran a script to browser some raw data:
+For example, here we ran a script to browse some raw data:
 
 ![3_running](/fieldtrip/3_running.PNG '3_running')
 
