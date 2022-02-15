@@ -43,3 +43,7 @@ For example, here we ran a script to browse some raw data:
 ![3_running](/fieldtrip/3_running.PNG '3_running')
 
 The fieldtrip GUI is displayed automatically and functions as it normally would when running inside Matlab.
+
+NOTES:
+1. The script specified in the command line can call other scripts
+2. The script and the scripts it calls can use all the MATLAB toolboxes included in the compiled version of FieldTrip. If additional MATLAB toolboxes are needed, they need to be put in a filesystem accessible to the FieldTrip container (/neurodesktop-storage, /home/user, etc.), and the path should be added to the MATLAB search path with the addpath function (https://www.mathworks.com/help/matlab/ref/addpath.html)
