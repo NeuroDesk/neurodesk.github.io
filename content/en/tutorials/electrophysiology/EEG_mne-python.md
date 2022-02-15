@@ -14,7 +14,7 @@ To begin, navigate to Neurodesk->Electrophysiology->mne->vscodeGUI 0.23.4 in the
 
 ![EEGtut1](/EEG_Tutorial/EEGtut1.png 'EEGtut1')
 
-Open the folder: “/home/user/Desktop/neurodesktop-storage” or a subfolder in which you would like to store this demo. In this folder, create a new file named “EEGDemo.ipynb” or something similar:
+Open the folder: “/home/user/Desktop/storage” or a subfolder in which you would like to store this demo. In this folder, create a new file named “EEGDemo.ipynb” or something similar:
 
 ![EEGtut2](/EEG_Tutorial/EEGtut2.png 'EEGtut2')
 
@@ -54,7 +54,7 @@ In the terminal (in which you have activated the MNE environment), input the fol
 
 ```
 pip install osfclient
-osf -p C689U fetch Data_sample.zip /neurodesktop-storage/EEGDEMO/Data_sample.zip
+osf -p C689U fetch Data_sample.zip /storage/EEGDEMO/Data_sample.zip
 unzip Data_sample.zip 
 ```
 
@@ -81,7 +81,7 @@ import numpy as np
 import mne
 
 # Load data
-sample_data_folder = '/home/user/neurodesktop-storage/EEGDemo/Data_sample'
+sample_data_folder = '/home/user/Desktop/storage/EEGDemo/Data_sample'
 sample_data_raw_file = os.path.join(sample_data_folder, 'sub-01', 'eeg',
                                     'sub-01_task-FeatAttnDec_eeg.vhdr')
 raw = mne.io.read_raw_brainvision(sample_data_raw_file , preload=True)
