@@ -10,7 +10,7 @@ description: >
 Open a terminal and run:
 ```
 pip install osfclient
-osf -p bt4ez fetch TOMCAT_DIB/sub-01/ses-01_7T/anat/sub-01_ses-01_7T_T1w_defaced.nii.gz /neurodesktop-storage/sub-01_ses-01_7T_T1w_defaced.nii.gz
+osf -p bt4ez fetch TOMCAT_DIB/sub-01/ses-01_7T/anat/sub-01_ses-01_7T_T1w_defaced.nii.gz /storage/sub-01_ses-01_7T_T1w_defaced.nii.gz
 ```
 
 ## FreeSurfer License file:
@@ -31,12 +31,12 @@ export FS_LICENSE=~/.license
 
 Setup FreeSurfer:
 ```
-mkdir /neurodesktop-storage/freesurfer-output
+mkdir /storage/freesurfer-output
 source /opt/freesurfer-7.1.1/SetUpFreeSurfer.sh
-export SUBJECTS_DIR=/neurodesktop-storage/freesurfer-output
+export SUBJECTS_DIR=/storage/freesurfer-output
 ```
 
 Run Recon all pipeline:
 ```
-recon-all -subject test-subject -i /neurodesktop-storage/sub-01_ses-01_7T_T1w_defaced.nii.gz -all
+recon-all -subject test-subject -i /storage/sub-01_ses-01_7T_T1w_defaced.nii.gz -all
 ```
