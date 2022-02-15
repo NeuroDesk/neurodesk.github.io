@@ -81,7 +81,8 @@ Total Memory: **.**GiB
      ```
      - Quit Docker (make sure it's not running in the background, ie. system tray, check task manager)
      - In the terminal, run the following command
-     ```wsl --running --list
+     ```
+     wsl --running --list
      ```
      This will list any running distributions. For the update to be successful, WSL needs to have comletely stopped running (ie. no distributions running)
      - Restart Docker and rerun steps 1-3 to confirm it was successful
