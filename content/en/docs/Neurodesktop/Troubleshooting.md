@@ -56,3 +56,38 @@ This may be a memory issue. First, ensure that there is enough free space on the
 If you are still experiencing issues after this, you may need to update docker to the latest version. This can be achieved through "settings" in the docker engine, or (on windows) by right clicking on the docker tray icon:
 
 ![Docker_update](/Troubleshooting/Docker_update.png 'Docker_update')
+
+##Windows Users: I got an error message 'X killed'
+This may be due to Docker not having access to enough RAM from your PC/system.
+
+If you are using WSL2 backend in Docker, then this is managed by Windows settings. Try the following steps to check how much RAM Docker has access to and increase the amount if necessary.
+1. Run Docker
+2. Open a terminal (ie. Powershell) in the PC you want to use to run Neurodesktop (not in Neurodesktop itself) and type the following command:
+```
+docker info
+```
+This will generate information about your Docker installation (make sure Docker is running during this step)
+
+3. Look for the line that says
+```
+Total Memory: **.**GiB
+```
+4. If this value is ~2GB, try increasing it*:
+     - Create a .wslconfig file in your user directory (for more detail instructions see: https://docs.microsoft.com/en-us/windows/wsl/wsl-config)
+     - In the .wslconfig file include the following lines:
+     ```
+     [wsl2]
+     memory=32GB
+     ```
+     - Quit Docker (make sure it's not running in the background, ie. system tray, check task manager)
+     - In the terminal, run the following command
+     ```wsl --running --list
+     ```
+     This will list any running distributions. For the update to be successful, WSL needs to have comletely stopped running (ie. no distributions running)
+     - Restart Docker and rerun steps 1-3 to confirm it was successful
+If you are not using WSL2, you can check and manage your RAM allocation in the Docker desktop application.
+1. Open the Docker application and navigate to settings > resources > advances
+2. Scroll down to the Memory option and use the sliding bar to adjust the setting
+3. Click apply and restart
+
+*RAM requirements will vary based on the tools/data you are using. If the system you're using has limited RAM, test out a few different amounts by running the above steps and then your analyses in Neurodesktop. Version 20220208 onwards has a memory monitor in the taskbar - you can use this to check how much memory Neurodesktop has access to and how much is being used by the analyses being run.
