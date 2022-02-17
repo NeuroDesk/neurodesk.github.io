@@ -74,4 +74,21 @@ A better option is to use `scp` and copy data from an SSH endpoint:
 scp /neurodesk/myfile user@remoteserver:/data/
 ```
 
+An alternative is to mount the SSHFS target into a parent directory on your local machine or VM and then use the -v option in the docker run command to bind the parent directory of the SSHFS mount. NOTE: the SSHFS *has* to be mounted to a subdirectory inside a parent directory which is then bound to the docker container. If you directly bind to the mounted directory itself, your Neurodesktop container will stop being able to access it if the SSHFS mount disconnects and will not be able to access it again without restarting the Neurodesktop container.
+
+For example, on a local Linux machine or VM:
+```shell
+sshfs -o allow_root USER@TARGET_HOST:TARGET_PATH/MyData SOURCE_PATH/SSHFS_Mounts/MyData
+```
+
+Then add the following line to the docker run command when starting Neurodesktop (note the rshared flag):
+```shell
+-v /SSHFS_Mounts:/data:rshared \
+```
+
+TIP: If you use key pair authentication instead of password for your SSHFS mount, you can use the reconnect flag to reconnect automatically if the connection drops:
+```shell
+sshfs -o IdentityFile=~/.ssh/id_rsa,allow_root,ServerAliveInterval=5,ServerAliveCountMax=3 USER@TARGET_HOST:TARGET_PATH/MyData SOURCE_PATH/SSHFS_Mounts/MyData
+```
+
 
