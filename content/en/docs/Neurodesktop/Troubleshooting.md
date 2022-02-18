@@ -57,7 +57,7 @@ If you are still experiencing issues after this, you may need to update docker t
 
 ![Docker_update](/Troubleshooting/Docker_update.png 'Docker_update')
 
-##Windows Users: I got an error message 'X killed'
+## I got an error message 'X killed'
 This may be due to Docker not having access to enough RAM from your PC/system.
 
 If you are using WSL2 backend in Docker, then this is managed by Windows settings. Try the following steps to check how much RAM Docker has access to and increase the amount if necessary.
