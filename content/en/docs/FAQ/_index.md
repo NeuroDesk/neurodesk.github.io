@@ -22,18 +22,18 @@ Yes, our project aims to run on the hardware you have access to. However, withou
 ## Is there reduced performance when using containers?
 If you are running containers on Linux there is no performance penalty - on an HPC with a Lustre filesystem it can even be faster to run our containers than running natively on the filesystem (because meta data operations are shifted to the compute node - more information can be found here: Rioux, Pierre, Gregory Kiar, Alexandre Hutton, Alan C. Evans, and Shawn T. Brown. ‘Deploying Large Fixed File Datasets with SquashFS and Singularity’. ArXiv:2002.06129 [Cs], 14 February 2020. http://arxiv.org/abs/2002.06129.). However, running Neurodesktop on Windows and Mac will have a performance penality, because Linux runs in a Hypervisor on these systems.   
 
-# How can I see how much resources Neurodesk containers need?
+## How can I see how much resources Neurodesk containers need?
 In Linux the containers run as normal processes and you can use htop and top to inspect the resource footprint. For Windows and Mac this is a bit intransparent and we wrote some information here: [Troubleshooting](https://neurodesk.github.io/docs/neurodesktop/troubleshooting/#i-got-an-error-message-x-killed)
 
-# How do I get my files in their?
+## How do I get my files in their?
 It depends where you are running Neurodesk and where your files are. We provide many different ways from drag-and-drop, to cloud storage to file mounts. An overview about Storage can be found here: [Storage in Neurodesk](https://neurodesk.github.io/docs/neurodesktop/storage/)
 
-# What applications are included in Neurodesk?
+## What applications are included in Neurodesk?
 We provide certain applications as part of the Neurodesktop image (https://neurodesk.github.io/docs/neurodesktop/whatsinthebox/) - these are applications that don't work well in containers. The majority of softare applications is provided via containers and a full list can be found here: https://neurodesk.github.io/applications/
 
-# Can I just use the plain containers?
+## Can I just use the plain containers?
 Yes, there are multiple ways of using the containers direclty and we provide an overview here: https://neurodesk.github.io/docs/neurocontainers/
 
 
-# How can I contribute new containers?
+## How can I contribute new containers?
 We are still working on making this easier, but the current workflow to add new applications is described here: https://neurodesk.github.io/developers/new_tools/add_tool/
