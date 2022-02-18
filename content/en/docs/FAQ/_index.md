@@ -33,3 +33,7 @@ We provide certain applications as part of the Neurodesktop image (https://neuro
 
 # Can I just use the plain containers?
 Yes, there are multiple ways of using the containers direclty and we provide an overview here: https://neurodesk.github.io/docs/neurocontainers/
+
+
+# How can I contribute new containers?
+We are still working on making this easier, but the current workflow to add new applications is described here: https://neurodesk.github.io/developers/new_tools/add_tool/
