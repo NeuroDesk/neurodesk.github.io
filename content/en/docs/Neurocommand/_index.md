@@ -1,7 +1,7 @@
 ---
 title: "Neurocommand"
 linkTitle: "Neurocommand"
-weight: 3
+weight: 4
 description: >
   For more advanced users who prefer a command-line interface
 ---

@@ -1,7 +1,7 @@
 ---
 title: "Neurodesk Overview"
 linkTitle: "Overview"
-weight: 1
+weight: 2
 description: >
   A flexible, scalable and easy to use data analysis environment for reproducible neuroimaging.
 ---
