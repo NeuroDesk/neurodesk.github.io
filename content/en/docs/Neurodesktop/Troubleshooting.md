@@ -10,6 +10,17 @@ Neurodesk is an open-source project that is always evolving. If you are experien
 
 To ask questions or suggest new features, [join the discussion](https://github.com/NeuroDesk/neurodesk.github.io/discussions) on github. 
 
+## The clipboard in Firefox is not working correctly
+Copying something to the clipboard inside the virtual desktop and pasting it outside works, but you cannot paste clipboard content into the virtual desktop from the host computer. This is a "feature" of firefox and you can disable this "feature":
+
+- goto about:config and "Accept the Risk and Continue"
+- now search for clipboard and then set the following to "true":
+     - dom.events.asyncClipboard.clipboardItem
+     - dom.events.asyncClipboard.read 
+     - dom.events.testing.asyncClipboard
+
+Then close firefox and restart. Then the clipboard should work as one would expect.
+
 ## docker: Cannot connect to the Docker daemon at unix:///var/run/docker.sock. Is the docker daemon running?.
 This is usually a docker-related error, not related to neurodesktop itself. To troubleshoot docker, we can try a simpler container first:
 ```
