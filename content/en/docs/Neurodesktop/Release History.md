@@ -6,6 +6,14 @@ description: >-
      Previous releases of neurodesktop
 ---
 
+## 20220221
+- update for PhysIO toolbox (physiological noise correction for fMRI) to r2021a including the latest SPM r8224
+- update of lcmodel to include basis sets for 1.5-9.4T
+- added a memory display plugin to illustrate how much memory is available to the container and how much is consumed
+- added a version checker to help with identifying if a new version is available
+- added file upload via guacamole (+ update of guacamole to 1.4) - users can now drag and drop their files onto guacamole and they get copied to the desktop
+
+
 ## 20220128
 - update of Spinalcordtoolbox to 5.5
 - update of CAT12 to r1933
