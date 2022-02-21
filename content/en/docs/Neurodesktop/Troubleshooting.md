@@ -74,10 +74,16 @@ If you are still experiencing issues after this, you may need to update docker t
 
 ![Docker_update](/Troubleshooting/Docker_update.png 'Docker_update')
 
-## I got an error message 'X killed'
-This may be due to Docker not having access to enough RAM from your PC/system.
+## I got an error message 'X killed' or not enough memory
+This may be due to Docker not having access to enough RAM from your host computer.
 
-If you are using WSL2 backend in Docker, then this is managed by Windows settings. Try the following steps to check how much RAM Docker has access to and increase the amount if necessary.
+### If you are using Docker on MacOS 
+1. The memory amount is managed via the Docker settings:
+![image](https://user-images.githubusercontent.com/4021595/154880061-cff2dde0-632d-4d8c-b627-28df6b074f48.png)
+
+
+### If you are using Docker on Windows 10 with the WSL2 backend
+then this is managed by Windows settings. Try the following steps to check how much RAM Docker has access to and increase the amount if necessary.
 1. Run Docker
 2. Open a terminal (ie. Powershell) in the PC you want to use to run Neurodesktop (not in Neurodesktop itself) and type the following command:
 ```
@@ -103,7 +109,8 @@ Total Memory: **.**GiB
      ```
      This will list any running distributions. For the update to be successful, WSL needs to have comletely stopped running (ie. no distributions running)
      - Restart Docker and rerun steps 1-3 to confirm it was successful
-If you are not using WSL2, you can check and manage your RAM allocation in the Docker desktop application.
+
+### If you are not using WSL2, you can check and manage your RAM allocation in the Docker desktop application.
 1. Open the Docker application and navigate to settings > resources > advances
 2. Scroll down to the Memory option and use the sliding bar to adjust the setting
 3. Click apply and restart
