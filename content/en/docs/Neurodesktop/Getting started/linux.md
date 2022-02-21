@@ -52,7 +52,7 @@ If using Firefox, you might not be able to paste clipboard content into the virt
 ```
 https://neurodesk.github.io/docs/neurodesktop/troubleshooting/#the-clipboard-in-firefox-is-not-working-correctly
 ```
-{{< alert >}}
+{{< /alert >}}
 
 4. neurodesktop is ready to use!
 - User is `user`
