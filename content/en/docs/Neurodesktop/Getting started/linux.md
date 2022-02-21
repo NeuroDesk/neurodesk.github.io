@@ -49,9 +49,7 @@ You should press "Allow"
 
 {{< alert >}}
 If using Firefox, you might not be able to paste clipboard content into the virtual desktop from the host computer. In that case, please follow the instructions here:
-```
 https://neurodesk.github.io/docs/neurodesktop/troubleshooting/#the-clipboard-in-firefox-is-not-working-correctly
-```
 {{< /alert >}}
 
 4. neurodesktop is ready to use!
