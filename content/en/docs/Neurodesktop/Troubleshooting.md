@@ -23,6 +23,7 @@ Then close firefox and restart. Then the clipboard should work as one would expe
 
 ## The clipboard doesn't work in chrome or edge
 The browsers have a security feature to protect you from something stealing your clipboard content. Depending on your security settings you have to enable it explicitly - it's a little icon in the browser address bar that looks like a clipboard:
+
 ![image](https://user-images.githubusercontent.com/4021595/154870249-731f8fe3-474f-43ff-aac4-c460893e4246.png)
 
 
