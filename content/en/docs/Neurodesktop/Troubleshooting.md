@@ -10,6 +10,23 @@ Neurodesk is an open-source project that is always evolving. If you are experien
 
 To ask questions or suggest new features, [join the discussion](https://github.com/NeuroDesk/neurodesk.github.io/discussions) on github. 
 
+## The clipboard in Firefox is not working correctly
+Copying something to the clipboard inside the virtual desktop and pasting it outside works, but you cannot paste clipboard content into the virtual desktop from the host computer. This is a "feature" of firefox and you can disable this "feature":
+
+- goto about:config and "Accept the Risk and Continue"
+- now search for clipboard and then set the following to "true":
+     - dom.events.asyncClipboard.clipboardItem
+     - dom.events.asyncClipboard.read 
+     - dom.events.testing.asyncClipboard
+
+Then close firefox and restart. Then the clipboard should work as one would expect.
+
+## The clipboard doesn't work in chrome or edge
+The browsers have a security feature to protect you from something stealing your clipboard content. Depending on your security settings you have to enable it explicitly - it's a little icon in the browser address bar that looks like a clipboard:
+
+![image](https://user-images.githubusercontent.com/4021595/154870249-731f8fe3-474f-43ff-aac4-c460893e4246.png)
+
+
 ## docker: Cannot connect to the Docker daemon at unix:///var/run/docker.sock. Is the docker daemon running?.
 This is usually a docker-related error, not related to neurodesktop itself. To troubleshoot docker, we can try a simpler container first:
 ```
@@ -57,10 +74,16 @@ If you are still experiencing issues after this, you may need to update docker t
 
 ![Docker_update](/Troubleshooting/Docker_update.png 'Docker_update')
 
-##Windows Users: I got an error message 'X killed'
-This may be due to Docker not having access to enough RAM from your PC/system.
+## I got an error message 'X killed' or not enough memory
+This may be due to Docker not having access to enough RAM from your host computer.
 
-If you are using WSL2 backend in Docker, then this is managed by Windows settings. Try the following steps to check how much RAM Docker has access to and increase the amount if necessary.
+### If you are using Docker on MacOS 
+1. The memory amount is managed via the Docker settings:
+![image](https://user-images.githubusercontent.com/4021595/154880061-cff2dde0-632d-4d8c-b627-28df6b074f48.png)
+
+
+### If you are using Docker on Windows 10 with the WSL2 backend
+then this is managed by Windows settings. Try the following steps to check how much RAM Docker has access to and increase the amount if necessary.
 1. Run Docker
 2. Open a terminal (ie. Powershell) in the PC you want to use to run Neurodesktop (not in Neurodesktop itself) and type the following command:
 ```
@@ -86,7 +109,8 @@ Total Memory: **.**GiB
      ```
      This will list any running distributions. For the update to be successful, WSL needs to have comletely stopped running (ie. no distributions running)
      - Restart Docker and rerun steps 1-3 to confirm it was successful
-If you are not using WSL2, you can check and manage your RAM allocation in the Docker desktop application.
+
+### If you are not using WSL2, you can check and manage your RAM allocation in the Docker desktop application.
 1. Open the Docker application and navigate to settings > resources > advances
 2. Scroll down to the Memory option and use the sliding bar to adjust the setting
 3. Click apply and restart
