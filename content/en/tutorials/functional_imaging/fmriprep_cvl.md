@@ -11,11 +11,11 @@ description: >
 
 > _This tutorial was created by Kelly G. Garner._ 
 >
-> Email: getkellygarner@gmail.com
+> Email: [getkellygarner@gmail.com](mailto:getkellygarner@gmailc.om)
 >
-> Github: @kel_github
+> Github: [@kel_github](https://github.com/kel-github)
 >
-> Twitter: @garnertheory
+> Twitter: [@garnertheory](https://twitter.com/garner_theory)
 >
 
 > This workflow documents how to use fmriprep with neurodesk and provides some details that may help you troubleshoot some common problems I found along the way. 

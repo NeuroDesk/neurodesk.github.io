@@ -5,7 +5,11 @@ weight: 1
 description: >
   Example workflow for SWI processing
 ---
-
+> _This tutorial was created by Steffen Bollmann._
+>
+> Github: [@stebo85](https://github.com/stebo85)
+> Web: [mri.sbollmann.net](https://mri.sbollmann.net/)
+> Twitter: [@sbollmann_MRI](https://twitter.com/sbollmann_MRI)
 ## Download demo data
 Open a terminal and run:
 ```

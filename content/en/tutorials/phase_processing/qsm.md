@@ -5,7 +5,11 @@ weight: 1
 description: >
   Example workflow for Quantitative Susceptibility Mapping
 ---
-
+> _This tutorial was created by Steffen Bollmann._
+>
+> Github: [@stebo85](https://github.com/stebo85)
+> Web: [mri.sbollmann.net](https://mri.sbollmann.net/)
+> Twitter: [@sbollmann_MRI](https://twitter.com/sbollmann_MRI)
 ## Quantitative Susceptibility Mapping in QSMxT
 
 Neurodesk includes QSMxT, a complete and end-to-end QSM processing and analysis framework that excels at automatically reconstructing and processing QSM for large groups of participants. 

@@ -6,6 +6,11 @@ description: >
   Example workflow for the PhysIO Toolbox
 ---
 
+> _This tutorial was created by Lars Kasper._
+>
+> Github: @mrikasper
+>
+> Twitter: @mrikasper
 ## Origin
 
 The PhysIO Toolbox implements ideas for robust physiological noise modeling in fMRI, outlined in this paper:
