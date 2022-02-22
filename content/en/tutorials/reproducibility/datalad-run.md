@@ -150,7 +150,7 @@ URL if you were really someone else.
 ```
 $ cd ~
 
-$ datalad install -s /storage/SomeProject
+$ datalad install -s /neurodesktop-storage/SomeProject
 install(ok): /home/user/SomeProject (dataset)
 
 $ cd SomeProject

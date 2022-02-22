@@ -10,17 +10,17 @@ description: >
 Open a terminal and run:
 ```
 pip install osfclient
-cd /storage/
-osf -p ru43c fetch 01_bids.zip /storage/swi-demo/01_bids.zip
+cd /neurodesktop-storage/
+osf -p ru43c fetch 01_bids.zip /neurodesktop-storage/swi-demo/01_bids.zip
 
-unzip /storage/swi-demo/01_bids.zip -d /storage/swi-demo/
+unzip /neurodesktop-storage/swi-demo/01_bids.zip -d /neurodesktop-storage/swi-demo/
 ```
 
 Open the CLEARSWI tool from the application menu:
 
 paste this julia script in a julia file and execute:
 ```
-cd /storage/
+cd /neurodesktop-storage/
 vi clearswi.jl
 ```
 
@@ -29,7 +29,7 @@ hit a or i and then paste this:
 using CLEARSWI
 
 TEs = [20] 
-nifti_folder = "/storage/swi-demo/01_bids/sub-170705134431std1312211075243167001/ses-1/anat"
+nifti_folder = "/neurodesktop-storage/swi-demo/01_bids/sub-170705134431std1312211075243167001/ses-1/anat"
 magfile = joinpath(nifti_folder, "sub-170705134431std1312211075243167001_ses-1_acq-qsm_run-1_magnitude.nii.gz")
 phasefile = joinpath(nifti_folder, "sub-170705134431std1312211075243167001_ses-1_acq-qsmPH00_run-1_phase.nii.gz") 
 
@@ -41,8 +41,8 @@ swi = calculateSWI(data);
 # mip = createIntensityProjection(swi, minimum); # minimum intensity projection, other Julia functions can be used instead of minimum
 mip = createMIP(swi); # shorthand for createIntensityProjection(swi, minimum)
 
-savenii(swi, "/storage/swi-demo/swi.nii"; header=mag.header) 
-savenii(mip, "/storage/swi-demo/mip.nii"; header=mag.header)
+savenii(swi, "/neurodesktop-storage/swi-demo/swi.nii"; header=mag.header) 
+savenii(mip, "/neurodesktop-storage/swi-demo/mip.nii"; header=mag.header)
 ```
 
 hit SHIFT-Z-Z and run:
