@@ -39,7 +39,7 @@ http://localhost:8080/#/?username=user&password=password
 ```
 
 {{< alert title="Note" >}}
-We do not recommend the use of the Firefox browser for accessing Neurodesktop, as this may lead to performance issues. 
+We do not recommend the use of the Firefox browser for accessing Neurodesktop on Windows 10, as firefox is not able to access localhost where neurodesk is running. 
 {{< /alert >}}
 
 3. neurodesktop is ready to use!
