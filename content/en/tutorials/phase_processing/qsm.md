@@ -22,31 +22,37 @@ QSMxT provides pipelines implemented in Python that:
 4. Automatically segment T1w data and register them to the QSM space to extract quantitative values in anatomical regions of interest.
 5. Export quantitative data to CSV for all subjects using the automated segmentations, or a custom segmentation in the group space (we recommend ITK snap).
 
-If you use QSMxT for a study, please cite https://doi.org/10.1101/2021.05.05.442850.
+If you use QSMxT for a study, please cite https://doi.org/10.1101/2021.05.05.442850 (for QSMxT) and http://www.ncbi.nlm.nih.gov/pubmed/25731991 (for TGVQSM)
+
 
 
 ## Download demo data
 Open a terminal and run:
 ```
 pip install osfclient
-cd /storage/
-osf -p ru43c clone /storage/qsmxt-demo
-unzip /storage/qsmxt-demo/osfstorage/GRE_2subj_1mm_TE20ms/sub1/GR_M_5_QSM_p2_1mmIso_TE20.zip -d /storage/qsmxt-demo/dicoms
-unzip /storage/qsmxt-demo/osfstorage/GRE_2subj_1mm_TE20ms/sub1/GR_P_6_QSM_p2_1mmIso_TE20.zip -d /storage/qsmxt-demo/dicoms
-unzip /storage/qsmxt-demo/osfstorage/GRE_2subj_1mm_TE20ms/sub2/GR_M_5_QSM_p2_1mmIso_TE20.zip -d /storage/qsmxt-demo/dicoms
-unzip /storage/qsmxt-demo/osfstorage/GRE_2subj_1mm_TE20ms/sub2/GR_P_6_QSM_p2_1mmIso_TE20.zip -d /storage/qsmxt-demo/dicoms
+export PATH=$PATH:~/.local/bin
+cd /neurodesktop-storage/
+osf -p ru43c clone /neurodesktop-storage/qsmxt-demo
+unzip /neurodesktop-storage/qsmxt-demo/osfstorage/GRE_2subj_1mm_TE20ms/sub1/GR_M_5_QSM_p2_1mmIso_TE20.zip -d /neurodesktop-storage/qsmxt-demo/dicoms
+unzip /neurodesktop-storage/qsmxt-demo/osfstorage/GRE_2subj_1mm_TE20ms/sub1/GR_P_6_QSM_p2_1mmIso_TE20.zip -d /neurodesktop-storage/qsmxt-demo/dicoms
+unzip /neurodesktop-storage/qsmxt-demo/osfstorage/GRE_2subj_1mm_TE20ms/sub2/GR_M_5_QSM_p2_1mmIso_TE20.zip -d /neurodesktop-storage/qsmxt-demo/dicoms
+unzip /neurodesktop-storage/qsmxt-demo/osfstorage/GRE_2subj_1mm_TE20ms/sub2/GR_P_6_QSM_p2_1mmIso_TE20.zip -d /neurodesktop-storage/qsmxt-demo/dicoms
 ```
 
 ## QSMxT Usage
-Start QSMxT (in this demo we used 1.1.6) from the applications menu in the desktop (*Neurodesk* > *Quantitative Imaging* > *qsmxt*)
+Start QSMxT (in this demo we used 1.1.9) from the applications menu in the desktop (*Neurodesk* > *Quantitative Imaging* > *qsmxt*)
 
 1. Convert DICOM data to BIDS:
     ```bash
-    cd /storage/qsmxt-demo
-    python3 /opt/QSMxT/run_0_dicomSort.py /storage/qsmxt-demo/dicoms 00_dicom
-    python3 /opt/QSMxT/run_1_dicomToBids.py 00_dicom 01_bids
+    cd /neurodesktop-storage/qsmxt-demo
+    python3 /opt/QSMxT/run_0_dicomSort.py /neurodesktop-storage/qsmxt-demo/dicoms 00_dicom
+    python3 /opt/QSMxT/run_1_dicomConvert.py 00_dicom 01_bids
     ```
-After this step check if the data were correctly recognized and converted to BIDS. Otherwise make a copy of /opt/QSMxT/bidsmap.yaml - adjust based on provenance example in 01_bids/code/bidscoin/bidsmap.yaml (see for example what it detected under extra_files) - and run again with the parameter `--heuristic bidsmap.yaml`. If the data were acquired on a GE scanner the complex data needs to be corrected by applying an FFT shift, this can be done with `python /opt/QSMxT/run_1_fixGEphaseFFTshift.py 01_bids/sub*/ses*/anat/*_run-1_*.nii.gz` . 
+    
+This will bring up an interactive question to ask you which sequence is your QSM data. Enter the number and hit Enter. Then confirm the renaming if that's correct.
+
+![image](https://user-images.githubusercontent.com/4021595/155101275-958feeb4-092e-4220-b443-d2aa3cc18133.png)
+
 
 2. Run QSM pipeline:
     ```bash
