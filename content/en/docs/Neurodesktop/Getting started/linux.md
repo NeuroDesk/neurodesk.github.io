@@ -52,9 +52,14 @@ If using Firefox, you might not be able to paste clipboard content into the virt
 https://neurodesk.github.io/docs/neurodesktop/troubleshooting/#the-clipboard-in-firefox-is-not-working-correctly
 {{< /alert >}}
 
-4. neurodesktop is ready to use!
-- User is `user`
-- Password is `password`
+4. Press on "Desktop Auto-Resolution" under "ALL CONNECTIONS"
+
+5. If it is the first time you use Neruodesktop, wait until the desktop appears (it may take a few seconds). Otherwise, it should appear instantaneously.
+
+6. Neurodesk is ready to use! Click "What's next?" on the left of this page for further instructions.     
+
+7. For an optimal experience, switch your browser to full-screen mode by following the instructions for your browser here:
+https://www.thewindowsclub.com/open-chrome-edge-or-firefox-browser-in-full-screen-mode
 
 ## Deleting neurodesktop:
 When done processing your data it is important to stop and remove the container - otherwise the next start or container update will give an error ("... The container name "/neurodesktop" is already in use...")
