@@ -11,8 +11,6 @@ description: >
 
 > _This tutorial was created by Kelly G. Garner._ 
 >
-> Email: [getkellygarner@gmail.com](mailto:getkellygarner@gmailc.om)
->
 > Github: [@kel_github](https://github.com/kel-github)
 >
 > Twitter: [@garnertheory](https://twitter.com/garner_theory)
