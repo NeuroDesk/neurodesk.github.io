@@ -43,10 +43,21 @@ if you get errors in neurodesktop then check if the ~/neurodesktop-storage direc
 http://localhost:8080/#/?username=user&password=password
 ```
 
-3. neurodesktop is ready to use!
-- User is `user`
-- Password is `password`
+3. Press on "Desktop Auto-Resolution" under "ALL CONNECTIONS"
 
+4. If it is the first time you use Neruodesktop, wait until the desktop appears (it may take a few seconds). Otherwise, it should appear instantaneously.
+
+5. Neurodesk is ready to use! Click "What's next?" on the left of this page for further instructions.     
+
+{{< alert >}}
+We recommend to use Chrome over Firefox as it has an option to hide the Toolbar in full screen mode (go to the the menu bar, click on View, and uncheck "Always Show Toolbar in Full Screen"). This allows for Neurodesktop to truly occupy the whole of your screen.
+{{< /alert >}}
+
+{{< alert >}}
+The browser can be closed anytime, and Neurodesktop will continue to run in the background. To reconnect to Neurodesktop, simply start over from step 2 above.
+{{< /alert >}}
+
+ 
 ## Deleting neurodesktop:
 When done processing your data it is important to stop and remove the container - otherwise the next start or container update will give an error ("... The container name "/neurodesktop" is already in use...")
 
