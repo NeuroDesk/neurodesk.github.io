@@ -38,15 +38,27 @@ There is a bug in docker 3.3.0 for Mac that makes this command not run correctly
 
 if you get errors in neurodesktop then check if the ~/neurodesktop-storage directory is writable to all users, otherwise run `chmod a+rwx ~/neurodesktop-storage`
 
-2. Once neurodesktop is downloaded i.e. `guacd[77]: INFO:        Listening on host 127.0.0.1, port 4822` is displayed in terminal, open a browser and go to:
+2. Once neurodesktop is downloaded i.e. `guacd[77]: INFO:        Listening on host 127.0.0.1, port 4822` is displayed in terminal, leave the terminal open and neurodesktop running (i.e., do not press CTRL+C)
+
+3. Open a browser and go to:
 ```
 http://localhost:8080/#/?username=user&password=password
 ```
+{{< alert >}}
+We recommend to use Chrome over Firefox as it has an option to hide the Toolbar in full screen mode (go to the the menu bar, click on View, and uncheck "Always Show Toolbar in Full Screen"). This allows for Neurodesktop to truly occupy the whole of your screen.
+{{< /alert >}}
 
-3. neurodesktop is ready to use!
-- User is `user`
-- Password is `password`
+3. Press on "Desktop Auto-Resolution" under "ALL CONNECTIONS"
 
+4. If it is the first time you use Neruodesktop, wait until the desktop appears (it may take a few seconds). Otherwise, it should appear instantaneously.
+
+5. Neurodesk is ready to use! Click "What's next?" on the left of this page for further instructions.     
+
+{{< alert >}}
+The browser can be closed anytime, and Neurodesktop will continue to run in the background. To reconnect to Neurodesktop, simply start over from step 3 above.
+{{< /alert >}}
+
+ 
 ## Deleting neurodesktop:
 When done processing your data it is important to stop and remove the container - otherwise the next start or container update will give an error ("... The container name "/neurodesktop" is already in use...")
 
