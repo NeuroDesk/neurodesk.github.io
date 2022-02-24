@@ -51,7 +51,7 @@ We do not recommend the use of the Firefox browser for accessing Neurodesktop on
 6. For an optimal experience, switch your browser to full-screen mode by following the instructions for your browser here:
 https://www.thewindowsclub.com/open-chrome-edge-or-firefox-browser-in-full-screen-mode
 
-{{< alert }}
+{{< alert >}}
 The browser can be closed anytime, and Neurodesktop will continue running in the background. To reconnect to Neurodesktop, simply start over from step 2 above.
 {{< /alert >}}
 
