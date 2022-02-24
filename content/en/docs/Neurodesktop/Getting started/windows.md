@@ -22,7 +22,7 @@ The docker installation will reboot your computer a few times and there might be
 Use one of the following options to run Neurodesktop:
 
 #### Option 1: NeuroDesktop.exe
-Download and run the following executable - careful: This will always download the latest version of neurodesk. For full reproducibility and control please choose Option 2!
+Download and run the following executable. Be aware: 1) The exe file can trigger your anti virus programs and we are working on this. 2) This exe will always download the latest version of neurodesk. For full reproducibility and control please choose Option 2 :)
 https://github.com/NeuroDesk/neurodesktop/raw/main/Windows_run_Neurodesk/NeuroDesktop.exe
 
 #### Option 2: Using Terminal
