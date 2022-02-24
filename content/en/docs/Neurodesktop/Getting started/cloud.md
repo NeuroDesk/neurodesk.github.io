@@ -39,17 +39,31 @@ If you get errors in neurodesktop then check if the ~/neurodesktop-storage direc
 
 2. Once neurodesktop is downloaded to the cloud instance (`guacd[77]: INFO:        Listening on host 127.0.0.1, port 4822` is displayed in terminal), leave the terminal open and neurodesktop running (i.e., do not press CTRL+C)
 
-3. Open a browser on the computer from which you want to access Neurodesktop, and go to:
+3. If it is required to set up an SSH tunnel to access the cloud instance, please set up such a tunnel from the computer from which you want to access Neurodesktop
+
+4. Open a browser on the computer from which you want to access Neurodesktop, and go to:
 ```
 http://localhost:8080/#/?username=user&password=password
 ```
 If the computer runs Linux, check specific instructions at https://neurodesk.github.io/docs/neurodesktop/getting-started/linux/, Option 2, Step 3.
 
-4. neurodesktop is ready to use!
-- User is `user`
-- Password is `password`
+5. Press on "Desktop Auto-Resolution" under "ALL CONNECTIONS"
 
-5. if your computer hibernated/rebooted/etc., if the network connnection has been temprarily lost, or if you want to connect to the same instance of Neurodesktop from another computer, only repeat steps 1 and 6, and you will be reconnected to neurodesktop
+6. If it is the first time you use Neruodesktop, wait until the desktop appears (it may take a few seconds). Otherwise, it should appear instantaneously.
+
+7. Neurodesk is ready to use! Click "What's next?" on the left of this page for further instructions.     
+
+8. For an optimal experience, switch your browser to full-screen mode by following the instructions for your browser here (except Mac where full-screen mode is built-in):
+https://www.thewindowsclub.com/open-chrome-edge-or-firefox-browser-in-full-screen-mode
+
+{{< alert >}}
+The browser can be closed anytime, and Neurodesktop will continue running in the background. To reconnect to Neurodesktop, simply start over from step 4 above.
+The same applies if your computer hibernated/rebooted/etc. or if the network connnection has been temprarily lost.
+{{< /alert >}}
+
+{{< alert >}}
+If you want to connect to the same instance of Neurodesktop from another computer, close the browser in the current computer, and simply start over from step 4 on another computer (notice only one computer can access Neurodesktop at a time).
+{{< /alert >}}
 
 ## Deleting neurodesktop:
 When done processing your data it is important to stop and remove the container - otherwise the next start or container update will give an error ("... The container name "/neurodesktop" is already in use...")
