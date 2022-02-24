@@ -33,7 +33,9 @@ https://github.com/NeuroDesk/neurodesktop/raw/main/Linux_run_Neurodesk/NeuroDesk
 If you get errors in neurodesktop then check if the ~/neurodesktop-storage directory is writable to all users, otherwise run `chmod a+rwx ~/neurodesktop-storage`
 {{< /alert >}}
 
-2. Once neurodesktop is downloaded i.e. `guacd[77]: INFO:        Listening on host 127.0.0.1, port 4822` is displayed in terminal, open a browser and go to:
+2. Once neurodesktop is downloaded i.e. `guacd[77]: INFO:        Listening on host 127.0.0.1, port 4822` is displayed in terminal, leave the terminal open and neurodesktop running (i.e., do not press CTRL+C)
+
+3. Open a browser and go to:
 ```
 http://localhost:8080/#/?username=user&password=password
 ```
@@ -52,17 +54,17 @@ If using Firefox, you might not be able to paste clipboard content into the virt
 https://neurodesk.github.io/docs/neurodesktop/troubleshooting/#the-clipboard-in-firefox-is-not-working-correctly
 {{< /alert >}}
 
-3. Press on "Desktop Auto-Resolution" under "ALL CONNECTIONS"
+4. Press on "Desktop Auto-Resolution" under "ALL CONNECTIONS"
 
-4. If it is the first time you use Neruodesktop, wait until the desktop appears (it may take a few seconds). Otherwise, it should appear instantaneously.
+5. If it is the first time you use Neruodesktop, wait until the desktop appears (it may take a few seconds). Otherwise, it should appear instantaneously.
 
-5. Neurodesk is ready to use! Click "What's next?" on the left of this page for further instructions.     
+6. Neurodesk is ready to use! Click "What's next?" on the left of this page for further instructions.     
 
-6. For an optimal experience, switch your browser to full-screen mode by following the instructions for your browser here:
+7. For an optimal experience, switch your browser to full-screen mode by following the instructions for your browser here:
 https://www.thewindowsclub.com/open-chrome-edge-or-firefox-browser-in-full-screen-mode
 
 {{< alert >}}
-The browser can be closed anytime, and Neurodesktop will continue running in the background. To reconnect to Neurodesktop, simply start over from step 2 above.
+The browser can be closed anytime, and Neurodesktop will continue running in the background. To reconnect to Neurodesktop, simply start over from step 3 above.
 {{< /alert >}}
 
 ## Deleting neurodesktop:
