@@ -24,7 +24,7 @@ Download and run the following executable
 https://github.com/NeuroDesk/neurodesktop/raw/main/Linux_run_Neurodesk/NeuroDesktop.run
 
 #### Option 2: Using Terminal
-1. Open a terminal, and type the folowing command to automatically download the neurodesktop container and run it (Mac, Windows, Linux commands listed below)
+1. Open a terminal, and type the folowing command to automatically download the neurodesktop container and run it
 
 {{< params/neurodesktop/linux/default >}}
 <!-- neurodesktop version found in neurodesk.github.io/data/neurodesktop.toml -->
@@ -33,7 +33,9 @@ https://github.com/NeuroDesk/neurodesktop/raw/main/Linux_run_Neurodesk/NeuroDesk
 If you get errors in neurodesktop then check if the ~/neurodesktop-storage directory is writable to all users, otherwise run `chmod a+rwx ~/neurodesktop-storage`
 {{< /alert >}}
 
-3. Once neurodesktop is downloaded i.e. `guacd[77]: INFO:        Listening on host 127.0.0.1, port 4822` is displayed in terminal, open a browser and go to:
+2. Once neurodesktop is downloaded i.e. `guacd[77]: INFO:        Listening on host 127.0.0.1, port 4822` is displayed in terminal, leave the terminal open and neurodesktop running (i.e., do not press CTRL+C)
+
+3. Open a browser and go to:
 ```
 http://localhost:8080/#/?username=user&password=password
 ```
@@ -60,6 +62,10 @@ https://neurodesk.github.io/docs/neurodesktop/troubleshooting/#the-clipboard-in-
 
 7. For an optimal experience, switch your browser to full-screen mode by following the instructions for your browser here:
 https://www.thewindowsclub.com/open-chrome-edge-or-firefox-browser-in-full-screen-mode
+
+{{< alert >}}
+The browser can be closed anytime, and Neurodesktop will continue running in the background. To reconnect to Neurodesktop, simply start over from step 3 above.
+{{< /alert >}}
 
 ## Deleting neurodesktop:
 When done processing your data it is important to stop and remove the container - otherwise the next start or container update will give an error ("... The container name "/neurodesktop" is already in use...")
