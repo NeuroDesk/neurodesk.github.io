@@ -42,9 +42,15 @@ http://localhost:8080/#/?username=user&password=password
 We do not recommend the use of the Firefox browser for accessing Neurodesktop on Windows 10, as firefox is not able to access localhost where neurodesk is running. 
 {{< /alert >}}
 
-3. neurodesktop is ready to use!
-- User is `user`
-- Password is `password`
+3. Press on "Desktop Auto-Resolution" under "ALL CONNECTIONS"
+
+4. If it is the first time you use Neruodesktop, wait until the desktop appears (it may take a few seconds). Otherwise, it should appear instantaneously.
+
+5. Neurodesk is ready to use! Click "What's next?" on the left of this page for further instructions.     
+
+6. For an optimal experience, switch your browser to full-screen mode by following the instructions for your browser here:
+https://www.thewindowsclub.com/open-chrome-edge-or-firefox-browser-in-full-screen-mode
+
 
 ## Deleting neurodesktop:
 When done processing your data it is important to stop and remove the container - otherwise the next start or container update will give an error ("... The container name "/neurodesktop" is already in use...")
