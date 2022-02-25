@@ -62,7 +62,7 @@ The same applies if your computer hibernated/rebooted/etc. or if the network con
 {{< /alert >}}
 
 {{< alert >}}
-If you want to connect to the same instance of Neurodesktop from another computer, close the browser in the current computer, and simply start over from step 4 on another computer (notice only one computer can access Neurodesktop at a time).
+If you want to connect to the same instance of Neurodesktop from another computer, close the browser in the current computer, and simply start over from step 4 on the other computer (notice only one computer can access Neurodesktop at a time).
 {{< /alert >}}
 
 ## Deleting neurodesktop:
