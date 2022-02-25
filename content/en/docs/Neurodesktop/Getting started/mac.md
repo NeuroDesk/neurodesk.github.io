@@ -45,7 +45,7 @@ if you get errors in neurodesktop then check if the ~/neurodesktop-storage direc
 http://localhost:8080/#/?username=user&password=password
 ```
 {{< alert >}}
-We recommend to use Chrome over Firefox as it has an option to hide the Toolbar in full screen mode (go to the the menu bar, click on View, and uncheck "Always Show Toolbar in Full Screen"). This allows for Neurodesktop to truly occupy the whole of your screen.
+We recommend to use Chrome over Firefox as it has an option to hide the Toolbar in full screen mode (go to the menu bar, click on View, and uncheck "Always Show Toolbar in Full Screen"). This allows for Neurodesktop to truly utilise the whole of your screen.
 {{< /alert >}}
 
 3. Press on "Desktop Auto-Resolution" under "ALL CONNECTIONS"
