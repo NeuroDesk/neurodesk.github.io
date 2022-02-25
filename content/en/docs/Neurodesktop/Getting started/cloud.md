@@ -65,11 +65,11 @@ The browser can be closed anytime, and Neurodesktop will continue running on the
 {{< /alert >}}
 
 {{< alert >}}
-If your computer hibernates/reboots/etc. or if the network connnection has been temprarily lost, Neurodesktop still continue running on the cloud instance. To reconnect to Neurodesktop, start over from step 3 above.
+If your computer hibernates/reboots/etc. or if the network connnection has been temporarily lost, Neurodesktop still continues running on the cloud instance. To reconnect to Neurodesktop, start over from step 3 above.
 {{< /alert >}}
 
 {{< alert >}}
-If you want to connect to the same instance of Neurodesktop from another computer, close the browser in the current computer, and simply start over from step 3 on the other computer (note that only one computer can access Neurodesktop at a time using the default RDP protocol; for access from multiple computers simultaneously, please re-run Neurodesktop with VNC enabled as explained further below).
+If you want to connect to the same instance of Neurodesktop from another computer, close the browser in the current computer, and start over from step 3 on the other computer (note that only one computer can access Neurodesktop at a time using the default RDP protocol; for access from multiple computers simultaneously, please re-run Neurodesktop with VNC enabled as explained further below).
 {{< /alert >}}
 
 ## Deleting neurodesktop:
