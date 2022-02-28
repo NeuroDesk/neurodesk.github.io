@@ -26,7 +26,13 @@ Click [here](https://www.youtube.com/watch?v=JLv_5fycugw) to watch a 2 minute tu
 There are various ways of connecting your data to to Neurodesktop. For more information see our Storage section: [Storage](/docs/neurodesktop/storage)
 
 ## How to launch applications
-Click on the Launcher icon in bottom-left corner and navigate to the "Neurodesk" menu, then select the application and version you wish to launch. If it is the first time you launch the application, it will be downloaded to your desktop environment. The application is ready to use when the "Singularity>" prompt appears in the terminal window that opens. If you chose in the menu the GUI of the application (e.g., fsleyesGUI 6.0.3), it will open automatically. If you chose that application itself (e.g., fsl 6.0.3), a terminal window will open, and you can use it to run any of the utilities packaged with the application, including the graphical utilities (e.g., typing "fsl" to run FSL's main menu).
+Click on the Launcher icon in bottom-left corner, navigate to the "Neurodesk" menu and then to the relevant submenu (or "All Applications" for an alphabetical list of all applications). Navigate to the desired application, and then click on a menu entry. If it is the first time you launch an application, it may take a few seconds until it starts (please be patient!).
+
+If you choose a menu entry with "GUI" at the end (e.g., fsleyesGUI 6.0.3), the main GUI interface of the application will open. 
+
+If you choose a menu entry without "GUI" at the end (e.g., fsl 6.0.3), a terminal window will open, and you can use it to run any of the utilities packaged with the application, including the graphical utilities (e.g., typing "fsl" to run FSL's main menu).  Notice that the terminal that opens only allows to run utilities from the single application chosen. 
+
+To be able to run utilities from multiple applications in the same terminal (or in the same script), please open a terminal by clicking on the terminal icon in the bottom toolbar of Neurodesktop. You will then be able to use the 'module' command in order to load the desired applications.
 
 ## How to keep your modifications in the container
 We designed neurodesk with reproducibility as a main goal, so the desktop containers should not be modified if one aims for full reproducibility. However, there is one good option to keep your settings across different container versions: You can write a shell script that installs additional packages and modifies the environment so it's perfect for you. This script can then be re-executed in a new desktop version and will enable a reprudcible customization.
