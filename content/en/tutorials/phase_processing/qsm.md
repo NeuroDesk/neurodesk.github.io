@@ -67,3 +67,5 @@ Then you can open a viewer (Visualization -> mricrogl -> mricroglGUI) and you ca
 for example: sub-170705-134431-std-1312211075243167001_ses-1_run-1_part-phase_T2starw_scaled_qsm_000_composite_average.nii
 
 ![image](https://user-images.githubusercontent.com/4021595/155106388-72a691a4-c0a4-4cc6-a2ac-c9271888b82d.png)
+
+> Please note that the demo dataset does not have a T1w scan for anatomical segmentation and therefore the subsequent steps in QSMxT (e.g. `python3 /opt/QSMxT/run_3_segment.py 01_bids 03_segmentation`) will NOT work.
