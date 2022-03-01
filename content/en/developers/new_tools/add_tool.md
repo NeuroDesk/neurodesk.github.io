@@ -79,9 +79,9 @@ Note this, significantly increases CI run time, only use in cases of space error
 
    1. clone our fork of Neurodocker: git clone https://github.com/NeuroDesk/neurodocker/
    2. install neurodocker: cd neurodocker; python -m pip install .
-   3. run the build script with the --debug flag: https://github.com/NeuroDesk/neurocontainers/blob/master/recipes/lcmodel/build.sh
+   3. run the build script with the --ds flag: https://github.com/NeuroDesk/neurocontainers/blob/master/recipes/lcmodel/build.sh
    <pre class="language-shell command-line" data-prompt="$"><code>chmod +x build.sh
-   ./build.sh -debug</code></pre>
+   ./build.sh -ds</code></pre>
    4. test running some commands within the container that should be available in your local docker container repository
    5. if your application requires a Matlab Runtime and you get an error about shared library "libmwlaunchermain.so" not found, check which version of the runtime was installed by the build script
 
