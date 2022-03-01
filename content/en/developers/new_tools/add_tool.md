@@ -42,16 +42,27 @@ To build a container, set up environment with:
 
 And then follow these steps:
 1) Sync/modify Neurodocker, the dependency we are using to build containers:
-   1) Press "Fetch upstream" in https://github.com/NeuroDesk/neurodocker to check if our fork of Neurodocker is already up-to-date
-   2) If there are upstream commits that are not synced yet, open an issue in https://github.com/NeuroDesk/neurocontainers/issues, requesting to pull-in latest changes from Neurodocker upstream into our fork of Neurodocker. One of the admins will attend the issue and perform the operation.
-   3) If relevant to your project, add recipe to neurodocker (https://github.com/NeuroDesk/neurodocker) and create a pull request to neurodocker (add new tool in a branch!)
+   1. Press "Fetch upstream" in https://github.com/NeuroDesk/neurodocker to check if our fork of Neurodocker is already up-to-date
+   2. If there are upstream commits that are not synced yet, open an issue in https://github.com/NeuroDesk/neurocontainers/issues, requesting to pull-in latest changes from Neurodocker upstream into our fork of Neurodocker. One of the admins will attend the issue and perform the operation.
+   3. If relevant to your project, add an option to neurodocker that installs new software (https://github.com/NeuroDesk/neurodocker) and create a pull request to neurodocker's main responsitory (add new tool in a branch!).
+   4. clone our fork of Neurodocker: 
+<pre class="language-shell command-line" data-prompt="$"><code>git clone https://github.com/NeuroDesk/neurodocker/
+</code></pre>
+   v. install neurodocker
+<pre class="language-shell command-line" data-prompt="$"><code>cd neurodocker
+python -m pip install .
+cd ..</code></pre>
+
 2) Clone the neurocontainers repository: 
 {{< alert >}}Optional: Fork neurocontainers and setup github actions
 
-1. Fork https://github.com/NeuroDesk/neurocontainers into your account.
-2. Go to your neurocontainers fork.
-3. If Actions tab is missing, go to Settings > Actions. Select Allow all actions. Then Save.
-4. In the actions tab, select "I understand my workflows, go ahead and enable them"
+  i. Fork https://github.com/NeuroDesk/neurocontainers into your account.
+  
+  ii. Go to your neurocontainers fork.
+  
+  iii. If Actions tab is missing, go to Settings > Actions. Select Allow all actions. Then Save.
+  
+  iv. In the actions tab, select "I understand my workflows, go ahead and enable them"
 
 Pushes to the recipes in your fork will now trigger actions to build the respective docker container, and push them to your Github Packages.
 {{< /alert >}}
@@ -77,13 +88,12 @@ Note this, significantly increases CI run time, only use in cases of space error
 
 6) Build and test the container locally 
 
-   1. clone our fork of Neurodocker: git clone https://github.com/NeuroDesk/neurodocker/
-   2. install neurodocker: cd neurodocker; python -m pip install .
-   3. run the build script with the --debug flag: https://github.com/NeuroDesk/neurocontainers/blob/master/recipes/lcmodel/build.sh
-   <pre class="language-shell command-line" data-prompt="$"><code>chmod +x build.sh
-   ./build.sh -debug</code></pre>
-   4. test running some commands within the container that should be available in your local docker container repository
-   5. if your application requires a Matlab Runtime and you get an error about shared library "libmwlaunchermain.so" not found, check which version of the runtime was installed by the build script
+   1. run the build script with the debug flag:
+   <pre class="language-shell command-line" data-prompt="$"><code>cd recipes/newapp
+   chmod +x build.sh
+   ./build.sh -ds</code></pre>
+   2. test running some commands within the container that should be available in your local docker container repository
+   3. if your application requires a Matlab Runtime and you get an error about shared library "libmwlaunchermain.so" not found, check which version of the runtime was installed by the build script
 
 7) Update changes in local git repository
 <pre class="language-shell command-line" data-prompt="$"><code>git add recipes/newapp/build.sh recipes/newapp/README.md .github/workflows/newapp.yml
