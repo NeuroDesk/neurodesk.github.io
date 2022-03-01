@@ -106,7 +106,8 @@ git commit</code></pre>
 <pre class="language-shell command-line" data-prompt="$"><code>git pull
 git push</code></pre>
 
-10) Go to neurocontainers/actions. Check that the most recent workflow run in the list terminated successfully (green). Otherwise, click on it, click on “build docker”, and the line that caused the error will be highlighted
+10) Go to https://github.com/neurodesk/neurocontainers/actions. Check that the most recent workflow run in the list terminated successfully (green). Otherwise, click on it, click on “build docker”, and the line that caused the error will be highlighted
+
 11) Find your new package under https://github.com/orgs/NeuroDesk/packages?repo_name=neurocontainers
     
     Enter the name of the package in the search box, and verify that the full package name shows up in the format _toolName_toolVersion_
