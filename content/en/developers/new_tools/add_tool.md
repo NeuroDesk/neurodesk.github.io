@@ -37,8 +37,10 @@ Refer to [neurodocker](https://github.com/NeuroDesk/neurodocker) for more inform
 
 ## Build container
 To build a container, set up environment with:
-1) Docker, the version in our CI environment
-2) Python, the version in our CI environment
+1)  Docker (same version installed on our CI environment)
+2)  Python (same version installed on the CI environment, and launched by 'python') 
+3)  Python pip (same version installed on the CI environment, and launched by 'python -m pip')
+4)  git
 
 And then follow these steps:
 1) Sync/modify Neurodocker, the dependency we are using to build containers:
