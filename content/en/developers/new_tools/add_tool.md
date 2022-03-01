@@ -92,20 +92,22 @@ git config user.name "your name"
 git commit</code></pre>
 
 8) Generate git personal access token (if you don’t have one already)
-```
-Browse to https://github.com/NeuroDesk/neurocontainers/
-Press on your picture in upper right corner --> Setting --> Developer Settings --> Personal Access Token
-Press on “generate personal access token”
-Write something in “Notes” (doesn’t matter what, it’s for your own use)
-Check “repo”
-Check “Workflow”
-Press “Generate Token” at the bottom
-Copy the token displayed on the screen into a file, so you’ll have it later
-```
-9) Test the container locally, and if successful push repo to trigger the automatic build on GitHub
+
+   1. Browse to https://github.com/NeuroDesk/neurocontainers/
+   2. Press on your picture in upper right corner --> Setting --> Developer Settings --> Personal Access Token
+   3. Press on “generate personal access token”
+   4. Write something in “Notes” (doesn’t matter what, it’s for your own use)
+   5. Check “repo”
+   6. Check “Workflow”
+   7. Press “Generate Token” at the bottom
+   8. Copy the token displayed to somewhere safe, as you will have to user it later
+
+9) Test the container locally, and if successful push repo to trigger the automatic build on GitHub. When asked for your Github password, please provide the personal access token obtained in the previous stage.
 <pre class="language-shell command-line" data-prompt="$"><code>git pull
 git push</code></pre>
+
 10) Go to https://github.com/neurodesk/neurocontainers/actions. Check that the most recent workflow run in the list terminated successfully (green). Otherwise, click on it, click on “build docker”, and the line that caused the error will be highlighted
+
 11) Find your new package under https://github.com/orgs/NeuroDesk/packages?repo_name=neurocontainers
     
     Enter the name of the package in the search box, and verify that the full package name shows up in the format _toolName_toolVersion_
