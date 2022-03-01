@@ -37,20 +37,19 @@ Refer to [neurodocker](https://github.com/NeuroDesk/neurodocker) for more inform
 
 ## Build container
 To build a container, set up environment with:
-1)  Docker (same version installed on our CI environment)
-2)  Python (same version installed on the CI environment, and launched by 'python') 
-3)  Python pip (same version installed on the CI environment, and launched by 'python -m pip')
+1)  Docker
+2)  Python 3 (and launched by 'python') 
+3)  Python pip3 (and launched by 'python -m pip')
 4)  git
 
 And then follow these steps:
 1) Sync/modify Neurodocker, the dependency we are using to build containers:
-   1. Press "Fetch upstream" in https://github.com/NeuroDesk/neurodocker to check if our fork of Neurodocker is already up-to-date
-   2. If there are upstream commits that are not synced yet, open an issue in https://github.com/NeuroDesk/neurocontainers/issues, requesting to pull-in latest changes from Neurodocker upstream into our fork of Neurodocker. One of the admins will attend the issue and perform the operation.
-   3. If relevant to your project, add an option to neurodocker that installs new software (https://github.com/NeuroDesk/neurodocker) and create a pull request to neurodocker's main responsitory (add new tool in a branch!).
-   4. clone our fork of Neurodocker: 
+   1. If you have the permissions to do so: Press "Fetch upstream" in https://github.com/NeuroDesk/neurodocker to check if our fork of Neurodocker is already up-to-date. Otherwise, open an issue in https://github.com/NeuroDesk/neurocontainers/issues, requesting to pull-in latest changes from Neurodocker upstream into our fork of Neurodocker. One of the admins will attend the issue and perform the operation.
+   2. If relevant to your project, add an option to neurodocker that installs new software (https://github.com/NeuroDesk/neurodocker) and create a pull request to neurodocker's main responsitory (add new tool in a branch!).
+   3. clone our fork of Neurodocker: 
 <pre class="language-shell command-line" data-prompt="$"><code>git clone https://github.com/NeuroDesk/neurodocker/
 </code></pre>
-   v. install neurodocker
+   4. install neurodocker
 <pre class="language-shell command-line" data-prompt="$"><code>cd neurodocker
 python -m pip install .
 cd ..</code></pre>
@@ -86,7 +85,7 @@ sh update-builders.sh</code></pre>
 
 > if the CI build runs out of space, add the application to the following txt to add additional space.
 https://github.com/NeuroDesk/neurocontainers/blob/master/.github/workflows/free-up-space-list.txt.
-Note this, significantly increases CI run time, only use in cases of space errors.
+Note: this increases CI run time, only use in cases of out-of-space errors.
 
 6) Build and test the container locally 
 
