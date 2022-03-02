@@ -38,8 +38,8 @@ Refer to [neurodocker](https://github.com/NeuroDesk/neurodocker) for more inform
 ## Build container
 To build a container, set up environment with:
 1)  Docker
-2)  Python (search for "python_requires" in https://github.com/NeuroDesk/neurodocker/blob/master/setup.cfg for minimal version required. If you have several versions of Python installed in the environment, typing 'python' in the terminal should launch this specific version) 
-3)  Python pip3 (and launched by 'python -m pip')
+2)  Python (search for "python_requires" in https://github.com/NeuroDesk/neurodocker/blob/master/setup.cfg for minimal version of Python required. If you have several versions of Python installed in the environment, typing 'python' in the terminal should launch a version with equal or higher version number) 
+3)  Python pip3 (and should be launched by 'python -m pip')
 4)  git
 
 And then follow these steps:
