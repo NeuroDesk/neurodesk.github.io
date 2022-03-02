@@ -152,7 +152,7 @@ If the container doesn't work yet, it's sometimes useful to try and troubleshoot
 
 15) Fork https://github.com/NeuroDesk/neurocommand/ to your Github account 
 16) Edit an entry for your package in your fork of neurocommand/blob/main/neurodesk/apps.json based on one of the other entries (generating one menu item for opening a terminal inside the containers, and one menu item for the GUI, if relevant). Notice that in the json file, the version field should contain the _buildDate_
-17) Include an icon file in your fork of neurocommand/tree/main/neurodesk/icons
+17) Include an icon file in your fork of neurocommand/neurodesk/icons
 18) Send a pull request from your fork of neurocommand to https://github.com/NeuroDesk/neurocommand/ 
 19) When the pull request is merged by Neurodesk admins, it will trigger an action to build the singularity container, distribute it in all object storage locations and on CVMFS, and it will update the menus in the desktop image on the next daily build
 20) Check in the dev build if everything is ok before releasing a new version of Neurodesktop:
