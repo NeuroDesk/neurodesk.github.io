@@ -38,8 +38,8 @@ Refer to [neurodocker](https://github.com/NeuroDesk/neurodocker) for more inform
 ## Build container
 To build a container, set up environment with:
 1)  Docker
-2)  Python (search for "python_requires" in https://github.com/NeuroDesk/neurodocker/blob/master/setup.cfg for minimal version required. If you have several versions of Python installed in the environment, typing 'python' in the terminal should launch this specific version) 
-3)  Python pip3 (and launched by 'python -m pip')
+2)  Python (search for "python_requires" in https://github.com/NeuroDesk/neurodocker/blob/master/setup.cfg for minimal version of Python required. If you have several versions of Python installed in the environment, typing 'python' in the terminal should launch a version with equal or higher version number) 
+3)  Python pip3 (and should be launched by 'python -m pip')
 4)  git
 
 And then follow these steps:
@@ -70,12 +70,14 @@ Pushes to the recipes in your fork will now trigger actions to build the respect
 
 https://github.com/NeuroDesk/neurocontainers
 <pre class="language-shell command-line" data-prompt="$"><code>git clone https://github.com/NeuroDesk/neurocontainers/</code></pre>
+
 3) Copy the directory template and rename to _newapp_ in `neurocontainers/recipes`
 <pre class="language-shell command-line" data-prompt="$"><code>cd neurocontainers/recipes
 cp -R template newapp</code></pre>
+
 4) Modify `build.sh` in `neurocontainers/recipes/newapp` to build your application and update README.md (make sure the version is correct in the README!)
 <pre class="language-shell command-line" data-prompt="$" data-output="2-3"><code>cd newapp
-(edit build.sh as required)
+(edit build.sh as required; notice that the example build script in the template has instructions to build a conatiner for datalad, that may or may not suite your exact needs)
 (edit README.md as required)</code></pre>
 Upload your application to object storage first if needed, so you can then download it in build.sh (ask for instructions about this if you don't know the key, and never share it anywhere public!)
 
@@ -125,6 +127,7 @@ git push</code></pre>
 12) Obtain _buildDate_ by clicking on the full package name that came up in the search. The build date will be the newest date shown under **Recent tagged image versions**
 13) Use _toolName_, _toolVersion_ and _buildDate_ from the previous two steps to manually download the package by typing the following in a terminal open in Neurodesktop 
   <pre class="language-shell command-line" data-prompt="$"><code>bash /neurocommand/local/fetch_and_run.sh toolName toolVersion buildDate
+  (when you see the "Singularity>" prompt, type exit and ENTER)
 ml toolName/toolVersion</code></pre>
 
   For example: 
@@ -132,6 +135,8 @@ ml toolName/toolVersion</code></pre>
   
   The command to use in a terminal open in Neurodesktop is:
 <pre class="language-shell command-line" data-prompt="$"><code>bash /neurocommand/local/fetch_and_run.sh itksnap 3.8.0 20210322
+  (when you see the "Singularity>" prompt, type exit and ENTER)
+module use /neurodesktop-storage/containers/modules
 ml toolName/toolVersion</code></pre>
 
 {{% alert title="Depreciation notice" color="warning" %}}
@@ -148,7 +153,7 @@ If the container doesn't work yet, it's sometimes useful to try and troubleshoot
 
 15) Fork https://github.com/NeuroDesk/neurocommand/ to your Github account 
 16) Edit an entry for your package in your fork of neurocommand/blob/main/neurodesk/apps.json based on one of the other entries (generating one menu item for opening a terminal inside the containers, and one menu item for the GUI, if relevant). Notice that in the json file, the version field should contain the _buildDate_
-17) Include an icon file in your fork of neurocommand/tree/main/neurodesk/icons
+17) Include an icon file in your fork of neurocommand/neurodesk/icons
 18) Send a pull request from your fork of neurocommand to https://github.com/NeuroDesk/neurocommand/ 
 19) When the pull request is merged by Neurodesk admins, it will trigger an action to build the singularity container, distribute it in all object storage locations and on CVMFS, and it will update the menus in the desktop image on the next daily build
 20) Check in the dev build if everything is ok before releasing a new version of Neurodesktop:

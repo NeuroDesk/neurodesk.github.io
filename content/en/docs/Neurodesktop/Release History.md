@@ -8,7 +8,7 @@ description: >-
 
 # latest
 - added bidscoin 3.7.0 (converting data to bids)
-# 20220302
+## 20220302
 - update of ROMEO (phase unwrapping) to latest version 3.2.8
 - update of QSMxT (automated end-to-end QSM procerssing) to latest version 1.1.10
 - added mritools 3.3.0 (includes clearswi 1.0.1, mcpc3ds 0.1.0, romeo 3.2.8 as compiled binaries)
