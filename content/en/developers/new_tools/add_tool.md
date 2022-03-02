@@ -125,6 +125,7 @@ git push</code></pre>
 12) Obtain _buildDate_ by clicking on the full package name that came up in the search. The build date will be the newest date shown under **Recent tagged image versions**
 13) Use _toolName_, _toolVersion_ and _buildDate_ from the previous two steps to manually download the package by typing the following in a terminal open in Neurodesktop 
   <pre class="language-shell command-line" data-prompt="$"><code>bash /neurocommand/local/fetch_and_run.sh toolName toolVersion buildDate
+  (when you see the "Singularity>" prompt, type exit and ENTER)
 ml toolName/toolVersion</code></pre>
 
   For example: 
@@ -132,6 +133,7 @@ ml toolName/toolVersion</code></pre>
   
   The command to use in a terminal open in Neurodesktop is:
 <pre class="language-shell command-line" data-prompt="$"><code>bash /neurocommand/local/fetch_and_run.sh itksnap 3.8.0 20210322
+  (when you see the "Singularity>" prompt, type exit and ENTER)
 ml toolName/toolVersion</code></pre>
 
 {{% alert title="Depreciation notice" color="warning" %}}
