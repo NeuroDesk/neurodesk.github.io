@@ -70,12 +70,14 @@ Pushes to the recipes in your fork will now trigger actions to build the respect
 
 https://github.com/NeuroDesk/neurocontainers
 <pre class="language-shell command-line" data-prompt="$"><code>git clone https://github.com/NeuroDesk/neurocontainers/</code></pre>
+
 3) Copy the directory template and rename to _newapp_ in `neurocontainers/recipes`
 <pre class="language-shell command-line" data-prompt="$"><code>cd neurocontainers/recipes
 cp -R template newapp</code></pre>
+
 4) Modify `build.sh` in `neurocontainers/recipes/newapp` to build your application and update README.md (make sure the version is correct in the README!)
 <pre class="language-shell command-line" data-prompt="$" data-output="2-3"><code>cd newapp
-(edit build.sh as required)
+(edit build.sh as required; notice that the example build script in the template has instructions to build a conatiner for datalad, that may or may not suite your exact needs)
 (edit README.md as required)</code></pre>
 Upload your application to object storage first if needed, so you can then download it in build.sh (ask for instructions about this if you don't know the key, and never share it anywhere public!)
 
