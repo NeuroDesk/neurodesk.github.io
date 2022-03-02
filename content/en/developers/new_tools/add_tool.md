@@ -136,6 +136,7 @@ ml toolName/toolVersion</code></pre>
   The command to use in a terminal open in Neurodesktop is:
 <pre class="language-shell command-line" data-prompt="$"><code>bash /neurocommand/local/fetch_and_run.sh itksnap 3.8.0 20210322
   (when you see the "Singularity>" prompt, type exit and ENTER)
+module use /neurodesktop-storage/containers/modules
 ml toolName/toolVersion</code></pre>
 
 {{% alert title="Depreciation notice" color="warning" %}}
