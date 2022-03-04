@@ -30,9 +30,8 @@ Click on the Launcher icon in bottom-left corner, navigate to the "Neurodesk" me
 
 If you choose a menu entry with "GUI" at the end (e.g., fsleyesGUI 6.0.3), the main GUI interface of the application will open. 
 
-If you choose a menu entry without "GUI" at the end (e.g., fsl 6.0.3), a terminal window will open, and you can use it to run any of the utilities packaged with the application, including the graphical utilities (e.g., typing "fsl" to run FSL's main menu).  Notice that the terminal that opens only allows to run utilities from the single application chosen. 
-
-To be able to run utilities from multiple applications in the same terminal (or in the same script), please open a terminal by clicking on the terminal icon in the bottom toolbar of Neurodesktop. You will then be able to use the 'module' command in order to load the desired applications.
+If you choose a menu entry without "GUI" at the end (e.g., fsl 6.0.3), a terminal window will open, and you can use it to run any of the utilities packaged with the application, including the graphical utilities (e.g., typing "fsl" to run FSL's main menu).  Please be patients when running a utility for the first time; Neurodesk is using a clever system that only downloads the utilities that you are actually using, but this may incur a short delay on the order of seconds.
+Also notice that the terminal that opens only allows to run utilities from the one application chosen in the menu. To be able to run utilities from multiple applications in the same terminal (or in the same script), please open a separate terminal by clicking on the terminal icon in the bottom toolbar of Neurodesktop. You will then be able to use the 'module' command in order to load the desired applications.
 
 ## How to keep your modifications in the container
 We designed neurodesk with reproducibility as a main goal, so the desktop containers should not be modified if one aims for full reproducibility. However, there is one good option to keep your settings across different container versions: You can write a shell script that installs additional packages and modifies the environment so it's perfect for you. This script can then be re-executed in a new desktop version and will enable a reprudcible customization.
