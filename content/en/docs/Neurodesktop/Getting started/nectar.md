@@ -6,7 +6,7 @@ description: >
   Run neurodesktop in the Nectar Virtual Desktop Service
 ---
 
-Unfortunately, this option is only available to Australian/NZ researchers. Please accept our apologies otherwise.
+This option is only available to Australian/NZ researchers.
 
 Go to https://desktop.rc.nectar.org.au/ 
 
