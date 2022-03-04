@@ -1,7 +1,6 @@
 ---
 title: "Singularity"
 linkTitle: "Singularity"
-weight: 4
 description: >
   Neurodesk Singularity Containers
 ---

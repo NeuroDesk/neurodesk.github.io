@@ -1,7 +1,6 @@
 ---
 title: "CVMFS"
 linkTitle: "CVMFS"
-weight: 4
 description: >
   Neurodesk Singularity Containers on CVMFS
 ---

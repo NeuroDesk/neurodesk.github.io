@@ -1,7 +1,6 @@
 ---
 title: "Docker"
 linkTitle: "Docker"
-weight: 4
 description: >
   Neurodesk Docker containers
 ---
