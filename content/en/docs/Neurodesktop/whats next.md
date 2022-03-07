@@ -30,7 +30,7 @@ Click on the Launcher icon in bottom-left corner, navigate to the "Neurodesk" me
 
 If you choose a menu entry with "GUI" at the end (e.g., fsleyesGUI 6.0.3), the main GUI interface of the application will open. 
 
-If you choose a menu entry without "GUI" at the end (e.g., fsl 6.0.3), a terminal window will open, and you can use it to run any of the utilities packaged with the application, including the graphical utilities (e.g., typing "fsl" to run FSL's main menu).  Please be patients when running a utility for the first time; Neurodesk is using a clever system that only downloads the utilities that you are actually using, but this may incur a short delay on the order of seconds.
+If you choose a menu entry without "GUI" at the end (e.g., fsl 6.0.3), a terminal window will open, and you can use it to run any of the utilities packaged with the application, including the graphical utilities (e.g., typing "fsl" to run FSL's main menu).  Please be patient when running a utility for the first time; Neurodesk is using a clever system that only downloads the utilities that you are actually using, but this may incur a short delay on the order of seconds.
 Also notice that the terminal that opens only allows to run utilities from the one application chosen in the menu. To be able to run utilities from multiple applications in the same terminal (or in the same script), please open a separate terminal by clicking on the terminal icon in the bottom toolbar of Neurodesktop. You will then be able to use the 'module' command in order to load the desired applications.
 
 ## How to keep your modifications in the container
