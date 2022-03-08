@@ -38,3 +38,7 @@ Yes, there are multiple ways of using the containers direclty and we provide an 
 
 ## How can I contribute new containers?
 We are still working on making this easier, but the current workflow to add new applications is described here: https://neurodesk.github.io/developers/new_tools/add_tool/
+
+## I couldn't find the information I was looking for. Where can I get additional assistance?
+Open a Github account, and post your question on the Neurodesk forum:
+https://github.com/NeuroDesk/neurodesk.github.io/discussions
