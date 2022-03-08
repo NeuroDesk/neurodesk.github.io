@@ -2,6 +2,9 @@
 title: "Neurodesk FAQ"
 linkTitle: "FAQ"
 weight: 1
+menu:
+  main:
+    weight: 1
 description: >
   Frequently Asked Questions.
 ---
