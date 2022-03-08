@@ -15,8 +15,12 @@ Neurodesk provides a containerised data analysis environment to facilitate repro
 More information: 
 - [A Neurodesk Overview](/docs/overview/)
 - A 2 minute video explaining what Neurodesk is: [Neurodesk in 2 minutes](https://www.youtube.com/watch?v=JLv_5fycugw)
+- An online interactive demo you can try RIGHT NOW in your browser: https://neurodesk.github.io/docs/neurodesktop/getting-started/play/
+
+In-depth information:
 - A 15 minute video explaining what Neurodesk is: [Neurodesk in 15 minutes](https://youtu.be/2ATgTOsiGdY)
 - A 35 minute video explaining the technical details of Neurodesk: [Neurodesk in 35 minutes - behind the scenes](https://youtu.be/V5gAA9NiX_s)
+
 
 ## Can I run Neurodesk on an HPC without Docker?
 Yes, our project aims to run on the hardware you have access to. However, without docker support you cannot use our desktop interface [NeuroDesktop](/docs/neurodesktop/getting-started) but you can still use the command line interface [NeuroCommand on HPC](https://neurodesk.github.io/docs/neurocommand/getting-started/linux/#command-line-mode-eg-running-on-an-hpc-or-cvl). This works well for batch processing on HPCs once you developed your pipeline in our desktop interface. If your HPC provides a desktop interface you can use all our graphical applications without any issues and the GUIs even work via SSH x-forwarding - it's not the most performant experience, but it works well enough.
