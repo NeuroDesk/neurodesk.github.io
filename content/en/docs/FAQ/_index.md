@@ -22,9 +22,9 @@ More information:
 We recommend to cite the tool you are using with the version number and the builddate, because this guarantees full reproducibility. You can find this information here: https://neurodesk.github.io/applications/. It's also very important to cite the paper of the tool you are using and you find this information in the README.m of each tool. Finally you can cite Neurodesk with its version and a link to our website. 
 
 Here is an example:
-```
+
 “TGV QSM (v1.0.0_20210629, Langkammer, C; Bredies, K; Poser, BA; Barth, M; Reishofer, G; Fan, AP; Bilgic, B; Fazekas, F; Mainero; C; Ropele, S. Fast Quantitative Susceptibility Mapping using 3D EPI and Total Generalized Variation. Neuroimage. 2015 May 1;111:622-30. doi: 10.1016/j.neuroimage.2015.02.041) was run in Neurodesk (v20220302, https://neurodesk.github.io/).”
-```
+
 
 ## Can I run Neurodesk on an HPC without Docker?
 Yes, our project aims to run on the hardware you have access to. However, without docker support you cannot use our desktop interface [NeuroDesktop](/docs/neurodesktop/getting-started) but you can still use the command line interface [NeuroCommand on HPC](https://neurodesk.github.io/docs/neurocommand/getting-started/linux/#command-line-mode-eg-running-on-an-hpc-or-cvl). This works well for batch processing on HPCs once you developed your pipeline in our desktop interface. If your HPC provides a desktop interface you can use all our graphical applications without any issues and the GUIs even work via SSH x-forwarding - it's not the most performant experience, but it works well enough.
