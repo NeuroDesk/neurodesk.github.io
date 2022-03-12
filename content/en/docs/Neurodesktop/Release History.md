@@ -8,6 +8,7 @@ description: >-
 
 ## latest
 - added bidscoin 3.7.0 (converting data to bids)
+- added sigviewer 0.6.4-1 (viewing electrophysiological data)
 
 ## 20220302
 - update of ROMEO (phase unwrapping) to latest version 3.2.8
