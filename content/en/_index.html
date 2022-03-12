@@ -4,15 +4,17 @@ linkTitle = "Neurodesk"
 
 +++
 
-<section class="row td-box -bg-dark justify-content-center h-50 ">
+<section class="row td-box -bg-dark justify-content-center h-auto">
 	<div class="col-md-3 col-lg-1 order-xs-first order-sm-first order-md-last text-center my-auto">
-		<img src = "neurodesk.svg" style="height:350px;" alt="neurodesk logo"/>
+		<img src = "neurodesk.svg" style="height:250px;" alt="neurodesk logo"/>
 	</div>
 	<div class="col-md-7 col-lg-first order-xs-2 order-sm-2 order-md-2 my-auto">
 		<h2>Get started with Neurodesk</h2>
 		<p class="lead mt-2">A flexible, scalable, and browser-based data analysis environment for reproducible neuroimaging</p>
 		
 		<div class="mx-auto mt-5">
+			<a class="btn btn-lg btn-secondary mr-3 mb-4" href="docs/faq/#what-is-neurodesk">
+			 What is Neurodesk ?</a>
 			<a class="btn btn-lg btn-secondary mr-3 mb-4" href="docs/neurodesktop/getting-started/linux">
 			<i class="fab fa-linux"></i> Linux </a>
 			<a class="btn btn-lg btn-secondary mr-3 mb-4" href="docs/neurodesktop/getting-started/windows">
@@ -23,18 +25,26 @@ linkTitle = "Neurodesk"
 			<i class="fas fa-server"></i> HPC </a>
 			<a class="btn btn-lg btn-secondary mr-3 mb-4" href="docs/neurodesktop/getting-started/cloud">
 			<i class="fas fa-cloud"></i> Cloud </a>
-			<a class="btn btn-lg btn-secondary mr-3 mb-4" href="docs/neurocontainers/googlecolab/">
-			<i class="fab fa-google"></i> Google Colab </a>
-			<a class="btn btn-lg btn-secondary mr-3 mb-4" href="docs/neurodesktop/getting-started/nectar/">
-			<i class="fa fa-desktop"></i> Nectar Desktop Service </a>
-			<a class="btn btn-lg btn-secondary mr-3 mb-4" href="docs/neurodesktop/getting-started/play">
-			<i class="fa fa-play"></i> Neurodesk Play </a>
 		</div>
 	</div>
 </section>
 
-
 {{< blocks/section color="light" >}}
+{{% blocks/feature icon="fa fa-play" title="Neurodesk Play" url="docs/neurodesktop/getting-started/play" %}}
+(Under Construction) Try out Neurodesk in the browser
+{{% /blocks/feature %}}
+{{% blocks/feature icon="fa fa-desktop" title="Nectar Desktop Service" url="docs/neurodesktop/getting-started/nectar" %}}
+Run Neurodesktop in the Nectar Virtual Desktop Service (Requires login)
+{{% /blocks/feature %}}
+{{% blocks/feature icon="fab fa-google" title="Google Colab" url="docs/neurocontainers/googlecolab/" %}}
+Run Neurodesk Singularity Containers in Google Colab
+{{% /blocks/feature %}}
+{{% blocks/feature icon="fa fa-envelope" title="Discussions" url="https://github.com/NeuroDesk/neurodesk.github.io/discussions" %}}
+Ask questions, suggest new features or raise any issues you have (Github account required)
+{{% /blocks/feature %}}
+{{< /blocks/section >}}
+
+{{< blocks/section color="dark" >}}
 {{% blocks/feature icon="far fa-window-maximize" title="Neurodesktop" url="docs/neurodesktop" %}}
 Fully featured desktop in a container
 {{% /blocks/feature %}}
@@ -46,8 +56,5 @@ Software container library
 {{% /blocks/feature %}}
 {{% blocks/feature icon="fas fa-question-circle" title="FAQ" url="docs/faq/#what-is-neurodesk" %}}
 Frequently Asked Questions
-{{% /blocks/feature %}}
-{{% blocks/feature icon="fa fa-envelope" title="Discussions" url="https://github.com/NeuroDesk/neurodesk.github.io/discussions" %}}
-Ask questions, suggest new features or raise any issues you have (Github account required)
 {{% /blocks/feature %}}
 {{< /blocks/section >}}
