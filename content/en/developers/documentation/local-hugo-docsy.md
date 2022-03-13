@@ -6,7 +6,10 @@ description: >
   How to edit the documentation
 ---
 
-## Local Hugo Docsy
+## Local Hugo Docsy in Linux and WSL2
+https://github.com/NeuroDesk/neurodesk.github.io/blob/hugo-docsy/CONTRIBUTING.md
+
+## Local Hugo Docsy in Windows
 
 ### Clone repository
 Using SSH
