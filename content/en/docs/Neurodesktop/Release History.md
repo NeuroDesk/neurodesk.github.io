@@ -9,6 +9,7 @@ description: >-
 ## latest
 - added bidscoin 3.7.0 (converting data to bids)
 - added sigviewer 0.6.4-1 (viewing electrophysiological data)
+- added niftyreg 1.4.0 (image registration tool)
 
 ## 20220302
 - update of ROMEO (phase unwrapping) to latest version 3.2.8
