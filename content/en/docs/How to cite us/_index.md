@@ -21,6 +21,8 @@ Finally you can cite Neurodesk with its version and a link to our website.
 
 If you used any EEG/MEG or electrophysiology tools, please link to the AEDAPT website: https://www.aedapt.net/
 
-## Example
+## Examples
 
 “TGV QSM (v1.0.0_20210629, Langkammer, C; Bredies, K; Poser, BA; Barth, M; Reishofer, G; Fan, AP; Bilgic, B; Fazekas, F; Mainero; C; Ropele, S. Fast Quantitative Susceptibility Mapping using 3D EPI and Total Generalized Variation. Neuroimage. 2015 May 1;111:622-30. doi: 10.1016/j.neuroimage.2015.02.041) was run in Neurodesk (v20220302, https://neurodesk.github.io/).”
+
+"EEGlab (2020.0_20211026, Delorme A & Makeig S (2004) EEGLAB: an open-source toolbox for analysis of single-trial EEG dynamics, Journal of Neuroscience Methods 134:9-21.) was run in Neurodesk (v20220302, https://neurodesk.github.io/) part of the AEDAPT project https://www.aedapt.net/.”
