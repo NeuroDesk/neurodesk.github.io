@@ -1,7 +1,7 @@
 ---
 title: "Contributors"
 linkTitle: "Contributors"
-weight: 0
+weight: 1
 description: >
   This section acknowledges the contributions made to the project.
 ---
@@ -15,6 +15,7 @@ If you contributed to the project please list yourself here with a description o
 
 
 ## Steffen Bollmann 
+- https://github.com/stebo85
 - funding: Oracle Cloud (114k AUD), ECR Knowledge Exchange & Translation Fund (42k AUD), ARDC (CI for $566k AUD)
 - system architecture
 - CVMFS container deployment
@@ -28,6 +29,7 @@ If you contributed to the project please list yourself here with a description o
 - outreach (e.g. Twitter, talks at conferences, youtube videos)
 
 ## Aswin Narayanan
+- https://github.com/aswinnarayanan
 - funding: ARDC (CI for $566k AUD)
 - Github CI development
 - Neurodesktop container development
@@ -36,26 +38,29 @@ If you contributed to the project please list yourself here with a description o
 - neurocommand installer rewrite in Python
 
 ## Angela Renton
+- https://github.com/air2310
 - Tutorials (MNE-Python, Tutorial template)
 - graphics for website (layer diagram)
 - documentation
 - user testing
 
 ## Thomas Shaw
+- https://github.com/thomshaw92
 - Win, Mac, Linux startup scripts
 - initial transparent singularity prototype
 - application container development (LASHiS, ASHS)
 - user testing
 
 ## Oren Civier
+- https://github.com/civier
 - funding: ARDC (CI for $566k AUD)
 - documentation
 - softare application containers (bidscoin)
 - user testing
 
 ## Tom Johnston
-- funding: ARDC (PI for $566k AUD)
 - https://github.com/TomEmotion
+- funding: ARDC (PI for $566k AUD)
 - Application Container (sigviewer)
 
 ## Martin Grignard 
@@ -63,6 +68,7 @@ If you contributed to the project please list yourself here with a description o
 - initial neurocommand prototype and menu system builder, including apps.json idea
 
 ## David White
+- https://github.com/DavidjWhite33
 - application container development (Brainstorm, eeglab)
 
 ## Akshaiy91
@@ -93,7 +99,8 @@ If you contributed to the project please list yourself here with a description o
 - application containers (fieldtrip)
 - tutorials (fieldtrip)
 
-## Stefanie Evas 
+## Stefanie Evas
+- https://github.com/neuro-sevas
 - documentation
 - application containers 
 

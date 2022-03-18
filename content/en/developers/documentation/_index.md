@@ -1,7 +1,7 @@
 ---
 title: "Documentation"
 linkTitle: "Documentation"
-weight: 2
+weight: 3
 description: >
   How to edit the documentation
 ---
