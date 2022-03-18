@@ -13,7 +13,7 @@ description: >
 
 We recommend to cite the tool you are using with the version number and the builddate, because this guarantees full reproducibility. You can find this information here: https://neurodesk.github.io/applications/. It's also very important to cite the paper of the tool you are using and you find this information in the README.m of each tool.
 
-## Citing Neurodesk itself
+## Citing Neurodesk
 
 Finally you can cite Neurodesk with its version and a link to our website. 
 
