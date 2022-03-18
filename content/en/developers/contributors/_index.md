@@ -31,11 +31,12 @@ If you contributed to the project please list yourself here with a description o
 ## Aswin Narayanan
 - https://github.com/aswinnarayanan
 - funding: ARDC (CI for $566k AUD)
-- Github CI development
-- Neurodesktop container development
-- Neurodesk Play desktop & Kubernetes development
-- Hugo website and CI deployment 
-- neurocommand installer rewrite in Python
+- Neurocontainer devops
+- Neurodesktop development
+- Neurocommand installer rewrite
+- Neurodesk Play & Kubernetes implementation
+- Jupyter notebook support
+- Hugo website build and documentation
 
 ## Angela Renton
 - https://github.com/air2310
