@@ -1,7 +1,7 @@
 ---
 title: "Contributors"
 linkTitle: "Contributors"
-weight: 3
+weight: 0
 description: >
   This section acknowledges the contributions made to the project.
 ---
