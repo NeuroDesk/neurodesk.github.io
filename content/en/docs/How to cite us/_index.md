@@ -1,6 +1,6 @@
 ---
 title: "How to cite us"
-linkTitle: "How to Cite Us"
+linkTitle: "Cite"
 weight: 1
 menu:
   main:
