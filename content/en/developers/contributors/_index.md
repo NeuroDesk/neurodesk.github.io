@@ -3,7 +3,7 @@ title: "Contributors"
 linkTitle: "Contributors"
 weight: 1
 description: >
-  This section acknowledges the contributions made to the project.
+    This section acknowledges the contributions made to the project.
 ---
 
 If you contributed to the project please list yourself here with a description of your contribution. We try to update this page based on the git commit history:
@@ -21,11 +21,11 @@ If you contributed to the project please list yourself here with a description o
 - CVMFS container deployment
 - initial desktop container prototype 
 - container build scripts 
-- application containers (in total 37 containers contributed)
-- migrating container recipes to neurodocker upstream
+- application containers (afni, aslprep, code, convert3D, freesurfer, hdbet, minc mriqc, romeo, spm12, tgvqsm, bart, fatsegnet, fsl,  itksnap, lcmodel, mritools, niistat, qsmxt, root, slicer, trackvis, ants, cat12, conn, diffusiontoolkit, gimp, mricrogl, mrtrix3, rstudio, slicersalt, surfice, vesselapp, bidstools, clearswi, connectomeworkbench, dsistudio, fmriprep, julia, mrtrix3tissue, palm rabies, spinalcordtoolbox)
+- migrating container recipes and bugfixes to neurodocker upstream (fsl, ants)
 - documentation
 - tutorials (QSM, SWI, Unwrapping, lcmodel, freesurfer)
-- google colab and jupyter notebook support
+- google colab support
 - outreach (e.g. Twitter, talks at conferences, youtube videos)
 
 ## Aswin Narayanan
