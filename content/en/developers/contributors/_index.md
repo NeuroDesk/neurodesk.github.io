@@ -105,7 +105,7 @@ If you contributed to the project please list yourself here with a description o
 - documentation
 - application containers 
 
-## Jeryn
+## Jeryn Chang
 - https://github.com/Cadaei-Yuvxvs
 - application container development (oshyx)
 
