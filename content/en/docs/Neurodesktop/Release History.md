@@ -11,6 +11,7 @@ description: >-
 - added sigviewer 0.6.4 (viewing electrophysiological data)
 - added niftyreg 1.4.0 (image registration tool)
 - added mne 1.0.0 (EEG processing pipeline)
+- added vesselvio 1.1.1 (vessel visualisation)
 
 ## 20220302
 - update of ROMEO (phase unwrapping) to latest version 3.2.8
