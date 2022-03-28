@@ -17,7 +17,7 @@ Keep a note of the release date of the container image that you installed. Regar
 
 ![version](/version.png 'version')
 
-We regularly update neurodesktop to make sure it’s running well and has up-to-date software. You can check the [Release History](https://neurodesk.github.io/docs/neurodesktop/release-history/) page for details of previous releases. If you’d like to update your container at any time, simply switch out the release number for the version you would like. If you’ve finished working on an analysis pipeline and would like to share it with others, you can point them toward the stable release number that you worked in. That way anyone, on any computer around the world can replicate your analysis pipeline in the exact same computing environment that you developed it in. 
+We regularly update neurodesktop to make sure it’s running well and has up-to-date software. You can check the [Release History](https://neurodesk.org/docs/neurodesktop/release-history/) page for details of previous releases. If you’d like to update your container at any time, simply switch out the release number for the version you would like. If you’ve finished working on an analysis pipeline and would like to share it with others, you can point them toward the stable release number that you worked in. That way anyone, on any computer around the world can replicate your analysis pipeline in the exact same computing environment that you developed it in. 
 
 ## Video tutorial
 Click [here](https://www.youtube.com/watch?v=JLv_5fycugw) to watch a 2 minute tutorial video from OHBM 2021

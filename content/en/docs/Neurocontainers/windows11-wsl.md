@@ -39,7 +39,7 @@ sudo rm -rf /usr/local/go $GOPATH </code>
 </pre>
 
 ### CVMFS
-Follow the instructions here: https://neurodesk.github.io/docs/neurocontainers/cvmfs/
+Follow the instructions here: https://neurodesk.org/docs/neurocontainers/cvmfs/
 
 ### LMOD
 <pre class="language-batch command-line" data-prompt=">">

@@ -32,4 +32,4 @@ Neurodesktop comes with the essential software required for neuroimaging data an
      * Firefox
      * OpenSSH client
 
-The neurodesktop environment is built to be light and fast to download and start-up. Most additional programs are therefore downloaded when they are first used. A list of these packages can be found [here](https://neurodesk.github.io/applications/)
+The neurodesktop environment is built to be light and fast to download and start-up. Most additional programs are therefore downloaded when they are first used. A list of these packages can be found [here](https://neurodesk.org/applications/)

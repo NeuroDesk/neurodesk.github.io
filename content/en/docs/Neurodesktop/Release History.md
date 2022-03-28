@@ -44,7 +44,7 @@ description: >-
 - oshyx was updated to 0.3
 
 ## 20211220
-- neurodesktop can now be accessed via native RDP client as well (e.g. for multi-monitor support): https://neurodesk.github.io/docs/neurodesktop/getting-started/windows/#using-an-rdp-client
+- neurodesktop can now be accessed via native RDP client as well (e.g. for multi-monitor support): https://neurodesk.org/docs/neurodesktop/getting-started/windows/#using-an-rdp-client
 - there is a new Help button in the menu :)
 - updates of ants 2.3.4 (now includes Scripts as well, including antsCookTemplatePriors.sh) + newly added version 2.3.5
 - new version of QSMxT 1.1.9 20211219
@@ -66,7 +66,7 @@ description: >-
 
 ## 20211018
 - added Rstudio, R and multiple R packages (plotly, car, tidyverse, ...)
-- added ClearSWI and ROMEO for MRI phase processing (including new Tutorials: https://neurodesk.github.io/tutorials/phase_processing/)
+- added ClearSWI and ROMEO for MRI phase processing (including new Tutorials: https://neurodesk.org/tutorials/phase_processing/)
 - added more categories in applications menu (Body, Electrophysiology, Hippocampus, Phase Processing, Rodent Imaging, Shape Analysis, Spine, Statistics)
 - bugfix: improved startup time of the desktop container (miniconda in homedirectory was causing chmod slowdown)
 - bugfix: ssh, vnc and rdp servers are now restarted in case the container was stopped and started again (e.g. on Standby)
