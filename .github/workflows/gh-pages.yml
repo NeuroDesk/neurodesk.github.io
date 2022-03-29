@@ -17,7 +17,7 @@ jobs:
 
       - name: Change baseURL (if fork)
         if: github.repository != 'NeuroDesk/neurodesk.github.io'
-        run: sed -i "s|https://neurodesk.github.io|https://${GITHUB_REPOSITORY}|g" config.toml
+        run: sed -i "s|https://www.neurodesk.org/|https://${GITHUB_REPOSITORY}/|g" config.toml
 
       - name: Download applist.json
         run: wget -O data/applist.json https://raw.githubusercontent.com/NeuroDesk/neurocommand/main/cvmfs/applist.json
