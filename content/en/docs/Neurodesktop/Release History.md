@@ -7,11 +7,13 @@ description: >-
 ---
 
 ## latest
+- in development: vesselvio 1.1.1 (vessel visualisation) contributed by Steffen
+
+## 20220329
 - added bidscoin 3.7.0 (converting data to bids) contributed by Oren
 - added sigviewer 0.6.4 (viewing electrophysiological data) contributed by Tom
 - added niftyreg 1.4.0 (image registration tool) contributed by Steffen
 - added mne 1.0.0 (EEG processing pipeline) contributed by David
-- added vesselvio 1.1.1 (vessel visualisation) contributed by Steffen
 
 ## 20220302
 - update of ROMEO (phase unwrapping) to latest version 3.2.8
