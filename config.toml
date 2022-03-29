@@ -1,4 +1,4 @@
-baseURL = "https://neurodesk.org/"
+baseURL = "https://www.neurodesk.org/"
 title = "NeuroDesk"
 
 enableRobotsTXT = true
