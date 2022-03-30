@@ -10,7 +10,7 @@ Follow the instructions to enable Windows Subsystem for Linux 2 in Windows 11: h
 
 ## 2. Configure CVFMS, Singularity and LMOD (only needs to be done once)
 
-### Instal build tools
+### Install build tools
 <pre class="language-batch command-line" data-prompt=">">
 <code>sudo apt update
 sudo apt install make gcc </code>
