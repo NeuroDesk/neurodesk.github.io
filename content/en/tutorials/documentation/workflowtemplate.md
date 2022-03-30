@@ -58,7 +58,7 @@ Thanks so much for taking the time to contribute your workflow to the Neurodesk 
 
 ## Formatting guidelines
 
-You can embelish your text in this tutorial using markdown conventions; text can be **bold**, _italic_, or ~~strikethrough~~. You can also add [Links](https://neurodesk.org/), and you can organise your tutorial with headers, starting at level 2 (the page title is a level 1 header):
+You can embelish your text in this tutorial using markdown conventions; text can be **bold**, _italic_, or ~~strikethrough~~. You can also add [Links](https://www.neurodesk.org/), and you can organise your tutorial with headers, starting at level 2 (the page title is a level 1 header):
 
 ## Level 2 heading
 

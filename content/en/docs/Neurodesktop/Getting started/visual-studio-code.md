@@ -66,4 +66,4 @@ This will open a `neurodesktop%3alatest.json` file. Overwrite the file with the 
 }
 {{< /code >}}
 
-Close this VS Code window. Use steps in [previous section](https://neurodesk.org/docs/neurodesktop/visual-studio-code/#connecting-to-neurodesktop) to connect normally
+Close this VS Code window. Use steps in [previous section](https://www.neurodesk.org/docs/neurodesktop/visual-studio-code/#connecting-to-neurodesktop) to connect normally

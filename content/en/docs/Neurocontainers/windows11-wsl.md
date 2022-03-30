@@ -45,7 +45,7 @@ export SINGULARITY_BINDPATH='/cvmfs,/mnt,/home'</code>
 </pre>
 
 ### CVMFS
-Follow the instructions here: https://neurodesk.org/docs/neurocontainers/cvmfs/
+Follow the instructions here: https://www.neurodesk.org/docs/neurocontainers/cvmfs/
 
 ### LMOD
 <pre class="language-batch command-line" data-prompt=">">

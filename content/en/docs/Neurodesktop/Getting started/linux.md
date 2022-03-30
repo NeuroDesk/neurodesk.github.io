@@ -51,7 +51,7 @@ You should press "Allow"
 
 {{< alert >}}
 If using Firefox, you might not be able to paste clipboard content into the virtual desktop from the host computer. In that case, please follow the instructions here:
-https://neurodesk.org/docs/neurodesktop/troubleshooting/#the-clipboard-in-firefox-is-not-working-correctly
+https://www.neurodesk.org/docs/neurodesktop/troubleshooting/#the-clipboard-in-firefox-is-not-working-correctly
 {{< /alert >}}
 
 4. Press on "Desktop Auto-Resolution" under "ALL CONNECTIONS"
