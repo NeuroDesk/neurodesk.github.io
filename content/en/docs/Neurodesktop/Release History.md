@@ -6,6 +6,20 @@ description: >-
      Previous releases of neurodesktop
 ---
 
+## latest
+- in development: vesselvio 1.1.1 (vessel visualisation) contributed by Steffen
+
+## 20220329
+- added bidscoin 3.7.0 (converting data to bids) contributed by Oren
+- added sigviewer 0.6.4 (viewing electrophysiological data) contributed by Tom
+- added niftyreg 1.4.0 (image registration tool) contributed by Steffen
+- added mne 1.0.0 (EEG processing pipeline) contributed by David
+
+## 20220302
+- update of ROMEO (phase unwrapping) to latest version 3.2.8
+- update of QSMxT (automated end-to-end QSM procerssing) to latest version 1.1.10
+- added mritools 3.3.0 (includes clearswi 1.0.1, mcpc3ds 0.1.0, romeo 3.2.8 as compiled binaries)
+
 ## 20220222
 - update for PhysIO toolbox (physiological noise correction for fMRI) to r2021a including the latest SPM r8224
 - update of lcmodel to include basis sets for 1.5-9.4T
@@ -32,7 +46,7 @@ description: >-
 - oshyx was updated to 0.3
 
 ## 20211220
-- neurodesktop can now be accessed via native RDP client as well (e.g. for multi-monitor support): https://neurodesk.github.io/docs/neurodesktop/getting-started/windows/#using-an-rdp-client
+- neurodesktop can now be accessed via native RDP client as well (e.g. for multi-monitor support): https://www.neurodesk.org/docs/neurodesktop/getting-started/windows/#using-an-rdp-client
 - there is a new Help button in the menu :)
 - updates of ants 2.3.4 (now includes Scripts as well, including antsCookTemplatePriors.sh) + newly added version 2.3.5
 - new version of QSMxT 1.1.9 20211219
@@ -54,7 +68,7 @@ description: >-
 
 ## 20211018
 - added Rstudio, R and multiple R packages (plotly, car, tidyverse, ...)
-- added ClearSWI and ROMEO for MRI phase processing (including new Tutorials: https://neurodesk.github.io/tutorials/phase_processing/)
+- added ClearSWI and ROMEO for MRI phase processing (including new Tutorials: https://www.neurodesk.org/tutorials/phase_processing/)
 - added more categories in applications menu (Body, Electrophysiology, Hippocampus, Phase Processing, Rodent Imaging, Shape Analysis, Spine, Statistics)
 - bugfix: improved startup time of the desktop container (miniconda in homedirectory was causing chmod slowdown)
 - bugfix: ssh, vnc and rdp servers are now restarted in case the container was stopped and started again (e.g. on Standby)

@@ -53,9 +53,9 @@ Start QSMxT (in this demo we used 1.1.9) from the applications menu in the deskt
     python3 /opt/QSMxT/run_1_dicomConvert.py 00_dicom 01_bids
     ```
     
-This will bring up an interactive question to ask you which sequence is your QSM data. Enter the number and hit Enter. Then confirm the renaming if that's correct.
+This will bring up an interactive question to ask you which sequence your QSM data are. It will automatically detect the QSM sequence if it has qsm or t2star in the protocol name or you can use the command line argument `--t2starw_series_patterns` to specify. This demo data comes without a structural scan (automatically recognized with t1w in the name, or specified with `--t1w_series_patterns`, so hit Enter to continue when it asks you to identify which scan the T1w scan is:
 
-![image](https://user-images.githubusercontent.com/4021595/155101275-958feeb4-092e-4220-b443-d2aa3cc18133.png)
+![{DE1B0DF7-49B8-47F8-ACFF-B205F70BE58B}](https://user-images.githubusercontent.com/4021595/155911430-d2b7e904-6a8a-426c-bc27-e2167dd03a4d.png)
 
 
 2. Run QSM pipeline:
@@ -67,3 +67,5 @@ Then you can open a viewer (Visualization -> mricrogl -> mricroglGUI) and you ca
 for example: sub-170705-134431-std-1312211075243167001_ses-1_run-1_part-phase_T2starw_scaled_qsm_000_composite_average.nii
 
 ![image](https://user-images.githubusercontent.com/4021595/155106388-72a691a4-c0a4-4cc6-a2ac-c9271888b82d.png)
+
+> Please note that the demo dataset does not have a T1w scan for anatomical segmentation and therefore the subsequent steps in QSMxT (e.g. `python3 /opt/QSMxT/run_3_segment.py 01_bids 03_segmentation`) will NOT work.
