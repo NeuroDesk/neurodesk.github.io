@@ -42,9 +42,11 @@ jobs:
       - run: npm ci
       
       - name: Build
-        run: |
-          hugo --minify
-          cp ./static/CNAME ./public/CNAME
+        run: hugo --minify
+
+      - name: Add custom domain
+        if: github.repository == 'NeuroDesk/neurodesk.github.io'
+        run: cp ./static/CNAME ./public/CNAME
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
