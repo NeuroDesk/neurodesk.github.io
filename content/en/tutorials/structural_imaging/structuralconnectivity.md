@@ -1,6 +1,6 @@
 ---
-title: "Structural_connectivity_dMRI"
-linkTitle: "Structural_connectivity_dMRI"
+title: "Structural connectivity dMRI"
+linkTitle: "Structural connectivity dMRI"
 weight: 1
 description: > 
   Example workflow for constructing strutural connectivity (Human connectome project: Single subject)
@@ -19,7 +19,7 @@ https://andysbrainbook.readthedocs.io/en/latest/MRtrix/MRtrix_Course/MRtrix_00_D
 https://mrtrix.readthedocs.io/en/latest/quantitative_structural_connectivity/structural_connectome.html
 
 ## Data Description
-## Reference: 
+### Reference: 
 The single subject data used in this tutorial has been preprocessed and was downloaded from:
 
 https://db.humanconnectome.org/
@@ -27,15 +27,15 @@ https://db.humanconnectome.org/
 100307_3T_Structural_preproc.zip
 100307_3T_Diffusion_preproc.zip
 
-## Download demo data:
+### Download demo data:
 https://1drv.ms/u/s!AjZJgBZ_P9UO8nWvAFwQyKQnrroe?e=6qmRlQ - Diffusion data
 https://1drv.ms/u/s!AjZJgBZ_P9UO8nblYQyUVsibqggs?e=mkwLpQ - Structural data
 
-## Required structural preprocessed input files
+### Required structural preprocessed input files
 aparc+aseg.nii.gz
 T1w_acpc_dc_restore_brain.nii.gz
  
-## Required diffusion preprocessed input files
+### Required diffusion preprocessed input files
 bvals
 bvecs
 data.nii.gz
