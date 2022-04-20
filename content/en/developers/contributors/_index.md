@@ -72,7 +72,7 @@ If you contributed to the project please list yourself here with a description o
 - https://github.com/DavidjWhite33
 - application container development (Brainstorm, eeglab)
 
-## Akshaiy91
+## Akshaiy Narayanan
 - https://github.com/Akshaiy91
 - bugfixes in neurodesktop, added tool for diskusage, checking of new version script
 
