@@ -11,6 +11,8 @@ You can drag-and-drop files into the browser window to get files into the Neurod
 
 ![{538BB51E-0FEB-46EA-B1B8-FDF122776735}](https://user-images.githubusercontent.com/4021595/160577507-b5159bae-13c0-4fbf-85da-0ce55fd481f3.png)
 
+after the upload is finished, the files can be found in /home/user/thinclient_drives/GUACFS (or /home/vdiuser/thinclient_drives/GUACFS if using Neurodesktop on the NECTAR DESKTOP SERVICE).
+
 To download files from the desktop using the same mechanism you need to open the guacamole settings by pressing CTRL-ALT-SHIFT. This will open a menu on the side:
 
 ![{A12EDB8A-3D01-4524-A7B5-24E5E94FB418}](https://user-images.githubusercontent.com/4021595/160577828-0f8ba04e-aed7-4c26-a8d2-baf6c4be317a.png)
