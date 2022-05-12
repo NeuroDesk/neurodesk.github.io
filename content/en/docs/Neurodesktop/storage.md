@@ -22,6 +22,9 @@ where you can click on "Shared Drive":
 
 and a click on the file will start the download.
 
+You can browse into folders in the shared drive by clicking (double clicking on Mac) on them. To get back to the base of the shared drive, press on the drive icon in the top left of the side menu (just below the "Shared Drive" title).
+
+To close the side menu, click on CTRL-ALT-SHIFT once more (Control-Command-Shift on Mac).
 
 # Data directory connection to the host computer
 If you are running Neurodesktop on your own hardware there will be a direct connection between the "Storage" folder on the Destkop, which is a link to "/neurodesktop-storage" and a "neurodesktop-storage" folder on your C-drive (Windows) or home directory (Mac/Linux). This connection can be used for data processing and data transfer.
