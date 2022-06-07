@@ -156,6 +156,6 @@ If you contributed to the project please list yourself here with a description o
 -	David Abbott, Florey Institute of Neuroscience and Mental Health, Key User, Scientific/Subject Expert Advisory Board
 -	Megan Campbell, The University of Newcastle, Key User, Scientific/Subject Expert Advisory Board
 -	Nigel Rogasch, University of Adelaide, Key User, Scientific/Subject Expert Advisory Board
--	Will Woods, Swinburne University of Technology, wwoods@swin.edu.au, Key User
--	Satrajit Ghosh, Massachusetts Institute of Technology, satra@mit.edu, Provision of advice only
+-	Will Woods, Swinburne University of Technology, Key User
+-	Satrajit Ghosh, Massachusetts Institute of Technology, Provision of advice only
 
