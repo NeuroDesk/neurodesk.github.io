@@ -8,7 +8,7 @@ description: >
 # Install CVMFS
 First you need to install CVMFS. Follow the official instructions here: https://cvmfs.readthedocs.io/en/stable/cpt-quickstart.html#getting-the-software
 
-one example for Windows Subsystem for Linux (WSL) could look like this:
+one example for Ubuntu in Windows Subsystem for Linux (WSL) could look like this:
 <pre class="language-batch command-line" data-prompt=">">
 <code>sudo apt-get install lsb-release
 wget https://ecsft.cern.ch/dist/cvmfs/cvmfs-release/cvmfs-release-latest_all.deb
@@ -37,7 +37,7 @@ NQIDAQAB
 
 echo "CVMFS_USE_GEOAPI=yes" | sudo tee /etc/cvmfs/config.d/neurodesk.ardc.edu.au.conf
 
-echo 'CVMFS_SERVER_URL="http://203.101.231.144/cvmfs/@fqrn@;http://150.136.239.221/cvmfs/@fqrn@;http://132.145.96.34/cvmfs/@fqrn@;http://140.238.170.185/cvmfs/@fqrn@;http://130.61.74.69/cvmfs/@fqrn@;http://152.67.114.42/cvmfs/@fqrn@"' | sudo tee -a /etc/cvmfs/config.d/neurodesk.ardc.edu.au.conf 
+echo 'CVMFS_SERVER_URL="http://cvmfs.neurodesk.org/cvmfs/@fqrn@;http://203.101.231.144/cvmfs/@fqrn@;http://150.136.239.221/cvmfs/@fqrn@;http://132.145.96.34/cvmfs/@fqrn@;http://140.238.170.185/cvmfs/@fqrn@;http://130.61.74.69/cvmfs/@fqrn@;http://152.67.114.42/cvmfs/@fqrn@"' | sudo tee -a /etc/cvmfs/config.d/neurodesk.ardc.edu.au.conf 
 
 echo 'CVMFS_KEYS_DIR="/etc/cvmfs/keys/ardc.edu.au/"' | sudo tee -a /etc/cvmfs/config.d/neurodesk.ardc.edu.au.conf
 
@@ -59,6 +59,39 @@ sudo cvmfs_talk -i neurodesk.ardc.edu.au host info
 cvmfs_config stat -v neurodesk.ardc.edu.au</code>
 </pre>
 
+# install singularity/apptainer 
+e.g. for Ubuntu/Debian:
+<pre class="language-batch command-line" data-prompt=">">
+<code>export VERSION=1.18.3 OS=linux ARCH=amd64 && \
+    wget https://dl.google.com/go/go$VERSION.$OS-$ARCH.tar.gz && \
+    sudo tar -C /usr/local -xzvf go$VERSION.$OS-$ARCH.tar.gz && \
+    rm go$VERSION.$OS-$ARCH.tar.gz
+
+echo 'export GOPATH=${HOME}/go' >> ~/.bashrc && \
+    echo 'export PATH=/usr/local/go/bin:${PATH}:${GOPATH}/bin' >> ~/.bashrc && \
+    source ~/.bashrc
+
+go get -d github.com/sylabs/singularity
+
+export VERSION=v3.10.0 # or another tag or branch if you like && \
+    cd $GOPATH/src/github.com/sylabs/singularity && \
+    git fetch && \
+    git checkout $VERSION # omit this command to install the latest bleeding edge code from master
+
+export VERSION=3.10.0 && # adjust this as necessary \
+    mkdir -p $GOPATH/src/github.com/sylabs && \
+    cd $GOPATH/src/github.com/sylabs && \
+    wget https://github.com/sylabs/singularity/releases/download/v${VERSION}/singularity-${VERSION}.tar.gz && \
+    tar -xzf singularity-${VERSION}.tar.gz && \
+    cd ./singularity && \
+    ./mconfig
+
+./mconfig && \
+    make -C ./builddir && \
+    sudo make -C ./builddir install
+
+export PATH="/usr/local/singularity/bin:${PATH}"</code>
+</pre>
 
 # use of Neurodesk CVMFS containers
 The containers are now available in /cvmfs/neurodesk.ardc.edu.au/containers/ and can be started with:
@@ -87,6 +120,56 @@ set
 <code>mount home = no</code>
 </pre>
 
+# install module system:
+<pre class="language-batch command-line" data-prompt=">">
+<code>sudo yum install lmod</code>
+</pre>
+
+# configure module system:
+content of /usr/share/module.sh :
+<pre class="language-batch command-line" data-prompt=">">
+<code># system-wide profile.modules                                          #
+# Initialize modules for all sh-derivative shells                      #
+#----------------------------------------------------------------------#
+trap "" 1 2 3
+
+case "$0" in
+    -bash|bash|*/bash) . /usr/share/lmod/6.6/init/bash ;;
+       -ksh|ksh|*/ksh) . /usr/share/lmod/6.6/init/ksh ;;
+       -zsh|zsh|*/zsh) . /usr/share/lmod/6.6/init/zsh ;;
+          -sh|sh|*/sh) . /usr/share/lmod/6.6/init/sh ;;
+                    *) . /usr/share/lmod/6.6/init/sh ;;  # default for scripts
+esac
+
+trap - 1 2 3</code>
+</pre>
+
+
+
+
+# use of containers in the module system:
+add this to .bashrc:
+<pre class="language-batch command-line" data-prompt=">">
+<code>if [ -f '/usr/share/module.sh' ]; then source /usr/share/module.sh; fi
+
+if [ -d /cvmfs/neurodesk.ardc.edu.au/neurodesk-modules ]; then
+        # export MODULEPATH="/cvmfs/neurodesk.ardc.edu.au/neurodesk-modules"
+        module use /cvmfs/neurodesk.ardc.edu.au/neurodesk-modules/*
+else
+        export MODULEPATH="/neurodesktop-storage/containers/modules"              
+        module use $MODULEPATH
+        export CVMFS_DISABLE=true
+fi
+
+if [ -f '/usr/share/module.sh' ]; then
+        echo 'Run "ml av" to see which tools are available - use "ml <tool>" to use them in this shell.'
+        if [ -v "$CVMFS_DISABLE" ]; then
+                if [ ! -d $MODULEPATH ]; then
+                        echo 'Neurodesk tools not yet downloaded. Choose tools to install from the Application menu.'
+                fi
+        fi
+fi</code>
+</pre>
 # use of containers in the module system:
 <pre class="language-batch command-line" data-prompt=">">
 <code>export SINGULARITY_BINDPATH='/cvmfs,/mnt,/home'
