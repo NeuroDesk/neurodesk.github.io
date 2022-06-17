@@ -1,7 +1,7 @@
 ---
 title: "Menu entries"
 linkTitle: "Menu entries"
-weight: 1
+weight: 7
 description: >
   Menu entries in neurodesktop
 ---
