@@ -10,3 +10,6 @@ Click the link below for your own instance of Neurodesk on your browser running 
 {{% pageinfo %}}
 https://play.neurodesk.org/v2/gh/neurodesk/jupyter-neurodesktop-image/main?urlpath=neurodesktop
 {{% /pageinfo %}}
+
+Data uploaded during your session are stored on Oracle Cloud, and will be automatically deleted at the end of the session.
+
