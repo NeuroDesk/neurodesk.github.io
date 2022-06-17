@@ -34,7 +34,7 @@ Click "OPEN DESKTOP ->":
 ![image](https://user-images.githubusercontent.com/4021595/150286383-1c1b8d20-c772-4598-a81b-1ef9e11526b8.png)
 
 To launch the various applications available in Neurodesktop, follow the instructions here:
-https://neurodesk.github.io/docs/neurodesktop/whats-next/#how-to-launch-applications
+https://www.neurodesk.org/docs/neurodesktop/whats-next/#how-to-launch-applications
 
 Good luck!
 

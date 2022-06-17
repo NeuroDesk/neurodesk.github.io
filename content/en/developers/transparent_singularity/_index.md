@@ -1,7 +1,7 @@
 ---
 title: "Transparent Singularity"
 linkTitle: "Transparent Singularity"
-weight: 3
+weight: 5
 description: >
   For more advanced users who wish to use Transparent Singularity directly
 ---
