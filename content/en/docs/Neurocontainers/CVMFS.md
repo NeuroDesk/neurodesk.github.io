@@ -15,6 +15,7 @@ wget https://ecsft.cern.ch/dist/cvmfs/cvmfs-release/cvmfs-release-latest_all.deb
 sudo dpkg -i cvmfs-release-latest_all.deb
 rm -f cvmfs-release-latest_all.deb
 sudo apt-get update
+sudo apt-get build-essential
 sudo apt-get install cvmfs</code>
 </pre>
 
@@ -59,6 +60,28 @@ sudo cvmfs_talk -i neurodesk.ardc.edu.au host info
 cvmfs_config stat -v neurodesk.ardc.edu.au</code>
 </pre>
 
+# For Ubuntu 22.04 users
+If configuring CVMFS returns the following error:
+<pre class="language-batch command-line" data-prompt=">">
+<code>Error: failed to load cvmfs library, tried: './libcvmfs_fuse3_stub.so' '/usr/lib/libcvmfs_fuse3_stub.so' '/usr/lib64/libcvmfs_fuse3_stub.so' './libcvmfs_fuse_stub.so' '/usr/lib/libcvmfs_fuse_stub.so' '/usr/lib64/libcvmfs_fuse_stub.so'
+./libcvmfs_fuse3_stub.so: cannot open shared object file: No such file or directory
+/usr/lib/libcvmfs_fuse3_stub.so: cannot open shared object file: No such file or directory
+/usr/lib64/libcvmfs_fuse3_stub.so: cannot open shared object file: No such file or directory
+./libcvmfs_fuse_stub.so: cannot open shared object file: No such file or directory
+libcrypto.so.1.1: cannot open shared object file: No such file or directory
+/usr/lib64/libcvmfs_fuse_stub.so: cannot open shared object file: No such file or directory
+
+
+Failed to read CernVM-FS configuration</code>
+</pre>
+
+A quick workaround is:
+
+<pre class="language-batch command-line" data-prompt=">">
+<code>wget https://mirror.umd.edu/ubuntu/ubuntu/pool/main/o/openssl/libssl1.1_1.1.1f-1ubuntu2.13_amd64.deb
+dpkg -i libssl1.1_1.1.1f-1ubuntu2.13_amd64.deb</code>
+</pre>
+
 # install singularity/apptainer 
 e.g. for Ubuntu/Debian:
 <pre class="language-batch command-line" data-prompt=">">
@@ -81,12 +104,12 @@ export VERSION=v3.10.0 # or another tag or branch if you like && \
 export VERSION=3.10.0 && # adjust this as necessary \
     mkdir -p $GOPATH/src/github.com/sylabs && \
     cd $GOPATH/src/github.com/sylabs && \
-    wget https://github.com/sylabs/singularity/releases/download/v${VERSION}/singularity-${VERSION}.tar.gz && \
-    tar -xzf singularity-${VERSION}.tar.gz && \
-    cd ./singularity && \
-    ./mconfig
+    wget https://github.com/sylabs/singularity/releases/download/v${VERSION}/singularity-ce-${VERSION}.tar.gz && \
+    tar -xzf singularity-ce-${VERSION}.tar.gz && \789
+    cd ./singularity-ce-${VERSION} && \
+    ./mconfig --without-seccomp --without-conmon
 
-./mconfig && \
+./mconfig --without-seccomp --without-conmon && \
     make -C ./builddir && \
     sudo make -C ./builddir install
 
