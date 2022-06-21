@@ -39,6 +39,19 @@ It depends where you are running Neurodesk and where your files are. We provide 
 ## What applications are included in Neurodesk?
 We provide certain applications as part of the Neurodesktop image (https://www.neurodesk.org/docs/neurodesktop/whatsinthebox/) - these are applications that don't work well in containers. The majority of applications are provided via containers and a full list can be found here: https://www.neurodesk.org/applications/
 
+## Freeview 7.2.0 crashes when I open files
+Freeview (and Freesurfer!) needs a valid license to work and we are not allowed to distribute a license with Neurodesk!
+
+So here is how you can run freeview 7.2.0 and open your files:
+
+1) apply for a license (https://surfer.nmr.mgh.harvard.edu/registration.html) and paste this license in ~/.license
+
+then run
+```
+echo "export FS_LICENSE=~/.license" >> ~/.bashrc
+then start freeview 7.2.0 and it should all work perfectly.
+```
+
 ## Can I just use the plain containers?
 Yes, there are multiple ways of using the containers directly and we provide an overview here: https://www.neurodesk.org/docs/neurocontainers/
 
