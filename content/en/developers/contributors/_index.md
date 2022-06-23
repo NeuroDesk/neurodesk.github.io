@@ -44,6 +44,7 @@ If you contributed to the project please list yourself here with a description o
 - graphics for website (layer diagram)
 - documentation
 - user testing
+- neurodesk paper lead author
 
 ## Thomas Shaw
 - https://github.com/thomshaw92
@@ -90,6 +91,12 @@ If you contributed to the project please list yourself here with a description o
 - Application search tool with lunr
 - proof of concept for GUI
 - application container development (civet)
+- documentation (github workflow)
+
+## Ashley Stewart
+- https://github.com/astewartau
+- application container development (qsmxt)
+- presentation of neurodesk at OHBM Brainhack 2022 and OHBM educational course 2022
 
 ## Lars Kasper
 - https://github.com/mrikasper
@@ -100,6 +107,11 @@ If you contributed to the project please list yourself here with a description o
 - https://github.com/JD-Zhu
 - application containers (fieldtrip)
 - tutorials (fieldtrip)
+
+## Korbinian Eckstein
+- https://github.com/korbinian90
+- documentation
+- application container development (qsmxt)
 
 ## Stefanie Evas
 - https://github.com/neuro-sevas
@@ -126,10 +138,6 @@ If you contributed to the project please list yourself here with a description o
 - https://github.com/adityagarg011
 - application container development (hdbet)
 
-## Ashley Stewart
-- https://github.com/astewartau
-- application container development (qsmxt)
-
 ## Xincheng Ye
 - https://github.com/yexincheng
 - application container development (delphi)
@@ -138,6 +146,9 @@ If you contributed to the project please list yourself here with a description o
 - https://github.com/Kaxnn
 - application container development (mne/torch,esilpd)
 
+## Renzo Huber
+- https://github.com/layerfMRI
+- application container development (laynii)
 
 
 ## Steering Committee members without code contributions:
