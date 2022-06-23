@@ -103,6 +103,10 @@ If you haven't already, now is a good time to install the Neurocontainers develo
 
 This step is optional, but recommended.
 
+1. Go to your neurocontainers fork.  
+2. If Actions tab is missing, go to Settings > Actions. Select Allow all actions. Then Save.  
+3. In the actions tab, select “I understand my workflows, go ahead and enable them”
+
 Neurocontainers is configured to use [GitHub Actions][github-actions]
 to test and create builds upon each new commit and pull request.
 GitHub Actions is the primary CI that runs frontend and backend
