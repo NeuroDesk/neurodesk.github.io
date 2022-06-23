@@ -7,7 +7,7 @@ description: >-
 ---
 
 ## latest
-- in development: vesselvio 1.1.1 (vessel visualisation) contributed by Steffen
+- added laynii 2.2.1 - layer fMRI toolbox (contributed by Renzo Huber)
 
 ## 20220329
 - added bidscoin 3.7.0 (converting data to bids) contributed by Oren
