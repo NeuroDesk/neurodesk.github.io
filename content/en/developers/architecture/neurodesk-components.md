@@ -16,7 +16,7 @@ Neurodesktop: [https://github.com/NeuroDesk/neurodesktop](https://github.com/Neu
 Neurocommand: [https://github.com/NeuroDesk/neurocommand](https://github.com/NeuroDesk/neurocommand)
 * script to install and manage multiple containers using transparent singularity on any linux system
 * this repo also handles the creation of menu entries in a general form applicable to different desktop environments
-* this repo can be re-used in other projects like CVL and when installing it on a bare-metal workstations
+* this repo can be re-used in other projects like CVL and when installing it on bare-metal workstations
 * CI: tests if containers can be installed
 * CD: this repo checks if containers requested in apps.json file are availabe on object storage and if not converts the singularity containers based on the docker containers and uploads them to object storage 
 
