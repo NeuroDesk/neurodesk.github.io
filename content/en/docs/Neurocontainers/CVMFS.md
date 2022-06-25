@@ -75,11 +75,11 @@ libcrypto.so.1.1: cannot open shared object file: No such file or directory
 Failed to read CernVM-FS configuration</code>
 </pre>
 
-A quick workaround is:
+A temporary workaround is:
 
 <pre class="language-batch command-line" data-prompt=">">
-<code>wget https://mirror.umd.edu/ubuntu/ubuntu/pool/main/o/openssl/libssl1.1_1.1.1f-1ubuntu2.13_amd64.deb
-dpkg -i libssl1.1_1.1.1f-1ubuntu2.13_amd64.deb</code>
+<code>wget https://mirror.umd.edu/ubuntu/ubuntu/pool/main/o/openssl/libssl1.1_1.1.1f-1ubuntu2.15_amd64.deb
+dpkg -i libssl1.1_1.1.1f-1ubuntu2.15_amd64.deb</code>
 </pre>
 
 # install singularity/apptainer 
