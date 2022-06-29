@@ -71,7 +71,7 @@ If you contributed to the project please list yourself here with a description o
 
 ## David White
 - https://github.com/DavidjWhite33
-- application container development (Brainstorm, eeglab)
+- application container development (Brainstorm, eeglab, fieldtrip)
 
 ## Akshaiy Narayanan
 - https://github.com/Akshaiy91

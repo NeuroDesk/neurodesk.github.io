@@ -8,6 +8,7 @@ description: >-
 
 ## latest
 - added laynii 2.2.1 - layer fMRI toolbox (contributed by Renzo Huber)
+- added fieldtrip 20220617 - eeg processing (contributed by David White)
 
 ## 20220329
 - added bidscoin 3.7.0 (converting data to bids) contributed by Oren
