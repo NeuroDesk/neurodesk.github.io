@@ -6,7 +6,7 @@ description: >-
      Previous releases of neurodesktop
 ---
 
-## latest
+## 20220701
 - added laynii 2.2.1 - layer fMRI toolbox (contributed by Renzo Huber)
 - added fieldtrip 20220617 - eeg processing (contributed by David White)
 
