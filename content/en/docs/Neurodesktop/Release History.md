@@ -6,8 +6,9 @@ description: >-
      Previous releases of neurodesktop
 ---
 
-## latest
-- in development: vesselvio 1.1.1 (vessel visualisation) contributed by Steffen
+## 20220701
+- added laynii 2.2.1 - layer fMRI toolbox (contributed by Renzo Huber)
+- added fieldtrip 20220617 - eeg processing (contributed by David White)
 
 ## 20220329
 - added bidscoin 3.7.0 (converting data to bids) contributed by Oren

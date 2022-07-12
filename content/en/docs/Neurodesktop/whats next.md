@@ -33,6 +33,11 @@ If you choose a menu entry with "GUI" at the end (e.g., fsleyesGUI 6.0.3), the m
 If you choose a menu entry without "GUI" at the end (e.g., fsl 6.0.3), a terminal window will open, and you can use it to run any of the utilities packaged with the application, including the graphical utilities (e.g., typing "fsl" to run FSL's main menu).  Please be patient when running a utility for the first time; Neurodesk is using a clever system that only downloads the utilities that you are actually using, but this may incur a short delay on the order of seconds.
 Also notice that the terminal that opens only allows to run utilities from the one application chosen in the menu. To be able to run utilities from multiple applications in the same terminal (or in the same script), please open a separate terminal by clicking on the terminal icon in the bottom toolbar of Neurodesktop. You will then be able to use the 'module' command in order to load the desired applications.
 
+## How top copy and paste text
+You can copy and paste text within Neurodesktop and between Neurodektop and your host computer using the regular keyboard shortcuts (CTRL+C, CTRL+X, and CTRL+V). Note however that some applications (e.g., command-line terminal) are using other keyboard shortcuts. You can usually find them in the "Edit" menu of the relevent application.
+
+Note for Mac Users: You will need to use a combination of CTRL and Command shortcuts in order to copy and paste text between Neurodesktop and the host computer. For example, copy text from your Mac with Command+C and then paste it into Neurodesktop using CTRL+V. For the other way around, you'd use CTRL+C in Neurodesktop and then Command+V on the Mac.
+
 ## How to keep your modifications in the container
 We designed neurodesk with reproducibility as a main goal, so the desktop containers should not be modified if one aims for full reproducibility. However, there is one good option to keep your settings across different container versions: You can write a shell script that installs additional packages and modifies the environment so it's perfect for you. This script can then be re-executed in a new desktop version and will enable a reprudcible customization.
 

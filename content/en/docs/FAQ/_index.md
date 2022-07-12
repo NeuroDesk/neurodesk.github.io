@@ -15,12 +15,14 @@ Neurodesk provides a containerised data analysis environment to facilitate repro
 More information: 
 - [A Neurodesk Overview](/docs/overview/)
 - A 2 minute video explaining what Neurodesk is: [Neurodesk in 2 minutes](https://www.youtube.com/watch?v=JLv_5fycugw)
+- An online interactive demo you can try RIGHT NOW in your browser: https://neurodesk.github.io/docs/neurodesktop/getting-started/play/
+
+In-depth information:
 - A 15 minute video explaining what Neurodesk is: [Neurodesk in 15 minutes](https://youtu.be/2ATgTOsiGdY)
 - A 35 minute video explaining the technical details of Neurodesk: [Neurodesk in 35 minutes - behind the scenes](https://youtu.be/V5gAA9NiX_s)
 
 ## How should I cite the tools I am using and Neurodesk itself?
 [See here](/docs/how-to-cite-us)
-
 
 ## Can I run Neurodesk on an HPC without Docker?
 Yes, our project aims to run on the hardware you have access to. However, without docker support you cannot use our desktop interface [NeuroDesktop](/docs/neurodesktop/getting-started) but you can still use the command line interface [NeuroCommand on HPC](https://www.neurodesk.org/docs/neurocommand/getting-started/linux/#command-line-mode-eg-running-on-an-hpc-or-cvl). This works well for batch processing on HPCs once you developed your pipeline in our desktop interface. If your HPC provides a desktop interface you can use all our graphical applications without any issues and the GUIs even work via SSH x-forwarding - it's not the most performant experience, but it works well enough.
@@ -36,6 +38,19 @@ It depends where you are running Neurodesk and where your files are. We provide 
 
 ## What applications are included in Neurodesk?
 We provide certain applications as part of the Neurodesktop image (https://www.neurodesk.org/docs/neurodesktop/whatsinthebox/) - these are applications that don't work well in containers. The majority of applications are provided via containers and a full list can be found here: https://www.neurodesk.org/applications/
+
+## Freeview 7.2.0 crashes when I open files
+Freeview (and Freesurfer!) needs a valid license to work and we are not allowed to distribute a license with Neurodesk!
+
+So here is how you can run freeview 7.2.0 and open your files:
+
+1) apply for a license (https://surfer.nmr.mgh.harvard.edu/registration.html) and paste this license in ~/.license
+
+then run
+```
+echo "export FS_LICENSE=~/.license" >> ~/.bashrc
+then start freeview 7.2.0 and it should all work perfectly.
+```
 
 ## Can I just use the plain containers?
 Yes, there are multiple ways of using the containers directly and we provide an overview here: https://www.neurodesk.org/docs/neurocontainers/

@@ -44,6 +44,7 @@ If you contributed to the project please list yourself here with a description o
 - graphics for website (layer diagram)
 - documentation
 - user testing
+- neurodesk paper lead author
 
 ## Thomas Shaw
 - https://github.com/thomshaw92
@@ -70,9 +71,9 @@ If you contributed to the project please list yourself here with a description o
 
 ## David White
 - https://github.com/DavidjWhite33
-- application container development (Brainstorm, eeglab)
+- application container development (Brainstorm, eeglab, fieldtrip)
 
-## Akshaiy91
+## Akshaiy Narayanan
 - https://github.com/Akshaiy91
 - bugfixes in neurodesktop, added tool for diskusage, checking of new version script
 
@@ -89,6 +90,13 @@ If you contributed to the project please list yourself here with a description o
 - https://github.com/iishiishii
 - Application search tool with lunr
 - proof of concept for GUI
+- application container development (civet)
+- documentation (github workflow)
+
+## Ashley Stewart
+- https://github.com/astewartau
+- application container development (qsmxt)
+- presentation of neurodesk at OHBM Brainhack 2022 and OHBM educational course 2022
 
 ## Lars Kasper
 - https://github.com/mrikasper
@@ -99,6 +107,11 @@ If you contributed to the project please list yourself here with a description o
 - https://github.com/JD-Zhu
 - application containers (fieldtrip)
 - tutorials (fieldtrip)
+
+## Korbinian Eckstein
+- https://github.com/korbinian90
+- documentation
+- application container development (qsmxt)
 
 ## Stefanie Evas
 - https://github.com/neuro-sevas
@@ -113,6 +126,10 @@ If you contributed to the project please list yourself here with a description o
 - https://github.com/AKSoo
 - tutorial (datalad)
 
+## Jakub Kaczmarzyk
+- https://github.com/kaczmarj
+- proof of concept contributions
+
 ## Alan Hockings
 - https://github.com/ahockings
 - application container development (mricron)
@@ -120,4 +137,36 @@ If you contributed to the project please list yourself here with a description o
 ## Aditya Garg
 - https://github.com/adityagarg011
 - application container development (hdbet)
+
+## Xincheng Ye
+- https://github.com/yexincheng
+- application container development (delphi)
+
+## Kexin Lou
+- https://github.com/Kaxnn
+- application container development (mne/torch,esilpd)
+
+## Renzo Huber
+- https://github.com/layerfMRI
+- application container development (laynii)
+
+
+## Steering Committee members without code contributions:
+-	Ryan Sullivan, University of Sydney, Key User, Steering Committee
+-	Thomas Close, University of Sydney, Key User, Scientific/Subject Expert Advisory Board
+-	Wojtek Goscinski, Monash University, Steering Committee, Technical Advisory Board
+-	Tony Hannan, Florey Institute of Neuroscience and Mental Health, Scientific/Subject Expert Advisory Board
+-	Gary Egan, Monash University, Steering Committee 
+-	Paul Sowman, Macquarie University, Key User, Scientific/Subject Expert Advisory Board
+-	Marta Garrido, University of Melbourne, Key User, Scientific/Subject Expert Advisory Board
+-	Patrick Johnston, Queensland University of Technology, Key User, Scientific/Subject Expert Advisory Board
+-	Aina Puce, Indiana University, Key User, Scientific/Subject Expert Advisory Board
+-	Franco Pestilli, Indiana University, Technical Advisory Board
+-	Levin Kuhlmann, Monash University, Key User, Scientific/Subject Expert Advisory Board
+-	Gershon Spitz, Monash Epworth Rehabilitation Research Centre, Key User, Scientific/Subject Expert Advisory Board
+-	David Abbott, Florey Institute of Neuroscience and Mental Health, Key User, Scientific/Subject Expert Advisory Board
+-	Megan Campbell, The University of Newcastle, Key User, Scientific/Subject Expert Advisory Board
+-	Nigel Rogasch, University of Adelaide, Key User, Scientific/Subject Expert Advisory Board
+-	Will Woods, Swinburne University of Technology, Key User
+-	Satrajit Ghosh, Massachusetts Institute of Technology, Provision of advice only
 

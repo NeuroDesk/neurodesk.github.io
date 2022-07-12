@@ -13,7 +13,7 @@ To ask questions or suggest new features, [join the discussion](https://github.c
 ## The clipboard in Firefox is not working correctly
 Copying something to the clipboard inside the virtual desktop and pasting it outside works, but you cannot paste clipboard content into the virtual desktop from the host computer. This is a "feature" of firefox and you can disable this "feature":
 
-- goto about:config and "Accept the Risk and Continue"
+- navigate to [about:config](https://about:config) and "Accept the Risk and Continue" ("about:config" needs to be entered in the address bar of firefox and hit enter)
 - now search for clipboard and then set the following to "true":
      - dom.events.asyncClipboard.clipboardItem
      - dom.events.asyncClipboard.read 

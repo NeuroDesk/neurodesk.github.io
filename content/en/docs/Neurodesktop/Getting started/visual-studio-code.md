@@ -67,3 +67,8 @@ This will open a `neurodesktop%3alatest.json` file. Overwrite the file with the 
 {{< /code >}}
 
 Close this VS Code window. Use steps in [previous section](https://www.neurodesk.org/docs/neurodesktop/visual-studio-code/#connecting-to-neurodesktop) to connect normally
+
+## Useful Additions
+A plugin to view neuroimaging data inside VScode is also available:
+![image](https://user-images.githubusercontent.com/4021595/163663250-4e8894c6-ea26-4224-b619-87f5485880c1.png)
+
