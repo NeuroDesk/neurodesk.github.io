@@ -31,7 +31,8 @@
 	
 		<ul id="list">
 			
-		{{ range .Site.Data.applist.list }}
+		{{ $applist := getJSON "https://raw.githubusercontent.com/NeuroDesk/neurocommand/main/cvmfs/applist.json" }}
+		{{ range $applist.list }}
 		<li>	
 			{{ .application }} 
 			{{ range .categories }}
