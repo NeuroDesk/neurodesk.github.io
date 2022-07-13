@@ -5,6 +5,7 @@ on:
     branches:
       - hugo-docsy  # Set a branch to deploy
   pull_request:
+  repository_dispatch:
 
 jobs:
   deploy:
