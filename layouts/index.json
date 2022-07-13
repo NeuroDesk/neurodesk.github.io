@@ -1,0 +1,1 @@
+{{- getJSON "https://raw.githubusercontent.com/NeuroDesk/neurocommand/main/cvmfs/applist.json" | jsonify -}}
