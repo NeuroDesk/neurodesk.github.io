@@ -10,8 +10,13 @@ Neurodesk is an open-source project that is always evolving. If you are experien
 
 To ask questions or suggest new features, [join the discussion](https://github.com/NeuroDesk/neurodesk.github.io/discussions) on github. 
 
-## The clipboard in Firefox is not working correctly
-Copying something to the clipboard inside the virtual desktop and pasting it outside works, but you cannot paste clipboard content into the virtual desktop from the host computer. This is a "feature" of firefox and you can disable this "feature":
+## I cannot copy and paste text within Neurodesktop using keyboard shortcuts
+If you're using Mac, you might be trying to use Mac keyboard shortcuts, but Neurodesktop is using Linux keyboard shortcuts (CTRL+C and CTRL+V)
+
+If you use the terminal, please see "I fixed my internet browser clipboard, but copy or paste still do not work in the terminal" below.
+
+## Copying text from my host computer and pasting it inside Neurodesktop doesn't work in Firefox
+This is a "feature" of firefox and you can disable this "feature":
 
 - navigate to [about:config](https://about:config) and "Accept the Risk and Continue" ("about:config" needs to be entered in the address bar of firefox and hit enter)
 - now search for clipboard and then set the following to "true":
@@ -23,7 +28,7 @@ Then close firefox and restart. Then the clipboard should work as one would expe
 
 If the clipboard still does not work, check "I fixed my internet browser clipboard, but ..." sections below.
 
-## The clipboard doesn't work in chrome or edge
+## Copy and paste between my host computer and Neurodesktop (or vice versa) doesn't work in Chrome or Edge
 The browsers have a security feature to protect you from something stealing your clipboard content. Depending on your security settings you have to enable it explicitly - it's a little icon in the browser address bar that looks like a clipboard.
 
 After pressing the icon, you should choose the option shown below in the dialog that opens. After pressing "Done", close the current browser tab and open a new one for the changes to take effect.
