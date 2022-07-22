@@ -22,10 +22,11 @@ Copying something to the clipboard inside the virtual desktop and pasting it out
 Then close firefox and restart. Then the clipboard should work as one would expect.
 
 ## The clipboard doesn't work in chrome or edge
-The browsers have a security feature to protect you from something stealing your clipboard content. Depending on your security settings you have to enable it explicitly - it's a little icon in the browser address bar that looks like a clipboard:
+The browsers have a security feature to protect you from something stealing your clipboard content. Depending on your security settings you have to enable it explicitly - it's a little icon in the browser address bar that looks like a clipboard.
+
+After pressing the icon, you should choose the option shown below in the dialog that opens. After pressing "Done", close the current Chrome tab and open a new one for the changes to take effect.
 
 ![image](https://user-images.githubusercontent.com/4021595/154870249-731f8fe3-474f-43ff-aac4-c460893e4246.png)
-
 
 ## docker: Cannot connect to the Docker daemon at unix:///var/run/docker.sock. Is the docker daemon running?.
 This is usually a docker-related error, not related to neurodesktop itself. To troubleshoot docker, we can try a simpler container first:
