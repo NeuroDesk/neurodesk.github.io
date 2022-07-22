@@ -10,6 +10,10 @@ Neurodesk is an open-source project that is always evolving. If you are experien
 
 To ask questions or suggest new features, [join the discussion](https://github.com/NeuroDesk/neurodesk.github.io/discussions) on github. 
 
+## Copy and paste does not work in Neurodesktop on Mac
+You might be trying to use Mac keyboard shortcuts, but Neurodesktop is using Linux keyboard shortcuts.
+For more details, read the "Note for Mac users" [here](https://www.neurodesk.org/docs/neurodesktop/whats-next/#how-top-copy-and-paste-text).
+
 ## The clipboard in Firefox is not working correctly
 Copying something to the clipboard inside the virtual desktop and pasting it outside works, but you cannot paste clipboard content into the virtual desktop from the host computer. This is a "feature" of firefox and you can disable this "feature":
 
@@ -24,7 +28,7 @@ Then close firefox and restart. Then the clipboard should work as one would expe
 ## The clipboard doesn't work in chrome or edge
 The browsers have a security feature to protect you from something stealing your clipboard content. Depending on your security settings you have to enable it explicitly - it's a little icon in the browser address bar that looks like a clipboard.
 
-After pressing the icon, you should choose the option shown below in the dialog that opens. After pressing "Done", close the current Chrome tab and open a new one for the changes to take effect.
+After pressing the icon, you should choose the option shown below in the dialog that opens. After pressing "Done", close the current browser tab and open a new one for the changes to take effect.
 
 ![image](https://user-images.githubusercontent.com/4021595/154870249-731f8fe3-474f-43ff-aac4-c460893e4246.png)
 
