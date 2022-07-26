@@ -105,7 +105,7 @@ Neurodocker is the dependency we use to build containers.
    3. if your application requires a Matlab Runtime and you get an error about shared library "libmwlaunchermain.so" not found, check which version of the runtime was installed by the build script
 
 5. Update changes in local git repository
-   <pre class="language-shell command-line" data-prompt="$"><code>git add recipes/NEWAPP/build.sh recipes/NEWAPP/README.md .github/workflows/NEWAPP.yml
+   <pre class="language-shell command-line" data-prompt="$"><code>git add .github/workflows/NEWAPP.yml recipes/NEWAPP/test.sh recipes/NEWAPP/build.sh recipes/NEWAPP/README.md
    git config user.email "the email that you use for github"
    git config user.name "your name"
    git commit</code></pre>
