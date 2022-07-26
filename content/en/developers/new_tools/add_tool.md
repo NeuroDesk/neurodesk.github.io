@@ -91,7 +91,7 @@ Neurodocker is the dependency we use to build containers.
    1. run the build script with the debug flag:
       <pre class="language-shell command-line" data-prompt="$"><code>cd recipes/newapp
       chmod +x build.sh
-      ./build.sh -ds</code></pre>
+      rm NEWAPP_*.Dockerfile & ./build.sh -ds</code></pre>
    2. test running some commands within the container that should be available in your local docker container repository
    3. if your application requires a Matlab Runtime and you get an error about shared library "libmwlaunchermain.so" not found, check which version of the runtime was installed by the build script
 
