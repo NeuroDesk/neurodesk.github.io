@@ -56,6 +56,10 @@ Neurodocker is the dependency we use to build containers.
    <pre class="language-shell command-line" data-prompt="$"><code>cd neurodocker  
    python -m pip install .
    cd ..</code></pre>
+5. Run:
+   echo 'export PATH=${PATH}:${HOME}/.local/bin' >> ${HOME}/.bashrc
+6. Close the terminal, and reopen it for the updated PATH to take effect
+   
 
 ### Clone the Neurocontainers repository  
 - *Option A*) Fork neurocontainers and setup github actions:  
