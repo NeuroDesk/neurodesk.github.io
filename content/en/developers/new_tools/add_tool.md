@@ -92,7 +92,12 @@ Neurodocker is the dependency we use to build containers.
       <pre class="language-shell command-line" data-prompt="$"><code>cd recipes/newapp
       chmod +x build.sh
       ./build.sh -ds</code></pre>
-   2. test running some commands within the container that should be available in your local docker container repository
+   2. test running some commands within the container that should be available in your local docker container repository.
+      
+      For example, to open an interactive shell in a container (with the home folder /root binded to /root on host), you may run:
+      <pre class="language-shell command-line" data-prompt="$"><code>sudo docker run -it -v /root:/root --entrypoint /bin/bash NEWAPP_VERSION:TAG
+      </code></pre>
+      with VERSION being the version of the app, and TAG the version tag of the container (run 'sudo docker image list' to find the tag)
    3. if your application requires a Matlab Runtime and you get an error about shared library "libmwlaunchermain.so" not found, check which version of the runtime was installed by the build script
 
 5. Update changes in local git repository
