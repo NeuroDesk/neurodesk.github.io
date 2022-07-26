@@ -7,13 +7,13 @@ description: >-
 ---
 
 Neurodesktop comes with the essential software required for neuroimaging data analysis pre-installed. Each release is built with the most recent version of these packages available at the build date. Some example packages include:
-* Editors and Programming:
-     * Visual Studio Code
-     * Emacs
-     * Gedit
-     * Vim
-     * Python
-     * Git
+* Editors and Programming (can be found in menu, or launched from command line by typing their name):
+     * code (Visual Studio Code)
+     * gedit (simple visual editor)
+     * emacs
+     * vim
+     * python
+     * git
 * Workflow systems:
      * Nipype (including GraphVis)
 * Data Syncronisation tools: (See our Storage section for more information: [Storage](/docs/neurodesktop/storage))
