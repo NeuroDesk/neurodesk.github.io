@@ -96,6 +96,7 @@ Neurodocker is the dependency we use to build containers.
       <pre class="language-shell command-line" data-prompt="$"><code>cd recipes/NEWAPP
       chmod +x build.sh
       ./build.sh -ds</code></pre>
+      NOTICE: if the README.md file does not contain the same tool-version string as in the build.sh the build will not start to prevent an incorrect README.md description.
    2. test running some commands within the container that should be available in your local docker container repository.
       
       For example, to open an interactive shell in a container (with the home folder /root binded to /root on host), you may run:
