@@ -6,6 +6,12 @@ description: >-
      Previous releases of neurodesktop
 ---
 
+## development
+- updated qsmxt to 1.1.12
+- updated 3D Slicer to 5.0.3 and included MONAI Label 
+- added Matlab 2022a
+- updated AFNI to 22.1.14
+
 ## 20220701
 - added laynii 2.2.1 - layer fMRI toolbox (contributed by Renzo Huber)
 - added fieldtrip 20220617 - eeg processing (contributed by David White)
