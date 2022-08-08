@@ -56,6 +56,10 @@ Neurodocker is the dependency we use to build containers.
    <pre class="language-shell command-line" data-prompt="$"><code>cd neurodocker  
    python -m pip install .
    cd ..</code></pre>
+5. Run:
+   echo 'export PATH=${PATH}:${HOME}/.local/bin' >> ${HOME}/.bashrc
+6. Close the terminal, and reopen it for the updated PATH to take effect
+   
 
 ### Clone the Neurocontainers repository  
 - *Option A*) Fork neurocontainers and setup github actions:  
@@ -65,19 +69,19 @@ Neurodocker is the dependency we use to build containers.
    <pre class="language-shell command-line" data-prompt="$"><code>git clone https://github.com/NeuroDesk/neurocontainers/</code></pre>
 
 ### Create a new app
-1. Copy the directory template and rename to _newapp_ in `neurocontainers/recipes`:
+1. Copy the directory template and rename to NEWAPP in `neurocontainers/recipes` (NEWAPP being the name of the application to be displayed in Neurodesk's menu; notice it shouldn't have any special characters):
    <pre class="language-shell command-line" data-prompt="$"><code>cd neurocontainers/recipes
-   cp -R template newapp</code></pre>
+   cp -R template NEWAPP</code></pre>
 
 2. Create your Container Files:  
-   Modify `build.sh` in `neurocontainers/recipes/newapp` to build your application and update `README.md` (make sure the version is correct in the README!). Notice that the example build script in the template has instructions to build a conatiner for datalad, that may or may not suite your exact needs
-   <pre class="language-shell command-line" data-prompt="$" data-output="2-3"><code>cd newapp
+   Modify `build.sh` in `neurocontainers/recipes/NEWAPP` to build your application and update `README.md` (make sure the version is correct in the README!). Notice that the example build script in the template has instructions to build a conatiner for datalad, that may or may not suite your exact needs
+   <pre class="language-shell command-line" data-prompt="$" data-output="2-3"><code>cd NEWAPP
    (edit build.sh as required)
    (edit README.md as required)</code></pre>
    Upload your application to object storage first if needed, so you can then download it in `build.sh` (ask for instructions about this if you don't know the key, and never share it anywhere public!)
 
 3. Run `update-builders.sh`:
-   This will auto-create the CI workflow for the application (or manually duplicate the template file and rename all occurances of template to _newapp_)
+   This will auto-create the CI workflow for the application (or manually duplicate the template file and rename all occurances of template to NEWAPP)
    <pre class="language-shell command-line" data-prompt="$"><code>cd ../..
    sh update-builders.sh</code></pre>
 
@@ -89,14 +93,20 @@ Neurodocker is the dependency we use to build containers.
 
 4. Build and test the container locally 
    1. run the build script with the debug flag:
-      <pre class="language-shell command-line" data-prompt="$"><code>cd recipes/newapp
+      <pre class="language-shell command-line" data-prompt="$"><code>cd recipes/NEWAPP
       chmod +x build.sh
       ./build.sh -ds</code></pre>
-   2. test running some commands within the container that should be available in your local docker container repository
+      NOTICE: if the README.md file does not contain the same tool-version string as in the build.sh the build will not start to prevent an incorrect README.md description.
+   2. test running some commands within the container that should be available in your local docker container repository.
+      
+      For example, to open an interactive shell in a container (with the home folder /root binded to /root on host), you may run:
+      <pre class="language-shell command-line" data-prompt="$"><code>sudo docker run -it -v /root:/root --entrypoint /bin/bash NEWAPP_VERSION:TAG
+      </code></pre>
+      with VERSION being the version of the app, and TAG the version tag of the container (run 'sudo docker image list' to find the tag)
    3. if your application requires a Matlab Runtime and you get an error about shared library "libmwlaunchermain.so" not found, check which version of the runtime was installed by the build script
 
 5. Update changes in local git repository
-   <pre class="language-shell command-line" data-prompt="$"><code>git add recipes/newapp/build.sh recipes/newapp/README.md .github/workflows/newapp.yml
+   <pre class="language-shell command-line" data-prompt="$"><code>git add .github/workflows/NEWAPP.yml recipes/NEWAPP/test.sh recipes/NEWAPP/build.sh recipes/NEWAPP/README.md
    git config user.email "the email that you use for github"
    git config user.name "your name"
    git commit</code></pre>
@@ -141,7 +151,6 @@ Generate git personal access token (if you don’t have one already)
     The command to use in a terminal open in Neurodesktop is:
     <pre class="language-shell command-line" data-prompt="$"><code>bash /neurocommand/local/fetch_and_run.sh itksnap 3.8.0 20210322
      (when you see the "Singularity>" prompt, type exit and ENTER)
-    module use /neurodesktop-storage/containers/modules
     ml toolName/toolVersion</code></pre>
 
   {{% alert title="Depreciation notice" color="warning" %}}

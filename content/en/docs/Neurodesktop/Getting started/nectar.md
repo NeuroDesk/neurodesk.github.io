@@ -6,13 +6,13 @@ description: >
   Run neurodesktop in the Nectar Virtual Desktop Service
 ---
 
-This option is only available to Australian/NZ researchers.
+This option is only available to Australian researchers.
 
 Go to https://desktop.rc.nectar.org.au/ 
 
 Click on "Sign in".
 
-Choose the AAF option if you have an Australian university email or the NZ option if you have a New Zealand university email.
+Choose the AAF option.
 
 Choose your instituion from the list.
 

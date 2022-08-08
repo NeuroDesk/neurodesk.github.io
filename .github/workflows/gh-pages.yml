@@ -5,6 +5,7 @@ on:
     branches:
       - hugo-docsy  # Set a branch to deploy
   pull_request:
+  repository_dispatch:
 
 jobs:
   deploy:
@@ -18,9 +19,6 @@ jobs:
       - name: Change baseURL (if fork)
         if: github.repository != 'NeuroDesk/neurodesk.github.io'
         run: sed -i "s|https://www.neurodesk.org/|https://${GITHUB_REPOSITORY}/|g" config.toml
-
-      - name: Download applist.json
-        run: wget -O data/applist.json https://raw.githubusercontent.com/NeuroDesk/neurocommand/main/cvmfs/applist.json
 
       - name: Setup Hugo
         uses: peaceiris/actions-hugo@v2
