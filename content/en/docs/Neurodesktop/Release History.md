@@ -11,7 +11,8 @@ description: >-
 - updated 3D Slicer to 5.0.3 and included MONAI Label 
 - added Matlab 2022a
 - updated AFNI to 22.1.14
-- updated spinal cord toolbox to 5.7
+- updated Spinal Cord Toolbox to 5.7
+- updated Oshyx to 0.4
 
 ## 20220701
 - added laynii 2.2.1 - layer fMRI toolbox (contributed by Renzo Huber)
