@@ -57,7 +57,7 @@ If you contributed to the project please list yourself here with a description o
 - https://github.com/civier
 - funding: ARDC (CI for $566k AUD)
 - documentation
-- softare application containers (bidscoin)
+- softare application containers (bidscoin, matlab)
 - user testing
 
 ## Tom Johnston
@@ -140,7 +140,7 @@ If you contributed to the project please list yourself here with a description o
 
 ## Xincheng Ye
 - https://github.com/yexincheng
-- application container development (delphi)
+- application container development (delphi, slicer)
 
 ## Kexin Lou
 - https://github.com/Kaxnn

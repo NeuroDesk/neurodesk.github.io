@@ -7,12 +7,17 @@ description: >-
 ---
 
 ## development
-- updated qsmxt to 1.1.12
-- updated 3D Slicer to 5.0.3 and included MONAI Label 
-- added Matlab 2022a
-- updated AFNI to 22.1.14
-- updated Spinal Cord Toolbox to 5.7
-- updated Oshyx to 0.4
+- updated tool to x.x.x (contributed by yyy)
+
+## 20220813
+- updated qsmxt to 1.1.12 (contributed by Ashley)
+- updated 3D Slicer to 5.0.3 and included MONAI Label (contributed by Xincheng)
+- added Matlab 2022a (contributed by Oren)
+- updated AFNI to 22.1.14 (contributed by Steffen)
+- updated Spinal Cord Toolbox to 5.7 (contributed by Steffen)
+- updated Oshyx to 0.4 (contributed by Jeryn)
+- updated freesurfer to 7.3.2 (contributed by Steffen)
+- added CVMFS mirror server in Perth and cleaned up server list to account for DNS geo location steering (contributed by Steffen)
 
 ## 20220701
 - added laynii 2.2.1 - layer fMRI toolbox (contributed by Renzo Huber)
