@@ -66,10 +66,12 @@ docker run hello-world
 ```
 Try the following solutions (in this order, until the above command works)
 1. Win/Mac: Open docker GUI and accept T&Cs. Check that the docker engine is running
-2. Close and open the terminal and retry.
-3. Log out and login again, or restart the machine (current user environment doesnt fully know docker is running)
-4. Add your user to the OS docker group (current user doesnt have permission to run docker)
-5. docker.sock permissions need to be changed (raise a github issue [here](https://github.com/NeuroDesk/neurodesktop/issues/new/choose))
+2. Linux: Make sure you started the docker daemon (sudo systemctl start docker)
+3. Add your user to the OS docker group (sudo usermod -aG docker $USER)
+6. docker.sock permissions need to be changed (sudo chown root:docker /var/run/docker.sock)
+4. Close and open the terminal and retry.
+5. Log out and login again, or restart the machine (current user environment doesnt fully know docker is running)
+
 
 ## Windows users: WSL not installed properly
 
