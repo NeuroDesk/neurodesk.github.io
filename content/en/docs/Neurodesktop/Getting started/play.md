@@ -7,10 +7,12 @@ description: >
 
 Choose the link below closest to your location for your own instance of Neurodesk on your browser running on Oracle cloud resources.
 
-| Location       | Neurodesk Play link                                                                                     |
-|----------------|---------------------------------------------------------------------------------------------------------|
-| Australia East | https://play.neurodesk.org/v2/gh/neurodesk/jupyter-neurodesktop-image/main?urlpath=neurodesktop         |
-| US West        | https://play-phoenix.neurodesk.org/v2/gh/neurodesk/jupyter-neurodesktop-image/main?urlpath=neurodesktop |
+| Location        | Neurodesk Play link                                                                                       |
+|-----------------|-----------------------------------------------------------------------------------------------------------|
+| Australia East  | https://play.neurodesk.org/v2/gh/neurodesk/jupyter-neurodesktop-image/main?urlpath=neurodesktop           |
+| US West         | https://play-phoenix.neurodesk.org/v2/gh/neurodesk/jupyter-neurodesktop-image/main?urlpath=neurodesktop   |
+| US East         | https://play-ashburn.neurodesk.org/v2/gh/neurodesk/jupyter-neurodesktop-image/main?urlpath=neurodesktop   |
+| Germany Central | https://play-frankfurt.neurodesk.org/v2/gh/neurodesk/jupyter-neurodesktop-image/main?urlpath=neurodesktop |
 
 <!-- {{% pageinfo %}}
 https://play.neurodesk.org/v2/gh/neurodesk/jupyter-neurodesktop-image/main?urlpath=neurodesktop
