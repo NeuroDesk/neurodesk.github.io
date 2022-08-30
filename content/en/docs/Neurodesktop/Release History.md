@@ -7,7 +7,12 @@ description: >-
 ---
 
 ## development
-- updated tool to x.x.x (contributed by yyy)
+- updated qsmxt to 1.1.13 (contributed by Ashley)
+- added nipype 1.8.3 (contributed by Steffen)
+- added mneextended 1.1.0 (contributed by David)
+- added new tool category "workflows"
+- added new CVMFS mirror server in Phoenix
+- added mimilist types so that nii/minc files now open in the respective applications
 
 ## 20220813
 - updated qsmxt to 1.1.12 (contributed by Ashley)
