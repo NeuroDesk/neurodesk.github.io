@@ -36,5 +36,9 @@ Click "OPEN DESKTOP ->":
 To launch the various applications available in Neurodesktop, follow the instructions here:
 https://www.neurodesk.org/docs/neurodesktop/whats-next/#how-to-launch-applications
 
+There are a few little differences between the open-source version of Neurodesk and what's hosted on Nectar VDI:
+1) There is no /neurodesktop-storage folder.
+2) Files uploaded via drag and drop do not get stored on the desktop but in /home/vdiuser/thinclient_drives/GUACFS
+
 Good luck!
 
