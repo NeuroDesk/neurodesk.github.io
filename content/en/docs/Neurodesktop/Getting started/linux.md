@@ -11,8 +11,8 @@ description: >
 2. Docker requirements. Details found under https://docs.docker.com/get-docker/
 
 ## Quickstart
-### 1. Install Docker
-Install Docker from here: https://docs.docker.com/get-docker/. Additional information available [below](#installing-docker)
+### 1. Install Docker/Podman
+Install Docker from here: https://docs.docker.com/get-docker/. Additional information available [below](#installing-docker). Neurodesk also works with Podman.
 
 ### 2. Run Neurodesktop
 Before the first run, create a local folder where the downloaded applications will be stored, e.g. `~/neurodesktop-storage`
