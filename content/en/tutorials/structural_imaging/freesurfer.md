@@ -46,3 +46,26 @@ Run Recon all pipeline:
 ```
 recon-all -subject test-subject -i /neurodesktop-storage/sub-01_ses-01_7T_T1w_defaced.nii.gz -all
 ```
+
+## FreeSurfer Example using module load (e.g. on an HPC)
+Download data:
+```
+wget https://objectstorage.us-ashburn-1.oraclecloud.com/n/idrvm4tkz2a8/b/TOMCAT/o/TOMCAT_DIB/sub-01/ses-01_7T/anat/sub-01_ses-01_7T_T1w_defaced.nii.gz
+
+# or alternatively:
+curl -OL https://objectstorage.us-ashburn-1.oraclecloud.com/n/idrvm4tkz2a8/b/TOMCAT/o/TOMCAT_DIB/sub-01/ses-01_7T/anat/sub-01_ses-01_7T_T1w_defaced.nii.gz
+ 
+
+```
+
+Setup FreeSurfer:
+```
+ml freesurfer/7.3.2
+mkdir ~/freesurfer-output
+export SINGULARITYENV_SUBJECTS_DIR=~/freesurfer-output
+```
+
+Run Recon all pipeline:
+```
+recon-all -subject test-subject -i ~/sub-01_ses-01_7T_T1w_defaced.nii.gz -all
+```
