@@ -137,8 +137,7 @@ sudo apt-get install docker-ce docker-ce-cli containerd.io</code>
   --shm-size=1gb -it --privileged --name neurodesktop \
   -v ~/neurodesktop-storage:/neurodesktop-storage \
   -e HOST_UID="$(id -u)" -e HOST_GID="$(id -g)" \
-  -e NVIDIA_VISIBLE_DEVICES=all \
-  -e NVIDIA_DISABLE_REQUIRE=1 \
+  --gpus all \
   -p 8080:8080 -h neurodesktop-{{< params/neurodesktop/version >}} \
   vnmd/neurodesktop:{{< params/neurodesktop/version >}}</code>
 </pre>
