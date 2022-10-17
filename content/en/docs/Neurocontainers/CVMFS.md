@@ -82,7 +82,7 @@ A temporary workaround is:
 dpkg -i libssl1.1_1.1.1f-1ubuntu2.15_amd64.deb</code>
 </pre>
 
-# install singularity/apptainer 
+# Install singularity/apptainer 
 e.g. for Ubuntu/Debian:
 <pre class="language-batch command-line" data-prompt=">">
 <code>export VERSION=1.18.3 OS=linux ARCH=amd64 && \
@@ -116,7 +116,7 @@ export VERSION=3.10.0 && # adjust this as necessary \
 export PATH="/usr/local/singularity/bin:${PATH}"</code>
 </pre>
 
-# use of Neurodesk CVMFS containers
+# Use of Neurodesk CVMFS containers
 The containers are now available in /cvmfs/neurodesk.ardc.edu.au/containers/ and can be started with:
 <pre class="language-batch command-line" data-prompt=">">
 <code>singularity shell /cvmfs/neurodesk.ardc.edu.au/containers/itksnap_3.8.0_20201208/itksnap_3.8.0_20201208.simg</code>
@@ -127,7 +127,8 @@ make sure that SINGULARITY_BINDPATH include the directories you want to work wit
 <code>export SINGULARITY_BINDPATH='/cvmfs,/mnt,/home'</code>
 </pre>
 
-# WSL doesn't support homedirectory - so don't mount this
+## For WSL users
+The homedirectory might not be supported. Avoid mounting it with
 <pre class="language-batch command-line" data-prompt=">">
 <code>singularity shell --no-home /cvmfs/neurodesk.ardc.edu.au/containers/itksnap_3.8.0_20201208/itksnap_3.8.0_20201208.simg</code>
 </pre>
@@ -143,13 +144,18 @@ set
 <code>mount home = no</code>
 </pre>
 
-# install module system:
+# Install module system
 <pre class="language-batch command-line" data-prompt=">">
 <code>sudo yum install lmod</code>
 </pre>
+or
+<pre class="language-batch command-line" data-prompt=">">
+<code>sudo apt install lmod</code>
+</pre>
 
-# configure module system:
-content of /usr/share/module.sh :
+# Use of containers in the module system
+## Configuration for module system
+Create a the new file `/usr/share/module.sh` with the content:
 <pre class="language-batch command-line" data-prompt=">">
 <code># system-wide profile.modules                                          #
 # Initialize modules for all sh-derivative shells                      #
@@ -167,11 +173,8 @@ esac
 trap - 1 2 3</code>
 </pre>
 
-
-
-
-# use of containers in the module system:
-add this to .bashrc:
+## Make the module system usable in the shell
+Add the following lines to your `~/.bashrc` file:
 <pre class="language-batch command-line" data-prompt=">">
 <code>if [ -f '/usr/share/module.sh' ]; then source /usr/share/module.sh; fi
 
@@ -193,7 +196,12 @@ if [ -f '/usr/share/module.sh' ]; then
         fi
 fi</code>
 </pre>
-# use of containers in the module system:
+Restart the current shell or run
+<pre class="language-batch command-line" data-prompt=">">
+<code>source ~/.bashrc</code>
+</pre>
+
+# Use of containers in the module system
 <pre class="language-batch command-line" data-prompt=">">
 <code>export SINGULARITY_BINDPATH='/cvmfs,/mnt,/home'
 module use /cvmfs/neurodesk.ardc.edu.au/neurodesk-modules/*

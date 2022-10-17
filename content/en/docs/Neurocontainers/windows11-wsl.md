@@ -49,7 +49,7 @@ Follow the instructions here: https://www.neurodesk.org/docs/neurocontainers/cvm
 
 ### LMOD
 <pre class="language-batch command-line" data-prompt=">">
-<code>apt install lmod</code>
+<code>sudo apt install lmod</code>
 </pre>
 
 
@@ -57,7 +57,11 @@ Follow the instructions here: https://www.neurodesk.org/docs/neurocontainers/cvm
 ## 3. Use Neurodesk containers
 <pre class="language-batch command-line" data-prompt=">">
 <code>module use /cvmfs/neurodesk.ardc.edu.au/neurodesk-modules/*
-ml av
 ml fsl
 fsleyes</code>
+</pre>
+
+List the available programs:
+<pre class="language-batch command-line" data-prompt=">">
+<code>ml av</code>
 </pre>
