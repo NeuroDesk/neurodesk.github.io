@@ -127,7 +127,8 @@ make sure that SINGULARITY_BINDPATH include the directories you want to work wit
 <code>export SINGULARITY_BINDPATH='/cvmfs,/mnt,/home'</code>
 </pre>
 
-# WSL doesn't support homedirectory - so don't mount this
+## For WSL users
+The homedirectory might not be supported. Avoid mounting it with
 <pre class="language-batch command-line" data-prompt=">">
 <code>singularity shell --no-home /cvmfs/neurodesk.ardc.edu.au/containers/itksnap_3.8.0_20201208/itksnap_3.8.0_20201208.simg</code>
 </pre>
