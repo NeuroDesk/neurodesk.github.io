@@ -80,14 +80,79 @@ Let's check the alignment between the anatomical and the functional scans - use 
 ## Preprocessing the data
 
 ### Realignment
-Select `Realign (Estimate)` from the SPM Menu:
-<img width="416" alt="image" src="https://user-images.githubusercontent.com/4021595/197103347-315f6f03-cd67-4c2d-8e2c-f5d18ee10888.png">
+Select `Realign (Est & Reslice)` from the SPM Menu (the third option):
+<img width="1121" alt="image" src="https://user-images.githubusercontent.com/4021595/197304865-3560f16d-2950-48f4-9b19-b60f63737dc4.png">
 
 Then select the functional run (important: Select frames from 1:146 again!) and leave everything else as Defaults. Then hit run:
-<img width="702" alt="image" src="https://user-images.githubusercontent.com/4021595/197103705-47d0d4cf-10e2-4db1-b4b7-ffda1b49ad47.png">
+<img width="1120" alt="image" src="https://user-images.githubusercontent.com/4021595/197304966-61159670-71ef-4542-996f-f88dab8bc1d4.png">
+
 
 As an output we should see the realignment parameters:
 <img width="623" alt="image" src="https://user-images.githubusercontent.com/4021595/197106717-0850bb27-cb72-48b1-a532-90910e3267d4.png">
+
+### Slice timing correction
+Click on `Slice timing` in the SPM menu to bring up the Slice Timing section in the batch editor:
+<img width="1115" alt="image" src="https://user-images.githubusercontent.com/4021595/197303610-f0e989dc-8646-4c97-ae67-ac5a6b07d3e1.png">
+
+Select the realigned images (use filter `rsub` and Frames 1:146) and then enter the parameters:
+- Number of Slices = 40
+- TR = 2
+- TA = 1.95
+- Slice order = [1:2:40 2:2:40]
+- Reference Slice = 1
+
+<img width="697" alt="image" src="https://user-images.githubusercontent.com/4021595/197303803-36496c19-66fe-46c9-9f7b-c80973f51bee.png">
+
+### Coregistration
+Now, we coregister the functional scans and the anatomical scan.
+
+Click on `Coregister (Estimate & Reslice)` (the third option) in the SPM menu to bring up the batch editor:
+<img width="1119" alt="image" src="https://user-images.githubusercontent.com/4021595/197304758-19293222-3256-4a32-8901-6741522e28ea.png">
+
+Use the Mean image as the reference and the T1 scan as the source image and hit Play:
+<img width="697" alt="image" src="https://user-images.githubusercontent.com/4021595/197305284-f57af4c3-cccc-4f6b-b138-8fbad9d6d51e.png">
+
+Let's use CheckReg again and overlay a Contour (Right Click -> Contour -> Display onto -> all) to check the coregistration between the images:
+<img width="621" alt="image" src="https://user-images.githubusercontent.com/4021595/197305422-8798294f-50ae-4207-b014-9c2f416a6721.png">
+
+
+### Segmentation
+
+Click the `Segmentation` button in the SPM menu:
+<img width="697" alt="image" src="https://user-images.githubusercontent.com/4021595/197305608-08c0de6a-faf8-4ae9-ab07-664ce84df586.png">
+
+Then change the following settings:
+- Volumes = our coregistered anatomical scan rsub-08-T1w.nii
+- Save Bias Corrected = Save Bias Correced
+- Deformation Fields = Forward
+
+and hit Play again.
+
+### Apply normalization
+
+Select `Normalize (Write)` from the SPM menu:
+<img width="415" alt="image" src="https://user-images.githubusercontent.com/4021595/197305894-36020b36-5e0f-4b06-8e8c-015b7e3b0ba7.png">
+
+For the Deformation Field select the y_rsub-08 file we created in the last step and for the Images to Write select the arsub-08 functional images (Filter ^ar and Frames 1:146):
+<img width="515" alt="image" src="https://user-images.githubusercontent.com/4021595/197306004-284c02a8-f5b4-4278-9234-3d302e4dccb5.png">
+
+Hit Play again.
+
+### Checking the normalization
+
+Use CheckReg to make sure that the functional scans (starting with w to indicate that they were warped: warsub-08) align with the template (found in /opt/spm12/spm12_mcr/spm12/spm12/canonical/avg305T1.nii):
+
+<img width="621" alt="image" src="https://user-images.githubusercontent.com/4021595/197306204-c635b3f5-6e89-40de-9c04-5d94dfec10fc.png">
+
+### Smoothing
+
+Click the `Smooth` button in the SPM menu and select the warped functional scans:
+<img width="514" alt="image" src="https://user-images.githubusercontent.com/4021595/197306354-60ee76e2-73ac-4fe8-8387-038d10580c99.png">
+
+Then click Play.
+
+You can check the smoothing by using CheckReg again:
+<img width="624" alt="image" src="https://user-images.githubusercontent.com/4021595/197306424-8c407cd5-7ba9-4ae3-83ee-4fa8ec22e41f.png">
 
 
 ## Analyzing the data
