@@ -71,9 +71,20 @@ Now we get a slider viewer and we can investigate all functional scans:
 <img width="609" alt="image" src="https://user-images.githubusercontent.com/4021595/197102121-07f1b9c1-3222-4c7c-ad03-eb41e1294460.png">
 
 
+Let's check the alignment between the anatomical and the functional scans - use CheckReg and open the anatomical and the functional scan. They shouldn't align yet, because we haven't done any preprocessing yet:
+<img width="1045" alt="image" src="https://user-images.githubusercontent.com/4021595/197103016-509387f1-4d7e-4237-b745-ae7e837dba11.png">
 
 
 
 ## Preprocessing the data
+
+### Realignment
+Select `Realign (Estimate)` from the SPM Menu:
+<img width="416" alt="image" src="https://user-images.githubusercontent.com/4021595/197103347-315f6f03-cd67-4c2d-8e2c-f5d18ee10888.png">
+
+Then select the functional run (important: Select frames from 1:146 again!) and leave everything else as Defaults. Then hit run:
+<img width="702" alt="image" src="https://user-images.githubusercontent.com/4021595/197103705-47d0d4cf-10e2-4db1-b4b7-ffda1b49ad47.png">
+
+
 
 ## Analyzing the data
