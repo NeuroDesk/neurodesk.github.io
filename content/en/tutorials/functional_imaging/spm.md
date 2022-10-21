@@ -23,6 +23,56 @@ This tutorial is based on the excellent tutorial from Andy's Brain book: https:/
 Our version here is a shortened and adjusted version for using on the Neurodesk platform.
 
 ## Download data
+First, let's download the data. We will use this open dataset: https://openneuro.org/datasets/ds000102/versions/00001/download
+
+Open a terminal and use datalad to install the dataset:
+```
+cd neurodesktop-storage
+datalad install https://github.com/OpenNeuroDatasets/ds000102.git
+
+```
+<img width="839" alt="image" src="https://user-images.githubusercontent.com/4021595/197097444-900ad262-fbca-4cac-adea-3c7b67a4ecc5.png">
+
+We will use subject 08 as an example here, so we use datalad to download sub-08 and since SPM doesn't support compressed files, we need to unpack them:
+```
+cd ds000102
+datalad get sub-08/
+gunzip sub-08/anat/sub-08_T1w.nii.gz -f
+gunzip sub-08/func/sub-08_task-flanker_run-1_bold.nii.gz -f
+gunzip sub-08/func/sub-08_task-flanker_run-2_bold.nii.gz -f
+```
+
+The task used is described here: https://andysbrainbook.readthedocs.io/en/latest/SPM/SPM_Short_Course/SPM_02_Flanker.html
+
+## Starting SPM and visualizing the data
+
+Start spm12GUI from the Application Menu:
+<img width="727" alt="image" src="https://user-images.githubusercontent.com/4021595/197098330-3c6611a1-8bbb-49da-b6fb-3752452322cc.png">
+
+When the SPM menu loaded, click on fMRI and the full SPM interface should open up:
+<img width="1039" alt="image" src="https://user-images.githubusercontent.com/4021595/197098528-aba8f46c-d837-4de5-80c5-07056b784c46.png">
+
+For convenience let's change our default directory to our example subject. Click on `Utils` and select `CD`:
+<img width="404" alt="image" src="https://user-images.githubusercontent.com/4021595/197101928-1bdf67a4-8945-43aa-8df3-877af03bf677.png">
+
+Then navigate to sub-08 and select the directory in the right browser window:
+<img width="508" alt="image" src="https://user-images.githubusercontent.com/4021595/197102015-2f646e54-0626-4139-b9ac-2ad2a77a2ab6.png">
+
+Now let's visualize the anatomical T1 scan of subject 08 by clicking on Display and navigating and selecting the anatomical scan:
+<img width="743" alt="image" src="https://user-images.githubusercontent.com/4021595/197100690-b8e7a0b8-6c0b-47fc-8c5f-46f317396361.png">
+
+<img width="1041" alt="image" src="https://user-images.githubusercontent.com/4021595/197100737-02fdc59e-94df-4895-b756-fc78e5365cfd.png">
+
+Now let's look at the functional scans. Use CheckReg and open run-01. Then right click and `Browse ...`. Then set frames to 1:146 and right click `Select All`
+
+<img width="506" alt="image" src="https://user-images.githubusercontent.com/4021595/197101637-dc486f27-083a-4849-a5af-34666a21e7a4.png">
+
+Now we get a slider viewer and we can investigate all functional scans:
+<img width="609" alt="image" src="https://user-images.githubusercontent.com/4021595/197102121-07f1b9c1-3222-4c7c-ad03-eb41e1294460.png">
+
+
+
+
 
 ## Preprocessing the data
 
