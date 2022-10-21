@@ -40,6 +40,7 @@ datalad get sub-08/
 gunzip sub-08/anat/sub-08_T1w.nii.gz -f
 gunzip sub-08/func/sub-08_task-flanker_run-1_bold.nii.gz -f
 gunzip sub-08/func/sub-08_task-flanker_run-2_bold.nii.gz -f
+chmod a+rw sub-08/ -R
 ```
 
 The task used is described here: https://andysbrainbook.readthedocs.io/en/latest/SPM/SPM_Short_Course/SPM_02_Flanker.html
@@ -85,6 +86,8 @@ Select `Realign (Estimate)` from the SPM Menu:
 Then select the functional run (important: Select frames from 1:146 again!) and leave everything else as Defaults. Then hit run:
 <img width="702" alt="image" src="https://user-images.githubusercontent.com/4021595/197103705-47d0d4cf-10e2-4db1-b4b7-ffda1b49ad47.png">
 
+As an output we should see the realignment parameters:
+<img width="623" alt="image" src="https://user-images.githubusercontent.com/4021595/197106717-0850bb27-cb72-48b1-a532-90910e3267d4.png">
 
 
 ## Analyzing the data
