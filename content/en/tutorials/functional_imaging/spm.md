@@ -156,3 +156,51 @@ You can check the smoothing by using CheckReg again:
 
 
 ## Analyzing the data
+
+Click on `Specify 1st-level` - then set the following options:
+- Directory: Select the sub-08 top level directory
+- Units for desing: Seconds
+- Interscan interval: 2
+- Data & Design: Click twice on New Subject/Session
+- Select the smoothed, warped data from run 1 and run 2 for the two sessions respectively
+- Create two Conditions per run and set the following:
+- For Run 1:
+- Name: Inc
+- Onsets (you can copy from here and paste with CTRL-V):    0 10 20 52 88 130 144 174 236 248 260 274  
+- Durations: 2 (SPM will assume that it's the same for each event)
+- Name: Con
+- Onsets: 32 42 64 76 102 116 154 164 184 196 208 222
+- Durations: 2
+- For Run 2:
+- Name: Inc
+- Onsets:   0 10 52 64 88 150 164 174 184 196 232 260
+- Durations: 2 
+- Name: Con
+- Onsets: 20 30 40 76 102 116 130 140 208 220 246 274
+- Durations: 2 
+
+When done, click the green Play button.
+
+We can Review the design by clicking on `Review` in the SPM menu and selecting the SPM.mat file in the model directory we specified earlier and it should look like this:
+<img width="626" alt="image" src="https://user-images.githubusercontent.com/4021595/197309811-da1fb6d2-1eb3-4ed8-9fe7-560292b645a4.png">
+
+### Estimating the model
+Click on `Estimate` in the SPM menu and select the SPM.mat file, then hit the green Play button.
+
+### Inference
+Now open the `Results` section and select the SPM.mat file again. Then we can test our hypotheses:
+
+Define a new contrast as:
+- Name: Incongruent-Congruent
+- Contrast weights vector: 0.5 -0.5 0.5 -0.5
+
+<img width="518" alt="image" src="https://user-images.githubusercontent.com/4021595/197309988-5f09952a-fc3d-4a8b-9797-22dbdd165e12.png">
+
+Then we can view the results. Set the following options:
+- masking: none”
+- p value adjustment to control: Click on “none”, and set the uncorrected p-value to 0.01. 
+- extent threshold {voxels}: 10
+
+<img width="622" alt="image" src="https://user-images.githubusercontent.com/4021595/197310053-cde3d7cb-9af1-4a5b-8923-6c26b7b2a5ee.png">
+
+
