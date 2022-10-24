@@ -45,12 +45,16 @@ echo 'CVMFS_KEYS_DIR="/etc/cvmfs/keys/ardc.edu.au/"' | sudo tee -a /etc/cvmfs/co
 echo "CVMFS_HTTP_PROXY=DIRECT" | sudo tee  /etc/cvmfs/default.local
 echo "CVMFS_QUOTA_LIMIT=5000" | sudo tee -a  /etc/cvmfs/default.local
 
-sudo cvmfs_config setup
-
-# this is only necessary for WSL:
-sudo cvmfs_config wsl2_start
-
-sudo cvmfs_config chksetup
+sudo cvmfs_config setup</code>
+</pre>
+## For WSL users
+It is required to run this for each new new WSL session:
+<pre class="language-batch command-line" data-prompt=">">
+<code>sudo cvmfs_config wsl2_start</code>
+</pre>
+Test if the connection works:
+<pre class="language-batch command-line" data-prompt=">">
+<code>sudo cvmfs_config chksetup
 
 ls /cvmfs/neurodesk.ardc.edu.au
 
@@ -60,7 +64,7 @@ sudo cvmfs_talk -i neurodesk.ardc.edu.au host info
 cvmfs_config stat -v neurodesk.ardc.edu.au</code>
 </pre>
 
-# For Ubuntu 22.04 users
+## For Ubuntu 22.04 users
 If configuring CVMFS returns the following error:
 <pre class="language-batch command-line" data-prompt=">">
 <code>Error: failed to load cvmfs library, tried: './libcvmfs_fuse3_stub.so' '/usr/lib/libcvmfs_fuse3_stub.so' '/usr/lib64/libcvmfs_fuse3_stub.so' './libcvmfs_fuse_stub.so' '/usr/lib/libcvmfs_fuse_stub.so' '/usr/lib64/libcvmfs_fuse_stub.so'

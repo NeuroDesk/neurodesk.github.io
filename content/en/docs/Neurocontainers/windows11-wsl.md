@@ -55,9 +55,20 @@ Follow the instructions here: https://www.neurodesk.org/docs/neurocontainers/cvm
 
 
 ## 3. Use Neurodesk containers
+{{% alert %}}
+When restarting WSL the cvmfs service has to be started manually:
 <pre class="language-batch command-line" data-prompt=">">
-<code>module use /cvmfs/neurodesk.ardc.edu.au/neurodesk-modules/*
-ml fsl
+<code>sudo cvmfs_config wsl2_start</code>
+</pre>
+{{% /alert %}}  
+Initialize the neurodesk modules:
+<pre class="language-batch command-line" data-prompt=">">
+<code>module use /cvmfs/neurodesk.ardc.edu.au/neurodesk-modules/*</code>
+</pre>
+
+Example usage of fsleyes:
+<pre class="language-batch command-line" data-prompt=">">
+<code>ml fsl
 fsleyes</code>
 </pre>
 
