@@ -49,15 +49,17 @@ Neurodocker is the dependency we use to build containers.
 1. (optional) Sync upstream repository:  
   If you have the permissions to do so: Press "Fetch upstream" in https://github.com/NeuroDesk/neurodocker to check if our fork of Neurodocker is already up-to-date. Otherwise, open an issue in https://github.com/NeuroDesk/neurocontainers/issues, requesting to pull-in latest changes from Neurodocker upstream into our fork of Neurodocker. One of the admins will attend the issue and perform the operation.  
 2. (optional) Add a new neurodocker tool:  
-  If relevant to your project, add an option to neurodocker that installs new software (https://github.com/NeuroDesk/neurodocker) and create a pull request to neurodocker's main responsitory (add new tool in a branch!).  
+  If relevant to your project, add an option to neurodocker that installs new software (https://github.com/NeuroDesk/neurodocker) and create a pull request to neurodocker's main respository (add new tool in a branch!).  
 3. Clone our fork of Neurodocker:  
    <pre class="language-shell command-line" data-prompt="$"><code>git clone https://github.com/NeuroDesk/neurodocker/</code></pre>  
 4. Install neurodocker:  
    <pre class="language-shell command-line" data-prompt="$"><code>cd neurodocker  
    python -m pip install .
    cd ..</code></pre>
-5. Run:
-   echo 'export PATH=${PATH}:${HOME}/.local/bin' >> ${HOME}/.bashrc
+5. Append line to .bashrc for adding the path:
+   <pre class="language-shell command-line" data-prompt="$">
+   <code>echo 'export PATH=${PATH}:${HOME}/.local/bin' >> ${HOME}/.bashrc</code>
+   </pre>
 6. Close the terminal, and reopen it for the updated PATH to take effect
    
 
