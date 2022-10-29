@@ -82,16 +82,41 @@ Neurodocker is the dependency we use to build containers.
    (edit README.md as required)</code></pre>
    Upload your application to object storage first if needed, so you can then download it in `build.sh` (ask for instructions about this if you don't know the key, and never share it anywhere public!)
 
-3. Run `update-builders.sh`:
-   This will auto-create the CI workflow for the application (or manually duplicate the template file and rename all occurances of template to NEWAPP)
-   <pre class="language-shell command-line" data-prompt="$"><code>cd ../..
-   sh update-builders.sh</code></pre>
+3. Building containers
 
-   {{% alert %}}
-   If the CI build runs out of space, add the application to the following txt file to add additional space:
-   https://github.com/NeuroDesk/neurocontainers/blob/master/.github/workflows/free-up-space-list.txt.
-   Note: this increases CI run time, only use in cases of out-of-space errors.
+   Any NEWAPP under the `recipes/` directory are built and pushed automatically via github actions
+
+   {{% alert title="Depreciation notice" color="warning" %}}
+   `./update-builder.sh` and  `.github/workflows/free-up-space-list.txt` are now deprecated. Files are now placeholders and will be removed in a future update.
+   
+   - Container building is now automated for any folder under `recipes/`. To override, use `autoBuild: false` in `build-config.json` (see below)
+   - For free-up-space process, use `freeUpSpace: true` in `build-config.json` (see below)
    {{% /alert %}}
+    
+   Apps are built using the following settings:
+   - `autoBuild: true`
+   - `freeUpSpace: false`
+   - `selfHostedRunner: false`
+
+
+   This default behaviour can be overriden on an app-by-app bases using entries in `.github/workflows/build-config.json`
+   
+   For example:
+   <pre class="language-json">
+   <code>{
+    "template": {
+        "autoBuild": true,
+        "freeUpSpace": false,
+        "selfHostedRunner": false
+    },
+    "newapp": {
+        "autoBuild": false,
+        "freeUpSpace": true,
+        "selfHostedRunner": false
+    },
+   }</code>
+   </pre>
+
 
 4. Build and test the container locally 
    1. run the build script with the debug flag:
