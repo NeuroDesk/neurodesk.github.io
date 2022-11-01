@@ -10,7 +10,7 @@ Neurodesk is an open-source project that is always evolving. If you are experien
 
 To ask questions or suggest new features, [join the discussion](https://github.com/NeuroDesk/neurodesk.github.io/discussions) on github. 
 
-## I cannot copy and paste text within Neurodesktop using keyboard shortcuts
+## I cannot copy and paste, all within the Neurodesktop environment, using keyboard shortcuts
 If you're using Mac, you might be trying to use Mac keyboard shortcuts, but Neurodesktop is using Linux keyboard shortcuts (CTRL+C and CTRL+V)
 
 If you use the terminal, please see "I fixed my internet browser clipboard, but copy or paste still do not work in the terminal" below.
@@ -40,8 +40,12 @@ If the clipboard still does not work, check "I fixed my internet browser clipboa
 ## I fixed my internet browser clipboard, but copy or paste still do not work in the terminal
 The terminal is using special keyboard shortcuts, Shift+CTRL+C for copy, and Shift+CTRL+V for paste. Alternatively, you can copy and paste text by using the terminal's "Edit" menu.
 
+Notice that the tip in this section was tested on the ARDC Virtual Desktop version of Neurodesktop. It might not apply to other platfroms. 
+
 ## I fixed my internet browser clipboard, but copy or paste still do not work in the file browser
 The copy and paste options in the "Edit" menu of the file browser are used to copy and paste files, not text. To copy and paste text from/into the file browser application (e.g., copy a path into the path field in the top), use the CTRL+C and CTRL+V keyboard shortcuts.
+
+Notice that the tip in this section was tested on the ARDC Virtual Desktop version of Neurodesktop. It might not apply to other platfroms.
 
 ## I fixed my internet browser clipboard, but copy or paste still do not work in a specific/all applications
 If you're using Mac, you might be trying to use Mac keyboard shortcuts, but Neurodesktop is using Linux keyboard shortcuts.
@@ -58,6 +62,8 @@ If it still does not work, or if your host is Windows or Linux, please report th
 7. If you are not logged into Github, please log in (upper right corner)
 8. Press "New Discussion" button
 9. In the message that you write, please specify your operating system, your internet browser, the application in question, and if you can copy/paste to Mousepad and how?
+
+Notice that the tip in this section was tested on the ARDC Virtual Desktop version of Neurodesktop. It might not apply to other platfroms.
 
 ## docker: Cannot connect to the Docker daemon at unix:///var/run/docker.sock. Is the docker daemon running?.
 This is usually a docker-related error, not related to neurodesktop itself. To troubleshoot docker, we can try a simpler container first:
