@@ -13,6 +13,7 @@ description: >-
 - added new tool category "workflows"
 - added new CVMFS mirror server in Phoenix
 - added mimilist types so that nii/minc files now open in the respective applications
+- matlab licenses can now be saved from the activation GUI
 
 ## 20220813
 - updated qsmxt to 1.1.12 (contributed by Ashley)
