@@ -29,7 +29,7 @@ using a CMRR multi-band sequence, I used [this function](https://github.com/CMRR
 4. That you have a file that contains the motion regressors you plan to use in your GLM. I'll talk below a bit about what I did with the output given by fmriprep (e.g. ..._desc-confounds_timeseries.tsv')
 5. That you can use SPM12 and the PhysIO GUI to initialise your batch code
 
-NB. You can see the code generated from this tutorial [here](https://github.com/kel-github/imaging_cert_value_7T_pipeline/tree/master/physiol_regress) (Coming soon!) <p> 
+NB. You can see the code generated from this tutorial [here](https://github.com/kel-github/imaging_cert_value_7T_pipeline/tree/master/physiol_regress) <p> 
 
 # 1. Generate an example script for batching
 
@@ -37,7 +37,7 @@ First you will create an example batch script that is specific to one of your pa
 
 To work with PhysIO toolbox, your motion parameters need to be in the .txt format as required by SPM.  
 
-I made some simple functions in python that would extract my desired movement regressors and save them to the space separated .txt file as is required by SPM. They can be found [here](https://github.com/kel-github/imaging_cert_value_7T_pipeline/tree/master/physiol_regress/get_movement_regressors). (Coming soon!)
+I made some simple functions in python that would extract my desired movement regressors and save them to the space separated .txt file as is required by SPM. They can be found [here](https://github.com/kel-github/imaging_cert_value_7T_pipeline/tree/master/physiol_regress/get_movement_regressors).
 
 Once I had my .log files and .txt motion regressors file, I followed the instructions [here](https://gitlab.ethz.ch/physio/physio-doc/-/wikis/QUICKSTART) to get going with the Batch editor, and used [this paper](https://www.sciencedirect.com/science/article/pii/S016502701630259X) to aid my understanding of how to complete the fields requested by the Batch editor. 
 
