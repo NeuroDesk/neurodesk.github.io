@@ -10,7 +10,7 @@ description: >
 
 > _This tutorial was created by Sin Kim._
 >
-> Github: @AKSoo
+> Github: @kimsin98
 >
 > Twitter: @SinKim98
 
