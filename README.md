@@ -10,7 +10,7 @@ Using Https:
 git clone --recurse-submodules https://github.com/NeuroDesk/neurodesk.github.io.git
 ````
 
-#### Download hugo
+#### Download hugo extended
 ```
 https://github.com/gohugoio/hugo/releases
 ```
