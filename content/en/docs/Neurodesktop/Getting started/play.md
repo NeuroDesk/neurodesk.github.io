@@ -9,14 +9,10 @@ Choose the link below closest to your location for your own instance of Neurodes
 
 | Location        | Neurodesk Play link                                                                                       |
 |-----------------|-----------------------------------------------------------------------------------------------------------|
-| Australia East  | https://play.neurodesk.org/v2/gh/neurodesk/jupyter-neurodesktop-image/main?urlpath=neurodesktop           |
+| Australia East  | https://play-sydney.neurodesk.org/v2/gh/neurodesk/jupyter-neurodesktop-image/main?urlpath=neurodesktop    |
 | US West         | https://play-phoenix.neurodesk.org/v2/gh/neurodesk/jupyter-neurodesktop-image/main?urlpath=neurodesktop   |
 | US East         | https://play-ashburn.neurodesk.org/v2/gh/neurodesk/jupyter-neurodesktop-image/main?urlpath=neurodesktop   |
 | Germany Central | https://play-frankfurt.neurodesk.org/v2/gh/neurodesk/jupyter-neurodesktop-image/main?urlpath=neurodesktop |
-
-<!-- {{% pageinfo %}}
-https://play.neurodesk.org/v2/gh/neurodesk/jupyter-neurodesktop-image/main?urlpath=neurodesktop
-{{% /pageinfo %}} -->
 
 You can upload data to the desktop by simply drag-and-dropping files on the browser window. Data uploaded during your session are stored on Oracle Cloud, and will be automatically deleted at the end of the session. To download your files before deletion: You need to open the guacamole settings by pressing CTRL-ALT-SHIFT (Control-Command-Shift on Mac). This will open a menu on the side:
 
