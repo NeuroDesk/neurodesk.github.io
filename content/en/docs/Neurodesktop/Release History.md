@@ -14,6 +14,7 @@ description: >-
 - added new CVMFS mirror server in Phoenix
 - added mimilist types so that nii/minc files now open in the respective applications
 - matlab licenses can now be saved from the activation GUI
+- keyboard layout fix for ALTGR key on European keyboards
 
 ## 20220813
 - updated qsmxt to 1.1.12 (contributed by Ashley)
