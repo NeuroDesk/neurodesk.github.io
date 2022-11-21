@@ -142,6 +142,19 @@ Needs testing
 
 Startup Neurodesktop using the following command:
 
-{{< params/neurodesktop/linux/vncclient >}}
+{{< params/neurodesktop/linux/vncclientcloud >}}
 
-Open a VNC Client and connect to port 5901
+Download the Tiger VNC client from https://sourceforge.net/projects/tigervnc/files/stable/1.12.0/
+
+Open an SSH connection to your cloud instance with the following command
+```
+ssh -L 5901:127.0.0.1:5901 USER@IP
+```
+
+Run the VNC Client and connect to `localhost::5901`
+
+![tigervncclient](/neurodesktop/getting-started/vnc/tigervncclient.png 'tigervncclient')
+
+Enter `password` and click Ok.
+
+![tigervncclient-password](/neurodesktop/getting-started/vnc/tigervncclient-password.png 'tigervncclient-password')

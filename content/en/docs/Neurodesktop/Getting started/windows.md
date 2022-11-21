@@ -132,4 +132,13 @@ Startup Neurodesktop using the following command:
 <code>docker run --shm-size=1gb -it --privileged --name neurodesktop -v C:/neurodesktop-storage:/neurodesktop-storage -p 5901:5901 -p 8080:8080 -h neurodesktop-{{< params/neurodesktop/version >}} vnmd/neurodesktop:{{< params/neurodesktop/version >}} --vnc </code>
 </pre>
 
-Open a VNC Client and connect to port 5901
+Download the Tiger VNC client (`vncviewer64-1.12.0.exe`) from https://sourceforge.net/projects/tigervnc/files/stable/1.12.0/
+
+Run the VNC Client and connect to `localhost::5901`
+
+![tigervncclient](/neurodesktop/getting-started/vnc/tigervncclient.png 'tigervncclient')
+
+Enter `password` and click Ok.
+
+![tigervncclient-password](/neurodesktop/getting-started/vnc/tigervncclient-password.png 'tigervncclient-password')
+

@@ -228,4 +228,16 @@ Startup Neurodesktop using the following command:
 
 {{< params/neurodesktop/linux/vncclient >}}
 
-Open a VNC Client and connect to port 5901
+Install the Tiger VNC client
+```
+sudo apt install tigervnc-client
+```
+
+Run the VNC Client and connect to `localhost::5901`
+
+![tigervncclient](/neurodesktop/getting-started/vnc/tigervncclient.png 'tigervncclient')
+
+Enter `password` and click Ok.
+
+![tigervncclient-password](/neurodesktop/getting-started/vnc/tigervncclient-password.png 'tigervncclient-password')
+
