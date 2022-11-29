@@ -111,7 +111,7 @@ If you contributed to the project please list yourself here with a description o
 ## Korbinian Eckstein
 - https://github.com/korbinian90
 - documentation
-- application container development (qsmxt)
+- application container development (qsmxt, mrsi)
 
 ## Stefanie Evas
 - https://github.com/neuro-sevas
