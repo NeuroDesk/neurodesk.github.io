@@ -26,7 +26,7 @@ If you contributed to the project please list yourself here with a description o
 - documentation
 - tutorials (QSM, SWI, Unwrapping, lcmodel, freesurfer)
 - google colab support
-- outreach (e.g. Twitter, talks at conferences, youtube videos)
+- outreach (e.g. Mastodon, talks at conferences, youtube videos)
 
 ## Aswin Narayanan
 - https://github.com/aswinnarayanan

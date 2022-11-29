@@ -178,10 +178,10 @@ enable = false
 	# icon = "fa fa-envelope"
     #     desc = "Discussion and help from your fellow users"
 [[params.links.user]]
-	name ="Twitter"
-	url = "https://twitter.com/neuro_desk"
-	icon = "fab fa-twitter"
-	desc = "Follow us on Twitter to get the latest news!"
+	name ="Mastodon"
+	url = "https://masto.ai/@Neurodesk"
+	icon = "fab fa-mastodon"
+	desc = "Follow us on Mastodon to get the latest news!"
 # [[params.links.user]]
 # 	name ="RSS"
 # 	url = "https://neurodesk.github.io/blog/index.xml"
@@ -217,5 +217,5 @@ enable = false
 [[menu.main]]
     name = "News"
     weight = 50
-    url = "https://twitter.com/neuro_desk"
+    url = "https://masto.ai/@Neurodesk"
 	

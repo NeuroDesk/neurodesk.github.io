@@ -12,6 +12,6 @@ description: >
 4. Summarize the main changes and copy this to the Release History: https://www.neurodesk.org/docs/neurodesktop/release-history/
 5. Change the version of the latest desktop in https://github.com/NeuroDesk/neurodesk.github.io/blob/hugo-docsy/data/neurodesktop.toml
 6. Commit all changes
-7. Tweet a quick summary of the changes and announce new version: https://twitter.com/neuro_desk
+7. Tweet a quick summary of the changes and announce new version: https://masto.ai/@Neurodesk
 
 
