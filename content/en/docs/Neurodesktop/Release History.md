@@ -7,6 +7,9 @@ description: >-
 ---
 
 ## development
+- add VNC connection back into docker container because RDP currently causes issues for european keyboards
+
+## 20221129
 - updated qsmxt to 1.1.13 (contributed by Ashley)
 - added nipype 1.8.3 (contributed by Steffen)
 - added mneextended 1.1.0 (contributed by David)
@@ -14,7 +17,7 @@ description: >-
 - added new CVMFS mirror server in Phoenix
 - added mimilist types so that nii/minc files now open in the respective applications
 - matlab licenses can now be saved from the activation GUI
-- keyboard layout fix for ALTGR key on European keyboards
+- update rstudio to 2022.07.2 (and R version to 4.1.2 with new additional packages, like brms) 
 
 ## 20220813
 - updated qsmxt to 1.1.12 (contributed by Ashley)
