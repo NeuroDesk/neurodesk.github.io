@@ -55,6 +55,7 @@ _Removes symlinks_
 Run `git pull`  
 Run `bash build.sh`  
 _install.sh does not need to be run again_
+here are Mark's edits
 
 ### To download all containers
 Run `bash containers.sh --all`
