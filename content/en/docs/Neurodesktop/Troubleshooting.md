@@ -49,7 +49,7 @@ For more details, read the "Note for Mac users" [here](https://www.neurodesk.org
 
 It is also possible that the text you are trying to copy includes special characters (e.g., non-English charcters), which may cause Neurodesktop to not execute your paste command (including the non specials characters). Give special attention to the following characters:
 - Dash: the en (short) dash is the normal one and copies ok, but the em (long) dash is considered a special character. When in doubt, replace all the dashes in the text you want to copy with en dashes.
-- Quotatoin mark: a vertical quotation mark (') is fine, but a leaning quotation mark / an apostrophe are special characters. When in doubt, replace all quotation marks in the text you want to copy with vertical quotation marks.
+- Quotatoin mark: a strictly vertical quotation mark is fine, but a slightly leaning quotation mark / an apostrophe are special characters. When in doubt, replace all quotation marks in the text you want to copy with vertical quotation marks.
 
 If it still does not work, or if your host is Windows or Linux, please report the problem and we will do our best to help you:
 
