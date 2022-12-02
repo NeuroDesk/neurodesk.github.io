@@ -86,7 +86,7 @@ Neurodocker is the dependency we use to build containers.
 
    Any NEWAPP under the `recipes/` directory are built and pushed automatically via github actions
 
-   {{% alert title="Depreciation notice" color="warning" %}}
+   <!-- {{% alert title="Depreciation notice" color="warning" %}}
    `./update-builder.sh` and  `.github/workflows/free-up-space-list.txt` are now deprecated. Files are now placeholders and will be removed in a future update.
    
    - Container building is now automated for any folder under `recipes/`. To override, use `autoBuild: false` in `build-config.json` (see below)
@@ -115,7 +115,7 @@ Neurodocker is the dependency we use to build containers.
         "selfHostedRunner": false
     },
    }</code>
-   </pre>
+   </pre> -->
 
 
 4. Build and test the container locally 
