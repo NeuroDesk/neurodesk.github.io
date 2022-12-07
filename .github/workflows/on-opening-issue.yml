@@ -1,3 +1,5 @@
+name: on-opening-issue
+
 on:
   issues:
     types: [opened, reopened]

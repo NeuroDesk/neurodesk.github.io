@@ -1,3 +1,5 @@
+name: add-issue-to-project
+
 on:
   workflow_call:
     inputs:
