@@ -2,7 +2,7 @@ name: on-opening-issue
 
 on:
   issues:
-    types: [opened, closed, reopened]
+    types: [opened, reopened]
 
 jobs:
   add-issue-to-project:
