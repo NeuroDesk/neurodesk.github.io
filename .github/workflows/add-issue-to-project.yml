@@ -1,0 +1,12 @@
+on:
+  workflow_call:
+
+jobs:
+  assign-issue-to-project:
+    runs-on: ubuntu-latest
+    name: Assign to Project
+    steps:
+      - uses: actions/add-to-project@v0.4.0
+        with:
+          project-url: https://github.com/orgs/NeuroDesk/projects/9
+          github-token: ${{ secrets.NEURODESK_GITHUB_TOKEN_ISSUE_AUTOMATION }}
