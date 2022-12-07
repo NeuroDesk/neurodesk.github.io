@@ -1,5 +1,9 @@
 on:
   workflow_call:
+    inputs:
+    secrets:
+      PAT:
+        required: true
 
 jobs:
   assign-issue-to-project:
@@ -9,4 +13,4 @@ jobs:
       - uses: actions/add-to-project@v0.4.0
         with:
           project-url: https://github.com/orgs/NeuroDesk/projects/9
-          github-token: ${{ secrets.NEURODESK_GITHUB_TOKEN_ISSUE_AUTOMATION }}
+          github-token: ${{ secrets.PAT }}
