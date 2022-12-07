@@ -5,7 +5,7 @@ on:
     types: [opened, closed, reopened]
 
 jobs:
-  build-apps:
+  add-issue-to-project:
     uses: NeuroDesk/neurodesk.github.io/.github/workflows/add-issue-to-project.yml@main
     secrets:
       PAT: ${{ secrets.NEURODESK_GITHUB_TOKEN_ISSUE_AUTOMATION }}
