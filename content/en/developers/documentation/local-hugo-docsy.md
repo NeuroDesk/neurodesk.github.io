@@ -7,7 +7,7 @@ description: >
 ---
 
 ## Local Hugo Docsy in Linux and WSL2
-https://github.com/NeuroDesk/neurodesk.github.io/blob/hugo-docsy/CONTRIBUTING.md
+https://github.com/NeuroDesk/neurodesk.github.io/blob/main/CONTRIBUTING.md
 
 ## Local Hugo Docsy in Windows
 
@@ -47,4 +47,4 @@ Once started, dev website will be accessible via http://localhost:1313
 <pre class="language-shell command-line" data-prompt="$"><code>git submodule update --remote
 git add themes/
 git commit -m "Updating theme submodule"
-git push origin hugo-docsy</code></pre>
+git push origin main</code></pre>

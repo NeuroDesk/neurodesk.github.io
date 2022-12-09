@@ -210,7 +210,7 @@ Generate git personal access token (if you don’t have one already)
 
 15. If somebody wants to use the application before the next release of Neurodesktop is out, you can instruct them to use the command in step 13 above instead of the deafult commands given in the user install instructions.
 
-16. Consider contributing a tutorial about the new tool: https://github.com/NeuroDesk/neurodesk.github.io/tree/hugo-docsy/content/en/tutorials
+16. Consider contributing a tutorial about the new tool: https://github.com/NeuroDesk/neurodesk.github.io/tree/main/content/en/tutorials
 
 
 

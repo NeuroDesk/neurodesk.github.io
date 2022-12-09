@@ -127,7 +127,7 @@ github_project_repo = "https://github.com/NeuroDesk/neurodesk.github.io"
 
 # Uncomment this if you have a newer GitHub repo with "main" as the default branch,
 # or specify a new value if you want to reference another branch in your GitHub links
-github_branch= "hugo-docsy"
+github_branch= "main"
 
 # Google Custom Search Engine ID. Remove or comment out to disable search.
 # gcs_engine_id = "5b38591c9187748b9"

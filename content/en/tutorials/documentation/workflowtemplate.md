@@ -36,7 +36,7 @@ Welcome to the workflow template, which you can use to contribute your own neuro
 Begin by creating a copy of our documentation that you can edit:
 1. Visit the github repository for the Neurodesk documentation (https://github.com/NeuroDesk/neurodesk.github.io).
 2. [Fork](https://docs.github.com/en/get-started/quickstart/fork-a-repo) the repository.
-- _You should now have your own copy of the documentation, which you can alter without affecting our official documentation. You should see a panel stating "This branch is up to date with Neurodesk:hugo-docsy." If someone else makes a change to the official documentation, the statement will change to reflect this. You can bring your repository up to date by clicking "Fetch upstream"._ 
+- _You should now have your own copy of the documentation, which you can alter without affecting our official documentation. You should see a panel stating "This branch is up to date with Neurodesk:main." If someone else makes a change to the official documentation, the statement will change to reflect this. You can bring your repository up to date by clicking "Fetch upstream"._ 
 
 Next, create your workflow:
 1. [Clone](https://docs.github.com/en/get-started/quickstart/fork-a-repo#cloning-your-forked-repository) your forked version of our documentation to a location of your choice on your computer. 
