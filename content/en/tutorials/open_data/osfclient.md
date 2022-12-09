@@ -17,7 +17,7 @@ The osfclient is an open-source tool to publish and access open datasets on the 
 # Publish a dataset
 
 Here is an example how to publish a dataset on the OSF:
-```
+```Bash
 osf init
 # enter your OSF credentials and project ID
 
@@ -30,6 +30,6 @@ osf upload -r . osfstorage/data
 # Access a dataset
 
 To download a dataset from the OSF:
-```
+```Bash
 osf -p PROJECTID_HERE_eg_y5cq9 clone .
 ```
