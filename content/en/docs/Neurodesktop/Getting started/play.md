@@ -2,17 +2,27 @@
 title: "Play"
 linkTitle: "Play"
 description: >
-  Run a demo of neurodesktop _without_ installing anything
+  Run neurodesktop _without_ installing anything
 ---
 
-Choose the link below closest to your location for your own instance of Neurodesk on your browser running on Oracle cloud resources.
+Choose the link below closest to your location for your own instance of Neurodesk in your browser running on Oracle cloud resources.
 
-| Location        | Neurodesktop on play                                                                                                      | Binder on play                                 |
-|-----------------|---------------------------------------------------------------------------------------------------------------------------|------------------------------------------------|
-| Australia East  | [neurodesktop](https://play-sydney.neurodesk.org/v2/gh/neurodesk/jupyter-neurodesktop-image/main?urlpath=neurodesktop)    | [binder](https://play-sydney.neurodesk.org)    |
-| US West         | [neurodesktop](https://play-phoenix.neurodesk.org/v2/gh/neurodesk/jupyter-neurodesktop-image/main?urlpath=neurodesktop)   | [binder](https://play-phoenix.neurodesk.org)   |
-| US East         | [neurodesktop](https://play-ashburn.neurodesk.org/v2/gh/neurodesk/jupyter-neurodesktop-image/main?urlpath=neurodesktop)   | [binder](https://play-ashburn.neurodesk.org)   |
-| Germany Central | [neurodesktop](https://play-frankfurt.neurodesk.org/v2/gh/neurodesk/jupyter-neurodesktop-image/main?urlpath=neurodesktop) | [binder](https://play-frankfurt.neurodesk.org) |
+| Location        | Neurodesktop on play                                                                                                           | Jupyter on play                                                                                      |
+|-----------------|--------------------------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------|
+| Australia East  | [start neurodesktop play](https://play-sydney.neurodesk.org/v2/gh/neurodesk/jupyter-neurodesktop-image/main?urlpath=neurodesktop)    | [start jupyter play](https://play-sydney.neurodesk.org/v2/gh/neurodesk/jupyter-neurodesktop-image/main)    |
+| US West         | [start neurodesktop play](https://play-phoenix.neurodesk.org/v2/gh/neurodesk/jupyter-neurodesktop-image/main?urlpath=neurodesktop)   | [start jupyter play](https://play-phoenix.neurodesk.org/v2/gh/neurodesk/jupyter-neurodesktop-image/main)   |
+| US East         | [start neurodesktop play](https://play-ashburn.neurodesk.org/v2/gh/neurodesk/jupyter-neurodesktop-image/main?urlpath=neurodesktop)   | [start jupyter play](https://play-ashburn.neurodesk.org/v2/gh/neurodesk/jupyter-neurodesktop-image/main)   |
+| Germany Central | [start neurodesktop play](https://play-frankfurt.neurodesk.org/v2/gh/neurodesk/jupyter-neurodesktop-image/main?urlpath=neurodesktop) | [start jupyter play](https://play-frankfurt.neurodesk.org/v2/gh/neurodesk/jupyter-neurodesktop-image/main) |
+
+
+The Neurodesk-play instances above do not require authentication, but because of this do not store any data across sessions. If you would like to keep your home directory across sessions, you can use the following Brainhack Neurodesk-Lab instances and authenticate via Github:
+
+| Location        | Brainhack Jupyter Lab with persistent storage               |
+|-----------------|-------------------------------------------------------------|
+| Asia/Pacific    | [start neurodesk lab](https://bhsydney.neurodesk.org/)      |
+| North America   | [start neurodesk lab](https://bhnam.neurodesk.org/)         | 
+| Europe          | [start neurodesk lab](https://bheurope.neurodesk.org/)      | 
+
 
 You can upload data to the desktop by simply drag-and-dropping files on the browser window. Data uploaded during your session are stored on Oracle Cloud, and will be automatically deleted at the end of the session. To download your files before deletion: You need to open the guacamole settings by pressing CTRL-ALT-SHIFT (Control-Command-Shift on Mac). This will open a menu on the side:
 
