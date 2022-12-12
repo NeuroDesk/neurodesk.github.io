@@ -62,6 +62,8 @@ To download a dataset from the OSF (if it was uploaded as a DataLad dataset befo
 ```Bash
 datalad clone osf://ehnwz
 
+cd ehnwz
+
 # now get the files you want to download:
 datalad get .
 ```
