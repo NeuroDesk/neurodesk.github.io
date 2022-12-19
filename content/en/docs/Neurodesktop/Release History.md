@@ -6,8 +6,10 @@ description: >-
      Previous releases of neurodesktop
 ---
 
-## development
+## 20221216
 - add VNC connection back into docker container because RDP currently causes issues for european keyboards
+- added freesurfer into AFNI container to get @SUMA_Make_Spec_FS to work (issue: https://github.com/orgs/NeuroDesk/discussions/210#discussioncomment-4337927)
+- added deepretinotopy tool in version 1.0.0 20221201 (contributed by Xincheng & Fernanda)
 
 ## 20221129
 - updated qsmxt to 1.1.13 (contributed by Ashley)

@@ -118,6 +118,14 @@ If you contributed to the project please list yourself here with a description o
 - documentation
 - application containers 
 
+## Xincheng Ye
+- https://github.com/yexincheng
+- application container development (delphi, slicer, deepretinotopy)
+
+## Fernanda Ribeiro
+- https://github.com/felenitaribeiro
+- application container development (deepretinotopy)
+
 ## Jeryn Chang
 - https://github.com/Cadaei-Yuvxvs
 - application container development (oshyx)
@@ -137,10 +145,6 @@ If you contributed to the project please list yourself here with a description o
 ## Aditya Garg
 - https://github.com/adityagarg011
 - application container development (hdbet)
-
-## Xincheng Ye
-- https://github.com/yexincheng
-- application container development (delphi, slicer)
 
 ## Kexin Lou
 - https://github.com/Kaxnn
