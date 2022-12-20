@@ -10,7 +10,7 @@ Neurodesk is an open-source project that is always evolving. If you are experien
 
 To ask questions or suggest new features, [join the discussion](https://github.com/NeuroDesk/neurodesk.github.io/discussions) on github. 
 
-## I am using a European keyboard layout and I cannot type symbols that require the ALT-GR key (like @ or \)
+## I am using a European keyboard layout and I cannot type symbols that require the ALT-GR key (like @ or \\)
 This seems to be a bug in Guacamole and RDP in combination with certain browsers. There are a few workarounds you can try:
 1) Use the connection option "Desktop Fixed-Resolution (VNC)" instead of Desktop Auto-Resolution (RDP)
 2) connect to the desktop using an RDP client instead of the browser (https://www.neurodesk.org/docs/neurodesktop/getting-started/windows/#using-an-rdp-client)
