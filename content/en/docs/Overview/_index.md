@@ -57,6 +57,11 @@ _Neurodocker_ is a command-line program that generates custom Dockerfiles and Si
 
 To find out more about this open-source project, see: [Neurodocker](https://github.com/NeuroDesk/neurodocker)
 
+### History of Neurodesk
+Neurodesk started as a hackathon project at the Brainhack 2020:
+- https://github.com/ohbm/hackathon2020/issues/177; 
+- https://docs.google.com/presentation/d/1FCtrRCZrj-5nLmnIIpVFYYYXuMAoUf-B/edit?usp=sharing&ouid=100303589348027986473&rtpof=true&sd=true] - The 2020 OHBM Brainhack's Virtual Neuro Machine project webpage and kickoff presentation. This is the hackathon where the seeds of Neurodesk sprouted.  
+
 ## References
 
 1. 1.	National Academies of Sciences, Engineering, and Medicine. 2019. Reproducibility and Replicability in Science. Washington, DC: The National Academies Press. https://doi.org/10.17226/25303.
