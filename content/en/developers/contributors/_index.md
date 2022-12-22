@@ -60,7 +60,7 @@ If you contributed to the project please list yourself here with a description o
 - softare application containers (bidscoin, matlab)
 - user testing
 
-## Tom Johnston
+## Tom Johnstone
 - https://github.com/TomEmotion
 - funding: ARDC (PI for $566k AUD)
 - Application Container (sigviewer)
