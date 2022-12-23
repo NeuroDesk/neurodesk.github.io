@@ -37,6 +37,8 @@ cd neurocommand
 pip3 install -r neurodesk/requirements.txt --user 
 bash build.sh --cli
 bash containers.sh
+export SINGULARITY_BINDPATH=$PWD
+export APPTAINER_BINDPATH=$PWD
 ```
 ### Containers
 - If these steps were successful, all Neurodesk containers will be listed
