@@ -26,7 +26,7 @@ description: >
 ```
 module load singularity/3.5.0
 ``` 
-- Load or install aria2 to optimize the download performance of our containers
+- Load or install aria2 to optimize the download performance of our containers (THIS IS OPTIONAL)
 ```
 module load aria2c
 ```
