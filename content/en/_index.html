@@ -47,13 +47,16 @@ linkTitle = "Neurodesk"
 						<div class="option-text">Location</div>
 					</div>
 					<div class="col-md-12 title-block">
-						<div class="option-text os-text">Your OS</div>
-					</div>
-					<div class="col-md-12 title-block">
 						<div class="option-text">Compute Platform</div>
 					</div>
 					<div class="col-md-12 title-block">
+						<div class="option-text os-text">Your OS</div>
+					</div>
+					<div class="col-md-12 title-block">
 						<div class="option-text">Interface</div>
+					</div>
+					<div class="col-md-12 title-block">
+						<div class="option-text">Processor</div>
 					</div>
 					<div class="col-md-12 title-block command-block">
 						<div class="option-text command-text">Run this Command:</div>
@@ -73,9 +76,27 @@ linkTitle = "Neurodesk"
 						</div>
 					</div>
 
+					<div class="row platform">
+						<div class="col-md-12 title-block mobile-heading">
+							<div class="option-text">Compute Platform</div>
+						</div>
+						<div class="col-md-3 option block version" id="local">
+							<div class="option-text">Local PC</div>
+						</div>
+						<div class="col-md-3 option block version" id="hpc">
+							<div class="option-text">HPC</div>
+						</div>
+						<div class="col-md-3 option block version" id="cloud">
+							<div class="option-text">Cloud</div>
+						</div>
+						<div class="col-md-3 option block version" id="nectar">
+							<div class="option-text">Nectar</div>
+						</div>
+					</div>
+
 					<div class="row os">
 						<div class="col-md-12 title-block mobile-heading">
-							<div class="option-text">Your OS</div>
+							<div class="option-text">Operating System</div>
 						</div>
 						<div class="col-md-4 option block" id="linux">
 							<div class="option-text">Linux</div>
@@ -88,46 +109,47 @@ linkTitle = "Neurodesk"
 						</div>
 					</div>
 
-					<div class="row platform">
-						<div class="col-md-12 title-block mobile-heading">
-							<div class="option-text">Compute Platform</div>
-						</div>
-						<div class="col-md-2 option block version" id="cpu">
-							<div class="option-text">CPU</div>
-						</div>
-						<div class="col-md-2 option block version" id="hpc">
-							<div class="option-text">HPC</div>
-						</div>
-						<div class="col-md-3 option block version" id="browser">
-							<div class="option-text">Browser</div>
-						</div>
-						<div class="col-md-3 option block version" id="cloud">
-							<div class="option-text">Cloud</div>
-						</div>
-						<div class="col-md-2 option block version" id="nectar">
-							<div class="option-text">Nectar</div>
-						</div>
-					</div>
-
 					<div class="row interface">
 						<div class="col-md-12 title-block mobile-heading">
 							<div class="option-text">Interface</div>
 						</div>
-						<div class="col-md-6 option block version selected" id="gui">
-							<div class="option-text">GUI</div>
+						<div class="col-md-4 option block version selected" id="gui">
+							<div class="option-text">Desktop</div>
 						</div>
-						<div class="col-md-6 option block version" id="cmd">
+						<div class="col-md-4 option block version" id="cmd">
 							<div class="option-text">Command Line</div>
 						</div>
+						<div class="col-md-4 option block version" id="cvmfs">
+							<div class="option-text">CVMFS</div>
+						</div>
 					</div>
-	
+
+					<div class="row processor">
+						<div class="col-md-12 title-block mobile-heading">
+							<div class="option-text">Processor</div>
+						</div>
+						<div class="col-md-4 option block" id="x86">
+							<div class="option-text">x86</div>
+						</div>
+						<div class="col-md-4 option block" id="arm">
+							<div class="option-text">ARM</div>
+						</div>
+						<div class="col-md-4 option block" id="gpu">
+							<div class="option-text">GPU</div>
+						</div>
+					</div>
+
 					<div class="row">
 					<div class="col-md-12 title-block command-mobile-heading">
 						<div class="option-text">Run this Command:</div>
 					</div>
-					<div class="command-container">
-						<div class="col-md-12" id="command">conda install pytorch torchvision -c pytorch</div>
-					</div>
+					<div class="command-container ">
+						<div class="col-md-12 highlight" id="command">
+							<pre class="command-line language-bash" data-prompt="$"  >
+								<code>docker run --shm-size=1gb -it --privileged --name neurodesktop -v ~/neurodesktop-storage:/neurodesktop-storage -p 8080:8080 -h neurodesktop-20221216 vnmd/neurodesktop:20221216</code>
+							</pre>
+							</div>
+						</div>
 					</div>
 				</div>
 				</div>

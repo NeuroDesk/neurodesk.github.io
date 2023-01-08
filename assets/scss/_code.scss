@@ -104,7 +104,7 @@
       }
   
       pre {
-        font-size: 80% !important;
+        font-size: 90% !important;
         background-color: #ffffff !important;
       }
   
@@ -181,37 +181,68 @@
       vertical-align: middle;
   
       a {
-        font-size: 125%;
-  
+        font-size: 100%;
+        color: $command_block_black;
         @include desktop {
           &:hover {
-            color: $command_block_black;
+            color: $slate;
           }
         }
       }
   
-      pre {
-        word-break: break-all;
-        white-space: normal;
-      }
     }
   
     .command-container {
       display: table;
       width: 100%;
       @include desktop {
-        min-height: rem(84px);
+        min-height: rem(110px);
       }
       pre {
+        word-break: break-all;
+        white-space: normal;
         margin-bottom: 0px;
-        padding: 0px;
-        font-size: 75%;
+        padding: 10px;
+        font-size: 95%;
         background-color: #f3f4f7;
+        > code {
+            background-color: inherit !important;
+                padding: 0;
+                margin: 0;
+                font-size: 100%;
+                word-break: break-all;
+                white-space: normal;
+                border: 0;
+            }
       }
+    }
+
+    .highlight {
+        position: relative;
+    }
+    .highlight pre {
+        padding-right: 75px;
+    }
+    .highlight-copy-btn {
+        position: absolute;
+        bottom: 7px;
+        right: 7px;
+        border: 0;
+        border-radius: 4px;
+        padding: 1px;
+        font-size: 0.7em;
+        line-height: 1.8;
+        color: #fff;
+        background-color: #777;
+        min-width: 55px;
+        text-align: center;
+    }
+    .highlight-copy-btn:hover {
+        background-color: #666;
     }
   
     .command-block {
-      height: rem(84px);
+      height: rem(110px);
       word-wrap: break-word;
       color: $command_block_black;
     }
