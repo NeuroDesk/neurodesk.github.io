@@ -293,13 +293,13 @@
       float: right;
     }
   
-    padding-top: rem(40px);
-    padding-bottom: rem(40px);
+    // padding-top: rem(40px);
+    // padding-bottom: rem(40px);
   
-    @include desktop {
-      padding-top: rem(64px);
-      padding-bottom: rem(66px);
-    }
+    // @include desktop {
+    //   padding-top: rem(64px);
+    //   padding-bottom: rem(66px);
+    // }
   
     p {
       color: $slate;
