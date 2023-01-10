@@ -55,7 +55,13 @@ module use $PWD/local/containers/modules/
  ```
  module use ~/neurocommand/local/containers/modules/
  ```
- 
+
+- It is very important to set the SINGULARITY_BINDPATH variable in your .bashrc as well. This variable needs to contain all directories you want to access with the Neurodesk tools:
+
+e.g.:
+```
+export SINGULARITY_BINDPATH=/scratch/,/data/
+```
  
 - to see the installed containers at the top of the list (neurodesk containers will take preference over system modules with the same name), run:
 ``` 
