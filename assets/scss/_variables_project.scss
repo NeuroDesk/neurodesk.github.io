@@ -27,14 +27,10 @@ $medium_smoky_grey: #CCCDD1;
 $light_white: #e2e2e2;
 $mid_gray: #979797;
 
-$desktop_header_height: 90px;
-$mobile_header_height: 68px;
-$desktop_footer_height: 560px;
-$site_horizontal_padding: 30px;
-
+$site_horizontal_padding: 100px;
 
 @mixin desktop {
-  @media screen and (min-width: 768px) { @content; }
+  @media screen and (min-width: 1040px) { @content; }
 }
 
 @mixin full-nav-menu-desktop {
@@ -46,16 +42,13 @@ $site_horizontal_padding: 30px;
 }
 
 @mixin small-desktop {
-  @media (min-width: 768px) and (max-width: 1239px) { @content; }
+  @media (min-width: 1040px) and (max-width: 1239px) { @content; }
 }
 
 @function rem($px) {
   @return ($px / 16px) * 1rem;
 }
 
-@mixin code_font_family {
-  font-family: IBMPlexMono,SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace;
-}
 
 @mixin clearfix {
   &:before,
