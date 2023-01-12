@@ -54,9 +54,24 @@
     }
 }
 
+.td-box {
+
+  .mx-auto.mt-5 {
+    padding-left: 80px;
+    padding-right: 80px;
+    flex-direction: row;
+  }
+}
+
+h1, p.lead.mt-2 {
+  margin-left: 80px;
+  margin-right: 80px;
+  margin-bottom: 20px;
+}
+
 .quick-starts {
     background: $light_grey;
-  
+
     .col-md-2-4 {
       position: relative;
       width: 100%;
@@ -65,7 +80,7 @@
       padding-left: 15px;
     }
   
-    @media (min-width: 768px) {
+    @media (min-width: 920px) {
       .col-md-2-4 {
         -webkit-box-flex: 0;
         -ms-flex: 0 0 20%;
@@ -73,9 +88,11 @@
         max-width: 20%;
       }
     }
-  
+
     .start-locally-col {
       margin-bottom: rem(20px);
+      padding-left: 30px;
+      padding-right: 30px;
       .row.interface,
       .row.os,
       .row.country,
@@ -85,7 +102,7 @@
           margin-bottom: 0;
         }
       }
-  
+
       @include small-desktop {
         flex: 0 0 100%;
         max-width: 100%;
@@ -101,10 +118,11 @@
   
       @include max-width-desktop {
         margin-bottom: 0;
+
       }
   
       pre {
-        font-size: 90% !important;
+        font-size: 80% !important;
         background-color: #ffffff !important;
       }
   
@@ -113,19 +131,11 @@
       }
     }
   
-    p {
-      font-size: rem(18px);
-      line-height: rem(28px);
-    }
-  
-    .card-body {
-      flex: 1 1 auto;
-    }
-
   
     .option {
       border: 2px solid $light_grey;
-      font-size: rem(16px);
+      padding: rem(10px);
+      font-size: 95%;
       color: $dark_grey;
       letter-spacing: -0.22px;
       line-height: rem(20px);
@@ -145,16 +155,21 @@
   
     .block {
       margin-bottom: rem(1px);
-      height: rem(45px);
+      // height: rem(45px);
       display: flex;
       align-items: center;
+
+      @media (max-width: 520px) {
+        height: rem(65px);
+        min-width: 160px;
+      }
     }
   
     .title-block {
       margin: rem(1px);
       height: rem(45px);
       border: 2px solid $light_grey;
-      font-size: rem(16px);
+      font-size: 95%;
       color: $dark_grey;
       line-height: rem(20px);
       display: flex;
@@ -172,9 +187,9 @@
     }
   
     #command {
-      color: #4a4a4a;
+      color: $command_block_black;
       background-color: $white;
-      padding: rem(15px);
+      padding: rem(10px);
       border: 2px solid $light_grey;
       word-wrap: break-word;
       display: table-cell;
@@ -183,38 +198,46 @@
       a {
         font-size: 100%;
         color: $command_block_black;
-        @include desktop {
-          &:hover {
-            color: $slate;
-          }
+        &:hover {
+          color: $slate;
         }
       }
-  
+
+      pre {
+        word-break: break-all;
+        white-space: normal;
+      }
+
+      @media (max-width: 520px) {
+        min-width: 160px;
+      }
     }
   
     .command-container {
-      display: table;
+      display: flex;
       width: 100%;
       @include desktop {
         min-height: rem(110px);
       }
       pre {
-        word-break: break-all;
-        white-space: normal;
         margin-bottom: 0px;
         padding: 10px;
-        font-size: 95%;
+        font-size: 75%;
         background-color: #f3f4f7;
-        > code {
-            background-color: inherit !important;
-                padding: 0;
-                margin: 0;
-                font-size: 100%;
-                word-break: break-all;
-                white-space: normal;
-                border: 0;
-            }
       }
+    }
+
+    .command-block {
+      height: rem(110px);
+      word-wrap: break-word;
+      color: $command_block_black;
+
+      .command-text {
+        color: $black;
+      }
+    }
+    .command-block:before {
+      border-left: 2px solid $black;
     }
 
     .highlight {
@@ -280,41 +303,6 @@
         display: block;
       }
     }
-  
-    @media (max-width: 978px) {
-      .os-text {
-        margin-top: 0;
-      }
-    }
   }
-  
-  .quick-start-module {
-    .option-module {
-      float: right;
-    }
-  
-    // padding-top: rem(40px);
-    // padding-bottom: rem(40px);
-  
-    // @include desktop {
-    //   padding-top: rem(64px);
-    //   padding-bottom: rem(66px);
-    // }
-  
-    p {
-      color: $slate;
-      font-size: 1.25em;
-      letter-spacing: 0.25px;
-      padding-bottom: rem(15px);
-      margin-bottom: 1.4rem;
-    }
-  
-    h3 {
-      font-size: rem(24px);
-      letter-spacing: 1.33px;
-      line-height: rem(32px);
-      text-transform: uppercase;
-      margin-bottom: 2.1rem;
-    }
-  }
+
   

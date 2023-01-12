@@ -6,6 +6,7 @@ var supportedOperatingSystems = new Map([
 ]);
 
 var archInfoMap = new Map([
+  ['colab', {title: "Colab", oss: new Set(['linux','macos', 'windows']),  countries: new Set(['intl', 'aus'])}],
   ['hpc', {title: "HPC", oss: new Set(['linux','macos', 'windows']),  countries: new Set(['intl', 'aus'])}],
   ['cloud', {title: "Cloud", oss: new Set(['linux','macos', 'windows']), countries: new Set(['intl', 'aus'])}],
   ['nectar', {title: "Nectar", oss: new Set(['linux','macos', 'windows']), countries: new Set(['aus'])}],
@@ -13,15 +14,16 @@ var archInfoMap = new Map([
 ]);
 
 var archProcessorMap = new Map([
-  ['x86', {title: "x86", platforms: new Set(['hpc','cloud','local', 'nectar']), oss: new Set(['linux','macos', 'windows'])}],
-  ['gpu', {title: "GPU", platforms: new Set(['hpc','cloud','local', 'nectar']), oss: new Set(['linux'])}],
+  ['x86', {title: "x86", platforms: new Set(['hpc','cloud','local', 'nectar', 'colab']), oss: new Set(['linux','macos', 'windows'])}],
+  ['gpu', {title: "GPU", platforms: new Set(['hpc','cloud','local', 'nectar', 'colab']), oss: new Set(['linux','macos', 'windows'])}],
   ['arm', {title: "ARM", platforms: new Set([]), oss: new Set([])}],
 ]);
 
 var archInterfaceMap = new Map([
   ['gui', {title: "Local PC", platforms: new Set(['hpc','cloud','local', 'nectar']), oss: new Set(['linux','macos', 'windows'])}],
-  ['cmd', {title: "Command Line", platforms: new Set(['hpc','cloud','local']), oss: new Set(['linux','macos', 'windows'])}],
-  ['cvmfs', {title: "CVMFS", platforms: new Set(['hpc','local']), oss: new Set(['linux','macos', 'windows'])}],
+  ['cmd', {title: "Command Line", platforms: new Set(['hpc','cloud','local', 'colab']), oss: new Set(['linux','macos', 'windows'])}],
+  ['container', {title: "Container", platforms: new Set(['hpc','local', 'colab', 'cloud']), oss: new Set(['linux','macos', 'windows'])}],
+  ['vscode', {title: "VSCode", platforms: new Set(['hpc','local', 'cloud']), oss: new Set(['linux','macos', 'windows'])}],
 ]);
 
 let default_country="Australia based researcher";
@@ -139,7 +141,7 @@ function selectedOption(option, selection, category) {
   opts[category] = selection.id;
   if (category === "interface") {
     var elements = document.getElementsByClassName("platform")[0].children;
-    if ((selection.id === "cmd" || selection.id === "cvmfs") && elements["nectar"].classList.contains("selected")) {
+    if ((selection.id === "cmd" || selection.id === "container") && elements["nectar"].classList.contains("selected")) {
       for (var i = 0; i < elements.length; i++) {
         if (elements[i].id === "local") {
           $(elements[i]).addClass("selected");
@@ -165,22 +167,7 @@ function selectedOption(option, selection, category) {
       opts["platform"] = "cloud";
     } 
 
-  } else if (category == "os") {
-    // disableUnsupportedPlatforms(archProcessorMap,"oss",opts.os)
-  } else if (category == "processor") {
-    var elements = document.getElementsByClassName("os")[0].children;
-    if (selection.id === "gpu" && (elements["macos"].classList.contains("selected") || elements["windows"].classList.contains("selected"))) {
-      for (var i = 0; i < elements.length; i++) {
-        if (elements[i].id === "linux") {
-          $(elements[i]).addClass("selected");
-          opts["os"] = "linux";
-          
-        } else {
-          $(elements[i]).removeClass("selected");
-        }
-      }
-    } 
-  }
+  } 
   commandMessage(buildMatcher());
   disableUnsupportedPlatforms(archInterfaceMap,"platforms",opts.platform);
   disableUnsupportedPlatforms(archProcessorMap,"oss",opts.os);
@@ -252,66 +239,132 @@ function copyButton() {
 
 function commandMessage(key) {
   var object =   {
-    "x86,gui,linux,local,aus": 'sudo docker run --shm-size=1gb -it --privileged --name neurodesktop -v ~/neurodesktop-storage:/neurodesktop-storage -e HOST_UID="$(id -u)" -e HOST_GID="$(id -g)" -p 8080:8080 -h neurodesktop-20221216 vnmd/neurodesktop:20221216', 
-    "x86,gui,linux,local,intl": 'sudo docker run --shm-size=1gb -it --privileged --name neurodesktop -v ~/neurodesktop-storage:/neurodesktop-storage -e HOST_UID="$(id -u)" -e HOST_GID="$(id -g)" -p 8080:8080 -h neurodesktop-20221216 vnmd/neurodesktop:20221216', 
+    "x86,gui,linux,local,aus": 'Follow the instruction at <br /> <a href="https://www.neurodesk.org/docs/neurodesktop/getting-started/linux/">https://www.neurodesk.org/docs/neurodesktop/getting-started/linux/</a>', 
+    "x86,gui,linux,local,intl": 'Follow the instruction at <br /> <a href="https://www.neurodesk.org/docs/neurodesktop/getting-started/linux/">https://www.neurodesk.org/docs/neurodesktop/getting-started/linux/</a>', 
     "x86,gui,linux,cloud,intl": 'Go to <a href="https://play.neurodesk.org/">https://play.neurodesk.org/</a>',
     "x86,gui,linux,cloud,aus": 'To keep home directory across sessions, go to <br /> <a href="https://bhsydney.neurodesk.org//">https://bhsydney.neurodesk.org/</a> <br /> To quickly access without authentication and keeping data, go to <br /> <a href="https://play-sydney.neurodesk.org/v2/gh/neurodesk/jupyter-neurodesktop-image/main">https://play-sydney.neurodesk.org/v2/gh/neurodesk/jupyter-neurodesktop-image/main</a>', 
     "x86,gui,linux,nectar,aus":  'Follow the instruction at <br /> <a href="https://www.neurodesk.org/docs/neurodesktop/getting-started/nectar/">https://www.neurodesk.org/docs/neurodesktop/getting-started/nectar/</a>', 
     "x86,gui,linux,hpc,aus":  'Follow the instruction at <br /> <a href="https://www.neurodesk.org/docs/neurodesktop/getting-started/hpc/">https://www.neurodesk.org/docs/neurodesktop/getting-started/hpc/</a> <br /> Then access graphical interface with X11 forwarding', 
     "x86,gui,linux,hpc,intl": 'Follow the instruction at <br /> <a href="https://www.neurodesk.org/docs/neurodesktop/getting-started/hpc/">https://www.neurodesk.org/docs/neurodesktop/getting-started/hpc/</a> <br /> Then access graphical interface with X11 forwarding', 
-    "x86,gui,macos,local,aus": 'docker run --shm-size=1gb -it --privileged --name neurodesktop -v ~/neurodesktop-storage:/neurodesktop-storage -p 8080:8080 -h neurodesktop-20221216 vnmd/neurodesktop:20221216', 
-    "x86,gui,macos,local,intl": 'docker run --shm-size=1gb -it --privileged --name neurodesktop -v ~/neurodesktop-storage:/neurodesktop-storage -p 8080:8080 -h neurodesktop-20221216 vnmd/neurodesktop:20221216', 
+    "x86,gui,linux,colab,aus": 'Follow the instruction at <br /> <a href="https://www.neurodesk.org/docs/neurocontainers/googlecolab/">https://www.neurodesk.org/docs/neurocontainers/googlecolab/</a>', 
+    "x86,gui,linux,colab,intl": 'Follow the instruction at <br /> <a href="https://www.neurodesk.org/docs/neurocontainers/googlecolab/">https://www.neurodesk.org/docs/neurocontainers/googlecolab/</a>', 
+    "x86,gui,macos,local,aus": 'Follow the instruction at <br /> <a href="https://www.neurodesk.org/docs/neurodesktop/getting-started/mac/">https://www.neurodesk.org/docs/neurodesktop/getting-started/mac/</a>', 
+    "x86,gui,macos,local,intl": 'Follow the instruction at <br /> <a href="https://www.neurodesk.org/docs/neurodesktop/getting-started/mac/">https://www.neurodesk.org/docs/neurodesktop/getting-started/mac/</a>', 
     "x86,gui,macos,cloud,intl": 'Go to <a href="https://play.neurodesk.org/">https://play.neurodesk.org/</a>',
     "x86,gui,macos,cloud,aus": 'To keep home directory across sessions, go to <br /> <a href="https://bhsydney.neurodesk.org//">https://bhsydney.neurodesk.org/</a> <br /> To quickly access without authentication and keeping data, go to <br /> <a href="https://play-sydney.neurodesk.org/v2/gh/neurodesk/jupyter-neurodesktop-image/main">https://play-sydney.neurodesk.org/v2/gh/neurodesk/jupyter-neurodesktop-image/main</a>', 
     "x86,gui,macos,nectar,aus": 'Follow the instruction at  <a href="https://www.neurodesk.org/docs/neurodesktop/getting-started/nectar/">https://www.neurodesk.org/docs/neurodesktop/getting-started/nectar/</a>', 
     "x86,gui,macos,hpc,aus": 'Follow the instruction at <br /> <a href="https://www.neurodesk.org/docs/neurodesktop/getting-started/hpc/">https://www.neurodesk.org/docs/neurodesktop/getting-started/hpc/</a> <br /> Then access graphical interface with X11 forwarding', 
     "x86,gui,macos,hpc,intl": 'Follow the instruction at <br /> <a href="https://www.neurodesk.org/docs/neurodesktop/getting-started/hpc/">https://www.neurodesk.org/docs/neurodesktop/getting-started/hpc/</a> <br /> Then access graphical interface with X11 forwarding', 
-    "x86,gui,windows,local,aus": 'docker run --shm-size=1gb -it --privileged --name neurodesktop -v C:/neurodesktop-storage:/neurodesktop-storage -p 8080:8080 -h neurodesktop-20221216 vnmd/neurodesktop:20221216', 
-    "x86,gui,windows,local,intl": 'docker run --shm-size=1gb -it --privileged --name neurodesktop -v C:/neurodesktop-storage:/neurodesktop-storage -p 8080:8080 -h neurodesktop-20221216 vnmd/neurodesktop:20221216', 
+    "x86,gui,macos,colab,aus": 'Follow the instruction at <br /> <a href="https://www.neurodesk.org/docs/neurocontainers/googlecolab/">https://www.neurodesk.org/docs/neurocontainers/googlecolab/</a>', 
+    "x86,gui,macos,colab,intl": 'Follow the instruction at <br /> <a href="https://www.neurodesk.org/docs/neurocontainers/googlecolab/">https://www.neurodesk.org/docs/neurocontainers/googlecolab/</a>', 
+    "x86,gui,windows,local,aus": 'Follow the instruction at <br /> <a href="https://www.neurodesk.org/docs/neurodesktop/getting-started/mac/">https://www.neurodesk.org/docs/neurodesktop/getting-started/windows/</a>', 
+    "x86,gui,windows,local,intl": 'Follow the instruction at <br /> <a href="https://www.neurodesk.org/docs/neurodesktop/getting-started/mac/">https://www.neurodesk.org/docs/neurodesktop/getting-started/windows/</a>', 
     "x86,gui,windows,cloud,intl": 'Go to <a href="https://play.neurodesk.org/">https://play.neurodesk.org/</a>',
     "x86,gui,windows,cloud,aus": 'To keep home directory across sessions, go to <br /> <a href="https://bhsydney.neurodesk.org//">https://bhsydney.neurodesk.org/</a> <br /> To quickly access without authentication and keeping data, go to <br /> <a href="https://play-sydney.neurodesk.org/v2/gh/neurodesk/jupyter-neurodesktop-image/main">https://play-sydney.neurodesk.org/v2/gh/neurodesk/jupyter-neurodesktop-image/main</a>', 
     "x86,gui,windows,nectar,aus": 'Follow the instruction at  <a href="https://www.neurodesk.org/docs/neurodesktop/getting-started/nectar/">https://www.neurodesk.org/docs/neurodesktop/getting-started/nectar/</a>', 
     "x86,gui,windows,hpc,aus": 'Follow the instruction at <br /> <a href="https://www.neurodesk.org/docs/neurodesktop/getting-started/hpc/">https://www.neurodesk.org/docs/neurodesktop/getting-started/hpc/</a> <br /> Then access graphical interface with X11 forwarding', 
     "x86,gui,windows,hpc,intl": 'Follow the instruction at <br /> <a href="https://www.neurodesk.org/docs/neurodesktop/getting-started/hpc/">https://www.neurodesk.org/docs/neurodesktop/getting-started/hpc/</a> <br /> Then access graphical interface with X11 forwarding', 
-    "x86,cmd,macos,local,aus": 'docker run --shm-size=1gb -it --privileged --name neurodesktop -v ~/neurodesktop-storage:/neurodesktop-storage -p 8080:8080 -h neurodesktop-20221216 vnmd/neurodesktop:20221216',  
-    "x86,cmd,macos,local,intl": 'docker run --shm-size=1gb -it --privileged --name neurodesktop -v ~/neurodesktop-storage:/neurodesktop-storage -p 8080:8080 -h neurodesktop-20221216 vnmd/neurodesktop:20221216', 
+   
+    "x86,cmd,macos,local,aus": 'Follow the instruction at <br /> <a href="https://www.neurodesk.org/docs/neurocommand/getting-started/linux/">https://www.neurodesk.org/docs/neurocommand/getting-started/linux/</a>',  
+    "x86,cmd,macos,local,intl": 'Follow the instruction at <br /> <a href="https://www.neurodesk.org/docs/neurocommand/getting-started/linux/">https://www.neurodesk.org/docs/neurocommand/getting-started/linux/</a>', 
     "x86,cmd,macos,cloud,aus": 'Follow the instruction at <a href="https://www.neurodesk.org/docs/neurodesktop/getting-started/cloud/">https://www.neurodesk.org/docs/neurodesktop/getting-started/cloud/</a>', 
     "x86,cmd,macos,cloud,intl":'Follow the instruction at <a href="https://www.neurodesk.org/docs/neurodesktop/getting-started/cloud/">https://www.neurodesk.org/docs/neurodesktop/getting-started/cloud/</a>', 
     "x86,cmd,macos,hpc,aus": 'Follow the instruction at <a href="https://www.neurodesk.org/docs/neurodesktop/getting-started/hpc/">https://www.neurodesk.org/docs/neurodesktop/getting-started/hpc/</a>', 
     "x86,cmd,macos,hpc,intl": 'Follow the instruction at <a href="https://www.neurodesk.org/docs/neurodesktop/getting-started/hpc/">https://www.neurodesk.org/docs/neurodesktop/getting-started/hpc/</a>', 
-    "x86,cmd,windows,local,aus": 'docker run --shm-size=1gb -it --privileged --name neurodesktop -v C:/neurodesktop-storage:/neurodesktop-storage -p 8080:8080 -h neurodesktop-20221216 vnmd/neurodesktop:20221216', 
-    "x86,cmd,windows,local,intl": 'docker run --shm-size=1gb -it --privileged --name neurodesktop -v C:/neurodesktop-storage:/neurodesktop-storage -p 8080:8080 -h neurodesktop-20221216 vnmd/neurodesktop:20221216', 
+    "x86,cmd,macos,colab,aus": 'Follow the instruction at <br /> <a href="https://www.neurodesk.org/docs/neurocontainers/googlecolab/">https://www.neurodesk.org/docs/neurocontainers/googlecolab/</a>', 
+    "x86,cmd,macos,colab,intl": 'Follow the instruction at <br /> <a href="https://www.neurodesk.org/docs/neurocontainers/googlecolab/">https://www.neurodesk.org/docs/neurocontainers/googlecolab/</a>', 
+    "x86,cmd,windows,local,aus": 'Follow the instruction at <br /> <a href="https://www.neurodesk.org/docs/neurodesktop/getting-started/mac/">https://www.neurodesk.org/docs/neurocommand/getting-started/windows/</a>', 
+    "x86,cmd,windows,local,intl": 'Follow the instruction at <br /> <a href="https://www.neurodesk.org/docs/neurodesktop/getting-started/mac/">https://www.neurodesk.org/docs/neurocommand/getting-started/windows/</a>', 
     "x86,cmd,windows,cloud,intl": 'Follow the instruction at <a href="https://www.neurodesk.org/docs/neurodesktop/getting-started/cloud/">https://www.neurodesk.org/docs/neurodesktop/getting-started/cloud/</a>', 
     "x86,cmd,windows,cloud,aus": 'Follow the instruction at <a href="https://www.neurodesk.org/docs/neurodesktop/getting-started/cloud/">https://www.neurodesk.org/docs/neurodesktop/getting-started/cloud/</a>', 
     "x86,cmd,windows,hpc,intl": 'Follow the instruction at <a href="https://www.neurodesk.org/docs/neurocommand/getting-started/windows/">https://www.neurodesk.org/docs/neurocommand/getting-started/windows/</a>',
     "x86,cmd,windows,hpc,aus": 'Follow the instruction at <a href="https://www.neurodesk.org/docs/neurocommand/getting-started/windows/">https://www.neurodesk.org/docs/neurocommand/getting-started/windows/</a>',
-    "x86,cmd,linux,local,aus": 'sudo docker run --shm-size=1gb -it --privileged --name neurodesktop -v ~/neurodesktop-storage:/neurodesktop-storage -e HOST_UID="$(id -u)" -e HOST_GID="$(id -g)" -p 8080:8080 -h neurodesktop-20221216 vnmd/neurodesktop:20221216', 
-    "x86,cmd,linux,local,intl": 'sudo docker run --shm-size=1gb -it --privileged --name neurodesktop -v ~/neurodesktop-storage:/neurodesktop-storage -e HOST_UID="$(id -u)" -e HOST_GID="$(id -g)" -p 8080:8080 -h neurodesktop-20221216 vnmd/neurodesktop:20221216', 
+    "x86,cmd,windows,colab,aus": 'Follow the instruction at <br /> <a href="https://www.neurodesk.org/docs/neurocontainers/googlecolab/">https://www.neurodesk.org/docs/neurocontainers/googlecolab/</a>', 
+    "x86,cmd,windows,colab,intl": 'Follow the instruction at <br /> <a href="https://www.neurodesk.org/docs/neurocontainers/googlecolab/">https://www.neurodesk.org/docs/neurocontainers/googlecolab/</a>', 
+    "x86,cmd,linux,local,aus": 'Follow the instruction at <br /> <a href="https://www.neurodesk.org/docs/neurocommand/getting-started/linux/">https://www.neurodesk.org/docs/neurocommand/getting-started/linux/</a>', 
+    "x86,cmd,linux,local,intl": 'Follow the instruction at <br /> <a href="https://www.neurodesk.org/docs/neurocommand/getting-started/linux/">https://www.neurodesk.org/docs/neurocommand/getting-started/linux/</a>', 
     "x86,cmd,linux,cloud,intl": 'Follow the instruction at <a href="https://www.neurodesk.org/docs/neurodesktop/getting-started/cloud/">https://www.neurodesk.org/docs/neurodesktop/getting-started/cloud/</a>', 
     "x86,cmd,linux,cloud,aus": 'Follow the instruction at <a href="https://www.neurodesk.org/docs/neurodesktop/getting-started/cloud/">https://www.neurodesk.org/docs/neurodesktop/getting-started/cloud/</a>', 
-    "x86,cmd,linux,hpc,aus": 'Follow the instruction at <a href="https://www.neurodesk.org/docs/neurocommand/getting-started/linux/">https://www.neurodesk.org/docs/neurocommand/getting-started/linux/</a>',
-    "x86,cmd,linux,hpc,intl": 'Follow the instruction at <a href="https://www.neurodesk.org/docs/neurocommand/getting-started/linux/">https://www.neurodesk.org/docs/neurocommand/getting-started/linux/</a>',
-    "x86,cvmfs,windows,local,aus": 'Follow the instruction at <a href="https://www.neurodesk.org/docs/neurocontainers/cvmfs/">https://www.neurodesk.org/docs/neurocontainers/cvmfs/</a>',
-    "x86,cvmfs,windows,local,intl": 'Follow the instruction at <a href="https://www.neurodesk.org/docs/neurocontainers/cvmfs/">https://www.neurodesk.org/docs/neurocontainers/cvmfs/</a>',
-    "x86,cvmfs,windows,hpc,intl": 'Follow the instruction at <a href="https://www.neurodesk.org/docs/neurocontainers/cvmfs/">https://www.neurodesk.org/docs/neurocontainers/cvmfs/</a>',
-    "x86,cvmfs,windows,hpc,aus": 'Follow the instruction at <a href="https://www.neurodesk.org/docs/neurocontainers/cvmfs/">https://www.neurodesk.org/docs/neurocontainers/cvmfs/</a>',
-    "x86,cvmfs,linux,local,aus": 'Follow the instruction at <a href="https://www.neurodesk.org/docs/neurocontainers/cvmfs/">https://www.neurodesk.org/docs/neurocontainers/cvmfs/</a>',
-    "x86,cvmfs,linux,local,intl": 'Follow the instruction at <a href="https://www.neurodesk.org/docs/neurocontainers/cvmfs/">https://www.neurodesk.org/docs/neurocontainers/cvmfs/</a>',
-    "x86,cvmfs,linux,hpc,intl": 'Follow the instruction at <a href="https://www.neurodesk.org/docs/neurocontainers/cvmfs/">https://www.neurodesk.org/docs/neurocontainers/cvmfs/</a>',
-    "x86,cvmfs,linux,hpc,aus": 'Follow the instruction at <a href="https://www.neurodesk.org/docs/neurocontainers/cvmfs/">https://www.neurodesk.org/docs/neurocontainers/cvmfs/</a>',
-    "x86,cvmfs,macos,local,aus": 'Follow the instruction at <a href="https://www.neurodesk.org/docs/neurocontainers/cvmfs/">https://www.neurodesk.org/docs/neurocontainers/cvmfs/</a>',
-    "x86,cvmfs,macos,local,intl": 'Follow the instruction at <a href="https://www.neurodesk.org/docs/neurocontainers/cvmfs/">https://www.neurodesk.org/docs/neurocontainers/cvmfs/</a>',
-    "x86,cvmfs,macos,hpc,intl": 'Follow the instruction at <a href="https://www.neurodesk.org/docs/neurocontainers/cvmfs/">https://www.neurodesk.org/docs/neurocontainers/cvmfs/</a>',
-    "x86,cvmfs,macos,hpc,aus": 'Follow the instruction at <a href="https://www.neurodesk.org/docs/neurocontainers/cvmfs/">https://www.neurodesk.org/docs/neurocontainers/cvmfs/</a>',
+    "x86,cmd,linux,hpc,aus": 'Follow the instruction at <a href="https://www.neurodesk.org/docs/neurodesktop/getting-started/hpc/">https://www.neurodesk.org/docs/neurodesktop/getting-started/hpc/</a>',
+    "x86,cmd,linux,hpc,intl": 'Follow the instruction at <a href="https://www.neurodesk.org/docs/neurodesktop/getting-started/hpc/">https://www.neurodesk.org/docs/neurodesktop/getting-started/hpc/</a>',
+    "x86,cmd,linux,colab,aus": 'Follow the instruction at <br /> <a href="https://www.neurodesk.org/docs/neurocontainers/googlecolab/">https://www.neurodesk.org/docs/neurocontainers/googlecolab/</a>', 
+    "x86,cmd,linux,colab,intl": 'Follow the instruction at <br /> <a href="https://www.neurodesk.org/docs/neurocontainers/googlecolab/">https://www.neurodesk.org/docs/neurocontainers/googlecolab/</a>', 
     
- };
+    "x86,container,windows,local,aus": 'Choose one of the following instructions to access a single container:<br /> - To pull Docker container, go to <a href="https://www.neurodesk.org/docs/neurocontainers/docker/">https://www.neurodesk.org/docs/neurocontainers/docker/</a><br /> - To download Singularity container, go to <a href="https://www.neurodesk.org/docs/neurocontainers/singularity/">https://www.neurodesk.org/docs/neurocontainers/singularity/</a><br /> - To mount Neurodesk container, go to <a href="https://www.neurodesk.org/docs/neurocontainers/cvmfs/">https://www.neurodesk.org/docs/neurocontainers/cvmfs/</a>',
+    "x86,container,windows,local,intl": 'Choose one of the following instructions to access a single container:<br /> - To pull Docker container, go to <a href="https://www.neurodesk.org/docs/neurocontainers/docker/">https://www.neurodesk.org/docs/neurocontainers/docker/</a><br /> - To download Singularity container, go to <a href="https://www.neurodesk.org/docs/neurocontainers/singularity/">https://www.neurodesk.org/docs/neurocontainers/singularity/</a><br /> - To mount Neurodesk container, go to <a href="https://www.neurodesk.org/docs/neurocontainers/cvmfs/">https://www.neurodesk.org/docs/neurocontainers/cvmfs/</a>',
+    "x86,container,windows,hpc,intl": 'Choose one of the following instructions to access a single container:<br /> - To pull Docker container, go to <a href="https://www.neurodesk.org/docs/neurocontainers/docker/">https://www.neurodesk.org/docs/neurocontainers/docker/</a><br /> - To download Singularity container, go to <a href="https://www.neurodesk.org/docs/neurocontainers/singularity/">https://www.neurodesk.org/docs/neurocontainers/singularity/</a><br /> - To mount Neurodesk container, go to <a href="https://www.neurodesk.org/docs/neurocontainers/cvmfs/">https://www.neurodesk.org/docs/neurocontainers/cvmfs/</a>',
+    "x86,container,windows,hpc,aus": 'Choose one of the following instructions to access a single container:<br /> - To pull Docker container, go to <a href="https://www.neurodesk.org/docs/neurocontainers/docker/">https://www.neurodesk.org/docs/neurocontainers/docker/</a><br /> - To download Singularity container, go to <a href="https://www.neurodesk.org/docs/neurocontainers/singularity/">https://www.neurodesk.org/docs/neurocontainers/singularity/</a><br /> - To mount Neurodesk container, go to <a href="https://www.neurodesk.org/docs/neurocontainers/cvmfs/">https://www.neurodesk.org/docs/neurocontainers/cvmfs/</a>',
+    "x86,container,windows,cloud,aus": 'Choose one of the following instructions to access a single container:<br /> - To pull Docker container, go to <a href="https://www.neurodesk.org/docs/neurocontainers/docker/">https://www.neurodesk.org/docs/neurocontainers/docker/</a><br /> - To download Singularity container, go to <a href="https://www.neurodesk.org/docs/neurocontainers/singularity/">https://www.neurodesk.org/docs/neurocontainers/singularity/</a><br /> - To mount Neurodesk container, go to <a href="https://www.neurodesk.org/docs/neurocontainers/cvmfs/">https://www.neurodesk.org/docs/neurocontainers/cvmfs/</a>',
+    "x86,container,windows,cloud,intl": 'Choose one of the following instructions to access a single container:<br /> - To pull Docker container, go to <a href="https://www.neurodesk.org/docs/neurocontainers/docker/">https://www.neurodesk.org/docs/neurocontainers/docker/</a><br /> - To download Singularity container, go to <a href="https://www.neurodesk.org/docs/neurocontainers/singularity/">https://www.neurodesk.org/docs/neurocontainers/singularity/</a><br /> - To mount Neurodesk container, go to <a href="https://www.neurodesk.org/docs/neurocontainers/cvmfs/">https://www.neurodesk.org/docs/neurocontainers/cvmfs/</a>',
+    "x86,container,windows,colab,intl": 'Choose one of the following instructions to access a single container:<br /> - To pull Docker container, go to <a href="https://www.neurodesk.org/docs/neurocontainers/docker/">https://www.neurodesk.org/docs/neurocontainers/docker/</a><br /> - To download Singularity container, go to <a href="https://www.neurodesk.org/docs/neurocontainers/singularity/">https://www.neurodesk.org/docs/neurocontainers/singularity/</a><br /> - To mount Neurodesk container, go to <a href="https://www.neurodesk.org/docs/neurocontainers/cvmfs/">https://www.neurodesk.org/docs/neurocontainers/cvmfs/</a>',
+    "x86,container,windows,colab,aus": 'Choose one of the following instructions to access a single container:<br /> - To pull Docker container, go to <a href="https://www.neurodesk.org/docs/neurocontainers/docker/">https://www.neurodesk.org/docs/neurocontainers/docker/</a><br /> - To download Singularity container, go to <a href="https://www.neurodesk.org/docs/neurocontainers/singularity/">https://www.neurodesk.org/docs/neurocontainers/singularity/</a><br /> - To mount Neurodesk container, go to <a href="https://www.neurodesk.org/docs/neurocontainers/cvmfs/">https://www.neurodesk.org/docs/neurocontainers/cvmfs/</a>',
+    "x86,container,windows,colab,aus": 'Follow the instruction at <br /> <a href="https://www.neurodesk.org/docs/neurocontainers/googlecolab/">https://www.neurodesk.org/docs/neurocontainers/googlecolab/</a>', 
+    "x86,container,windows,colab,intl": 'Follow the instruction at <br /> <a href="https://www.neurodesk.org/docs/neurocontainers/googlecolab/">https://www.neurodesk.org/docs/neurocontainers/googlecolab/</a>', 
+
+    "x86,container,macos,local,aus": 'Choose one of the following instructions to access a single container:<br /> - To pull Docker container, go to <a href="https://www.neurodesk.org/docs/neurocontainers/docker/">https://www.neurodesk.org/docs/neurocontainers/docker/</a><br /> - To download Singularity container, go to <a href="https://www.neurodesk.org/docs/neurocontainers/singularity/">https://www.neurodesk.org/docs/neurocontainers/singularity/</a><br /> - To mount Neurodesk container, go to <a href="https://www.neurodesk.org/docs/neurocontainers/cvmfs/">https://www.neurodesk.org/docs/neurocontainers/cvmfs/</a>',
+    "x86,container,macos,local,intl": 'Choose one of the following instructions to access a single container:<br /> - To pull Docker container, go to <a href="https://www.neurodesk.org/docs/neurocontainers/docker/">https://www.neurodesk.org/docs/neurocontainers/docker/</a><br /> - To download Singularity container, go to <a href="https://www.neurodesk.org/docs/neurocontainers/singularity/">https://www.neurodesk.org/docs/neurocontainers/singularity/</a><br /> - To mount Neurodesk container, go to <a href="https://www.neurodesk.org/docs/neurocontainers/cvmfs/">https://www.neurodesk.org/docs/neurocontainers/cvmfs/</a>',
+    "x86,container,macos,hpc,intl": 'Choose one of the following instructions to access a single container:<br /> - To pull Docker container, go to <a href="https://www.neurodesk.org/docs/neurocontainers/docker/">https://www.neurodesk.org/docs/neurocontainers/docker/</a><br /> - To download Singularity container, go to <a href="https://www.neurodesk.org/docs/neurocontainers/singularity/">https://www.neurodesk.org/docs/neurocontainers/singularity/</a><br /> - To mount Neurodesk container, go to <a href="https://www.neurodesk.org/docs/neurocontainers/cvmfs/">https://www.neurodesk.org/docs/neurocontainers/cvmfs/</a>',
+    "x86,container,macos,hpc,aus": 'Choose one of the following instructions to access a single container:<br /> - To pull Docker container, go to <a href="https://www.neurodesk.org/docs/neurocontainers/docker/">https://www.neurodesk.org/docs/neurocontainers/docker/</a><br /> - To download Singularity container, go to <a href="https://www.neurodesk.org/docs/neurocontainers/singularity/">https://www.neurodesk.org/docs/neurocontainers/singularity/</a><br /> - To mount Neurodesk container, go to <a href="https://www.neurodesk.org/docs/neurocontainers/cvmfs/">https://www.neurodesk.org/docs/neurocontainers/cvmfs/</a>',
+    "x86,container,macos,cloud,aus": 'Choose one of the following instructions to access a single container:<br /> - To pull Docker container, go to <a href="https://www.neurodesk.org/docs/neurocontainers/docker/">https://www.neurodesk.org/docs/neurocontainers/docker/</a><br /> - To download Singularity container, go to <a href="https://www.neurodesk.org/docs/neurocontainers/singularity/">https://www.neurodesk.org/docs/neurocontainers/singularity/</a><br /> - To mount Neurodesk container, go to <a href="https://www.neurodesk.org/docs/neurocontainers/cvmfs/">https://www.neurodesk.org/docs/neurocontainers/cvmfs/</a>',
+    "x86,container,macos,cloud,intl": 'Choose one of the following instructions to access a single container:<br /> - To pull Docker container, go to <a href="https://www.neurodesk.org/docs/neurocontainers/docker/">https://www.neurodesk.org/docs/neurocontainers/docker/</a><br /> - To download Singularity container, go to <a href="https://www.neurodesk.org/docs/neurocontainers/singularity/">https://www.neurodesk.org/docs/neurocontainers/singularity/</a><br /> - To mount Neurodesk container, go to <a href="https://www.neurodesk.org/docs/neurocontainers/cvmfs/">https://www.neurodesk.org/docs/neurocontainers/cvmfs/</a>',
+    "x86,container,macos,colab,intl": 'Follow the instruction at <br /> <a href="https://www.neurodesk.org/docs/neurocontainers/googlecolab/">https://www.neurodesk.org/docs/neurocontainers/googlecolab/</a>', 
+    "x86,container,macos,colab,aus": 'Follow the instruction at <br /> <a href="https://www.neurodesk.org/docs/neurocontainers/googlecolab/">https://www.neurodesk.org/docs/neurocontainers/googlecolab/</a>', 
+
+    "x86,container,linux,local,aus": 'Choose one of the following instructions to access a single container:<br /> - To pull Docker container, go to <a href="https://www.neurodesk.org/docs/neurocontainers/docker/">https://www.neurodesk.org/docs/neurocontainers/docker/</a><br /> - To download Singularity container, go to <a href="https://www.neurodesk.org/docs/neurocontainers/singularity/">https://www.neurodesk.org/docs/neurocontainers/singularity/</a><br /> - To mount Neurodesk container, go to <a href="https://www.neurodesk.org/docs/neurocontainers/cvmfs/">https://www.neurodesk.org/docs/neurocontainers/cvmfs/</a>',
+    "x86,container,linux,local,intl": 'Choose one of the following instructions to access a single container:<br /> - To pull Docker container, go to <a href="https://www.neurodesk.org/docs/neurocontainers/docker/">https://www.neurodesk.org/docs/neurocontainers/docker/</a><br /> - To download Singularity container, go to <a href="https://www.neurodesk.org/docs/neurocontainers/singularity/">https://www.neurodesk.org/docs/neurocontainers/singularity/</a><br /> - To mount Neurodesk container, go to <a href="https://www.neurodesk.org/docs/neurocontainers/cvmfs/">https://www.neurodesk.org/docs/neurocontainers/cvmfs/</a>',
+    "x86,container,linux,hpc,intl": 'Choose one of the following instructions to access a single container:<br /> - To pull Docker container, go to <a href="https://www.neurodesk.org/docs/neurocontainers/docker/">https://www.neurodesk.org/docs/neurocontainers/docker/</a><br /> - To download Singularity container, go to <a href="https://www.neurodesk.org/docs/neurocontainers/singularity/">https://www.neurodesk.org/docs/neurocontainers/singularity/</a><br /> - To mount Neurodesk container, go to <a href="https://www.neurodesk.org/docs/neurocontainers/cvmfs/">https://www.neurodesk.org/docs/neurocontainers/cvmfs/</a>',
+    "x86,container,linux,hpc,aus": 'Choose one of the following instructions to access a single container:<br /> - To pull Docker container, go to <a href="https://www.neurodesk.org/docs/neurocontainers/docker/">https://www.neurodesk.org/docs/neurocontainers/docker/</a><br /> - To download Singularity container, go to <a href="https://www.neurodesk.org/docs/neurocontainers/singularity/">https://www.neurodesk.org/docs/neurocontainers/singularity/</a><br /> - To mount Neurodesk container, go to <a href="https://www.neurodesk.org/docs/neurocontainers/cvmfs/">https://www.neurodesk.org/docs/neurocontainers/cvmfs/</a>',
+    "x86,container,linux,cloud,aus": 'Choose one of the following instructions to access a single container:<br /> - To pull Docker container, go to <a href="https://www.neurodesk.org/docs/neurocontainers/docker/">https://www.neurodesk.org/docs/neurocontainers/docker/</a><br /> - To download Singularity container, go to <a href="https://www.neurodesk.org/docs/neurocontainers/singularity/">https://www.neurodesk.org/docs/neurocontainers/singularity/</a><br /> - To mount Neurodesk container, go to <a href="https://www.neurodesk.org/docs/neurocontainers/cvmfs/">https://www.neurodesk.org/docs/neurocontainers/cvmfs/</a>',
+    "x86,container,linux,cloud,intl": 'Choose one of the following instructions to access a single container:<br /> - To pull Docker container, go to <a href="https://www.neurodesk.org/docs/neurocontainers/docker/">https://www.neurodesk.org/docs/neurocontainers/docker/</a><br /> - To download Singularity container, go to <a href="https://www.neurodesk.org/docs/neurocontainers/singularity/">https://www.neurodesk.org/docs/neurocontainers/singularity/</a><br /> - To mount Neurodesk container, go to <a href="https://www.neurodesk.org/docs/neurocontainers/cvmfs/">https://www.neurodesk.org/docs/neurocontainers/cvmfs/</a>',
+    "x86,container,linux,colab,intl": 'Follow the instruction at <br /> <a href="https://www.neurodesk.org/docs/neurocontainers/googlecolab/">https://www.neurodesk.org/docs/neurocontainers/googlecolab/</a>', 
+    "x86,container,linux,colab,aus": 'Follow the instruction at <br /> <a href="https://www.neurodesk.org/docs/neurocontainers/googlecolab/">https://www.neurodesk.org/docs/neurocontainers/googlecolab/</a>', 
+    
+    "x86,vscode,linux,local,aus": 'Follow the instruction at <br /> <a href="https://www.neurodesk.org/docs/neurodesktop/getting-started/visual-studio-code/">https://www.neurodesk.org/docs/neurodesktop/getting-started/visual-studio-code/</a>', 
+    "x86,vscode,linux,local,intl": 'Follow the instruction at <br /> <a href="https://www.neurodesk.org/docs/neurodesktop/getting-started/visual-studio-code/">https://www.neurodesk.org/docs/neurodesktop/getting-started/visual-studio-code/</a>', 
+    "x86,vscode,linux,hpc,aus": 'Follow the instruction at <br /> <a href="https://www.neurodesk.org/docs/neurodesktop/getting-started/visual-studio-code/">https://www.neurodesk.org/docs/neurodesktop/getting-started/visual-studio-code/</a>', 
+    "x86,vscode,linux,hpc,intl": 'Follow the instruction at <br /> <a href="https://www.neurodesk.org/docs/neurodesktop/getting-started/visual-studio-code/">https://www.neurodesk.org/docs/neurodesktop/getting-started/visual-studio-code/</a>', 
+    "x86,vscode,linux,cloud,aus": 'Follow the instruction at <br /> <a href="https://www.neurodesk.org/docs/neurodesktop/getting-started/visual-studio-code/">https://www.neurodesk.org/docs/neurodesktop/getting-started/visual-studio-code/</a>', 
+    "x86,vscode,linux,cloud,intl": 'Follow the instruction at <br /> <a href="https://www.neurodesk.org/docs/neurodesktop/getting-started/visual-studio-code/">https://www.neurodesk.org/docs/neurodesktop/getting-started/visual-studio-code/</a>', 
+
+    "x86,vscode,macos,local,aus": 'Follow the instruction at <br /> <a href="https://www.neurodesk.org/docs/neurodesktop/getting-started/visual-studio-code/">https://www.neurodesk.org/docs/neurodesktop/getting-started/visual-studio-code/</a>', 
+    "x86,vscode,macos,local,intl": 'Follow the instruction at <br /> <a href="https://www.neurodesk.org/docs/neurodesktop/getting-started/visual-studio-code/">https://www.neurodesk.org/docs/neurodesktop/getting-started/visual-studio-code/</a>', 
+    "x86,vscode,macos,hpc,aus": 'Follow the instruction at <br /> <a href="https://www.neurodesk.org/docs/neurodesktop/getting-started/visual-studio-code/">https://www.neurodesk.org/docs/neurodesktop/getting-started/visual-studio-code/</a>', 
+    "x86,vscode,macos,hpc,intl": 'Follow the instruction at <br /> <a href="https://www.neurodesk.org/docs/neurodesktop/getting-started/visual-studio-code/">https://www.neurodesk.org/docs/neurodesktop/getting-started/visual-studio-code/</a>', 
+    "x86,vscode,macos,cloud,aus": 'Follow the instruction at <br /> <a href="https://www.neurodesk.org/docs/neurodesktop/getting-started/visual-studio-code/">https://www.neurodesk.org/docs/neurodesktop/getting-started/visual-studio-code/</a>', 
+    "x86,vscode,macos,cloud,intl": 'Follow the instruction at <br /> <a href="https://www.neurodesk.org/docs/neurodesktop/getting-started/visual-studio-code/">https://www.neurodesk.org/docs/neurodesktop/getting-started/visual-studio-code/</a>', 
+
+    "x86,vscode,windows,local,aus": 'Follow the instruction at <br /> <a href="https://www.neurodesk.org/docs/neurodesktop/getting-started/visual-studio-code/">https://www.neurodesk.org/docs/neurodesktop/getting-started/visual-studio-code/</a>', 
+    "x86,vscode,windows,local,intl": 'Follow the instruction at <br /> <a href="https://www.neurodesk.org/docs/neurodesktop/getting-started/visual-studio-code/">https://www.neurodesk.org/docs/neurodesktop/getting-started/visual-studio-code/</a>', 
+    "x86,vscode,windows,hpc,aus": 'Follow the instruction at <br /> <a href="https://www.neurodesk.org/docs/neurodesktop/getting-started/visual-studio-code/">https://www.neurodesk.org/docs/neurodesktop/getting-started/visual-studio-code/</a>', 
+    "x86,vscode,windows,hpc,intl": 'Follow the instruction at <br /> <a href="https://www.neurodesk.org/docs/neurodesktop/getting-started/visual-studio-code/">https://www.neurodesk.org/docs/neurodesktop/getting-started/visual-studio-code/</a>', 
+    "x86,vscode,windows,cloud,aus": 'Follow the instruction at <br /> <a href="https://www.neurodesk.org/docs/neurodesktop/getting-started/visual-studio-code/">https://www.neurodesk.org/docs/neurodesktop/getting-started/visual-studio-code/</a>', 
+    "x86,vscode,windows,cloud,intl": 'Follow the instruction at <br /> <a href="https://www.neurodesk.org/docs/neurodesktop/getting-started/visual-studio-code/">https://www.neurodesk.org/docs/neurodesktop/getting-started/visual-studio-code/</a>', 
+
+    "gpu,gui,linux,local,aus": 'Follow the instruction at <br /> <a href="https://www.neurodesk.org/docs/neurodesktop/getting-started/linux/#gpu-support">https://www.neurodesk.org/docs/neurodesktop/getting-started/linux/#gpu-support</a>', 
+    "gpu,gui,linux,local,intl": 'Follow the instruction at <br /> <a href="https://www.neurodesk.org/docs/neurodesktop/getting-started/linux/#gpu-support">https://www.neurodesk.org/docs/neurodesktop/getting-started/linux/#gpu-support</a>', 
+    "gpu,gui,linux,hpc,aus": 'Follow the instruction at <br /> <a href="https://www.neurodesk.org/docs/neurodesktop/getting-started/linux/#gpu-support">https://www.neurodesk.org/docs/neurodesktop/getting-started/linux/#gpu-support</a>', 
+    "gpu,gui,linux,hpc,intl": 'Follow the instruction at <br /> <a href="https://www.neurodesk.org/docs/neurodesktop/getting-started/linux/#gpu-support">https://www.neurodesk.org/docs/neurodesktop/getting-started/linux/#gpu-support</a>', 
+    "gpu,gui,linux,cloud,aus": 'Follow the instruction at <br /> <a href="https://www.neurodesk.org/docs/neurodesktop/getting-started/linux/#gpu-support">https://www.neurodesk.org/docs/neurodesktop/getting-started/linux/#gpu-support</a>', 
+    "gpu,gui,linux,cloud,intl": 'Follow the instruction at <br /> <a href="https://www.neurodesk.org/docs/neurodesktop/getting-started/linux/#gpu-support">https://www.neurodesk.org/docs/neurodesktop/getting-started/linux/#gpu-support</a>', 
+    "gpu,cmd,linux,local,aus": 'Follow the instruction at <br /> <a href="https://www.neurodesk.org/docs/neurodesktop/getting-started/linux/#gpu-support">https://www.neurodesk.org/docs/neurodesktop/getting-started/linux/#gpu-support</a>', 
+    "gpu,cmd,linux,local,intl": 'Follow the instruction at <br /> <a href="https://www.neurodesk.org/docs/neurodesktop/getting-started/linux/#gpu-support">https://www.neurodesk.org/docs/neurodesktop/getting-started/linux/#gpu-support</a>', 
+    "gpu,cmd,linux,hpc,aus": 'Follow the instruction at <br /> <a href="https://www.neurodesk.org/docs/neurodesktop/getting-started/linux/#gpu-support">https://www.neurodesk.org/docs/neurodesktop/getting-started/linux/#gpu-support</a>', 
+    "gpu,cmd,linux,hpc,intl": 'Follow the instruction at <br /> <a href="https://www.neurodesk.org/docs/neurodesktop/getting-started/linux/#gpu-support">https://www.neurodesk.org/docs/neurodesktop/getting-started/linux/#gpu-support</a>', 
+    "gpu,cmd,linux,cloud,aus": 'Follow the instruction at <br /> <a href="https://www.neurodesk.org/docs/neurodesktop/getting-started/linux/#gpu-support">https://www.neurodesk.org/docs/neurodesktop/getting-started/linux/#gpu-support</a>', 
+    "gpu,cmd,linux,cloud,intl": 'Follow the instruction at <br /> <a href="https://www.neurodesk.org/docs/neurodesktop/getting-started/linux/#gpu-support">https://www.neurodesk.org/docs/neurodesktop/getting-started/linux/#gpu-support</a>', 
+
+    "gpu,gui,windows,hpc,aus": 'Follow the instruction at <br /> <a href="https://www.neurodesk.org/docs/neurodesktop/getting-started/linux/#gpu-support">https://www.neurodesk.org/docs/neurodesktop/getting-started/linux/#gpu-support</a><br /> Then access graphical interface with X11 forwarding', 
+    "gpu,gui,macos,hpc,intl": 'Follow the instruction at <br /> <a href="https://www.neurodesk.org/docs/neurodesktop/getting-started/linux/#gpu-support">https://www.neurodesk.org/docs/neurodesktop/getting-started/linux/#gpu-support</a><br /> Then access graphical interface with X11 forwarding', 
+    "gpu,cmd,windows,hpc,aus": 'Follow the instruction at <br /> <a href="https://www.neurodesk.org/docs/neurodesktop/getting-started/linux/#gpu-support">https://www.neurodesk.org/docs/neurodesktop/getting-started/linux/#gpu-support</a>', 
+    "gpu,cmd,macos,hpc,intl": 'Follow the instruction at <br /> <a href="https://www.neurodesk.org/docs/neurodesktop/getting-started/linux/#gpu-support">https://www.neurodesk.org/docs/neurodesktop/getting-started/linux/#gpu-support</a>', 
+  };
 
   if (!object.hasOwnProperty(key)) {
     $("#command").html(
-      '<pre > Not available </pre>'
+      '<pre > Not yet available </pre>'
     );
   }  else {
-    $("#command").html('<pre><code>' + object[key] + "</code></pre>").html(copyButton());
+    $("#command").html('<pre><code>' + object[key] + "</code></pre>");
   }
 }
 
