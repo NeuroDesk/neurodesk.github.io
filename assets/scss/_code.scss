@@ -55,6 +55,15 @@
 }
 
 .td-box {
+  h2, p.lead.mt-2 {
+    margin-left: 80px;
+    margin-right: 80px;
+    margin-bottom: 20px;
+  }
+
+  .col-md-9 {
+    padding-left: 0;
+  }
 
   .mx-auto.mt-5 {
     padding-left: 80px;
@@ -63,11 +72,7 @@
   }
 }
 
-h1, p.lead.mt-2 {
-  margin-left: 80px;
-  margin-right: 80px;
-  margin-bottom: 20px;
-}
+
 
 .quick-starts {
     background: $light_grey;
