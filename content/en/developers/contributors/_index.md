@@ -53,13 +53,6 @@ If you contributed to the project please list yourself here with a description o
 - application container development (LASHiS, ASHS)
 - user testing
 
-## Oren Civier
-- https://github.com/civier
-- funding: ARDC (CI for $566k AUD)
-- documentation
-- softare application containers (bidscoin, matlab)
-- user testing
-
 ## Tom Johnstone
 - https://github.com/TomEmotion
 - funding: ARDC (PI for $566k AUD)
@@ -154,6 +147,48 @@ If you contributed to the project please list yourself here with a description o
 - https://github.com/layerfMRI
 - application container development (laynii)
 
+## Oren Civier
+- https://github.com/civier
+- Funding: ARDC Australian Electrophysiology Data Analytics PlaTform (AEDAPT) (CI for $566k AUD) - contributing to initial conceptualisation, EOI writeup, scope of project, full proposal writeup, teaming up with the Australian Imaging Service (AIS), recruiting collaborators, assisting collaborators with case studies
+- Funding: ECR Knowledge Exchange & Translation Fund (unnamed contribution for $42k AUD)
+- Design: piloting and evaluating existing solutions (e.g., CVL/ACCS)
+- Design: conceptualisation of Neurodesktop (work environment inside a container, menu, automatic testing of software, etc.)
+- Design: piloting different architectures for Neurodesktop, including nested containers
+- Design: leading the Virtual Neuro Machine (VNM) hackathon project in the 2020 OHBM BrainHack, where the first version of Neurodesktop was developed
+- Design: promoting the reliance on neurodocker and ARCOS, recruiting the corresponding developers as collaborators
+- Design: liaising with ARDC to incorporate Neurodesktop in the ARDC Virtual Desktop Service
+- Design: evaluation of different remote desktop protocols and clients
+- Design: investigating how containers that require GPU can run on NECTAR using software rendering
+- Feature proposals: Neurodesktop - essential tools to be included, stopping and restarting docker container, displaying version information
+- Development: an initial prototype of Neurodesktop
+- Development: allowing Neurodesk containers running in Neurodesktop to access sshfs mounts
+- Development: bugfixes in neurocommand
+- Development: template for container recipe documentation
+- Development: software application containers - developer (bidscoin, MATLAB; in progress: MMVT)
+- Development: software application containers - facilitator (Fieldtrip, running arbitrary scripts using compiled MATLAB containers; in progress: SOVABIDS)
+- Development: setting up work environments for container developers
+- Documentation: contribution to website welcome page and application list
+- Documentation: for developers (contribution to "add tools", configuring Github)
+- Documentation: for users (copy and paste troubleshooting, accessing storage, installation on different platforms, using ARDC Virtual Desktop Service, screenshots)
+- Documentation: Neurodesk's original logo
+- Developer testing: adding containers, Github's CI
+- User testing: HPC, NECTAR, Mac, Linux, ARDC Virtual Desktop Service
+- User testing: VNC and RDP interfaces, including multiple concurrent users
+- User testing: running containers as sandboxes on HPC
+- User testing: running Neurodesktop for long periods
+- Outreach: initiating a user survey and analysing its results (2020)
+- Outreach: taking part in a presentation for the Australian National Imaging Facility 2020
+- Outreach: leading the AEDAPT project in BrainHack Global 2021
+- Outreach: leading the ARDC TechTalk 2022 "Neurodesk and Neurodesktop: Software containers and CVMFS for low-maintenance, application-rich and FAIR desktop environment on PC, cloud or HPC"
+- Outreach: presentations in confreneces (2nd author eResearch 2020; 2nd author OHBM 2021; co-author eResearch 2021; co-author Australasian Cognitive Neuroscience Society 2021)
+- Outreach: providing assistance to nodes of the Australian National Imaging Facility with installing/using Neurodesk 
+- Outreach: promoting Neurodesk on user forums of neuroimaging software
+- Outreach: promoting Neurodesk on twitter (personal and Swinburne Neuroimaging accounts)
+- Outreach: assisting ARDC to improve the training they give on Neurodesktop (Virtual Desktop Service training)
+- Administration: managing NECTAR resources allocated to the AEDAPT project
+- Administration: maintaining contacts with AEDAPT project collaborators
+- Administration: one of Neurodesk/AEDAPT representatives in ARCOS, AIS and NECTAR Interactive Analytics committees and working groups
+- Papers: co-author Neurodesk manuscript (in preparation; contribution to initial outline, input on first draft), co-author proceedings of the OHBM Brainhack 2021 (to be published in Aperture)
 
 ## Steering Committee members without code contributions:
 -	Ryan Sullivan, University of Sydney, Key User, Steering Committee
