@@ -205,7 +205,7 @@ enable = false
     #     desc = "Chat with other project developers"
 [[params.links.developer]]
 	name = "Dicussion Forum (requires github login)"
-	url = "https://github.com/NeuroDesk/neurodesk.github.io/discussions"
+	url = "https://github.com/orgs/NeuroDesk/discussions"
  	icon = "fa fa-envelope"
     desc = "Discuss development issues around the project"
 
