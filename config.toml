@@ -203,11 +203,16 @@ enable = false
 	# url = "https://example.org/slack"
 	# icon = "fab fa-slack"
     #     desc = "Chat with other project developers"
-[[params.links.developer]]
+[[params.links.user]]
 	name = "Dicussion Forum (requires github login)"
 	url = "https://github.com/orgs/NeuroDesk/discussions"
  	icon = "fa fa-envelope"
     desc = "Discuss development issues around the project"
+[[params.links.developer]]
+	name = "Uptime"
+	url = "https://stats.uptimerobot.com/NBE38IZWZM"
+ 	icon = "fa fa-signal"
+    desc = "Uptime"
 
 [[menu.main]]
     name = "GitHub"
