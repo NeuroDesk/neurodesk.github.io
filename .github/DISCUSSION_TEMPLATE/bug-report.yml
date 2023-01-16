@@ -1,0 +1,49 @@
+title: "[Bug]: "
+labels: [Bug Report]
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to fill out this bug report!
+  - type: input
+    id: version
+    attributes:
+      label: Version
+      description: What version of Neurodesk are you running?
+      placeholder: e.g. v20221216
+  - type: dropdown
+    id: component
+    attributes:
+      label: What platform are you seeing the problem on?
+      multiple: true
+      options:
+        - Local PC
+        - HPC
+        - Cloud
+        - Nectar
+        - Google Colab      
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: What happened
+      description: What did you expect to happen?
+      placeholder: A clear and concise description of what you expected to happen.
+
+    validations:
+      required: true
+
+  - type: textarea
+    id: reproduce
+    attributes:
+      label: How to reproduce
+      description: How to reproduce the issue?
+      placeholder: Steps to reproduce the behavior.
+
+
+  - type: textarea
+    id: logs
+    attributes:
+      label: Relevant log output or screenshot
+      description: Please copy and paste any relevant log output or screenshot. This will be automatically formatted into code, so no need for backticks.
+      render: shell        

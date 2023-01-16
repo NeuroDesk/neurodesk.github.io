@@ -141,7 +141,7 @@
     .option {
       border: 2px solid $light_grey;
       padding: rem(10px);
-      font-size: 95%;
+      font-size: rem(16px);
       color: $dark_grey;
       letter-spacing: -0.22px;
       line-height: rem(20px);
@@ -175,7 +175,7 @@
       margin: rem(1px);
       height: rem(45px);
       border: 2px solid $light_grey;
-      font-size: 95%;
+      font-size: rem(16px);
       color: $dark_grey;
       line-height: rem(20px);
       display: flex;
@@ -291,6 +291,10 @@
       display: flex;
       align-items: center;
       font-weight: 400;
+    }
+
+    .command-mobile-heading:before {
+      border-left: 2px solid $black;
     }
   
     .command-mobile-heading {

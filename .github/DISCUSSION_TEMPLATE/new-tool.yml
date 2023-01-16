@@ -1,0 +1,61 @@
+title: "<title>"
+labels: [New Tool]
+body:
+- type: checkboxes
+  attributes:
+    label: New version of available software in Neurodesk
+    options:
+        - label: "Yes"
+        - label: "No"
+ 
+- type: input
+  id: name
+  attributes:
+    label: Name of tool
+    description: Official name of the software e.g. FSL, FreeSurfer etc
+  validations:
+    required: true
+- type: input
+  id: distro
+  attributes:
+    label: Preferred Linux distro
+    description: If the software requires a specific Linux distro e.g. Ubuntu 16.04.7, Centos 5 etc
+- type: input
+  id: version
+  attributes:
+    label: Version of tool
+    description: e.g. FSL 6.0.5.1
+  validations:
+    required: true  
+- type: input
+  id: install
+  attributes:
+    label: Linux commands for installing the tool
+    description: List all the commands to install the tool or link to documentation
+- type: input
+  id: gui
+  attributes:
+    label: GUI applications and commands to start them
+    description: If available
+- type: input
+  id: data
+  attributes:      
+    label: Test data to include
+    description: If available
+- type: input
+  id: reference
+  attributes:
+    label: Reference to paper
+    description: Cite the tool
+- type: input
+  id: doc
+  attributes:
+    label: Link to documentation
+    description: For installation instruction and requirements
+- type: input
+  id: command
+  attributes:    
+    label: Commands for testing the tool
+    description: A simple command to run any functionality
+
+
