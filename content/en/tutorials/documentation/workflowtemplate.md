@@ -54,7 +54,7 @@ Finally, contribute your new workflow to the official documentation!:
 7. Give your pull request a title (e.g. "Document PhysIO workflow"), leave a comment briefly describing what you have done, and then create the pull request. 
 8. Someone from the Neurodesk team will review and accept your workflow and it will appear on our website soon!. 
 
-Thanks so much for taking the time to contribute your workflow to the Neurodesk community! If you have any feedback on the process, please let us know on [github discussions](https://github.com/NeuroDesk/neurodesk.github.io/discussions).
+Thanks so much for taking the time to contribute your workflow to the Neurodesk community! If you have any feedback on the process, please let us know on [github discussions](https://github.com/orgs/NeuroDesk/discussions).
 
 ## Formatting guidelines
 
