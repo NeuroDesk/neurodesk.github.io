@@ -316,7 +316,8 @@
   }
   
 .community-start {
-  background: $light_grey;
+  // background: $light_grey;
+
   p.lead.mt-2 {
     font-size: rem(17px);
     font-weight: 700;
@@ -327,10 +328,9 @@
   }
 
   .community-col {
-    margin-bottom: rem(20px);
     padding-left: 30px;
-    display: flex;
-    flex-wrap: wrap;
+    
+ 
 
     @include small-desktop {
       flex: 0 0 100%;
@@ -342,6 +342,7 @@
 
       .row {
         margin-bottom: 0;
+
       }
     }
 
@@ -352,10 +353,8 @@
   }
 
   .community-card {
-    border-radius: rem(3px);
+    border-radius: 0;
     border: none;
-    // margin-bottom: rem(20px);
-    margin-bottom: rem(30px);
     height: rem(110px);
     word-wrap: break-word;
     margin-bottom: rem(1px);
@@ -363,7 +362,7 @@
     display: flex;
     flex-direction: column;
     align-content: center;
-    
+    background: $mid_gray;
 
     
     @include max-width-desktop {
@@ -376,16 +375,12 @@
       overflow: inherit;
     }
 
-    @include small-desktop {
-      height: 100px;
-      overflow: inherit;
-    }
-  
+
     p.card-summary {
       font-size: rem(11px);
       line-height: rem(13px);
       margin-bottom: rem(5px);
-      color: $dark_grey;
+      color: $dark;
       white-space: normal;
     }
   
@@ -402,32 +397,32 @@
         min-height: 234px;
       }
     }
-  
+
+    h4, i {
+      color: $dark;
+      margin-bottom: 0 rem(6px);
+      text-overflow: ellipsis;
+      font-size: rem(16px);  
+      font-weight: 800
+    }
+
     @include animated_border_hover_state;
     &:hover {
-      p.card-summary {
-        color: $command_block_black;
+      h4, i, p.card-summary {
+        color: $light;
       }
-    }
-  }
-  
-  .community-card .card-body {
-    background-position: top rem(20px) right rem(20px);
-    background-repeat: no-repeat;
-    padding: rem(25px) rem(30px);
-    text-align: center;
-    white-space: normal;
-    @media (max-width: 520px) {
-      height: rem(65px);
-      min-width: 160px;
-    }
-    h4, i {
-      color: $slate;
-      margin-bottom: rem(10px);
 
-      text-overflow: ellipsis;
-      font-size: rem(14px);
-      
+    }
+    .card-body {
+      background-position: top rem(20px) right rem(20px);
+      background-repeat: no-repeat;
+      padding: rem(25px) rem(30px);
+      text-align: center;
+      white-space: normal;
+      @media (max-width: 520px) {
+        height: rem(65px);
+        min-width: 160px;
+      }
     }
   }
   }
