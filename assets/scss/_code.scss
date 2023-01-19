@@ -496,14 +496,15 @@
 .custom-scroll::-webkit-scrollbar {
     max-width: 50px;
     height: 15px;
+
 }
 
 .component-start.grid-container {
   background-color: $slate;
   margin-left: 190px;
   margin-right: 190px;
-
-  @media screen and (max-width: 500px) {
+  
+  @include very-small-desktop {
     margin-left: 0px;
     margin-right: 0px;
   }
@@ -514,26 +515,28 @@
 
   .component-start.grid-container {
     display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 3fr;
 
     //Let the craziness begin!!!
     grid-template-areas:
-      "main";
+      // "title title title"
+      "main main main";
     @media screen and (max-width: 500px) {
       grid-template-columns: 1fr;
       grid-template-rows: 1fr;
       grid-template-areas: 
-        "main"
+        // "title"
+        "main";
     }
   }
 
   .grid-item {
-    color: #fff;
     background: $slate;
-    padding: 3.5em 1em;
+    padding: rem(10px);
     font-size: 1em;
     font-weight: 700;
+    
   }
   
 
@@ -567,18 +570,70 @@
         color: $light;
       }
     }
+
+    .card-body {
+      // width: 100%;
+      flex: 0 0 100%;
+      
+      border-radius: 15px;
+      background: $light_white;
+      padding: 20px;
+      border-radius: 5px;
+      height: 500px;
+      width: 800px;
+      margin: 10px;
+      @media screen and (max-width: 500px) {
+        margin: 0px;
+      }
+  
+      // h4, p, i {
+      //   color: #0C0A0B;
+      // }
+
+      h4, i {
+        color: $dark_grey;
+        margin-bottom: rem(10px);
+        text-overflow: ellipsis;
+        font-size: rem(26px);  
+        font-weight: 800;
+
+        @include very-small-desktop {
+          color: $dark_grey;
+          margin-bottom: 0 rem(3px);
+          text-overflow: ellipsis;
+          font-size: rem(21px);  
+          font-weight: 600
+        }
+      }
+
+      p {
+        color: $dark_grey;
+        margin: rem(9px);
+        text-overflow: ellipsis;
+        font-size: rem(19px);  
+      }
+  
+      @include animated_border_hover_state;
+      &:hover {
+        h4, i, p.card-summary {
+          color: $primary;
+        }
+  
+      }
+    }
   }
 
   // .item.command,
   // .item.desktop {
   //   display: inline-block;
+  //   vertical-align:top;
   //   background: #0C0A0B;
   //   min-height: 200px;
   //   min-width: 600px;
   //   margin: 2em 1em;
-  //   opacity: 0;
+  //   // opacity: 0;
   //   transform: translate(5vh,0);
-  //   transition: ease-in-out 1s;
+  //   transition: fadeIn 1s;
   //   @media screen and (max-width: 500px) {
   //     min-height: 200px;
   //     min-width: 200px;
@@ -591,15 +646,19 @@
     display: inline-block;
     vertical-align:top;
     background: #0C0A0B;
-    min-height: 250px;
+    padding-bottom: rem(100px);
+    // min-height: 250px;
     // min-width: 600px;
-    margin: 2em 1em;
+    // margin: 2em 1em;
     opacity: 1;
     @media screen and (max-width: 500px) {
       min-height: 200px;
       min-width: 200px;
+      padding-bottom: rem(20px);
     }
+
   }
+
 
   // .item.active {
   //   // background: rgba(255,255,255,0.3);

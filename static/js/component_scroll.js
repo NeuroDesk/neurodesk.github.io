@@ -6,16 +6,15 @@ var pageLeft = $(document).scrollLeft();
 var pageRight = pageLeft + $(window).width();
 var tags = $(".item");
 let mouseDown = false;
-
-
+const startScrollOffset = $(window).pageXOffset;
+console.log($(window).width(),startScrollOffset);
 
 function checkPosition() {
-  var startCard = slider.scrollWidth/3;
-  let secondCard = slider.scrollWidth/3*2;
-  var endCard = slider.scrollWidth;
-  console.log(startCard, secondCard, endCard);
-  percentMovement = slider.scrollLeft / slider.scrollWidth;
-  
+  var startCard = $(window).width()/3;
+  let secondCard = $(window).width()/3*2;
+  var endCard = $(window).width();
+  console.log(startCard, secondCard, endCard,slider.scrollLeft);
+  // percentMovement = slider.scrollLeft / slider.scrollWidth;
   if (slider.scrollLeft <= startCard) {
     $(tags[0]).addClass("visible");
   } else if (slider.scrollLeft > startCard && slider.scrollLeft < secondCard) {
