@@ -1,13 +1,6 @@
 title: "<title>"
 labels: [New Tool]
 body:
-- type: checkboxes
-  attributes:
-    label: New version of available software in Neurodesk
-    options:
-        - label: "Yes"
-        - label: "No"
- 
 - type: input
   id: name
   attributes:

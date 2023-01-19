@@ -8,7 +8,7 @@ description: >-
 
 Neurodesk is an open-source project that is always evolving. If you are experiencing an issue not listed here, please open a [new issue](https://github.com/NeuroDesk/neurodesk.github.io/issues), so that we can aim to solve it and update our help documentation. 
 
-To ask questions or suggest new features, [join the discussion](https://github.com/NeuroDesk/neurodesk.github.io/discussions) on github. 
+To ask questions or suggest new features, [join the discussion](https://github.com/orgs/NeuroDesk/discussions) on github. 
 
 ## I am using a European keyboard layout and I cannot type symbols that require the ALT-GR key (like @ or \\)
 This seems to be a bug in Guacamole and RDP in combination with certain browsers. There are a few workarounds you can try:
@@ -63,7 +63,7 @@ If it still does not work, please report the problem and we will do our best to 
 3. Try to paste the text using the menu option "Edit" --> "Paste"
 4. Try to paste the text again using CTRL+V
 5. If you don't have one already, please create a Github account [here](https://github.com/signup)
-6. Go to our discussion forum [here](https://github.com/NeuroDesk/neurodesk.github.io/discussions)
+6. Go to our discussion forum [here](https://github.com/orgs/NeuroDesk/discussions)
 7. If you are not logged into Github, please log in (upper right corner)
 8. Press "New Discussion" button
 9. In the message that you write, please specify your operating system, your internet browser, the application in question, and if you can copy/paste to Mousepad and how?

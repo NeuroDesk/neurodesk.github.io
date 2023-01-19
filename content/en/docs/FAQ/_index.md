@@ -60,4 +60,4 @@ We are still working on making this easier, but the current workflow to add new 
 
 ## I couldn't find the information I was looking for. Where can I get additional assistance?
 Open a Github account, and post your question on the Neurodesk forum:
-https://github.com/NeuroDesk/neurodesk.github.io/discussions
+https://github.com/orgs/NeuroDesk/discussions
