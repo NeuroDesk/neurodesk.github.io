@@ -284,8 +284,8 @@ function commandMessage(key) {
     "x86,gui,macos,hpc,aus": 'Follow the instruction at <br /> <a href="https://www.neurodesk.org/docs/neurodesktop/getting-started/hpc/">https://www.neurodesk.org/docs/neurodesktop/getting-started/hpc/</a> <br /> Then access graphical interface with X11 forwarding', 
     "x86,gui,macos,hpc,intl": 'Follow the instruction at <br /> <a href="https://www.neurodesk.org/docs/neurodesktop/getting-started/hpc/">https://www.neurodesk.org/docs/neurodesktop/getting-started/hpc/</a> <br /> Then access graphical interface with X11 forwarding', 
     
-    "x86,gui,windows,local,aus": 'Follow the instruction at <br /> <a href="https://www.neurodesk.org/docs/neurodesktop/getting-started/mac/">https://www.neurodesk.org/docs/neurodesktop/getting-started/windows/</a>', 
-    "x86,gui,windows,local,intl": 'Follow the instruction at <br /> <a href="https://www.neurodesk.org/docs/neurodesktop/getting-started/mac/">https://www.neurodesk.org/docs/neurodesktop/getting-started/windows/</a>', 
+    "x86,gui,windows,local,aus": 'Follow the instruction at <br /> <a href="https://www.neurodesk.org/docs/neurodesktop/getting-started/windows/">https://www.neurodesk.org/docs/neurodesktop/getting-started/windows/</a>', 
+    "x86,gui,windows,local,intl": 'Follow the instruction at <br /> <a href="https://www.neurodesk.org/docs/neurodesktop/getting-started/windows/">https://www.neurodesk.org/docs/neurodesktop/getting-started/windows/</a>', 
     "x86,gui,windows,cloud,intl": 'Go to <a href="https://play.neurodesk.org/">https://play.neurodesk.org/</a>',
     "x86,gui,windows,cloud,aus": 'To keep home directory across sessions, go to <br /> <a href="https://bhsydney.neurodesk.org//">https://bhsydney.neurodesk.org/</a> <br /> To quickly access without authentication and keeping data, go to <br /> <a href="https://play-sydney.neurodesk.org/v2/gh/neurodesk/jupyter-neurodesktop-image/main">https://play-sydney.neurodesk.org/v2/gh/neurodesk/jupyter-neurodesktop-image/main</a>', 
     "x86,gui,windows,nectar,aus": 'Follow the instruction at <br />  <a href="https://www.neurodesk.org/docs/neurodesktop/getting-started/nectar/">https://www.neurodesk.org/docs/neurodesktop/getting-started/nectar/</a>', 
@@ -299,8 +299,8 @@ function commandMessage(key) {
     "x86,cmd,macos,hpc,aus": 'Follow the instruction at <br /> <a href="https://www.neurodesk.org/docs/neurodesktop/getting-started/hpc/">https://www.neurodesk.org/docs/neurodesktop/getting-started/hpc/</a>', 
     "x86,cmd,macos,hpc,intl": 'Follow the instruction at <br /> <a href="https://www.neurodesk.org/docs/neurodesktop/getting-started/hpc/">https://www.neurodesk.org/docs/neurodesktop/getting-started/hpc/</a>', 
     
-    "x86,cmd,windows,local,aus": 'Follow the instruction at <br /> <a href="https://www.neurodesk.org/docs/neurodesktop/getting-started/mac/">https://www.neurodesk.org/docs/neurocommand/getting-started/windows/</a>', 
-    "x86,cmd,windows,local,intl": 'Follow the instruction at <br /> <a href="https://www.neurodesk.org/docs/neurodesktop/getting-started/mac/">https://www.neurodesk.org/docs/neurocommand/getting-started/windows/</a>', 
+    "x86,cmd,windows,local,aus": 'Follow the instruction at <br /> <a href="https://www.neurodesk.org/docs/neurodesktop/getting-started/windows/">https://www.neurodesk.org/docs/neurocommand/getting-started/windows/</a>', 
+    "x86,cmd,windows,local,intl": 'Follow the instruction at <br /> <a href="https://www.neurodesk.org/docs/neurodesktop/getting-started/windows/">https://www.neurodesk.org/docs/neurocommand/getting-started/windows/</a>', 
     "x86,cmd,windows,cloud,intl": 'Follow the instruction at <br /> <a href="https://www.neurodesk.org/docs/neurodesktop/getting-started/cloud/">https://www.neurodesk.org/docs/neurodesktop/getting-started/cloud/</a>', 
     "x86,cmd,windows,cloud,aus": 'Follow the instruction at <br /> <a href="https://www.neurodesk.org/docs/neurodesktop/getting-started/cloud/">https://www.neurodesk.org/docs/neurodesktop/getting-started/cloud/</a>', 
     "x86,cmd,windows,hpc,intl": 'Follow the instruction at <br /> <a href="https://www.neurodesk.org/docs/neurocommand/getting-started/windows/">https://www.neurodesk.org/docs/neurocommand/getting-started/windows/</a>',

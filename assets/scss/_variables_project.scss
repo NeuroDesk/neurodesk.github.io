@@ -23,8 +23,8 @@ $content_text_color: #6c6c6d;
 $code_background_color: #f3f4f7;
 $command_block_black: #6c6c6d;
 $smoky_grey: #CCCDD1;
-$medium_smoky_grey: #CCCDD1;
-$light_white: #e2e2e2;
+$medium_smoky_grey: #2c2c2c;
+$light_white: #ffffff;
 $mid_gray: #838282;
 
 $desktop_header_height: 90px;
@@ -47,6 +47,14 @@ $site_horizontal_padding: 30px;
 
 @mixin max-width-desktop {
   @media screen and (min-width: 1240px) { @content; }
+}
+
+@mixin very-big-desktop {
+  @media screen and (min-width: 1940px) { @content; }
+}
+
+@mixin very-very-big-desktop {
+  @media screen and (min-width: 2940px) { @content; }
 }
 
 @mixin small-desktop {
@@ -78,22 +86,24 @@ $site_horizontal_padding: 30px;
 @mixin animated_border_hover_state {
 
     &:after {
-      content: "";
-      display: block;
-      width: 0;
-      height: 1px;
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      background-color: $light;
-      transition: width .350s ease-in-out;
+      background-color: $light_white;
+      box-shadow: 0 1px 2px rgba(0,0,0,0.15);
     }
 
     &:hover:after {
       width: 100%;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+      opacity: 0;
+      transition: opacity 0.3s ease-in-out;
     }
     &:hover {
-      color: $light;
+
+      box-shadow: 0 5px 15px rgba(0,0,0,0.3);
     }
   
+}
+
+@keyframes fadeIn {
+  0% { opacity: 0.4; }
+  100% { opacity: 1; }
 }
