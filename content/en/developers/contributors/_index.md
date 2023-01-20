@@ -46,18 +46,28 @@ If you contributed to the project please list yourself here with a description o
 - user testing
 - neurodesk paper lead author
 
+## Oren Civier
+- https://github.com/civier
+- Funding: ARDC Australian Electrophysiology Data Analytics PlaTform (AEDAPT) (CI for $566k AUD) - contributing to initial conceptualisation, EOI writeup, scope of project, proposal writeup, teaming up with the Australian Imaging Service (AIS), recruiting collaborators, assisting collaborators with case studies
+- Design: leading the Virtual Neuro Machine (VNM) hackathon project in the 2020 OHBM BrainHack, where the first version of Neurodesktop was developed
+- Development: allowing Neurodesk containers running in Neurodesktop to access sshfs mounts
+- Development: template for container recipe documentation
+- Development: software application containers - developer (bidscoin, MATLAB; in progress: MMVT)
+- Development: software application containers - facilitator (Fieldtrip, running arbitrary scripts using compiled MATLAB containers; in progress: SOVABIDS)
+- Documentation: for developers (contribution to "add tools", configuring Github)
+- Documentation: for users (copy and paste troubleshooting, accessing storage, installation on different platforms, using ARDC Virtual Desktop Service, screenshots)
+- Documentation: Neurodesk's original logo
+- User testing: HPC, NECTAR, Mac, Linux, ARDC Virtual Desktop Service
+- User testing: VNC and RDP interfaces, including multiple concurrent users
+- Outreach: providing assistance to nodes of the Australian National Imaging Facility with installing/using Neurodesk
+- Administration: one of Neurodesk/AEDAPT representatives in ARCOS, AIS and NECTAR Interactive Analytics committees and working groups
+- Papers: co-author Neurodesk manuscript (in preparation; contribution to initial outline, input on first draft), co-author proceedings of the OHBM Brainhack 2021 (to be published in Aperture)
+
 ## Thomas Shaw
 - https://github.com/thomshaw92
 - Win, Mac, Linux startup scripts
 - initial transparent singularity prototype
 - application container development (LASHiS, ASHS)
-- user testing
-
-## Oren Civier
-- https://github.com/civier
-- funding: ARDC (CI for $566k AUD)
-- documentation
-- softare application containers (bidscoin, matlab)
 - user testing
 
 ## Tom Johnstone
