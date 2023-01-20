@@ -503,9 +503,9 @@
     max-width: 50px;
     height: 15px;
 
-    @include very-very-big-desktop {
-      display: none;
-    }
+    // @include very-very-big-desktop {
+    //   display: none;
+    // }
 }
 
 .component-start.grid-container {
