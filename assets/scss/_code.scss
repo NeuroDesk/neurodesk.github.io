@@ -503,7 +503,7 @@
     max-width: 50px;
     height: 15px;
 
-    @include very-big-desktop {
+    @include very-very-big-desktop {
       display: none;
     }
 }
