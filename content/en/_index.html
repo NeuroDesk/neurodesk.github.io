@@ -5,21 +5,21 @@ linkTitle = "Neurodesk"
 +++
 
 <section class="row td-box -bg-dark justify-content-left h-auto col-big-desktop">
-	<div class="col-md-3 col-lg-1 order-xs-first order-sm-first order-md-last text-center my-auto">
-		<img src = "neurodesk.svg" style="height:250px;" alt="neurodesk logo"/>
-	</div>
+	<!-- <div class="col-sm-10 col-md-3 col-lg-1 order-xs-first order-sm-first order-md-last text-center my-auto">
+		<img src = "neurodesk.svg" style="height:250px;filter:brightness(2.5)" alt="neurodesk logo" />
+	</div> -->
 	<div class="col-md-9 col-lg-first order-xs-2 order-sm-2 order-md-2 my-auto">
 		<h2>Quick start</h2>
-		<p class="lead mt-2">A flexible, scalable, and browser-based data analysis environment for reproducible neuroimaging</p>
+		<h3>A flexible and scalable data analysis environment for reproducible neuroimaging with Neurodesk.</h3>
 		
 		<div class="mx-auto mt-5">
-			<a class="btn btn-lg btn-secondary mr-3 mb-4" href="docs/faq/#what-is-neurodesk">
+			<a class="btn btn-lg btn-light mr-3 mb-4" href="docs/faq/#what-is-neurodesk">
 			 What is Neurodesk ?</a>
-			<a class="btn btn-lg btn-secondary mr-3 mb-4" href="docs/neurodesktop/getting-started/play">
+			<a class="btn btn-lg btn-light mr-3 mb-4" href="docs/neurodesktop/getting-started/play">
 			<i class="fa fa-play"></i> Play </a>
-			<a class="btn btn-lg btn-secondary mr-3 mb-4" href="docs/neurodesktop/getting-started/nectar">
+			<a class="btn btn-lg btn-light mr-3 mb-4" href="docs/neurodesktop/getting-started/nectar">
 			<i class="fa fa-desktop"></i> Nectar </a>
-			<a class="btn btn-lg btn-secondary mr-3 mb-4" href="docs/neurocontainers/googlecolab/">
+			<a class="btn btn-lg btn-light mr-3 mb-4" href="docs/neurocontainers/googlecolab/">
 			<i class="fab fa-google"></i> Google Colab </a>
 		</div>
 	</div>
@@ -170,14 +170,14 @@ linkTitle = "Neurodesk"
 		<!-- <div class="container"> -->
 
 			<div class="row">
-				<div class="community-title">
+				<div class="col-8 col-sm-9 col-md-10 col-lg-3 col-xl-2 community-title">
 					<h2 >Community</h2>
-					<p class="lead mt-2">Neurodesk is a community project.</p>
+					<h3>Neurodesk is a community project.</h3>
 					<p class="lead mt-3">Our active community provides transparency and inclusion. We encourage you to engage and contribute.</p>
 				</div>
-				<div class="col-md-8 community-col">
+				<div class="col-11 col-sm-11 col-md-10 col-lg-7 col-xl-8 community-col">
 					<div class="row community">
-						<div class="col-6 col-md-3 mb-4 mb-md-0">
+						<div class="col-6 col-md-5 col-lg-6 col-xl-3">
 							<div class="community-card">
 								<a href="/docs/faq/#what-is-neurodesk">
 									<div class="card-body"">
@@ -188,7 +188,7 @@ linkTitle = "Neurodesk"
 									</a>
 							</div>
 						</div>
-						<div class="col-6 col-md-3">
+						<div class="col-6 col-md-5 col-lg-6 col-xl-3">
 							<div class="community-card">
 								<a href="https://github.com/orgs/NeuroDesk/discussions">
 									<div class="card-body">
@@ -199,7 +199,7 @@ linkTitle = "Neurodesk"
 									</a>
 							</div>
 						</div>
-						<div class="col-6 col-md-3">
+						<div class="col-6 col-md-5 col-lg-6 col-xl-3">
 							<div class="community-card">
 								<a href="/developers/contributors">
 									<div class="card-body">
@@ -210,7 +210,7 @@ linkTitle = "Neurodesk"
 									</a>
 							</div>
 						</div>
-						<div class="col-6 col-md-3">
+						<div class="col-6 col-md-5 col-lg-6 col-xl-3">
 							<div class="card community-card">
 								<a href="/developers/new_tools">
 									<div class="card-body">
@@ -228,10 +228,65 @@ linkTitle = "Neurodesk"
 	</div>
 </section>
 
-<section class="row -bg-dark justify-content-left h-auto col-big-desktop">
+<section class="row td-box -bg-dark justify-content-left h-auto col-big-desktop">
 	<div class="td-box">
 		<h2 >Neurodesk Components</h2>
-		<p class="lead mt-2">Details of each component within Neurodesk project.</p>
+		<p class="lead mt-2">Details of each component within Neurodesk project.<br /> Neurodesk makes it easy for beginners and experts to use neuroimaging tools for desktop, hpc, web, and cloud.</p>
+	</div>
+	
+	<div class="component-start container-fluid ">
+
+			<div class="row">
+				<div class="col-12 col-md-11 component-col">
+					<div class="row">
+						<div class="col-10 col-md-10 col-lg-4">
+							<div class="component-card containers">
+								<img src="neurocontainer.png" alt="neurocontainer" />
+								<a href="/docs/neurocontainers">
+									<div class="card-body">
+										<i class="fas fa-layer-group"></i>
+										<h4>Neurocontainers</h4>
+										
+										<p class="card-summary">Software container library</p>
+									</div>
+								</a>
+							</div>
+						</div>
+						<div class="col-10 col-md-10 col-lg-4">
+							<div class="component-card command">
+								<img src="neurocommand.png" alt="Neurocommand" />
+								<a href="/docs/neurocommand">
+									<div class="card-body">
+										<i class="fas fa-terminal"></i>
+										<h4>Neurocommand</h4>
+										<p class="card-summary">Core installer</p>
+									</div>
+								</a>
+							</div>
+						</div>
+						<div class="col-10 col-md-10 col-lg-4">
+							<div class="component-card desktop">
+								<img src="neurodesktop.png" alt="Neurodesktop" />
+								<a href="/docs/neurodesktop">
+									<div class="card-body"">
+										<i class="fa fa-window-maximize"></i>
+										<h4>Neurodesktop</h4>	
+										
+										<p class="card-summary">Fully featured desktop in a container</p>
+									</div>
+								</a>
+							</div>
+							</div>
+					</div>
+				</div>
+			</div>
+	</div>
+</section>
+
+<!-- <section class="row -bg-dark justify-content-left h-auto col-big-desktop">
+	<div class="td-box">
+		<h2 >Neurodesk Components</h2>
+		<p class="lead mt-2">Details of each component within Neurodesk project. Neurodesk makes it easy for beginners and experts to use neuroimaging tools for desktop, hpc, web, and cloud.</p>
 	</div>
 	
 	<div class="component-start grid-container ">
@@ -274,14 +329,10 @@ linkTitle = "Neurodesk"
 			</div>
 
 		</div>
-
-
 	</div>
+</section> -->
 
-	
-</section>
-
-<section class="row -bg-light justify-content-left h-auto col-big-desktop">
+<section class="row td-box -bg-white justify-content-left h-auto col-big-desktop">
 <div class="container-fluid extra-info">
 	<div class="row">
 		<div class="community-title">
