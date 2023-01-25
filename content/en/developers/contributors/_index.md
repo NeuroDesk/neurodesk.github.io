@@ -141,7 +141,7 @@ If you contributed to the project please list yourself here with a description o
 - application container development (oshyx)
 
 ## Sin Kim
-- https://github.com/AKSoo
+- https://github.com/kimsin98
 - tutorial (datalad)
 
 ## Jakub Kaczmarzyk
