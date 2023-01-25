@@ -6,7 +6,7 @@ description: >
   Add storage to Neurodesktop
 ---
 
-# Drag and Drop support
+## Drag and Drop
 You can drag-and-drop files into the browser window to get files into the Neurodesktop. This will then start a file upload:
 
 ![{538BB51E-0FEB-46EA-B1B8-FDF122776735}](https://user-images.githubusercontent.com/4021595/160577507-b5159bae-13c0-4fbf-85da-0ce55fd481f3.png)
@@ -26,10 +26,10 @@ You can browse into folders in the shared drive by clicking (double clicking on 
 
 To close the side menu, click on CTRL-ALT-SHIFT once more (Control-Command-Shift on Mac).
 
-# Data directory connection to the host computer
+## Local storage
 If you are running Neurodesktop on your own hardware there will be a direct connection between the "Storage" folder on the Destkop, which is a link to "/neurodesktop-storage" and a "neurodesktop-storage" folder on your C-drive (Windows) or home directory (Mac/Linux). This connection can be used for data processing and data transfer.
 
-## Mounting external storage on your host-computer
+### Mounting external storage on your host-computer
 The -v C:/neurodesktop-storage:/neurodesktop-storage part of the docker command links the directory "neurodesktop-storage" on the “C drive” of your Windows computer to the directory /neurodesktop-storage inside the Desktop environment. Everything you store in there will be available inside the desktop and on the host computer. You can also mount additional directories by adding another -v parameter set (e.g. -v D:/moredata:/data) - this will mount the directory moredata from your D drive to /data inside neurodesktop. Improtant: the mountpoint inside neurodesktop should be named /data (or anything from this list: https://github.com/NeuroDesk/neurocontainers/blob/master/recipes/globalMountPointList.txt) - otherwise most of the tools will not be able to access the data.
 
 Here is an example for Windows adding another storage directory:
@@ -37,10 +37,10 @@ Here is an example for Windows adding another storage directory:
 <code>docker run --shm-size=1gb -it --privileged --name neurodesktop -v C:/neurodesktop-storage:/neurodesktop-storage -v D:/moredata:/data -p 8080:8080 -h neurodesktop-{{< params/neurodesktop/version >}} vnmd/neurodesktop:{{< params/neurodesktop/version >}}</code>
 </pre>
 
-# Cloud-storage
+## Cloud storage
 Another way to get your data into Neurodesktop is to use a cloud storage provider like CloudStor, Dropbox, OneDrive and their sync tools like OwnCloud, Nextcloud or very flexible tools like rclone or davfs2. Another good option could be to utilize Globus for large amounts of data. 
 
-## Nextcloud and Owncloud desktop clients
+### Nextcloud and Owncloud desktop clients
 Under the menu item "Accessories" you can find "Nextcloud" and "ownCloud" desktop sync clients that you can configure with your cloud service accounts.
 
 To connect for example to your AARNET cloudstor account you can start the ownCloud client and enter the Server Address: 
@@ -51,7 +51,7 @@ https://cloudstor.aarnet.edu.au/plus/
 Then generate an app-password here: https://cloudstor.aarnet.edu.au/plus/settings/personal?sectionid=security
 
 
-## Mounting webdav storage using davfs2
+### Mounting webdav storage using davfs2
 Another option is to directly mount webdav storage. Here is an example how to mount CloudStor into Neurodesktop:
 
 ```shell
@@ -59,7 +59,7 @@ sudo mount -t davfs https://cloudstor.aarnet.edu.au/plus/remote.php/webdav/ /dat
 ```
 It then asks you for a username and password, which you can generate here: https://cloudstor.aarnet.edu.au/plus/settings/personal?sectionid=security
 
-## Rclone
+### Rclone
 Rclone is a command line tool that enables the interaction with various cloud services. Here is an example how to setup rclone with CloudStor Aarnet:
 
 - start the configuration in a terminal window `rclone config`
@@ -78,7 +78,7 @@ Rclone is a command line tool that enables the interaction with various cloud se
 - Now we can download data to the HPC easily: `rclone copy --progress --transfers 8 CloudStor:/raw-data-for-science-paper .`
 - or upload data to CloudStor: `rclone copy --progress --transfers 8 . CloudStor:/data-processed`
 
-## Globus
+### Globus
 We also provide the globus client, so you can transfer large amounts of data between globus endpoints and Neurodesktop. You can configure it by running:
 ```shell
 /opt/globusconnectpersonal/globusconnectpersonal-*/globusconnectpersonal
@@ -88,7 +88,7 @@ Once authenticated you can go to the globus file-manager https://app.globus.org/
 
 
 
-# Mount volume using SSHFS
+### Mount volume using SSHFS
 It is theoretically possible to mount an SSH target inside Neurodesktop, but it's not a very reliable way of mounting storage:
 ```shell
 sshfs -o allow_root USER@TARGET_HOST:TARGET_PATH SOURCE_PATH
