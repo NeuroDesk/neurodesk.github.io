@@ -6,7 +6,7 @@ description: >
   Install neurodesktop on MacOS
 ---
 
-## Minimum System Requirements
+### Minimum System Requirements
 1. At least 3GB free space for neurodesktop base image
 2. An Intel Mac. M1/ARM Macs are not yet supported.
 3. Docker requirements. Details found under https://docs.docker.com/get-docker/

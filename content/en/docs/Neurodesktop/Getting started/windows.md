@@ -6,7 +6,7 @@ description: >
   Install neurodesktop on Windows
 ---
 
-## Minimum System Requirements
+### Minimum System Requirements
 1. At least 3GB free space for neurodesktop base image
 2. Docker requirements. Details found under https://docs.docker.com/get-docker/
 3. If installing docker using WSL, atleast 20GB space recommended for WSL with Ubuntu
