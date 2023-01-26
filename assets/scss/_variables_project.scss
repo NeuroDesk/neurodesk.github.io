@@ -38,11 +38,15 @@ $site_horizontal_padding: 30px;
 }
 
 @mixin very-small-desktop {
-  @media screen and (max-width: 768px) { @content; }
+  @media screen and (max-width: 767px) { @content; }
 }
 
 @mixin full-nav-menu-desktop {
   @media screen and (min-width: 1200px) { @content; }
+}
+
+@mixin nav-menu-desktop {
+  @media screen and (max-width: 1199px) { @content; }
 }
 
 @mixin max-width-desktop {
@@ -84,26 +88,25 @@ $site_horizontal_padding: 30px;
 }
 
 @mixin animated_border_hover_state {
-
-    &:after {
-      background-color: $light_white;
-      box-shadow: 0 1px 2px rgba(0,0,0,0.15);
-    }
-
-    &:hover:after {
-      width: 100%;
-      box-shadow: 0 5px 15px rgba(0,0,0,0.3);
-      opacity: 0;
-      transition: opacity 0.3s ease-in-out;
-    }
     &:hover {
-
+      background-color: $slate;
       box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+      transition: background-color 0.3s ease-in-out;
     }
   
 }
 
-@keyframes fadeIn {
-  0% { opacity: 0.4; }
-  100% { opacity: 1; }
+
+@mixin animated_running_border {
+  @include desktop {
+    &:hover {
+      background-color: $slate;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+      transition: background-color 0.3s ease-in-out;
+    }
+    
+    &:hover .card-body:after {
+      width: 100%;
+    }
+  }
 }
