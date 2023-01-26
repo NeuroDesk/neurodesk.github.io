@@ -38,7 +38,7 @@ $site_horizontal_padding: 30px;
 }
 
 @mixin very-small-desktop {
-  @media screen and (max-width: 768px) { @content; }
+  @media screen and (max-width: 767px) { @content; }
 }
 
 @mixin full-nav-menu-desktop {
@@ -98,7 +98,7 @@ $site_horizontal_padding: 30px;
 
 
 @mixin animated_running_border {
-  @include full-nav-menu-desktop {
+  @include desktop {
     &:hover {
       background-color: $slate;
       box-shadow: 0 2px 8px rgba(0,0,0,0.3);

@@ -452,20 +452,36 @@ p.lead.mt-2 {
   @include nav-menu-desktop {
     margin-left: 5px;
   }
+
+  .image-wrapper {
+    @include very-small-desktop {
+      position: relative;
+      width: 40%;
+    }
+
+  }
   .component-col  .component-card {
-    margin-bottom: rem(15px);
-    border-radius: rem(5px);
-    border: 1px solid $dark_grey;
-    height: rem(440px);
+
+    height: rem(190px);
     word-wrap: normal;
     background: $light_white;
     cursor: pointer;
     
-    @include full-nav-menu-desktop  {
-
+    @include desktop  {
+      margin-bottom: rem(15px);
+      border-radius: rem(5px);
+      border: 1px solid $dark_grey;
       height: 100%;
       overflow: inherit;
     }
+
+    @include very-small-desktop {
+      margin-bottom: 0;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+    }
+    
   
     img {
       opacity: 1;
@@ -476,19 +492,21 @@ p.lead.mt-2 {
       backface-visibility: hidden;
     }
     a {
-      height: inherit;
+      // height: inherit;
       top: 50%;
       left: 50%;
-      
+
       .card-body {
-        text-align: center;
-        white-space: normal;
-        // @media (max-width: 520px) {
-        //   height: rem(65px);
-        //   min-width: 160px;
-        // }
+        display: flex;
+        flex-direction: column;
+        min-width: 160px;
+
+        @include desktop  {
+          text-align: center;
+          white-space: normal;
+        }
       }
-      @include full-nav-menu-desktop  {
+      @include desktop  {
 
         .card-body:after {
           content: "";
@@ -510,10 +528,6 @@ p.lead.mt-2 {
       margin-bottom: rem(5px);
       color: $slate;
       white-space: normal;
-
-      @include very-small-desktop {
-        display: none;
-      }
     }
   
 
@@ -528,7 +542,7 @@ p.lead.mt-2 {
     @include animated_running_border;
   }
 
-  @include full-nav-menu-desktop {
+  @include desktop {
     .component-col .component-card:hover {
       background-color: $light_white;
     }
