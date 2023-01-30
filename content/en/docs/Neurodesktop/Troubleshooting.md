@@ -10,17 +10,23 @@ Neurodesk is an open-source project that is always evolving. If you are experien
 
 To ask questions or suggest new features, [join the discussion](https://github.com/orgs/NeuroDesk/discussions) on github. 
 
-## I am using a European keyboard layout and I cannot type symbols that require the ALT-GR key (like @ or \\)
+<h2>Common Issues</h2>
+{{< toc >}}
+
+## Keyboard and Multi-Language support
+
+### I am using a European keyboard layout and I cannot type symbols that require the ALT-GR key (like @ or \\)
 This seems to be a bug in Guacamole and RDP in combination with certain browsers. There are a few workarounds you can try:
 1) Use the connection option "Desktop Fixed-Resolution (VNC)" instead of Desktop Auto-Resolution (RDP)
 2) connect to the desktop using an RDP client instead of the browser (https://www.neurodesk.org/docs/neurodesktop/getting-started/windows/#using-an-rdp-client)
 
-## I cannot copy and paste text within Neurodesktop using keyboard shortcuts
-If you're using Mac, you might be trying to use Mac keyboard shortcuts, but Neurodesktop is using Linux keyboard shortcuts (CTRL+C and CTRL+V)
+## Copy-Paste and Clipboard issues
 
+### I cannot copy and paste text within Neurodesktop using keyboard shortcuts
+If you're using Mac, you might be trying to use Mac keyboard shortcuts, but Neurodesktop is using Linux keyboard shortcuts (CTRL+C and CTRL+V)
 If you use the terminal, please see "I fixed my internet browser clipboard, but copy or paste still do not work in the terminal" below.
 
-## Copying text from my host computer and pasting it inside Neurodesktop doesn't work in Firefox
+### Copying text from my host computer and pasting it inside Neurodesktop doesn't work in Firefox
 This is a "feature" of firefox and you can disable this "feature":
 
 - navigate to [about:config](https://about:config) and "Accept the Risk and Continue" ("about:config" needs to be entered in the address bar of firefox and hit enter)
@@ -33,7 +39,7 @@ Then close firefox and restart. Then the clipboard should work as one would expe
 
 If the clipboard still does not work, check "I fixed my internet browser clipboard, but ..." sections below.
 
-## Copy and paste between my host computer and Neurodesktop (or vice versa) doesn't work in Chrome or Edge
+### Copy and paste between my host computer and Neurodesktop (or vice versa) doesn't work in Chrome or Edge
 The browsers have a security feature to protect you from something stealing your clipboard content. Depending on your security settings you have to enable it explicitly - it's a little icon in the browser address bar that looks like a clipboard.
 
 After pressing the icon, you should choose the option shown below in the dialog that opens. After pressing "Done", close the current browser tab and open a new one for the changes to take effect.
@@ -42,13 +48,13 @@ After pressing the icon, you should choose the option shown below in the dialog 
 
 If the clipboard still does not work, check "I fixed my internet browser clipboard, but ..." sections below.
 
-## I fixed my internet browser clipboard, but copy or paste still do not work in the terminal
+### I fixed my internet browser clipboard, but copy or paste still do not work in the terminal
 The terminal is using special keyboard shortcuts, Shift+CTRL+C for copy, and Shift+CTRL+V for paste. Alternatively, you can copy and paste text by using the terminal's "Edit" menu.
 
-## I fixed my internet browser clipboard, but copy or paste still do not work in the file browser
+### I fixed my internet browser clipboard, but copy or paste still do not work in the file browser
 The copy and paste options in the "Edit" menu of the file browser are used to copy and paste files, not text. To copy and paste text from/into the file browser application (e.g., copy a path into the path field in the top), use the CTRL+C and CTRL+V keyboard shortcuts.
 
-## I fixed my internet browser clipboard, but copy or paste still do not work in a specific/all applications
+### I fixed my internet browser clipboard, but copy or paste still do not work in a specific/all applications
 If you're using Mac, you might be trying to use Mac keyboard shortcuts, but Neurodesktop is using Linux keyboard shortcuts.
 For more details, read the "Note for Mac users" [here](https://www.neurodesk.org/docs/neurodesktop/whats-next/#how-top-copy-and-paste-text).
 
@@ -68,7 +74,9 @@ If it still does not work, please report the problem and we will do our best to 
 8. Press "New Discussion" button
 9. In the message that you write, please specify your operating system, your internet browser, the application in question, and if you can copy/paste to Mousepad and how?
 
-## docker: Cannot connect to the Docker daemon at unix:///var/run/docker.sock. Is the docker daemon running?.
+## Docker, WSL, Memory
+
+### docker: Cannot connect to the Docker daemon at unix:///var/run/docker.sock. Is the docker daemon running?.
 This is usually a docker-related error, not related to neurodesktop itself. To troubleshoot docker, we can try a simpler container first:
 ```
 docker run hello-world
@@ -81,8 +89,7 @@ Try the following solutions (in this order, until the above command works)
 4. Close and open the terminal and retry.
 5. Log out and login again, or restart the machine (current user environment doesnt fully know docker is running)
 
-
-## Windows users: WSL not installed properly
+### Windows users: WSL not installed properly
 
 The Docker engine relies on the Windows subsystem for Linux ([WSL]( https://docs.microsoft.com/en-us/windows/wsl/install-win10)) to run on a windows machine. 
 
@@ -98,13 +105,13 @@ However, if WSL is missing or incorrectly configured, the _Resources_ tab of the
 
 If this is the case, follow the manual install instructions to install [WSL 2]( https://docs.microsoft.com/en-us/windows/wsl/install-win10) (including installation of Ubuntu through Microsoft Store). 
 
-##  Windows users: Not enough free space on the partition in Windows and WSL2
+###  Windows users: Not enough free space on the partition in Windows and WSL2
 This could help: https://yjmantilla.github.io/tutorials/wsl2-move-vhdx.html
 
-##  Windows users: Failure to connect to Neurodesktop in Firefox
+###  Windows users: Failure to connect to Neurodesktop in Firefox
 We recommend using Microsoft Edge or Google Chrome to access Neurodesktop. 
 
-## Trouble installing neurodesk images
+### Trouble installing neurodesk images
 This may be a memory issue. First, ensure that there is enough free space on the disk. If there is, try resetting docker settings and data. To do this:
 
 1. Open the docker engine
@@ -117,15 +124,14 @@ If you are still experiencing issues after this, you may need to update docker t
 
 ![Docker_update](/Troubleshooting/Docker_update.png 'Docker_update')
 
-## I got an error message 'X killed' or not enough memory
+### I got an error message 'X killed' or not enough memory
 This may be due to Docker not having access to enough RAM from your host computer.
 
-### If you are using Docker on MacOS 
+#### If you are using Docker on MacOS 
 1. The memory amount is managed via the Docker settings:
 ![image](https://user-images.githubusercontent.com/4021595/154880061-cff2dde0-632d-4d8c-b627-28df6b074f48.png)
 
-
-### If you are using Docker on Windows 10 with the WSL2 backend
+#### If you are using Docker on Windows 10 with the WSL2 backend
 then this is managed by Windows settings. Try the following steps to check how much RAM Docker has access to and increase the amount if necessary.
 1. Run Docker
 2. Open a terminal (ie. Powershell) in the PC you want to use to run Neurodesktop (not in Neurodesktop itself) and type the following command:
@@ -153,7 +159,7 @@ Total Memory: **.**GiB
      This will list any running distributions. For the update to be successful, WSL needs to have comletely stopped running (ie. no distributions running)
      - Restart Docker and rerun steps 1-3 to confirm it was successful
 
-### If you are not using WSL2, you can check and manage your RAM allocation in the Docker desktop application.
+#### If you are not using WSL2, you can check and manage your RAM allocation in the Docker desktop application.
 1. Open the Docker application and navigate to settings > resources > advances
 2. Scroll down to the Memory option and use the sliding bar to adjust the setting
 3. Click apply and restart
