@@ -5,7 +5,7 @@ description: >
   Neurodesk Singularity Containers on CVMFS
 ---
 
-# Install CVMFS
+## Install CVMFS
 First you need to install CVMFS. Follow the official instructions here: https://cvmfs.readthedocs.io/en/stable/cpt-quickstart.html#getting-the-software
 
 one example for Ubuntu in Windows Subsystem for Linux (WSL) could look like this:
@@ -19,7 +19,7 @@ sudo apt-get build-essential
 sudo apt-get install cvmfs</code>
 </pre>
 
-# Configure CVMFS
+## Configure CVMFS
 
 Once installed create the keys and configure the servers used:
 <pre class="language-batch command-line" data-prompt=">">
@@ -47,7 +47,7 @@ echo "CVMFS_QUOTA_LIMIT=5000" | sudo tee -a  /etc/cvmfs/default.local
 
 sudo cvmfs_config setup</code>
 </pre>
-## For WSL users
+### For WSL users
 It is required to run this for each new new WSL session:
 <pre class="language-batch command-line" data-prompt=">">
 <code>sudo cvmfs_config wsl2_start</code>
@@ -64,7 +64,7 @@ sudo cvmfs_talk -i neurodesk.ardc.edu.au host info
 cvmfs_config stat -v neurodesk.ardc.edu.au</code>
 </pre>
 
-## For Ubuntu 22.04 users
+### For Ubuntu 22.04 users
 If configuring CVMFS returns the following error:
 <pre class="language-batch command-line" data-prompt=">">
 <code>Error: failed to load cvmfs library, tried: './libcvmfs_fuse3_stub.so' '/usr/lib/libcvmfs_fuse3_stub.so' '/usr/lib64/libcvmfs_fuse3_stub.so' './libcvmfs_fuse_stub.so' '/usr/lib/libcvmfs_fuse_stub.so' '/usr/lib64/libcvmfs_fuse_stub.so'
@@ -86,7 +86,7 @@ A temporary workaround is:
 dpkg -i libssl1.1_1.1.1f-1ubuntu2.15_amd64.deb</code>
 </pre>
 
-# Install singularity/apptainer 
+## Install singularity/apptainer 
 e.g. for Ubuntu/Debian:
 <pre class="language-batch command-line" data-prompt=">">
 <code>export VERSION=1.18.3 OS=linux ARCH=amd64 && \
@@ -120,7 +120,7 @@ export VERSION=3.10.0 && # adjust this as necessary \
 export PATH="/usr/local/singularity/bin:${PATH}"</code>
 </pre>
 
-# Use of Neurodesk CVMFS containers
+## Use of Neurodesk CVMFS containers
 The containers are now available in /cvmfs/neurodesk.ardc.edu.au/containers/ and can be started with:
 <pre class="language-batch command-line" data-prompt=">">
 <code>singularity shell /cvmfs/neurodesk.ardc.edu.au/containers/itksnap_3.8.0_20201208/itksnap_3.8.0_20201208.simg</code>
@@ -131,7 +131,7 @@ make sure that SINGULARITY_BINDPATH include the directories you want to work wit
 <code>export SINGULARITY_BINDPATH='/cvmfs,/mnt,/home'</code>
 </pre>
 
-## For WSL users
+### For WSL users
 The homedirectory might not be supported. Avoid mounting it with
 <pre class="language-batch command-line" data-prompt=">">
 <code>singularity shell --no-home /cvmfs/neurodesk.ardc.edu.au/containers/itksnap_3.8.0_20201208/itksnap_3.8.0_20201208.simg</code>
@@ -148,7 +148,7 @@ set
 <code>mount home = no</code>
 </pre>
 
-# Install module system
+## Install module system
 <pre class="language-batch command-line" data-prompt=">">
 <code>sudo yum install lmod</code>
 </pre>
@@ -157,8 +157,8 @@ or
 <code>sudo apt install lmod</code>
 </pre>
 
-# Use of containers in the module system
-## Configuration for module system
+## Use of containers in the module system
+### Configuration for module system
 Create a the new file `/usr/share/module.sh` with the content:
 <pre class="language-batch command-line" data-prompt=">">
 <code># system-wide profile.modules                                          #
@@ -177,7 +177,7 @@ esac
 trap - 1 2 3</code>
 </pre>
 
-## Make the module system usable in the shell
+### Make the module system usable in the shell
 Add the following lines to your `~/.bashrc` file:
 <pre class="language-batch command-line" data-prompt=">">
 <code>if [ -f '/usr/share/module.sh' ]; then source /usr/share/module.sh; fi
@@ -205,7 +205,7 @@ Restart the current shell or run
 <code>source ~/.bashrc</code>
 </pre>
 
-# Use of containers in the module system
+## Use of containers in the module system
 <pre class="language-batch command-line" data-prompt=">">
 <code>export SINGULARITY_BINDPATH='/cvmfs,/mnt,/home'
 module use /cvmfs/neurodesk.ardc.edu.au/neurodesk-modules/*

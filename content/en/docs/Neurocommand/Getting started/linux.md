@@ -6,7 +6,7 @@ description: >
   Install neurocommand on Linux
 ---
 
-# Ways of using Neurocommand in Linux:
+## Ways of using Neurocommand in Linux:
 1) You can use Neurocontainers directly via CVMFS: https://www.neurodesk.org/docs/neurocontainers/cvmfs/
 2) or you can install Neurocommand as described here: 
 

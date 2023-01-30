@@ -14,7 +14,7 @@ description: >
 ## Quickstart
 ### 1. Install Docker
 Install Docker from here: https://docs.docker.com/get-docker/
-{{< alert >}}
+{{< alert color="info" >}}
 The docker installation will reboot your computer a few times and there might be warnings regardings WSL2 and this also might require a few more installation steps that unfortunatley differ for every system. Please get in touch if you are stuck and have a look at our troubleshoot page.
 {{< /alert >}}
 
@@ -40,7 +40,7 @@ https://github.com/NeuroDesk/neurodesktop/raw/main/Windows_run_Neurodesk/NeuroDe
 http://localhost:8080/#/?username=user&password=password
 ```
 
-{{< alert title="Note" >}}
+{{< alert title="Note" color="warning" >}}
 We do not recommend the use of the Firefox browser for accessing Neurodesktop on Windows 10, as firefox is not able to access localhost where neurodesk is running. 
 {{< /alert >}}
 
@@ -53,7 +53,7 @@ We do not recommend the use of the Firefox browser for accessing Neurodesktop on
 7. For an optimal experience, switch your browser to full-screen mode by following the instructions for your browser here:
 https://www.thewindowsclub.com/open-chrome-edge-or-firefox-browser-in-full-screen-mode
 
-{{< alert >}}
+{{< alert color="info" >}}
 The browser can be closed anytime, and Neurodesktop will continue running in the background. To reconnect to Neurodesktop, simply start over from step 3 above.
 {{< /alert >}}
 
@@ -61,7 +61,7 @@ The browser can be closed anytime, and Neurodesktop will continue running in the
 ## Deleting neurodesktop:
 When done processing your data it is important to stop and remove the container - otherwise the next start or container update will give an error ("... The container name "/neurodesktop" is already in use...")
 
-{{< alert title="Note" >}}
+{{< alert title="Note" color="warning" >}}
 Notice that any data that were saved outside of /neurodesktop-storage would be lost. Please make sure to move all your data to that folder before deleting neurodesktop.
 {{< /alert >}}
 
@@ -84,7 +84,7 @@ Startup Neurodesktop using the following command:
 <pre class="language-batch command-line" data-prompt=">">
 <code>docker run --shm-size=1gb -it --privileged --name neurodesktop -v C:/neurodesktop-storage:/neurodesktop-storage -p 3390:3389 -p 8080:8080 -h neurodesktop-{{< params/neurodesktop/version >}} vnmd/neurodesktop:{{< params/neurodesktop/version >}}</code>
 </pre>
-{{< alert >}}
+{{< alert color="info" >}}
 If you want to connect via RDP using a different port, replace 3390 in the previous and next step with your port
 {{< /alert >}}
 
@@ -114,17 +114,14 @@ To enable VNC and disable RDP, startup Neurodesktop using the following command:
 <code>docker run --shm-size=1gb -it --privileged --name neurodesktop -v C:/neurodesktop-storage:/neurodesktop-storage -p 8080:8080 -h neurodesktop-{{< params/neurodesktop/version >}} vnmd/neurodesktop:{{< params/neurodesktop/version >}} --vnc </code>
 </pre>
 
-{{< alert >}}
+{{< alert color="info" >}}
 VNC allows for multiple desktop connections to same instance
-
-Note: Neurodesktop VNC on the browser currently does not support auto-resolution 
+{{< /alert >}}
+{{< alert color="warning" >}}
+VNC option for Neurodesktop on the browser does not support auto-resolution 
 {{< /alert >}}
 
 ### Using a VNC Client
-
-{{< alert color="warning" >}}
-Needs testing
-{{< /alert >}}
 
 Startup Neurodesktop using the following command:
 

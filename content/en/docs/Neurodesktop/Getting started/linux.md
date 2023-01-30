@@ -216,7 +216,7 @@ To enable both VNC and RDP, startup Neurodesktop using the following command:
 {{< alert color="info" >}}
 VNC allows for multiple desktop connections to same instance
 {{< /alert >}}
-{{< alert title="Note" color="warning" >}}
+{{< alert color="warning" >}}
 VNC option for Neurodesktop on the browser does not support auto-resolution 
 {{< /alert >}}
 
