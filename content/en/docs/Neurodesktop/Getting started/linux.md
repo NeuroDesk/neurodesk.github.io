@@ -38,7 +38,10 @@ chmod a+rwx ~/neurodesktop-storage
 
 2. Once neurodesktop is downloaded i.e. `guacd[77]: INFO:        Listening on host 127.0.0.1, port 4822` is displayed in terminal, leave the terminal open and neurodesktop running (i.e., do not press CTRL+C)
 
-3. Open a browser and go to [http://localhost:8080/#/?username=user&password=password/](http://localhost:8080/#/?username=user&password=password/)
+3. Open a browser and go to 
+```
+http://localhost:8080/#/?username=user&password=password/
+```
 
 
 {{< alert color="warning">}}
@@ -147,25 +150,20 @@ sudo apt-get install docker-ce docker-ce-cli containerd.io</code>
 
 Then inside the neurodesktop container run:
 <pre class="language-shell command-line" data-prompt="$">
-<code>
-sudo apt update
-sudo apt install libcudart10.1
-</code>
+<code>sudo apt update
+sudo apt install libcudart10.1</code>
 </pre>
 
 For a GPU with Nvidia driver Version > 495.29.05:
 <pre class="language-shell command-line" data-prompt="$">
-<code>
-wget https://developer.download.nvidia.com/compute/cuda/11.5.0/local_installers/cuda_11.5.0_495.29.05_linux.run
-sudo sh ./cuda_11.5.0_495.29.05_linux.run
-</code>
+<code>wget https://developer.download.nvidia.com/compute/cuda/11.5.0/local_installers/cuda_11.5.0_495.29.05_linux.run
+sudo sh ./cuda_11.5.0_495.29.05_linux.run</code>
 </pre>
 
 #### Running tensorflow (w/ GPU)
 ##### Using tensorflow (python)
 <pre class="language-shell command-line" data-prompt="$">
-<code>
-conda install tensorflow-gpu
+<code>conda install tensorflow-gpu
 python</code>
 </pre>
 <pre class="language-python command-line" data-prompt=">>>">

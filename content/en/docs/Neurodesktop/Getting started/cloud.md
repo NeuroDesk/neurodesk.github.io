@@ -33,13 +33,16 @@ https://github.com/NeuroDesk/neurodesktop/raw/main/Linux_run_Neurodesk/NeuroDesk
 {{< params/neurodesktop/linux/default >}}
 <!-- neurodesktop version found in neurodesk.github.io/data/neurodesktop.toml -->
 
-{{< alert >}}
-If you get errors in neurodesktop then check if the ~/neurodesktop-storage directory is writable to all users, otherwise run `chmod a+rwx ~/neurodesktop-storage`
+{{< alert color="warning">}}
+If you get errors in neurodesktop then check if the ~/neurodesktop-storage directory is writable to all users. Otherwise run:
+```
+chmod a+rwx ~/neurodesktop-storage
+```
 {{< /alert >}}
 
 2. Once neurodesktop is downloaded to the cloud instance (`guacd[77]: INFO:        Listening on host 127.0.0.1, port 4822` is displayed in terminal), leave the terminal open and neurodesktop running (i.e., do not press CTRL+C)
 
-{{< alert >}}
+{{< alert color="info" >}}
 Even if your connection to the cloud instance is broken, and the terminal does not respond anymore, Neurodesktop will still continue running on the cloud insance. When the connection to the cloud instance is re-established, please start over the instructions from step 3 below.
 {{< /alert >}}
 
@@ -60,22 +63,22 @@ If the computer runs Linux, check specific instructions at https://www.neurodesk
 8. For an optimal experience, switch your browser to full-screen mode by following the instructions for your browser here (except Mac where full-screen mode is built-in):
 https://www.thewindowsclub.com/open-chrome-edge-or-firefox-browser-in-full-screen-mode
 
-{{< alert >}}
+{{< alert color="info">}}
 The browser can be closed anytime, and Neurodesktop will continue running on the cloud instance. To reconnect to Neurodesktop, simply start over from step 4 above.
 {{< /alert >}}
 
-{{< alert >}}
+{{< alert color="info">}}
 If your computer hibernates/reboots/etc. or if the network connnection has been temporarily lost, Neurodesktop still continues running on the cloud instance. To reconnect to Neurodesktop, start over from step 3 above.
 {{< /alert >}}
 
-{{< alert >}}
+{{< alert color="info">}}
 If you want to connect to the same instance of Neurodesktop from another computer, close the browser in the current computer, and start over from step 3 on the other computer (note that only one computer can access Neurodesktop at a time using the default RDP protocol; for access from multiple computers simultaneously, please re-run Neurodesktop with VNC enabled as explained further below).
 {{< /alert >}}
 
 ## Deleting neurodesktop:
 When done processing your data it is important to stop and remove the container - otherwise the next start or container update will give an error ("... The container name "/neurodesktop" is already in use...")
 
-{{< alert title="Note" >}}
+{{< alert title="Note" color="warning" >}}
 Notice that any data that were saved outside of /neurodesktop-storage would be lost. Please make sure to move all your data to that folder before deleting neurodesktop.
 {{< /alert >}}
 
@@ -106,7 +109,7 @@ ssh -L 3390:127.0.0.1:3390 USER@IP
 Startup Neurodesktop using the following command:
 
 {{< params/neurodesktop/linux/rdpclient >}}
-{{< alert >}}
+{{< alert color="info" >}}
 If you want to connect via RDP using a different port, replace 3390 in the previous two steps and next step with your port
 {{< /alert >}}
 
@@ -128,17 +131,14 @@ To enable both VNC and RDP, startup Neurodesktop using the following command:
 
 {{< params/neurodesktop/linux/vncrdp >}}
 
-{{< alert >}}
+{{< alert color="info" >}}
 VNC allows for multiple desktop connections to same instance
-
-Note: Neurodesktop VNC on the browser currently does not support auto-resolution 
+{{< /alert >}}
+{{< alert color="warning" >}}
+VNC option for Neurodesktop on the browser does not support auto-resolution 
 {{< /alert >}}
 
 ### Using a VNC Client
-
-{{< alert color="warning" >}}
-Needs testing
-{{< /alert >}}
 
 Startup Neurodesktop using the following command:
 
