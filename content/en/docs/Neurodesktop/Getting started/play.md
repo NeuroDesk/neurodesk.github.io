@@ -5,24 +5,36 @@ description: >
   Run neurodesktop _without_ installing anything
 ---
 
-Choose the link below closest to your location for your own instance of Neurodesk in your browser running on Oracle cloud resources.
+The Neurodesk project provides the following two publicly available services (Play and Lab) to run Neurodesk straight from the browser. Both services run inside a JupyterLab environments and are powered by Oracle cloud resources
 
-| Location        | Neurodesktop on play                                                                                            |
-|-----------------|-----------------------------------------------------------------------------------------------------------------|
-| Australia East  | [start neurodesktop play](https://play-sydney.neurodesk.org/v2/gh/neurodesk/jupyter-neurodesktop-image/main)    |
-| US West         | [start neurodesktop play](https://play-phoenix.neurodesk.org/v2/gh/neurodesk/jupyter-neurodesktop-image/main)   |
-| Germany Central | [start neurodesktop play](https://play-frankfurt.neurodesk.org/v2/gh/neurodesk/jupyter-neurodesktop-image/main) |
-| US East         | [start neurodesktop play](https://play-ashburn.neurodesk.org/v2/gh/neurodesk/jupyter-neurodesktop-image/main)   |
+## Neurodesk Play
 
+Neurodesk Play requires no authentication to access. Recommended for quick access and trialing
 
-The Neurodesk-play instances above do not require authentication, but because of this do not store any data across sessions. If you would like to keep your home directory across sessions, you can use the following Brainhack Neurodesk-Lab instances and authenticate via Github:
+Choose the link below closest to your location:
+- [Australia East](https://play-sydney.neurodesk.org/v2/gh/neurodesk/jupyter-neurodesktop-image/main)
+- [US West](https://play-phoenix.neurodesk.org/v2/gh/neurodesk/jupyter-neurodesktop-image/main)
+- [Germany Central](https://play-frankfurt.neurodesk.org/v2/gh/neurodesk/jupyter-neurodesktop-image/main)
+- [US East](https://play-ashburn.neurodesk.org/v2/gh/neurodesk/jupyter-neurodesktop-image/main)
 
-| Location        | Brainhack Jupyter Lab with persistent storage               |
-|-----------------|-------------------------------------------------------------|
-| Asia/Pacific    | [start neurodesk lab](https://bhsydney.neurodesk.org/)      |
-| North America   | [start neurodesk lab](https://bhnam.neurodesk.org/)         | 
-| Europe          | [start neurodesk lab](https://bheurope.neurodesk.org/)      | 
+{{< alert color="warning">}}
+Neurodesk Play does not preserve files from exited sessions
+{{< /alert >}}
 
+## Neurodesk Lab
+
+Neurodesk Lab uses GitHub authentication. Recommended for processing data across multiple sessions
+
+Choose the link below closest to your location:
+- [Asia/Pacific](https://bhsydney.neurodesk.org/)
+- [North America](https://bhnam.neurodesk.org/)
+- [Europe](https://bheurope.neurodesk.org/)
+
+{{< alert color="info">}}
+Neurodesk Lab home directories will persist across sessions attached to each GitHub account
+{{< /alert >}}
+
+## How to transfer data onto Neurodesk Play and Lab
 
 You can upload data to the desktop by simply drag-and-dropping files on the browser window. Data uploaded during your session are stored on Oracle Cloud, and will be automatically deleted at the end of the session. To download your files before deletion: You need to open the guacamole settings by pressing CTRL-ALT-SHIFT (Control-Command-Shift on Mac). This will open a menu on the side:
 
