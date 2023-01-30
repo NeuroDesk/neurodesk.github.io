@@ -6,7 +6,7 @@ description: >
   Run neurodesktop in a high performance computing environment
 ---
 
-# Ways of using Neurocommand in Linux:
+## Ways of using Neurocommand in Linux:
 1) You can use Neurocontainers (i.e., download Singularity containers) directly via CVMFS: https://www.neurodesk.org/docs/neurocontainers/cvmfs/
 2) or you can install Neurocommand as described here: 
 
