@@ -6,19 +6,23 @@ description: >
   Run neurodesktop in the Nectar Virtual Desktop Service
 ---
 
-# <a href="https://desktop.rc.nectar.org.au/" target="_blank">Link</a> to Nectar Desktop site
+{{< alert title="Note" color="info">}}
+Link to Nectar Virtual Desktop Service: **https://desktop.rc.nectar.org.au**
 
-## <a href="https://desktop.rc.nectar.org.au/" target="_blank">Click here</a>
+
+{{< /alert >}}
+{{< alert color="warning">}}
+This option is only available to Australian researchers. See [here](https://desktop.rc.nectar.org.au/about/) for more information
+
+{{< /alert >}}
 
 There are a few differences between the open-source version of Neurodesk and what's hosted on Nectar VDI:
-1) There is no /neurodesktop-storage folder (the folder on the Desktop does not lead anywhere).
-2) Files uploaded via drag and drop do not get stored on the desktop but in /home/vdiuser/thinclient_drives/GUACFS
+1) There is no `/neurodesktop-storage` folder (the folder on the Desktop does not lead anywhere).
+2) Files uploaded via drag and drop do not get stored on the desktop but in `/home/vdiuser/thinclient_drives/GUACFS`
 
-### This option is only available to Australian researchers.
+## Instructions for use
 
-## Instructions for use:
-
-1) Go to https://desktop.rc.nectar.org.au/ or click the link above. 
+1) Go to https://desktop.rc.nectar.org.au/
 
 2) Click on "Sign in".
 

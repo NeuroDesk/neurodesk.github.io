@@ -29,18 +29,19 @@ https://github.com/NeuroDesk/neurodesktop/raw/main/Linux_run_Neurodesk/NeuroDesk
 {{< params/neurodesktop/linux/default >}}
 <!-- neurodesktop version found in neurodesk.github.io/data/neurodesktop.toml -->
 
-{{< alert >}}
-If you get errors in neurodesktop then check if the ~/neurodesktop-storage directory is writable to all users, otherwise run `chmod a+rwx ~/neurodesktop-storage`
+{{< alert color="warning">}}
+If you get errors in neurodesktop then check if the ~/neurodesktop-storage directory is writable to all users. Otherwise run:
+```
+chmod a+rwx ~/neurodesktop-storage
+```
 {{< /alert >}}
 
 2. Once neurodesktop is downloaded i.e. `guacd[77]: INFO:        Listening on host 127.0.0.1, port 4822` is displayed in terminal, leave the terminal open and neurodesktop running (i.e., do not press CTRL+C)
 
-3. Open a browser and go to:
-```
-http://localhost:8080/#/?username=user&password=password
-```
+3. Open a browser and go to [http://localhost:8080/#/?username=user&password=password/](http://localhost:8080/#/?username=user&password=password/)
 
-{{< alert >}}
+
+{{< alert color="warning">}}
 If using Chrome, a pop-up may open with the text: 
 ```
 "http://localhost:8080 wants to
@@ -49,7 +50,7 @@ See text and images copied to the clipboard".
 You should press "Allow"
 {{< /alert >}}
 
-{{< alert >}}
+{{< alert color="warning">}}
 If using Firefox, you might not be able to paste clipboard content into the virtual desktop from the host computer. In that case, please follow the instructions here:
 https://www.neurodesk.org/docs/neurodesktop/troubleshooting/#the-clipboard-in-firefox-is-not-working-correctly
 {{< /alert >}}
@@ -63,14 +64,14 @@ https://www.neurodesk.org/docs/neurodesktop/troubleshooting/#the-clipboard-in-fi
 7. For an optimal experience, switch your browser to full-screen mode by following the instructions for your browser here:
 https://www.thewindowsclub.com/open-chrome-edge-or-firefox-browser-in-full-screen-mode
 
-{{< alert >}}
+{{< alert color="info">}}
 The browser can be closed anytime, and Neurodesktop will continue running in the background. To reconnect to Neurodesktop, simply start over from step 3 above.
 {{< /alert >}}
 
 ## Deleting neurodesktop:
 When done processing your data it is important to stop and remove the container - otherwise the next start or container update will give an error ("... The container name "/neurodesktop" is already in use...")
 
-{{< alert title="Note" >}}
+{{< alert title="Note" color="warning">}}
 Notice that any data that were saved outside of /neurodesktop-storage would be lost. Please make sure to move all your data to that folder before deleting neurodesktop.
 {{< /alert >}}
 
@@ -190,7 +191,7 @@ print("Num GPUs Available: ", len(tf.config.list_physical_devices('GPU')))</code
 Startup Neurodesktop using the following command:
 
 {{< params/neurodesktop/linux/rdpclient >}}
-{{< alert >}}
+{{< alert color="info" >}}
 If you want to connect via RDP using a different port, replace 3390 in the previous and next step with your port
 {{< /alert >}}
 
@@ -212,17 +213,14 @@ To enable both VNC and RDP, startup Neurodesktop using the following command:
 
 {{< params/neurodesktop/linux/vncrdp >}}
 
-{{< alert >}}
+{{< alert color="info" >}}
 VNC allows for multiple desktop connections to same instance
-
-Note: Neurodesktop VNC on the browser currently does not support auto-resolution 
+{{< /alert >}}
+{{< alert title="Note" color="warning" >}}
+VNC option for Neurodesktop on the browser does not support auto-resolution 
 {{< /alert >}}
 
 ### Using a VNC Client
-
-{{< alert color="warning" >}}
-Needs testing
-{{< /alert >}}
 
 Startup Neurodesktop using the following command:
 
