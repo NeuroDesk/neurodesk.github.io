@@ -10,7 +10,6 @@ Neurodesk is an open-source project that is always evolving. If you are experien
 
 To ask questions or suggest new features, [join the discussion](https://github.com/orgs/NeuroDesk/discussions) on github. 
 
-<h2>Common Issues</h2>
 {{< toc >}}
 
 ## Keyboard and Multi-Language support
