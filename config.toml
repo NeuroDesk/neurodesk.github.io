@@ -19,7 +19,7 @@ enableMissingTranslationPlaceholders = true
 disableKinds = ["taxonomy", "taxonomyTerm"]
 
 # Highlighting config
-pygmentsCodeFences = true
+pygmentsCodeFences = false
 pygmentsUseClasses = false
 # Use the new Chroma Go highlighter in Hugo.
 pygmentsUseClassic = false
@@ -79,11 +79,11 @@ weight = 1
     [markup.goldmark.renderer]
       unsafe = true
   [markup.highlight]
-      # See a complete list of available styles at https://xyproto.github.io/splash/docs/all.html
-      style = "tango"
-      # Uncomment if you want your chosen highlight style used for code blocks without a specified language
-      guessSyntax = "true"
-      codeFences = "true"
+    # See a complete list of available styles at https://xyproto.github.io/splash/docs/all.html
+    # style = "tango"
+    # Uncomment if you want your chosen highlight style used for code blocks without a specified language
+    guessSyntax = "false"
+
   [markup.tableOfContents]
     endLevel = 3
     ordered = false
