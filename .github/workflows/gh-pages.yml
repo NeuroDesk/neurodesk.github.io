@@ -40,7 +40,7 @@ jobs:
         uses: actions/configure-pages@v2
 
       - name: Set baseURL
-        run: sed -i "s|https://www.neurodesk.org/|${{ steps.pages.outputs.base_url }}|g" config.toml
+        run: sed -i "s|https://www.neurodesk.org/|${{ steps.pages.outputs.base_url }}/|g" config.toml
 
       - name: Install dependencies
         run: | 
