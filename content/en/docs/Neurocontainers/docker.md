@@ -10,12 +10,12 @@ Our containers are automatically built in https://github.com/NeuroDesk/neurocont
 ## Pull Docker containers
 e.g. for a julia container
 docker
-```
+```bash
 docker pull vnmd/julia_1.6.1
 ```
 
 build singularity image from dockerhub
-```
+```bash
 singularity build julia_1.6.1.simg docker://vnmd/julia_1.6.1
 ```
 
