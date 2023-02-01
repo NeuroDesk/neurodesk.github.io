@@ -43,7 +43,7 @@ sudo rm -rf /usr/local/go $GOPATH
 
 ```bash
 export PATH="/usr/local/singularity/bin:${PATH}"
-export SINGULARITY_BINDPATH='/cvmfs,/mnt,/home'</code>
+export SINGULARITY_BINDPATH='/cvmfs,/mnt,/home'
 ```
 
 ### CVMFS
