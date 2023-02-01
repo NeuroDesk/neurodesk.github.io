@@ -59,12 +59,12 @@ Select `Remote-Containers: Open Container Configuration File` from the dropdown 
 
 This will open a `neurodesktop%3alatest.json` file. Overwrite the file with the following contents
 
-{{< code language="json">}}
+```json
 {
 	"workspaceFolder": "/home/user",
 	"remoteUser": "user"
 }
-{{< /code >}}
+```
 
 Close this VS Code window. Use steps in [previous section](https://www.neurodesk.org/docs/neurodesktop/visual-studio-code/#connecting-to-neurodesktop) to connect normally
 

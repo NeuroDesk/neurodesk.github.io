@@ -28,15 +28,15 @@ https://github.com/NeuroDesk/neurodesktop/raw/main/Windows_run_Neurodesk/NeuroDe
 #### Option 2: Using Terminal
 1. Open a terminal (e.g. Powershell), and type the folowing command to automatically download the neurodesktop container and run it
 
-<pre class="language-batch command-line" data-prompt=">">
-<code>docker run --shm-size=1gb -it --privileged --name neurodesktop -v C:/neurodesktop-storage:/neurodesktop-storage -p 8080:8080 -h neurodesktop-{{< params/neurodesktop/version >}} vnmd/neurodesktop:{{< params/neurodesktop/version >}}</code>
-</pre>
+```cmd
+docker run --shm-size=1gb -it --privileged --name neurodesktop -v C:/neurodesktop-storage:/neurodesktop-storage -p 8080:8080 -h neurodesktop-{{< params/neurodesktop/version >}} vnmd/neurodesktop:{{< params/neurodesktop/version >}}
+```
 
 <!-- neurodesktop version found in neurodesk.github.io/data/neurodesktop.toml -->
 2. Once neurodesktop is downloaded i.e. `guacd[77]: INFO:        Listening on host 127.0.0.1, port 4822` is displayed in terminal,  leave the terminal open and neurodesktop running (i.e., do not press CTRL+C)
 
 3. Open a browser and go to:
-```
+```none
 http://localhost:8080/#/?username=user&password=password
 ```
 
@@ -70,20 +70,20 @@ Notice that any data that were saved outside of /neurodesktop-storage would be l
 2. Press control-C
 
 3. Type:
-```
+```cmd
 docker stop neurodesktop
 ```
 4. Type:
-```
+```cmd
 docker rm neurodesktop
 ```
 
 ## Using an RDP Client
 Startup Neurodesktop using the following command:
 
-<pre class="language-batch command-line" data-prompt=">">
-<code>docker run --shm-size=1gb -it --privileged --name neurodesktop -v C:/neurodesktop-storage:/neurodesktop-storage -p 3390:3389 -p 8080:8080 -h neurodesktop-{{< params/neurodesktop/version >}} vnmd/neurodesktop:{{< params/neurodesktop/version >}}</code>
-</pre>
+```bash
+docker run --shm-size=1gb -it --privileged --name neurodesktop -v C:/neurodesktop-storage:/neurodesktop-storage -p 3390:3389 -p 8080:8080 -h neurodesktop-{{< params/neurodesktop/version >}} vnmd/neurodesktop:{{< params/neurodesktop/version >}}
+```
 {{< alert color="info" >}}
 If you want to connect via RDP using a different port, replace 3390 in the previous and next step with your port
 {{< /alert >}}
@@ -100,19 +100,23 @@ Once ready, click Connect. This will take you to the following prompt
 ![win-rdp-1](/neurodesktop/getting-started/win-rdp-2.png 'win-rdp-2')
 
 Use the following details to login
-```
-Session: Xorg
-username: user
-password: password
-```
+
+Session
+: Xorg
+
+username
+: user
+
+password
+: password
 
 ## Using VNC
 
 To enable VNC and disable RDP, startup Neurodesktop using the following command:
 
-<pre class="language-batch command-line" data-prompt=">">
-<code>docker run --shm-size=1gb -it --privileged --name neurodesktop -v C:/neurodesktop-storage:/neurodesktop-storage -p 8080:8080 -h neurodesktop-{{< params/neurodesktop/version >}} vnmd/neurodesktop:{{< params/neurodesktop/version >}} --vnc </code>
-</pre>
+```cmd
+docker run --shm-size=1gb -it --privileged --name neurodesktop -v C:/neurodesktop-storage:/neurodesktop-storage -p 8080:8080 -h neurodesktop-{{< params/neurodesktop/version >}} vnmd/neurodesktop:{{< params/neurodesktop/version >}} --vnc 
+```
 
 {{< alert color="info" >}}
 VNC allows for multiple desktop connections to same instance
@@ -125,9 +129,9 @@ VNC option for Neurodesktop on the browser does not support auto-resolution
 
 Startup Neurodesktop using the following command:
 
-<pre class="language-batch command-line" data-prompt=">">
-<code>docker run --shm-size=1gb -it --privileged --name neurodesktop -v C:/neurodesktop-storage:/neurodesktop-storage -p 5901:5901 -p 8080:8080 -h neurodesktop-{{< params/neurodesktop/version >}} vnmd/neurodesktop:{{< params/neurodesktop/version >}} --vnc </code>
-</pre>
+```cmd
+docker run --shm-size=1gb -it --privileged --name neurodesktop -v C:/neurodesktop-storage:/neurodesktop-storage -p 5901:5901 -p 8080:8080 -h neurodesktop-{{< params/neurodesktop/version >}} vnmd/neurodesktop:{{< params/neurodesktop/version >}} --vnc 
+```
 
 Download the Tiger VNC client (`vncviewer64-1.12.0.exe`) from https://sourceforge.net/projects/tigervnc/files/stable/1.12.0/
 

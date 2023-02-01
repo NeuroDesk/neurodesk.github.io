@@ -23,15 +23,15 @@ description: >
 
 ### Command line mode (e.g. running on an HPC or CVL)  
 - Load singularity and for best performance it should be 3.x e.g.
-```
+```bash
 module load singularity/3.5.0
 ``` 
 - Load or install aria2 to optimize the download performance of our containers (THIS IS OPTIONAL)
-```
+```bash
 module load aria2c
 ```
 - To install the repository, run the following (make sure to clone this to a directory with enough storage, write permissions and NOT a symbolic link (to be sure run cd \`pwd -P\`)!)
-```
+```bash
 git clone https://github.com/NeuroDesk/neurocommand.git 
 cd neurocommand 
 pip3 install -r neurodesk/requirements.txt --user 
@@ -47,24 +47,24 @@ export APPTAINER_BINDPATH=$PWD
 
 ### Adding your containers to lmod
 - To add each container to module search path, run the following: 
-```
+```bash
 module use $PWD/local/containers/modules/
 ```
 - It may be a good idea to add this to your .bashrc if this is working. When adding to your .bashrc you will need to replace $PWD to point to the correct path, i.e.
  
- ```
+ ```bash
  module use ~/neurocommand/local/containers/modules/
  ```
 
 - It is very important to set the SINGULARITY_BINDPATH variable in your .bashrc as well. This variable needs to contain all directories you want to access with the Neurodesk tools:
 
 e.g.:
-```
+```bash
 export SINGULARITY_BINDPATH=/scratch/,/data/
 ```
  
 - to see the installed containers at the top of the list (neurodesk containers will take preference over system modules with the same name), run:
-``` 
+```bash
 module load --ignore_cache avail
 ```
 
@@ -74,23 +74,23 @@ module load --ignore_cache avail
 
 ## To update
 Run 
-```
+```bash
 git pull
 bash build.sh
 ```  
 - this updates the neurocommand but not the modules
 - _install.sh does not need to be run again_
 to update containers go into the neurodesktop directory and run 
-```
+```bash
 bash containers.sh
 ``` 
  Choose the module you want to update for example you want to update mrtrix3/3.0.2 module with the eddy_cuda fix:
-```
+```bash
 ~/neurocommand/local/fetch_containers.sh mrtrix3 3.0.2 20221108 mrview $@
 ```
 
 ### To download all containers
 Run 
-```
+```bash
 bash containers.sh --all
 ```
