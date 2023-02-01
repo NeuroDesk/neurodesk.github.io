@@ -14,3 +14,5 @@ git clone --recurse-submodules https://github.com/NeuroDesk/neurodesk.github.io.
 ```
 https://github.com/gohugoio/hugo/releases
 ```
+
+[/settings/variables/actions](../../settings/variables/actions)
