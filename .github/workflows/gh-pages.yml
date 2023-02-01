@@ -35,13 +35,12 @@ jobs:
         with:
           submodules: recursive
 
-      - name: Change baseURL (if fork)
-        if: github.repository != 'NeuroDesk/neurodesk.github.io'
-        run: sed -i "s|https://www.neurodesk.org/|https://${GITHUB_REPOSITORY}/|g" config.toml
-
       - name: Setup Pages
         id: pages
         uses: actions/configure-pages@v2
+
+      - name: Set baseURL
+        run: sed -i "s|https://www.neurodesk.org/|${{ steps.pages.outputs.base_url }}/|g" config.toml
 
       - name: Install dependencies
         run: | 
@@ -52,6 +51,7 @@ jobs:
           HUGO_ENVIRONMENT: production
           HUGO_ENV: production
         run: |
+          echo "BASEURL=${{ steps.pages.outputs.base_url }}"
           hugo \
             --minify \
             --baseURL "${{ steps.pages.outputs.base_url }}/"
