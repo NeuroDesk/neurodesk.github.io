@@ -8,7 +8,7 @@ description: >
 ## 1. Install WSL
 Follow the instructions to enable Windows Subsystem for Linux 2 in Windows 11: https://docs.microsoft.com/en-us/windows/wsl/install
 
-## 2. Configure CVFMS, Singularity and LMOD (only needs to be done once)
+## 2. Configure CVMFS, Singularity and LMOD (only needs to be done once)
 
 ### Install build tools
 

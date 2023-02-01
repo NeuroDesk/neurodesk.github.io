@@ -9,13 +9,13 @@ description: >
 ### Minimum System Requirements
 1. At least 3GB free space for neurodesktop base image
 2. Docker requirements. Details found under https://docs.docker.com/get-docker/
-3. If installing docker using WSL, atleast 20GB space recommended for WSL with Ubuntu
+3. If installing docker using WSL, minimum 20GB space recommended for WSL with Ubuntu
 
 ## Quickstart
 ### 1. Install Docker
 Install Docker from here: https://docs.docker.com/get-docker/
 {{< alert color="info" >}}
-The docker installation will reboot your computer a few times and there might be warnings regardings WSL2 and this also might require a few more installation steps that unfortunatley differ for every system. Please get in touch if you are stuck and have a look at our troubleshoot page.
+The docker installation will reboot your computer a few times and there might be warnings regarding WSL2 and this also might require a few more installation steps that unfortunately differ for every system. Please get in touch if you are stuck and have a look at our troubleshoot page.
 {{< /alert >}}
 
 ### 2. Run Neurodesktop
@@ -26,7 +26,7 @@ Download and run the following executable. Be aware: 1) The exe file can trigger
 https://github.com/NeuroDesk/neurodesktop/raw/main/Windows_run_Neurodesk/NeuroDesktop.exe
 
 #### Option 2: Using Terminal
-1. Open a terminal (e.g. Powershell), and type the folowing command to automatically download the neurodesktop container and run it
+1. Open a terminal (e.g. Powershell), and type the following command to automatically download the neurodesktop container and run it
 
 ```cmd
 docker run --shm-size=1gb -it --privileged --name neurodesktop -v C:/neurodesktop-storage:/neurodesktop-storage -p 8080:8080 -h neurodesktop-{{< params/neurodesktop/version >}} vnmd/neurodesktop:{{< params/neurodesktop/version >}}
@@ -46,7 +46,7 @@ We do not recommend the use of the Firefox browser for accessing Neurodesktop on
 
 4. Press on "Desktop Auto-Resolution" under "ALL CONNECTIONS"
 
-5. If it is the first time you use Neruodesktop, wait until the desktop appears (it may take a few seconds). Otherwise, it should appear instantaneously.
+5. If it is the first time you use Neurodesktop, wait until the desktop appears (it may take a few seconds). Otherwise, it should appear instantaneously.
 
 6. Neurodesk is ready to use! Click "What's next?" on the left of this page for further instructions.     
 

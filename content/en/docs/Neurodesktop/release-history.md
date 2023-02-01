@@ -20,7 +20,7 @@ Latest Version
 - added mneextended 1.1.0 (contributed by David)
 - added new tool category "workflows"
 - added new CVMFS mirror server in Phoenix
-- added mimilist types so that nii/minc files now open in the respective applications
+- added mimetypes so that nii/minc files now open in the respective applications
 - matlab licenses can now be saved from the activation GUI
 - update rstudio to 2022.07.2 (and R version to 4.1.2 with new additional packages, like brms) 
 
@@ -46,7 +46,7 @@ Latest Version
 
 ## 20220302
 - update of ROMEO (phase unwrapping) to latest version 3.2.8
-- update of QSMxT (automated end-to-end QSM procerssing) to latest version 1.1.10
+- update of QSMxT (automated end-to-end QSM processing) to latest version 1.1.10
 - added mritools 3.3.0 (includes clearswi 1.0.1, mcpc3ds 0.1.0, romeo 3.2.8 as compiled binaries)
 
 ## 20220222
@@ -62,7 +62,7 @@ Latest Version
 
 ## 20220121
 - MNE Python 0.23.4 container including VScode and extensions
-- VScode container including Python/Julia Extensions and singularity to test "Inception Mode" (Running singularity containers withtin singularity containers)
+- VScode container including Python/Julia Extensions and singularity to test "Inception Mode" (Running singularity containers within singularity containers)
 - update of fsl to 6.0.5.1
 - added CAT12 (a software that allows estimation of tissue volumes (and additional surface parameters such as cortical thickness, gyrification or fractal dimension) for different volume and surface-based atlas maps)
 

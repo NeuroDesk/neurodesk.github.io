@@ -82,7 +82,7 @@ Neurodocker is the dependency we use to build containers.
    ```
 
 2. Create your Container Files:  
-   Modify `build.sh` in `neurocontainers/recipes/NEWAPP` to build your application and update `README.md` (make sure the version is correct in the README!). Notice that the example build script in the template has instructions to build a conatiner for datalad, that may or may not suite your exact needs
+   Modify `build.sh` in `neurocontainers/recipes/NEWAPP` to build your application and update `README.md` (make sure the version is correct in the README!). Notice that the example build script in the template has instructions to build a container for datalad, that may or may not suite your exact needs
    ```bash
    cd NEWAPP
    (edit build.sh as required)
@@ -104,7 +104,7 @@ Neurodocker is the dependency we use to build containers.
       NOTICE: if the README.md file does not contain the same tool-version string as in the build.sh the build will not start to prevent an incorrect README.md description.
    2. test running some commands within the container that should be available in your local docker container repository.
       
-      For example, to open an interactive shell in a container (with the home folder /root binded to /root on host), you may run:
+      For example, to open an interactive shell in a container (with the home folder /root bound to /root on host), you may run:
       ```bash
       sudo docker run -it -v /root:/root --entrypoint /bin/bash NEWAPP_VERSION:TAG
       ```
@@ -201,7 +201,7 @@ Generate git personal access token (if you don’t have one already)
 
 14. Open an issue in https://github.com/NeuroDesk/neurocontainers/issues notifying that your app appears in the start menu and tested. The app will be included in the next release of Neurodesktop, and will be mentioned in the public announcement that accompanies the release. If the app is not in the start menu or not working as expected based on your earlier testing, open an issue as well, and report it.
 
-15. If somebody wants to use the application before the next release of Neurodesktop is out, you can instruct them to use the command in step 13 above instead of the deafult commands given in the user install instructions.
+15. If somebody wants to use the application before the next release of Neurodesktop is out, you can instruct them to use the command in step 13 above instead of the default commands given in the user install instructions.
 
 16. Consider contributing a tutorial about the new tool: https://github.com/NeuroDesk/neurodesk.github.io/tree/main/content/en/tutorials
 

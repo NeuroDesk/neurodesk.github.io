@@ -28,7 +28,7 @@ Download and run the following executable on the cloud instance
 https://github.com/NeuroDesk/neurodesktop/raw/main/Linux_run_Neurodesk/NeuroDesktop.run
 
 #### Option 2: Using Terminal
-1. Open a terminal on the cloud instance, and type the folowing command to automatically download the neurodesktop container and run it 
+1. Open a terminal on the cloud instance, and type the following command to automatically download the neurodesktop container and run it 
 
 ```bash
 sudo docker run \
@@ -50,7 +50,7 @@ chmod a+rwx ~/neurodesktop-storage
 2. Once neurodesktop is downloaded to the cloud instance (`guacd[77]: INFO:        Listening on host 127.0.0.1, port 4822` is displayed in terminal), leave the terminal open and neurodesktop running (i.e., do not press CTRL+C)
 
 {{< alert color="info" >}}
-Even if your connection to the cloud instance is broken, and the terminal does not respond anymore, Neurodesktop will still continue running on the cloud insance. When the connection to the cloud instance is re-established, please start over the instructions from step 3 below.
+Even if your connection to the cloud instance is broken, and the terminal does not respond, Neurodesktop will still continue running on the cloud instance. When the connection to the cloud instance is re-established, please start over the instructions from step 3 below.
 {{< /alert >}}
 
 3. If it is required to set up an SSH tunnel to access the cloud instance, please set up such a tunnel from the computer from which you want to access Neurodesktop (e.g. `ssh -L 8080:127.0.0.1:8080 USER@IP`)
@@ -63,7 +63,7 @@ If the computer runs Linux, check specific instructions at https://www.neurodesk
 
 5. Press on "Desktop Auto-Resolution" under "ALL CONNECTIONS"
 
-6. If it is the first time you use Neruodesktop, wait until the desktop appears (it may take a few seconds). Otherwise, it should appear instantaneously.
+6. If it is the first time you use Neurodesktop, wait until the desktop appears (it may take a few seconds). Otherwise, it should appear instantaneously.
 
 7. Neurodesk is ready to use! Click "What's next?" on the left of this page for further instructions.     
 
@@ -75,7 +75,7 @@ The browser can be closed anytime, and Neurodesktop will continue running on the
 {{< /alert >}}
 
 {{< alert color="info">}}
-If your computer hibernates/reboots/etc. or if the network connnection has been temporarily lost, Neurodesktop still continues running on the cloud instance. To reconnect to Neurodesktop, start over from step 3 above.
+If your computer hibernates/reboots/etc. or if the network connection has been temporarily lost, Neurodesktop still continues running on the cloud instance. To reconnect to Neurodesktop, start over from step 3 above.
 {{< /alert >}}
 
 {{< alert color="info">}}

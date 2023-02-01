@@ -57,9 +57,9 @@ The copy and paste options in the "Edit" menu of the file browser are used to co
 If you're using Mac, you might be trying to use Mac keyboard shortcuts, but Neurodesktop is using Linux keyboard shortcuts.
 For more details, read the "Note for Mac users" [here](https://www.neurodesk.org/docs/neurodesktop/whats-next/#how-top-copy-and-paste-text).
 
-It is also possible that the text you are trying to copy includes special characters (e.g., non-English charcters), which may cause Neurodesktop to not execute your paste command (including the non specials characters). Give special attention to the following characters:
+It is also possible that the text you are trying to copy includes special characters (e.g., non-English characters), which may cause Neurodesktop to not execute your paste command (including the non specials characters). Give special attention to the following characters:
 - Dash: the en (short) dash is the normal one and copies ok, but the em (long) dash is considered a special character. When in doubt, replace all the dashes in the text you want to copy with en dashes.
-- Quotatoin mark: a strictly vertical quotation mark is fine, but a slightly leaning quotation mark / an apostrophe are special characters. When in doubt, replace all quotation marks in the text you want to copy with vertical quotation marks.
+- Quotation mark: a strictly vertical quotation mark is fine, but a slightly leaning quotation mark / an apostrophe are special characters. When in doubt, replace all quotation marks in the text you want to copy with vertical quotation marks.
 
 If it still does not work, please report the problem and we will do our best to help you:
 
@@ -155,7 +155,7 @@ Total Memory: **.**GiB
      ```cmd
      wsl --running --list
      ```
-     This will list any running distributions. For the update to be successful, WSL needs to have comletely stopped running (ie. no distributions running)
+     This will list any running distributions. For the update to be successful, WSL needs to have completely stopped running (ie. no distributions running)
      - Restart Docker and rerun steps 1-3 to confirm it was successful
 
 #### If you are not using WSL2, you can check and manage your RAM allocation in the Docker desktop application.

@@ -24,7 +24,7 @@ Download and run the following executable
 https://github.com/NeuroDesk/neurodesktop/raw/main/Linux_run_Neurodesk/NeuroDesktop.run
 
 #### Option 2: Using Terminal
-1. Open a terminal, and type the folowing command to automatically download the neurodesktop container and run it
+1. Open a terminal, and type the following command to automatically download the neurodesktop container and run it
 
 ```bash
 sudo docker run \
@@ -68,7 +68,7 @@ https://www.neurodesk.org/docs/neurodesktop/troubleshooting/#the-clipboard-in-fi
 
 4. Press on "Desktop Auto-Resolution" under "ALL CONNECTIONS"
 
-5. If it is the first time you use Neruodesktop, wait until the desktop appears (it may take a few seconds). Otherwise, it should appear instantaneously.
+5. If it is the first time you use Neurodesktop, wait until the desktop appears (it may take a few seconds). Otherwise, it should appear instantaneously.
 
 6. Neurodesk is ready to use! Click "What's next?" on the left of this page for further instructions.     
 

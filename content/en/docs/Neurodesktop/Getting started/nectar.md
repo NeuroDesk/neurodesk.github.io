@@ -28,7 +28,7 @@ There are a few differences between the open-source version of Neurodesk and wha
 
 3) Choose the AAF option.
 
-4) Choose your instituion from the list.
+4) Choose your institution from the list.
 
 5) Provide your email address and password.
 

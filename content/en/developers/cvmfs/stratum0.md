@@ -35,7 +35,7 @@ sudo yum install -y cvmfs cvmfs-server
 sudo systemctl enable httpd
 sudo systemctl restart httpd
 
-# sudo systemctl stop firewalld 
+# sudo systemctl stop firewalld
 
 # restore keys:
 sudo mkdir /etc/cvmfs/keys/incoming
@@ -92,7 +92,7 @@ dQIDAQAB
 ## Next iteration of this:
 ### use object storage?
 - current implementation uses block storage, but this makes increasing the volume size a bit more work
-- we coulddn't get object storage to work on Oracle as it assumes AWS S3
+- we couldn't get object storage to work on Oracle as it assumes AWS S3
 
 ### Optimize settings for repositories for Container Images
 

@@ -27,7 +27,7 @@ Docker for MacOS by default runs with 2GB Memory. For actual workloads, 4GB Memo
 ### 2. Run Neurodesktop
 Create a local folder where the downloaded applications will be stored, e.g. ~/neurodesktop-storage 
 
-1. Open a terminal, and type the folowing command to automatically download the neurodesktop container and run it
+1. Open a terminal, and type the following command to automatically download the neurodesktop container and run it
 
 ```shell
 docker run --shm-size=1gb -it --privileged --name neurodesktop -v ~/neurodesktop-storage:/neurodesktop-storage -p 8080:8080 -h neurodesktop-{{< params/neurodesktop/version >}} vnmd/neurodesktop:{{< params/neurodesktop/version >}}
@@ -52,7 +52,7 @@ We recommend to use Chrome over Firefox as it has an option to hide the Toolbar 
 
 3. Press on "Desktop Auto-Resolution" under "ALL CONNECTIONS"
 
-4. If it is the first time you use Neruodesktop, wait until the desktop appears (it may take a few seconds). Otherwise, it should appear instantaneously.
+4. If it is the first time you use Neurodesktop, wait until the desktop appears (it may take a few seconds). Otherwise, it should appear instantaneously.
 
 5. Neurodesk is ready to use! Click "What's next?" on the left of this page for further instructions.     
 
