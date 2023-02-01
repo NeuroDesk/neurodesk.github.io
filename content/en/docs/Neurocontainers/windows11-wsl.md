@@ -8,18 +8,19 @@ description: >
 ## 1. Install WSL
 Follow the instructions to enable Windows Subsystem for Linux 2 in Windows 11: https://docs.microsoft.com/en-us/windows/wsl/install
 
-## 2. Configure CVFMS, Singularity and LMOD (only needs to be done once)
+## 2. Configure CVMFS, Singularity and LMOD (only needs to be done once)
 
 ### Install build tools
-<pre class="language-batch command-line" data-prompt=">">
-<code>sudo apt update
-sudo apt install make gcc </code>
-</pre>
 
+```bash
+sudo apt update
+sudo apt install make gcc
+```
 
 ### Install singularity
-<pre class="language-batch command-line" data-prompt=">">
-<code>export SINGULARITY_VERSION=3.9.3 VERSION=1.17.2 OS=linux ARCH=amd64
+
+```bash
+export SINGULARITY_VERSION=3.9.3 VERSION=1.17.2 OS=linux ARCH=amd64
 wget -q https://dl.google.com/go/go$VERSION.$OS-$ARCH.tar.gz 
 sudo tar -C /usr/local -xzvf go$VERSION.$OS-$ARCH.tar.gz 
 rm go$VERSION.$OS-$ARCH.tar.gz 
@@ -35,44 +36,45 @@ make -C builddir
 sudo make -C builddir install 
 cd .. 
 sudo rm -rf singularity-ce-${SINGULARITY_VERSION} 
-sudo rm -rf /usr/local/go $GOPATH </code>
-</pre>
+sudo rm -rf /usr/local/go $GOPATH
+```
 
 ### Setup Bindpaths for Singularity (e.g. in .bashrc)
-<pre class="language-batch command-line" data-prompt=">">
-<code>export PATH="/usr/local/singularity/bin:${PATH}"
-export SINGULARITY_BINDPATH='/cvmfs,/mnt,/home'</code>
-</pre>
+
+```bash
+export PATH="/usr/local/singularity/bin:${PATH}"
+export SINGULARITY_BINDPATH='/cvmfs,/mnt,/home'
+```
 
 ### CVMFS
 Follow the instructions here: https://www.neurodesk.org/docs/neurocontainers/cvmfs/
 
 ### LMOD
-<pre class="language-batch command-line" data-prompt=">">
-<code>sudo apt install lmod</code>
-</pre>
+```bash
+sudo apt install lmod
+```
 
 
 
 ## 3. Use Neurodesk containers
 {{% alert %}}
 When restarting WSL the cvmfs service has to be started manually:
-<pre class="language-batch command-line" data-prompt=">">
-<code>sudo cvmfs_config wsl2_start</code>
-</pre>
+```bash
+sudo cvmfs_config wsl2_start
+```
 {{% /alert %}}  
 Initialize the neurodesk modules:
-<pre class="language-batch command-line" data-prompt=">">
-<code>module use /cvmfs/neurodesk.ardc.edu.au/neurodesk-modules/*</code>
-</pre>
+```bash
+module use /cvmfs/neurodesk.ardc.edu.au/neurodesk-modules/*
+```
 
 Example usage of fsleyes:
-<pre class="language-batch command-line" data-prompt=">">
-<code>ml fsl
-fsleyes</code>
-</pre>
+```bash
+ml fsl
+fsleyes
+```
 
 List the available programs:
-<pre class="language-batch command-line" data-prompt=">">
-<code>ml av</code>
-</pre>
+```bash
+ml av
+```

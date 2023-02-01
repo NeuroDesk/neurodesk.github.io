@@ -1,13 +1,11 @@
 ---
-title: "Get Neurodesk code"
-linkTitle: "Get Neurodesk code"
+title: "Clone Repo"
+linkTitle: "Clone Repo"
 weight: 1
 description: >
   Clone neurocontainer code
 
 ---
-
-# Get Neurocontainers code
 
 Neurocontainers uses a **forked-repo** and **[rebase][gitbook-rebase]-oriented
 workflow**. This means that all contributors create a fork of the [neurocontainer

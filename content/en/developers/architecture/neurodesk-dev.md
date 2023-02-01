@@ -16,8 +16,8 @@ Dev builds can be triggered by Neurodesk admins from https://github.com/NeuroDes
 ## Running latest neurodesktop-dev
 
 ### Linux
-<pre class="language-shell command-line" data-prompt="$" data-output="3-7">
-<code>docker pull vnmd/neurodesktop-dev:latest
+```bash
+docker pull vnmd/neurodesktop-dev:latest
 sudo docker run \
   --shm-size=1gb -it --cap-add SYS_ADMIN \
   --security-opt apparmor:unconfined --device=/dev/fuse \
@@ -25,11 +25,11 @@ sudo docker run \
   -v ~/neurodesktop-storage:/neurodesktop-storage \
   -e HOST_UID="$(id -u)" -e HOST_GID="$(id -g)" \
   -p 8080:8080 -h neurodesktop-dev \
-  vnmd/neurodesktop-dev:latest</code>
-</pre>
+  vnmd/neurodesktop-dev:latest
+```
 
 ### Windows
-<pre class="language-batch command-line" data-prompt=">">
-<code>docker pull vnmd/neurodesktop-dev:latest
-docker run --shm-size=1gb -it --cap-add SYS_ADMIN --security-opt apparmor:unconfined --device=/dev/fuse --name neurodesktop -v C:/neurodesktop-storage:/neurodesktop-storage -p 8080:8080 -h neurodesktop-dev vnmd/neurodesktop-dev:latest</code>
-</pre>
+```bash
+docker pull vnmd/neurodesktop-dev:latest
+docker run --shm-size=1gb -it --cap-add SYS_ADMIN --security-opt apparmor:unconfined --device=/dev/fuse --name neurodesktop -v C:/neurodesktop-storage:/neurodesktop-storage -p 8080:8080 -h neurodesktop-dev vnmd/neurodesktop-dev:latest
+```

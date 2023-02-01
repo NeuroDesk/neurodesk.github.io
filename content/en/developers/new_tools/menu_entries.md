@@ -6,7 +6,6 @@ description: >
   Menu entries in neurodesktop
 ---
 
-## Menu entry
 As we want to propose several versions of the tools, each piece of software should have its own submenu under `VNM Neuroimaging`.
 To do so, you first have to add a submenu to `menus/vnm-applications.menu` by adding:
 ```xml

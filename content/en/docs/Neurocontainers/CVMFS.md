@@ -9,21 +9,21 @@ description: >
 First you need to install CVMFS. Follow the official instructions here: https://cvmfs.readthedocs.io/en/stable/cpt-quickstart.html#getting-the-software
 
 one example for Ubuntu in Windows Subsystem for Linux (WSL) could look like this:
-<pre class="language-batch command-line" data-prompt=">">
-<code>sudo apt-get install lsb-release
+```bash
+sudo apt-get install lsb-release
 wget https://ecsft.cern.ch/dist/cvmfs/cvmfs-release/cvmfs-release-latest_all.deb
 sudo dpkg -i cvmfs-release-latest_all.deb
 rm -f cvmfs-release-latest_all.deb
 sudo apt-get update
 sudo apt-get build-essential
-sudo apt-get install cvmfs</code>
-</pre>
+sudo apt-get install cvmfs
+```
 
 ## Configure CVMFS
 
 Once installed create the keys and configure the servers used:
-<pre class="language-batch command-line" data-prompt=">">
-<code>sudo mkdir -p /etc/cvmfs/keys/ardc.edu.au/
+```bash
+sudo mkdir -p /etc/cvmfs/keys/ardc.edu.au/
 
 
 echo "-----BEGIN PUBLIC KEY-----
@@ -45,29 +45,29 @@ echo 'CVMFS_KEYS_DIR="/etc/cvmfs/keys/ardc.edu.au/"' | sudo tee -a /etc/cvmfs/co
 echo "CVMFS_HTTP_PROXY=DIRECT" | sudo tee  /etc/cvmfs/default.local
 echo "CVMFS_QUOTA_LIMIT=5000" | sudo tee -a  /etc/cvmfs/default.local
 
-sudo cvmfs_config setup</code>
-</pre>
+sudo cvmfs_config setup
+```
 ### For WSL users
 It is required to run this for each new new WSL session:
-<pre class="language-batch command-line" data-prompt=">">
-<code>sudo cvmfs_config wsl2_start</code>
-</pre>
+```bash
+sudo cvmfs_config wsl2_start
+```
 Test if the connection works:
-<pre class="language-batch command-line" data-prompt=">">
-<code>sudo cvmfs_config chksetup
+```bash
+sudo cvmfs_config chksetup
 
 ls /cvmfs/neurodesk.ardc.edu.au
 
 sudo cvmfs_talk -i neurodesk.ardc.edu.au host probe
 sudo cvmfs_talk -i neurodesk.ardc.edu.au host info
 
-cvmfs_config stat -v neurodesk.ardc.edu.au</code>
-</pre>
+cvmfs_config stat -v neurodesk.ardc.edu.au
+```
 
 ### For Ubuntu 22.04 users
 If configuring CVMFS returns the following error:
-<pre class="language-batch command-line" data-prompt=">">
-<code>Error: failed to load cvmfs library, tried: './libcvmfs_fuse3_stub.so' '/usr/lib/libcvmfs_fuse3_stub.so' '/usr/lib64/libcvmfs_fuse3_stub.so' './libcvmfs_fuse_stub.so' '/usr/lib/libcvmfs_fuse_stub.so' '/usr/lib64/libcvmfs_fuse_stub.so'
+```bash
+Error: failed to load cvmfs library, tried: './libcvmfs_fuse3_stub.so' '/usr/lib/libcvmfs_fuse3_stub.so' '/usr/lib64/libcvmfs_fuse3_stub.so' './libcvmfs_fuse_stub.so' '/usr/lib/libcvmfs_fuse_stub.so' '/usr/lib64/libcvmfs_fuse_stub.so'
 ./libcvmfs_fuse3_stub.so: cannot open shared object file: No such file or directory
 /usr/lib/libcvmfs_fuse3_stub.so: cannot open shared object file: No such file or directory
 /usr/lib64/libcvmfs_fuse3_stub.so: cannot open shared object file: No such file or directory
@@ -76,20 +76,20 @@ libcrypto.so.1.1: cannot open shared object file: No such file or directory
 /usr/lib64/libcvmfs_fuse_stub.so: cannot open shared object file: No such file or directory
 
 
-Failed to read CernVM-FS configuration</code>
-</pre>
+Failed to read CernVM-FS configuration
+```
 
 A temporary workaround is:
 
-<pre class="language-batch command-line" data-prompt=">">
-<code>wget https://mirror.umd.edu/ubuntu/ubuntu/pool/main/o/openssl/libssl1.1_1.1.1f-1ubuntu2.15_amd64.deb
-dpkg -i libssl1.1_1.1.1f-1ubuntu2.15_amd64.deb</code>
-</pre>
+```bash
+wget https://mirror.umd.edu/ubuntu/ubuntu/pool/main/o/openssl/libssl1.1_1.1.1f-1ubuntu2.15_amd64.deb
+dpkg -i libssl1.1_1.1.1f-1ubuntu2.15_amd64.deb
+```
 
 ## Install singularity/apptainer 
 e.g. for Ubuntu/Debian:
-<pre class="language-batch command-line" data-prompt=">">
-<code>export VERSION=1.18.3 OS=linux ARCH=amd64 && \
+```bash
+export VERSION=1.18.3 OS=linux ARCH=amd64 && \
     wget https://dl.google.com/go/go$VERSION.$OS-$ARCH.tar.gz && \
     sudo tar -C /usr/local -xzvf go$VERSION.$OS-$ARCH.tar.gz && \
     rm go$VERSION.$OS-$ARCH.tar.gz
@@ -117,51 +117,51 @@ export VERSION=3.10.0 && # adjust this as necessary \
     make -C ./builddir && \
     sudo make -C ./builddir install
 
-export PATH="/usr/local/singularity/bin:${PATH}"</code>
-</pre>
+export PATH="/usr/local/singularity/bin:${PATH}"
+```
 
 ## Use of Neurodesk CVMFS containers
 The containers are now available in /cvmfs/neurodesk.ardc.edu.au/containers/ and can be started with:
-<pre class="language-batch command-line" data-prompt=">">
-<code>singularity shell /cvmfs/neurodesk.ardc.edu.au/containers/itksnap_3.8.0_20201208/itksnap_3.8.0_20201208.simg</code>
-</pre>
+```bash
+singularity shell /cvmfs/neurodesk.ardc.edu.au/containers/itksnap_3.8.0_20201208/itksnap_3.8.0_20201208.simg
+```
 
 make sure that SINGULARITY_BINDPATH include the directories you want to work with:
-<pre class="language-batch command-line" data-prompt=">">
-<code>export SINGULARITY_BINDPATH='/cvmfs,/mnt,/home'</code>
-</pre>
+```bash
+export SINGULARITY_BINDPATH='/cvmfs,/mnt,/home'
+```
 
 ### For WSL users
 The homedirectory might not be supported. Avoid mounting it with
-<pre class="language-batch command-line" data-prompt=">">
-<code>singularity shell --no-home /cvmfs/neurodesk.ardc.edu.au/containers/itksnap_3.8.0_20201208/itksnap_3.8.0_20201208.simg</code>
-</pre>
+```bash
+singularity shell --no-home /cvmfs/neurodesk.ardc.edu.au/containers/itksnap_3.8.0_20201208/itksnap_3.8.0_20201208.simg
+```
 
 
 or configure permanently:
-<pre class="language-batch command-line" data-prompt=">">
-<code>sudo vi /etc/singularity/singularity.conf</code>
-</pre>
+```bash
+sudo vi /etc/singularity/singularity.conf
+```
 
 set
-<pre class="language-batch command-line" data-prompt=">">
-<code>mount home = no</code>
-</pre>
+```bash
+mount home = no
+```
 
 ## Install module system
-<pre class="language-batch command-line" data-prompt=">">
-<code>sudo yum install lmod</code>
-</pre>
+```bash
+sudo yum install lmod
+```
 or
-<pre class="language-batch command-line" data-prompt=">">
-<code>sudo apt install lmod</code>
-</pre>
+```bash
+sudo apt install lmod
+```
 
 ## Use of containers in the module system
 ### Configuration for module system
 Create a the new file `/usr/share/module.sh` with the content:
-<pre class="language-batch command-line" data-prompt=">">
-<code># system-wide profile.modules                                          #
+```bash
+# system-wide profile.modules                                          #
 # Initialize modules for all sh-derivative shells                      #
 #----------------------------------------------------------------------#
 trap "" 1 2 3
@@ -174,13 +174,13 @@ case "$0" in
                     *) . /usr/share/lmod/6.6/init/sh ;;  # default for scripts
 esac
 
-trap - 1 2 3</code>
-</pre>
+trap - 1 2 3
+```
 
 ### Make the module system usable in the shell
 Add the following lines to your `~/.bashrc` file:
-<pre class="language-batch command-line" data-prompt=">">
-<code>if [ -f '/usr/share/module.sh' ]; then source /usr/share/module.sh; fi
+```bash
+if [ -f '/usr/share/module.sh' ]; then source /usr/share/module.sh; fi
 
 if [ -d /cvmfs/neurodesk.ardc.edu.au/neurodesk-modules ]; then
         # export MODULEPATH="/cvmfs/neurodesk.ardc.edu.au/neurodesk-modules"
@@ -198,18 +198,18 @@ if [ -f '/usr/share/module.sh' ]; then
                         echo 'Neurodesk tools not yet downloaded. Choose tools to install from the Application menu.'
                 fi
         fi
-fi</code>
-</pre>
+fi
+```
 Restart the current shell or run
-<pre class="language-batch command-line" data-prompt=">">
-<code>source ~/.bashrc</code>
-</pre>
+```bash
+source ~/.bashrc
+```
 
 ## Use of containers in the module system
-<pre class="language-batch command-line" data-prompt=">">
-<code>export SINGULARITY_BINDPATH='/cvmfs,/mnt,/home'
+```bash
+export SINGULARITY_BINDPATH='/cvmfs,/mnt,/home'
 module use /cvmfs/neurodesk.ardc.edu.au/neurodesk-modules/*
 ml fsl
-fslmaths</code>
-</pre>
+fslmaths
+```
 

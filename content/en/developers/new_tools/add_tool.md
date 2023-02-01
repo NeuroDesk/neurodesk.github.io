@@ -33,8 +33,6 @@ Examples:
 ## Adding new recipes
 Refer to [neurodocker](https://github.com/NeuroDesk/neurodocker) for more information on neurodocker recipes  
 
-
-
 ## Build container
 ### Environment Requirements
 - Docker
@@ -50,16 +48,20 @@ Neurodocker is the dependency we use to build containers.
   If you have the permissions to do so: Press "Fetch upstream" in https://github.com/NeuroDesk/neurodocker to check if our fork of Neurodocker is already up-to-date. Otherwise, open an issue in https://github.com/NeuroDesk/neurocontainers/issues, requesting to pull-in latest changes from Neurodocker upstream into our fork of Neurodocker. One of the admins will attend the issue and perform the operation.  
 2. (optional) Add a new neurodocker tool:  
   If relevant to your project, add an option to neurodocker that installs new software (https://github.com/NeuroDesk/neurodocker) and create a pull request to neurodocker's main respository (add new tool in a branch!).  
-3. Clone our fork of Neurodocker:  
-   <pre class="language-shell command-line" data-prompt="$"><code>git clone https://github.com/NeuroDesk/neurodocker/</code></pre>  
+3. Clone our fork of Neurodocker:
+   ```bash
+   git clone https://github.com/NeuroDesk/neurodocker/
+   ```
 4. Install neurodocker:  
-   <pre class="language-shell command-line" data-prompt="$"><code>cd neurodocker  
+   ```bash
+   cd neurodocker  
    python -m pip install .
-   cd ..</code></pre>
+   cd ..
+   ```
 5. Append line to .bashrc for adding the path:
-   <pre class="language-shell command-line" data-prompt="$">
-   <code>echo 'export PATH=${PATH}:${HOME}/.local/bin' >> ${HOME}/.bashrc</code>
-   </pre>
+   ```bash
+   echo 'export PATH=${PATH}:${HOME}/.local/bin' >> ${HOME}/.bashrc
+   ```
 6. Close the terminal, and reopen it for the updated PATH to take effect
    
 
@@ -68,97 +70,78 @@ Neurodocker is the dependency we use to build containers.
    Follow the steps in [Get Neurodesk code]({{<ref "cloning">}}).  
 
 - *Option B*) Clone from NeuroDesk:
-   <pre class="language-shell command-line" data-prompt="$"><code>git clone https://github.com/NeuroDesk/neurocontainers/</code></pre>
+   ```bash
+   git clone https://github.com/NeuroDesk/neurocontainers/
+   ```
 
 ### Create a new app
 1. Copy the directory template and rename to NEWAPP in `neurocontainers/recipes` (NEWAPP being the name of the application to be displayed in Neurodesk's menu; notice it shouldn't have any special characters):
-   <pre class="language-shell command-line" data-prompt="$"><code>cd neurocontainers/recipes
-   cp -R template NEWAPP</code></pre>
+   ```bash
+   cd neurocontainers/recipes
+   cp -R template NEWAPP
+   ```
 
 2. Create your Container Files:  
-   Modify `build.sh` in `neurocontainers/recipes/NEWAPP` to build your application and update `README.md` (make sure the version is correct in the README!). Notice that the example build script in the template has instructions to build a conatiner for datalad, that may or may not suite your exact needs
-   <pre class="language-shell command-line" data-prompt="$" data-output="2-3"><code>cd NEWAPP
+   Modify `build.sh` in `neurocontainers/recipes/NEWAPP` to build your application and update `README.md` (make sure the version is correct in the README!). Notice that the example build script in the template has instructions to build a container for datalad, that may or may not suite your exact needs
+   ```bash
+   cd NEWAPP
    (edit build.sh as required)
-   (edit README.md as required)</code></pre>
+   (edit README.md as required)
+   ```
    Upload your application to object storage first if needed, so you can then download it in `build.sh` (ask for instructions about this if you don't know the key, and never share it anywhere public!)
 
 3. Building containers
 
    Any NEWAPP under the `recipes/` directory are built and pushed automatically via github actions
 
-   <!-- {{% alert title="Depreciation notice" color="warning" %}}
-   `./update-builder.sh` and  `.github/workflows/free-up-space-list.txt` are now deprecated. Files are now placeholders and will be removed in a future update.
-   
-   - Container building is now automated for any folder under `recipes/`. To override, use `autoBuild: false` in `build-config.json` (see below)
-   - For free-up-space process, use `freeUpSpace: true` in `build-config.json` (see below)
-   {{% /alert %}}
-    
-   Apps are built using the following settings:
-   - `autoBuild: true`
-   - `freeUpSpace: false`
-   - `selfHostedRunner: false`
-
-
-   This default behaviour can be overriden on an app-by-app bases using entries in `.github/workflows/build-config.json`
-   
-   For example:
-   <pre class="language-json">
-   <code>{
-    "template": {
-        "autoBuild": true,
-        "freeUpSpace": false,
-        "selfHostedRunner": false
-    },
-    "newapp": {
-        "autoBuild": false,
-        "freeUpSpace": true,
-        "selfHostedRunner": false
-    },
-   }</code>
-   </pre> -->
-
-
 4. Build and test the container locally 
    1. run the build script with the debug flag:
-      <pre class="language-shell command-line" data-prompt="$"><code>cd recipes/NEWAPP
+      ```bash
+      cd recipes/NEWAPP
       chmod +x build.sh
-      ./build.sh -ds</code></pre>
+      ./build.sh -ds
+      ```
       NOTICE: if the README.md file does not contain the same tool-version string as in the build.sh the build will not start to prevent an incorrect README.md description.
    2. test running some commands within the container that should be available in your local docker container repository.
       
-      For example, to open an interactive shell in a container (with the home folder /root binded to /root on host), you may run:
-      <pre class="language-shell command-line" data-prompt="$"><code>sudo docker run -it -v /root:/root --entrypoint /bin/bash NEWAPP_VERSION:TAG
-      </code></pre>
+      For example, to open an interactive shell in a container (with the home folder /root bound to /root on host), you may run:
+      ```bash
+      sudo docker run -it -v /root:/root --entrypoint /bin/bash NEWAPP_VERSION:TAG
+      ```
       with VERSION being the version of the app, and TAG the version tag of the container (run 'sudo docker image list' to find the tag)
    3. if your application requires a Matlab Runtime and you get an error about shared library "libmwlaunchermain.so" not found, check which version of the runtime was installed by the build script
 
 5. Update changes in local git repository
-   <pre class="language-shell command-line" data-prompt="$"><code>git add .github/workflows/NEWAPP.yml recipes/NEWAPP/test.sh recipes/NEWAPP/build.sh recipes/NEWAPP/README.md
+   ```bash
+   git add .github/workflows/NEWAPP.yml recipes/NEWAPP/test.sh recipes/NEWAPP/build.sh recipes/NEWAPP/README.md
    git config user.email "the email that you use for github"
    git config user.name "your name"
-   git commit</code></pre>
+   git commit
+   ```
 
-### Push the new app to Neurocontainers
+## Push the new app to Neurocontainers
 
-**Prerequisite**
+### Prerequisite
 
 Generate git personal access token (if you don’t have one already)
 
-   1. Browse to https://github.com/
-   2. Log into your account
-   3. Press on your picture in upper right corner --> Setting --> Developer Settings --> Personal Access Token
-   4. Press on “generate personal access token”
-   5. Write something in “Notes” (doesn’t matter what, it’s for your own use)
-   6. Check “repo”
-   7. Check “Workflow”
-   8. Press “Generate Token” at the bottom
-   9. Copy the token displayed to somewhere safe, as you will have to user it later
+1. Browse to https://github.com/
+2. Log into your account
+3. Press on your picture in upper right corner --> Setting --> Developer Settings --> Personal Access Token
+4. Press on “generate personal access token”
+5. Write something in “Notes” (doesn’t matter what, it’s for your own use)
+6. Check “repo”
+7. Check “Workflow”
+8. Press “Generate Token” at the bottom
+9. Copy the token displayed to somewhere safe, as you will have to user it later
 
-**Step by step guide**
+### Step by step guide
 
 1. Test the container locally, and if successful push repo to trigger the automatic build on GitHub. When asked for your Github password, please provide the personal access token obtained in the previous stage.
-   <pre class="language-shell command-line" data-prompt="$"><code>git pull
-   git push</code></pre>
+   ```bash
+   git pull
+   git push
+   ```
 
 2. Go to https://github.com/neurodesk/neurocontainers/actions. Check that the most recent workflow run in the list terminated successfully (green). Otherwise, click on it, click on “build docker”, and the line that caused the error will be highlighted
 
@@ -168,28 +151,36 @@ Generate git personal access token (if you don’t have one already)
 4. Obtain _buildDate_ by clicking on the full package name that came up in the search. The build date will be the newest date shown under **Recent tagged image versions**
 
 5. Use _toolName_, _toolVersion_ and _buildDate_ from the previous two steps to manually download the package by typing the following in a terminal open in Neurodesktop  
-    <pre class="language-shell command-line" data-prompt="$"><code>bash /neurocommand/local/fetch_and_run.sh toolName toolVersion buildDate
-      (when you see the "Singularity>" prompt, type exit and ENTER)
-    ml toolName/toolVersion</code></pre>
+   ```bash
+   bash /neurocommand/local/fetch_and_run.sh toolName toolVersion buildDate
+   (when you see the "Singularity>" prompt, type exit and ENTER)
+   ml toolName/toolVersion
+   ```
 
-    For example: 
-    If the full package name that comes up in the step 11 is itksnap_3.8.0, and the newest date under **Recent tagged image versions** is 20210322
-  
-    The command to use in a terminal open in Neurodesktop is:
-    <pre class="language-shell command-line" data-prompt="$"><code>bash /neurocommand/local/fetch_and_run.sh itksnap 3.8.0 20210322
-     (when you see the "Singularity>" prompt, type exit and ENTER)
-    ml toolName/toolVersion</code></pre>
+   For example: 
+   If the full package name that comes up in the step 11 is itksnap_3.8.0, and the newest date under **Recent tagged image versions** is 20210322
 
-  {{% alert title="Depreciation notice" color="warning" %}}
-  For VNM users use:
-  <pre class="language-shell command-line" data-prompt="$"><code>bash /neurodesk/local/fetch_and_run.sh toolName toolVersion buildDate
-  ml toolName/toolVersion</code></pre>
-  {{% /alert %}}
+   The command to use in a terminal open in Neurodesktop is:
+   ```bash
+   bash /neurocommand/local/fetch_and_run.sh itksnap 3.8.0 20210322
+   (when you see the "Singularity>" prompt, type exit and ENTER)
+    ml toolName/toolVersion
+   ```
+
+   {{% alert title="Depreciation notice" color="warning" %}}
+   For VNM users use:
+   ```bash
+   bash /neurodesk/local/fetch_and_run.sh toolName toolVersion buildDate
+   ml toolName/toolVersion
+   ```
+   {{% /alert %}}
 
 6. Test the new container. Run some commands, to see all is good  
-    If the container doesn't work yet, it's sometimes useful to try and troubleshoot it and install missing libraries. This can be achieved by running it in a writable mode with fakeroot enabled:
+   If the container doesn't work yet, it's sometimes useful to try and troubleshoot it and install missing libraries. This can be achieved by running it in a writable mode with fakeroot enabled:
 
-    <pre class="language-shell command-line" data-prompt="$"><code>SINGULARITY_BINDPATH=''; singularity shell --writable --fakeroot /neurodesktop-storage/containers/toolName_toolVersion_buildDate/toolName_toolVersion_buildDate.simg</code></pre>  
+   ```bash
+   SINGULARITY_BINDPATH=''; singularity shell --writable --fakeroot /neurodesktop-storage/containers/toolName_toolVersion_buildDate/toolName_toolVersion_buildDate.simg
+   ```  
 
 7. Fork https://github.com/NeuroDesk/neurocommand/ to your Github account 
 
@@ -204,32 +195,36 @@ Generate git personal access token (if you don’t have one already)
 12. Wait at least 24 hours
 
 13. Download and run the daily build of neurodesktop to check that your app can be launched from the start menu and works properly:
-    <pre class="language-shell command-line" data-prompt="$"><code>sudo docker pull vnmd/neurodesktop:latest && sudo docker run   --shm-size=1gb -it --privileged --name neurodesktop   -v ~/neurodesktop-storage:/neurodesktop-storage   -e HOST_UID="$(id -u)" -e HOST_GID="$(id -g)"   -p 8080:8080 -h neurodesktop-latest   vnmd/neurodesktop:latest</code></pre>
+    ```bash
+    sudo docker pull vnmd/neurodesktop:latest && sudo docker run --shm-size=1gb -it --privileged --name neurodesktop -v ~/neurodesktop-storage:/neurodesktop-storage -e HOST_UID="$(id -u)"  -e HOST_GID="$(id -g)" -p 8080:8080 -h neurodesktop-latest vnmd/neurodesktop:latest
+    ```
 
 14. Open an issue in https://github.com/NeuroDesk/neurocontainers/issues notifying that your app appears in the start menu and tested. The app will be included in the next release of Neurodesktop, and will be mentioned in the public announcement that accompanies the release. If the app is not in the start menu or not working as expected based on your earlier testing, open an issue as well, and report it.
 
-15. If somebody wants to use the application before the next release of Neurodesktop is out, you can instruct them to use the command in step 13 above instead of the deafult commands given in the user install instructions.
+15. If somebody wants to use the application before the next release of Neurodesktop is out, you can instruct them to use the command in step 13 above instead of the default commands given in the user install instructions.
 
 16. Consider contributing a tutorial about the new tool: https://github.com/NeuroDesk/neurodesk.github.io/tree/main/content/en/tutorials
 
-
-
-# Building a container inside Neurodesktop
+## Building a container inside Neurodesktop
 
 This is work in progress. Idea is to interactively build a container, then parse the history and build a neurodocker recipe:
 
 Access Neurodesk JupyterLab at https://labtokyo.neurodesk.org/ and open a terminal. \
 Run the following commands to build a writable Singularity container.
 
-<pre class="language-shell command-line" data-prompt="jovyan@neurodesktop:"><code>git clone https://github.com/neurodesk-users/add-tool
+```bash
+git clone https://github.com/neurodesk-users/add-tool
 git clone https://github.com/sylabs/singularity.git
 cd ./singularity/examples/debian
 sudo singularity build --sandbox test.sif Singularity
-sudo singularity shell --bind /home/jovyan/add-tool:/root --writable test.sif</code></pre>
+sudo singularity shell --bind /home/jovyan/add-tool:/root --writable test.sif
+```
 
 Now install your application in Singularity container and test it. \
 Once the application works as expected, execute the following script to extract all the commands used for installation.
 
-<pre class="language-shell command-line" data-prompt="Singularity>"><code>/root/automate_script.sh</code></pre>
+```bash
+/root/automate_script.sh
+```
 
 The recipe of your applcation is generated into `/home/jovyan/add-tool/build.sh` file to clean up before pushing to Neurodesk.

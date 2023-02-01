@@ -17,7 +17,7 @@ Neurodesk provides a containerised data analysis environment to facilitate repro
 
 The Neurodesk environment allows users to build and use containers for analysing neuroimaging data. Containers can be compared to virtual machines, in that they allow users to create a virtual, isolated computing environment with an operating system separate to that of the host machine. However, containers differ from virtual machines in that they virtualise software rather than hardware. Practically, this means that container images require few system resources to install, start-up quickly, and are easily portable between computers. 
 
-We recomment watching [this excellent short video](https://www.youtube.com/watch?v=HelrQnm3v4g) from the Australian Research Data Commons (ARDC) on research applications of software containers. 
+We recommend watching [this excellent short video](https://www.youtube.com/watch?v=HelrQnm3v4g) from the Australian Research Data Commons (ARDC) on research applications of software containers. 
 To read more about Docker containers, visit [the Docker webpage](https://www.docker.com/resources/what-container)  
 
 ## The Neurodesk ecosystem

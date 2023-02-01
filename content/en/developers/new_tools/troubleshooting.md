@@ -3,7 +3,7 @@ title: "Troubleshooting"
 linkTitle: "Troubleshooting"
 weight: 6
 description: >
-    Troubleshoot commit issue with Git
+    Troubleshooting commit issues with Git
 ---
 
 

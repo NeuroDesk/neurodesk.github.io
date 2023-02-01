@@ -13,7 +13,7 @@ description: >
 ## Quickstart
 ### 1. Connect to cloud server
 On the computer from which you want to access Neurodesktop, open an SSH connection to your cloud instance with port forwarding (USER should be substituted with a username that has admin privileges on the cloud instance, and IP should be substituted with the IP address of the cloud instance)
-```
+```bash
 ssh -L 8080:127.0.0.1:8080 USER@IP
 ```
 
@@ -28,14 +28,21 @@ Download and run the following executable on the cloud instance
 https://github.com/NeuroDesk/neurodesktop/raw/main/Linux_run_Neurodesk/NeuroDesktop.run
 
 #### Option 2: Using Terminal
-1. Open a terminal on the cloud instance, and type the folowing command to automatically download the neurodesktop container and run it 
+1. Open a terminal on the cloud instance, and type the following command to automatically download the neurodesktop container and run it 
 
-{{< params/neurodesktop/linux/default >}}
+```bash
+sudo docker run \
+  --shm-size=1gb -it --privileged --name neurodesktop \
+  -v ~/neurodesktop-storage:/neurodesktop-storage \
+  -e HOST_UID="$(id -u)" -e HOST_GID="$(id -g)"\
+  -p 8080:8080 \
+  -h neurodesktop-{{< params/neurodesktop/version >}} vnmd/neurodesktop:{{< params/neurodesktop/version >}}
+```
 <!-- neurodesktop version found in neurodesk.github.io/data/neurodesktop.toml -->
 
 {{< alert color="warning">}}
 If you get errors in neurodesktop then check if the ~/neurodesktop-storage directory is writable to all users. Otherwise run:
-```
+```bash
 chmod a+rwx ~/neurodesktop-storage
 ```
 {{< /alert >}}
@@ -43,20 +50,20 @@ chmod a+rwx ~/neurodesktop-storage
 2. Once neurodesktop is downloaded to the cloud instance (`guacd[77]: INFO:        Listening on host 127.0.0.1, port 4822` is displayed in terminal), leave the terminal open and neurodesktop running (i.e., do not press CTRL+C)
 
 {{< alert color="info" >}}
-Even if your connection to the cloud instance is broken, and the terminal does not respond anymore, Neurodesktop will still continue running on the cloud insance. When the connection to the cloud instance is re-established, please start over the instructions from step 3 below.
+Even if your connection to the cloud instance is broken, and the terminal does not respond, Neurodesktop will still continue running on the cloud instance. When the connection to the cloud instance is re-established, please start over the instructions from step 3 below.
 {{< /alert >}}
 
 3. If it is required to set up an SSH tunnel to access the cloud instance, please set up such a tunnel from the computer from which you want to access Neurodesktop (e.g. `ssh -L 8080:127.0.0.1:8080 USER@IP`)
 
 4. Open a browser on the computer from which you want to access Neurodesktop, and go to:
-```
+```none
 http://localhost:8080/#/?username=user&password=password
 ```
 If the computer runs Linux, check specific instructions at https://www.neurodesk.org/docs/neurodesktop/getting-started/linux/, Option 2, Step 3.
 
 5. Press on "Desktop Auto-Resolution" under "ALL CONNECTIONS"
 
-6. If it is the first time you use Neruodesktop, wait until the desktop appears (it may take a few seconds). Otherwise, it should appear instantaneously.
+6. If it is the first time you use Neurodesktop, wait until the desktop appears (it may take a few seconds). Otherwise, it should appear instantaneously.
 
 7. Neurodesk is ready to use! Click "What's next?" on the left of this page for further instructions.     
 
@@ -68,7 +75,7 @@ The browser can be closed anytime, and Neurodesktop will continue running on the
 {{< /alert >}}
 
 {{< alert color="info">}}
-If your computer hibernates/reboots/etc. or if the network connnection has been temporarily lost, Neurodesktop still continues running on the cloud instance. To reconnect to Neurodesktop, start over from step 3 above.
+If your computer hibernates/reboots/etc. or if the network connection has been temporarily lost, Neurodesktop still continues running on the cloud instance. To reconnect to Neurodesktop, start over from step 3 above.
 {{< /alert >}}
 
 {{< alert color="info">}}
@@ -87,9 +94,9 @@ Notice that any data that were saved outside of /neurodesktop-storage would be l
 2. Press Ctrl-C
 
 3. Run:
-<pre class="language-shell command-line" data-prompt="$">
-<code>sudo docker stop neurodesktop && sudo docker rm neurodesktop</code>
-</pre>
+```bash
+sudo docker stop neurodesktop && sudo docker rm neurodesktop
+```
 
 ## Portforwarding to an iOS ipad 
 You can also connect to this cloud instance from your iOS device :) For this install https://webssh.net/documentation/help/networking/port-forwarding/ and create a tunnel (the tool is free for one connection). Start the docker container in a screen session and then connect to it from your ios device in the browser.
@@ -102,13 +109,21 @@ You can also connect to this cloud instance from your iOS device :) For this ins
 
 ## Using an RDP Client
 Open an SSH connection to your cloud instance with the following command
-```
+```bash
 ssh -L 3390:127.0.0.1:3390 USER@IP
 ```
 
 Startup Neurodesktop using the following command:
 
-{{< params/neurodesktop/linux/rdpclient >}}
+```bash
+sudo docker run \
+  --shm-size=1gb -it --privileged --name neurodesktop \
+  -v ~/neurodesktop-storage:/neurodesktop-storage \
+  -e HOST_UID="$(id -u)" -e HOST_GID="$(id -g)"\
+  -p 8080:8080 -p 3390:3389 \
+  -h neurodesktop-{{< params/neurodesktop/version >}} vnmd/neurodesktop:{{< params/neurodesktop/version >}}
+```
+
 {{< alert color="info" >}}
 If you want to connect via RDP using a different port, replace 3390 in the previous two steps and next step with your port
 {{< /alert >}}
@@ -116,20 +131,36 @@ If you want to connect via RDP using a different port, replace 3390 in the previ
 Open your RDP client and connect to Computer `localhost:3390`
 
 Use the following details to login if prompted
-```
-username: user
-password: password
-```
+
+username
+: user
+
+password
+: password
 
 ## Using VNC
 
 To enable VNC and disable RDP, startup Neurodesktop using the following command:
 
-{{< params/neurodesktop/linux/vnc >}}
+```bash
+sudo docker run \
+  --shm-size=1gb -it --privileged --name neurodesktop \
+  -v ~/neurodesktop-storage:/neurodesktop-storage \
+  -e HOST_UID="$(id -u)" -e HOST_GID="$(id -g)"\
+  -p 8080:8080 \
+  -h neurodesktop-{{< params/neurodesktop/version >}} vnmd/neurodesktop:{{< params/neurodesktop/version >}} --vnc
+```
 
 To enable both VNC and RDP, startup Neurodesktop using the following command:
 
-{{< params/neurodesktop/linux/vncrdp >}}
+```bash
+sudo docker run \
+  --shm-size=1gb -it --privileged --name neurodesktop \
+  -v ~/neurodesktop-storage:/neurodesktop-storage \
+  -e HOST_UID="$(id -u)" -e HOST_GID="$(id -g)"\
+  -p 8080:8080 \
+  -h neurodesktop-{{< params/neurodesktop/version >}} vnmd/neurodesktop:{{< params/neurodesktop/version >}} --vnc --rdp
+```
 
 {{< alert color="info" >}}
 VNC allows for multiple desktop connections to same instance
@@ -142,12 +173,19 @@ VNC option for Neurodesktop on the browser does not support auto-resolution
 
 Startup Neurodesktop using the following command:
 
-{{< params/neurodesktop/linux/vncclientcloud >}}
+```bash
+sudo docker run \
+  --shm-size=1gb -it --privileged --name neurodesktop \
+  -v ~/neurodesktop-storage:/neurodesktop-storage \
+  -e HOST_UID="$(id -u)" -e HOST_GID="$(id -g)"\
+  -p 8080:8080 --network host  \
+  -h neurodesktop-{{< params/neurodesktop/version >}} vnmd/neurodesktop:{{< params/neurodesktop/version >}} --vnc
+```
 
 Download the Tiger VNC client from https://sourceforge.net/projects/tigervnc/files/stable/1.12.0/
 
 Open an SSH connection to your cloud instance with the following command
-```
+```bash
 ssh -L 5901:127.0.0.1:5901 USER@IP
 ```
 

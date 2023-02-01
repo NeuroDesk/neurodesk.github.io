@@ -11,8 +11,8 @@ The stratum 1 servers for the desktop are configured here: https://github.com/Ne
 If you want more speed in a region one way could be to setup another Stratum 1 server or a proxy. 
 
 # Setup a Stratum 1 server:
-<pre class="language-shell command-line" data-prompt="$">
-<code>sudo yum install -y https://ecsft.cern.ch/dist/cvmfs/cvmfs-release/cvmfs-release-latest.noarch.rpm
+```bash
+sudo yum install -y https://ecsft.cern.ch/dist/cvmfs/cvmfs-release/cvmfs-release-latest.noarch.rpm
 sudo yum install -y cvmfs-server squid
 sudo yum install -y python3-mod_wsgi 
 
@@ -78,5 +78,5 @@ sudo systemctl disable firewalld
 sudo systemctl stop firewalld 
 # make sure that port 80 is open in the real firewall
 
-sudo cvmfs_server update-geodb</code>
-</pre>
+sudo cvmfs_server update-geodb
+```

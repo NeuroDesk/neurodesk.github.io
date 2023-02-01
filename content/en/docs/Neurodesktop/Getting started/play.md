@@ -9,7 +9,7 @@ The Neurodesk project provides the following two publicly available services (Pl
 
 ## Neurodesk Play
 
-Neurodesk Play requires no authentication to access. Recommended for quick access and trialing
+Neurodesk Play requires no authentication to access. Recommended for quick access and trialling
 
 Choose the link below closest to your location:
 - [Australia East](https://play-sydney.neurodesk.org/v2/gh/neurodesk/jupyter-neurodesktop-image/main)

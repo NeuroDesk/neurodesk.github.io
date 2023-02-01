@@ -27,7 +27,7 @@ Docker for MacOS by default runs with 2GB Memory. For actual workloads, 4GB Memo
 ### 2. Run Neurodesktop
 Create a local folder where the downloaded applications will be stored, e.g. ~/neurodesktop-storage 
 
-1. Open a terminal, and type the folowing command to automatically download the neurodesktop container and run it
+1. Open a terminal, and type the following command to automatically download the neurodesktop container and run it
 
 ```shell
 docker run --shm-size=1gb -it --privileged --name neurodesktop -v ~/neurodesktop-storage:/neurodesktop-storage -p 8080:8080 -h neurodesktop-{{< params/neurodesktop/version >}} vnmd/neurodesktop:{{< params/neurodesktop/version >}}
@@ -43,7 +43,7 @@ if you get errors in neurodesktop then check if the ~/neurodesktop-storage direc
 2. Once neurodesktop is downloaded i.e. `guacd[77]: INFO:        Listening on host 127.0.0.1, port 4822` is displayed in terminal, leave the terminal open and neurodesktop running (i.e., do not press CTRL+C)
 
 3. Open a browser and go to:
-```
+```none
 http://localhost:8080/#/?username=user&password=password
 ```
 {{< alert color="warning" >}}
@@ -52,7 +52,7 @@ We recommend to use Chrome over Firefox as it has an option to hide the Toolbar 
 
 3. Press on "Desktop Auto-Resolution" under "ALL CONNECTIONS"
 
-4. If it is the first time you use Neruodesktop, wait until the desktop appears (it may take a few seconds). Otherwise, it should appear instantaneously.
+4. If it is the first time you use Neurodesktop, wait until the desktop appears (it may take a few seconds). Otherwise, it should appear instantaneously.
 
 5. Neurodesk is ready to use! Click "What's next?" on the left of this page for further instructions.     
 
@@ -60,7 +60,6 @@ We recommend to use Chrome over Firefox as it has an option to hide the Toolbar 
 The browser can be closed anytime, and Neurodesktop will continue to run in the background. To reconnect to Neurodesktop, simply start over from step 3 above.
 {{< /alert >}}
 
- 
 ## Deleting neurodesktop:
 When done processing your data it is important to stop and remove the container - otherwise the next start or container update will give an error ("... The container name "/neurodesktop" is already in use...")
 
@@ -73,11 +72,11 @@ Notice that any data that were saved outside of /neurodesktop-storage would be l
 2. Press control-C
 
 3. Type:
-```
+```shell
 docker stop neurodesktop
 ```
 4. Type:
-```
+```shell
 docker rm neurodesktop
 ```
 
@@ -94,10 +93,13 @@ If you want to connect via RDP using a different port, replace 3390 in the previ
 Open your RDP client and connect to Computer `localhost:3390`
 
 Use the following details to login if prompted
-```
-username: user
-password: password
-```
+
+username
+: user
+
+password
+: password
+
 ## Using VNC
 
 To enable VNC and disable RDP, startup Neurodesktop using the following command:

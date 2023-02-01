@@ -26,7 +26,7 @@ description: >
 - Run `cd neurocommand` to change into the directory
 - Run `pip3 install -r neurodesk/requirements.txt --user` to install pre-requisite python packages
 - Run `bash build.sh --cli` to install in cli mode  
-- Run `bash containers.sh` for installing indiviual containers or `bash containers.sh --all` for installing all containers
+- Run `bash containers.sh` for installing individual containers or `bash containers.sh --all` for installing all containers
 - Run `module use $PWD/local/containers/modules/` to add the containers to your module search path. Add this to your .bashrc if working. When adding to your .bashrc you will need to replace $PWD to point to the correct path, i.e. `module use ~/neurocommand/local/containers/modules/`.  
 - Run `ml avail` to see the installed containers at the top of the list (neurodesk containers will take preference over system modules with the same name). - If a container is not yet there run `ml --ignore_cache avail`
 - Every time you start a new shell you will need to run `conda activate neurocommand`. Unless you added it to your .bashrc, you will also need to run `module use PathToYourContainers`. 
