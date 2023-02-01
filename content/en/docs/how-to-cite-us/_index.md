@@ -15,7 +15,7 @@ We recommend to cite the tool you are using with the version number and the buil
 
 ## Citing Neurodesk
 
-You can cite the Neurodesk Preprint (https://www.biorxiv.org/content/10.1101/2022.12.23.521691v1) and if you used Neurodesktop you can also add the version that was used (e.g. v20221216).
+You can cite the Neurodesk Preprint (https://www.biorxiv.org/content/10.1101/2022.12.23.521691v1) and if you used Neurodesktop you can also add the version that was used (e.g. v{{< params/neurodesktop/version >}}).
 
 ## Citing AEDAPT
 
