@@ -77,7 +77,7 @@ If it still does not work, please report the problem and we will do our best to 
 
 ### docker: Cannot connect to the Docker daemon at unix:///var/run/docker.sock. Is the docker daemon running?.
 This is usually a docker-related error, not related to neurodesktop itself. To troubleshoot docker, we can try a simpler container first:
-```
+```bash
 docker run hello-world
 ```
 Try the following solutions (in this order, until the above command works)
@@ -134,25 +134,25 @@ This may be due to Docker not having access to enough RAM from your host compute
 then this is managed by Windows settings. Try the following steps to check how much RAM Docker has access to and increase the amount if necessary.
 1. Run Docker
 2. Open a terminal (ie. Powershell) in the PC you want to use to run Neurodesktop (not in Neurodesktop itself) and type the following command:
-```
+```cmd
 docker info
 ```
 This will generate information about your Docker installation (make sure Docker is running during this step)
 
 3. Look for the line that says
-```
+```none
 Total Memory: **.**GiB
 ```
 4. If this value is ~2GB, try increasing it*:
      - Create a .wslconfig file in your user directory (for more detail instructions see: https://docs.microsoft.com/en-us/windows/wsl/wsl-config)
      - In the .wslconfig file include the following lines:
-     ```
+     ```none
      [wsl2]
      memory=32GB
      ```
      - Quit Docker (make sure it's not running in the background, ie. system tray, check task manager)
      - In the terminal, run the following command
-     ```
+     ```cmd
      wsl --running --list
      ```
      This will list any running distributions. For the update to be successful, WSL needs to have comletely stopped running (ie. no distributions running)
