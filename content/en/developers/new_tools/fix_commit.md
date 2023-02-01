@@ -3,11 +3,9 @@ title: "Fix commit"
 linkTitle: "Fix commit"
 weight: 4
 description: >
-  Fix commit
+  Fixing the message of the most recent commit
 
 ---
-
-## Fixing the last commit
 
 ### Changing the last commit message
 

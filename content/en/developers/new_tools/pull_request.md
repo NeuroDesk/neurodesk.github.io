@@ -3,11 +3,9 @@ title: "Create a pull request"
 linkTitle: "Create a pull request"
 weight: 5
 description: >
-  Pull request and make contribution
+  Creating pull requests and making contributions
 
 ---
-
-# Create a pull request
 
 When you're ready for feedback, submit a pull request. Pull requests
 are a feature specific to GitHub. They provide a simple, web-based way

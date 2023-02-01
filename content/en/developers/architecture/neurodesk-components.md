@@ -6,7 +6,7 @@ description: >
   The architecture of the Neurodesk ecosystem
 ---
 
-# Layers
+## Layers
 Neurodesktop: [https://github.com/NeuroDesk/neurodesktop](https://github.com/NeuroDesk/neurodesktop)
 * docker container with interface modifications
 * contains tools necessary to manage workflows in sub-containers: vscode, git

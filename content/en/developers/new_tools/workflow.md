@@ -1,12 +1,12 @@
 ---
-title: "Using Git"
-linkTitle: "Using Git"
+title: "Use Git"
+linkTitle: "Use Git"
 weight: 2
 description: >
-  Contribution workflow using Git 
+  Git based contribution workflow 
 ---
 
-# Working copies
+## Working copies
 
 When you work on Neurocontainers code, there are three copies of the Neurocontainers Git
 repository that you are generally concerned with:
