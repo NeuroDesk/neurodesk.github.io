@@ -35,13 +35,12 @@ jobs:
         with:
           submodules: recursive
 
-      - name: Set baseURL
-        if: "${{ vars.BASEURL != '' }}"
-        run: sed -i "s|https://www.neurodesk.org/|${{ vars.BASEURL }}|g" config.toml
-
       - name: Setup Pages
         id: pages
         uses: actions/configure-pages@v2
+
+      - name: Set baseURL
+        run: sed -i "s|https://www.neurodesk.org/|${{ steps.pages.outputs.base_url }}|g" config.toml
 
       - name: Install dependencies
         run: | 
@@ -52,7 +51,6 @@ jobs:
           HUGO_ENVIRONMENT: production
           HUGO_ENV: production
         run: |
-          echo "BASEURL=${{ steps.pages.outputs.base_url }}"
           hugo \
             --minify \
             --baseURL "${{ steps.pages.outputs.base_url }}/"
