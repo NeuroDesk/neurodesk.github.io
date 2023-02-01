@@ -6,6 +6,9 @@ description: >-
      Previous releases of neurodesktop
 ---
 
+Latest Version
+: {{< params/neurodesktop/version >}}
+
 ## 20221216
 - add VNC connection back into docker container because RDP currently causes issues for european keyboards
 - added freesurfer into AFNI container to get @SUMA_Make_Spec_FS to work (issue: https://github.com/orgs/NeuroDesk/discussions/210#discussioncomment-4337927)
