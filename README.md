@@ -19,7 +19,7 @@ https://github.com/gohugoio/hugo/releases
 
 #### 1. Find BASEURL
 
-The forked baseurl will usually be in the following format `https://USERNAME.github.io/neurodesk.github.io/`. 
+The forked baseurl will usually be in the following format `https://<USERNAME>.github.io/neurodesk.github.io/`. 
 
 #### 2. Set page builder
 Go to [/settings/pages](../../settings/pages). Under **Build and deployment**, set **Source** as **Github Actions**
