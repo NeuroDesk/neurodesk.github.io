@@ -35,9 +35,8 @@ jobs:
         with:
           submodules: recursive
 
-      - name: Change baseURL (if fork)
-        if: github.repository != 'NeuroDesk/neurodesk.github.io'
-        run: sed -i "s|https://www.neurodesk.org/|https://${GITHUB_REPOSITORY}/|g" config.toml
+      - name: Set baseURL
+        run: sed -i "s|https://www.neurodesk.org/|${{ vars.BASEURL }}|g" config.toml
 
       - name: Setup Pages
         id: pages
