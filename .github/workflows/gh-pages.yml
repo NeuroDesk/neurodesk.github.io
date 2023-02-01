@@ -36,6 +36,7 @@ jobs:
           submodules: recursive
 
       - name: Set baseURL
+        if: ${{ vars.BASEURL }} != ""
         run: sed -i "s|https://www.neurodesk.org/|${{ vars.BASEURL }}|g" config.toml
 
       - name: Setup Pages
