@@ -76,7 +76,7 @@ Even more detailed information.
 
 You can add codeblocks to your tutorial as follows:
 
-```
+```none
 # Some example code
 import numpy as np
 a = np.array([1, 2])
