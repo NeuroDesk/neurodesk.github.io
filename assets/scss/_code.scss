@@ -586,6 +586,10 @@ p.lead.mt-2 {
     img {
       margin-left: 25px;
       margin-bottom: 5px;
+
+      @include very-small-desktop {
+        width: 30%;
+      }
     }
   }
 }
