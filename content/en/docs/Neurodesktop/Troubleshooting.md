@@ -28,7 +28,7 @@ If you use the terminal, please see "I fixed my internet browser clipboard, but 
 ### Copying text from my host computer and pasting it inside Neurodesktop doesn't work in Firefox
 This is a "feature" of firefox and you can disable this "feature":
 
-- navigate to [about:config](https://about:config) and "Accept the Risk and Continue" ("about:config" needs to be entered in the address bar of firefox and hit enter)
+- navigate to [about:config](about:config) and "Accept the Risk and Continue" ("about:config" needs to be entered in the address bar of firefox and hit enter)
 - now search for clipboard and then set the following to "true":
      - dom.events.asyncClipboard.clipboardItem
      - dom.events.asyncClipboard.read 
