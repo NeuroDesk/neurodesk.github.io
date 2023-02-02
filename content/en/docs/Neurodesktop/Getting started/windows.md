@@ -28,7 +28,7 @@ https://github.com/NeuroDesk/neurodesktop/raw/main/Windows_run_Neurodesk/NeuroDe
 #### Option 2: Using Terminal
 1. Open a terminal (e.g. Powershell), and type the following command to automatically download the neurodesktop container and run it
 
-```cmd
+```shell
 docker run --shm-size=1gb -it --privileged --name neurodesktop -v C:/neurodesktop-storage:/neurodesktop-storage -p 8080:8080 -h neurodesktop-{{< params/neurodesktop/version >}} vnmd/neurodesktop:{{< params/neurodesktop/version >}}
 ```
 
