@@ -64,8 +64,8 @@ It is also possible that the text you are trying to copy includes special charac
 If it still does not work, please report the problem and we will do our best to help you:
 
 1. Copy some text from your host computer (CTRL+C, or Command+C)
-2. Open the Mousepad text editor in Neurodesktop (Start button --> "Accessories" ----> "Mousepad")
-3. Try to paste the text using the menu option "Edit" --> "Paste"
+2. Open the Mousepad text editor in Neurodesktop (Start button &rarr; "Accessories" &rarr; "Mousepad")
+3. Try to paste the text using the menu option "Edit" &rarr; "Paste"
 4. Try to paste the text again using CTRL+V
 5. If you don't have one already, please create a Github account [here](https://github.com/signup)
 6. Go to our discussion forum [here](https://github.com/orgs/NeuroDesk/discussions)

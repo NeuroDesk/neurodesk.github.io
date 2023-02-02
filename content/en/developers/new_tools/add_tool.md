@@ -127,7 +127,7 @@ Generate git personal access token (if you don’t have one already)
 
 1. Browse to https://github.com/
 2. Log into your account
-3. Press on your picture in upper right corner --> Setting --> Developer Settings --> Personal Access Token
+3. Press on your picture in upper right corner &rarr; Setting &rarr; Developer Settings &rarr; Personal Access Token
 4. Press on “generate personal access token”
 5. Write something in “Notes” (doesn’t matter what, it’s for your own use)
 6. Check “repo”

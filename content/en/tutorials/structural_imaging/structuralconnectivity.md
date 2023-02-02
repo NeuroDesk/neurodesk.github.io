@@ -55,7 +55,7 @@ docker run --shm-size=1gb -it --privileged --name neurodesktop -v C:/neurodeskto
 
 ```
 
-## Navigate to the mounted storage-->more data-->Create a new folder of your choice--> copy the required input files into a folder->100307
+## Navigate to the mounted storage &rarr; more data &rarr; Create a new folder of your choice &rarr; copy the required input files into a folder &rarr; 100307
 
 N/B: The folder created in this tutorial was tagged "Test"
 
@@ -251,4 +251,4 @@ imagesc(connectome,[0 1])
 
 ```
 
-![Structural_connectivity](/Structural_connectivity_dMRI/Structural_connectivity.png 'Structural_connectivity') -->
+![Structural_connectivity](/Structural_connectivity_dMRI/Structural_connectivity.png 'Structural_connectivity')
