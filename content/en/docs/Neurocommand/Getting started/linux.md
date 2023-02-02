@@ -17,7 +17,7 @@ description: >
 - git
 
 ### Optional
-- lmod [https://lmod.readthedocs.io/en/latest/](https://sylabs.io/guides/3.5/user-guide/quick_start.html)
+- lmod [https://lmod.readthedocs.io/en/latest/](https://lmod.readthedocs.io/en/latest/)
 
 ### command line mode (e.g. running on an HPC or CVL)  
 - Load singularity and for best performance it should be 3.x e.g. `module load singularity/3.5.0` 
