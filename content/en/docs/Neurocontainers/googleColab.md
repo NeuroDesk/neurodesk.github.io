@@ -34,4 +34,5 @@ await lmod.load('fsl/6.0.4')
 This notebook demonstrates how to use all Neurodesk applications in Google Colab: 
 https://colab.research.google.com/drive/1g5cnZxj1llRaHmOs4xSglqsXnFkQYuol?usp=sharing
 
-![image](https://user-images.githubusercontent.com/4021595/156729329-883d33a8-f6ae-4d79-ba71-0e1ced172069.png)
+<img width="1006" alt="image" src="https://user-images.githubusercontent.com/4021595/216223094-aa40dc3c-5f97-4c06-a583-ee52550dcdc9.png">
+
