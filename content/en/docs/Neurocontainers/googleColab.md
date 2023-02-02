@@ -5,7 +5,7 @@ description: >
   Neurodesk Singularity Containers for Google Colab
 ---
 
-Open a notebook in Google Colab and run the followings to download and setup Neurodesk environment:
+Open a notebook in Google Colab and run the following commands to setup the Neurodesk environment:
 
 ```python
 import os
@@ -23,6 +23,18 @@ os.environ["MODULEPATH"] = "/cvmfs/neurodesk.ardc.edu.au/neurodesk-modules/workf
 !curl -J -O https://raw.githubusercontent.com/NeuroDesk/neurocommand/main/googlecolab_setup.sh
 !chmod +x googlecolab_setup.sh
 !./googlecolab_setup.sh
+```
+
+Once this setup is completed you can list Neurodesk applications like this:
+```python
+import lmod
+await lmod.avail()
+```
+
+and use applications like this:
+```python
+await lmod.load('fsl/6.0.4')
+!bet
 ```
 
 This notebook demonstrates how to use all Neurodesk applications in Google Colab: 
