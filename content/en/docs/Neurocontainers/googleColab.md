@@ -9,14 +9,8 @@ Open a notebook in Google Colab and run the following commands to setup the Neur
 
 ```python
 import os
-LD_PRELOAD = os.getenv("LD_PRELOAD")
-#this suppress unnessary messages
 os.environ["LD_PRELOAD"] = "";
-
-#this makes the /content directory available to the software containers
 os.environ["APPTAINER_BINDPATH"] = "/content"
-
-# these are required for lmod
 os.environ["LMOD_CMD"] = "/usr/share/lmod/lmod/libexec/lmod"
 os.environ["MODULEPATH"] = "/cvmfs/neurodesk.ardc.edu.au/neurodesk-modules/workflows:/cvmfs/neurodesk.ardc.edu.au/neurodesk-modules/visualization:/cvmfs/neurodesk.ardc.edu.au/neurodesk-modules/structural_imaging:/cvmfs/neurodesk.ardc.edu.au/neurodesk-modules/statistics:/cvmfs/neurodesk.ardc.edu.au/neurodesk-modules/spine:/cvmfs/neurodesk.ardc.edu.au/neurodesk-modules/spectroscopy:/cvmfs/neurodesk.ardc.edu.au/neurodesk-modules/shape_analysis:/cvmfs/neurodesk.ardc.edu.au/neurodesk-modules/segmentation:/cvmfs/neurodesk.ardc.edu.au/neurodesk-modules/rodent_imaging:/cvmfs/neurodesk.ardc.edu.au/neurodesk-modules/quantitative_imaging:/cvmfs/neurodesk.ardc.edu.au/neurodesk-modules/quality_control:/cvmfs/neurodesk.ardc.edu.au/neurodesk-modules/programming:/cvmfs/neurodesk.ardc.edu.au/neurodesk-modules/phase_processing:/cvmfs/neurodesk.ardc.edu.au/neurodesk-modules/machine_learning:/cvmfs/neurodesk.ardc.edu.au/neurodesk-modules/image_segmentation:/cvmfs/neurodesk.ardc.edu.au/neurodesk-modules/image_registration:/cvmfs/neurodesk.ardc.edu.au/neurodesk-modules/image_reconstruction:/cvmfs/neurodesk.ardc.edu.au/neurodesk-modules/hippocampus:/cvmfs/neurodesk.ardc.edu.au/neurodesk-modules/functional_imaging:/cvmfs/neurodesk.ardc.edu.au/neurodesk-modules/electrophysiology:/cvmfs/neurodesk.ardc.edu.au/neurodesk-modules/diffusion_imaging:/cvmfs/neurodesk.ardc.edu.au/neurodesk-modules/data_organisation:/cvmfs/neurodesk.ardc.edu.au/neurodesk-modules/body"
 
@@ -40,4 +34,5 @@ await lmod.load('fsl/6.0.4')
 This notebook demonstrates how to use all Neurodesk applications in Google Colab: 
 https://colab.research.google.com/drive/1g5cnZxj1llRaHmOs4xSglqsXnFkQYuol?usp=sharing
 
-![image](https://user-images.githubusercontent.com/4021595/156729329-883d33a8-f6ae-4d79-ba71-0e1ced172069.png)
+<img width="1006" alt="image" src="https://user-images.githubusercontent.com/4021595/216223094-aa40dc3c-5f97-4c06-a583-ee52550dcdc9.png">
+
