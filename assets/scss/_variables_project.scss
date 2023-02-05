@@ -115,3 +115,10 @@ $site_horizontal_padding: 30px;
     }
   }
 }
+
+@keyframes t{
+  to {background-size:200%}
+}
+@keyframes b{
+  50% {background-position:0 -100%,0 0}
+}

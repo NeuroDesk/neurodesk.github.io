@@ -60,17 +60,6 @@ linkTitle = "Neurodesk"
 						</div>
 
 						<div class="col-md-9">
-							<!-- <div class="row country">
-								<div class="col-md-12 title-block mobile-heading">
-									<div class="option-text">Your Location</div>
-								</div>
-								<div class="col-md-6 option block" id="aus">
-									<div class="option-text">Australian based researcher</div>
-								</div>
-								<div class="col-md-6 option block" id="intl">
-									<div class="option-text">International researcher</div>
-								</div>
-							</div> -->
 
 							<div class="row platform">
 								<div class="col-md-12 title-block mobile-heading">
@@ -85,9 +74,6 @@ linkTitle = "Neurodesk"
 								<div class="col-md-3 option block version" id="cloud">
 									<div class="option-text">Cloud</div>
 								</div>
-								<!-- <div class="col-md-2 option block version" id="nectar">
-									<div class="option-text">Nectar</div>
-								</div> -->
 								<div class="col-md-3 option block version" id="colab">
 									<div class="option-text">Google Colab</div>
 								</div>
@@ -257,7 +243,22 @@ linkTitle = "Neurodesk"
 										<p class="card-summary">Core installer</p>
 									</div>
 									<div class="image-wrapper">
-										<img src="neurocommand.png" alt="Neurocommand" />
+										<img class="neurocommand" src="neurocommand.png" alt="Neurocommand" />
+										<div class="fake">
+											<div class=fakeMenu>
+												<div class="fakeButtons fakeClose"></div>
+												<div class="fakeButtons fakeMinimize"></div>
+												<div class="fakeButtons fakeZoom"></div>
+											</div>
+											<div class="fakeScreen">
+												<span class="typewriter type" style="--n:53">$ pip3 install -r neurodesk/requirements.txt --user</br />
+													$ bash build.sh --cli</br />
+													$ bash containers.sh</br />
+													$ module use $PWD/local/containers/modules
+												</span>
+
+											</div>
+										</div>
 									</div>
 								</a>
 							</div>
@@ -314,3 +315,4 @@ linkTitle = "Neurodesk"
 </section>
 
 <script src="/js/command.js"></script>
+<!-- <script src="/js/fake_terminal.js"></script> -->
