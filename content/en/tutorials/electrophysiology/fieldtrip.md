@@ -34,9 +34,9 @@ Once this window is loaded, you are ready to go:
 
 <br/>
 
-2. Type the following into the command window (replacing "yourscript.m" with the name of your custom script - note that you may also need to supply the full path):
+2. Type the following into the command window (replacing "./yourscript.m" with the name of your custom script - if the script is in the current folder, use "./" before the script name like in the example; otherwise, please supply the full path):
 ```bash
-run_fieldtrip.sh /opt/MCR/v99 yourscript.m
+run_fieldtrip.sh /opt/MCR/v99 ./yourscript.m
 ```
 For example, here we ran a script to browse some raw data:
 
@@ -45,5 +45,6 @@ For example, here we ran a script to browse some raw data:
 The fieldtrip GUI is displayed automatically and functions as it normally would when running inside Matlab.
 
 NOTES:
-1. The script specified in the command line can call other scripts
-2. The script and the scripts it calls can use all the MATLAB toolboxes included in the compiled version of FieldTrip. If additional MATLAB toolboxes are needed, they need to be put in a filesystem accessible to the FieldTrip container (/neurodesktop-storage, /home/user, etc.), and the path should be added to the MATLAB search path with the addpath function (https://www.mathworks.com/help/matlab/ref/addpath.html)
+1. The script can only call FieldTrip and SPM functions (these are the only functions in the search path, and the search path cannot be altered using addpth)
+2. The script cannot include internal functions
+3. The script can use all the MATLAB toolboxes included in the compiled version of FieldTrip
