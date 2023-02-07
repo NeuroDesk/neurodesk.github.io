@@ -1,20 +1,20 @@
 ---
-title: "Template for workflow creation"
+title: "Template for tutorial creation"
 linkTitle: "Workflow template"
 weight: 1
 tags: ["template", "documentation"]
 author: Angela I. Renton
 description: > 
-  Follow this template to contribute your own workflow to the Neurodesk documentation.
+  Follow this template to contribute your own tutorial to the Neurodesk documentation.
 ---
 <!--
 Begin setting up your tutorial by filling in the details in the description above. This controls how your tutorial is named and displayed in the Neurodesk documentation. The details are as follows:
 
-title: A title for your workflow
+title: A title for your tutorial
 linkTitle: A shortened version of the title for the menu
 weight: This controls where in the menu your tutorial will appear; you can leave this set to 1 for default sorting 
 tags: List any number of tags to help others find this tutorial. i.e. "eeg", "mvpa", "statistics"
-description: > a short description of your workflow. This will form the subheading for the tutorial page. 
+description: > a short description of your tutorial. This will form the subheading for the tutorial page. 
 
 Once you've filled out those details, you can delete this comment block. 
 -->
@@ -29,7 +29,7 @@ Once you've filled out those details, you can delete this comment block.
 >
 <!-- Fill in your personal details above so that we can credit the tutorial to you. Feel free to add any additional contact details i.e. website, or remove those that are irrelevant -->
 
-Welcome to the workflow template, which you can use to contribute your own neurodesk workflow to our documentation. We aim to collect a wide variety of workflows representing the spectrum of tools available under the neurodesk architechture and the diversity in how researchers might apply them. Please add plenty of descriptive detail and make sure that all steps of the workflow work before submitting the tutorial. 
+Welcome to the workflow (tutorial) template, which you can use to contribute your own neurodesk workflow to our documentation. We aim to collect a wide variety of workflows representing the spectrum of tools available under the neurodesk architechture and the diversity in how researchers might apply them. Please add plenty of descriptive detail and make sure that all steps of the workflow work before submitting the tutorial. 
 
 ## How to contribute a new workflow
 
