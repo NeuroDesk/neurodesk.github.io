@@ -7,10 +7,13 @@ description: >
 ---
 
 ## Drag and Drop
+
+### Uploading files
 You can drag-and-drop files into the browser window to get files into the Neurodesktop. This will then start a file upload:
 
 ![{538BB51E-0FEB-46EA-B1B8-FDF122776735}](https://user-images.githubusercontent.com/4021595/160577507-b5159bae-13c0-4fbf-85da-0ce55fd481f3.png)
 
+### Downloading files
 To download files from the desktop using the same mechanism you need to open the guacamole settings by pressing CTRL-ALT-SHIFT (Control-Command-Shift on Mac). This will open a menu on the side:
 
 ![{A12EDB8A-3D01-4524-A7B5-24E5E94FB418}](https://user-images.githubusercontent.com/4021595/160577828-0f8ba04e-aed7-4c26-a8d2-baf6c4be317a.png)
@@ -25,6 +28,12 @@ and a click (or double clink on Mac) on the file will start the download.
 You can browse into folders in the shared drive by clicking (double clicking on Mac) on them. To get back to the base of the shared drive, press on the drive icon in the top left of the side menu (just below the "Shared Drive" title).
 
 To close the side menu, click on CTRL-ALT-SHIFT once more (Control-Command-Shift on Mac).
+
+Note that it's only possible to download one file at the time through this interface. If you have multiple files in a directory we recommend opening a terminal and zipping the files and then downloading one zip archive:
+
+```bash
+zip files.zip files/
+```
 
 ## Local storage
 If you are running Neurodesktop on your own hardware there will be a direct connection between the "Storage" folder on the Destkop, which is a link to "/neurodesktop-storage" and a "neurodesktop-storage" folder on your C-drive (Windows) or home directory (Mac/Linux). This connection can be used for data processing and data transfer.
