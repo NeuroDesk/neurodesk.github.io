@@ -35,9 +35,12 @@ Refer to [neurodocker](https://github.com/NeuroDesk/neurodocker) for more inform
 
 ## Build container
 ### Environment Requirements
+- Linux environment where you have admin privileges (i.e., can run 'sudo')
 - Docker
-- Recent Python Version  
-  Search for "python_requires" in https://github.com/NeuroDesk/neurodocker/blob/master/setup.cfg for minimal version of Python required. If you have several versions of Python installed in the environment, typing 'python' in the terminal should launch a version with equal or higher version number  
+- Recent Python3 Version  
+  Search for "python_requires" in https://github.com/NeuroDesk/neurodocker/blob/master/setup.cfg for minimal version of Python3 required. 
+- If you also have Python2 installed, follow these instructions to ensure the 'python' command launches python3: https://stackoverflow.com/questions/68792446/how-to-set-python3-as-default
+- If you have several versions of Python3 installed in the environment, typing 'python' in the terminal should launch a version with equal or higher version number  
 - Python pip3  
   This should be launched by 'python -m pip'
 - git
