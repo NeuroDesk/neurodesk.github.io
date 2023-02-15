@@ -75,7 +75,7 @@ neurocontainers	https://github.com/NeuroDesk/neurocontainers.git (fetch)
 neurocontainers	https://github.com/NeuroDesk/neurocontainers.git (push)
 ```
 
-If your client hasn't automatically configured a remote for NeuroDesk/eurocontainers, you'll need to with:
+If your client hasn't automatically configured a remote for NeuroDesk/neurocontainers, you'll need to do it yourself with:
 
 ```console
 $ git remote add -f upstream https://github.com/NeuroDesk/neurocontainers.git
