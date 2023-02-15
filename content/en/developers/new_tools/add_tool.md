@@ -122,7 +122,7 @@ Neurodocker is the dependency we use to build containers.
    git commit
    ```
 
-## Push the new app to Neurocontainers
+## Push the new or updated app to Neurocontainers
 
 ### Prerequisite
 
@@ -137,6 +137,12 @@ Generate git personal access token (if you don’t have one already)
 7. Check “Workflow”
 8. Press “Generate Token” at the bottom
 9. Copy the token displayed to somewhere safe, as you will have to user it later
+
+Verify that user has write permission to /neurocommand/local
+
+1. If not, run
+``sudo chmod a+w /neurocommand/local
+``
 
 ### Step by step guide
 
@@ -153,7 +159,13 @@ Generate git personal access token (if you don’t have one already)
 
 4. Obtain _buildDate_ by clicking on the full package name that came up in the search. The build date will be the newest date shown under **Recent tagged image versions**
 
-5. Use _toolName_, _toolVersion_ and _buildDate_ from the previous two steps to manually download the package by typing the following in a terminal open in Neurodesktop  
+5. If updating an app, use _toolName_ delete the locally installed container of the old app version or old app build:
+    ```bash
+    rm -R /neurocommand/local/containers/toolName_*/
+    rm -R /neurocommand/local/containers/modules/toolName/
+    ```
+
+6. Use _toolName_, _toolVersion_ and _buildDate_ from the previous two steps to manually download the package by typing the following in a terminal open in Neurodesktop  
    ```bash
    bash /neurocommand/local/fetch_and_run.sh toolName toolVersion buildDate
    (when you see the "Singularity>" prompt, type exit and ENTER)
@@ -169,6 +181,10 @@ Generate git personal access token (if you don’t have one already)
    (when you see the "Singularity>" prompt, type exit and ENTER)
     ml toolName/toolVersion
    ```
+   {{% alert title="Important note" color="warning" %}}
+   This step consumes a lot of disk storage (up to tens of Gigs). Please be aware that if your storage is limited, the fetch_and_run.sh command may fail.
+   {{% /alert %}}
+
 
    {{% alert title="Depreciation notice" color="warning" %}}
    For VNM users use:
@@ -178,35 +194,35 @@ Generate git personal access token (if you don’t have one already)
    ```
    {{% /alert %}}
 
-6. Test the new container. Run some commands, to see all is good  
+7. Test the new container. Run some commands, to see all is good  
    If the container doesn't work yet, it's sometimes useful to try and troubleshoot it and install missing libraries. This can be achieved by running it in a writable mode with fakeroot enabled:
 
    ```bash
    SINGULARITY_BINDPATH=''; singularity shell --writable --fakeroot /neurodesktop-storage/containers/toolName_toolVersion_buildDate/toolName_toolVersion_buildDate.simg
    ```  
 
-7. Fork https://github.com/NeuroDesk/neurocommand/ to your Github account 
+8. Fork https://github.com/NeuroDesk/neurocommand/ to your Github account 
 
-8. Edit an entry for your package in your fork of `neurocommand/blob/main/neurodesk/apps.json` based on one of the other entries (generating one menu item for opening a terminal inside the containers, and one menu item for the GUI, if relevant). Notice that in the json file, the version field should contain the _buildDate_
+9. Edit an entry for your package in your fork of `neurocommand/blob/main/neurodesk/apps.json` based on one of the other entries (generating one menu item for opening a terminal inside the containers, and one menu item for the GUI, if relevant). Notice that in the json file, the version field should contain the _buildDate_
 
-9. Include an icon file in your fork of neurocommand/neurodesk/icons
+10. Include an icon file in your fork of neurocommand/neurodesk/icons
 
-10. Send a pull request from your fork of neurocommand to https://github.com/NeuroDesk/neurocommand/ 
+11. Send a pull request from your fork of neurocommand to https://github.com/NeuroDesk/neurocommand/ 
 
-11. When the pull request is merged by Neurodesk admins, it will trigger an action to build the singularity container, distribute it in all object storage locations and on CVMFS, and it will update the menus in the desktop image on the next daily build. 
+12. When the pull request is merged by Neurodesk admins, it will trigger an action to build the singularity container, distribute it in all object storage locations and on CVMFS, and it will update the menus in the desktop image on the next daily build. 
 
-12. Wait at least 24 hours
+13. Wait at least 24 hours
 
-13. Download and run the daily build of neurodesktop to check that your app can be launched from the start menu and works properly:
+14. Download and run the daily build of neurodesktop to check that your app can be launched from the start menu and works properly:
     ```bash
     sudo docker pull vnmd/neurodesktop:latest && sudo docker run --shm-size=1gb -it --privileged --name neurodesktop -v ~/neurodesktop-storage:/neurodesktop-storage -e HOST_UID="$(id -u)"  -e HOST_GID="$(id -g)" -p 8080:8080 -h neurodesktop-latest vnmd/neurodesktop:latest
     ```
 
-14. Open an issue in https://github.com/NeuroDesk/neurocontainers/issues notifying that your app appears in the start menu and tested. The app will be included in the next release of Neurodesktop, and will be mentioned in the public announcement that accompanies the release. If the app is not in the start menu or not working as expected based on your earlier testing, open an issue as well, and report it.
+15. Open an issue in https://github.com/NeuroDesk/neurocontainers/issues notifying that your app appears in the start menu and tested. The app will be included in the next release of Neurodesktop, and will be mentioned in the public announcement that accompanies the release. If the app is not in the start menu or not working as expected based on your earlier testing, open an issue as well, and report it.
 
-15. If somebody wants to use the application before the next release of Neurodesktop is out, you can instruct them to use the command in step 13 above instead of the default commands given in the user install instructions.
+16. If somebody wants to use the application before the next release of Neurodesktop is out, you can instruct them to use the command in step 14 above instead of the default commands given in the user install instructions.
 
-16. Consider contributing a tutorial about the new tool: https://github.com/NeuroDesk/neurodesk.github.io/tree/main/content/en/tutorials
+17. Consider contributing a tutorial about the new tool: https://github.com/NeuroDesk/neurodesk.github.io/tree/main/content/en/tutorials
 
 ## Building a container inside Neurodesktop
 
