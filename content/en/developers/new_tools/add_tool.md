@@ -68,14 +68,10 @@ Neurodocker is the dependency we use to build containers.
 6. Close the terminal, and reopen it for the updated PATH to take effect
    
 
-### Clone the Neurocontainers repository  
-- *Option A*) Fork neurocontainers and setup github actions:  
+### Fork the Neurocontainers repository  
+-  Fork neurocontainers and setup github actions:  
    Follow the steps in [Get Neurodesk code]({{<ref "cloning">}}).  
 
-- *Option B*) Clone from NeuroDesk:
-   ```bash
-   git clone https://github.com/NeuroDesk/neurocontainers/
-   ```
 
 ### Create a new app
 1. Copy the directory template and rename to NEWAPP in `neurocontainers/recipes` (NEWAPP being the name of the application to be displayed in Neurodesk's menu; notice it shouldn't have any special characters):
