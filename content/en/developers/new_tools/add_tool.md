@@ -199,7 +199,7 @@ Verify that user has write permission to /neurocommand/local
 
 8. Fork https://github.com/NeuroDesk/neurocommand/ to your Github account 
 
-9. Edit an entry for your package in your fork of `neurocommand/blob/main/neurodesk/apps.json` based on one of the other entries (generating one menu item for opening a terminal inside the containers, and one menu item for the GUI, if relevant). Notice that in the json file, the version field should contain the _buildDate_
+9. Edit an entry for your package in your fork of `neurocommand/blob/main/neurodesk/apps.json` based on one of the other entries (generating one menu item for opening a terminal inside the containers, and one menu item for the GUI, if relevant). Notice that in the json file, the version field should contain the _buildDate_ rather than the _toolVersion_ !!! _toolVersion_ should be included instead in the text of the menu entry itself, e.g., "fsl 6.0.3". Also notice that whereas categories appear in the Neurodesktop menu in start case (first letter of each word capitalized), in the json files they are sentence case (all letters lower case).
 
 10. Include an icon file in your fork of neurocommand/neurodesk/icons
 
