@@ -229,16 +229,22 @@ Run the following commands to build a writable Singularity container.
 
 ```bash
 git clone https://github.com/NeuroDesk/neurocontainers/
+cd neurocontainers/interactive_builder
 # modify the start container in template (by default ubuntu:22.04)
-sudo singularity build --sandbox build.sif template
-sudo singularity shell --bind /home/jovyan/neurocontainers/interactive_builder:/root --writable build.sif
+sudo singularity build --sandbox container.sif template
+sudo singularity shell --bind /home/jovyan/neurocontainers/interactive_builder:/root --writable container.sif
+sudo apt install python3 
+# OR
+sudo yum install python3
 ```
 
 Now install your application in this Singularity container and test it. \
 Once the application works as expected, execute the following script to extract all the commands used for installation.
 
 ```bash
-/root/automate_script.sh
+cd /root
+chmod a+x automate_script
+./automate_script.sh
 ```
 
 The recipe of your applcation is generated into `/home/jovyan/neurocontainers/interactive_builder/build.sh`. Open an issue an on Neurocontainers paste the file there: https://github.com/NeuroDesk/neurocontainers/issues/new
