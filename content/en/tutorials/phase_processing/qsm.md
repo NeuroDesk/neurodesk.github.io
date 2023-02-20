@@ -19,11 +19,11 @@ QSMxT provides pipelines implemented in Python that:
 
 1. Automatically convert unorganised DICOM or NIfTI data to the Brain Imaging Data Structure (BIDS)
 2. Automatically reconstruct QSM, including steps for:
-  1. Masking
-  2. Phase unwrapping
-  3. Background field removal
-  4. Dipole inversion
-  5. Multi-echo combination
+   1. Masking
+   2. Phase unwrapping
+   3. Background field removal
+   4. Dipole inversion
+   5. Multi-echo combination
 3. Automatically generate a common group space for the cohort, as well as average magnitude and QSM images that facilitate group-level analyses.
 4. Automatically segment T1w data and register them to the QSM space to extract quantitative values in anatomical regions of interest.
 5. Export quantitative data to CSV for all subjects using the automated segmentations, or a custom segmentation in the group space (we recommend ITK-SNAP to perform manual segmenations).
