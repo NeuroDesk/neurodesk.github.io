@@ -233,15 +233,15 @@ cd neurocontainers/interactive_builder
 # modify the start container in template (by default ubuntu:22.04)
 sudo singularity build --sandbox container.sif template
 sudo singularity shell --bind /home/jovyan/neurocontainers/interactive_builder:/root --writable container.sif
-sudo apt install python3 
-# OR
-sudo yum install python3
 ```
 
 Now install your application in this Singularity container and test it. \
 Once the application works as expected, execute the following script to extract all the commands used for installation.
 
 ```bash
+sudo apt install python3 
+# OR if you choose a yum based distribution earlier
+sudo yum install python3
 cd /root
 chmod a+x automate_script
 ./automate_script.sh
