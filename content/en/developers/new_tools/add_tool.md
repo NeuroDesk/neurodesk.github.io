@@ -222,24 +222,24 @@ Verify that user has write permission to /neurocommand/local
 
 ## Building a container inside Neurodesktop
 
-This is work in progress. Idea is to interactively build a container, then parse the history and build a neurodocker recipe:
+This is work in progress. The idea is to interactively build a container, then parse the history and build a recipe:
 
 Access Neurodesk JupyterLab at https://labtokyo.neurodesk.org/ and open a terminal. \
 Run the following commands to build a writable Singularity container.
 
 ```bash
-git clone https://github.com/neurodesk-users/add-tool
-git clone https://github.com/sylabs/singularity.git
-cd ./singularity/examples/debian
-sudo singularity build --sandbox test.sif Singularity
-sudo singularity shell --bind /home/jovyan/add-tool:/root --writable test.sif
+git clone https://github.com/NeuroDesk/neurocontainers/
+# modify the start container in template (by default ubuntu:22.04)
+sudo singularity build --sandbox build.sif template
+sudo singularity shell --bind /home/jovyan/neurocontainers/interactive_builder:/root --writable build.sif
 ```
 
-Now install your application in Singularity container and test it. \
+Now install your application in this Singularity container and test it. \
 Once the application works as expected, execute the following script to extract all the commands used for installation.
 
 ```bash
 /root/automate_script.sh
 ```
 
-The recipe of your applcation is generated into `/home/jovyan/add-tool/build.sh` file to clean up before pushing to Neurodesk.
+The recipe of your applcation is generated into `/home/jovyan/neurocontainers/interactive_builder/build.sh`. Open an issue an on Neurocontainers paste the file there: https://github.com/NeuroDesk/neurocontainers/issues/new
+(Next step: automate the creation of directories and add Readme file)
