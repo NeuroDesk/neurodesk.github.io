@@ -47,5 +47,9 @@ There are a few differences between the open-source version of Neurodesk and wha
 11) Click "OPEN DESKTOP ->":
 ![image](https://user-images.githubusercontent.com/4021595/150286383-1c1b8d20-c772-4598-a81b-1ef9e11526b8.png)
 
-12) To launch the various applications available in Neurodesktop, follow the instructions here:
+12) For a general guide on using the ARDC virtual desktops, click here:
+https://tutorials.rc.nectar.org.au/virtual-desktop-service/01-overview
+
+13) For a specific explanation on how to launch the various applications available in the Neurodesktop desktop, follow the instructions here:
 https://www.neurodesk.org/docs/neurodesktop/whats-next/#how-to-launch-applications
+
