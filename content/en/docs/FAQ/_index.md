@@ -53,6 +53,11 @@ then run
 echo "export FS_LICENSE=~/.license" >> ~/.bashrc
 then start freeview 7.2.0 and it should all work perfectly.
 ```
+## Matlab asks me to reactivate after restarting the desktop
+There is one workaround for this problem. Fix the mac address for your session by including this in your docker command:
+```
+--mac-address 02:42:ac:11:00:02 
+```
 
 ## Can I just use the plain containers?
 Yes, there are multiple ways of using the containers directly and we provide an overview here: https://www.neurodesk.org/docs/neurocontainers/
