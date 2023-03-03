@@ -2,37 +2,40 @@
 title: "Play"
 linkTitle: "Play"
 description: >
-  Run neurodesktop _without_ installing anything
+  Play and Lab are publicly available services for running Neurodesk straight from the browser
 ---
 
-The Neurodesk project provides the following two publicly available services (Play and Lab) to run Neurodesk straight from the browser. Both services run inside a JupyterLab environments and are powered by Oracle cloud resources
-
 ## Neurodesk Play
+- Recommended for quick access and trialling
+- No login or sign-up required
+- Files and session is deleted after exiting
+- Does **NOT** preserve files from previous sessions
 
-Neurodesk Play requires no authentication to access. Recommended for quick access and trialling
+{{< alert color="info">}}
+See [Neurodesk Lab](#neurodesk-lab) for keeping data across sessions
+{{< /alert >}}
 
-Choose the link below closest to your location:
+To use Neurodesk Play, choose the link below closest to your location:
 - [Australia East](https://play-sydney.neurodesk.org/v2/gh/neurodesk/jupyter-neurodesktop-image/main)
 - [US West](https://play-phoenix.neurodesk.org/v2/gh/neurodesk/jupyter-neurodesktop-image/main)
 - [Germany Central](https://play-frankfurt.neurodesk.org/v2/gh/neurodesk/jupyter-neurodesktop-image/main)
 - [US East](https://play-ashburn.neurodesk.org/v2/gh/neurodesk/jupyter-neurodesktop-image/main)
 
-{{< alert color="warning">}}
-Neurodesk Play does not preserve files from exited sessions
+## Neurodesk Lab
+- Recommended for processing data across multiple sessions
+- Authenticate via GitHub
+- 50GB home directory allocated per account
+- Home directory is saved on cloud for use across multiple sessions
+
+{{< alert color="info">}}
+See [Neurodesk Play](#neurodesk-play) for trying Neurodesk without sign-up or saving data
 {{< /alert >}}
 
-## Neurodesk Lab
-
-Neurodesk Lab uses GitHub authentication. Recommended for processing data across multiple sessions
-
-Choose the link below closest to your location:
+To use Neurodesk Lab, choose the link below closest to your location:
 - [Asia/Pacific](https://bhsydney.neurodesk.org/)
 - [North America](https://bhnam.neurodesk.org/)
 - [Europe](https://bheurope.neurodesk.org/)
 
-{{< alert color="info">}}
-Neurodesk Lab home directories will persist across sessions attached to each GitHub account
-{{< /alert >}}
 
 ## How to transfer data onto Neurodesk Play and Lab
 
