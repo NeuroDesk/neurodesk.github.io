@@ -100,7 +100,8 @@ Neurodocker is the dependency we use to build containers.
       chmod +x build.sh
       ./build.sh -ds
       ```
-      NOTICE: if the README.md file does not contain the same tool-version string as in the build.sh the build will not start to prevent an incorrect README.md description.
+      NOTICE: the README.md file will automatically be updated to reflect the version of the tool given in the build.sh script. For this to work, leave "toolVersion" in the README and do not remove this or alter.
+      
    2. test running some commands within the container that should be available in your local docker container repository.
       
       For example, to open an interactive shell in a container (with the home folder /root bound to /root on host), you may run:
