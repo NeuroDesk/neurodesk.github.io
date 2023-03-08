@@ -30,10 +30,20 @@ Examples:
 | freesurfer | no           | no                     | no            | no                   | no                     | container                      |
 
 
+# Adding new tools via our interactive container builder:
+This is the recommended way for all contributors:
+https://www.neurodesk.org/docs/neurocontainers/contribute/
+
+
+
+# Adding new tools via manual steps
+This is only for developers who are familiar with building containers and github:
+
 ## Adding new recipes
 Refer to [neurodocker](https://github.com/NeuroDesk/neurodocker) for more information on neurodocker recipes  
 
 ## Build container
+
 ### Environment Requirements
 - Linux environment where you have admin privileges (i.e., can run 'sudo')
 - Docker
