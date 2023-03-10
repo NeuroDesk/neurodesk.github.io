@@ -32,7 +32,9 @@ cd neurocontainers/interactive_builder/
 ./run_interactive_builder.sh
 ```
 
-- Follow the instructions of the interactive build tool
+- Follow the instructions of the interactive build tool. After entering basic information you see a "Singularity>" shell. Now run the commands to get your tool to work. 
+- Once the tool works, hit CTRL-D or type "exit"
+- Then answer more questions in the build tool
 
 ## 4) Submit the generated build.sh and Readme.md file as attachements to your issue
 - once completed, download the build.sh and README.md file and submit them as attachements to your github issue
