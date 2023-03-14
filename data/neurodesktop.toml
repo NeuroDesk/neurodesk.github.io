@@ -8,7 +8,7 @@ vncflag="--vnc"
 base="""sudo docker run \\
   --shm-size=1gb -it --privileged --name neurodesktop \\
   -v ~/neurodesktop-storage:/neurodesktop-storage \\
-  -e HOST_UID="$(id -u)" -e HOST_GID="$(id -g)"\\
+  -e HOST_UID="$(id -u)" -e HOST_GID="$(id -g)" \\
   -p 8080:8080"""
 
 [windows]

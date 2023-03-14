@@ -30,7 +30,7 @@ https://github.com/NeuroDesk/neurodesktop/raw/main/Linux_run_Neurodesk/NeuroDesk
 sudo docker run \
   --shm-size=1gb -it --privileged --name neurodesktop \
   -v ~/neurodesktop-storage:/neurodesktop-storage \
-  -e HOST_UID="$(id -u)" -e HOST_GID="$(id -g)"\
+  -e HOST_UID="$(id -u)" -e HOST_GID="$(id -g)" \
   -p 8080:8080 \
   -h neurodesktop-{{< params/neurodesktop/version >}} vnmd/neurodesktop:{{< params/neurodesktop/version >}}
 ```
@@ -200,7 +200,7 @@ Startup Neurodesktop using the following command:
 sudo docker run \
   --shm-size=1gb -it --privileged --name neurodesktop \
   -v ~/neurodesktop-storage:/neurodesktop-storage \
-  -e HOST_UID="$(id -u)" -e HOST_GID="$(id -g)"\
+  -e HOST_UID="$(id -u)" -e HOST_GID="$(id -g)" \
   -p 8080:8080 -p 3390:3389 \
   -h neurodesktop-{{< params/neurodesktop/version >}} vnmd/neurodesktop:{{< params/neurodesktop/version >}}
 ```
@@ -227,7 +227,7 @@ To enable VNC and disable RDP, startup Neurodesktop using the following command:
 sudo docker run \
   --shm-size=1gb -it --privileged --name neurodesktop \
   -v ~/neurodesktop-storage:/neurodesktop-storage \
-  -e HOST_UID="$(id -u)" -e HOST_GID="$(id -g)"\
+  -e HOST_UID="$(id -u)" -e HOST_GID="$(id -g)" \
   -p 8080:8080 \
   -h neurodesktop-{{< params/neurodesktop/version >}} vnmd/neurodesktop:{{< params/neurodesktop/version >}} --vnc
 ```
@@ -238,7 +238,7 @@ To enable both VNC and RDP, startup Neurodesktop using the following command:
 sudo docker run \
   --shm-size=1gb -it --privileged --name neurodesktop \
   -v ~/neurodesktop-storage:/neurodesktop-storage \
-  -e HOST_UID="$(id -u)" -e HOST_GID="$(id -g)"\
+  -e HOST_UID="$(id -u)" -e HOST_GID="$(id -g)" \
   -p 8080:8080 \
   -h neurodesktop-{{< params/neurodesktop/version >}} vnmd/neurodesktop:{{< params/neurodesktop/version >}} --vnc --rdp
 ```
@@ -258,7 +258,7 @@ Startup Neurodesktop using the following command:
 sudo docker run \
   --shm-size=1gb -it --privileged --name neurodesktop \
   -v ~/neurodesktop-storage:/neurodesktop-storage \
-  -e HOST_UID="$(id -u)" -e HOST_GID="$(id -g)"\
+  -e HOST_UID="$(id -u)" -e HOST_GID="$(id -g)" \
   -p 8080:8080 -p 5901:5901 \
   -h neurodesktop-{{< params/neurodesktop/version >}} vnmd/neurodesktop:{{< params/neurodesktop/version >}} --vnc
 ```
