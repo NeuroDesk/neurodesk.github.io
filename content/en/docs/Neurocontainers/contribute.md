@@ -18,7 +18,7 @@ https://github.com/NeuroDesk/neurocontainers/issues/new
 https://labtokyo.neurodesk.org/
 
 - authenticate with your github account
-- select a CPU session or a GPU session if your containers requires a GPU
+- select a CPU session or a GPU session (if your container requires a GPU)
 - open a Neurodesktop session
 
 ## 3) Run the interactive build process
@@ -32,7 +32,7 @@ cd neurocontainers/interactive_builder/
 ./run_interactive_builder.sh
 ```
 
-- Follow the instructions of the interactive build tool. After entering basic information you see a "Singularity>" shell. Now run the commands to get your tool to work. 
+- Follow the instructions of the interactive build tool. After a couple of seconds where the base image gets updated you should see a "root@neurodesk-builder:~$>" shell. Now run the commands to get your tool to work. 
 - Once the tool works, hit CTRL-D or type "exit"
 - Then answer more questions in the build tool
 
