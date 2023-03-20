@@ -133,10 +133,10 @@ github_project_repo = "https://github.com/NeuroDesk/neurodesk.github.io"
 github_branch= "main"
 
 # Google Custom Search Engine ID. Remove or comment out to disable search.
-gcs_engine_id = "5b38591c9187748b9"
+# gcs_engine_id = "5b38591c9187748b9"
 
 # Enable Algolia DocSearch
-algolia_docsearch = false
+algolia_docsearch = true
 
 # Enable Lunr.js offline search
 offlineSearch = false
