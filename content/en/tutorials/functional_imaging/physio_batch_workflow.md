@@ -25,7 +25,7 @@ This tutorial assumes the following:
 1. Your data are (largely) in BIDs format
 2. That you have converted your .zip files containing physiological data to .log files. As I was
 using a CMRR multi-band sequence, I used [this function](https://github.com/CMRR-C2P/MB/blob/master/extractCMRRPhysio.m) 
-3. That your .log files are in the subject derivatives/.../sub-.../ses-.../'func' folders of aformentioned BIDs structured data
+3. That your .log files are in the subject derivatives/.../sub-.../ses-.../'func' folders of aforementioned BIDs structured data
 4. That you have a file that contains the motion regressors you plan to use in your GLM. I'll talk below a bit about what I did with the output given by fmriprep (e.g. ..._desc-confounds_timeseries.tsv')
 5. That you can use SPM12 and the PhysIO GUI to initialise your batch code
 

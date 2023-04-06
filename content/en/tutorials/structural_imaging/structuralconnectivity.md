@@ -140,7 +140,7 @@ mrconvert meanb0.mif mean_b0.nii.gz
 
 ```
 
-Activate the fsl and afni softwares in the neurodesk terminal:
+Activate the fsl and afni software in the neurodesk terminal:
 
 ```
 ml fsl/6.0.3
@@ -162,7 +162,7 @@ flirt -in  mean_b0.nii.gz -ref  5TT_vol0.nii.gz -interp nearestneighbour -dof 6 
 
 ```
 
-Convert the transformation matrix to a format readble by MRtrix:
+Convert the transformation matrix to a format readable by MRtrix:
 
 ```
 
@@ -177,7 +177,7 @@ Coregister the anatomical image to the diffusion image:
 mrtransform 5TT.mif -linear diff2struct_mrtrix.txt -inverse 5TT_coreg 
 
 ```
-Create the seed boundary which sepearates the grey from the white matter. The command "5tt2gmwmi" denotes (5 tissue type(segmentation) to grey matter/white matter interface):
+Create the seed boundary which separates the grey from the white matter. The command "5tt2gmwmi" denotes (5 tissue type(segmentation) to grey matter/white matter interface):
 
 ```
 

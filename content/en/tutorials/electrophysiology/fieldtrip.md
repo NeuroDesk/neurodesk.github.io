@@ -19,7 +19,7 @@ description: >
 
 ---
 
-Please note that this container uses a compiled version of FieldTrip to run scripts (without needing a Matlab license). Code development is not currently supported within the container and needs to be carried out separatedly in Matlab.  
+Please note that this container uses a compiled version of FieldTrip to run scripts (without needing a Matlab license). Code development is not currently supported within the container and needs to be carried out separately in Matlab.  
 <br/>
 
 ## Getting started

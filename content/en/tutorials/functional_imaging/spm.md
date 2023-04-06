@@ -159,7 +159,7 @@ You can check the smoothing by using CheckReg again:
 
 Click on `Specify 1st-level` - then set the following options:
 - Directory: Select the sub-08 top level directory
-- Units for desing: Seconds
+- Units for design: Seconds
 - Interscan interval: 2
 - Data & Design: Click twice on New Subject/Session
 - Select the smoothed, warped data from run 1 and run 2 for the two sessions respectively
