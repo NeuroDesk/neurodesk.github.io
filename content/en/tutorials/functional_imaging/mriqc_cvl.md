@@ -37,7 +37,7 @@ From the applications go Neurodesk -> Functional Imaging -> mriqc and select the
 
 ## Setting up mriqc command
 
-If you like, you can enter the following mriqc commands straight into the command line in the newly opened terminal. However, as with increasing options and preferences the command can get rather verbose, so I instead opted to create executable bash scripts that I can run straight from the command line, with minimal editing inbetween runs. I made one for running mriqc at the participant level, and one for running at the group level (for the group report, once all the participants are done). If you're not interested in this option you can skip straight to copying/adjusting the code from `mriqc` to `-v` below.
+If you like, you can enter the following mriqc commands straight into the command line in the newly opened terminal. However, as with increasing options and preferences the command can get rather verbose, so I instead opted to create executable bash scripts that I can run straight from the command line, with minimal editing between runs. I made one for running mriqc at the participant level, and one for running at the group level (for the group report, once all the participants are done). If you're not interested in this option you can skip straight to copying/adjusting the code from `mriqc` to `-v` below.
 
 - open a new file in your editor of choice (e.g. Visual Studio Code)
 - save that file with your chosen name without an extension, e.g. run_mriqc_participant or run_mriqc_group
@@ -54,7 +54,7 @@ mriqc /path/to/your/data \ # this is the top level of your data folder
          /path/to/your/data/derivatives \ # where you want mriqc output to be saved
          participant \ # this tells mriqc to analyse at the participant level
          --participant-label 01 \ # put what ever participant labels you want to analyse
-         --work-dir /path/to/work/directory \ #useful to specify so your home directory definitely doesnt get clogged
+         --work-dir /path/to/work/directory \ #useful to specify so your home directory definitely does not get clogged
          --nprocs 6 --mem_gb 10000 \ # mriqc can be greedy on the hpc, make sure it is not
          -v # be verbal mriqc, tell me what you are doing
 ```
@@ -66,7 +66,7 @@ OR: if you have run all the participants and you just want the group level repor
 mriqc /path/to/your/data \ # this is the top level of your data folder
          /path/to/your/data/derivatives \ # where you want mriqc output to be saved. As you are running the group level analysis this folder should be prepopulated with the results of the participant level analysis
          group \ # this tells mriqc to agive you the group report
-         -w /path/to/work/directory \ #useful to specify so your home directory definitely doesnt get clogged
+         -w /path/to/work/directory \ #useful to specify so your home directory definitely does not get clogged
          --nprocs 6 --mem_gb 10000 \ # mriqc can be greedy on the hpc, make sure it is not
          -v # be verbal mriqc, tell me what you are doing
 ```
