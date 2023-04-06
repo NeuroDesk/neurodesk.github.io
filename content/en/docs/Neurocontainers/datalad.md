@@ -13,7 +13,7 @@ datalad install https://github.com/ReproNim/containers.git
 cd containers
 ```
 
-# get a list of all available containers
+# get a list of all available default containers
 ```bash
 datalad containers-list
 ```
@@ -26,5 +26,9 @@ datalad containers-run -n neurodesk-romeo
 # Change version of container
 ```bash
 vi .datalad/config
+# now change the version of the container you like
+# all available containers can be seen via `ls images/neurodesk`
+datalad save -m 'downgraded version of romeo to x.x.x'
+datalad containers-run -n neurodesk-romeo
 ```
 
