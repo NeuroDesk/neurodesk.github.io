@@ -1,4 +1,4 @@
-// Keys are Substrings as diplayed by navigator.platform
+// Keys are Substrings as displayed by navigator.platform
 var supportedOperatingSystems = new Map([
   ['linux', 'linux'],
   ['mac', 'macos'],
