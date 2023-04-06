@@ -1,6 +1,6 @@
 ---
-title: "Datalad"
-linkTitle: "Datalad"
+title: "DataLad"
+linkTitle: "DataLad"
 description: >
   Neurodesktop containers can be used in datalad container run
 ---
