@@ -1,3 +1,3 @@
 [codespell]
-skip = .git,*.pdf,*.svg,package-lock.json,cspell.json
+skip = .git,*.pdf,*.svg,package-lock.json,cspell.json,prism.js
 # ignore-words-list = 
