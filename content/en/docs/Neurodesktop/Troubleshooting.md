@@ -86,7 +86,7 @@ Try the following solutions (in this order, until the above command works)
 3. Add your user to the OS docker group (sudo usermod -aG docker $USER)
 6. docker.sock permissions need to be changed (sudo chown root:docker /var/run/docker.sock)
 4. Close and open the terminal and retry.
-5. Log out and login again, or restart the machine (current user environment doesnt fully know docker is running)
+5. Log out and login again, or restart the machine (current user environment does not fully know docker is running)
 
 ### Windows users: WSL not installed properly
 

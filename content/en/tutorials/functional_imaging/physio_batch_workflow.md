@@ -169,7 +169,7 @@ On Neurodesk, go to the PhysIO toolbox, but select the command line tool rather 
 Now to run your PhysIO batch script, type the command:
 
 ```
-run_spm12.sh /opt/mcr/v99/ batch /your/batch/scipt/named_something.m
+run_spm12.sh /opt/mcr/v99/ batch /your/batch/script/named_something.m
 
 ```
 
