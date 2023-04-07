@@ -87,7 +87,16 @@ dpkg -i libssl1.1_1.1.1f-1ubuntu2.15_amd64.deb
 ```
 
 ## Install singularity/apptainer 
-e.g. for Ubuntu/Debian:
+
+e.g for Ubuntu/Debian install apptainer:
+```bash
+sudo apt-get install -y software-properties-common
+sudo add-apt-repository -y ppa:apptainer/ppa
+sudo apt-get update
+sudo apt-get install -y apptainer 
+```
+
+e.g. for Ubuntu/Debian install singularity:
 ```bash
 export VERSION=1.18.3 OS=linux ARCH=amd64 && \
     wget https://dl.google.com/go/go$VERSION.$OS-$ARCH.tar.gz && \
