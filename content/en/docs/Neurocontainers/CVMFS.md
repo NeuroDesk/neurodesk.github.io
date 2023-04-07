@@ -168,7 +168,7 @@ sudo apt install lmod
 
 ## Use of containers in the module system
 ### Configuration for module system
-Create a the new file `/usr/share/module.sh` with the content:
+Create a the new file `/usr/share/module.sh` with the content (NOTE: update the version, here 6.6, with your lmod version, e.g. 8.6.19):
 ```bash
 # system-wide profile.modules                                          #
 # Initialize modules for all sh-derivative shells                      #
