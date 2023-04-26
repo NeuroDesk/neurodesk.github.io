@@ -6,7 +6,7 @@ description: >
 ---
 
 
-![Neurodesk Desktop](/neurodesk-desktop.png 'neurodesk-desktop')
+![Neurodesk App](/neurodesk-desktop.png 'neurodeskapp')
 
 ### Minimum System Requirements
 1. At least 5GB free space for neurodesktop base image
@@ -14,7 +14,7 @@ description: >
 
 ## Installing Docker
 
-Neurodesk Desktop requires Docker to be installed on your computer. If you already have Docker installed, you can skip this step.
+Neurodesk App requires Docker to be installed on your computer. If you already have Docker installed, you can skip this step.
 
 - [Docker Desktop for Windows](https://docs.docker.com/docker-for-windows/install/)
 - [Docker Desktop for Mac](https://docs.docker.com/docker-for-mac/install/)
@@ -23,32 +23,28 @@ Neurodesk Desktop requires Docker to be installed on your computer. If you alrea
 After installation, open a terminal (Linux/macOS) or command prompt (Windows) and run the following command to verify that Docker is working correctly:
 `docker --version`
 
-## Installing Neurodesk Desktop
+## Installing Neurodesk App
 
-If you have an existing Neurodesk Desktop installation, please uninstall it first by following the [uninstall instructions](#uninstalling-neurodesk-desktop).
+If you have an existing Neurodesk App installation, please uninstall it first by following the [uninstall instructions](#uninstalling-neurodesk-app).
 
-- [Debian, Ubuntu Linux Installer](https://github.com/NeuroDesk/neurodesk-desktop/releases/latest/download/Neurodesk-Setup-Debian.deb)
-- [Red Hat, Fedora, SUSE Linux Installer](https://github.com/NeuroDesk/neurodesk-desktop/releases/latest/download/Neurodesk-Setup-Fedora.rpm)
-- [macOS Intel Installer](https://github.com/NeuroDesk/neurodesk-desktop/releases/latest/download/Neurodesk-Setup-macOS-x64.dmg), [macOS Apple silicon Installer](https://github.com/neurodesk/neurodesk-desktop/releases/latest/download/Neurodesk-Setup-macOS-arm64.dmg)
-- [Windows Installer](https://github.com/NeuroDesk/neurodesk-desktop/releases/latest/download/Neurodesk-Setup-Windows.exe)
+- [Debian, Ubuntu Linux Installer](https://github.com/NeuroDesk/neurodesk-app/releases/latest/download/Neurodesk-Setup-Debian.deb)
+- [Red Hat, Fedora, SUSE Linux Installer](https://github.com/NeuroDesk/neurodesk-app/releases/latest/download/Neurodesk-Setup-Fedora.rpm)
+- [macOS Intel Installer](https://github.com/NeuroDesk/neurodesk-app/releases/latest/download/Neurodesk-Setup-macOS-x64.dmg), [macOS Apple silicon Installer](https://github.com/neurodesk/neurodesk-app/releases/latest/download/Neurodesk-Setup-macOS-arm64.dmg)
+- [Windows Installer](https://github.com/NeuroDesk/neurodesk-app/releases/latest/download/Neurodesk-Setup-Windows.exe)
 
-Additionally, Neurodesk Desktop can be installed on Windows via winget: `winget install neurodeskapp`.
+Additionally, Neurodesk App can be installed on Windows via winget: `winget install neurodeskapp`.
 
-## Launching Neurodesk Desktop
+## Launching Neurodesk App
 
-Neurodesk Desktop can be launched from the GUI of your operating system by clicking the application's icon or by using `neurodeskapp` command from the command line.
+Neurodesk App can be launched from the GUI of your operating system by clicking the application's icon or by using `neurodeskapp` command from the command line.
 
-Neurodesk Desktop sets File Browser's root directory based on the launch method.
+Neurodesk App sets File Browser's root directory based on the launch method.
 
 - If launched from the application icon on GUI or by using `neurodeskapp` command without any arguments, then the default working directory is set as the root directory. The default working directory is user home directory but it can be customized from the Settings dialog.
-
-- If `neurodeskapp` command is used with a directory path as the argument or with the `--working-dir` argument the directory in the argument is set as the root directory.
 
 ## Sessions and Projects
 
 Sessions represent local project launches and connections to existing Neurodesk servers. Each Neurodesk UI window in the app is associated with a separate session and sessions can be restored with the same configuration later on.
-
-Each launch of Neurodesk in a different working directory is a separate project and projects can have their own configuration such as Python environment and UI layout.
 
 ### Session start options
 
@@ -68,7 +64,7 @@ Run `neurodeskapp` in the terminal.
 
 ## Connecting to local Neurodesk
 
-Neurodesk Desktop creates new Neurodesk sessions by launching a locally running Neurodesk server and connecting to it. To open a local instance, click the `Open Local Neurodesk..` button in the Start section of the Welcome Page.
+Neurodesk App creates new Neurodesk sessions by launching a locally running Neurodesk server and connecting to it. To open a local instance, click the `Open Local Neurodesk..` button in the Start section of the Welcome Page.
 
 It will show a Jupyterlab interface. There are two options to interact with Neurodesk:
 
@@ -88,7 +84,7 @@ This will launch a dialog that automatically lists the remote Neurodesk server i
 
 Select a server from the list or enter the URL of the Neurodesk application server. If the server requires a token for authentication, make sure to include it as a query parameter of the URL as well (`/lab?token=<token-value>`). After entering a URL hit `Enter` key to connect.
 
-If the `Persist session data` option is checked, then the session information is stored and Neurodesk Desktop will re-use this data on the next launch. If this option is not checked, the session data is automatically deleted at the next launch and servers requiring authentication will prompt for re-login.
+If the `Persist session data` option is checked, then the session information is stored and Neurodesk App will re-use this data on the next launch. If this option is not checked, the session data is automatically deleted at the next launch and servers requiring authentication will prompt for re-login.
 
 You can delete the stored session data manually at any time by using the `Clear History` option in the Privacy tab of Settings dialog.
 
@@ -96,9 +92,9 @@ You can delete the stored session data manually at any time by using the `Clear 
 
 ## Configuration and data files
 
-Neurodesk Desktop stores data in ~/neurodesktop-storage as default.
+Neurodesk App stores data in ~/neurodesktop-storage as default.
 
-## Uninstalling Neurodesk Desktop
+## Uninstalling Neurodesk App
 
 ### Debian, Ubuntu Linux
 
@@ -122,7 +118,7 @@ Find the application installation `NeurodeskApp.app` in Finder (in /Applications
 
 ```bash
 rm -rf ~/Library/neurodeskapp # to remove application cache
-rm -rf ~/Library/Application\ Support/neurodeskapp-desktop # to remove user data
+rm -rf ~/Library/Application\ Support/neurodeskapp # to remove user data
 ```
 
 ### Windows
