@@ -1,8 +1,8 @@
 ---
-title: "Neurodesk Desktop"
-linkTitle: "Neurodesk Desktop"
+title: "Neurodesk App"
+linkTitle: "Neurodesk App"
 description: >
-  Neurodesk Desktop is the cross-platform desktop application for Neurodesk
+  Neurodesk App is the cross-platform desktop application for Neurodesk
 ---
 
 
@@ -32,17 +32,17 @@ If you have an existing Neurodesk Desktop installation, please uninstall it firs
 - [macOS Intel Installer](https://github.com/NeuroDesk/neurodesk-desktop/releases/latest/download/Neurodesk-Setup-macOS-x64.dmg), [macOS Apple silicon Installer](https://github.com/neurodesk/neurodesk-desktop/releases/latest/download/Neurodesk-Setup-macOS-arm64.dmg)
 - [Windows Installer](https://github.com/NeuroDesk/neurodesk-desktop/releases/latest/download/Neurodesk-Setup-Windows.exe)
 
-Additionally, Neurodesk Desktop can be installed on Windows via winget: `winget install neurodesktop`.
+Additionally, Neurodesk Desktop can be installed on Windows via winget: `winget install neurodeskapp`.
 
 ## Launching Neurodesk Desktop
 
-Neurodesk Desktop can be launched from the GUI of your operating system by clicking the application's icon or by using `neurodesktop` command from the command line.
+Neurodesk Desktop can be launched from the GUI of your operating system by clicking the application's icon or by using `neurodeskapp` command from the command line.
 
 Neurodesk Desktop sets File Browser's root directory based on the launch method.
 
-- If launched from the application icon on GUI or by using `neurodesktop` command without any arguments, then the default working directory is set as the root directory. The default working directory is user home directory but it can be customized from the Settings dialog.
+- If launched from the application icon on GUI or by using `neurodeskapp` command without any arguments, then the default working directory is set as the root directory. The default working directory is user home directory but it can be customized from the Settings dialog.
 
-- If `neurodesktop` command is used with a directory path as the argument or with the `--working-dir` argument the directory in the argument is set as the root directory.
+- If `neurodeskapp` command is used with a directory path as the argument or with the `--working-dir` argument the directory in the argument is set as the root directory.
 
 ## Sessions and Projects
 
@@ -62,9 +62,9 @@ You can start a new session by using the links at the Start section of the Welco
 Previously opened sessions are stored as part of application data and they are listed on Welcome Page. Clicking an item in the `Recent sessions` list restores the selected session.
 
 
-### neurodesktop command-line launch examples
+### neurodeskapp command-line launch examples
 
-Run `neurodesktop` in the terminal.
+Run `neurodeskapp` in the terminal.
 
 ## Connecting to local Neurodesk
 
@@ -72,7 +72,7 @@ Neurodesk Desktop creates new Neurodesk sessions by launching a locally running 
 
 It will show a Jupyterlab interface. There are two options to interact with Neurodesk:
 
-- By clicking the `Neurodesktop` icon on the right. It launches new window to start Neurodesk interface.
+- By clicking the `NeurodeskApp` icon on the right. It launches new window to start Neurodesk interface.
 - By module loading containers on the left bar. You can interact with loaded modules in Terminal through command lines.
 
 <img src="/connect-to-local.png" alt="Connect to local" width=650 />
@@ -103,31 +103,31 @@ Neurodesk Desktop stores data in ~/neurodesktop-storage as default.
 ### Debian, Ubuntu Linux
 
 ```bash
-sudo apt-get purge neurodesktop-desktop # remove application
-sudo rm /usr/bin/neurodesktop # remove command symlink
-rm -rf ~/.config/neurodesktop-desktop # to remove application cache
+sudo apt-get purge neurodeskapp # remove application
+sudo rm /usr/bin/neurodeskapp # remove command symlink
+rm -rf ~/.config/neurodeskapp # to remove application cache
 ```
 
 ### Red Hat, Fedora, SUSE Linux
 
 ```bash
-sudo rpm -e neurodesktop-desktop # remove application
-sudo rm /usr/bin/neurodesktop # remove command symlink
-rm -rf ~/.config/neurodesktop-desktop # to remove application cache
+sudo rpm -e neurodeskapp # remove application
+sudo rm /usr/bin/neurodeskapp # remove command symlink
+rm -rf ~/.config/neurodeskapp # to remove application cache
 ```
 
 ### macOS
 
-Find the application installation `Neurodesktop.app` in Finder (in /Applications or ~/Applications) and move to Trash by using `CMD + Delete`. Clean other application generated files using:
+Find the application installation `NeurodeskApp.app` in Finder (in /Applications or ~/Applications) and move to Trash by using `CMD + Delete`. Clean other application generated files using:
 
 ```bash
-rm -rf ~/Library/neurodesktop-desktop # to remove application cache
-rm -rf ~/Library/Application\ Support/neurodesktop-desktop # to remove user data
+rm -rf ~/Library/neurodeskapp # to remove application cache
+rm -rf ~/Library/Application\ Support/neurodeskapp-desktop # to remove user data
 ```
 
 ### Windows
 
-On Windows, go to `Windows Apps & Features` dialog using `Start Menu` -> `Settings` -> `Apps` and uninstall Neurodesk Desktop application as shown below.
+On Windows, go to `Windows Apps & Features` dialog using `Start Menu` -> `Settings` -> `Apps` and uninstall Neurodesk App as shown below.
 
-In order to remove application cache, delete `C:\Users\<username>\AppData\Roaming\neurodesktop-desktop` directory.
+In order to remove application cache, delete `C:\Users\<username>\AppData\Roaming\neurodeskapp` directory.
 
