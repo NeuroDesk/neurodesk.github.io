@@ -164,3 +164,11 @@ Total Memory: **.**GiB
 3. Click apply and restart
 
 *RAM requirements will vary based on the tools/data you are using. If the system you're using has limited RAM, test out a few different amounts by running the above steps and then your analyses in Neurodesktop. Version 20220208 onwards has a memory monitor in the taskbar - you can use this to check how much memory Neurodesktop has access to and how much is being used by the analyses being run.
+
+### How to empty trash bin in Neurodesktop
+
+If you have deleted files using the Neurodesktop GUI but your storage is not yet emptied, execute the following command in the terminal.
+
+```bash
+rm -rf ~/.local/share/Trash/
+```
