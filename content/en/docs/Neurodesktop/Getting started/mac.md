@@ -25,6 +25,12 @@ Docker for MacOS by default runs with 2GB Memory. For actual workloads, 4GB Memo
 3. Increase Swap slider from 1GB to 2GB (or greater)
 
 ### 2. Run Neurodesktop
+Use one of the following options to run Neurodesktop:
+
+#### Option 1 (Recommended): Neurodesk-App
+Instructions on installing and using the app: https://www.neurodesk.org/docs/neurodesktop/getting-started/neurodeksapp/
+
+#### Option 2 (Advanced): Using Terminal
 Create a local folder where the downloaded applications will be stored, e.g. ~/neurodesktop-storage 
 
 1. Open a terminal, and type the following command to automatically download the neurodesktop container and run it

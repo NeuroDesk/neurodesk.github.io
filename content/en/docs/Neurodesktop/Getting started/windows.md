@@ -12,20 +12,21 @@ description: >
 3. If installing docker using WSL, minimum 20GB space recommended for WSL with Ubuntu
 
 ## Quickstart
-### 1. Install Docker
+### 1. Install Docker or Podman
 Install Docker from here: https://docs.docker.com/get-docker/
 {{< alert color="info" >}}
 The docker installation will reboot your computer a few times and there might be warnings regarding WSL2 and this also might require a few more installation steps that unfortunately differ for every system. Please get in touch if you are stuck and have a look at our troubleshoot page.
 {{< /alert >}}
 
+Alternatively, Neurodesk also works with podman: https://podman.io/
+
 ### 2. Run Neurodesktop
 Use one of the following options to run Neurodesktop:
 
-#### Option 1: NeuroDesktop.exe
-Download and run the following executable. Be aware: 1) The exe file can trigger your anti virus programs and we are working on this. 2) This exe will always download the latest version of neurodesk. For full reproducibility and control please choose Option 2 :)
-https://github.com/NeuroDesk/neurodesktop/raw/main/Windows_run_Neurodesk/NeuroDesktop.exe
+#### Option 1 (Recommended): Neurodesk-App
+Instructions on installing and using the app: https://www.neurodesk.org/docs/neurodesktop/getting-started/neurodeksapp/
 
-#### Option 2: Using Terminal
+#### Option 2 (Advanced): Using Terminal
 1. Open a terminal (e.g. Powershell), and type the following command to automatically download the neurodesktop container and run it
 
 ```shell

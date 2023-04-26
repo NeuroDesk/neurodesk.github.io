@@ -19,11 +19,11 @@ Before the first run, create a local folder where the downloaded applications wi
 
 Then use one of the following options to run Neurodesktop:
 
-#### Option 1: NeuroDesktop.run
-Download and run the following executable
-https://github.com/NeuroDesk/neurodesktop/raw/main/Linux_run_Neurodesk/NeuroDesktop.run
 
-#### Option 2: Using Terminal
+#### Option 1 (Recommended): Neurodesk-App
+Instructions on installing and using the app: https://www.neurodesk.org/docs/neurodesktop/getting-started/neurodeksapp/
+
+#### Option 2 (Advanced): Using Terminal
 1. Open a terminal, and type the following command to automatically download the neurodesktop container and run it
 
 ```bash
