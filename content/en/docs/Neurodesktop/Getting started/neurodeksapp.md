@@ -21,7 +21,10 @@ Neurodesk App requires Docker to be installed on your computer. If you already h
 - [Docker Engine for Linux](https://docs.docker.com/engine/install/)
 
 After installation, open a terminal (Linux/macOS) or command prompt (Windows) and run the following command to verify that Docker is working correctly:
-`docker --version`
+```bash
+docker --version
+docker run hello-world
+```
 
 ## Installing Neurodesk App
 
@@ -55,7 +58,7 @@ You can start a new session by using the links at the Start section of the Welco
 - `Open Local Neurodesk..` creates a new session in the default working directory.
 - `Connect to remote Neurodesk server..` creates a session by connecting to a remote Neurodesk server.
 
-Previously opened sessions are stored as part of application data and they are listed on Welcome Page. Clicking an item in the `Recent sessions` list restores the selected session.
+Previously opened sessions are stored as part of application data and they are listed on the Welcome Page. Clicking an item in the `Recent sessions` list restores the selected session.
 
 
 ### neurodeskapp command-line launch examples
