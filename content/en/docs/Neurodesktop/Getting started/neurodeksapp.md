@@ -12,14 +12,13 @@ description: >
 1. At least 5GB free space for neurodesktop base image
 2. Docker requirements.
 
-## Installing Docker/Podman
+## Installing Docker
 
-Neurodesk App requires Docker or Podman to be installed on your computer. If you already have Docker installed, you can skip this step.
+Neurodesk App requires Docker to be installed on your computer. If you already have Docker installed, you can skip this step.
 
 - [Docker Desktop for Windows](https://docs.docker.com/docker-for-windows/install/)
 - [Docker Desktop for Mac](https://docs.docker.com/docker-for-mac/install/)
 - [Docker Engine for Linux](https://docs.docker.com/engine/install/)
-- [Podman Desktop for Windows/Mac/Linux](https://podman-desktop.io/)
 
 After installation, open a terminal (Linux/macOS) or command prompt (Windows) and run the following command to verify that Docker is working correctly:
 ```bash
