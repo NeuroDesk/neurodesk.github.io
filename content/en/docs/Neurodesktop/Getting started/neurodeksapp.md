@@ -30,10 +30,10 @@ docker run hello-world
 
 If you have an existing Neurodesk App installation, please uninstall it first by following the [uninstall instructions](#uninstalling-neurodesk-app).
 
-- [Debian, Ubuntu Linux Installer](https://github.com/NeuroDesk/neurodesk-app/releases/latest/download/Neurodesk-Setup-Debian.deb)
-- [Red Hat, Fedora, SUSE Linux Installer](https://github.com/NeuroDesk/neurodesk-app/releases/latest/download/Neurodesk-Setup-Fedora.rpm)
-- [macOS Intel Installer](https://github.com/NeuroDesk/neurodesk-app/releases/latest/download/Neurodesk-Setup-macOS-x64.dmg), [macOS Apple silicon Installer](https://github.com/neurodesk/neurodesk-app/releases/latest/download/Neurodesk-Setup-macOS-arm64.dmg)
-- [Windows Installer](https://github.com/NeuroDesk/neurodesk-app/releases/latest/download/Neurodesk-Setup-Windows.exe)
+- [Debian, Ubuntu Linux Installer](https://github.com/NeuroDesk/neurodesk-app/releases/latest/download/NeurodeskApp-Setup-Debian.deb)
+- [Red Hat, Fedora, SUSE Linux Installer](https://github.com/NeuroDesk/neurodesk-app/releases/latest/download/NeurodeskApp-Setup-Fedora.rpm)
+- [macOS Intel Installer](https://github.com/NeuroDesk/neurodesk-app/releases/latest/download/NeurodeskApp-Setup-macOS-x64.dmg), [macOS Apple silicon Installer](https://github.com/neurodesk/neurodesk-app/releases/latest/download/NeurodeskApp-Setup-macOS-arm64.dmg)
+- [Windows Installer](https://github.com/NeuroDesk/neurodesk-app/releases/latest/download/NeurodeskApp-Setup-Windows.exe)
 
 Additionally, Neurodesk App can be installed on Windows via winget: `winget install neurodeskapp`.
 
