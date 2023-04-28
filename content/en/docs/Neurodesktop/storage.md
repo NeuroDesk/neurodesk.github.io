@@ -90,7 +90,12 @@ Rclone is a command line tool that enables the interaction with various cloud se
 ### Globus
 We also provide the globus client, so you can transfer large amounts of data between globus endpoints and Neurodesktop. You can configure it by running:
 ```bash
-/opt/globusconnectpersonal/globusconnectpersonal-*/globusconnectpersonal
+ml globus
+# First run the setup:
+globusconnectpersonal -setup -nogui
+
+# Then start the GUI:
+globusconnectpersonal -gui
 ```
 
 Once authenticated you can go to the globus file-manager https://app.globus.org/file-manager and your neurodesktop instance will be an endpoint for globus.
