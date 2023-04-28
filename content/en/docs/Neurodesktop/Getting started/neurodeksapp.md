@@ -32,7 +32,6 @@ If you have an existing Neurodesk App installation, please uninstall it first by
 - [macOS Intel Installer](https://github.com/NeuroDesk/neurodesk-app/releases/latest/download/NeurodeskApp-Setup-macOS-x64.dmg), [macOS Apple silicon Installer](https://github.com/neurodesk/neurodesk-app/releases/latest/download/NeurodeskApp-Setup-macOS-arm64.dmg)
 - [Windows Installer](https://github.com/NeuroDesk/neurodesk-app/releases/latest/download/NeurodeskApp-Setup-Windows.exe)
 
-Additionally, Neurodesk App can be installed on Windows via winget: `winget install neurodeskapp`.
 
 ## Launching Neurodesk App
 
@@ -92,7 +91,7 @@ You can delete the stored session data manually at any time by using the `Clear 
 
 ## Configuration and data files
 
-Neurodesk App stores data in ~/neurodesktop-storage as default.
+Neurodesk App stores data in ~/neurodesktop-storage for Linux and Mac, or C:/neurodesktop-storage for Windows, as default.
 
 ## Uninstalling Neurodesk App
 
