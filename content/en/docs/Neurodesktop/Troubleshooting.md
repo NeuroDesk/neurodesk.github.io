@@ -12,6 +12,14 @@ To ask questions or suggest new features, [join the discussion](https://github.c
 
 {{< toc >}}
 
+## VScode
+
+### Vscode is not starting up (or starts many many copies of itself ...)
+This problem seems to be caused by a corrupted config directory. To fix this, run:
+```
+rm -rf ~/.config/Code
+```
+
 ## Keyboard and Multi-Language support
 
 ### I am using a European keyboard layout and I cannot type symbols that require the ALT-GR key (like @ or \\)
