@@ -45,6 +45,6 @@ For example, here we ran a script to browse some raw data:
 The fieldtrip GUI is displayed automatically and functions as it normally would when running inside Matlab.
 
 NOTES:
-1. The script can only call FieldTrip and SPM functions (these are the only functions in the search path, and the search path cannot be altered using addpth)
+1. The script can only call FieldTrip and SPM functions (these are the only functions in the search path, and the search path cannot be altered using addpath)
 2. The script cannot include internal functions
 3. The script can use all the MATLAB toolboxes included in the compiled version of FieldTrip
