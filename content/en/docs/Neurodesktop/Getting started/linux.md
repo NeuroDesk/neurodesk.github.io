@@ -21,7 +21,7 @@ Then use one of the following options to run Neurodesktop:
 
 
 #### Option 1 (Recommended): Neurodesk-App
-Instructions on installing and using the app: https://www.neurodesk.org/docs/neurodesktop/getting-started/neurodeksapp/
+Instructions on installing and using the app: https://www.neurodesk.org/docs/neurodesktop/getting-started/neurodeskapp/
 
 #### Option 2 (Advanced): Using Terminal
 1. Open a terminal, and type the following command to automatically download the neurodesktop container and run it
