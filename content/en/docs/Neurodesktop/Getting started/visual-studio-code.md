@@ -62,7 +62,7 @@ This will open a `neurodesktop%3alatest.json` file. Overwrite the file with the 
 ```json
 {
 	"workspaceFolder": "/home/user",
-	"remoteUser": "user"
+	"remoteUser": "jovyan"
 }
 ```
 
