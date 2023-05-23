@@ -48,3 +48,12 @@ Then, add your email address and password from your MathWorks account (which you
 ![5_confirm](/matlab/5_confirm.png '5_confirm')
 
 6. To launch the GUI, navigate through the application menu to Neurodesk → Programming → matlab → matlabGUI 2022a
+
+## Changing Matlab Keyboard Shortcuts
+By default, Matlab uses the emacs keyboard shortcuts in Linux, which might not be what most users expect. To change the keyboard shortcuts to a more common pattern, follow the next steps:
+
+Open the Preferences menu:
+<img width="952" alt="image" src="https://github.com/NeuroDesk/neurodesk.github.io/assets/4021595/570c1ab4-2388-4f11-a8b4-939c5438a792">
+
+Navigate to Keyboard -> Shortcuts and change the active settings from "Emacs Default Set" to "Windows Default Set":
+<img width="656" alt="image" src="https://github.com/NeuroDesk/neurodesk.github.io/assets/4021595/59642792-2146-4ede-9bfa-90dffee7e85a">
