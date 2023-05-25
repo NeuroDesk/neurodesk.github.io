@@ -1,0 +1,15 @@
+
+---
+title: "Applications"
+linkTitle: "Applications"
+weight: 10
+type: applications
+
+description: >
+  List of Applications. 
+---
+
+
+After [installing](https://www.neurodesk.org/docs/neurodesktop/getting-started/), Neurodesk includes programming softwares (e.g., Visual Studio Code, python, git), workflow systems (Nipype), data synchronization utilities (Rsync, Rclone, Nextcloud, Owncloud), system management tools (Lmod, Singularity, Htop), and additional resources (Imagemagic, Firefox, OpenSSH client). For more on data synchronization, visit our [Storage section](/docs/neurodesktop/docs/getting-started/storage/).
+
+If you can't find an application in Neurodesktop's menu, you may need to [update Neurodesktop](https://www.neurodesk.org/docs/neurodesktop/getting-started/). For help with unavailable applications on Nectar Desktop Service, visit our [discussion forum](https://github.com/orgs/NeuroDesk/discussions). For more details, refer to the respective [documentation](https://www.neurodesk.org/docs/neurodesktop/tutorials).

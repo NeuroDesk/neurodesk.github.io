@@ -79,8 +79,7 @@ Neurodocker is the dependency we use to build containers.
    
 
 ### Fork the Neurocontainers repository  
--  Fork neurocontainers and setup github actions:  
-   Follow the steps in [Get Neurodesk code]({{<ref "cloning">}}).  
+-  Fork neurocontainers and setup github actions.  
 
 
 ### Create a new app

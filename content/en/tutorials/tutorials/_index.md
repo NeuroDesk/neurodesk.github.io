@@ -1,14 +1,7 @@
-
 ---
 title: "Tutorials"
 linkTitle: "Tutorials"
-weight: 3
-menu:
-  main:
-    weight: 3
+weight: 1
 description: >
   Tutorials
 ---
-
-
-Video tutorial to use Neurodesk 

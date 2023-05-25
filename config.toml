@@ -217,15 +217,6 @@ enable = false
  	icon = "fa fa-signal"
     desc = "Uptime"
 
-[[menu.main]]
-    name = "GitHub"
-    weight = 40
-    url = "https://github.com/NeuroDesk"
-
-[[menu.main]]
-    name = "News"
-    weight = 50
-    url = "https://masto.ai/@Neurodesk"
 	
 [module]
 proxy = "direct"
