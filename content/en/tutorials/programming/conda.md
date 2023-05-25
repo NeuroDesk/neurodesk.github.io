@@ -23,7 +23,7 @@ This tutorial documents how to create conda environments on Neurodesk.
 
 ## Conda environment
 
-Conda is promptly available on Neurodesk. Therefore, to create a new conda environment, just follow these steps:
+Conda is promptly available on Neurodesk. The default environment is not persistent across sessions, but you can create your own environment, which will be stored in your homedirectory, by following these steps:
 
 1. In a Terminal window, type in:
 
