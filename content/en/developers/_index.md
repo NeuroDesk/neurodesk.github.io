@@ -1,7 +1,7 @@
 
 ---
-title: "Developers"
-linkTitle: "Developers"
+title: "Developer Documentation"
+linkTitle: "Developer Documentation"
 weight: 10
 menu:
   main:

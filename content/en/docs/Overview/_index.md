@@ -2,6 +2,8 @@
 title: "Neurodesk Overview"
 linkTitle: "Overview"
 weight: 1
+aliases:
+- /docs/overview/
 description: >
   A flexible, scalable and easy to use data analysis environment for reproducible neuroimaging.
 ---

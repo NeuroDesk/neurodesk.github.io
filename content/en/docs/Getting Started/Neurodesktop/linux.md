@@ -6,7 +6,7 @@ description: >
   Install neurodesktop on Linux
 ---
 
-### Minimum System Requirements
+## Minimum System Requirements
 1. At least 3GB free space for neurodesktop base image
 2. Docker requirements. Details found under https://docs.docker.com/get-docker/
 
@@ -21,17 +21,17 @@ Then use one of the following options to run Neurodesktop:
 
 
 #### Option 1 (Recommended): Neurodesk-App
-Instructions on installing and using the app: https://www.neurodesk.org/docs/neurodesktop/getting-started/neurodeskapp/
+Instructions on installing and using the app: https://www.neurodesk.org/docs/getting-started/neurodesktop/neurodeskapp/
 
 #### Option 2 (Advanced): Using Terminal
 1. Open a terminal, and type the following command to automatically download the neurodesktop container and run it
 
 ```bash
 sudo docker run \
-  --shm-size=1gb -it --privileged --name neurodesktop \
+  --shm-size=1gb -it --privileged --user=root --name neurodesktop \
   -v ~/neurodesktop-storage:/neurodesktop-storage \
-  -e HOST_UID="$(id -u)" -e HOST_GID="$(id -g)" \
-  -p 8080:8080 \
+  -e NB_UID="$(id -u)" -e NB_GID="$(id -g)" \
+  -p 8888:8888 \
   -h neurodesktop-{{< params/neurodesktop/version >}} vnmd/neurodesktop:{{< params/neurodesktop/version >}}
 ```
 
@@ -44,26 +44,23 @@ chmod a+rwx ~/neurodesktop-storage
 ```
 {{< /alert >}}
 
-2. Once neurodesktop is downloaded i.e. `guacd[77]: INFO:        Listening on host 127.0.0.1, port 4822` is displayed in terminal, leave the terminal open and neurodesktop running (i.e., do not press CTRL+C)
+2. Once neurodesktop is downloaded, leave the terminal open and check the server neurodesktop running on (Avoid pressing CTRL+C). For example,
 
-3. Open a browser and go to 
-```none
-http://localhost:8080/#/?username=user&password=password/
-```
+![image](/neurodeskapp/terminal_token.png)
 
+3. To access neurodesktop, open your web browser and type in one of those provided URLs provided in your terminal (e.g. `http://127.0.0.1:8888/lab?token=your_unique_token`).
 
 {{< alert color="warning">}}
 If using Chrome, a pop-up may open with the text: 
 ```none
-"http://localhost:8080 wants to
+"http://127.0.0.1:8888 wants to
 See text and images copied to the clipboard".
 ```
 You should press "Allow"
 {{< /alert >}}
 
 {{< alert color="warning">}}
-If using Firefox, you might not be able to paste clipboard content into the virtual desktop from the host computer. In that case, please follow the instructions here:
-https://www.neurodesk.org/docs/neurodesktop/troubleshooting/#the-clipboard-in-firefox-is-not-working-correctly
+If using Firefox, you might not be able to paste clipboard content into the virtual desktop from the host computer. In that case, please follow [this instructions](/docs/support/faq/#copying-text-from-my-host-computer-and-pasting-it-inside-neurodesktop-doesnt-work-in-firefox)
 {{< /alert >}}
 
 4. Press on "Desktop Auto-Resolution" under "ALL CONNECTIONS"
@@ -146,11 +143,11 @@ sudo yum install nvidia-container-toolkit -y
 ### Running neurodesktop container with GPU
 ```bash
 sudo docker run \
-  --shm-size=1gb -it --privileged --name neurodesktop \
+  --shm-size=1gb -it --privileged --user=root --name neurodesktop \
   -v ~/neurodesktop-storage:/neurodesktop-storage \
-  -e HOST_UID="$(id -u)" -e HOST_GID="$(id -g)" \
+  -e NB_UID="$(id -u)" -e NB_GID="$(id -g)" \
   --gpus all \
-  -p 8080:8080 -h neurodesktop-{{< params/neurodesktop/version >}} \
+  -p 8888:8888 -h neurodesktop-{{< params/neurodesktop/version >}} \
   vnmd/neurodesktop:{{< params/neurodesktop/version >}}
 ```
 
@@ -198,10 +195,10 @@ Startup Neurodesktop using the following command:
 
 ```bash
 sudo docker run \
-  --shm-size=1gb -it --privileged --name neurodesktop \
+  --shm-size=1gb -it --privileged --user=root --name neurodesktop \
   -v ~/neurodesktop-storage:/neurodesktop-storage \
-  -e HOST_UID="$(id -u)" -e HOST_GID="$(id -g)" \
-  -p 8080:8080 -p 3390:3389 \
+  -e NB_UID="$(id -u)" -e NB_GID="$(id -g)" \
+  -p 8888:8888 -p 3390:3389 \
   -h neurodesktop-{{< params/neurodesktop/version >}} vnmd/neurodesktop:{{< params/neurodesktop/version >}}
 ```
 
@@ -225,10 +222,10 @@ To enable VNC and disable RDP, startup Neurodesktop using the following command:
 
 ```bash
 sudo docker run \
-  --shm-size=1gb -it --privileged --name neurodesktop \
+  --shm-size=1gb -it --privileged --user=root --name neurodesktop \
   -v ~/neurodesktop-storage:/neurodesktop-storage \
-  -e HOST_UID="$(id -u)" -e HOST_GID="$(id -g)" \
-  -p 8080:8080 \
+  -e NB_UID="$(id -u)" -e NB_GID="$(id -g)" \
+  -p 8888:8888 \
   -h neurodesktop-{{< params/neurodesktop/version >}} vnmd/neurodesktop:{{< params/neurodesktop/version >}} --vnc
 ```
 
@@ -236,10 +233,10 @@ To enable both VNC and RDP, startup Neurodesktop using the following command:
 
 ```bash
 sudo docker run \
-  --shm-size=1gb -it --privileged --name neurodesktop \
+  --shm-size=1gb -it --privileged --user=root --name neurodesktop \
   -v ~/neurodesktop-storage:/neurodesktop-storage \
-  -e HOST_UID="$(id -u)" -e HOST_GID="$(id -g)" \
-  -p 8080:8080 \
+  -e NB_UID="$(id -u)" -e NB_GID="$(id -g)" \
+  -p 8888:8888 \
   -h neurodesktop-{{< params/neurodesktop/version >}} vnmd/neurodesktop:{{< params/neurodesktop/version >}} --vnc --rdp
 ```
 
@@ -256,10 +253,10 @@ Startup Neurodesktop using the following command:
 
 ```bash
 sudo docker run \
-  --shm-size=1gb -it --privileged --name neurodesktop \
+  --shm-size=1gb -it --privileged --user=root --name neurodesktop \
   -v ~/neurodesktop-storage:/neurodesktop-storage \
-  -e HOST_UID="$(id -u)" -e HOST_GID="$(id -g)" \
-  -p 8080:8080 -p 5901:5901 \
+  -e NB_UID="$(id -u)" -e NB_GID="$(id -g)" \
+  -p 8888:8888 -p 5901:5901 \
   -h neurodesktop-{{< params/neurodesktop/version >}} vnmd/neurodesktop:{{< params/neurodesktop/version >}} --vnc
 ```
 

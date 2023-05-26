@@ -32,10 +32,10 @@ https://github.com/NeuroDesk/neurodesktop/raw/main/Linux_run_Neurodesk/NeuroDesk
 
 ```bash
 sudo docker run \
-  --shm-size=1gb -it --privileged --name neurodesktop \
+  --shm-size=1gb -it --privileged --user=root --name neurodesktop \
   -v ~/neurodesktop-storage:/neurodesktop-storage \
-  -e HOST_UID="$(id -u)" -e HOST_GID="$(id -g)" \
-  -p 8080:8080 \
+  -e NB_UID="$(id -u)" -e NB_GID="$(id -g)" \
+  -p 8888:8888 \
   -h neurodesktop-{{< params/neurodesktop/version >}} vnmd/neurodesktop:{{< params/neurodesktop/version >}}
 ```
 <!-- neurodesktop version found in neurodesk.github.io/data/neurodesktop.toml -->
@@ -47,7 +47,10 @@ chmod a+rwx ~/neurodesktop-storage
 ```
 {{< /alert >}}
 
-2. Once neurodesktop is downloaded to the cloud instance (`guacd[77]: INFO:        Listening on host 127.0.0.1, port 4822` is displayed in terminal), leave the terminal open and neurodesktop running (i.e., do not press CTRL+C)
+2. Once neurodesktop is downloaded, leave the terminal open and check the server neurodesktop running on (Avoid pressing CTRL+C). For example,
+
+![image](/neurodeskapp/terminal_token.png)
+
 
 {{< alert color="info" >}}
 Even if your connection to the cloud instance is broken, and the terminal does not respond, Neurodesktop will still continue running on the cloud instance. When the connection to the cloud instance is re-established, please start over the instructions from step 3 below.
@@ -55,10 +58,8 @@ Even if your connection to the cloud instance is broken, and the terminal does n
 
 3. If it is required to set up an SSH tunnel to access the cloud instance, please set up such a tunnel from the computer from which you want to access Neurodesktop (e.g. `ssh -L 8080:127.0.0.1:8080 USER@IP`)
 
-4. Open a browser on the computer from which you want to access Neurodesktop, and go to:
-```none
-http://localhost:8080/#/?username=user&password=password
-```
+4. To access neurodesktop, open your web browser and type in one of those provided URLs provided in your terminal (e.g. `http://127.0.0.1:8888/lab?token=your_unique_token`)
+
 If the computer runs Linux, check specific instructions at https://www.neurodesk.org/docs/neurodesktop/getting-started/linux/, Option 2, Step 3.
 
 5. Press on "Desktop Auto-Resolution" under "ALL CONNECTIONS"
@@ -117,10 +118,10 @@ Startup Neurodesktop using the following command:
 
 ```bash
 sudo docker run \
-  --shm-size=1gb -it --privileged --name neurodesktop \
+  --shm-size=1gb -it --privileged --user=root --name neurodesktop \
   -v ~/neurodesktop-storage:/neurodesktop-storage \
-  -e HOST_UID="$(id -u)" -e HOST_GID="$(id -g)" \
-  -p 8080:8080 -p 3390:3389 \
+  -e NB_UID="$(id -u)" -e NB_GID="$(id -g)" \
+  -p 8888:8888 -p 3390:3389 \
   -h neurodesktop-{{< params/neurodesktop/version >}} vnmd/neurodesktop:{{< params/neurodesktop/version >}}
 ```
 
@@ -144,10 +145,10 @@ To enable VNC and disable RDP, startup Neurodesktop using the following command:
 
 ```bash
 sudo docker run \
-  --shm-size=1gb -it --privileged --name neurodesktop \
+  --shm-size=1gb -it --privileged --user=root --name neurodesktop \
   -v ~/neurodesktop-storage:/neurodesktop-storage \
-  -e HOST_UID="$(id -u)" -e HOST_GID="$(id -g)" \
-  -p 8080:8080 \
+  -e NB_UID="$(id -u)" -e NB_GID="$(id -g)" \
+  -p 8888:8888 \
   -h neurodesktop-{{< params/neurodesktop/version >}} vnmd/neurodesktop:{{< params/neurodesktop/version >}} --vnc
 ```
 
@@ -155,10 +156,10 @@ To enable both VNC and RDP, startup Neurodesktop using the following command:
 
 ```bash
 sudo docker run \
-  --shm-size=1gb -it --privileged --name neurodesktop \
+  --shm-size=1gb -it --privileged --user=root --name neurodesktop \
   -v ~/neurodesktop-storage:/neurodesktop-storage \
-  -e HOST_UID="$(id -u)" -e HOST_GID="$(id -g)" \
-  -p 8080:8080 \
+  -e NB_UID="$(id -u)" -e NB_GID="$(id -g)" \
+  -p 8888:8888 \
   -h neurodesktop-{{< params/neurodesktop/version >}} vnmd/neurodesktop:{{< params/neurodesktop/version >}} --vnc --rdp
 ```
 
@@ -175,10 +176,10 @@ Startup Neurodesktop using the following command:
 
 ```bash
 sudo docker run \
-  --shm-size=1gb -it --privileged --name neurodesktop \
+  --shm-size=1gb -it --privileged --user=root --name neurodesktop \
   -v ~/neurodesktop-storage:/neurodesktop-storage \
-  -e HOST_UID="$(id -u)" -e HOST_GID="$(id -g)" \
-  -p 8080:8080 --network host  \
+  -e NB_UID="$(id -u)" -e NB_GID="$(id -g)" \
+  -p 8888:8888 --network host  \
   -h neurodesktop-{{< params/neurodesktop/version >}} vnmd/neurodesktop:{{< params/neurodesktop/version >}} --vnc
 ```
 

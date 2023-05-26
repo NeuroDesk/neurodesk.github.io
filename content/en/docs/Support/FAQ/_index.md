@@ -23,6 +23,9 @@ In-depth information:
 - A 15 minute video explaining what Neurodesk is: [Neurodesk in 15 minutes](https://youtu.be/2ATgTOsiGdY)
 - A 35 minute video explaining the technical details of Neurodesk: [Neurodesk in 35 minutes - behind the scenes](https://youtu.be/V5gAA9NiX_s)
 
+## What applications are included in Neurodesk?
+You can check out the complete list of [these applications](/docs/applications/)
+
 ## How should I cite the tools I am using and Neurodesk itself?
 [See here](/docs/how-to-cite-us)
 
@@ -35,11 +38,8 @@ If you are running containers on Linux there is no performance penalty - on an H
 ## How can I see how much resources Neurodesk containers need?
 In Linux the containers run as normal processes and you can use htop and top to inspect the resource footprint. For Windows and Mac the information is not readily available and we wrote some information here: [Troubleshooting](https://www.neurodesk.org/docs/neurodesktop/troubleshooting/#i-got-an-error-message-x-killed)
 
-## How do I get my files in there?
-It depends where you are running Neurodesk and where your files are. We provide many different ways from drag-and-drop, to cloud storage to file mounts. An overview about Storage can be found here: [Storage in Neurodesk](https://www.neurodesk.org/docs/neurodesktop/storage/)
-
-## What applications are included in Neurodesk?
-We provide certain applications as part of the Neurodesktop image (https://www.neurodesk.org/docs/neurodesktop/whatsinthebox/) - these are applications that don't work well in containers. The majority of applications are provided via containers and a full list can be found here: https://www.neurodesk.org/applications/
+## Can I just use the plain containers?
+Yes, there are multiple ways of using the containers directly and we provide an overview here: https://www.neurodesk.org/docs/neurocontainers/
 
 ## Freeview 7.2.0 crashes when I open files
 Freeview (and Freesurfer!) needs a valid license to work and we are not allowed to distribute a license with Neurodesk!
@@ -58,22 +58,6 @@ There is one workaround for this problem. Fix the mac address for your session b
 ```
 --mac-address 02:42:ac:11:00:02 
 ```
-
-## Can I just use the plain containers?
-Yes, there are multiple ways of using the containers directly and we provide an overview here: https://www.neurodesk.org/docs/neurocontainers/
-
-## How can I contribute new containers?
-We are still working on making this easier, but the current workflow to add new applications is described here: https://www.neurodesk.org/developers/new_tools/add_tool/
-
-## I couldn't find the information I was looking for. Where can I get additional assistance?
-Open a Github account, and post your question on the Neurodesk forum:
-https://github.com/orgs/NeuroDesk/discussions
-
-Neurodesk is an open-source project that is always evolving. If you are experiencing an issue not listed here, please open a [new issue](https://github.com/NeuroDesk/neurodesk.github.io/issues), so that we can aim to solve it and update our help documentation. 
-
-To ask questions or suggest new features, [join the discussion](https://github.com/orgs/NeuroDesk/discussions) on github. 
-
-{{< toc >}}
 
 ## VScode
 
@@ -243,3 +227,14 @@ If you have deleted files using the Neurodesktop GUI but your storage is not yet
 ```bash
 rm -rf ~/.local/share/Trash/
 ```
+
+## How can I contribute new containers?
+We are still working on making this easier, but here is the current workflow to [add new applications](/developers/new_tools/).
+
+## I couldn't find the information I was looking for. Where can I get additional assistance?
+Neurodesk is an open-source project that is always evolving. If you are experiencing an issue not listed here, you can reach out to us on Github.
+Post your question at https://github.com/orgs/NeuroDesk/discussions or open a [new issue](https://github.com/NeuroDesk/neurodesk.github.io/issues), so that we can aim to solve it and update our help documentation. 
+
+
+## How do I get my files in there?
+It depends where you are running Neurodesk and where your files are. We provide many different ways from drag-and-drop, to cloud storage to file mounts in [Storage in Neurodesk](/docs/neurodesktop/storage/).

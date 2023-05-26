@@ -2,7 +2,8 @@
 title: "How to cite us"
 linkTitle: "Cite"
 weight: 1
-
+aliases:
+- /docs/how-to-cite-us
 description: >
   How should I cite the tools I am using and Neurodesk itself?
 ---

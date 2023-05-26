@@ -2,6 +2,8 @@
 title: "Storage"
 linkTitle: "Storage"
 weight: 5
+aliases: 
+- /docs/neurodesktop/storage/
 description: >
   Add storage to Neurodesktop
 ---
@@ -43,7 +45,7 @@ The -v C:/neurodesktop-storage:/neurodesktop-storage part of the docker command 
 
 Here is an example for Windows adding another storage directory:
 ```cmd
-docker run --shm-size=1gb -it --privileged --name neurodesktop -v C:/neurodesktop-storage:/neurodesktop-storage -v D:/moredata:/data -p 8080:8080 -h neurodesktop-{{< params/neurodesktop/version >}} vnmd/neurodesktop:{{< params/neurodesktop/version >}}
+docker run --shm-size=1gb -it --privileged --user=root --name neurodesktop -v C:/neurodesktop-storage:/neurodesktop-storage -v D:/moredata:/data -p 8888:8888 -h neurodesktop-{{< params/neurodesktop/version >}} vnmd/neurodesktop:{{< params/neurodesktop/version >}}
 ```
 
 ## Cloud storage

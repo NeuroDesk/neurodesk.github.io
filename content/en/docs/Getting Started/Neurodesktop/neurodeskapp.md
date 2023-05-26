@@ -98,6 +98,16 @@ You can delete the stored session data manually at any time by using the `Clear 
 
 Neurodesk App stores data in ~/neurodesktop-storage for Linux and Mac, or C:/neurodesktop-storage for Windows, as default.
 
+## Add Custom Data Directory
+
+Neurodesk App stores its data in the following locations:
+
+- By default, /home/jovyan/neurodesktop-storage in the app (which is binded with local directory ~/neurodesktop-storage in Unix or C:/neurodesktop-storage in Windows)
+
+- By choice, in the setting window below, select `Additional Directory` on the left side bar, click `Change` button to select the local directory, then click `Apply & restart`. The next time you start the app, the data from the local directory can be found in /home/jovyan/data.
+
+<img src="/additional_dir.png" alt="Add data" width=700 />
+
 ## Uninstalling Neurodesk App
 
 ### Debian, Ubuntu Linux

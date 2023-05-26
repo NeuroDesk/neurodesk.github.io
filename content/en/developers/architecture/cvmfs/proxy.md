@@ -9,8 +9,8 @@ description: >
 If you want more speed in a region one way could be to setup another Stratum 1 server or a proxy. We currently don't run any proxy servers but it would be important for using it on a cluster.
 
 ```cmd
-docker run --shm-size=1gb -it --privileged --name neurodesktop `
--v C:/neurodesktop-storage:/neurodesktop-storage -p 8080:8080 `
+docker run --shm-size=1gb -it --privileged --user=root --name neurodesktop `
+-v C:/neurodesktop-storage:/neurodesktop-storage -p 8888:8888 `
 -h neurodesktop-{{< params/neurodesktop/version >}} `
 vnmd/neurodesktop:{{< params/neurodesktop/version >}}
 ```

@@ -6,7 +6,7 @@ description: >
   Install neurodesktop on Windows
 ---
 
-### Minimum System Requirements
+## Minimum System Requirements
 1. At least 3GB free space for neurodesktop base image
 2. Docker requirements. Details found under https://docs.docker.com/get-docker/
 3. If installing docker using WSL, minimum 20GB space recommended for WSL with Ubuntu
@@ -24,22 +24,25 @@ Alternatively, Neurodesk also works with podman: https://podman.io/
 Use one of the following options to run Neurodesktop:
 
 #### Option 1 (Recommended): Neurodesk-App
-Instructions on installing and using the app: https://www.neurodesk.org/docs/neurodesktop/getting-started/neurodeksapp/
+Instructions on installing and using the app: https://www.neurodesk.org/docs/getting-started/neurodesktop/neurodeskapp/
 
 #### Option 2 (Advanced): Using Terminal
 1. Open a terminal (e.g. Powershell), and type the following command to automatically download the neurodesktop container and run it
 
 ```shell
-docker run --shm-size=1gb -it --privileged --name neurodesktop -v C:/neurodesktop-storage:/neurodesktop-storage -p 8080:8080 -h neurodesktop-{{< params/neurodesktop/version >}} vnmd/neurodesktop:{{< params/neurodesktop/version >}}
+docker run \
+--shm-size=1gb -it --privileged --user=root --name neurodesktop \
+-v C:/neurodesktop-storage:/neurodesktop-storage \
+-p 8888:8888 \
+-h neurodesktop-{{< params/neurodesktop/version >}} vnmd/neurodesktop:{{< params/neurodesktop/version >}}
 ```
 
 <!-- neurodesktop version found in neurodesk.github.io/data/neurodesktop.toml -->
-2. Once neurodesktop is downloaded i.e. `guacd[77]: INFO:        Listening on host 127.0.0.1, port 4822` is displayed in terminal,  leave the terminal open and neurodesktop running (i.e., do not press CTRL+C)
+2. Once neurodesktop is downloaded, leave the terminal open and check the server neurodesktop running on (Avoid pressing CTRL+C). For example,
 
-3. Open a browser and go to:
-```none
-http://localhost:8080/#/?username=user&password=password
-```
+![image](/neurodeskapp/terminal_token.png)
+
+3. To access neurodesktop, open your web browser and type in one of those provided URLs provided in your terminal (e.g. `http://127.0.0.1:8888/lab?token=your_unique_token`).
 
 {{< alert title="Note" color="warning" >}}
 We do not recommend the use of the Firefox browser for accessing Neurodesktop on Windows 10, as firefox is not able to access localhost where neurodesk is running. 
@@ -83,7 +86,11 @@ docker rm neurodesktop
 Startup Neurodesktop using the following command:
 
 ```bash
-docker run --shm-size=1gb -it --privileged --name neurodesktop -v C:/neurodesktop-storage:/neurodesktop-storage -p 3390:3389 -p 8080:8080 -h neurodesktop-{{< params/neurodesktop/version >}} vnmd/neurodesktop:{{< params/neurodesktop/version >}}
+docker run \
+--shm-size=1gb -it --privileged --user=root --name neurodesktop \
+-v C:/neurodesktop-storage:/neurodesktop-storage \
+-p 3390:3389 -p 8888:8888 \
+-h neurodesktop-{{< params/neurodesktop/version >}} vnmd/neurodesktop:{{< params/neurodesktop/version >}}
 ```
 {{< alert color="info" >}}
 If you want to connect via RDP using a different port, replace 3390 in the previous and next step with your port
@@ -116,7 +123,7 @@ password
 To enable VNC and disable RDP, startup Neurodesktop using the following command:
 
 ```cmd
-docker run --shm-size=1gb -it --privileged --name neurodesktop -v C:/neurodesktop-storage:/neurodesktop-storage -p 8080:8080 -h neurodesktop-{{< params/neurodesktop/version >}} vnmd/neurodesktop:{{< params/neurodesktop/version >}} --vnc 
+docker run --shm-size=1gb -it --privileged --user=root --name neurodesktop -v C:/neurodesktop-storage:/neurodesktop-storage -p 8888:8888 -h neurodesktop-{{< params/neurodesktop/version >}} vnmd/neurodesktop:{{< params/neurodesktop/version >}} --vnc 
 ```
 
 {{< alert color="info" >}}
@@ -131,7 +138,7 @@ VNC option for Neurodesktop on the browser does not support auto-resolution
 Startup Neurodesktop using the following command:
 
 ```cmd
-docker run --shm-size=1gb -it --privileged --name neurodesktop -v C:/neurodesktop-storage:/neurodesktop-storage -p 5901:5901 -p 8080:8080 -h neurodesktop-{{< params/neurodesktop/version >}} vnmd/neurodesktop:{{< params/neurodesktop/version >}} --vnc 
+docker run --shm-size=1gb -it --privileged --user=root --name neurodesktop -v C:/neurodesktop-storage:/neurodesktop-storage -p 5901:5901 -p 8888:8888 -h neurodesktop-{{< params/neurodesktop/version >}} vnmd/neurodesktop:{{< params/neurodesktop/version >}} --vnc 
 ```
 
 Download the Tiger VNC client (`vncviewer64-1.12.0.exe`) from https://sourceforge.net/projects/tigervnc/files/stable/1.12.0/

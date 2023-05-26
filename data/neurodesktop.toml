@@ -1,5 +1,5 @@
-version = "20221216"
-jupyter_neurodesk_version = "20230415"
+version = "20230525"
+neurodesk_desktop_release = "1.0.0"
 
 rdpport="-p 3390:3389"
 vncport="-p 5901:5901"
@@ -7,13 +7,13 @@ vncflag="--vnc"
 
 [linux]
 base="""sudo docker run \\
-  --shm-size=1gb -it --privileged --name neurodesktop \\
+  --shm-size=1gb -it --privileged --user=root --name neurodesktop \\
   -v ~/neurodesktop-storage:/neurodesktop-storage \\
-  -e HOST_UID="$(id -u)" -e HOST_GID="$(id -g)" \\
-  -p 8080:8080"""
+  -e NB_UID="$(id -u)" -e NB_GID="$(id -g)" \\
+  -p 8888:8888"""
 
 [windows]
 base="""docker run \
---shm-size=1gb -it --privileged --name neurodesktop \
+--shm-size=1gb -it --privileged --user=root --name neurodesktop \
 -v C:/neurodesktop-storage:/neurodesktop-storage \
--p 8080:8080"""
+-p 8888:8888"""

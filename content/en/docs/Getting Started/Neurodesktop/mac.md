@@ -8,7 +8,7 @@ aliases:
 - /docs/Getting Started/Neurodesktop/mac.md
 ---
 
-### Minimum System Requirements
+## Minimum System Requirements
 1. At least 3GB free space for neurodesktop base image
 2. An Intel Mac. M1/ARM Macs are not yet supported.
 3. Docker requirements. Details found under https://docs.docker.com/get-docker/
@@ -30,7 +30,7 @@ Docker for MacOS by default runs with 2GB Memory. For actual workloads, 4GB Memo
 Use one of the following options to run Neurodesktop:
 
 #### Option 1 (Recommended): Neurodesk-App
-Instructions on installing and using the app: https://www.neurodesk.org/docs/neurodesktop/getting-started/neurodeksapp/
+Instructions on installing and using the app: https://www.neurodesk.org/docs/getting-started/neurodesktop/neurodeskapp/
 
 #### Option 2 (Advanced): Using Terminal
 Create a local folder where the downloaded applications will be stored, e.g. ~/neurodesktop-storage 
@@ -38,7 +38,11 @@ Create a local folder where the downloaded applications will be stored, e.g. ~/n
 1. Open a terminal, and type the following command to automatically download the neurodesktop container and run it
 
 ```shell
-docker run --shm-size=1gb -it --privileged --name neurodesktop -v ~/neurodesktop-storage:/neurodesktop-storage -p 8080:8080 -h neurodesktop-{{< params/neurodesktop/version >}} vnmd/neurodesktop:{{< params/neurodesktop/version >}}
+docker run \
+--shm-size=1gb -it --privileged --user=root --name neurodesktop \
+-v ~/neurodesktop-storage:/neurodesktop-storage \
+-e NB_UID="$(id -u)" -e NB_GID="$(id -g)" \
+-p 8888:8888 -h neurodesktop-{{< params/neurodesktop/version >}} vnmd/neurodesktop:{{< params/neurodesktop/version >}}
 ```
 <!-- neurodesktop version found in neurodesk.github.io/data/neurodesktop.toml -->
 
@@ -48,12 +52,12 @@ There is a bug in docker 3.3.0 for Mac that makes this command not run correctly
 
 if you get errors in neurodesktop then check if the ~/neurodesktop-storage directory is writable to all users, otherwise run `chmod a+rwx ~/neurodesktop-storage`
 
-2. Once neurodesktop is downloaded i.e. `guacd[77]: INFO:        Listening on host 127.0.0.1, port 4822` is displayed in terminal, leave the terminal open and neurodesktop running (i.e., do not press CTRL+C)
+2. Once neurodesktop is downloaded, leave the terminal open and check the server neurodesktop running on (Avoid pressing CTRL+C). For example,
 
-3. Open a browser and go to:
-```none
-http://localhost:8080/#/?username=user&password=password
-```
+![image](/neurodeskapp/terminal_token.png)
+
+3. To access neurodesktop, open your web browser and type in one of those provided URLs provided in your terminal (e.g. `http://127.0.0.1:8888/lab?token=your_unique_token`).
+
 {{< alert color="warning" >}}
 We recommend to use Chrome over Firefox as it has an option to hide the Toolbar in full screen mode (go to the menu bar, click on View, and uncheck "Always Show Toolbar in Full Screen"). This allows for Neurodesktop to truly utilise the whole of your screen.
 {{< /alert >}}
@@ -92,7 +96,11 @@ docker rm neurodesktop
 Startup Neurodesktop using the following command:
 
 ```shell
-docker run --shm-size=1gb -it --privileged --name neurodesktop -v ~/neurodesktop-storage:/neurodesktop-storage -p 3390:3389 -p 8080:8080 -h neurodesktop-{{< params/neurodesktop/version >}} vnmd/neurodesktop:{{< params/neurodesktop/version >}}
+docker run \
+--shm-size=1gb -it --privileged --user=root --name neurodesktop \
+-v ~/neurodesktop-storage:/neurodesktop-storage \
+-p 3390:3389 -p 8888:8888 \
+-h neurodesktop-{{< params/neurodesktop/version >}} vnmd/neurodesktop:{{< params/neurodesktop/version >}}
 ```
 {{< alert color="info" >}}
 If you want to connect via RDP using a different port, replace 3390 in the previous and next step with your port
@@ -113,7 +121,11 @@ password
 To enable VNC and disable RDP, startup Neurodesktop using the following command:
 
 ```shell
-docker run --shm-size=1gb -it --privileged --name neurodesktop -v ~/neurodesktop-storage:/neurodesktop-storage -e VNC_ENABLE=true -p 8080:8080 -h neurodesktop-{{< params/neurodesktop/version >}} vnmd/neurodesktop:{{< params/neurodesktop/version >}}
+docker run \
+--shm-size=1gb -it --privileged --user=root --name neurodesktop \
+-v ~/neurodesktop-storage:/neurodesktop-storage \
+-e VNC_ENABLE=true -p 8888:8888 \
+-h neurodesktop-{{< params/neurodesktop/version >}} vnmd/neurodesktop:{{< params/neurodesktop/version >}}
 ```
 
 {{< alert color="info" >}}
@@ -128,7 +140,11 @@ VNC option for Neurodesktop on the browser does not support auto-resolution
 Startup Neurodesktop using the following command:
 
 ```shell
-docker run --shm-size=1gb -it --privileged --name neurodesktop -v ~/neurodesktop-storage:/neurodesktop-storage -e VNC_ENABLE=true -p 5901:5901 -p 8080:8080 -h neurodesktop-{{< params/neurodesktop/version >}} vnmd/neurodesktop:{{< params/neurodesktop/version >}}
+docker run \
+--shm-size=1gb -it --privileged --user=root --name neurodesktop \
+-v ~/neurodesktop-storage:/neurodesktop-storage \
+-e VNC_ENABLE=true -p 5901:5901 -p 8888:8888 \
+-h neurodesktop-{{< params/neurodesktop/version >}} vnmd/neurodesktop:{{< params/neurodesktop/version >}}
 ```
 
 Open a VNC Client and connect to port 5901
