@@ -4,7 +4,8 @@ title: "Applications"
 linkTitle: "Applications"
 weight: 10
 type: applications
-
+aliases:
+- /applications
 description: >
   List of Applications. 
 ---
