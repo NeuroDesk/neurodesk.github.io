@@ -1,4 +1,5 @@
 name: check-broken-links
+
 on:
   push:
     branches: ["main"]
@@ -57,15 +58,15 @@ jobs:
 
       - name: Check broken links
         env:
-            INPUT_URL: "${{ steps.pages.outputs.base_url }}" 
-            INPUT_CMD_PARAMS: '--verbose --buffer-size=8192 --max-connections=10 --color=always --skip-tls-verification --exclude="(mylabs.dev|linkedin.com)"'
+          INPUT_URL: "${{ steps.pages.outputs.base_url }}" 
+          INPUT_CMD_PARAMS: '--verbose --buffer-size=8192 --max-connections=10 --color=always --skip-tls-verification --exclude="(mylabs.dev|linkedin.com)"'
         run: |
-            wget -qO- https://raw.githubusercontent.com/ruzickap/action-my-broken-link-checker/v2/entrypoint.sh | bash
+          wget -qO- https://raw.githubusercontent.com/ruzickap/action-my-broken-link-checker/v2/entrypoint.sh | bash
 
       - name: Check links using container
         uses: ruzickap/action-my-broken-link-checker@v2
         with:
-            url: https://my-testing-domain.com
-            pages_path: ./public/
-            cmd_params: '--verbose --buffer-size=8192 --max-connections=10 --color=always --skip-tls-verification --header="User-Agent:curl/7.54.0" --exclude="(mylabs.dev|linkedin.com)"'
-            debug: true
+          url: https://my-testing-domain.com
+          pages_path: ./public/
+          cmd_params: '--verbose --buffer-size=8192 --max-connections=10 --color=always --skip-tls-verification --header="User-Agent:curl/7.54.0" --exclude="(mylabs.dev|linkedin.com)"'
+          debug: true
