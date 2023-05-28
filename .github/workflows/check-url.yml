@@ -1,10 +1,56 @@
-name: Check Markdown links
+name: hugo-build
 
-on: push
+on:
+  pull_request:
+    types: [opened, synchronize]
+  push:
 
 jobs:
-  markdown-link-check:
+  hugo-build:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@master
-    - uses: gaurav-nelson/github-action-markdown-link-check@v1
+      - uses: actions/checkout@v2
+
+      - name: Checkout submodules
+        shell: bash
+        run: |
+          auth_header="$(git config --local --get http.https://github.com/.extraheader)"
+          git submodule sync --recursive
+          git -c "http.extraheader=$auth_header" -c protocol.version=2 submodule update --init --force --recursive --depth=1
+
+      - name: Setup Hugo
+        uses: peaceiris/actions-hugo@v2
+        with:
+          hugo-version: '0.62.0'
+
+      - name: Build
+        run: |
+          hugo --gc
+          cp LICENSE README.md public/
+          echo "s|https://www.neurodesk.org/|${{ steps.pages.outputs.base_url }}/|g" > public/CNAME
+
+      - name: Check broken links
+        env:
+          INPUT_URL: "s|https://www.neurodesk.org/|${{ steps.pages.outputs.base_url }}/|g"
+          INPUT_PAGES_PATH: public
+          INPUT_CMD_PARAMS: '--verbose --buffer-size=8192 --max-connections=10 --color=always --skip-tls-verification --exclude="(mylabs.dev|linkedin.com)"'
+        run: |
+          wget -qO- https://raw.githubusercontent.com/ruzickap/action-my-broken-link-checker/v2/entrypoint.sh | bash
+
+      - name: Check links using container
+        uses: ruzickap/action-my-broken-link-checker@v2
+        with:
+          url: https://my-testing-domain.com
+          pages_path: ./public/
+          cmd_params: '--verbose --buffer-size=8192 --max-connections=10 --color=always --skip-tls-verification --header="User-Agent:curl/7.54.0" --exclude="(mylabs.dev|linkedin.com)"'
+          debug: true
+
+      - name: Deploy
+        uses: peaceiris/actions-gh-pages@v3
+        if: ${{ github.event_name }} == 'push' && github.ref == 'refs/heads/main'
+        env:
+          ACTIONS_DEPLOY_KEY: ${{ secrets.ACTIONS_DEPLOY_KEY }}
+          PUBLISH_BRANCH: gh-pages
+          PUBLISH_DIR: public
+        with:
+          forceOrphan: true

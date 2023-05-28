@@ -56,6 +56,13 @@ jobs:
             --minify \
             --baseURL "${{ steps.pages.outputs.base_url }}/"
 
+      - name: Check broken links
+        run: |
+          export INPUT_URL="${{ steps.pages.outputs.base_url }}"
+          export INPUT_PAGES_PATH="public"
+          export INPUT_CMD_PARAMS="--verbose --buffer-size=8192 --concurrency=10 --skip-tls-verification --exclude=($( echo ${EXCLUDE} | tr ' ' '|' ))"
+          wget -qO- https://raw.githubusercontent.com/ruzickap/action-my-broken-link-checker/v1/entrypoint.sh | bash
+
       - name: Add custom domain
         if: github.repository == 'NeuroDesk/neurodesk.github.io'
         run: cp ./static/CNAME ./public/CNAME
