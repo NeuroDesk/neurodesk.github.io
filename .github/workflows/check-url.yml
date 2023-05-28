@@ -1,10 +1,6 @@
 name: check-broken-links
 
-on:
-  push:
-    branches: ["main"]
-  repository_dispatch:
-  workflow_dispatch:
+on: push
 
 permissions:
   contents: read
