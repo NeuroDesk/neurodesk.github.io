@@ -7,7 +7,7 @@ description: >
 ---
 
 
-![Neurodesk App](/neurodesk-desktop.png 'neurodeskapp')
+![Neurodesk App](/neurodeskapp/neurodesk-desktop.png 'neurodeskapp')
 
 ### Minimum System Requirements
 1. At least 5GB free space for neurodesktop base image
@@ -54,7 +54,7 @@ Sessions represent local project launches and connections to existing Neurodesk 
 
 You can start a new session by using the links at the Start section of the Welcome Page.
 
-<img src="/start-session.svg" alt="Start session" width=300 />
+![Start](/neurodeskapp/start-session.svg "Start session")
 
 - `Open Local Neurodesk..` creates a new session in the default working directory.
 - `Connect to remote Neurodesk server..` creates a session by connecting to a remote Neurodesk server.
@@ -75,13 +75,13 @@ It will show a Jupyterlab interface. There are two options to interact with Neur
 - By clicking the `NeurodeskApp` icon on the right. It launches new window to start Neurodesk interface.
 - By module loading containers on the left bar. You can interact with loaded modules in Terminal through command lines.
 
-<img src="/connect-to-local.png" alt="Connect to local" width=650 />
+![Local](/neurodeskapp/connect-to-local.png "Connect to local")
 
 ## Connecting to a remote Neurodesk Server
 
  It can also connect to an existing Neurodesk server instance that is running remotely. In order to connect to a server, click the `Connect to remote Neurodesk server..` button in the Start section of the Welcome Page.
 
-<img src="/connect-to-server.png" alt="Connect to server" width=520 />
+![Server](/neurodeskapp/connect-to-server.png "Connect to server")
 
 
 This will launch a dialog that automatically lists the remote Neurodesk server instances.
@@ -92,7 +92,7 @@ If the `Persist session data` option is checked, then the session information is
 
 You can delete the stored session data manually at any time by using the `Clear History` option in the Privacy tab of Settings dialog.
 
-<img src="/settings-privacy.png" alt="Clear History" width=700 />
+![Settings](/neurodeskapp/settings-privacy.png "Clear History")
 
 ## Configuration and data files
 
@@ -106,7 +106,7 @@ Neurodesk App stores its data in the following locations:
 
 - By choice, in the setting window below, select `Additional Directory` on the left side bar, click `Change` button to select the local directory, then click `Apply & restart`. The next time you start the app, the data from the local directory can be found in /home/jovyan/data.
 
-<img src="/additional_dir.png" alt="Add data" width=700 />
+![Additional Directory](/neurodeskapp/additional_dir.png "Add data")
 
 ## Uninstalling Neurodesk App
 

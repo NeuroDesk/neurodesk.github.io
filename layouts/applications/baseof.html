@@ -1,4 +1,4 @@
-{{ $js := resources.Get "js/search.js" | js.Build (dict "params" (dict "api" "http://localhost:1313/docs/overview/applications/")) }}
+{{ $js := resources.Get "js/search.js" | js.Build (dict "params" (dict "api" "http://localhost:1313/applications/")) }}
 <!doctype html>
 <html lang="{{ .Site.Language.Lang }}" class="no-js">
   <head>

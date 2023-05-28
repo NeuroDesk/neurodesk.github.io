@@ -41,6 +41,19 @@ In Linux the containers run as normal processes and you can use htop and top to 
 ## Can I just use the plain containers?
 Yes, there are multiple ways of using the containers directly and we provide an overview here: https://www.neurodesk.org/docs/neurocontainers/
 
+## How to keep your modifications in the container
+We designed neurodesk with reproducibility as a main goal, so the desktop containers should not be modified if one aims for full reproducibility. However, there is one good option to keep your settings across different container versions: You can write a shell script that installs additional packages and modifies the environment so it's perfect for you. This script can then be re-executed in a new desktop version and will enable a reproducible customization.
+
+Another option is to "save" your docker container including all changes you made. This could be useful when your changes are too difficult to write a shell script or when you do not care about reproducibility as much and you just want to get the job done. To do this you can commit (https://docs.docker.com/engine/reference/commandline/commit/) your container and by uploading the container to your own docker hub you could even share it. 
+
+## How to force a complete container download to your system
+To increase speed and reliability of Neurodesktop we mount the application containers from a CVMFS mount and download only the files required to run your current task. Although we aim to keep everything on there reproducible, there might be a reason that you want to fully download the containers to your system. You can force this behaviour by adding another parameter to the docker call: `-e CVMFS_DISABLE=true`
+
+For windows an example would look like this:
+```cmd
+docker run --shm-size=1gb -it --privileged --user=root --name neurodesktop -v C:/neurodesktop-storage:/neurodesktop-storage -e CVMFS_DISABLE=true -p 8888:8888 -h neurodesktop-{{< params/neurodesktop/version >}} vnmd/neurodesktop:{{< params/neurodesktop/version >}}
+```
+
 ## Freeview 7.2.0 crashes when I open files
 Freeview (and Freesurfer!) needs a valid license to work and we are not allowed to distribute a license with Neurodesk!
 
@@ -75,6 +88,11 @@ This seems to be a bug in Guacamole and RDP in combination with certain browsers
 2) connect to the desktop using an RDP client instead of the browser (https://www.neurodesk.org/docs/neurodesktop/getting-started/windows/#using-an-rdp-client)
 
 ## Copy-Paste and Clipboard issues
+
+### How top copy and paste text
+You can copy and paste text within Neurodesktop and between Neurodektop and your host computer using the regular keyboard shortcuts (CTRL+C, CTRL+X, and CTRL+V). Note however that some applications (e.g., command-line terminal) are using other keyboard shortcuts. You can usually find them in the "Edit" menu of the relevant application.
+
+Note for Mac Users: You will need to use a combination of CTRL and Command shortcuts in order to copy and paste text between Neurodesktop and the host computer. For example, copy text from your Mac with Command+C and then paste it into Neurodesktop using CTRL+V. For the other way around, you'd use CTRL+C in Neurodesktop and then Command+V on the Mac.
 
 ### I cannot copy and paste text within Neurodesktop using keyboard shortcuts
 If you're using Mac, you might be trying to use Mac keyboard shortcuts, but Neurodesktop is using Linux keyboard shortcuts (CTRL+C and CTRL+V)
