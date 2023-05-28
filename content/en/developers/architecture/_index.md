@@ -6,3 +6,5 @@ description: >
   The architecture of the Neurodesk ecosystem
 ---
 
+
+![architecture](/NeurodeskArchitecture.png 'architecture')
