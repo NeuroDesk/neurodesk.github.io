@@ -1,56 +1,71 @@
-name: hugo-build
-
+name: check-broken-links
 on:
-  pull_request:
-    types: [opened, synchronize]
   push:
+    branches: ["main"]
+  repository_dispatch:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: "pages"
+  cancel-in-progress: true
+
+defaults:
+  run:
+    shell: bash
 
 jobs:
-  hugo-build:
+  build:
     runs-on: ubuntu-latest
+    env:
+      HUGO_VERSION: 0.102.3
     steps:
-      - uses: actions/checkout@v2
-
-      - name: Checkout submodules
-        shell: bash
+      - name: Install Hugo CLI
         run: |
-          auth_header="$(git config --local --get http.https://github.com/.extraheader)"
-          git submodule sync --recursive
-          git -c "http.extraheader=$auth_header" -c protocol.version=2 submodule update --init --force --recursive --depth=1
+          wget -O ${{ runner.temp }}/hugo.deb https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/hugo_extended_${HUGO_VERSION}_Linux-64bit.deb \
+          && sudo dpkg -i ${{ runner.temp }}/hugo.deb
 
-      - name: Setup Hugo
-        uses: peaceiris/actions-hugo@v2
+      - name: Checkout
+        uses: actions/checkout@v3
         with:
-          hugo-version: '0.62.0'
+          submodules: recursive
 
-      - name: Build
+      - name: Setup Pages
+        id: pages
+        uses: actions/configure-pages@v2
+
+      - name: Set baseURL
+        run: sed -i "s|https://www.neurodesk.org/|${{ steps.pages.outputs.base_url }}/|g" config.toml
+
+      - name: Install dependencies
+        run: | 
+          npm install
+
+      - name: Build with Hugo
+        env:
+          HUGO_ENVIRONMENT: production
+          HUGO_ENV: production
         run: |
-          hugo --gc
-          cp LICENSE README.md public/
-          echo "s|https://www.neurodesk.org/|${{ steps.pages.outputs.base_url }}/|g" > public/CNAME
+          echo "BASEURL=${{ steps.pages.outputs.base_url }}"
+          hugo \
+            --minify \
+            --baseURL "${{ steps.pages.outputs.base_url }}/"
 
       - name: Check broken links
         env:
-          INPUT_URL: "s|https://www.neurodesk.org/|${{ steps.pages.outputs.base_url }}/|g"
-          INPUT_PAGES_PATH: public
-          INPUT_CMD_PARAMS: '--verbose --buffer-size=8192 --max-connections=10 --color=always --skip-tls-verification --exclude="(mylabs.dev|linkedin.com)"'
+            INPUT_URL: "${{ steps.pages.outputs.base_url }}" 
+            INPUT_CMD_PARAMS: '--verbose --buffer-size=8192 --max-connections=10 --color=always --skip-tls-verification --exclude="(mylabs.dev|linkedin.com)"'
         run: |
-          wget -qO- https://raw.githubusercontent.com/ruzickap/action-my-broken-link-checker/v2/entrypoint.sh | bash
+            wget -qO- https://raw.githubusercontent.com/ruzickap/action-my-broken-link-checker/v2/entrypoint.sh | bash
 
       - name: Check links using container
         uses: ruzickap/action-my-broken-link-checker@v2
         with:
-          url: https://my-testing-domain.com
-          pages_path: ./public/
-          cmd_params: '--verbose --buffer-size=8192 --max-connections=10 --color=always --skip-tls-verification --header="User-Agent:curl/7.54.0" --exclude="(mylabs.dev|linkedin.com)"'
-          debug: true
-
-      - name: Deploy
-        uses: peaceiris/actions-gh-pages@v3
-        if: ${{ github.event_name }} == 'push' && github.ref == 'refs/heads/main'
-        env:
-          ACTIONS_DEPLOY_KEY: ${{ secrets.ACTIONS_DEPLOY_KEY }}
-          PUBLISH_BRANCH: gh-pages
-          PUBLISH_DIR: public
-        with:
-          forceOrphan: true
+            url: https://my-testing-domain.com
+            pages_path: ./public/
+            cmd_params: '--verbose --buffer-size=8192 --max-connections=10 --color=always --skip-tls-verification --header="User-Agent:curl/7.54.0" --exclude="(mylabs.dev|linkedin.com)"'
+            debug: true
