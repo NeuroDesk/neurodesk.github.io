@@ -51,5 +51,5 @@ There are a few differences between the open-source version of Neurodesk and wha
 https://tutorials.rc.nectar.org.au/virtual-desktop-service/01-overview
 
 13) For a specific explanation on how to launch the various applications available in the Neurodesktop desktop, follow the instructions here:
-https://www.neurodesk.org/docs/neurodesktop/whats-next/#how-to-launch-applications
+https://www.neurodesk.org/docs/getting-started/neurodesktop/
 

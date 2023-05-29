@@ -4,8 +4,6 @@ linkTitle: "MacOS"
 weight: 2
 description: >
   Install neurodesktop on MacOS
-aliases: 
-- /docs/Getting Started/Neurodesktop/mac.md
 ---
 
 ## Minimum System Requirements
@@ -21,7 +19,7 @@ Install Docker from here: https://docs.docker.com/get-docker/
 Docker for MacOS by default runs with 2GB Memory. For actual workloads, 4GB Memory minimum for docker is highly recommended
 {{< /alert >}}
 
-1. Open the Docker Desktop and Navigate to the Resources tab. Instructions found at https://docs.docker.com/desktop/mac/#resources
+1. Open the Docker Desktop and Navigate to the Resources tab. Instructions found at https://docs.docker.com/desktop/get-started/#resources
 
 2. Increase the Memory slider from 2.00 GB to 4.00 GB (or greater)
 3. Increase Swap slider from 1GB to 2GB (or greater)

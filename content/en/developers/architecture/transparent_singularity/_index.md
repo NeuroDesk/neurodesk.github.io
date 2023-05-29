@@ -17,9 +17,9 @@ export SINGULARITY_BINDPATH="/gpfs1/,/QRISdata,/data"
 ```
 
 ## This gives you a list of all tested images available in neurodesk:
-https://github.com/NeuroDesk/neurodesk/blob/master/cvmfs/log.txt
+https://github.com/NeuroDesk/neurocommand/blob/main/cvmfs/log.txt
 ```
-curl -s https://raw.githubusercontent.com/NeuroDesk/neurodesk/master/cvmfs/log.txt
+curl -s https://raw.githubusercontent.com/NeuroDesk/neurocommand/main/cvmfs/log.txt
 ```
 
 ## Clone repo into a folder with the intended image name

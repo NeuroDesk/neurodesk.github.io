@@ -149,5 +149,5 @@ Run the VNC Client and connect to `localhost::5901`
 
 Enter `password` and click Ok.
 
-![tigervncclient-password](/neurodesktop/getting-started/vnc/tigervncclient-password.png 'tigervncclient-password')
+![tigervncclient-password](/getting-started/neurodesktop/vnc/tigervncclient-password.png 'tigervncclient-password')
 

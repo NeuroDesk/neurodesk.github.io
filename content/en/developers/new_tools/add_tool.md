@@ -32,7 +32,7 @@ Examples:
 
 # Adding new tools via our interactive container builder:
 This is the recommended way for all contributors:
-https://www.neurodesk.org/docs/neurocontainers/contribute/
+https://www.neurodesk.org/developers/new_tools/contribute/
 
 
 
