@@ -18,7 +18,7 @@ ssh -L 8080:127.0.0.1:8080 USER@IP
 ```
 
 ### 2. Install Docker
-Install Docker on the cloud instance from here: https://docs.docker.com/get-docker/. Additional information available here: https://www.neurodesk.org/docs/neurodesktop/getting-started/linux/#installing-docker 
+Install Docker on the cloud instance from here: https://docs.docker.com/get-docker/. Additional information available here: https://www.neurodesk.org/docs/getting-started/neurodesktop/linux/#installing-docker 
 
 ### 3. Run Neurodesktop
 Create a local folder ~/neurodesktop-storage on the cloud instance to store persistent data (data that will not disappear if neurodesktop is stopped)
@@ -60,7 +60,7 @@ Even if your connection to the cloud instance is broken, and the terminal does n
 
 4. To access neurodesktop, open your web browser and type in one of those provided URLs provided in your terminal (e.g. `http://127.0.0.1:8888/lab?token=your_unique_token`)
 
-If the computer runs Linux, check specific instructions at https://www.neurodesk.org/docs/neurodesktop/getting-started/linux/, Option 2, Step 3.
+If the computer runs Linux, check specific instructions at https://www.neurodesk.org/docs/getting-started/neurodesktop/linux/, Option 2, Step 3.
 
 5. Press on "Desktop Auto-Resolution" under "ALL CONNECTIONS"
 
@@ -192,8 +192,8 @@ ssh -L 5901:127.0.0.1:5901 USER@IP
 
 Run the VNC Client and connect to `localhost::5901`
 
-![tigervncclient](/neurodesktop/getting-started/vnc/tigervncclient.png 'tigervncclient')
+![tigervncclient](/getting-started/neurodesktop/vnc/tigervncclient.png 'tigervncclient')
 
 Enter `password` and click Ok.
 
-![tigervncclient-password](/neurodesktop/getting-started/vnc/tigervncclient-password.png 'tigervncclient-password')
+![tigervncclient-password](/getting-started/neurodesktop/vnc/tigervncclient-password.png 'tigervncclient-password')

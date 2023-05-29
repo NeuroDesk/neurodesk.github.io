@@ -42,8 +42,8 @@ data.nii.gz
 
 ## Install Neurodesk on windows and mount external storage on your host computer 
 References:
-https://neurodesk.github.io/docs/neurodesktop/getting-started/windows/
-https://neurodesk.github.io/docs/neurodesktop/storage/
+https://neurodesk.github.io/docs/getting-started/neurodesktop/windows/
+https://neurodesk.github.io/docs/getting-started/storage/
 
 N/B: Constructing the structural connectivity using dMRI HCP data is computationally intensive. Thus, ensure you have sufficient disk space (>100GB) and RAM size (16, 32GB)
 
