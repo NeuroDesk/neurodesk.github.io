@@ -27,7 +27,7 @@ Conda is promptly available on Neurodesk. The default environment is not persist
 
 1. In a Terminal window, type in:
 
-![1_terminal](/static/conda/1_terminal.png '1_terminal')
+![1_terminal](/conda/1_terminal.png '1_terminal')
 
 For *Python*:
 ```bash
@@ -59,8 +59,8 @@ pip install -r requirements.txt
 
 4. Given the available environment, when you open a new Launcher tab, there will be a new Notebook option for launching a Jupyter Notebook with that environment active. 
 
-![2_env](/static/conda/2_env.png '2_env')
+![2_env](/conda/2_env.png '2_env')
 
 Switching the environment on a Jupyter Notebook is also possible on the top right corner dropdown menu.
 
-![3_notebook](/static/conda/3_notebook.png '3_notebook')
+![3_notebook](/conda/3_notebook.png '3_notebook')
