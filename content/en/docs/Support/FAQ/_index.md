@@ -247,7 +247,7 @@ rm -rf ~/.local/share/Trash/
 ```
 
 ## How can I contribute new containers?
-We are still working on making this easier, but here is the current workflow to [add new applications](/developers/new_tools/).
+We are still working on making this easier, but here is the current workflow to [add new applications](/developers/new_tools).
 
 ## I couldn't find the information I was looking for. Where can I get additional assistance?
 Neurodesk is an open-source project that is always evolving. If you are experiencing an issue not listed here, you can reach out to us on Github.
@@ -255,4 +255,4 @@ Post your question at https://github.com/orgs/NeuroDesk/discussions or open a [n
 
 
 ## How do I get my files in there?
-It depends where you are running Neurodesk and where your files are. We provide many different ways from drag-and-drop, to cloud storage to file mounts in [Storage in Neurodesk](/docs/getting-started/storage/).
+It depends where you are running Neurodesk and where your files are. We provide many different ways from drag-and-drop, to cloud storage to file mounts in [Storage in Neurodesk](/docs/getting-started/storage).

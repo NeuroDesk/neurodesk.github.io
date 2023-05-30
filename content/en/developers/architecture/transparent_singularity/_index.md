@@ -28,7 +28,7 @@ git clone https://github.com/NeuroDesk/transparent-singularity convert3d_1.0.0_2
 ```
 
 ## Install
-This will create scripts for every binary in the container located in the $DEPLOY_PATH inside the container. It will also create activate and deactivate scripts and module files for lmod (https://lmod.readthedocs.io/en/latest/)
+This will create scripts for every binary in the container located in the $DEPLOY_PATH inside the container. It will also create activate and deactivate scripts and module files for lmod (https://lmod.readthedocs.io/en/latest)
 ```
 cd convert3d_1.0.0_20210104
 ./run_transparent_singularity.sh convert3d_1.0.0_20210104

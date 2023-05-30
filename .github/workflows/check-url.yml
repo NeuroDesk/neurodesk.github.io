@@ -38,20 +38,6 @@ jobs:
       - name: Set baseURL
         run: sed -i "s|https://www.neurodesk.org/|${{ steps.pages.outputs.base_url }}/|g" config.toml
 
-      - name: Install dependencies
-        run: | 
-          npm install
-
-      - name: Build with Hugo
-        env:
-          HUGO_ENVIRONMENT: production
-          HUGO_ENV: production
-        run: |
-          echo "BASEURL=${{ steps.pages.outputs.base_url }}"
-          hugo \
-            --minify \
-            --baseURL "${{ steps.pages.outputs.base_url }}/"
-
       - name: Check broken links
         env:
           INPUT_URL: "${{ steps.pages.outputs.base_url }}" 

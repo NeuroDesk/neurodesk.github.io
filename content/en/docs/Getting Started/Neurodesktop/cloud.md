@@ -106,7 +106,6 @@ You can also connect to this cloud instance from your iOS device :) For this ins
 | Cloud provider | link                                                                                    |
 |----------------|-----------------------------------------------------------------------------------------|
 | Oracle         | https://mri.sbollmann.net/index.php/2020/12/08/run-neurodesk-on-oracle-cloud-free-tier/ |
-| Azure          | https://henryjburg.medium.com/neurodesk-running-on-azure-3e38c590a152                   |
 
 ## Using an RDP Client
 Open an SSH connection to your cloud instance with the following command
@@ -192,8 +191,8 @@ ssh -L 5901:127.0.0.1:5901 USER@IP
 
 Run the VNC Client and connect to `localhost::5901`
 
-![tigervncclient](/getting-started/neurodesktop/vnc/tigervncclient.png 'tigervncclient')
+![tigervncclient](/neurodesktop/getting-started/vnc/tigervncclient.png 'tigervncclient')
 
 Enter `password` and click Ok.
 
-![tigervncclient-password](/getting-started/neurodesktop/vnc/tigervncclient-password.png 'tigervncclient-password')
+![tigervncclient-password](/neurodesktop/getting-started/vnc/tigervncclient-password.png 'tigervncclient-password')

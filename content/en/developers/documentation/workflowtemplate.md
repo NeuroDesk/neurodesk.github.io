@@ -34,7 +34,7 @@ Welcome to the workflow (tutorial) template, which you can use to contribute you
 ## How to contribute a new workflow
 
 Begin by creating a copy of our documentation that you can edit:
-1. Visit the github repository for the Neurodesk documentation (https://github.com/NeuroDesk/neurodesk.github.io).
+1. Visit the github repository for the Neurodesk documentation (https://github.com/NeuroDesk/neurodesk.github.io ).
 2. [Fork](https://docs.github.com/en/get-started/quickstart/fork-a-repo) the repository.
 - _You should now have your own copy of the documentation, which you can alter without affecting our official documentation. You should see a panel stating "This branch is up to date with Neurodesk:main." If someone else makes a change to the official documentation, the statement will change to reflect this. You can bring your repository up to date by clicking "Fetch upstream"._ 
 
@@ -42,7 +42,7 @@ Next, create your workflow:
 1. [Clone](https://docs.github.com/en/get-started/quickstart/fork-a-repo#cloning-your-forked-repository) your forked version of our documentation to a location of your choice on your computer. 
 2. In this new folder, navigate to "neurodesk.github.io/content/en/tutorials" and then navigate to the subfolder you believe your workflow belongs in (e.g. "/functional_imaging"). 
 3. Create a new, appropriately named markdown file to house your workflow. (e.g. "/physio.md")
-4. Open this file in the editor of your choice (we recommend [vscode](https://code.visualstudio.com/)) and populate it with your workflow! Please use this template as a style guide, it can be located at "neurodesk.github.io\content\en\tutorials\documentation\workflowtemplate.md". You're also welcome to have a look at other the workflows already documented on our website for inspiration. 
+4. Open this file in the editor of your choice (we recommend [vscode](https://code.visualstudio.com)) and populate it with your workflow! Please use this template as a style guide, it can be located at "neurodesk.github.io\content\en\tutorials\documentation\workflowtemplate.md". You're also welcome to have a look at other the workflows already documented on our website for inspiration. 
 
 Finally, contribute your new workflow to the official documentation!:
 1. Once you are happy with your workflow, make sure you [commit](https://github.com/git-guides/git-commit) all your changes and [push](https://github.com/git-guides/git-push) these local commits to github.
@@ -58,7 +58,7 @@ Thanks so much for taking the time to contribute your workflow to the Neurodesk 
 
 ## Formatting guidelines
 
-You can embelish your text in this tutorial using markdown conventions; text can be **bold**, _italic_, or ~~strikethrough~~. You can also add [Links](https://www.neurodesk.org/), and you can organise your tutorial with headers, starting at level 2 (the page title is a level 1 header):
+You can embelish your text in this tutorial using markdown conventions; text can be **bold**, _italic_, or ~~strikethrough~~. You can also add [Links](https://www.neurodesk.org), and you can organise your tutorial with headers, starting at level 2 (the page title is a level 1 header):
 
 ## Level 2 heading
 
