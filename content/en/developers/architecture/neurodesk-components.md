@@ -8,7 +8,7 @@ description: >
 
 ## Neurodesktop: Recommended for Beginners
 _Neurodesktop_ is a compact Docker container with a browser-accessible virtual desktop that allows you develop and implement data analysis, pre-equipped with basic fMRI and EEG analysis tools.
-To get started, see: [Neurodesktop](/docs/getting-started/neurodesktop/) ([Github](https://github.com/NeuroDesk/neurodesktop))
+To get started, see: [Neurodesktop](/docs/getting-started/neurodesktop) ([Github](https://github.com/NeuroDesk/neurodesktop))
 * docker container with interface modifications
 * contains tools necessary to manage workflows in sub-containers: vscode, git
 * CI: builds docker image and tests if it runs; tests if CVMFS servers are OK before deployment
@@ -18,7 +18,7 @@ To get started, see: [Neurodesktop](/docs/getting-started/neurodesktop/) ([Githu
 
 _Neurocommand_ offers the option to install and manage multiple distinct containers for more advanced users who prefer a command-line interface. _Neurocommand_ is the recommended interface for users seeking to use Neurodesk in high performance computing (HPC) environments. 
 
-To get started, see: [Neurocommand](/docs/getting-started/neurocommand/) ([Github](https://github.com/NeuroDesk/neurocommand))
+To get started, see: [Neurocommand](/docs/getting-started/neurocommand) ([Github](https://github.com/NeuroDesk/neurocommand))
 * script to install and manage multiple containers using transparent singularity on any linux system
 * this repo also handles the creation of menu entries in a general form applicable to different desktop environments
 * this repo can be re-used in other projects like CVL and when installing it on bare-metal workstations
@@ -36,7 +36,7 @@ More info: [transparent-singularity](/developers/architecture/transparent_singul
 ## Neurocontainers: 
 _neurocontainers_ contains scripts for building sub-containers for neuroimaging data-analysis software. These containers can be used alongside _neurocommand_ or _transparent-singularity_. 
 
-To get started, see: [Neurocontainers](/docs/getting-started/neurocontainers/) ([Github](https://github.com/NeuroDesk/neurocontainers))
+To get started, see: [Neurocontainers](/docs/getting-started/neurocontainers) ([Github](https://github.com/NeuroDesk/neurocontainers))
 * build scripts for neuro-sub-containers 
 * CI: building and testing of containers 
 * CD: pushing containers to github and dockerhub registry

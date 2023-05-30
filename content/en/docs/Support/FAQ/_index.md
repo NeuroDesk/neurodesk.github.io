@@ -13,7 +13,7 @@ description: >
 Neurodesk provides a containerised data analysis environment to facilitate reproducible analysis of neuroimaging data. Analysis pipelines for neuroimaging data typically rely on specific versions of packages and software, and are dependent on their native operating system. These dependencies mean that a working analysis pipeline may fail or produce different results on a new computer, or even on the same computer after a software update. Neurodesk provides a platform in which anyone, anywhere, using any computer can reproduce your original research findings given the original data and analysis code. 
 
 More information: 
-- [A Neurodesk Overview](/docs/overview/)
+- [A Neurodesk Overview](/docs/overview)
 - A 2 minute video explaining what Neurodesk is: [Neurodesk in 2 minutes](https://www.youtube.com/watch?v=JLv_5fycugw)
 - An online interactive demo you can try RIGHT NOW in your browser: https://neurodesk.github.io/docs/getting-started/neurodesktop/play/
 
@@ -24,16 +24,16 @@ In-depth information:
 - A 35 minute video explaining the technical details of Neurodesk: [Neurodesk in 35 minutes - behind the scenes](https://youtu.be/V5gAA9NiX_s)
 
 ## What applications are included in Neurodesk?
-You can check out the complete list of [these applications](/docs/overview/applications/)
+You can check out the complete list of [these applications](/docs/overview/applications)
 
 ## How should I cite the tools I am using and Neurodesk itself?
 [See here](/docs/overview/how-to-cite-us)
 
 ## Can I run Neurodesk on an HPC without Docker?
-Yes, our project aims to run on the hardware you have access to. However, without docker support you cannot use our desktop interface [NeuroDesktop](/docs/getting-started/neurodesktop) but you can still use the command line interface [NeuroCommand on HPC](https://www.neurodesk.org/docs/getting-started/neurocommand/). This works well for batch processing on HPCs once you developed your pipeline in our desktop interface. If your HPC provides a desktop interface you can use all our graphical applications without any issues and the GUIs even work via SSH x-forwarding - it's not the most performant experience, but it works well enough.
+Yes, our project aims to run on the hardware you have access to. However, without docker support you cannot use our desktop interface [NeuroDesktop](/docs/getting-started/neurodesktop) but you can still use the command line interface [NeuroCommand on HPC](https://www.neurodesk.org/docs/getting-started/neurocommand). This works well for batch processing on HPCs once you developed your pipeline in our desktop interface. If your HPC provides a desktop interface you can use all our graphical applications without any issues and the GUIs even work via SSH x-forwarding - it's not the most performant experience, but it works well enough.
 
 ## Is there reduced performance when using containers?
-If you are running containers on Linux there is no performance penalty - on an HPC with a Lustre filesystem it can even be faster to run our containers than running natively on the filesystem (because meta data operations are shifted to the compute node - more information can be found here: Rioux, Pierre, Gregory Kiar, Alexandre Hutton, Alan C. Evans, and Shawn T. Brown. ‘Deploying Large Fixed File Datasets with SquashFS and Singularity’. ArXiv:2002.06129 [Cs], 14 February 2020. https://arxiv.org/abs/2002.06129). However, running Neurodesktop on Windows and Mac will have a performance penalty, because Linux runs in a Hypervisor on these systems.   
+If you are running containers on Linux there is no performance penalty - on an HPC with a Lustre filesystem it can even be faster to run our containers than running natively on the filesystem (because meta data operations are shifted to the compute node - more information can be found here: Rioux, Pierre, Gregory Kiar, Alexandre Hutton, Alan C. Evans, and Shawn T. Brown. ‘Deploying Large Fixed File Datasets with SquashFS and Singularity’. ArXiv:2002.06129 [Cs], 14 February 2020. https://arxiv.org/abs/2002.06129 ). However, running Neurodesktop on Windows and Mac will have a performance penalty, because Linux runs in a Hypervisor on these systems.   
 
 ## How can I see how much resources Neurodesk containers need?
 In Linux the containers run as normal processes and you can use htop and top to inspect the resource footprint. For Windows and Mac the information is not readily available and we wrote some information here: [Troubleshooting](https://www.neurodesk.org/docs/support/faq/#i-got-an-error-message-x-killed-or-not-enough-memory)
@@ -247,7 +247,7 @@ rm -rf ~/.local/share/Trash/
 ```
 
 ## How can I contribute new containers?
-We are still working on making this easier, but here is the current workflow to [add new applications](/developers/new_tools/).
+We are still working on making this easier, but here is the current workflow to [add new applications](/developers/new_tools).
 
 ## I couldn't find the information I was looking for. Where can I get additional assistance?
 Neurodesk is an open-source project that is always evolving. If you are experiencing an issue not listed here, you can reach out to us on Github.
@@ -255,4 +255,4 @@ Post your question at https://github.com/orgs/NeuroDesk/discussions or open a [n
 
 
 ## How do I get my files in there?
-It depends where you are running Neurodesk and where your files are. We provide many different ways from drag-and-drop, to cloud storage to file mounts in [Storage in Neurodesk](/docs/getting-started/storage/).
+It depends where you are running Neurodesk and where your files are. We provide many different ways from drag-and-drop, to cloud storage to file mounts in [Storage in Neurodesk](/docs/getting-started/storage).

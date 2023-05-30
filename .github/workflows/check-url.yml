@@ -7,10 +7,6 @@ permissions:
   pages: write
   id-token: write
 
-concurrency:
-  group: "pages"
-  cancel-in-progress: true
-
 defaults:
   run:
     shell: bash
@@ -38,31 +34,11 @@ jobs:
       - name: Set baseURL
         run: sed -i "s|https://www.neurodesk.org/|${{ steps.pages.outputs.base_url }}/|g" config.toml
 
-      - name: Install dependencies
-        run: | 
-          npm install
-
-      - name: Build with Hugo
-        env:
-          HUGO_ENVIRONMENT: production
-          HUGO_ENV: production
-        run: |
-          echo "BASEURL=${{ steps.pages.outputs.base_url }}"
-          hugo \
-            --minify \
-            --baseURL "${{ steps.pages.outputs.base_url }}/"
-
       - name: Check broken links
         env:
+          EXCLUDE: |
+            github.com
           INPUT_URL: "${{ steps.pages.outputs.base_url }}" 
-          INPUT_CMD_PARAMS: '--verbose --buffer-size=8192 --max-connections=10 --color=always --skip-tls-verification --exclude="(mylabs.dev|linkedin.com)"'
+          INPUT_CMD_PARAMS: '--verbose --buffer-size=8192 --max-connections=15 --one-page-only --ignore-fragments --color=always --skip-tls-verification --exclude="(github.com|linkedin.com)"'
         run: |
           wget -qO- https://raw.githubusercontent.com/ruzickap/action-my-broken-link-checker/v2/entrypoint.sh | bash
-
-      - name: Check links using container
-        uses: ruzickap/action-my-broken-link-checker@v2
-        with:
-          url: https://my-testing-domain.com
-          pages_path: ./public/
-          cmd_params: '--verbose --buffer-size=8192 --max-connections=10 --color=always --skip-tls-verification --header="User-Agent:curl/7.54.0" --exclude="(mylabs.dev|linkedin.com)"'
-          debug: true

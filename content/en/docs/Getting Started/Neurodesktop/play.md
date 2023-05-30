@@ -32,9 +32,9 @@ See [Neurodesk Play](#neurodesk-play) for trying Neurodesk without sign-up or sa
 {{< /alert >}}
 
 To use Neurodesk Lab, choose the link below closest to your location:
-- [Asia/Pacific](https://bhsydney.neurodesk.org/)
-- [North America](https://bhnam.neurodesk.org/)
-- [Europe](https://bheurope.neurodesk.org/)
+- [Asia/Pacific](https://bhsydney.neurodesk.org)
+- [North America](https://bhnam.neurodesk.org)
+- [Europe](https://bheurope.neurodesk.org)
 
 
 ## How to transfer data onto Neurodesk Play and Lab

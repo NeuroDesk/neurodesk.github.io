@@ -2,8 +2,6 @@
 title: "Examples"
 linkTitle: "Examples"
 weight: 100
-aliases:
-- /docs/
 description: >
   Examples
 ---
