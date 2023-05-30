@@ -12,7 +12,7 @@ Link to Nectar Virtual Desktop Service: **https://desktop.rc.nectar.org.au**
 
 {{< /alert >}}
 {{< alert color="warning">}}
-This option is only available to Australian researchers. See [here](https://desktop.rc.nectar.org.au/about/) for more information
+This option is only available to Australian researchers. See [here](https://desktop.rc.nectar.org.au/about) for more information
 
 {{< /alert >}}
 
