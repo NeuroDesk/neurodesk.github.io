@@ -39,6 +39,6 @@ jobs:
           EXCLUDE: |
             github.com
           INPUT_URL: "${{ steps.pages.outputs.base_url }}" 
-          INPUT_CMD_PARAMS: '--verbose --buffer-size=8192 --max-connections=15 --color=always --skip-tls-verification --exclude="(github.com|linkedin.com)"'
+          INPUT_CMD_PARAMS: '--verbose --buffer-size=8192 --max-connections=15 --timeout=20 --color=always --skip-tls-verification --exclude="(github.com|linkedin.com)"'
         run: |
           wget -qO- https://raw.githubusercontent.com/ruzickap/action-my-broken-link-checker/v2/entrypoint.sh | bash
