@@ -39,7 +39,7 @@ aria2c https://objectstorage.us-ashburn-1.oraclecloud.com/n/sd63xuke79z3/b/neuro
 ```
 
 ## Transparent Singularity
-The singularity containers can be also be used in combination with our [Transparent Singularity Tool](/developers/architecture/transparent_singularity/)  tool, that wraps the executables inside a container to make them easily available for pipelines. More information can be found here: 
+The singularity containers can be also be used in combination with our [Transparent Singularity Tool](/developers/architecture/transparent_singularity)  tool, that wraps the executables inside a container to make them easily available for pipelines. More information can be found here: 
 
 one example to do this is:
 ```shell

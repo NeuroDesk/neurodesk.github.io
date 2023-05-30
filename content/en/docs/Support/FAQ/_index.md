@@ -13,7 +13,7 @@ description: >
 Neurodesk provides a containerised data analysis environment to facilitate reproducible analysis of neuroimaging data. Analysis pipelines for neuroimaging data typically rely on specific versions of packages and software, and are dependent on their native operating system. These dependencies mean that a working analysis pipeline may fail or produce different results on a new computer, or even on the same computer after a software update. Neurodesk provides a platform in which anyone, anywhere, using any computer can reproduce your original research findings given the original data and analysis code. 
 
 More information: 
-- [A Neurodesk Overview](/docs/overview/)
+- [A Neurodesk Overview](/docs/overview)
 - A 2 minute video explaining what Neurodesk is: [Neurodesk in 2 minutes](https://www.youtube.com/watch?v=JLv_5fycugw)
 - An online interactive demo you can try RIGHT NOW in your browser: https://neurodesk.github.io/docs/getting-started/neurodesktop/play/
 
@@ -24,7 +24,7 @@ In-depth information:
 - A 35 minute video explaining the technical details of Neurodesk: [Neurodesk in 35 minutes - behind the scenes](https://youtu.be/V5gAA9NiX_s)
 
 ## What applications are included in Neurodesk?
-You can check out the complete list of [these applications](/docs/overview/applications/)
+You can check out the complete list of [these applications](/docs/overview/applications)
 
 ## How should I cite the tools I am using and Neurodesk itself?
 [See here](/docs/overview/how-to-cite-us)

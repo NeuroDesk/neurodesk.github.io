@@ -36,6 +36,8 @@ jobs:
 
       - name: Check broken links
         env:
+          EXCLUDE: |
+            github.com
           INPUT_URL: "${{ steps.pages.outputs.base_url }}" 
           INPUT_CMD_PARAMS: '--verbose --buffer-size=8192 --max-connections=10 --color=always --skip-tls-verification --exclude="(mylabs.dev|linkedin.com)"'
         run: |
