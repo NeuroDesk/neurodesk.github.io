@@ -4,6 +4,8 @@ linkTitle: "mriqc"
 weight: 1
 tags: ["mriqc", "documentation", "preprocessing"]
 author: Kelly G. Garner
+aliases:
+- /tutorials/functional_imaging/mriqc_cvl
 description: > 
   A brief guide to using mriqc with neurodesk, using data from the STRIAVISE project.
 ---

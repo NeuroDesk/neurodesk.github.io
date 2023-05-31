@@ -2,6 +2,8 @@
 title: "Quantitative Susceptibility Mapping"
 linkTitle: "QSM"
 weight: 1
+aliases:
+- /tutorials/phase_processing/qsm
 description: >
   Example workflow for Quantitative Susceptibility Mapping
 ---

@@ -4,6 +4,8 @@ linkTitle: "osfclient"
 weight: 1
 tags: ["osfclient"]
 author: Steffen Bollmann
+aliases:
+- /tutorials/open_data/osfclient
 description: >
   Using osfclient to publish and access open data on OSF
 ---

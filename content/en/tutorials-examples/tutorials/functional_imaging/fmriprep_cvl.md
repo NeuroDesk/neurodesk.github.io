@@ -4,6 +4,8 @@ linkTitle: "fmriprep"
 weight: 1
 tags: ["fmriprep", "documentation", "preprocessing"]
 author: Kelly G. Garner
+aliases:
+- /tutorials/functional_imaging/fmriprep_cvl
 description: > 
   A brief guide to using fmriprep with neurodesk, using data from the STRIAVISE project.
 ---

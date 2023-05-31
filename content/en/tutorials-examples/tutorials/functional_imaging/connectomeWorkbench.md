@@ -4,6 +4,8 @@ linkTitle: "Connectome Workbench"
 weight: 1
 tags: ["Connectome Workbench", "functional imaging"]
 author: Fernanda L. Ribeiro
+aliases:
+- /tutorials/functional_imaging/connectomeWorkbench
 description: > 
   A tutorial for accessing and visualizing the 7T HCP Retinotopy Dataset on Connectome Workbench.
 ---

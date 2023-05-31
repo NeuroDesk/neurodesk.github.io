@@ -4,6 +4,8 @@ linkTitle: "conda envs"
 weight: 1
 tags: ["python", "conda", "programming"]
 author: Fernanda L. Ribeiro
+aliases:
+- /tutorials/programming/conda
 description: > 
   A tutorial for setting up your conda environments on Neurodesk.
 ---

@@ -4,6 +4,8 @@ linkTitle: "lcmodel"
 weight: 1
 tags: ["lcmodel"]
 author: Steffen Bollmann
+aliases:
+- /tutorials/spectroscopy/lcmodel
 description: >
   Using lcmodel, you can analyze MR spectroscopy data.
 ---
