@@ -2,6 +2,8 @@
 title: "Release History"
 linkTitle: "Release History"
 weight: 10
+aliases:
+- /docs/Neurodesktop/release-history
 description: >-
      Previous releases of neurodesktop
 ---
