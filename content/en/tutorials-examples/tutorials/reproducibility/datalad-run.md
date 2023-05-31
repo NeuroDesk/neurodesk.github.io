@@ -4,6 +4,8 @@ linkTitle: "datalad run"
 weight: 1
 tags: ["datalad"]
 author: Sin Kim
+aliases:
+- /tutorials/reproducibility/datalad-run
 description: >
   Using datalad run, you can precisely record results of your analysis scripts.
 ---

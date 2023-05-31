@@ -2,6 +2,8 @@
 title: "FreeSurfer"
 linkTitle: "FreeSurfer"
 weight: 1
+aliases:
+- /tutorials/structural_imaging/freesurfer
 description: >
   Example workflow for FreeSurfer
 ---

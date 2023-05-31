@@ -2,6 +2,8 @@
 title: "Analysing EEG Data with MNE"
 linkTitle: "MNE-Python: EEG"
 weight: 1
+aliases:
+- /tutorials/electrophysiology/EEG_mne-python
 description: >
   Use mne-python to load, pre-process, and plot example EEG data in a jupyter notebook through vscode. 
 ---

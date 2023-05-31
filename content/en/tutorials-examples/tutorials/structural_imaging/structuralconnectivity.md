@@ -2,6 +2,8 @@
 title: "Structural connectivity dMRI"
 linkTitle: "Structural connectivity dMRI"
 weight: 1
+aliases:
+- /tutorials/structural_imaging/structuralconnectivity
 description: > 
   Example workflow for constructing strutural connectivity (Human connectome project: Single subject)
 ---

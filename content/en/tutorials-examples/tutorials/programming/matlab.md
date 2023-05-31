@@ -4,6 +4,8 @@ linkTitle: "Matlab"
 weight: 1
 tags: ["matlab", "programming"]
 author: Fernanda L. Ribeiro
+aliases:
+- /tutorials/programming/matlab
 description: > 
   A tutorial for setting up your matlab license on Neurodesk.
 ---

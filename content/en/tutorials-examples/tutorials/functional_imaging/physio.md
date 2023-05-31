@@ -2,6 +2,8 @@
 title: "PhysIO"
 linkTitle: "PhysIO"
 weight: 1
+aliases:
+- /tutorials/functional_imaging/physio
 description: >
   Example workflow for the PhysIO Toolbox
 ---

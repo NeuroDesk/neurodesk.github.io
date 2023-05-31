@@ -4,6 +4,8 @@ linkTitle: "PhysIO_Batch"
 weight: 1
 tags: ["template", "documentation"]
 author: Kelly G. Garner
+aliases:
+- /tutorials/functional_imaging/physio_batch_workflow
 description: > 
   Follow this tutorial as an example of how to batch script for the PhysIO toolbox using Neurodesk.
 ---

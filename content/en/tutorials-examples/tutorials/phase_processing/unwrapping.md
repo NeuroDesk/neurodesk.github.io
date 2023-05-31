@@ -2,6 +2,8 @@
 title: "Unwrapping"
 linkTitle: "Unwrapping"
 weight: 1
+aliases:
+- /tutorials/phase_processing/unwrapping
 description: >
   MRI Phase Unwrapping
 ---

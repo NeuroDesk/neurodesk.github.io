@@ -4,6 +4,8 @@ linkTitle: "datalad"
 weight: 1
 tags: ["datalad"]
 author: Steffen Bollmann
+aliases:
+- /tutorials/open_data/datalad
 description: >
   Using datalad to publish and access open data on OSF
 ---

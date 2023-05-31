@@ -4,6 +4,8 @@ linkTitle: "Oracle Open Data"
 weight: 1
 tags: ["Oracle Open Data"]
 author: Steffen Bollmann
+aliases:
+- /tutorials/open_data/oracle
 description: >
   Using Oracle Open Data to publish and access open data on OSF
 ---

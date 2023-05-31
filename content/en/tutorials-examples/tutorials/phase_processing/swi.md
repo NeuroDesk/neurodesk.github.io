@@ -2,6 +2,8 @@
 title: "SWI"
 linkTitle: "SWI"
 weight: 1
+aliases:
+- /tutorials/phase_processing/swi
 description: >
   Example workflow for SWI processing
 ---

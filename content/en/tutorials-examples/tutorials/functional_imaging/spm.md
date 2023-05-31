@@ -4,6 +4,8 @@ linkTitle: "SPM"
 weight: 1
 tags: ["SPM", "functional imaging"]
 author: Steffen Bollmann
+aliases:
+- /tutorials/functional_imaging/spm
 description: > 
   A tutorial for running a functional MRI analysis in SPM.
 ---

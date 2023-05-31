@@ -4,6 +4,8 @@ linkTitle: "fieldtrip"
 weight: 1
 tags: ["fieldtrip", "documentation"]
 author: Judy D Zhu
+aliases:
+- /tutorials/electrophysiology/fieldtrip
 description: > 
   A brief guide to using FieldTrip to analyse electrophysiological data within neurodesk.
 ---
