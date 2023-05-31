@@ -1,7 +1,7 @@
 ---
 title: "Neurodesk FAQ"
 linkTitle: "FAQ"
-weight: 2
+weight: 1
 
 description: >
   Frequently Asked Questions.

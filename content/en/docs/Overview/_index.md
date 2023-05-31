@@ -2,7 +2,6 @@
 title: "Neurodesk Overview"
 linkTitle: "Overview"
 weight: 1
-type: applications
 aliases:
 - /docs/overview/
 description: >

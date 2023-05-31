@@ -4,6 +4,7 @@ linkTitle: "Tutorial template"
 weight: 1
 tags: ["template", "documentation"]
 author: Angela I. Renton
+url: /developers/documentation/workflowtemplate
 description: > 
   Follow this template to contribute your own tutorial to the Neurodesk documentation.
 ---
