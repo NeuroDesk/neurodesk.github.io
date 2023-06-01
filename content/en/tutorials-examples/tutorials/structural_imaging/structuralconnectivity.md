@@ -53,7 +53,7 @@ Open the powershell terminal and run:
 
 ```
 
-docker run --shm-size=1gb -it --privileged --user=root --name neurodesktop -v C:/neurodesktop-storage:/neurodesktop-storage -v D:/moredata:/data -p 8888:8888 -h neurodesktop-20220222 vnmd/neurodesktop:20220222
+docker run --shm-size=1gb -it --privileged --user=root --name neurodesktop -v C:/neurodesktop-storage:/neurodesktop-storage -v D:/moredata:/data -p 8888:8888 -e NEURODESKTOP_VERSION=20220222 vnmd/neurodesktop:20220222
 
 ```
 

@@ -11,7 +11,7 @@ If you want more speed in a region one way could be to setup another Stratum 1 s
 ```cmd
 docker run --shm-size=1gb -it --privileged --user=root --name neurodesktop `
 -v C:/neurodesktop-storage:/neurodesktop-storage -p 8888:8888 `
--h neurodesktop-{{< params/neurodesktop/jupyter_neurodesk_version >}} `
+-e NEURODESKTOP_VERSION={{< params/neurodesktop/jupyter_neurodesk_version >}} `
 vnmd/neurodesktop:{{< params/neurodesktop/jupyter_neurodesk_version >}}
 ```
 

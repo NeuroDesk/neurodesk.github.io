@@ -1,2 +1,2 @@
 {{ .Site.Data.neurodesktop.windows.base }} \
-  -h neurodesktop-{{ .Site.Data.neurodesktop.version }} vnmd/neurodesktop:{{ .Site.Data.neurodesktop.version }}
+  -e NEURODESKTOP_VERSION={{ .Site.Data.neurodesktop.version }} vnmd/neurodesktop:{{ .Site.Data.neurodesktop.version }}

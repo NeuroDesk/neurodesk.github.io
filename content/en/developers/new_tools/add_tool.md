@@ -221,7 +221,7 @@ Verify that user has write permission to /neurocommand/local
 
 14. Download and run the daily build of neurodesktop to check that your app can be launched from the start menu and works properly:
     ```bash
-    sudo docker pull vnmd/neurodesktop:latest && sudo docker run --shm-size=1gb -it --privileged --user=root --name neurodesktop -v ~/neurodesktop-storage:/neurodesktop-storage -e HOST_UID="$(id -u)"  -e HOST_GID="$(id -g)" -p 8888:8888 -h neurodesktop-latest vnmd/neurodesktop:latest
+    sudo docker pull vnmd/neurodesktop:latest && sudo docker run --shm-size=1gb -it --privileged --user=root --name neurodesktop -v ~/neurodesktop-storage:/neurodesktop-storage -e HOST_UID="$(id -u)"  -e HOST_GID="$(id -g)" -p 8888:8888 -e NEURODESKTOP_VERSION=latest vnmd/neurodesktop:latest
     ```
 
 15. Open an issue in https://github.com/NeuroDesk/neurocontainers/issues notifying that your app appears in the start menu and tested. The app will be included in the next release of Neurodesktop, and will be mentioned in the public announcement that accompanies the release. If the app is not in the start menu or not working as expected based on your earlier testing, open an issue as well, and report it.
