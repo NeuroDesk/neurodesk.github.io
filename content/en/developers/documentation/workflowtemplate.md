@@ -74,7 +74,7 @@ The URL for the repository can be copied by clicking on the button highlighted b
 
 ![4_clone](/static/tutorial-template/4_clone.png '4_clone')
 
-2. Now, you can open your copy of *neurodesk.github.io* using the editor of your choice (we recommend [vscode](https://code.visualstudio.com/)). Before making changes to the current repository, the best practice is to create a new [branch](https://www.atlassian.com/git/tutorials/using-branches) for avoiding version conflicts. 
+2. Now, you can open your copy of `neurodesk.github.io` using the editor of your choice (we recommend [vscode](https://code.visualstudio.com/)). Before making changes to the current repository, the best practice is to create a new [branch](https://www.atlassian.com/git/tutorials/using-branches) for avoiding version conflicts. 
 
   - Create a branch:
 ```bash
