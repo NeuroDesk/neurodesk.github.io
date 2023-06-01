@@ -5,7 +5,7 @@ linkTitle: "Tutorials & Examples"
 weight: 3
 menu:
   main:
-    weight: 3
+    weight: 10
 
 description: >
   Tutorials & Examples
