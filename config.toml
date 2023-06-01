@@ -217,6 +217,10 @@ enable = false
  	icon = "fa fa-signal"
     desc = "Uptime"
 
+[[menu.main]]
+    name = "GitHub"
+    weight = 40
+    url = "https://github.com/NeuroDesk"
 	
 [module]
 proxy = "direct"
