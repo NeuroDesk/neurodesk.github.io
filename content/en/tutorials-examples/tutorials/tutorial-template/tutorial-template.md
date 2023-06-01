@@ -6,6 +6,7 @@ tags: ["template", "documentation"]
 author: Angela I. Renton
 aliases:
 - /tutorials/tutorial-template/
+- /developers/documentation/workflowtemplate
 description: > 
   Follow this template to contribute your own tutorial to the Neurodesk documentation.
 ---
