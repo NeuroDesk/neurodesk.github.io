@@ -1,3 +1,11 @@
+# Create new parameters
+# For new params, create respective shortcode template html file under layouts/shortcodes/params/neurodesktop
+# e.g. layouts/shortcodes/params/neurodesktop.html containing {{ .Site.Data.neurodesktop.jupyter_neurodesk_version }}
+
+# Use Parameter
+# To use, add the respective shortcodes to markdown
+# e.g. {{< params/neurodesktop/jupyter_neurodesk_version >}}
+
 jupyter_neurodesk_version = "20230531"
 neurodesk_desktop_release = "1.0.0"
 
