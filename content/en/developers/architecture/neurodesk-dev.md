@@ -24,12 +24,12 @@ sudo docker run \
   --name neurodesktop-dev \
   -v ~/neurodesktop-storage:/neurodesktop-storage \
   -e NB_UID="$(id -u)" -e NB_GID="$(id -g)" \
-  -p 8888:8888 -h neurodesktop-dev \
+  -p 8888:8888 -e NEURODESKTOP_VERSION=dev \
   vnmd/neurodesktop-dev:latest
 ```
 
 ### Windows
 ```bash
 docker pull vnmd/neurodesktop-dev:latest
-docker run --shm-size=1gb -it --cap-add SYS_ADMIN --security-opt apparmor:unconfined --device=/dev/fuse --name neurodesktop -v C:/neurodesktop-storage:/neurodesktop-storage -p 8888:8888 -h neurodesktop-dev vnmd/neurodesktop-dev:latest
+docker run --shm-size=1gb -it --cap-add SYS_ADMIN --security-opt apparmor:unconfined --device=/dev/fuse --name neurodesktop -v C:/neurodesktop-storage:/neurodesktop-storage -p 8888:8888 -e NEURODESKTOP_VERSION=dev vnmd/neurodesktop-dev:latest
 ```

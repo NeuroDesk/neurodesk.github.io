@@ -1,3 +1,3 @@
 <pre class="language-shell command-line" data-prompt="$" data-output="2-6">
 <code>{{ .Site.Data.neurodesktop.linux.base }} \
-  -h neurodesktop-{{ .Site.Data.neurodesktop.version }} vnmd/neurodesktop:{{ .Site.Data.neurodesktop.version }}</code></pre>
+  -e NEURODESKTOP_VERSION={{ .Site.Data.neurodesktop.version }} vnmd/neurodesktop:{{ .Site.Data.neurodesktop.version }}</code></pre>
