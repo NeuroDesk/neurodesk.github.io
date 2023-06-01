@@ -54,13 +54,13 @@ Begin by creating a copy of our documentation that you can edit:
 2. [Fork](https://docs.github.com/en/get-started/quickstart/fork-a-repo) the repository.
 
 
-![1_fork](/static/tutorial-template/1_fork.png '1_fork')
+![1_fork](/tutorial-template/1_fork.png 'Repo fork')
 
 {{< alert title="Note" >}} _You should now have your own copy of the documentation, which you can alter without affecting our official documentation. You should see a panel stating "This branch is up to date with Neurodesk:main." If someone else makes a change to the official documentation, the statement will change to reflect this. You can bring your repository up to date by clicking "Sync fork"._ {{< /alert >}}
 
-![2_syncfork](/static/tutorial-template/2_syncFork.png '2_syncfork')
+![2_syncfork](/tutorial-template/2_syncFork.png 'Sync fork')
 
-![3_synced](/static/tutorial-template/3_synced.png '3_synced')
+![3_synced](/tutorial-template/3_synced.png 'Sync status')
 
 ----------------
 ### Create your tutorial
@@ -72,7 +72,7 @@ git clone https://github.com/YOUR-USERNAME/neurodesk.github.io.git
 
 The URL for the repository can be copied by clicking on the button highlighted below:
 
-![4_clone](/static/tutorial-template/4_clone.png '4_clone')
+![4_clone](/tutorial-template/4_clone.png 'Repo URL')
 
 2. Now, you can open your copy of `neurodesk.github.io` using the editor of your choice (we recommend [vscode](https://code.visualstudio.com/)). Before making changes to the current repository, the best practice is to create a new [branch](https://www.atlassian.com/git/tutorials/using-branches) for avoiding version conflicts. 
 
@@ -88,7 +88,7 @@ git checkout tutorial-template
 ```bash 
 git branch
 ```
-![5_branch](/static/tutorial-template/5_branch.png '5_branch')
+![5_branch](/tutorial-template/5_branch.png 'Branch check')
   
 
 3. Navigate to `neurodesk.github.io/content/en/tutorials/tutorials/` and then navigate to the subfolder you believe your tutorial belongs in (e.g. "/functional_imaging"). 
@@ -112,13 +112,16 @@ You might have to correct some merge conflicts, but [vscode](https://learn.micro
 
 3. Navigate to your forked version of the repository on GitHub and switch branches for the one with your additions.
 
-![6_branchswitch](/static/tutorial-template/6_switchbranch.png '6_switchbranch')
+![6_branchswitch](/tutorial-template/6_switchbranch.png 'Switching branches')
 
 4. Now, you can preview the changes before contributing them upstream. For this, click on the "Actions" tab and enable the Actions ("I understand my tutorials..."). The first build will fail (due to a bug with the Github token), but the second build will work.
 
 5. Then you need to open the settings of the repository and check that Pages points to gh-pages, and when clicking on the link, the site should be there.
 
-6. To contribute your changes, click "Contribute" and then ["Open pull request"](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/about-pull-requests).
+6. To contribute your changes, click "Compare & pull request" and then ["Create pull request"](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/about-pull-requests).
+
+![7_contribute](/tutorial-template/7_contribute.png 'Contribute')
+
 
 7. Give your pull request a title (e.g. "Document PhysIO tutorial"), leave a comment briefly describing what you have done, and then create the pull request. 
 
@@ -179,7 +182,7 @@ You can also add code snippets, e.g. `var foo = "bar";`, which will be shown inl
 ----------------
 ### Images
 
-To add screenshots to your tutorial, create a subfolder in `neurodesk.github.io/static` with the same link name as your tutorial. Add your screenshot to this folder, keeping in mind that you may want to adjust your screenshot to a reasonable size before uploading. You can then embed these images in your tutorial using the following convention: 
+To add screenshots to your tutorial, create a subfolder in `neurodesk.github.io` with the same link name as your tutorial. Add your screenshot to this folder, keeping in mind that you may want to adjust your screenshot to a reasonable size before uploading. You can then embed these images in your tutorial using the following convention: 
 
 ```
 ![EEGtut1](/EEG_Tutorial/EEGtut1.png 'EEGtut1') <!-- ![filename without extension](/subfolder_name/filename.png '[filename without extension')  -->
