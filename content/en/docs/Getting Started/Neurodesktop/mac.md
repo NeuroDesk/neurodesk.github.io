@@ -40,7 +40,7 @@ docker run \
 --shm-size=1gb -it --privileged --user=root --name neurodesktop \
 -v ~/neurodesktop-storage:/neurodesktop-storage \
 -e NB_UID="$(id -u)" -e NB_GID="$(id -g)" \
--p 8888:8888 -h neurodesktop-{{< params/neurodesktop/version >}} vnmd/neurodesktop:{{< params/neurodesktop/version >}}
+-p 8888:8888 -h neurodesktop-{{< params/neurodesktop/jupyter_neurodesk_version >}} vnmd/neurodesktop:{{< params/neurodesktop/jupyter_neurodesk_version >}}
 ```
 <!-- neurodesktop version found in neurodesk.github.io/data/neurodesktop.toml -->
 
@@ -98,7 +98,7 @@ docker run \
 --shm-size=1gb -it --privileged --user=root --name neurodesktop \
 -v ~/neurodesktop-storage:/neurodesktop-storage \
 -p 3390:3389 -p 8888:8888 \
--h neurodesktop-{{< params/neurodesktop/version >}} vnmd/neurodesktop:{{< params/neurodesktop/version >}}
+-h neurodesktop-{{< params/neurodesktop/jupyter_neurodesk_version >}} vnmd/neurodesktop:{{< params/neurodesktop/jupyter_neurodesk_version >}}
 ```
 {{< alert color="info" >}}
 If you want to connect via RDP using a different port, replace 3390 in the previous and next step with your port
@@ -123,7 +123,7 @@ docker run \
 --shm-size=1gb -it --privileged --user=root --name neurodesktop \
 -v ~/neurodesktop-storage:/neurodesktop-storage \
 -e VNC_ENABLE=true -p 8888:8888 \
--h neurodesktop-{{< params/neurodesktop/version >}} vnmd/neurodesktop:{{< params/neurodesktop/version >}}
+-h neurodesktop-{{< params/neurodesktop/jupyter_neurodesk_version >}} vnmd/neurodesktop:{{< params/neurodesktop/jupyter_neurodesk_version >}}
 ```
 
 {{< alert color="info" >}}
@@ -142,7 +142,7 @@ docker run \
 --shm-size=1gb -it --privileged --user=root --name neurodesktop \
 -v ~/neurodesktop-storage:/neurodesktop-storage \
 -e VNC_ENABLE=true -p 5901:5901 -p 8888:8888 \
--h neurodesktop-{{< params/neurodesktop/version >}} vnmd/neurodesktop:{{< params/neurodesktop/version >}}
+-h neurodesktop-{{< params/neurodesktop/jupyter_neurodesk_version >}} vnmd/neurodesktop:{{< params/neurodesktop/jupyter_neurodesk_version >}}
 ```
 
 Open a VNC Client and connect to port 5901

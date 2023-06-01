@@ -34,7 +34,7 @@ docker run \
 --shm-size=1gb -it --privileged --user=root --name neurodesktop \
 -v C:/neurodesktop-storage:/neurodesktop-storage \
 -p 8888:8888 \
--h neurodesktop-{{< params/neurodesktop/version >}} vnmd/neurodesktop:{{< params/neurodesktop/version >}}
+-h neurodesktop-{{< params/neurodesktop/jupyter_neurodesk_version >}} vnmd/neurodesktop:{{< params/neurodesktop/jupyter_neurodesk_version >}}
 ```
 
 <!-- neurodesktop version found in neurodesk.github.io/data/neurodesktop.toml -->
@@ -90,7 +90,7 @@ docker run \
 --shm-size=1gb -it --privileged --user=root --name neurodesktop \
 -v C:/neurodesktop-storage:/neurodesktop-storage \
 -p 3390:3389 -p 8888:8888 \
--h neurodesktop-{{< params/neurodesktop/version >}} vnmd/neurodesktop:{{< params/neurodesktop/version >}}
+-h neurodesktop-{{< params/neurodesktop/jupyter_neurodesk_version >}} vnmd/neurodesktop:{{< params/neurodesktop/jupyter_neurodesk_version >}}
 ```
 {{< alert color="info" >}}
 If you want to connect via RDP using a different port, replace 3390 in the previous and next step with your port
@@ -123,7 +123,7 @@ password
 To enable VNC and disable RDP, startup Neurodesktop using the following command:
 
 ```cmd
-docker run --shm-size=1gb -it --privileged --user=root --name neurodesktop -v C:/neurodesktop-storage:/neurodesktop-storage -p 8888:8888 -h neurodesktop-{{< params/neurodesktop/version >}} vnmd/neurodesktop:{{< params/neurodesktop/version >}} --vnc 
+docker run --shm-size=1gb -it --privileged --user=root --name neurodesktop -v C:/neurodesktop-storage:/neurodesktop-storage -p 8888:8888 -h neurodesktop-{{< params/neurodesktop/jupyter_neurodesk_version >}} vnmd/neurodesktop:{{< params/neurodesktop/jupyter_neurodesk_version >}} --vnc 
 ```
 
 {{< alert color="info" >}}
@@ -138,7 +138,7 @@ VNC option for Neurodesktop on the browser does not support auto-resolution
 Startup Neurodesktop using the following command:
 
 ```cmd
-docker run --shm-size=1gb -it --privileged --user=root --name neurodesktop -v C:/neurodesktop-storage:/neurodesktop-storage -p 5901:5901 -p 8888:8888 -h neurodesktop-{{< params/neurodesktop/version >}} vnmd/neurodesktop:{{< params/neurodesktop/version >}} --vnc 
+docker run --shm-size=1gb -it --privileged --user=root --name neurodesktop -v C:/neurodesktop-storage:/neurodesktop-storage -p 5901:5901 -p 8888:8888 -h neurodesktop-{{< params/neurodesktop/jupyter_neurodesk_version >}} vnmd/neurodesktop:{{< params/neurodesktop/jupyter_neurodesk_version >}} --vnc 
 ```
 
 Download the Tiger VNC client (`vncviewer64-1.12.0.exe`) from https://sourceforge.net/projects/tigervnc/files/stable/1.12.0/

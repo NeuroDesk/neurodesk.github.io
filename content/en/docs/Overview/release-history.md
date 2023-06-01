@@ -9,7 +9,7 @@ description: >-
 ---
 
 Latest Version
-: {{< params/neurodesktop/version >}}
+: {{< params/neurodesktop/jupyter_neurodesk_version >}}
 
 ## 20230525
 - fixed environment variables for nipype
