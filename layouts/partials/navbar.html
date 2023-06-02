@@ -9,10 +9,10 @@
 	</button>
 
 	<div class="collapse navbar-collapse" id="main_navbar">
-		<ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+		<ul class="navbar-nav ml-auto mt-2 mt-lg-0">
 			{{ $p := . }}
 			{{ range .Site.Menus.main }}
-			<li class="nav-item mr-4 mb-2 mb-lg-0">
+			<li class="nav-item ml-4 mb-2 mb-lg-0">
 				{{ $active := or ($p.IsMenuCurrent "main" .) ($p.HasMenuCurrent "main" .) }}
 				{{ with .Page }}
 				{{ $active = or $active ( $.IsDescendant .)  }}
@@ -25,12 +25,12 @@
 			</li>
 			{{ end }}
 			{{ if  .Site.Params.versions }}
-			<li class="nav-item dropdown mr-4 d-none d-lg-block">
+			<li class="nav-item dropdown ml-4 d-none d-lg-block">
 				{{ partial "navbar-version-selector.html" . }}
 			</li>
 			{{ end }}
 			{{ if  (gt (len .Site.Home.Translations) 0) }}
-			<li class="nav-item dropdown mr-4 d-none d-lg-block">
+			<li class="nav-item dropdown ml-4 d-none d-lg-block">
 				{{ partial "navbar-lang-selector.html" . }}
 			</li>
 			{{ end }}
