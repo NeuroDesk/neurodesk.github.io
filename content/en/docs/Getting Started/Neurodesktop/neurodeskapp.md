@@ -6,12 +6,13 @@ description: >
   Neurodesk App is the cross-platform desktop application for Neurodesk
 ---
 
-
-![Neurodesk App](/neurodeskapp/neurodesk-desktop.png 'neurodeskapp')
+<img style="float: right;" src="/neurodeskapp/neurodesk-desktop.png" width="400">
+<!-- ![Neurodesk App](/neurodeskapp/neurodesk-desktop.png 'neurodeskapp') -->
 
 ### Minimum System Requirements
 1. At least 5GB free space for neurodesktop base image
 2. Docker requirements.
+
 
 ## Installing Docker
 
