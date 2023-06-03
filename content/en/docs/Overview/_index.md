@@ -22,7 +22,7 @@ To read more about Docker containers, visit [the Docker webpage](https://www.doc
 Click [here](https://www.youtube.com/watch?v=JLv_5fycugw) to watch a 2 minute introduction to the Neurodesk platform
 
 ## Background
-Neurodesk was origionally concieved as ["Virtual Neuro Machine"](https://docs.google.com/presentation/d/1FCtrRCZrj-5nLmnIIpVFYYYXuMAoUf-B/edit?usp=sharing&ouid=100303589348027986473&rtpof=true&sd=true), a [hackathon project](https://github.com/ohbm/hackathon2020/issues/177) at the Brainhack 2020. 
+Neurodesk was originally conceived as ["Virtual Neuro Machine"](https://docs.google.com/presentation/d/1FCtrRCZrj-5nLmnIIpVFYYYXuMAoUf-B/edit?usp=sharing&ouid=100303589348027986473&rtpof=true&sd=true), a [hackathon project](https://github.com/ohbm/hackathon2020/issues/177) at the Brainhack 2020. 
 
 ## References
 

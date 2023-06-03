@@ -14,7 +14,7 @@ Please cite the [Neurodesk Preprint](https://www.biorxiv.org/content/10.1101/202
 Renton, A. I., Dao, T. T., Johnstone, T., Civier, O., Sullivan, R. P., White, D. J., ... & Bollmann, S. (2022). [Neurodesk: An accessible, flexible, and portable data analysis environment for reproducible neuroimaging.](https://www.biorxiv.org/content/10.1101/2022.12.23.521691v1) bioRxiv, 2022-12. doi: [10.1101/2022.12.23.521691](https://doi.org/10.1101/2022.12.23.521691)
 
 ## Citing specific tools
-To gaurantee reproducibility, we recommend specifing the name, version number and builddate for any containerised applications used through Neurodesk. You can find this information [here](https://www.neurodesk.org/docs/overview/applications/). 
+To guarantee reproducibility, we recommend specifying the name, version number and builddate for any containerised applications used through Neurodesk. You can find this information [here](https://www.neurodesk.org/docs/overview/applications/). 
 
 In addition to citing Neurodesk, please remember to cite any papers associated with the tools you use. You find this information in the [README.m](https://github.com/NeuroDesk/neurocontainers/tree/master/recipes) for each tool, or when opening the application through the menu in Neurodesktop.
 
