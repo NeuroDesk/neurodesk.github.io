@@ -47,13 +47,13 @@ chmod a+rwx ~/neurodesktop-storage
 ```
 {{< /alert >}}
 
-2. Once neurodesktop is downloaded, leave the terminal open and check the server neurodesktop running on (Avoid pressing CTRL+C). For example,
+2. Once neurodesktop is downloaded, leave the terminal open and check the server neurodesktop is running on (Avoid pressing CTRL+C). For example,
 
 ![image](/neurodeskapp/terminal_token.png)
 
 
 {{< alert color="info" >}}
-Even if your connection to the cloud instance is broken, and the terminal does not respond, Neurodesktop will still continue running on the cloud instance. When the connection to the cloud instance is re-established, please start over the instructions from step 3 below.
+Even if your connection to the cloud instance is broken, and the terminal does not respond, Neurodesktop will still continue running on the cloud instance. When the connection to the cloud instance is re-established, please restart the instructions from step 3 below.
 {{< /alert >}}
 
 3. If it is required to set up an SSH tunnel to access the cloud instance, please set up such a tunnel from the computer from which you want to access Neurodesktop (e.g. `ssh -L 8080:127.0.0.1:8080 USER@IP`)
@@ -64,9 +64,9 @@ If the computer runs Linux, check specific instructions at https://www.neurodesk
 
 5. Press on "Desktop Auto-Resolution" under "ALL CONNECTIONS"
 
-6. If it is the first time you use Neurodesktop, wait until the desktop appears (it may take a few seconds). Otherwise, it should appear instantaneously.
+6. If it is the first time you have used Neurodesktop on this instance, wait until the desktop appears (it may take a few seconds). Otherwise, it should appear instantaneously.
 
-7. Neurodesk is ready to use! Click "What's next?" on the left of this page for further instructions.     
+7. Neurodesk is ready to use! Click "What's next?" on the left of this page for further instructions on using Neurodesktop.     
 
 8. For an optimal experience, switch your browser to full-screen mode by following the instructions for your browser here (except Mac where full-screen mode is built-in):
 https://www.thewindowsclub.com/open-chrome-edge-or-firefox-browser-in-full-screen-mode
@@ -76,7 +76,7 @@ The browser can be closed anytime, and Neurodesktop will continue running on the
 {{< /alert >}}
 
 {{< alert color="info">}}
-If your computer hibernates/reboots/etc. or if the network connection has been temporarily lost, Neurodesktop still continues running on the cloud instance. To reconnect to Neurodesktop, start over from step 3 above.
+If your computer hibernates/reboots/etc. or if the network connection has been temporarily lost, Neurodesktop will continue running on the cloud instance. To reconnect to Neurodesktop, start over from step 3 above.
 {{< /alert >}}
 
 {{< alert color="info">}}
