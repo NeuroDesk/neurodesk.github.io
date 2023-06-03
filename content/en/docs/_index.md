@@ -5,8 +5,6 @@ weight: 1
 menu:
   main:
     weight: 10
-description: >
-  A flexible, scalable and easy to use data analysis environment for reproducible neuroimaging.
 ---
 
 ## Overview
