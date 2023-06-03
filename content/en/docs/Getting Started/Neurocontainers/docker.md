@@ -5,7 +5,7 @@ description: >
   Neurodesk Docker containers
 ---
 
-Our containers are automatically built in https://github.com/NeuroDesk/neurocontainers/ and hosted on [dockerhub](https://hub.docker.com/orgs/vnmd/repositories) or on [github](https://github.com/NeuroDesk/neurocontainers/packages)
+Our containers are automatically built in https://github.com/NeuroDesk/neurocontainers/ and hosted on [dockerhub](https://hub.docker.com/orgs/vnmd/repositories) and on [github](https://github.com/NeuroDesk/neurocontainers/packages)
 
 ## Pull Docker containers
 e.g. for a julia container
@@ -14,7 +14,7 @@ docker
 docker pull vnmd/julia_1.6.1
 ```
 
-build singularity image from dockerhub
+You an also build singularity images from dockerhub
 ```bash
 singularity build julia_1.6.1.simg docker://vnmd/julia_1.6.1
 ```
