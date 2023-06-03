@@ -45,22 +45,22 @@ docker run \
 <!-- neurodesktop version found in neurodesk.github.io/data/neurodesktop.toml -->
 
 {{< alert color="warning" >}}
-There is a bug in docker 3.3.0 for Mac that makes this command not run correctly and there will be no application menu when you start the desktop. Update your docker version when you see this!
+There is a bug in docker 3.3.0 for Mac that makes this command not run correctly so that there is no application menu when the desktop is started. Update your docker version if you see this!
 {{< /alert >}}
 
-if you get errors in neurodesktop then check if the ~/neurodesktop-storage directory is writable to all users, otherwise run `chmod a+rwx ~/neurodesktop-storage`
+If you get errors in neurodesktop then check if the ~/neurodesktop-storage directory is writable for all users. If it is not, run `chmod a+rwx ~/neurodesktop-storage`
 
-2. Once neurodesktop is downloaded, leave the terminal open and check the server neurodesktop running on (Avoid pressing CTRL+C). For example,
+2. Once neurodesktop is downloaded, leave the terminal open and check which server neurodesktop running on (Avoid pressing CTRL+C).
 
 ![image](/neurodeskapp/terminal_token.png)
 
-3. To access neurodesktop, open your web browser and type in one of those provided URLs provided in your terminal (e.g. `http://127.0.0.1:8888/lab?token=your_unique_token`).
+3. To access neurodesktop, open your web browser and navigate to one of the URLs shown in your terminal (e.g. `http://127.0.0.1:8888/lab?token=your_unique_token`).
 
 {{< alert color="warning" >}}
-We recommend to use Chrome over Firefox as it has an option to hide the Toolbar in full screen mode (go to the menu bar, click on View, and uncheck "Always Show Toolbar in Full Screen"). This allows for Neurodesktop to truly utilise the whole of your screen.
+We recommend using Chrome over Firefox as it has an option to hide the Toolbar in full screen mode (go to the menu bar, click on View, and uncheck "Always Show Toolbar in Full Screen"). This allows for Neurodesktop to fully utilise the whole of your screen.
 {{< /alert >}}
 
-3. Press on "Desktop Auto-Resolution" under "ALL CONNECTIONS"
+3. If prompted, press on "Desktop Auto-Resolution" under "ALL CONNECTIONS"
 
 4. If it is the first time you use Neurodesktop, wait until the desktop appears (it may take a few seconds). Otherwise, it should appear instantaneously.
 
@@ -74,7 +74,7 @@ The browser can be closed anytime, and Neurodesktop will continue to run in the 
 When done processing your data it is important to stop and remove the container - otherwise the next start or container update will give an error ("... The container name "/neurodesktop" is already in use...")
 
 {{< alert title="Note" color="warning" >}}
-Notice that any data that were saved outside of /neurodesktop-storage would be lost. Please make sure to move all your data to that folder before deleting neurodesktop.
+Note that any data that were saved outside of /neurodesktop-storage would be lost. Please make sure to move all your data to that folder before deleting neurodesktop.
 {{< /alert >}}
 
 1. Click on the terminal from which you ran neurodesktop
