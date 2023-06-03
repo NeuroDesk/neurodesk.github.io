@@ -5,10 +5,10 @@ description: >
   Neurodesk Singularity Containers on CVMFS
 ---
 
-## Install CVMFS
-First you need to install CVMFS. Follow the official instructions here: https://cvmfs.readthedocs.io/en/stable/cpt-quickstart.html#getting-the-software
+## Install the CernVM File System (CVMFS)
+To begin, install CVMFS. Follow the official instructions here: https://cvmfs.readthedocs.io/en/stable/cpt-quickstart.html#getting-the-software
 
-one example for Ubuntu in Windows Subsystem for Linux (WSL) could look like this:
+An example installation for Ubuntu in Windows Subsystem for Linux (WSL) would look like this:
 ```bash
 sudo apt-get install lsb-release
 wget https://ecsft.cern.ch/dist/cvmfs/cvmfs-release/cvmfs-release-latest_all.deb
@@ -48,7 +48,7 @@ echo "CVMFS_QUOTA_LIMIT=5000" | sudo tee -a  /etc/cvmfs/default.local
 sudo cvmfs_config setup
 ```
 ### For WSL users
-It is required to run this for each new new WSL session:
+You will need to run this for each new WSL session:
 ```bash
 sudo cvmfs_config wsl2_start
 ```
@@ -135,7 +135,7 @@ The containers are now available in /cvmfs/neurodesk.ardc.edu.au/containers/ and
 singularity shell /cvmfs/neurodesk.ardc.edu.au/containers/itksnap_3.8.0_20201208/itksnap_3.8.0_20201208.simg
 ```
 
-make sure that SINGULARITY_BINDPATH include the directories you want to work with:
+make sure that SINGULARITY_BINDPATH includes the directories you want to work with:
 ```bash
 export SINGULARITY_BINDPATH='/cvmfs,/mnt,/home'
 ```

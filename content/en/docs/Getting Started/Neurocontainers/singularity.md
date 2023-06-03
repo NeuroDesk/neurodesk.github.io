@@ -8,7 +8,7 @@ description: >
 Our docker containers are converted to singularity containers and stored on Object storage.
 
 ## Download Singularity Containers
-First get an overview which containers are available as Singularity containers:
+First get an overview of which containers are available as Singularity containers:
 https://github.com/NeuroDesk/neurocommand/blob/main/cvmfs/log.txt
 ```shell
 curl -s https://raw.githubusercontent.com/NeuroDesk/neurocommand/main/cvmfs/log.txt
@@ -39,7 +39,7 @@ aria2c https://objectstorage.us-ashburn-1.oraclecloud.com/n/sd63xuke79z3/b/neuro
 ```
 
 ## Transparent Singularity
-The singularity containers can be also be used in combination with our [Transparent Singularity Tool](/developers/architecture/transparent_singularity)  tool, that wraps the executables inside a container to make them easily available for pipelines. More information can be found here: 
+The singularity containers can be also be used in combination with our [Transparent Singularity Tool](/developers/architecture/transparent_singularity), which wraps the executables inside a container to make them easily available for pipelines. More information can be found here: 
 
 one example to do this is:
 ```shell

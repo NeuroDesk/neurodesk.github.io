@@ -6,8 +6,8 @@ description: >-
      Guide connecting your VS Code environment to Neurodesktop
 ---
 
-Following guide is for connecting to a Neurodesktop using a VS Code installation running on your host machine.
-> Additional instructions if your Neurodesktop is running remotely  (i.e. Cloud, HPC, VM)
+The following guide is for connecting to Neurodesktop using a VS Code installation running on your host machine.
+> Please see additional instructions below if Neurodesktop is running remotely  (i.e. Cloud, HPC, VM)
 
 ## Pre-requisites
 Visual Studio Code _(https://code.visualstudio.com)_ installed on your host. Standalone version should work fine
@@ -45,19 +45,19 @@ Start typing in 'neurodesktop. Select `/neurodesktop` from the list
 
 This should open a VS Code Window connected to the neurodesktop as a Dev Container. 
 
-> First time connection will take about a minute, as VS code has to install the VS Code server onto the container. Repeat connections should be faster
+> This may take about a minute if it is the first time you are connecting, as VS code has to install the VS Code server onto the container. Repeat connections should be faster.
 
 ### First time connection
-> First time connection will default to using neurodesktop root user. We want to default connection to be as the normal user to avoid permission issues.
-To check which user is being use, open the terminal in the neurodesktop VS Code and check if the user is `user` or `root`
+> The first time connection will default to using neurodesktop root user. We want the default connection to be as the normal user to avoid permission issues.
+To check which user is being used, open the terminal in the neurodesktop VS Code instance and check if the user is `user` or `root`
 
-Follow the following steps to configure your VS Code to connect to neurodesktop as normal user by default
+Follow the following steps to configure your VS Code instance to connect to neurodesktop as normal user by default:
 
-Open the Command Palette (Ctrl+Shift+P). 
+1. Open the Command Palette (Ctrl+Shift+P). 
 
-Select `Remote-Containers: Open Container Configuration File` from the dropdown panel
+2. Select `Remote-Containers: Open Container Configuration File` from the dropdown panel
 
-This will open a `neurodesktop%3alatest.json` file. Overwrite the file with the following contents
+3. This will open a `neurodesktop%3alatest.json` file. Overwrite the file with the following contents
 
 ```json
 {
@@ -66,7 +66,7 @@ This will open a `neurodesktop%3alatest.json` file. Overwrite the file with the 
 }
 ```
 
-Close this VS Code window. Use steps in [previous section](https://www.neurodesk.org/docs/getting-started/neurodesktop/visual-studio-code/#connecting-to-neurodesktop) to connect normally
+4. Close this VS Code window. Use steps in [previous section](https://www.neurodesk.org/docs/getting-started/neurodesktop/visual-studio-code/#connecting-to-neurodesktop) to connect normally
 
 ## Useful Additions
 A plugin to view neuroimaging data inside VScode is also available:

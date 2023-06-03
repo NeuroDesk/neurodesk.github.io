@@ -2,10 +2,10 @@
 title: "DataLad"
 linkTitle: "DataLad"
 description: >
-  Neurodesktop containers can be used in datalad container run
+  Neurodesktop containers can be used with datalad
 ---
 
-## install datalad, datalad-containers, ReproNim containers repo
+## install datalad, datalad-containers, and ReproNim containers repo
 ```bash
 conda install datalad
 pip install datalad_container
@@ -18,7 +18,7 @@ cd containers
 datalad containers-list
 ```
 
-## download and run latest container version
+## download and run the latest container version
 ```bash
 datalad containers-run -n neurodesk-romeo
 ```
