@@ -3,7 +3,7 @@ title: "Neurodesk App"
 linkTitle: "Neurodesk App"
 weight: 1
 description: >
-  Neurodesk App is the cross-platform desktop application for Neurodesk
+  A cross-platform desktop application for Neurodesk: The easiest way to use Neurodesktop
 ---
 
 <img style="float: right;" src="/neurodeskapp/neurodesk-desktop.png" width="400">
@@ -16,7 +16,7 @@ description: >
 
 ## Installing Docker
 
-Neurodesk App requires Docker to be installed on your computer. If you already have Docker installed, you can skip this step.
+The Neurodesk App requires Docker to be installed on your computer. If you already have Docker installed, you can skip this step.
 
 - [Docker Desktop for Windows](https://docs.docker.com/docker-for-windows/install/)
 - [Docker Desktop for Mac](https://docs.docker.com/docker-for-mac/install/)
@@ -30,7 +30,7 @@ docker run hello-world
 
 ## Installing Neurodesk App
 
-If you have an existing Neurodesk App installation, please uninstall it first by following the [uninstall instructions](#uninstalling-neurodesk-app).
+If you have an existing Neurodesk App installation, please first uninstall it by following the uninstall instructions [here](#uninstalling-neurodesk-app). Then, follow the installation instructions below:
 
 - [Debian, Ubuntu Linux Installer](https://github.com/NeuroDesk/neurodesk-app/releases/latest/download/NeurodeskApp-Setup-Debian.deb )
 - [Red Hat, Fedora, SUSE Linux Installer](https://github.com/NeuroDesk/neurodesk-app/releases/latest/download/NeurodeskApp-Setup-Fedora.rpm )
@@ -41,11 +41,9 @@ If you have an existing Neurodesk App installation, please uninstall it first by
 
 ## Launching Neurodesk App
 
-Neurodesk App can be launched from the GUI of your operating system by clicking the application's icon or by using `neurodeskapp` command from the command line.
+The Neurodesk App can be launched directly from your operating system's application menu, or by running the `neurodeskapp` command in the command line.
 
-Neurodesk App sets File Browser's root directory based on the launch method.
-
-- If launched from the application icon on GUI or by using `neurodeskapp` command without any arguments, then the default working directory is set as the root directory. The default working directory is user home directory but it can be customized from the Settings dialog.
+> Note that the Neurodesk App will set the File Browser's root directory based on the launch method used. The default working directory is the user's home directory - this can be customized from the Settings dialog.
 
 ## Sessions and Projects
 
@@ -63,18 +61,14 @@ You can start a new session by using the links at the Start section of the Welco
 Previously opened sessions are stored as part of application data and they are listed on the Welcome Page. Clicking an item in the `Recent sessions` list restores the selected session.
 
 
-### neurodeskapp command-line launch examples
-
-Run `neurodeskapp` in the terminal.
-
 ## Connecting to local Neurodesk
 
 Neurodesk App creates new Neurodesk sessions by launching a locally running Neurodesk server and connecting to it. To open a local instance, click the `Open Local Neurodesk..` button in the Start section of the Welcome Page.
 
-It will show a Jupyterlab interface. There are two options to interact with Neurodesk:
+This will show a Jupyterlab interface. There are two options to interact with Neurodesk through this interface:
 
-- By clicking the `NeurodeskApp` icon on the right. It launches new window to start Neurodesk interface.
-- By module loading containers on the left bar. You can interact with loaded modules in Terminal through command lines.
+- By clicking the `NeurodeskApp` icon on the right. This will launch a new window to start a Neurodesk interface.
+- By module loading containers on the left bar. You can interact with loaded modules through the command line interface.
 
 ![Local](/neurodeskapp/connect-to-local.png "Connect to local")
 
@@ -99,13 +93,13 @@ You can delete the stored session data manually at any time by using the `Clear 
 
 Neurodesk App stores data in ~/neurodesktop-storage for Linux and Mac, or C:/neurodesktop-storage for Windows, as default.
 
-## Add Custom Data Directory
+## Add a Custom Data Directory
 
 Neurodesk App stores its data in the following locations:
 
-- By default, /home/jovyan/neurodesktop-storage in the app (which is binded with local directory ~/neurodesktop-storage in Unix or C:/neurodesktop-storage in Windows)
+- By default, /home/jovyan/neurodesktop-storage in the app (which is bound with local directory ~/neurodesktop-storage in Unix or C:/neurodesktop-storage in Windows)
 
-- By choice, in the setting window below, select `Additional Directory` on the left side bar, click `Change` button to select the local directory, then click `Apply & restart`. The next time you start the app, the data from the local directory can be found in /home/jovyan/data.
+- By choice, in the settings window below, select `Additional Directory` on the left side bar, click `Change` button to select the local directory, then click `Apply & restart`. The next time you start the app, the data from the local directory can be found in /home/jovyan/data.
 
 ![Additional Directory](/neurodeskapp/additional_dir.png "Add data")
 
