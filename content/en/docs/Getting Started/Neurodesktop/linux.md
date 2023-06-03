@@ -44,11 +44,11 @@ chmod a+rwx ~/neurodesktop-storage
 ```
 {{< /alert >}}
 
-2. Once neurodesktop is downloaded, leave the terminal open and check the server neurodesktop running on (Avoid pressing CTRL+C). For example,
+2. Once neurodesktop is downloaded, leave the terminal open and check which server neurodesktop is running on (Avoid pressing CTRL+C). 
 
 ![image](/neurodeskapp/terminal_token.png)
 
-3. To access neurodesktop, open your web browser and type in one of those provided URLs provided in your terminal (e.g. `http://127.0.0.1:8888/lab?token=your_unique_token`).
+3. To access neurodesktop, open your web browser and type in one of the provided URLs in your terminal (e.g. `http://127.0.0.1:8888/lab?token=your_unique_token`).
 
 {{< alert color="warning">}}
 If using Chrome, a pop-up may open with the text: 
@@ -56,18 +56,18 @@ If using Chrome, a pop-up may open with the text:
 "http://127.0.0.1:8888 wants to
 See text and images copied to the clipboard".
 ```
-You should press "Allow"
+Press "Allow" to access your clipboard from within Neurodesktop.  
 {{< /alert >}}
 
 {{< alert color="warning">}}
-If using Firefox, you might not be able to paste clipboard content into the virtual desktop from the host computer. In that case, please follow [this instructions](/docs/support/faq/#copying-text-from-my-host-computer-and-pasting-it-inside-neurodesktop-doesnt-work-in-firefox)
+If using Firefox, you might not be able to paste clipboard content into the virtual desktop from the host computer. In that case, please follow [these instructions](/docs/support/faq/#copying-text-from-my-host-computer-and-pasting-it-inside-neurodesktop-doesnt-work-in-firefox)
 {{< /alert >}}
 
 4. Press on "Desktop Auto-Resolution" under "ALL CONNECTIONS"
 
-5. If it is the first time you use Neurodesktop, wait until the desktop appears (it may take a few seconds). Otherwise, it should appear instantaneously.
+5. If it is the first time you have used Neurodesktop, wait until the desktop appears (it may take a few seconds). Otherwise, it should appear instantaneously.
 
-6. Neurodesk is ready to use! Click "What's next?" on the left of this page for further instructions.     
+6. Neurodesk is now ready to use! Please click "What's next?" on the left of this page for further instructions on using Neurodesktop.     
 
 7. For an optimal experience, switch your browser to full-screen mode by following the instructions for your browser here:
 https://www.thewindowsclub.com/open-chrome-edge-or-firefox-browser-in-full-screen-mode

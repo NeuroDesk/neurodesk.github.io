@@ -6,9 +6,8 @@ description: >
 ---
 
 ## Neurodesk Play
-- Recommended for quick access and trialling
+- Recommended if you want to quickly try out Neurodesktop without installing docker or signing in
 - No login or sign-up required
-- Files and session is deleted after exiting
 - Does **NOT** preserve files from previous sessions
 
 {{< alert color="info">}}
@@ -25,10 +24,10 @@ To use Neurodesk Play, choose the link below closest to your location:
 - Recommended for processing data across multiple sessions
 - Authenticate via GitHub
 - 50GB home directory allocated per account
-- Home directory is saved on cloud for use across multiple sessions
+- Home directory is saved on the cloud for use across multiple sessions
 
 {{< alert color="info">}}
-See [Neurodesk Play](#neurodesk-play) for trying Neurodesk without sign-up or saving data
+See [Neurodesk Play](#neurodesk-play) to try Neurodesk without sign-up or data saving
 {{< /alert >}}
 
 To use Neurodesk Lab, choose the link below closest to your location:
@@ -39,7 +38,7 @@ To use Neurodesk Lab, choose the link below closest to your location:
 
 ## How to transfer data onto Neurodesk Play and Lab
 
-You can upload data to the desktop by simply drag-and-dropping files on the browser window. Data uploaded during your session are stored on Oracle Cloud, and will be automatically deleted at the end of the session. To download your files before deletion: You need to open the guacamole settings by pressing CTRL-ALT-SHIFT (Control-Command-Shift on Mac). This will open a menu on the side:
+You can upload data to the desktop by simply drag-and-dropping files on the browser window. Data uploaded during your session are stored on Oracle Cloud, and will be automatically deleted at the end of the session. To download your files before deletion: You will need to open the guacamole settings by pressing CTRL-ALT-SHIFT (Control-Command-Shift on Mac). This will open a menu on the side:
 
 ![{A12EDB8A-3D01-4524-A7B5-24E5E94FB418}](https://user-images.githubusercontent.com/4021595/160577828-0f8ba04e-aed7-4c26-a8d2-baf6c4be317a.png)
 
