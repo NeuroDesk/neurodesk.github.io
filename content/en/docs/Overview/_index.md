@@ -41,3 +41,19 @@ Neurodesk was originally conceived as ["Virtual Neuro Machine"](https://docs.goo
 
 1. National Academies of Sciences, Engineering, and Medicine. 2019. Reproducibility and Replicability in Science. Washington, DC: The National Academies Press. https://doi.org/10.17226/25303.
 
+## Acknowledgments
+
+![nif](/nif.png 'nif') ![uq](/uq_logo.png 'uq')
+
+![swinburne](/swinburne_uni_logo.png 'swinburne') ![liege](/liege_uni_logo.png 'liege')
+
+## Funding
+Thank you to Oracle for Research for providing Oracle Cloud credits and related resources to support this project.
+
+![oracle](https://user-images.githubusercontent.com/4021595/119061922-db877080-ba18-11eb-9882-d53a25ec88ee.png)
+
+This project is supported by an Australian Research Data Commons (ARDC) Platform project “Australian
+Electrophysiology Data Analytics PlaTform (AEDAPT)”.
+
+<img src="https://user-images.githubusercontent.com/4021595/119062104-3caf4400-ba19-11eb-8211-e2e9ce831a16.png" width="250">
+
