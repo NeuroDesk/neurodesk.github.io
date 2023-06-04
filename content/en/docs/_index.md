@@ -7,7 +7,6 @@ menu:
     weight: 9
 ---
 
-## License
 MIT License
 
 Copyright (c) 2021 NeuroDesk
