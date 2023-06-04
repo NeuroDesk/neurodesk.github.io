@@ -1,6 +1,6 @@
 ---
 title: "Create your tutorial"
-linkTitle: "Tutorial template"
+linkTitle: "Contribute"
 weight: 2
 aliases:
 - /tutorials/tutorial-template

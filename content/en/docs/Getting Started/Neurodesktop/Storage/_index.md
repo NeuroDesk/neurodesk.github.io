@@ -1,7 +1,7 @@
 ---
-title: "Storage"
+title: "Data Storage"
 linkTitle: "Storage"
-weight: 5
+weight: 6
 aliases: 
 - /docs/neurodesktop/storage/
 description: >
