@@ -33,20 +33,24 @@ You can check out the complete list of [these applications](/docs/overview/appli
 Yes, our project aims to run on the hardware you have access to. However, without docker support you cannot use our desktop interface [NeuroDesktop](/docs/getting-started/neurodesktop) but you can still use the command line interface [NeuroCommand on HPC](https://www.neurodesk.org/docs/getting-started/neurocommand). This works well for batch processing on HPCs once you developed your pipeline in our desktop interface. If your HPC provides a desktop interface you can use all our graphical applications without any issues and the GUIs even work via SSH x-forwarding - it's not the most performant experience, but it works well enough.
 
 ## Is there reduced performance when using containers?
-If you are running containers on Linux there is no performance penalty - on an HPC with a Lustre filesystem it can even be faster to run our containers than running natively on the filesystem (because meta data operations are shifted to the compute node - more information can be found here: Rioux, Pierre, Gregory Kiar, Alexandre Hutton, Alan C. Evans, and Shawn T. Brown. ‘Deploying Large Fixed File Datasets with SquashFS and Singularity’. ArXiv:2002.06129 [Cs], 14 February 2020. https://arxiv.org/abs/2002.06129 ). However, running Neurodesktop on Windows and Mac will have a performance penalty, because Linux runs in a Hypervisor on these systems.   
+If you are running containers on Linux there is no performance penalty - on an HPC with a Lustre filesystem it can even be faster to run our containers than running natively on the filesystem (because meta data operations are shifted to the compute node - more information can be found here: 
 
-## How can I see how much resources Neurodesk containers need?
-In Linux the containers run as normal processes and you can use htop and top to inspect the resource footprint. For Windows and Mac the information is not readily available and we wrote some information here: [Troubleshooting](https://www.neurodesk.org/docs/support/faq/#i-got-an-error-message-x-killed-or-not-enough-memory)
+Rioux, Pierre, Gregory Kiar, Alexandre Hutton, Alan C. Evans, and Shawn T. Brown. ‘Deploying Large Fixed File Datasets with SquashFS and Singularity’. ArXiv:2002.06129 [Cs], 14 February 2020. https://arxiv.org/abs/2002.06129 ). 
 
-## Can I just use the plain containers?
+However, running Neurodesktop on Windows and Mac will have a performance penalty, because Linux runs in a Hypervisor on these systems.   
+
+## How can I see how many compute resources Neurodesk containers need?
+In Linux the containers run as normal processes and you can use htop and top to inspect the resource footprint. For Windows and Mac the information is not readily available, however, we have written a guide here: [Troubleshooting](https://www.neurodesk.org/docs/support/faq/#i-got-an-error-message-x-killed-or-not-enough-memory)
+
+## Can I just use the containers without neurodesktop or neurocommand?
 Yes, there are multiple ways of using the containers directly and we provide an overview here: https://www.neurodesk.org/docs/getting-started/neurocontainers/
 
-## How to keep your modifications in the container
+## Can I keep my modifications in the container?
 We designed neurodesk with reproducibility as a main goal, so the desktop containers should not be modified if one aims for full reproducibility. However, there is one good option to keep your settings across different container versions: You can write a shell script that installs additional packages and modifies the environment so it's perfect for you. This script can then be re-executed in a new desktop version and will enable a reproducible customization.
 
 Another option is to "save" your docker container including all changes you made. This could be useful when your changes are too difficult to write a shell script or when you do not care about reproducibility as much and you just want to get the job done. To do this you can commit (https://docs.docker.com/engine/reference/commandline/commit/) your container and by uploading the container to your own docker hub you could even share it. 
 
-## How to force a complete container download to your system
+## Can I force a complete container download to my system?
 To increase speed and reliability of Neurodesktop we mount the application containers from a CVMFS mount and download only the files required to run your current task. Although we aim to keep everything on there reproducible, there might be a reason that you want to fully download the containers to your system. You can force this behaviour by adding another parameter to the docker call: `-e CVMFS_DISABLE=true`
 
 For windows an example would look like this:
@@ -55,9 +59,9 @@ docker run --shm-size=1gb -it --privileged --user=root --name neurodesktop -v C:
 ```
 
 ## Freeview 7.2.0 crashes when I open files
-Freeview (and Freesurfer!) needs a valid license to work and we are not allowed to distribute a license with Neurodesk!
+Freeview (and Freesurfer!) need a valid license to work and we are not allowed to distribute a license with Neurodesk!
 
-So here is how you can run freeview 7.2.0 and open your files:
+You can follow these steps to run freeview 7.2.0 and open your files:
 
 1) apply for a license (https://surfer.nmr.mgh.harvard.edu/registration.html) and paste this license in ~/.license
 
@@ -66,6 +70,7 @@ then run
 echo "export FS_LICENSE=~/.license" >> ~/.bashrc
 then start freeview 7.2.0 and it should all work perfectly.
 ```
+
 ## Matlab asks me to reactivate after restarting the desktop
 There is one workaround for this problem. Fix the mac address for your session by including this in your docker command:
 ```
@@ -89,7 +94,7 @@ This seems to be a bug in Guacamole and RDP in combination with certain browsers
 
 ## Copy-Paste and Clipboard issues
 
-### How top copy and paste text
+### How do I copy and paste text?
 You can copy and paste text within Neurodesktop and between Neurodektop and your host computer using the regular keyboard shortcuts (CTRL+C, CTRL+X, and CTRL+V). Note however that some applications (e.g., command-line terminal) are using other keyboard shortcuts. You can usually find them in the "Edit" menu of the relevant application.
 
 Note for Mac Users: You will need to use a combination of CTRL and Command shortcuts in order to copy and paste text between Neurodesktop and the host computer. For example, copy text from your Mac with Command+C and then paste it into Neurodesktop using CTRL+V. For the other way around, you'd use CTRL+C in Neurodesktop and then Command+V on the Mac.
@@ -148,7 +153,7 @@ If it still does not work, please report the problem and we will do our best to 
 
 ## Docker, WSL, Memory
 
-### docker: Cannot connect to the Docker daemon at unix:///var/run/docker.sock. Is the docker daemon running?.
+### Docker: Cannot connect to the Docker daemon at unix:///var/run/docker.sock. Is the docker daemon running?.
 This is usually a docker-related error, not related to neurodesktop itself. To troubleshoot docker, we can try a simpler container first:
 ```bash
 docker run hello-world
@@ -254,5 +259,5 @@ Neurodesk is an open-source project that is always evolving. If you are experien
 Post your question at https://github.com/orgs/NeuroDesk/discussions or open a [new issue](https://github.com/NeuroDesk/neurodesk.github.io/issues), so that we can aim to solve it and update our help documentation. 
 
 
-## How do I get my files in there?
+## How do I get my files into Neurodesk?
 It depends where you are running Neurodesk and where your files are. We provide many different ways from drag-and-drop, to cloud storage to file mounts in [Storage in Neurodesk](/docs/getting-started/storage).
