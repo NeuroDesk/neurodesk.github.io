@@ -67,7 +67,7 @@ If using Firefox, you might not be able to paste clipboard content into the virt
 
 5. If it is the first time you have used Neurodesktop, wait until the desktop appears (it may take a few seconds). Otherwise, it should appear instantaneously.
 
-6. Neurodesk is now ready to use! Please click "What's next?" on the left of this page for further instructions on using Neurodesktop.     
+6. Neurodesk is now ready to use! See the tutorials page for advice on how to use Neurodesk.     
 
 7. For an optimal experience, switch your browser to full-screen mode by following the instructions for your browser here:
 https://www.thewindowsclub.com/open-chrome-edge-or-firefox-browser-in-full-screen-mode
