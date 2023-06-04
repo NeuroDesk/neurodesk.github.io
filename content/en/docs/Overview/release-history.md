@@ -11,9 +11,16 @@ description: >-
 Latest Version
 : {{< params/neurodesktop/jupyter_neurodesk_version >}}
 
+## 20230531
+- included neurodesktop version in hostname
+- removed apt lists
+- triggered automount externally
+
 ## 20230525
+- used jupyter based image
 - fixed environment variables for nipype
 - fixed RDP upload permission errors
+- added symlink on home if /data is mounted
 
 ## 20221216
 - added VNC connection back into docker container because RDP currently causes issues for european keyboards

@@ -208,6 +208,17 @@ p.lead.mt-2 {
       background-color: $command_block_black;
       color: $white;
     }
+
+    .option-unsupported, .option-unsupported:hover {
+      border: 2px solid $light_white;
+      padding: rem(10px);
+      padding-left: calc(9px + 0.330625vw);
+      font-size: calc(9px + 0.330625vw);
+      color: $dark_grey;
+      letter-spacing: -0.22px;
+      line-height: calc(16px + 0.330625vw);
+      background: $light_grey;
+    }
   
     .selected {
       background-color: $command_block_black;
@@ -286,6 +297,10 @@ p.lead.mt-2 {
         font-size: 75%;
         background-color: #f3f4f7;
       }
+    }
+
+    .command-container-matched {    
+      animation: borderAppear 2s ease-in-out;
     }
 
     .command-block {

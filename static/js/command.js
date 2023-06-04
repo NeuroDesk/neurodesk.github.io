@@ -68,10 +68,6 @@ $(function() {
   var userInterfaceOption = document.getElementById(opts.interface);
   var userProcessorOption = document.getElementById(opts.processor);
 
-
-  // if (userCountryOption) {
-  //   $(userCountryOption).trigger("click");
-  // }
   if (userOsOption) {
     $(userOsOption).trigger("click");
   }
@@ -112,33 +108,53 @@ function disableUnsupportedPlatforms(infomap, category, val) {
     for (var i=0; i < elems.length;i++) {
       var supported = info[category].has(val);
       elems[i].style.textDecoration = supported ? "" : "line-through";
+      if (!supported) {
+        $(elems[i]).removeClass("option");
+        $(elems[i]).addClass("option-unsupported");
+      }
     }
   }
 }
 
 function selectedOption(option, selection, category) {
-  $(option).removeClass("selected");
-  $(selection).addClass("selected");
-  opts[category] = selection.id;
-  if (category === "platform") {
-    // var elements = document.getElementsByClassName("country")[0].children;
-    var interface_elements = document.getElementsByClassName("interface")[0].children;
+  if (selection.classList.contains("option")) {
+    $(option).removeClass("selected");
+    $(selection).addClass("selected");
+  
+    opts[category] = selection.id;
+    if (category === "platform") {
+      // var elements = document.getElementsByClassName("country")[0].children;
+      var interface_elements = document.getElementsByClassName("interface")[0].children;
 
-    if (selection.id === "colab" && !(interface_elements["container"].classList.contains("selected"))) {
-      for (var i = 0; i < interface_elements.length; i++) {
-        if (interface_elements[i].id === "container") {
-          $(interface_elements[i]).addClass("selected");
-          opts["interface"] = "container";
-        } else {
-          $(interface_elements[i]).removeClass("selected");
+      if (selection.id === "colab" && !(interface_elements["container"].classList.contains("selected"))) {
+        for (var i = 0; i < interface_elements.length; i++) {
+          if (interface_elements[i].id === "container") {
+            $(interface_elements[i]).addClass("selected");
+            opts["interface"] = "container";
+          } else {
+            $(interface_elements[i]).removeClass("selected");
+          }
         }
       }
-    } 
-
+      else if (selection.id !== "colab") {
+        for (var i = 0; i < interface_elements.length; i++) {
+          if (interface_elements[i].classList.contains("option-unsupported")) {
+            $(interface_elements[i]).removeClass("option-unsupported");
+            $(interface_elements[i]).addClass("option");
+          }
+        }
+      }
+    }
   }
   commandMessage(buildMatcher());
   disableUnsupportedPlatforms(archInterfaceMap,"platforms",opts.platform);
   disableUnsupportedPlatforms(archProcessorMap,"oss",opts.os);
+  if (selection.classList.contains("option")) {
+    $("#command").addClass("command-container-matched");
+    setTimeout(function() {
+      $("#command").removeClass("command-container-matched");
+    }, 500);
+  }
   // disableUnsupportedPlatforms(archInfoMap, "countries", opts.country);
 }
 

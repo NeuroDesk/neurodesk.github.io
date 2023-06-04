@@ -122,3 +122,13 @@ $site_horizontal_padding: 30px;
 @keyframes b{
   50% {background-position:0 -100%,0 0}
 }
+
+@keyframes borderAppear {    
+  0% {    
+    box-shadow: 0 4px 4px rgba(0,0,0,0.4);
+    transition: background-color 0.3s ease-in-out;  
+  }    
+  50% {    
+    box-shadow: none;    
+  } 
+}  
