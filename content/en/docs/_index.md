@@ -4,7 +4,7 @@ linkTitle: "User Documentation"
 weight: 1
 menu:
   main:
-    weight: 10
+    weight: 9
 ---
 
 ## Overview
