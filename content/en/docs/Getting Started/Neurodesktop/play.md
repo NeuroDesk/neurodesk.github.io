@@ -1,6 +1,7 @@
 ---
 title: "Play"
 linkTitle: "Play"
+weight: 3
 description: >
   Play and Lab are publicly available services for running Neurodesk straight from the browser
 ---

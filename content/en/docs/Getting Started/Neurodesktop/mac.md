@@ -64,7 +64,7 @@ We recommend using Chrome over Firefox as it has an option to hide the Toolbar i
 
 4. If it is the first time you use Neurodesktop, wait until the desktop appears (it may take a few seconds). Otherwise, it should appear instantaneously.
 
-5. Neurodesk is ready to use! Click "What's next?" on the left of this page for further instructions.     
+5. Neurodesk is ready to use! See the tutorials page for advice on how to use Neurodesk.     
 
 {{< alert color="info" >}}
 The browser can be closed anytime, and Neurodesktop will continue to run in the background. To reconnect to Neurodesktop, simply start over from step 3 above.

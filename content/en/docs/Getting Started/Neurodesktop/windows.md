@@ -1,7 +1,7 @@
 ---
 title: "Windows"
 linkTitle: "Windows"
-weight: 3
+weight: 2
 description: >
   Install neurodesktop on Windows
 ---
@@ -52,7 +52,7 @@ We do not recommend the use of the Firefox browser for accessing Neurodesktop on
 
 5. If it is the first time you use Neurodesktop, wait until the desktop appears (it may take a few seconds). Otherwise, it should appear instantaneously.
 
-6. Neurodesk is ready to use! Click "What's next?" on the left of this page for further instructions.     
+6. Neurodesk is ready to use! See the tutorials page for advice on how to use Neurodesk.     
 
 7. For an optimal experience, switch your browser to full-screen mode by following the instructions for your browser here:
 https://www.thewindowsclub.com/open-chrome-edge-or-firefox-browser-in-full-screen-mode

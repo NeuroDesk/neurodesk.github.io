@@ -66,7 +66,7 @@ If the computer runs Linux, check specific instructions at https://www.neurodesk
 
 6. If it is the first time you have used Neurodesktop on this instance, wait until the desktop appears (it may take a few seconds). Otherwise, it should appear instantaneously.
 
-7. Neurodesk is ready to use! Click "What's next?" on the left of this page for further instructions on using Neurodesktop.     
+7. Neurodesk is ready to use! See the tutorials page for advice on how to use Neurodesk.     
 
 8. For an optimal experience, switch your browser to full-screen mode by following the instructions for your browser here (except Mac where full-screen mode is built-in):
 https://www.thewindowsclub.com/open-chrome-edge-or-firefox-browser-in-full-screen-mode
