@@ -80,7 +80,7 @@ jobs:
     needs: deploy
     runs-on: ubuntu-latest
     env:
-      HUGO_VERSION: 0.102.3
+      HUGO_VERSION: 0.112.7
     steps:
       - name: Install Hugo CLI
         run: |
