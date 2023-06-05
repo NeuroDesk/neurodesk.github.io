@@ -6,14 +6,14 @@ description: >
   Add a tool to neurodesktop
 ---
 
-The goal of *neurodesk* is to provide users with a large choice of tools to use in their pipelines.
-Use the guide below to add a tool to *neurodesktop* or *neurocontainers*. 
+The goal of *Neurodesk* is to provide users with a large choice of tools to use in their pipelines.
+Use the guide below to add a tool to *Neurodesktop* or *Neurocontainers*. 
 
 ## Guiding principles 
-To decide if a tool should be packaged in a singularity container in *neurocontainers* or be installed in the *neurodesktop* container we are currently following these guiding principles:
-1) *neurodesk* is not a package manager. This means we are not distributing tools in containers that can easily be installed via a standard package manager 
-2) *neurodesk* allows users to have multiple versions of tools in parallel via [lmod]( https://lmod.readthedocs.io/en/latest), this means that if different versions of a tool can't be installed in parallel we package the tool inside a container.
-3) *neurodesk* aims to provide tooling to link tools from different containers (such as workflow managers like nipype or nextflow). This means that if a tool is required to coordinate various container-tools, it should be in the *neurodesktop* container.
+To decide if a tool should be packaged in a singularity container in *Neurocontainers* or be installed in the *Neurodesktop* container, we are currently following these guiding principles:
+1) *Neurodesk* is not a package manager. This means we are not distributing tools in containers that can easily be installed via a standard package manager. 
+2) *Neurodesk* allows users to have multiple versions of tools in parallel via [lmod]( https://lmod.readthedocs.io/en/latest), this means that if different versions of a tool can't be installed in parallel we package the tool inside a container.
+3) *Neurodesk* aims to provide tooling to link tools from different containers (such as workflow managers like nipype or nextflow). This means that if a tool is required to coordinate various container-tools, it should be in the *Neurodesktop* container.
 
 
 Examples:
@@ -30,17 +30,15 @@ Examples:
 | freesurfer | no           | no                     | no            | no                   | no                     | container                      |
 
 
-# Adding new tools via our interactive container builder:
+## Adding new tools via our interactive container builder:
 This is the recommended way for all contributors:
 https://www.neurodesk.org/developers/new_tools/contribute/
 
-
-
-# Adding new tools via manual steps
+## Adding new tools via manual steps
 This is only for developers who are familiar with building containers and github:
 
 ## Adding new recipes
-Refer to [neurodocker](https://github.com/NeuroDesk/neurodocker) for more information on neurodocker recipes  
+Refer to [neurodocker](https://github.com/NeuroDesk/neurodocker) for more information on neurodocker recipes.  
 
 ## Build container
 
@@ -219,7 +217,7 @@ Verify that user has write permission to /neurocommand/local
 
 13. Wait at least 24 hours
 
-14. Download and run the daily build of neurodesktop to check that your app can be launched from the start menu and works properly:
+14. Download and run the daily build of Neurodesktop to check that your app can be launched from the start menu and works properly:
     ```bash
     sudo docker pull vnmd/neurodesktop:latest && sudo docker run --shm-size=1gb -it --privileged --user=root --name neurodesktop -v ~/neurodesktop-storage:/neurodesktop-storage -e HOST_UID="$(id -u)"  -e HOST_GID="$(id -g)" -p 8888:8888 -e NEURODESKTOP_VERSION=latest vnmd/neurodesktop:latest
     ```
