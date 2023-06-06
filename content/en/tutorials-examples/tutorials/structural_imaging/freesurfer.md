@@ -14,6 +14,9 @@ description: >
 > Web: [mri.sbollmann.net](https://mri.sbollmann.net/)
 > Twitter: [@sbollmann_MRI](https://twitter.com/sbollmann_MRI)
 
+<!-- Following line adds a link to getting set up with Neurodesk -->
+{{< params/neurodesktop/getting_set_up >}}
+<!-- -->
 
 ## FreeSurfer Example using module load (e.g. on an HPC)
 Download data:

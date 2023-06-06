@@ -14,6 +14,10 @@ description: >
 >
 > Github: @stebo85
 
+<!-- Following line adds a link to getting set up with Neurodesk -->
+{{< params/neurodesktop/getting_set_up >}}
+<!-- -->
+
 Oracle Open Data is an open platform for scientific data
 
 # Publish a dataset

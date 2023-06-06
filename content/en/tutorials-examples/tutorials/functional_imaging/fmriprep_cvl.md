@@ -20,6 +20,10 @@ description: >
 
 > This workflow documents how to use fmriprep with neurodesk and provides some details that may help you troubleshoot some common problems I found along the way. 
 
+<!-- Following line adds a link to getting set up with Neurodesk -->
+{{< params/neurodesktop/getting_set_up >}}
+<!-- -->
+
 ---
 
 # Assumptions

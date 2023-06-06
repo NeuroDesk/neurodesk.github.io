@@ -13,6 +13,11 @@ description: >
 > Github: @mrikasper
 >
 > Twitter: @mrikasper
+
+<!-- Following line adds a link to getting set up with Neurodesk -->
+{{< params/neurodesktop/getting_set_up >}}
+<!-- -->
+
 ## Origin
 
 The PhysIO Toolbox implements ideas for robust physiological noise modeling in fMRI, outlined in this paper:

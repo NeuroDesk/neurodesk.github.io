@@ -21,6 +21,10 @@ description: >
 
 ---
 
+<!-- Following line adds a link to getting set up with Neurodesk -->
+{{< params/neurodesktop/getting_set_up >}}
+<!-- -->
+
 Please note that this container uses a compiled version of FieldTrip to run scripts (without needing a Matlab license). Code development is not currently supported within the container and needs to be carried out separately in Matlab.  
 <br/>
 

@@ -16,6 +16,10 @@ description: >
 >
 > Twitter: @SinKim98
 
+<!-- Following line adds a link to getting set up with Neurodesk -->
+{{< params/neurodesktop/getting_set_up >}}
+<!-- -->
+
 In addition to being a convenient method of sharing data, DataLad can also help
 you create reproducible analyses by recording how certain result files were
 produced (i.e. _provenance_). This helps others (and you!) easily keep track of

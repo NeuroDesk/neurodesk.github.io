@@ -17,6 +17,10 @@ description: >
 > Twitter: @garner_theory
 >
 
+<!-- Following line adds a link to getting set up with Neurodesk -->
+{{< params/neurodesktop/getting_set_up >}}
+<!-- -->
+
 This tutorial walks through 1 way to batch script the use of the PhysIO toolbox with Neurodesk.
 The goal is to use the toolbox to generate physiological regressors to use when modelling fMRI data. 
 The output format of the regressor files are directly compatible for use with SPM, and can be adapted to fit the specifications of other toolboxes. <p>

@@ -14,6 +14,10 @@ description: >
 > Email: joan@std.uestc.edu.cn
 > Github: @Joanone
 
+<!-- Following line adds a link to getting set up with Neurodesk -->
+{{< params/neurodesktop/getting_set_up >}}
+<!-- -->
+
 ## References: 
 The steps used for this tutorial were referenced from:
 https://github.com/civier/HCP-dMRI-connectome

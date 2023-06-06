@@ -21,6 +21,10 @@ description: >
 >
 <!-- Fill in your personal details above so that we can credit the tutorial to you. Feel free to add any additional contact details i.e. website, or remove those that are irrelevant -->
 
+<!-- Following line adds a link to getting set up with Neurodesk -->
+{{< params/neurodesktop/getting_set_up >}}
+<!-- -->
+
 This tutorial is based on the excellent tutorial from Andy's Brain book: https://andysbrainbook.readthedocs.io/en/latest/SPM/SPM_Overview.html
 Our version here is a shortened and adjusted version for using on the Neurodesk platform.
 

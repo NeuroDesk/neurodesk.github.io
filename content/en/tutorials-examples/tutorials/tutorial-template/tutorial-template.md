@@ -33,6 +33,10 @@ Once you've filled out those details, you can delete this comment block.
 >
 <!-- Fill in your personal details above so that we can credit the tutorial to you. Feel free to add any additional contact details i.e. website, or remove those that are irrelevant -->
 
+<!-- Following line adds a link to getting set up with Neurodesk -->
+{{< params/neurodesktop/getting_set_up >}}
+<!-- -->
+
 ## How to contribute a new tutorial
 
 Welcome to the tutorial template, which you can use to contribute your neurodesk tutorial to our documentation. We aim to collect a wide variety of tutorials and examples representing the spectrum of tools available under the neurodesk architecture and the diversity in how researchers might apply them. 

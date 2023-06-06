@@ -8,6 +8,10 @@ description: >
   Use mne-python to load, pre-process, and plot example EEG data in a jupyter notebook through vscode. 
 ---
 
+<!-- Following line adds a link to getting set up with Neurodesk -->
+{{< params/neurodesktop/getting_set_up >}}
+<!-- -->
+
 ## Getting started
 
 To begin, navigate to Neurodesk->Electrophysiology->mne->vscodeGUI 0.23.4 in the menu. This version of vscode has been installed in a software container together with the a conda environment containing MNE-python. Note that if you open any other version of vscode in Neurodesk, you will not be able to access the MNE conda environment. 

@@ -17,11 +17,13 @@ description: >
 >
 > Github: @felenitaribeiro
 >
-> Twitter: @NandaRibeiro93
+> Twitter: @NandaRibeiro93/home/aswin/workspace/neurodesk/neurodesk.github.io/layouts/partials
 >
 <!-- Fill in your personal details above so that we can credit the tutorial to you. Feel free to add any additional contact details i.e. website, or remove those that are irrelevant -->
 
 This tutorial documents how to use Connectome Workbench on NeuroDesk for visualizing the 7T HCP Retinotopy Dataset. 
+
+{{< params/neurodesktop/getting_set_up >}}
 
 ## Download data
 

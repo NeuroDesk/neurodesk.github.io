@@ -14,6 +14,10 @@ description: >
 >
 > Github: @stebo85
 
+<!-- Following line adds a link to getting set up with Neurodesk -->
+{{< params/neurodesktop/getting_set_up >}}
+<!-- -->
+
 The osfclient is an open-source tool to publish and access open datasets on the Open Science Framework (OSF): http://osf.io/
 
 # Publish a dataset

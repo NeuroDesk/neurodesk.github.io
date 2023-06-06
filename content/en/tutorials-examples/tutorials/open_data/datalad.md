@@ -14,6 +14,10 @@ description: >
 >
 > Github: @stebo85
 
+<!-- Following line adds a link to getting set up with Neurodesk -->
+{{< params/neurodesktop/getting_set_up >}}
+<!-- -->
+
 DataLad is an open-source tool to publish and access open datasets. In addition to many open data sources (OpenNeuro, CBRAIN, brainlife.io, CONP, DANDI, Courtois Neuromod, Dataverse, Neurobagel), it can also connect to the Open Science Framework (OSF): http://osf.io/
 
 # Publish a dataset

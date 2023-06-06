@@ -13,6 +13,11 @@ description: >
 > Github: [@stebo85](https://github.com/stebo85)
 > Web: [mri.sbollmann.net](https://mri.sbollmann.net/)
 > Twitter: [@sbollmann_MRI](https://twitter.com/sbollmann_MRI)
+
+<!-- Following line adds a link to getting set up with Neurodesk -->
+{{< params/neurodesktop/getting_set_up >}}
+<!-- -->
+
 ## Download demo data
 Open a terminal and run:
 ```

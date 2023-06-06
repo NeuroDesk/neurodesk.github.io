@@ -16,6 +16,9 @@ description: >
 > Web: [mri.sbollmann.net](https://mri.sbollmann.net/)
 > Twitter: [@sbollmann_MRI](https://twitter.com/sbollmann_MRI)
 
+<!-- Following line adds a link to getting set up with Neurodesk -->
+{{< params/neurodesktop/getting_set_up >}}
+<!-- -->
 
 Open lcmodel from the menu: Applications -> Spectroscopy -> lcmodel -> lcmodel 6.3
 
