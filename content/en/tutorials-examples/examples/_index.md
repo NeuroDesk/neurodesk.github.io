@@ -1,7 +1,7 @@
 ---
 title: "Examples"
 linkTitle: "Examples"
-weight: 100
+weight: 10
 description: >
   Examples
 ---
