@@ -209,7 +209,7 @@ enable = false
 	# icon = "fab fa-slack"
     #     desc = "Chat with other project developers"
 [[params.links.user]]
-	name = "Dicussion Forum (requires github login)"
+	name = "Discussion"
 	url = "https://github.com/orgs/NeuroDesk/discussions"
  	icon = "fa fa-envelope"
     desc = "Discuss development issues around the project"
