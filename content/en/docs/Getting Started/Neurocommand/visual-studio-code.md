@@ -16,21 +16,7 @@ Install the following VS Code extensions:
 - [x] [Docker extension](https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-docker) (Required)
 - [ ] [Remote development extension pack](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.vscode-remote-extensionpack). Includes the following extensions
   - [x] [Remote - Containers](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers) (Required)
-  - [ ] [Remote - SSH](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-ssh) (For remote servers)
   - [ ] [Remote - WSL](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-wsl) (For windows hosts)
-
-## For Remote servers 
-
-Open VS Code
-
-Open the Command Palette (Ctrl+Shift+P)
-
-Find `Remote-SSH: Connect to Host...` and select your remote host
-> More information on remote hosts available at https://code.visualstudio.com/docs/remote/ssh
-
-This will open a new VS Code instance connected to the remote host via SSH. You may close the previous VS Code instance.
-
-Follow the steps in the next section using the new VS Code instance
 
 ## Connecting to Neurodesktop
 
