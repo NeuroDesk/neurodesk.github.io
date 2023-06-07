@@ -23,11 +23,6 @@ Install Docker on the cloud instance from here: https://docs.docker.com/get-dock
 ### 3. Run Neurodesktop
 Create a local folder ~/neurodesktop-storage on the cloud instance to store persistent data (data that will not disappear if neurodesktop is stopped)
 
-#### Option 1: NeuroDesktop.run
-Download and run the following executable on the cloud instance
-https://github.com/NeuroDesk/neurodesktop/raw/main/Linux_run_Neurodesk/NeuroDesktop.run
-
-#### Option 2: Using Terminal
 1. Open a terminal on the cloud instance, and type the following command to automatically download the neurodesktop container and run it 
 
 ```bash

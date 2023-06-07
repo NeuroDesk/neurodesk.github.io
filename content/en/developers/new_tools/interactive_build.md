@@ -1,7 +1,9 @@
 ---
-title: "Build Containers"
-linkTitle: "Build Container"
-weight: 1
+title: "Interactive Build"
+linkTitle: "Interactive Build"
+weight: 2
+aliases:
+- /developers/new_tools/contribute
 description: >-
      How to contribute a new container.
 ---
