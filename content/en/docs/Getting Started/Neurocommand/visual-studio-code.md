@@ -2,6 +2,8 @@
 title: "Visual Studio Code"
 linkTitle: "Visual Studio Code"
 weight: 4
+aliases: 
+- /docs/getting-started/neurodesktop/visual-studio-code/
 description: >-
      Guide connecting your VS Code environment to Neurodesktop
 ---
