@@ -2,7 +2,8 @@
 title: "Neurodesk FAQ"
 linkTitle: "FAQ"
 weight: 5
-
+aliases:
+- /docs/support/faq
 description: >
   Frequently Asked Questions.
 ---

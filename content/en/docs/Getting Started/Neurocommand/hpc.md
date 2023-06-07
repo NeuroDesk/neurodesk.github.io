@@ -2,6 +2,8 @@
 title: "HPC"
 linkTitle: "HPC"
 weight: 4
+aliases:
+- /docs/getting-started/neurodesktop/hpc
 description: >
   Run neurodesktop in a high performance computing environment
 ---
