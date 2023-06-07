@@ -101,8 +101,6 @@ jobs:
 
       - name: Check broken links
         env:
-          EXCLUDE: |
-            github.com
           INPUT_URL: "${{ steps.pages.outputs.base_url }}" 
           INPUT_CMD_PARAMS: '--verbose --buffer-size=8192 --max-connections=15 --one-page-only --ignore-fragments --color=always --skip-tls-verification --exclude="(github.com|linkedin.com)"'
         run: |
