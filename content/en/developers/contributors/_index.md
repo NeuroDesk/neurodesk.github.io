@@ -164,6 +164,9 @@ If you contributed to the project please list yourself here with a description o
 - https://github.com/layerfMRI
 - application container development (laynii)
 
+## Monika Doerig
+- fsl nipype fMRI example
+
 
 ## Steering Committee members without code contributions:
 -	Ryan Sullivan, University of Sydney, Key User, Steering Committee
