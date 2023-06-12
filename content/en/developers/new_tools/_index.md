@@ -9,11 +9,9 @@ description: >
   How to add new tools to neurodesk
 ---
 
-The goal of *Neurodesk* is to provide users with a large choice of tools to use in their pipelines.
-Use the guide below to add a tool to **Neurodesktop** or **Neurocontainers**. 
-
 ## Guiding principles 
-To decide if a tool should be packaged in a **Neurocontainers** or be installed in the ***Neurodesktop container**, we are currently following these guiding principles:
+To decide if a tool should be packaged in a **Neurocontainers** or be installed in the **Neurodesktop container**, we are currently following these guiding principles:
+
 **1) Neurodesk as a Platform, Not a Package Manager:** We don't distribute tools that can be easily installed via standard package managers.
 
 **2) Multiple versions of tools:** Neurodesk supports the use of multiple versions of a tool in parallel via [lmod]( https://lmod.readthedocs.io/en/latest). If a tool doesn't support this, follow [this instruction](#adding-new-tools-to-neurocontainers) to package it in [Neurocontainers](https://github.com/NeuroDesk/neurocontainers).
