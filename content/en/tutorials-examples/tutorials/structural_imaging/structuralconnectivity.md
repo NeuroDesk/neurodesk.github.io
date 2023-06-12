@@ -54,113 +54,113 @@ N/B: The subfolder used in this tutorial was tagged "Test"
 
 Open a terminal in neurodesk and confirm your input files:
 
-![structuralconnectivity](/structuralconnectivity/01_start.png)
+![structuralconnectivity](/tutorials/structural_imaging/structuralconnectivity/01_start.png)
 
 
 
 ###  Activate mrtrix3, fsl and afni software versions of your choice in the neurodesk terminal
 N/B: mrtrix3 (3.0.3), afni (21.2.00), fsl(6.0.5.1) versions were used in this tutorial. For reproducibility, the same versions can be maintained.
 
-![structuralconnectivity](/structuralconnectivity/02_activate_softwares.png)
+![structuralconnectivity](/tutorials/structural_imaging/structuralconnectivity/02_activate_softwares.png)
 
 
 
 ## Step 1: Further pre-processing
 Extract data.nii.gz to enable memory-mapping. The extracted files are about 4.5GB:
 
-![structuralconnectivity](/structuralconnectivity/03_preproc.png)
+![structuralconnectivity](/tutorials/structural_imaging/structuralconnectivity/03_preproc.png)
 
 Perform mrconvert:
 
-![structuralconnectivity](/structuralconnectivity/04_preproc.png)
+![structuralconnectivity](/tutorials/structural_imaging/structuralconnectivity/04_preproc.png)
 
 Extract the response function. Uses stride 0,0,0,1:
 
-![structuralconnectivity](/structuralconnectivity/05_preproc.png)
+![structuralconnectivity](/tutorials/structural_imaging/structuralconnectivity/05_preproc.png)
 
-![structuralconnectivity](/structuralconnectivity/06_preproc.png)
+![structuralconnectivity](/tutorials/structural_imaging/structuralconnectivity/06_preproc.png)
 
 
 Generate mask:
 
-![structuralconnectivity](/structuralconnectivity/07_preproc.png)
+![structuralconnectivity](/tutorials/structural_imaging/structuralconnectivity/07_preproc.png)
 
 Generate Fibre Orientation Distributions (FODs):
 
-![structuralconnectivity](/structuralconnectivity/08_preproc.png)
+![structuralconnectivity](/tutorials/structural_imaging/structuralconnectivity/08_preproc.png)
 
 
 Perform normalization:
 
-![structuralconnectivity](/structuralconnectivity/09_preproc.png)
+![structuralconnectivity](/tutorials/structural_imaging/structuralconnectivity/09_preproc.png)
 
 Generate a 5 tissue image:
 
-![structuralconnectivity](/structuralconnectivity/10_preproc.png)
+![structuralconnectivity](/tutorials/structural_imaging/structuralconnectivity/10_preproc.png)
 
 Convert the B0 and 5TT image to a compressed format:
 
-![structuralconnectivity](/structuralconnectivity/11_preproc.png)
+![structuralconnectivity](/tutorials/structural_imaging/structuralconnectivity/11_preproc.png)
 
 Use "fslroi" to extract the first volume of the segmented dataset which corresponds to the Grey Matter Segmentation:
 
-![structuralconnectivity](/structuralconnectivity/12_preproc.png)
+![structuralconnectivity](/tutorials/structural_imaging/structuralconnectivity/12_preproc.png)
 
 Use "flirt" command to perform coregisteration:
 
-![structuralconnectivity](/structuralconnectivity/13_preproc.png)
+![structuralconnectivity](/tutorials/structural_imaging/structuralconnectivity/13_preproc.png)
 
 
 Convert the transformation matrix to a format readable by MRtrix3:
 
-![structuralconnectivity](/structuralconnectivity/14_preproc.png)
+![structuralconnectivity](/tutorials/structural_imaging/structuralconnectivity/14_preproc.png)
 
 Coregister the anatomical image to the diffusion image:
 
-![structuralconnectivity](/structuralconnectivity/15_preproc.png)
+![structuralconnectivity](/tutorials/structural_imaging/structuralconnectivity/15_preproc.png)
 
 Create the seed boundary which separates the grey from the white matter. The command "5tt2gmwmi" denotes (5 tissue type(segmentation) to grey matter/white matter interface):
 
-![structuralconnectivity](/structuralconnectivity/16_preproc.png)
+![structuralconnectivity](/tutorials/structural_imaging/structuralconnectivity/16_preproc.png)
 
 ## Step 2: Tractogram construction
 
 The probabilistic tractography which is the default in MRtrix is used in this tutorial. The default method is the iFOD2 algorithm. 
 The number of streamlines used is 10 million, this was chosen to save computational time:
 
-![structuralconnectivity](/structuralconnectivity/17_tractogram.png)
+![structuralconnectivity](/tutorials/structural_imaging/structuralconnectivity/17_tractogram.png)
 
 Proceed to Step 3 when the process above is completed (100%).
 
 ## Step 3: SIFT2 construction
 The generated streamlines can be refined with tcksift2 to counterbalance the overfitting. This creates a text file containing weights for each voxel in the brain:
 
-![structuralconnectivity](/structuralconnectivity/18_sift2.png)
+![structuralconnectivity](/tutorials/structural_imaging/structuralconnectivity/18_sift2.png)
 
 ## Step 4: Connectome construction
 In constructing the connectome, the desikan-killany atlas which includes the cortical and sub-cortical regions (84 regions) was used.
 
 Copy the "FreeSurferColorLUT.txt" file from the ml freesurfer 7.2.0 singularity container to the subject's folder:
 
-![structuralconnectivity](/structuralconnectivity/19_connectome.png)
-![structuralconnectivity](/structuralconnectivity/20_connectome.png)
+![structuralconnectivity](/tutorials/structural_imaging/structuralconnectivity/19_connectome.png)
+![structuralconnectivity](/tutorials/structural_imaging/structuralconnectivity/20_connectome.png)
 
 Copy the "fs_default.txt" file from the ml mrtrix3 3.0.3 singularity container to the subject's folder:
 
-![structuralconnectivity](/structuralconnectivity/21_connectome.png)
+![structuralconnectivity](/tutorials/structural_imaging/structuralconnectivity/21_connectome.png)
 
 The command labelconvert uses the parcellation and segmentation output of FreeSurfer to create a new parcellated file in .mif format:
 
-![structuralconnectivity](/structuralconnectivity/22_connectome.png)
+![structuralconnectivity](/tutorials/structural_imaging/structuralconnectivity/22_connectome.png)
 
 Perform nodes co-registeration:
 
-![structuralconnectivity](/structuralconnectivity/23_connectome.png)
+![structuralconnectivity](/tutorials/structural_imaging/structuralconnectivity/23_connectome.png)
 
 
 Create a whole-brain connectome which denotes the streamlines between each parcellation pair in the atlas. The "symmetric" option  makes the lower and upper diagonal the same, the "scale_invnodevol" option scales the connectome by the inverse of the size of the node:
 
-![structuralconnectivity](/structuralconnectivity/24_connectome.png)
+![structuralconnectivity](/tutorials/structural_imaging/structuralconnectivity/24_connectome.png)
 
 ## Viewing the connectome
 
@@ -172,7 +172,7 @@ imagesc(connectome,[0 1])
 
 ```
 
-![structuralconnectivity](/structuralconnectivity/25_connectome.png)
+![structuralconnectivity](/tutorials/structural_imaging/structuralconnectivity/25_connectome.png)
 
 
 Congratulations on constructing a single subject's structural connectome with neurodesk! Running multiple subjects would require scripting. Kindly consult the references above.
