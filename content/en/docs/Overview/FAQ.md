@@ -81,11 +81,14 @@ There is one workaround for this problem. Fix the mac address for your session b
 ## How to restart a Neurodesk Lab session?
 
 In the jupyter menu, click on File -> Hub Control Panel:
+
 <img width="436" alt="image" src="https://github.com/NeuroDesk/neurodesk.github.io/assets/4021595/e2fda6f8-bfc9-49c6-80b1-031e7597de66">
+
 
 Then "Stop My Server"
 
 <img width="379" alt="image" src="https://github.com/NeuroDesk/neurodesk.github.io/assets/4021595/4e288ff7-6aa0-4085-82de-eafdb688e433">
+
 
 Then "Start My Server"
 
