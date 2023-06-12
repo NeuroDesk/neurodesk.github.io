@@ -30,11 +30,7 @@ Instructions for installing and using the app: https://www.neurodesk.org/docs/ge
 1. Open a terminal (e.g. Powershell), and type the following command to automatically download the neurodesktop container and run it
 
 ```shell
-docker run \
---shm-size=1gb -it --privileged --user=root --name neurodesktop \
--v C:/neurodesktop-storage:/neurodesktop-storage \
--p 8888:8888 \
--e NEURODESKTOP_VERSION={{< params/neurodesktop/jupyter_neurodesk_version >}} vnmd/neurodesktop:{{< params/neurodesktop/jupyter_neurodesk_version >}}
+docker run --shm-size=1gb -it --privileged --user=root --name neurodesktop -v C:/neurodesktop-storage:/neurodesktop-storage -p 8888:8888 -e NEURODESKTOP_VERSION={{< params/neurodesktop/jupyter_neurodesk_version >}} vnmd/neurodesktop:{{< params/neurodesktop/jupyter_neurodesk_version >}}
 ```
 
 <!-- neurodesktop version found in neurodesk.github.io/data/neurodesktop.toml -->
