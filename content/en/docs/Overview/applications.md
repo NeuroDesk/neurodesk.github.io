@@ -10,7 +10,7 @@ description: >
 ---
 Below is a list of the neurocontainer applications included in the most recent Neurodesk release. 
 
-To use these applications through the Neurodesk platform, find the correct instructions for getting started by selecting your computing environment details in the widget on our [home page](https://www.neurodesk.org/)
+To use these applications through the Neurodesk platform, find the correct instructions for getting started by selecting your computing environment details in the widget on our [home page](https://neurodesk.org#startup)
 
 Neurodesktop comes packaged with:
 - programming software (e.g., Visual Studio Code, python, git)
@@ -23,5 +23,5 @@ Neurodesktop comes packaged with:
 If you can't find an application in Neurodesktop's menu, you may need to [update Neurodesktop](/docs/getting-started/neurodesktop)<br>
 If you can't find an application on the Nectar Desktop Service, visit our [discussion forum](https://github.com/orgs/NeuroDesk/discussions) to create a request<br>
 For more information on data synchronization, visit our [Storage section](/docs/getting-started/storage)<br>
-For guides and tutorials, refer to the respective [tutorial](https://www.neurodesk.org/tutorials)<br>
+For guides and tutorials, refer to the respective [tutorial and examples](https://www.neurodesk.org/tutorials-examples/)<br>
 {{< /alert >}}
