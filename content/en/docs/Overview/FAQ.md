@@ -78,6 +78,22 @@ There is one workaround for this problem. Fix the mac address for your session b
 --mac-address 02:42:ac:11:00:02 
 ```
 
+## How to restart a Neurodesk Lab session?
+
+In the jupyter menu, click on File -> Hub Control Panel:
+<img width="436" alt="image" src="https://github.com/NeuroDesk/neurodesk.github.io/assets/4021595/e2fda6f8-bfc9-49c6-80b1-031e7597de66">
+
+Then "Stop My Server"
+
+<img width="379" alt="image" src="https://github.com/NeuroDesk/neurodesk.github.io/assets/4021595/4e288ff7-6aa0-4085-82de-eafdb688e433">
+
+Then "Start My Server"
+
+<img width="248" alt="image" src="https://github.com/NeuroDesk/neurodesk.github.io/assets/4021595/efbf6a95-bd2a-451b-97f9-bf67a839fdcd">
+
+
+
+
 ## VScode
 
 ### Vscode is not starting up (or starts many many copies of itself ...)
