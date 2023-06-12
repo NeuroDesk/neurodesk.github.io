@@ -8,8 +8,6 @@ description: >-
      How to contribute a new container.
 ---
 
-To make contributing containers easier, we developed an interactive container build system. If you are very familiar with Git and building containers you can also follow the manual process, which you can find documented here: https://www.neurodesk.org/developers/new_tools/add_tool/
-
 ## 1) Open an issue to get access to the interactive container build system
 https://github.com/NeuroDesk/neurocontainers/issues/new
 
