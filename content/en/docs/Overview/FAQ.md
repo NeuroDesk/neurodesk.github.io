@@ -175,11 +175,11 @@ The Docker engine relies on the Windows subsystem for Linux ([WSL]( https://docs
 
 If WSL is properly installed, the _Resources_ tab of the Docker settings should look something like this:
 
-![Docker_WSL_correct](/Troubleshooting/Docker_WSL_correct.png 'Docker_WSL_correct')
+![Docker_WSL_correct](/faq/overview/Docker_WSL_correct.png 'Docker_WSL_correct')
 
 However, if WSL is missing or incorrectly configured, the _Resources_ tab of the Docker settings may look something like this:
 
-![Docker_WSL_incorrect](/Troubleshooting/Docker_WSL_incorrect.png 'Docker_WSL_incorrect')
+![Docker_WSL_incorrect](/faq/overview/Docker_WSL_incorrect.png 'Docker_WSL_incorrect')
 
 If this is the case, follow the manual install instructions to install [WSL 2]( https://docs.microsoft.com/en-us/windows/wsl/install-win10) (including installation of Ubuntu through Microsoft Store). 
 
@@ -196,11 +196,11 @@ This may be a memory issue. First, ensure that there is enough free space on the
 2. Navigate to "Troubleshooting" (the bug icon in the top right). 
 3. Click "Reset to factory defaults" 
 
-![Docker_troubleshooting](/Troubleshooting/Docker_troubleshooting.png 'Docker_troubleshooting')
+![Docker_troubleshooting](/faq/overview/Docker_troubleshooting.png 'Docker_troubleshooting')
 
 If you are still experiencing issues after this, you may need to update docker to the latest version. This can be achieved through "settings" in the docker engine, or (on windows) by right clicking on the docker tray icon:
 
-![Docker_update](/Troubleshooting/Docker_update.png 'Docker_update')
+![Docker_update](/faq/overview/Docker_update.png 'Docker_update')
 
 ### I got an error message 'X killed' or not enough memory
 This may be due to Docker not having access to enough RAM from your host computer.

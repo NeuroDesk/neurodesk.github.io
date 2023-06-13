@@ -42,9 +42,9 @@ Neurodesk was originally conceived as ["Virtual Neuro Machine"](https://docs.goo
 
 ## Acknowledgments
 
-![nif](/nif.png 'nif') ![uq](/uq_logo.png 'uq')
+![nif](/overview/nif.png 'nif') ![uq](/overview/uq_logo.png 'uq')
 
-![swinburne](/swinburne_uni_logo.png 'swinburne') ![liege](/liege_uni_logo.png 'liege')
+![swinburne](/overview/swinburne_uni_logo.png 'swinburne') ![liege](/overview/liege_uni_logo.png 'liege')
 
 ## Funding
 Thank you to Oracle for Research for providing Oracle Cloud credits and related resources to support this project.

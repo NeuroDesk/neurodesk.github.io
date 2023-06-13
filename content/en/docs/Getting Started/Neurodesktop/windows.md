@@ -95,13 +95,13 @@ If you want to connect via RDP using a different port, replace 3390 in the previ
 Open Windows Remote Desktop Connection and connect to Computer `localhost:3390` as shown below. 
 
 
-![win-rdp-1](/neurodesktop/getting-started/win-rdp-1.png 'win-rdp-1')
+![win-rdp-1](/getting-started/neurodesktop/win-rdp-1.png 'win-rdp-1')
 
 Resolution and multi-monitor settings can be set from the Display tab. 
 
 Once ready, click Connect. This will take you to the following prompt
 
-![win-rdp-1](/neurodesktop/getting-started/win-rdp-2.png 'win-rdp-2')
+![win-rdp-1](/getting-started/neurodesktop/win-rdp-2.png 'win-rdp-2')
 
 Use the following details to login
 
@@ -141,9 +141,9 @@ Download the Tiger VNC client (`vncviewer64-1.12.0.exe`) from https://sourceforg
 
 Run the VNC Client and connect to `localhost::5901`
 
-![tigervncclient](/neurodesktop/getting-started/vnc/tigervncclient.png 'tigervncclient')
+![tigervncclient](/getting-started/neurodesktop/vnc/tigervncclient.png 'tigervncclient')
 
 Enter `password` and click Ok.
 
-![tigervncclient-password](/neurodesktop/getting-started/vnc/tigervncclient-password.png 'tigervncclient-password')
+![tigervncclient-password](/getting-started/neurodesktop/vnc/tigervncclient-password.png 'tigervncclient-password')
 
