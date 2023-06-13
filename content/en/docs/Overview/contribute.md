@@ -2,6 +2,8 @@
 title: "Contribute"
 description: > 
   How to get involved.
+aliases:
+- /docs/neurocontainers/contribute/
 
 ---
 
