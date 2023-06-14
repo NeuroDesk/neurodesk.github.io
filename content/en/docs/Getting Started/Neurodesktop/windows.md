@@ -36,7 +36,7 @@ docker run --shm-size=1gb -it --privileged --user=root --name neurodesktop -v C:
 <!-- neurodesktop version found in neurodesk.github.io/data/neurodesktop.toml -->
 2. Once neurodesktop is downloaded, leave the terminal open and check which server neurodesktop running on (Avoid pressing CTRL+C). ]
 
-![image](/neurodeskapp/terminal_token.png)
+![image](/getting-started/neurodeskapp/terminal_token.png)
 
 3. To access neurodesktop, open your web browser and type in one of the URLs provided in your terminal (e.g. `http://127.0.0.1:8888/lab?token=your_unique_token`).
 

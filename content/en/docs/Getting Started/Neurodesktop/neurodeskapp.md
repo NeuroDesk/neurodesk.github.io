@@ -7,7 +7,7 @@ description: >
 ---
 
 <img style="float: right;" src="/getting-started/neurodeskapp/neurodesk-desktop.png" width="400">
-<!-- ![Neurodesk App](/neurodeskapp/neurodesk-desktop.png 'neurodeskapp') -->
+<!-- ![Neurodesk App](/getting-started/neurodeskapp/neurodesk-desktop.png 'neurodeskapp') -->
 
 ### Minimum System Requirements
 1. At least 5GB free space for neurodesktop base image
