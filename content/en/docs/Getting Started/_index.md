@@ -10,7 +10,7 @@ description: >
 ## Release
 Ensure you note the release date of the Neurodesktop container image during installation, as it is indicated in the _docker run_ command, e.g. 
 
-![version](/neurodeskapp/version.png 'version')
+![version](/getting-started/neurodeskapp/version.png 'version')
 
 We regularly update Neurodesktop for optimal performance and updated software. Check the [Release History](/docs/overview/release-history) for past releases. To upgrade your container, replace the release number with your desired version. For replicable analysis pipelines, share the stable release number you used, enabling others to recreate your work environment anywhere.
 

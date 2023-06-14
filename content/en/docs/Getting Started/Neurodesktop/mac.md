@@ -52,7 +52,7 @@ If you get errors in neurodesktop then check if the ~/neurodesktop-storage direc
 
 2. Once neurodesktop is downloaded, leave the terminal open and check which server neurodesktop running on (Avoid pressing CTRL+C).
 
-![image](/neurodeskapp/terminal_token.png)
+![image](/getting-started/neurodeskapp/terminal_token.png)
 
 3. To access neurodesktop, open your web browser and navigate to one of the URLs shown in your terminal (e.g. `http://127.0.0.1:8888/lab?token=your_unique_token`).
 

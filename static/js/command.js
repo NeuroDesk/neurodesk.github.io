@@ -146,6 +146,13 @@ function selectedOption(option, selection, category) {
       }
     }
   }
+  console.log(    opts.processor.toLowerCase() +
+  "," +
+  opts.interface.toLowerCase() +
+  "," +
+  opts.os.toLowerCase() +
+  "," +
+  opts.platform.toLowerCase())
   commandMessage(buildMatcher());
   disableUnsupportedPlatforms(archInterfaceMap,"platforms",opts.platform);
   disableUnsupportedPlatforms(archProcessorMap,"oss",opts.os);
@@ -329,10 +336,10 @@ function commandMessage(key) {
     "gpu,cmd,linux,local": 'Follow the instruction at <br /> <a target="_blank" href="https://www.neurodesk.org/docs/getting-started/neurodesktop/linux/#gpu-support">https://www.neurodesk.org/docs/getting-started/neurodesktop/linux/#gpu-support</a>', 
     // "gpu,cmd,linux,hpc": 'Follow the instruction at <br /> <a target="_blank" href="https://www.neurodesk.org/docs/getting-started/neurodesktop/linux/#gpu-support">https://www.neurodesk.org/docs/getting-started/neurodesktop/linux/#gpu-support</a>', 
     "gpu,cmd,linux,hpc": 'Follow the instruction at <br /> <a target="_blank" href="https://www.neurodesk.org/docs/getting-started/neurodesktop/linux/#gpu-support">https://www.neurodesk.org/docs/getting-started/neurodesktop/linux/#gpu-support</a>', 
-    "gpu,cmd,windows,cloud": 'Follow the instruction at <br /> <a target="_blank" href="https://www.neurodesk.org/docs/getting-started/neurodesktop/linux/#gpu-support">https://www.neurodesk.org/docs/getting-started/neurodesktop/linux/#gpu-support</a>', 
-    "gpu,cmd,linux,cloud": 'Follow the instruction at <br /> <a target="_blank" href="https://www.neurodesk.org/docs/getting-started/neurodesktop/linux/#gpu-support">https://www.neurodesk.org/docs/getting-started/neurodesktop/linux/#gpu-support</a>', 
+    // "gpu,cmd,windows,cloud": 'Follow the instruction at <br /> <a target="_blank" href="https://www.neurodesk.org/docs/getting-started/neurodesktop/linux/#gpu-support">https://www.neurodesk.org/docs/getting-started/neurodesktop/linux/#gpu-support</a>', 
+    // "gpu,cmd,linux,cloud": 'Follow the instruction at <br /> <a target="_blank" href="https://www.neurodesk.org/docs/getting-started/neurodesktop/linux/#gpu-support">https://www.neurodesk.org/docs/getting-started/neurodesktop/linux/#gpu-support</a>', 
 
-    "gpu,cmd,macos,cloud": 'Follow the instruction at <br /> <a target="_blank" href="https://www.neurodesk.org/docs/getting-started/neurodesktop/linux/#gpu-support">https://www.neurodesk.org/docs/getting-started/neurodesktop/linux/#gpu-support</a>', 
+    // "gpu,cmd,macos,cloud": 'Follow the instruction at <br /> <a target="_blank" href="https://www.neurodesk.org/docs/getting-started/neurodesktop/linux/#gpu-support">https://www.neurodesk.org/docs/getting-started/neurodesktop/linux/#gpu-support</a>', 
     // "gpu,gui,macos,hpc": 'Follow the instruction at <br /> <a target="_blank" href="https://www.neurodesk.org/docs/getting-started/neurodesktop/linux/#gpu-support">https://www.neurodesk.org/docs/getting-started/neurodesktop/linux/#gpu-support</a>', 
     "gpu,cmd,windows,hpc": 'Follow the instruction at <br /> <a target="_blank" href="https://www.neurodesk.org/docs/getting-started/neurodesktop/linux/#gpu-support">https://www.neurodesk.org/docs/getting-started/neurodesktop/linux/#gpu-support</a>', 
     "gpu,cmd,macos,hpc": 'Follow the instruction at <br /> <a target="_blank" href="https://www.neurodesk.org/docs/getting-started/neurodesktop/linux/#gpu-support">https://www.neurodesk.org/docs/getting-started/neurodesktop/linux/#gpu-support</a>', 

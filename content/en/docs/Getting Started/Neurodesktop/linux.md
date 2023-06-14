@@ -46,7 +46,7 @@ chmod a+rwx ~/neurodesktop-storage
 
 2. Once neurodesktop is downloaded, leave the terminal open and check which server neurodesktop is running on (Avoid pressing CTRL+C). 
 
-![image](/neurodeskapp/terminal_token.png)
+![image](/getting-started/neurodeskapp/terminal_token.png)
 
 3. To access neurodesktop, open your web browser and type in one of the provided URLs in your terminal (e.g. `http://127.0.0.1:8888/lab?token=your_unique_token`).
 
@@ -267,9 +267,9 @@ sudo apt install tigervnc-client
 
 Run the VNC Client and connect to `localhost::5901`
 
-![tigervncclient](/neurodesktop/getting-started/vnc/tigervncclient.png 'tigervncclient')
+![tigervncclient](/getting-started/neurodesktop/vnc/tigervncclient.png 'tigervncclient')
 
 Enter `password` and click Ok.
 
-![tigervncclient-password](/neurodesktop/getting-started/vnc/tigervncclient-password.png 'tigervncclient-password')
+![tigervncclient-password](/getting-started/neurodesktop/vnc/tigervncclient-password.png 'tigervncclient-password')
 
