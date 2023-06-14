@@ -186,8 +186,8 @@ ssh -L 5901:127.0.0.1:5901 USER@IP
 
 Run the VNC Client and connect to `localhost::5901`
 
-![tigervncclient](/getting-started/neurodesktop/getting-started/vnc/tigervncclient.png 'tigervncclient')
+![tigervncclient](/getting-started/neurodesktop/vnc/tigervncclient.png 'tigervncclient')
 
 Enter `password` and click Ok.
 
-![tigervncclient-password](/getting-started/neurodesktop/getting-started/vnc/tigervncclient-password.png 'tigervncclient-password')
+![tigervncclient-password](/getting-started/neurodesktop/vnc/tigervncclient-password.png 'tigervncclient-password')
