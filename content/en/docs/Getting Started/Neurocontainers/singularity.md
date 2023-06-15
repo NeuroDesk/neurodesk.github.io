@@ -38,6 +38,17 @@ A faster way is pulling from multiple storage locations at once using aria2:
 aria2c https://objectstorage.us-ashburn-1.oraclecloud.com/n/sd63xuke79z3/b/neurodesk/o/${container}.simg https://objectstorage.eu-frankfurt-1.oraclecloud.com/n/sd63xuke79z3/b/neurodesk/o/${container}.simg https://objectstorage.ap-sydney-1.oraclecloud.com/n/sd63xuke79z3/b/neurodesk/o/${container}.simg 
 ```
 
+## Singularity Containers and GPUs
+Some of our containers contain GPU-accelerated applications. Here is an example that tests the GPU accelerated program eddy in FSL:
+
+```
+curl -X GET https://objectstorage.ap-sydney-1.oraclecloud.com/n/sd63xuke79z3/b/neurodesk/o/fsl_6.0.5.1_20221016.simg -O
+git clone https://github.com/neurolabusc/gpu_test.git
+singularity shell --nv fsl_6.0.5.1_20221016.simg
+cd gpu_test/etest/
+bash runme_gpu.sh
+```
+
 ## Transparent Singularity
 The singularity containers can be also be used in combination with our [Transparent Singularity Tool](/developers/architecture/transparent_singularity), which wraps the executables inside a container to make them easily available for pipelines. More information can be found here: 
 
