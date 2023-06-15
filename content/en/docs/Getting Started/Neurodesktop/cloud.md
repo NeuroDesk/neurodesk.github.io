@@ -2,6 +2,8 @@
 title: "Cloud"
 linkTitle: "Cloud"
 weight: 5
+aliases:
+- /docs/neurodesktop/getting-started/cloud
 description: >
   Run neurodesktop using Oracle or Azure cloud computing
 ---

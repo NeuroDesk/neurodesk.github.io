@@ -1,6 +1,8 @@
 ---
 title: "Windows 11 and Windows Subsystem for Linux"
 linkTitle: "Windows 11 & WSL"
+aliases:
+- /docs/getting-started/neurocontainers/windows11-wsl
 description: >
   Use Neurocontainers on Windows 11 with WSL and Wayland Display Server
 ---

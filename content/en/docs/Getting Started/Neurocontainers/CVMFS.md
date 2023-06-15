@@ -1,6 +1,8 @@
 ---
 title: "CVMFS"
 linkTitle: "CVMFS"
+aliases:
+- /docs/getting-started/neurocontainers/cvmfs
 description: >
   Neurodesk Singularity Containers on CVMFS
 ---
