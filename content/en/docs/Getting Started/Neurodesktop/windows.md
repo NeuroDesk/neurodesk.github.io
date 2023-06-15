@@ -2,6 +2,8 @@
 title: "Windows"
 linkTitle: "Windows"
 weight: 2
+aliases:
+- /docs/neurodesktop/getting-started/windows
 description: >
   Install neurodesktop on Windows
 ---

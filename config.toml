@@ -177,7 +177,7 @@ enable = false
 
 [params.links]
 # End user relevant links. These will show up on left side of footer and in the community page if you have one.
-[[params.links.user]]
+#[[params.links.user]]
 	# name = "User mailing list"
 	# url = "https://example.org/mail"
 	# icon = "fa fa-envelope"
@@ -192,7 +192,7 @@ enable = false
 # 	url = "https://neurodesk.github.io/blog/index.xml"
 # 	icon = "fas fa-rss"
 # 	desc = "Follow us on RSS to get the latest news!"
-[[params.links.user]]
+# [[params.links.user]]
 	# name = "Stack Overflow"
 	# url = "https://example.org/stack"
 	# icon = "fab fa-stack-overflow"
@@ -203,7 +203,7 @@ enable = false
 	url = "https://lookerstudio.google.com/embed/reporting/1b5d3da0-7a67-4440-bc3c-95bd6fd94f18/page/2VKTD"
 	icon = "fa fa-signal"
     desc = "Analytics"
-[[params.links.developer]]
+#[[params.links.developer]]
 	# name = "Slack"
 	# url = "https://example.org/slack"
 	# icon = "fab fa-slack"

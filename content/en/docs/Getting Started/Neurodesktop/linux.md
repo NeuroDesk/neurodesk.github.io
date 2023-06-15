@@ -2,6 +2,8 @@
 title: "Linux"
 linkTitle: "Linux"
 weight: 2
+aliases:
+- /docs/neurodesktop/getting-started/linux
 description: >
   Install neurodesktop on Linux
 ---

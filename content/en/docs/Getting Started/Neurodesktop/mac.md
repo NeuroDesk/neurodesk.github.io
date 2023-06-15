@@ -2,6 +2,8 @@
 title: "MacOS"
 linkTitle: "MacOS"
 weight: 2
+aliases:
+- /docs/neurodesktop/getting-started/mac
 description: >
   Install neurodesktop on MacOS
 ---

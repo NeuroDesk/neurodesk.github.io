@@ -1,6 +1,8 @@
 ---
 title: "DataLad"
 linkTitle: "DataLad"
+aliases:
+- /docs/getting-started/neurocontainers/datalad
 description: >
   Neurodesktop containers can be used with datalad
 ---

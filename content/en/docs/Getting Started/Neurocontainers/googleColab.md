@@ -1,6 +1,8 @@
 ---
 title: "Google Colab"
 linkTitle: "Google Colab"
+aliases:
+- /docs/getting-started/neurocontainers/googleColab
 description: >
   Neurodesk Singularity Containers for Google Colab
 ---
