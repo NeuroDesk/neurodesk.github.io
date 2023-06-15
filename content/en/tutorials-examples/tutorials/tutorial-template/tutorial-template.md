@@ -58,7 +58,7 @@ In either case, make sure that all steps of the tutorial work before submitting.
 
 ### Create your own copy of *NeuroDesk/neurodesk.github.io* repository
 Begin by creating a copy of our documentation that you can edit:
-1. Visit the GitHub repository for the Neurodesk documentation (https://github.com/NeuroDesk/neurodesk.github.io).
+1. Visit the GitHub repository for the [Neurodesk documentation](https://github.com/NeuroDesk/neurodesk.github.io).
 2. [Fork](https://docs.github.com/en/get-started/quickstart/fork-a-repo) the repository.
 
 
