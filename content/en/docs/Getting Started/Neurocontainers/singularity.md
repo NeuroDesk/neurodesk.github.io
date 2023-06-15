@@ -41,7 +41,7 @@ aria2c https://objectstorage.us-ashburn-1.oraclecloud.com/n/sd63xuke79z3/b/neuro
 ## Singularity Containers and GPUs
 Some of our containers contain GPU-accelerated applications. Here is an example that tests the GPU accelerated program eddy in FSL:
 
-```
+```shell
 curl -X GET https://objectstorage.ap-sydney-1.oraclecloud.com/n/sd63xuke79z3/b/neurodesk/o/fsl_6.0.5.1_20221016.simg -O
 git clone https://github.com/neurolabusc/gpu_test.git
 singularity shell --nv fsl_6.0.5.1_20221016.simg
