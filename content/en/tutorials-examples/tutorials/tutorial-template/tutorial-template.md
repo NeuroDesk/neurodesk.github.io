@@ -101,9 +101,9 @@ git branch
 
 3. Navigate to `neurodesk.github.io/content/en/tutorials-examples/tutorials/` and then navigate to the subfolder you believe your tutorial belongs in (e.g. "/functional_imaging"). 
 
-4. Create a new, appropriately named markdown file to house your tutorial (e.g. "physio.md").
+4. Create a new, appropriately named markdown file to house your tutorial (e.g. "physio.md"). Images need to be stored in the /static directory - please mirror the same directory structure as for your markdown files.
 
-5. Open this file and populate it with your tutorial! You're also welcome to look at other tutorials already documented on our website for inspiration. 
+5. Open this file and populate it with your tutorial! You're also welcome to look at other tutorials already documented on our website for inspiration.
 
 ----------------
 ### Contribute your new tutorial to the official documentation
@@ -190,7 +190,7 @@ You can also add code snippets, e.g. `var foo = "bar";`, which will be shown inl
 ----------------
 ### Images
 
-To add screenshots to your tutorial, create a subfolder in `neurodesk.github.io` with the same link name as your tutorial. Add your screenshot to this folder, keeping in mind that you may want to adjust your screenshot to a reasonable size before uploading. You can then embed these images in your tutorial using the following convention: 
+To add screenshots to your tutorial, create a subfolder in /static with the same file structure as in your tutorial markdown file. Add your screenshot to this folder, keeping in mind that you may want to adjust your screenshot to a reasonable size before uploading. You can then embed these images in your tutorial using the following convention: 
 
 ```
 ![EEGtut1](/tutorials/electrophysiology/EEG_Tutorial/EEGtut1.png 'EEGtut1') <!-- ![filename without extension](/subfolder_name/filename.png '[filename without extension')  -->
