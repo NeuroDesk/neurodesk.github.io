@@ -44,10 +44,7 @@ There are a few differences between the open-source version of Neurodesk and wha
 8) Click on "EXPLORE".
 ![Explore](/getting-started/neurodesktop/Explore.png)
 
-
-
 10) Click "VIEW DETAILS" under Neurodesktop:
-![image](https://user-images.githubusercontent.com/4021595/150286038-592d6b31-3b9a-4ade-8b2d-824a17ca23b4.png)
 
 11) Click "CREATE DESKTOP +" button on the top right corner.
 
