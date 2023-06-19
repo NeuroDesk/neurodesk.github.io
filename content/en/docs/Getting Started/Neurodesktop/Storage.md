@@ -90,7 +90,7 @@ Rclone is a command line tool that enables the interaction with various cloud se
 - or upload data to CloudStor: `rclone copy --progress --transfers 8 . CloudStor:/data-processed`
 
 ### Globus
-We also provide the globus client, so you can transfer large amounts of data between globus endpoints and Neurodesktop. You can configure it by running:
+We also provide the globus client, so you can transfer large amounts of data between globus endpoints and Neurodesktop. You can configure it by running the following commands in the Neurodesktop environment:
 ```bash
 ml globus
 # First run the setup:
