@@ -5,17 +5,15 @@ weight: 1
 tags: ["fmriprep", "documentation", "preprocessing"]
 author: Kelly G. Garner
 aliases:
-- /tutorials/functional_imaging/fmriprep_cvl
+- /tutorials/functional_imaging/fmriprep
 description: > 
-  A brief guide to using fmriprep with neurodesk, using data from the STRIAVISE project.
+  A brief guide to using fmriprep with neurodesk
 ---
 
 
 > _This tutorial was created by Kelly G. Garner._ 
 >
 > Github: [@kel_github](https://github.com/kel-github)
->
-> Twitter: [@garnertheory](https://twitter.com/garner_theory)
 >
 
 > This workflow documents how to use fmriprep with neurodesk and provides some details that may help you troubleshoot some common problems I found along the way. 
@@ -28,30 +26,40 @@ description: >
 
 # Assumptions
 
-- [ ] Your data is already in BIDS format
+- [ ] Your data is already in [BIDS format](https://bids.neuroimaging.io/)
 - [ ] You plan to run fmriprep using Neurodesk
-- [ ] You have a local copy of the freesurfer license file (freesurfer.txt)
+- [ ] You have a copy of the freesurfer license file (freesurfer.txt), that can be read from the file system using Neurodesk
 
 ---
 
 # Steps
 
+## Launch Neurodesk
+
+From the launcher, click the Neurodesktop icon:
+
+![launch_neurodesk](/fmriprep/launch_neurodesk.png 'launch_neurodesk') <!-- ![filename without extension](/subfolder_name/filename.png '[filename without extension')  -->
+
 ## Open fmriprep 
 
-From the applications go Neurodesk -> Functional Imaging -> fmriprep and select the latest version of fmriprep. This should take you to a terminal window with fmriprep loaded.
+Now you're in Neurodesk, use the menus to first open the neurodesk options
+
+![neurodesk_menu](/fmriprep/neurodesk_menu.png 'neurodesk_menu') <!-- ![filename without extension](/subfolder_name/filename.png '[filename without extension')  -->
+
+and then select fMRIPrep. Note that the latest version will be the lowest on the dropdown list:
+
+![open_fmriprep](/fmriprep/open_fmriprep.png 'open_fmriprep') <!-- ![filename without extension](/subfolder_name/filename.png '[filename without extension')  -->
+
+This will open a terminal window where fMRIPrep is ready and waiting at your fingertips - woohoo!
+
+![fmriprep_bash](/fmriprep/fmriprep_bash.png 'fmriprep_bash') <!-- ![filename without extension](/subfolder_name/filename.png '[filename without extension')  -->
+
 
 ## Setting up fmriprep command
 
-If you like, you can enter the following fmriprep command straight into the command line in the newly opened terminal. However, as with increasing options and preferences the command can get rather verbose, I instead opted to create an executable bash script that I can run straight from the command line, with minimal editing between runs. If you're not interested in this option you can skip straight to copying/adjusting the code from `fmriprep` to `-v` below.
-
-- open a new file in your editor of choice but really you know it should be Visual Studio Code
-- save that file with your chosen name without an extension, e.g. run_fmriprep
-- paste in the following and update with your details
+You can now enter your fmriprep command straight into the command line in the newly opened terminal. Here is a quick guide to the command I have used with the options I have found most useful. Note that fMRIPrep requests the path to the freesurfer license file, which should be somewhere in your system for neurodesk to read - e.g. in 'neurodesktop-storage'.
 
 ```bash
-#!/bin/bash
-#
-# written by A. Name - the purpose of this code is to run fmriprep with neurodesk
 
 export ITK_GLOBAL_DEFAULT_NUMBER_OF_THREADS=6 # specify the number of threads you want to use
 
@@ -65,18 +73,9 @@ fmriprep /path/to/your/data \ # this is the top level of your data folder
          --skip_bids_validation \ # its normally fine to skip this but do make sure your data are BIDS enough
          -v # be verbal fmriprep, tell me what you are doing
 ```
-To make the file executable, navigate to this file via the command line in terminal and type
 
-```bash
-chmod u+x run_fmriprep # this tells the system to make your new file executable
-```
 
-Then to run your new executable, return to your terminal window for fmriprep (that opened when you navigated to fmriprep) and type:
-
-```bash
-./run_fmriprep
-```
-fmriprep should now be merrily working away on your data :)
+Then hit return and fMRIPrep should now be merrily working away on your data :)
 
 ---
 
@@ -84,6 +83,6 @@ fmriprep should now be merrily working away on your data :)
 
 1. If fmriprep hangs it could well be that you are out of disk space. Sometimes this is because fmriprep created a work directory in your home folder which is often limited on the HPC. Make sure fmriprep knows to use a work drectory in your scratch. you can specify this in the fmriprep command by using -w /path/to/the/work/directory/you/made
 
-2. I learned this from TomCat (@thomshaw92) - fmriprep can get confused between subjects when run in parallel. Parallelise with caution.
+2. I learned the following from TomCat (@thomshaw92) - fMRIPrep can get confused between subjects when run in parallel. Parallelise with caution.
 
 3. If running on a HPC, make sure to set the processor and memory limits, if not your job will get killed because it hogs all the resources.
