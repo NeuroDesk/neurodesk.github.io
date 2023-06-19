@@ -34,7 +34,7 @@ You can check out the complete list of [these applications](/docs/overview/appli
 [See here](/docs/overview/how-to-cite-us)
 
 ## Background
-Neurodesk was originally conceived as ["Virtual Neuro Machine"](https://docs.google.com/presentation/d/1FCtrRCZrj-5nLmnIIpVFYYYXuMAoUf-B/edit?usp=sharing&ouid=100303589348027986473&rtpof=true&sd=true), a [hackathon project](https://github.com/ohbm/hackathon2020/issues/177) at the Brainhack 2020. 
+Neurodesk originates from various projects at the Centre for Advanced Imaging that enabled running neuroimaging tools on HPCs and Linux workstations using software containers. The ideas and code from projects like ["DICOM2CLOUD"](https://github.com/CAIsr/dicom2cloud). ["transparent singularity"](https://github.com/CAIsr/transparent-singularity) and ["CAID"](https://github.com/CAIsr/caid) were combined during a [hackathon project](https://github.com/ohbm/hackathon2020/issues/177) to create a ["Virtual Neuro Machine"](https://docs.google.com/presentation/d/1FCtrRCZrj-5nLmnIIpVFYYYXuMAoUf-B/edit?usp=sharing&ouid=100303589348027986473&rtpof=true&sd=true). The project was later renamed to Neurodesk and further developments where funded through the ARDC platform project ["AEDAPT"](https://www.aedapt.net/) with the goal to create a national platform for reproducible electrophysiology data analysis and sharing, accessible to all Australian researchers across a wide range of disciplines that conduct electrophysiological research.
 
 ## References
 
