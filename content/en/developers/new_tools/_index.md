@@ -12,7 +12,7 @@ description: >
 ## Guiding principles 
 To decide if a tool should be packaged in a **Neurocontainers** or be installed in the **Neurodesktop container**, we are currently following these guiding principles:
 
-**1) Neurodesk as a Platform, Not a Package Manager:** We don't distribute tools that can be easily installed via standard package managers.
+**1) Neurodesk is a Platform, Not a Package Manager:** We don't distribute tools that can be easily installed via standard package managers.
 
 **2) Multiple versions of tools:** Neurodesk supports the use of multiple versions of a tool in parallel via [lmod]( https://lmod.readthedocs.io/en/latest). If a tool doesn't support this, follow [this instruction](#adding-new-tools-to-neurocontainers) to package it in [Neurocontainers](https://github.com/NeuroDesk/neurocontainers).
 
