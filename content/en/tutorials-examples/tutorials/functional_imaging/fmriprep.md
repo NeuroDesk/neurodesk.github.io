@@ -23,6 +23,9 @@ description: >
 {{< params/neurodesktop/getting_set_up >}}
 <!-- -->
 
+> _An example notebook can be found here:_
+> https://github.com/NeuroDesk/example-notebooks/blob/main/functional_imaging/fmriprep_example.ipynb
+>
 ---
 
 # Assumptions
