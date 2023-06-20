@@ -37,7 +37,7 @@ docker run hello-world
 
 ## Installing Neurodesk App
 
-If you have an existing Neurodesk App installation, please first uninstall it by following the uninstall instructions [here](#uninstalling-neurodesk-app). Then, download the installer files for your system:
+If you have an existing Neurodesk App installation, please first uninstall it by following the uninstall instructions [here](#uninstalling-neurodesk-app). Then, install the app for your system:
 
 - Debian, Ubuntu Linux Installer: `sudo apt install -f NeurodeskApp-Setup-Debian.deb`
 - Red Hat, Fedora, SUSE Linux Installer: `sudo rpm -i NeurodeskApp-Setup-Fedora.rpm`
