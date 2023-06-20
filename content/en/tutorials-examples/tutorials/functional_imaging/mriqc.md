@@ -6,6 +6,7 @@ tags: ["mriqc", "documentation", "preprocessing"]
 author: Kelly G. Garner
 aliases:
 - /tutorials/functional_imaging/mriqc_cvl
+- /tutorials-examples/tutorials/functional_imaging/mriqc_cvl
 description: > 
   A brief guide to using mriqc with neurodesk.
 ---

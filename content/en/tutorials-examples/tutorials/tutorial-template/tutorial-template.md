@@ -99,7 +99,7 @@ git branch
 ![5_branch](/tutorials/tutorial-template/5_branch.png 'Branch check')
   
 
-3. Navigate to `neurodesk.github.io/content/en/tutorials-examples/tutorials-examples/tutorials/` and then navigate to the subfolder you believe your tutorial belongs in (e.g. "/functional_imaging"). 
+3. Navigate to `neurodesk.github.io/content/en/tutorials-examples/tutorials/` and then navigate to the subfolder you believe your tutorial belongs in (e.g. "/functional_imaging"). 
 
 4. Create a new, appropriately named markdown file to house your tutorial (e.g. "physio.md"). Images need to be stored in the /static directory - please mirror the same directory structure as for your markdown files.
 

@@ -5,7 +5,8 @@ weight: 1
 tags: ["fmriprep", "documentation", "preprocessing"]
 author: Kelly G. Garner
 aliases:
-- /tutorials/functional_imaging/fmriprep
+- /tutorials/functional_imaging/fmriprep_cvl
+- /tutorials-examples/tutorials/functional_imaging/fmriprep_cvl
 description: > 
   A brief guide to using fmriprep with neurodesk
 ---
@@ -38,21 +39,21 @@ description: >
 
 From the launcher, click the Neurodesktop icon:
 
-![launch_neurodesk](/fmriprep/launch_neurodesk.png 'launch_neurodesk') <!-- ![filename without extension](/subfolder_name/filename.png '[filename without extension')  -->
+![launch_neurodesk](/tutorials/functional_imaging/fmriprep/launch_neurodesk.png 'launch_neurodesk') <!-- ![filename without extension](/tutorials/functional_imaging/subfolder_name/filename.png '[filename without extension')  -->
 
 ## Open fmriprep 
 
 Now you're in Neurodesk, use the menus to first open the neurodesk options
 
-![neurodesk_menu](/fmriprep/neurodesk_menu.png 'neurodesk_menu') <!-- ![filename without extension](/subfolder_name/filename.png '[filename without extension')  -->
+![neurodesk_menu](/tutorials/functional_imaging/fmriprep/neurodesk_menu.png 'neurodesk_menu') <!-- ![filename without extension](/tutorials/functional_imaging/subfolder_name/filename.png '[filename without extension')  -->
 
 and then select fMRIPrep. Note that the latest version will be the lowest on the dropdown list:
 
-![open_fmriprep](/fmriprep/open_fmriprep.png 'open_fmriprep') <!-- ![filename without extension](/subfolder_name/filename.png '[filename without extension')  -->
+![open_fmriprep](/tutorials/functional_imaging/fmriprep/open_fmriprep.png 'open_fmriprep') <!-- ![filename without extension](/tutorials/functional_imaging/subfolder_name/filename.png '[filename without extension')  -->
 
 This will open a terminal window where fMRIPrep is ready and waiting at your fingertips - woohoo!
 
-![fmriprep_bash](/fmriprep/fmriprep_bash.png 'fmriprep_bash') <!-- ![filename without extension](/subfolder_name/filename.png '[filename without extension')  -->
+![fmriprep_bash](/tutorials/functional_imaging/fmriprep/fmriprep_bash.png 'fmriprep_bash') <!-- ![filename without extension](/tutorials/functional_imaging/subfolder_name/filename.png '[filename without extension')  -->
 
 
 ## Setting up fmriprep command
