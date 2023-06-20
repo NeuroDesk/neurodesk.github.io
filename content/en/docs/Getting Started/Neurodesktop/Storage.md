@@ -103,7 +103,15 @@ globusconnectpersonal -gui
 chmod 600 /home/jovyan/.globusonline/lta/relay-anonymous-key.pem
 ```
 
-Once authenticated you can go to the globus file-manager https://app.globus.org/file-manager and your neurodesktop instance will be an endpoint for globus.
+Then add the directories you want to share with globus, by opening File -> Preferences:
+<img width="256" alt="image" src="https://github.com/NeuroDesk/neurodesk.github.io/assets/4021595/c6c7b912-a113-43df-b6d9-233fb92c4ea0">
+
+and then add the paths required and hit Save:
+<img width="448" alt="image" src="https://github.com/NeuroDesk/neurodesk.github.io/assets/4021595/daa8c036-4548-4da2-98f1-8ac39b7e8317">
+
+
+
+Then you can go to the globus file-manager https://app.globus.org/file-manager and your neurodesktop instance will be an endpoint for globus.
 
 
 
