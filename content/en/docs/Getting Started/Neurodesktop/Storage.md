@@ -98,6 +98,9 @@ globusconnectpersonal -setup -nogui
 
 # Then start the GUI:
 globusconnectpersonal -gui
+
+# If the connection fails, reset the permissions on the key file (you might have to do this sometimes, because the permissions get changed and we are currently investigating why):
+chmod 600 /home/jovyan/.globusonline/lta/relay-anonymous-key.pem
 ```
 
 Once authenticated you can go to the globus file-manager https://app.globus.org/file-manager and your neurodesktop instance will be an endpoint for globus.
