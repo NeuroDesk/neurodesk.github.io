@@ -28,16 +28,22 @@ docker --version
 docker run hello-world
 ```
 
-## Installing Neurodesk App
-
-If you have an existing Neurodesk App installation, please first uninstall it by following the uninstall instructions [here](#uninstalling-neurodesk-app). Then, follow the installation instructions below:
-
+## Downloading Neurodesk App
 - [Debian, Ubuntu Linux Installer](https://github.com/NeuroDesk/neurodesk-app/releases/latest/download/NeurodeskApp-Setup-Debian.deb )
 - [Red Hat, Fedora, SUSE Linux Installer](https://github.com/NeuroDesk/neurodesk-app/releases/latest/download/NeurodeskApp-Setup-Fedora.rpm )
 - [Arch-based package via AUR](https://aur.archlinux.org/packages/neurodeskapp-bin )
 - [macOS Intel Installer](https://github.com/NeuroDesk/neurodesk-app/releases/latest/download/NeurodeskApp-Setup-macOS-x64.dmg ), [macOS Apple silicon Installer](https://github.com/neurodesk/neurodesk-app/releases/latest/download/NeurodeskApp-Setup-macOS-arm64.dmg )
 - [Windows Installer](https://github.com/NeuroDesk/neurodesk-app/releases/latest/download/NeurodeskApp-Setup-Windows.exe )
 
+## Installing Neurodesk App
+
+If you have an existing Neurodesk App installation, please first uninstall it by following the uninstall instructions [here](#uninstalling-neurodesk-app). Then, download the installer files for your system:
+
+- Debian, Ubuntu Linux Installer: `sudo apt install -f NeurodeskApp-Setup-Debian.deb`
+- Red Hat, Fedora, SUSE Linux Installer: `sudo rpm -i NeurodeskApp-Setup-Fedora.rpm`
+- Arch-based package via AUR: `yay neurodesk` (or follow instructions [here](https://wiki.archlinux.org/title/Arch_User_Repository#Installing_and_upgrading_packages))
+- macOS Intel Installer: Double click the downloaded dmg file, then drag the NeurodeskApp.app to the Applications folder; for starting the app: Right click on the NeurodeskApp.app and select "Open", Confirm by clicking on Open again to acknowledge that the developer cannot be verified (we are working on getting this verified).
+- Windows Installer: Double click the downloaded exe file; Accept to install from an unknown publisher with Yes; then accept the license agreement and click finish at the end.
 
 ## Launching Neurodesk App
 
