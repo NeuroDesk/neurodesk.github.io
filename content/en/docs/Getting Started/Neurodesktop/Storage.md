@@ -96,12 +96,15 @@ ml globus
 # First run the setup:
 globusconnectpersonal -setup
 
-#Follow the instructions in the terminal: Copy the URL into a browser and generate the Native App Authorization Code, then copy this code and paste it in the terminal. Then name endpoint, e.g. Neurodesktop.
+#Follow the instructions in the terminal: 
+#1) copy the URL into a browser and generate the Native App Authorization Code
+#2) then copy this code and paste it in the terminal
+#3) then name the endpoint, e.g. Neurodesktop
 
 # Then start the GUI:
 globusconnectpersonal -gui
 
-# If the connection fails, reset the permissions on the key file (you might have to do this sometimes, because the permissions get changed and we are currently investigating why):
+# If the connection fails, reset the permissions on the key file:
 chmod 600 /home/jovyan/.globusonline/lta/relay-anonymous-key.pem
 ```
 
