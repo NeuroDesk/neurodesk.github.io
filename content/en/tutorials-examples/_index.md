@@ -22,3 +22,8 @@ Neurodesk can be used on various platforms including a local PC, High-Performanc
 Once you've chosen your setup, follow the instructions provided in the link. For example, if you're using Linux on a local PC with a desktop interface, you would follow the instructions at https://www.neurodesk.org/docs/getting-started/neurodesktop/linux/.
 
 ![startup](/tutorials/tutorial-template/startup_table.png)
+
+## 4. Video tutorial
+See below for a 3-minute tutorial on Installation, Usage and Data Access with Neurodesktop
+
+{{< youtube tHbNosYUV4U >}}
