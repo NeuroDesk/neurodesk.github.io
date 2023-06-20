@@ -94,7 +94,9 @@ We also provide the globus client, so you can transfer large amounts of data bet
 ```bash
 ml globus
 # First run the setup:
-globusconnectpersonal -setup -nogui
+globusconnectpersonal -setup
+
+#Follow the instructions in the terminal: Copy the URL into a browser and generate the Native App Authorization Code, then copy this code and paste it in the terminal. Then name endpoint, e.g. Neurodesktop.
 
 # Then start the GUI:
 globusconnectpersonal -gui
@@ -104,14 +106,17 @@ chmod 600 /home/jovyan/.globusonline/lta/relay-anonymous-key.pem
 ```
 
 Then add the directories you want to share with globus, by opening File -> Preferences:
+
 <img width="256" alt="image" src="https://github.com/NeuroDesk/neurodesk.github.io/assets/4021595/c6c7b912-a113-43df-b6d9-233fb92c4ea0">
 
 and then add the paths required and hit Save:
+
 <img width="448" alt="image" src="https://github.com/NeuroDesk/neurodesk.github.io/assets/4021595/daa8c036-4548-4da2-98f1-8ac39b7e8317">
 
+Then you can go to the globus file-manager https://app.globus.org/file-manager and your neurodesktop instance will be an endpoint for globus. You can change the path to any location you specified in the Preferences:
 
+<img width="2847" alt="image" src="https://github.com/NeuroDesk/neurodesk.github.io/assets/4021595/35dcfc7a-2975-4fcc-8c49-dbe9c43b6433">
 
-Then you can go to the globus file-manager https://app.globus.org/file-manager and your neurodesktop instance will be an endpoint for globus.
 
 
 
