@@ -28,6 +28,7 @@ https://labtokyo.neurodesk.org/
 ```bash
 cd ~
 git clone https://github.com/NeuroDesk/neurocontainers.git
+git pull
 cd neurocontainers/interactive_builder/
 ./run_interactive_builder.sh
 ```
