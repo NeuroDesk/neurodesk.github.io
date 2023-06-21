@@ -11,6 +11,11 @@ description: >-
 
 <iframe width=1200px height=600px src="https://lookerstudio.google.com/embed/reporting/1b5d3da0-7a67-4440-bc3c-95bd6fd94f18/page/2VKTD" frameborder="0" style="border:0"></iframe>
 
+## Uptime metrics
+
+{{% alert title="For service uptimes, use this link" color="info" %}}
+https://stats.uptimerobot.com/NBE38IZWZM
+{{% /alert %}}
 ## Docker metrics
 Total Neurodesktop container pulls:![Docker Pulls](https://img.shields.io/docker/pulls/vnmd/neurodesktop)
 
@@ -40,9 +45,5 @@ Total Neurodesktop container pulls:![Docker Pulls](https://img.shields.io/docker
 
 
 
-## Uptime metrics
 
-{{% alert title="For service uptimes, use this link" color="info" %}}
-https://stats.uptimerobot.com/NBE38IZWZM
-{{% /alert %}}
 
