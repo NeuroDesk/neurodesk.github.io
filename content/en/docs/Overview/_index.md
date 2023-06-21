@@ -18,6 +18,7 @@ To read more about Docker containers, visit [the Docker webpage](https://www.doc
 
 #### More information: 
 - A 2 minute video explaining Neurodesk: [Neurodesk in 2 minutes](https://www.youtube.com/watch?v=JLv_5fycugw)
+- A 3 minute video getting started with Neurodesk: [Neurodesk in 3 minutes](https://www.youtube.com/watch?v=tHbNosYUV4U&ab_channel=NeuroDesk)
 - An online *interactive demo* you can try RIGHT NOW in your browser: https://neurodesk.github.io/docs/getting-started/neurodesktop/play/
 
 #### In-depth information:

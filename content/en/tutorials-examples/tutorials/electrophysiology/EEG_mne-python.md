@@ -8,6 +8,12 @@ description: >
   Use mne-python to load, pre-process, and plot example EEG data in a jupyter notebook through vscode. 
 ---
 
+---
+> _This tutorial was created by Angela Renton._ 
+>
+> Github: @air2310
+---
+
 <!-- Following line adds a link to getting set up with Neurodesk -->
 {{< params/neurodesktop/getting_set_up >}}
 <!-- -->
