@@ -122,13 +122,15 @@ You might have to correct some merge conflicts, but [vscode](https://learn.micro
 
 ![6_branchswitch](/tutorials/tutorial-template/6_switchbranch.png 'Switching branches')
 
-4. Now, you can preview the changes before contributing them upstream. For this, click on the "Actions" tab and enable the Actions ("I understand my tutorials..."). The first build will fail (due to a bug with the Github token), but the second build will work.
+4. Now, you can preview the changes before contributing them upstream. For this, if this is your first time to run the Action build, click on the "Actions" tab and enable the Actions ("I understand my tutorials..."). The first build will fail (due to a bug with the Github token), but the second build will work. You can run the workflow if clicking on each of them in the left sidebar.
+
+![7_run_github_workflow](/tutorials/tutorial-template/7_run_github_workflow.png 'Contribute')
 
 5. Then you need to open the settings of the repository and check that Pages points to gh-pages, and when clicking on the link, the site should be there.
 
 6. To contribute your changes, click "Compare & pull request" and then ["Create pull request"](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/about-pull-requests).
 
-![7_contribute](/tutorials/tutorial-template/7_contribute.png 'Contribute')
+![8_contribute](/tutorials/tutorial-template/7_contribute.png 'Contribute')
 
 
 7. Give your pull request a title (e.g. "Document PhysIO tutorial"), leave a comment briefly describing what you have done, and then create the pull request. 
