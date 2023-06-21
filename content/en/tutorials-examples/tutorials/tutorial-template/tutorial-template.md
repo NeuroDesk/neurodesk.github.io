@@ -130,7 +130,7 @@ You might have to correct some merge conflicts, but [vscode](https://learn.micro
 
 6. To contribute your changes, click "Compare & pull request" and then ["Create pull request"](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/about-pull-requests).
 
-![8_contribute](/tutorials/tutorial-template/7_contribute.png 'Contribute')
+![8_contribute](/tutorials/tutorial-template/8_contribute.png 'Contribute')
 
 
 7. Give your pull request a title (e.g. "Document PhysIO tutorial"), leave a comment briefly describing what you have done, and then create the pull request. 
