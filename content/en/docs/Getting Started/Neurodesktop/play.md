@@ -18,8 +18,8 @@ See [Neurodesk Lab](#neurodesk-lab) for keeping data across sessions
 {{< /alert >}}
 
 To use Neurodesk Play, choose the link below closest to your location:
-- [Australia East](https://play-sydney.neurodesk.org/v2/gh/neurodesk/jupyter-neurodesktop-image/main)
-- [US West](https://play-phoenix.neurodesk.org/v2/gh/neurodesk/jupyter-neurodesktop-image/main)
+- [Australia East](https://play-sydney.neurodesk.org/v2/gh/neurodesk/neurodesktop/main)
+- [US West](https://play-phoenix.neurodesk.org/v2/gh/neurodesk/neurodesktop/main)
 - [Germany Central](https://play-frankfurt.neurodesk.org/v2/gh/neurodesk/jupyter-neurodesktop-image/main)
 - [US East](https://play-ashburn.neurodesk.org/v2/gh/neurodesk/jupyter-neurodesktop-image/main)
 
