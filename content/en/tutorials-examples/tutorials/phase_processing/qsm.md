@@ -17,6 +17,10 @@ description: >
 {{< params/neurodesktop/getting_set_up >}}
 <!-- -->
 
+> _An example notebook can be found here:_
+> https://github.com/NeuroDesk/example-notebooks/blob/main/structural_imaging/qsmxt_example.ipynb
+>
+
 ## Quantitative Susceptibility Mapping in Neurodesk with QSMxT
 
 Neurodesk provides [QSMxT](https://github.com/QSMxT/QSMxT/), an end-to-end pipeline that automates the reconstruction, segmentation and analysis of QSM data across large groups of participants, from scanner images (DICOMs) through to susceptibility maps and quantitative outputs.

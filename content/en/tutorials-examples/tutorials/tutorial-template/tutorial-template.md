@@ -37,6 +37,10 @@ Once you've filled out those details, you can delete this comment block.
 {{< params/neurodesktop/getting_set_up >}}
 <!-- -->
 
+> _An example notebook can be found here:_
+> https://github.com/NeuroDesk/example-notebooks/blob/main/directory_to_notebook/example_notebook.ipynb
+>
+
 ## How to contribute a new tutorial
 
 Welcome to the tutorial template, which you can use to contribute your neurodesk tutorial to our documentation. We aim to collect a wide variety of tutorials and examples representing the spectrum of tools available under the neurodesk architecture and the diversity in how researchers might apply them. 
