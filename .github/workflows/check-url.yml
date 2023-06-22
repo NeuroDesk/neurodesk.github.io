@@ -1,7 +1,7 @@
 name: Broken Links Checker
 
 on:
-  workflow_dispatch:
+  workflow_dispatch
  
 env:
   SITE_URL: https://neurodesk.org/
