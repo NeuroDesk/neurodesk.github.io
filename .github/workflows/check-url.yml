@@ -1,0 +1,26 @@
+name: Broken Links Checker
+
+on:
+  schedule:
+    - cron: 0 8 * * * # Run daily at 8am
+  workflow_dispatch:
+ 
+env:
+  SITE_URL: https://neurodesk.org/
+  
+jobs:
+  check:
+    name: Broken links checker
+    runs-on: ubuntu-latest
+    
+    steps:
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 14
+
+      # https://github.com/stevenvachon/broken-link-checker
+      - name: Install broken link checker
+        run: npm install broken-link-checker -g
+
+      - name: Check for broken links
+        run: blc ${{ env.SITE_URL }} -ro
