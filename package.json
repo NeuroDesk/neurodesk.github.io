@@ -20,7 +20,7 @@
     "buildTags": "extended"
   },
   "devDependencies": {
-    "hugo-bin": "0.92.3",
+    "hugo-bin": "0.89.4",
     "autoprefixer": "^10.4.14",
     "postcss": "^8.4.24",
     "postcss-cli": "^10.1.0"
