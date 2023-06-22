@@ -6,6 +6,8 @@ description: >
   The architecture of the Neurodesk ecosystem
 ---
 
+![architecture](/overview/NeurodeskArchitecture.png 'architecture')
+
 ## Neurodesktop: Recommended for Beginners
 _Neurodesktop_ is a compact Docker container with a browser-accessible virtual desktop that allows you develop and implement data analysis, pre-equipped with basic fMRI and EEG analysis tools.
 To get started, see: [Neurodesktop](/docs/getting-started/neurodesktop) ([Github](https://github.com/NeuroDesk/neurodesktop))
