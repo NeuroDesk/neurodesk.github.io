@@ -111,7 +111,7 @@ Latest Version
 
 ## 20211018
 - added Rstudio, R and multiple R packages (plotly, car, tidyverse, ...)
-- added ClearSWI and ROMEO for MRI phase processing (including new Tutorials: https://www.neurodesk.org/tutorials/tutorials/phase_processing)
+- added ClearSWI and ROMEO for MRI phase processing (including new Tutorials: https://www.neurodesk.org/tutorials-examples/tutorials/phase_processing/)
 - added more categories in applications menu (Body, Electrophysiology, Hippocampus, Phase Processing, Rodent Imaging, Shape Analysis, Spine, Statistics)
 - bugfix: improved startup time of the desktop container (miniconda in homedirectory was causing chmod slowdown)
 - bugfix: ssh, vnc and rdp servers are now restarted in case the container was stopped and started again (e.g. on Standby)
@@ -133,7 +133,7 @@ Latest Version
 - added mriqc 0.16.1 and mrtrix 3.0.3
 
 ## 20210917
-- included more tools for connecting to cloud storage services (rclone, owncloud, nextcloud, davfs2, globus). For more info: [Storage](/docs/getting-started/storage)
+- included more tools for connecting to cloud storage services (rclone, owncloud, nextcloud, davfs2, globus). For more info: [Storage](/docs/Getting Started/Neurodesktop/Storage.md)
 - styling of desktop interface, including background wallpaper and colour scheme in terminal window
 - new categories in menu system (visualization) and added more categories to tools
 

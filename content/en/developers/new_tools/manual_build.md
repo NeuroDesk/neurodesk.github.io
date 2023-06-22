@@ -195,5 +195,5 @@ Verify that user has write permission to /neurocommand/local
 
 16. If somebody wants to use the application before the next release of Neurodesktop is out, you can instruct them to use the command in step 14 above instead of the default commands given in the user install instructions.
 
-17. Consider contributing a tutorial about the new tool: https://github.com/NeuroDesk/neurodesk.github.io/tree/main/content/en/tutorials
+17. Consider contributing a tutorial about the new tool in [this instruction](/tutorials-examples/tutorials/tutorial-template/tutorial-template)
 

@@ -7,4 +7,4 @@ description: >
 ---
 
 
-![architecture](/NeurodeskArchitecture.png 'architecture')
+
