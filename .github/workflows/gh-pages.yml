@@ -102,7 +102,7 @@ jobs:
       - name: Check broken links
         env:
           INPUT_URL: "${{ steps.pages.outputs.base_url }}" 
-          INPUT_CMD_PARAMS: '--verbose --buffer-size=20480 --max-connections=45 --ignore-fragments --color=always --skip-tls-verification --exclude="(https://arxiv.org/abs/2002.06129|https://www.docker.com/resources/what-container|https://www.sciencedirect.com/science/article/pii/S016502701630259X|https://www.aedapt.net)"'
+          INPUT_CMD_PARAMS: '--buffer-size=20480 --max-connections=45 --ignore-fragments --color=always --skip-tls-verification --exclude="(https://arxiv.org/abs/2002.06129|https://www.docker.com/resources/what-container|https://www.sciencedirect.com/science/article/pii/S016502701630259X|https://www.aedapt.net)"'
         run: |
           wget -qO- https://raw.githubusercontent.com/ruzickap/action-my-broken-link-checker/v2/entrypoint.sh | bash
 
