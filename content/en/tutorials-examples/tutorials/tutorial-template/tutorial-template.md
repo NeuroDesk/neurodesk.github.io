@@ -38,7 +38,7 @@ Once you've filled out those details, you can delete this comment block.
 <!-- -->
 
 > _An example notebook can be found here:_
-> https://github.com/NeuroDesk/example-notebooks/blob/main/directory_to_notebook/example_notebook.ipynb
+> https://github.com/NeuroDesk/example-notebooks/
 >
 
 ## How to contribute a new tutorial
