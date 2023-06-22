@@ -31,7 +31,7 @@ You can browse into folders in the shared drive by clicking (double clicking on 
 
 To close the side menu, click on CTRL-ALT-SHIFT once more (Control-Command-Shift on Mac).
 
-Note that it is only possible to download one file at a time through this interface. If you have multiple files in a directory we recommend opening a terminal and zipping the files and then downloading one zip archive:
+Note that it is only possible to upload or download one file at a time through this interface. If you have multiple files in a directory we recommend zipping the directory and then transferring one zip archive:
 
 ```bash
 zip files.zip files/
@@ -41,7 +41,7 @@ zip files.zip files/
 If you are running Neurodesktop on your own hardware there will be a direct connection between the "Storage" folder on the Destkop, which is a link between "/neurodesktop-storage" in neurodesktop and the "neurodesktop-storage" folder on your C-drive (Windows) or home directory (Mac/Linux). This connection can be used for data processing and data transfer.
 
 ### Mounting external storage on your host-computer
-The -v C:/neurodesktop-storage:/neurodesktop-storage part of the docker command links the directory "neurodesktop-storage" on the “C drive” of your Windows computer to the directory /neurodesktop-storage inside the Desktop environment. Everything you store in there will be available inside the desktop and on the host computer. You can also mount additional directories by adding another -v parameter set (e.g. -v D:/moredata:/data) - this will mount the directory moredata from your D drive to /data inside neurodesktop. Important: the mountpoint inside neurodesktop should be named /data (or anything from this list: https://github.com/NeuroDesk/neurocontainers/blob/master/recipes/globalMountPointList.txt) - otherwise most of the tools will not be able to access the data.
+The -v C:/neurodesktop-storage:/neurodesktop-storage part of the docker command links the directory "neurodesktop-storage" on the “C drive” of your Windows computer to the directory /neurodesktop-storage inside the Desktop environment. Everything you store in there will be available inside the desktop and on the host computer. You can also mount additional directories by adding another -v parameter set (e.g. -v D:/moredata:/data) - this will mount the directory moredata from your D drive to /data inside neurodesktop. Important: the mountpoint inside neurodesktop needs to be named /data, otherwise the applications will not see the files without modifying the SINGULARITY_BINDPATH variable.
 
 Here is an example for Windows adding another storage directory:
 ```cmd
