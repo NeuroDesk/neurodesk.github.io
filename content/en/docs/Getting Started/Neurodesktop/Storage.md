@@ -9,6 +9,8 @@ description: >
   Add storage to Neurodesktop
 ---
 
+{{< toc >}}
+
 ## Drag and Drop
 
 ### Uploading files
@@ -39,15 +41,20 @@ zip files.zip files/
 ```
 
 ## Local storage
-If you are running Neurodesktop on your own hardware there will be a direct connection between the "Storage" folder on the Destkop, which is a link between "/neurodesktop-storage" in neurodesktop and the "neurodesktop-storage" folder on your C-drive (Windows) or home directory (Mac/Linux). This connection can be used for data processing and data transfer.
+If you are running Neurodesktop on your own hardware there will be a direct connection between the "Storage" folder on the Desktop, which is a link between "/neurodesktop-storage" in neurodesktop and the "neurodesktop-storage" folder on your C-drive (Windows) or home directory (Mac/Linux). This connection can be used for data processing and data transfer.
 
 ### Mounting external storage on your host-computer
 The -v C:/neurodesktop-storage:/neurodesktop-storage part of the docker command links the directory "neurodesktop-storage" on the “C drive” of your Windows computer to the directory /neurodesktop-storage inside the Desktop environment. Everything you store in there will be available inside the desktop and on the host computer. You can also mount additional directories by adding another -v parameter set (e.g. -v D:/moredata:/data) - this will mount the directory moredata from your D drive to /data inside neurodesktop. Important: the mountpoint inside neurodesktop needs to be named /data, otherwise the applications will not see the files without modifying the SINGULARITY_BINDPATH variable.
 
-Here is an example for Windows adding another storage directory:
+If you are using the NeurodeskApp, you can set an additional storage location through the [settings](https://www.neurodesk.org/docs/getting-started/neurodesktop/neurodeskapp/#add-a-custom-data-directory)
+
+If you are starting Neurodesk through the command line, here is an example for Windows adding another storage directory:
 ```cmd
 docker run --shm-size=1gb -it --privileged --user=root --name neurodesktop -v C:/neurodesktop-storage:/neurodesktop-storage -v D:/moredata:/data -p 8888:8888 -e NEURODESKTOP_VERSION={{< params/neurodesktop/jupyter_neurodesk_version >}} vnmd/neurodesktop:{{< params/neurodesktop/jupyter_neurodesk_version >}}
 ```
+
+> Note for Windows users: Connecting network shares from Windows to Neurodesk can cause problems, so be careful when attempting this. Also, be aware that processing large amounts of files stored on a Windows filesystem inside Neurodesk will come with a performance penality due to the file system translation in the background.
+
 
 ## Cloud storage
 Another way to get your data into Neurodesktop is to use a cloud storage provider like CloudStor, Dropbox, OneDrive and their sync tools like OwnCloud, Nextcloud or very flexible tools like rclone or davfs2. Another good option could be to utilize Globus for large amounts of data. 
