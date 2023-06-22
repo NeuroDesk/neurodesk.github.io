@@ -17,7 +17,7 @@ description: >
 >
 > Github: @felenitaribeiro
 >
-> Twitter: @NandaRibeiro93/home/aswin/workspace/neurodesk/neurodesk.github.io/layouts/partials
+> Twitter: @NandaRibeiro93
 >
 <!-- Fill in your personal details above so that we can credit the tutorial to you. Feel free to add any additional contact details i.e. website, or remove those that are irrelevant -->
 
