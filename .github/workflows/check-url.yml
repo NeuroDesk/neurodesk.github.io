@@ -1,25 +1,20 @@
-name: Broken Links Checker
-
+name: Link Checker
 on:
     push:
     workflow_dispatch:
- 
-env:
-  SITE_URL: https://neurodesk.org/
-  
+permissions:
+  contents: read # to fetch code (actions/checkout)
 jobs:
-  check:
-    name: Broken links checker
+  linkchecker:
     runs-on: ubuntu-latest
-    
+
     steps:
-      - uses: actions/setup-node@v3
+      - uses: actions/checkout@v3
+      - name: lychee Link Checker
+        id: lychee
+        uses: lycheeverse/lychee-action@v1.2.0
         with:
-          node-version: 14
-
-      # https://github.com/stevenvachon/broken-link-checker
-      - name: Install broken link checker
-        run: npm install broken-link-checker -g
-
-      - name: Check for broken links
-        run: blc ${{ env.SITE_URL }} -ro
+          args: --accept=200,403,429 --exclude-mail **/*.html **/*.md **/*.txt **/*.json
+          fail: true
+        env:
+          GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
