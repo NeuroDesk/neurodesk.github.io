@@ -48,7 +48,7 @@ chmod a+rwx ~/neurodesktop-storage
 
 2. Once neurodesktop is downloaded, leave the terminal open and check which server neurodesktop is running on (Avoid pressing CTRL+C). 
 
-![image](/getting-started/neurodeskapp/terminal.png)
+![image](/getting-started/neurodeskapp/terminal_token.png)
 
 3. To access neurodesktop, open your web browser and type in one of the provided URLs in your terminal (e.g. `http://127.0.0.1:8888/lab?token=your_unique_token`).
 
