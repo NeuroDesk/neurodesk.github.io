@@ -9,7 +9,7 @@ description: >-
 
 ## User metrics
 
-<iframe width=1200px height=600px src="https://lookerstudio.google.com/embed/reporting/1b5d3da0-7a67-4440-bc3c-95bd6fd94f18/page/2VKTD" frameborder="0" style="border:0"></iframe>
+<iframe width=90% height=500px src="https://lookerstudio.google.com/embed/reporting/1b5d3da0-7a67-4440-bc3c-95bd6fd94f18/page/2VKTD" frameborder="0" style="border:0"></iframe>
 
 ## Uptime metrics
 
@@ -17,33 +17,14 @@ description: >-
 https://stats.uptimerobot.com/NBE38IZWZM
 {{% /alert %}}
 ## Docker metrics
-Total Neurodesktop container pulls:![Docker Pulls](https://img.shields.io/docker/pulls/vnmd/neurodesktop)
+Total Neurodesktop container pulls: ![Docker Pulls](https://img.shields.io/docker/pulls/vnmd/neurodesktop)
 
-## Github star metrics
-- neurodesktop:![GitHub Repo stars neurodesktop](https://img.shields.io/github/stars/neurodesk/neurodesktop)
-- neurocommand:![GitHub Repo stars neurocommand](https://img.shields.io/github/stars/NeuroDesk/neurocommand)
-- neurocontainers:![GitHub Repo stars neurocontainers](https://img.shields.io/github/stars/NeuroDesk/neurocontainers)
-- transparent-singularity:![GitHub Repo stars transparent-singularity](https://img.shields.io/github/stars/NeuroDesk/transparent-singularity)
-- example-notebooks:![GitHub Repo stars example-notebooks](https://img.shields.io/github/stars/NeuroDesk/example-notebooks)
-- neurodesk.github.io:![GitHub Repo stars example-notebooks](https://img.shields.io/github/stars/NeuroDesk/neurodesk.github.io)
-
-## Github last commit date
-- neurodesktop:![GitHub Repo stars neurodesktop](https://img.shields.io/github/last-commit/neurodesk/neurodesktop)
-- neurocommand:![GitHub Repo stars neurocommand](https://img.shields.io/github/last-commit/NeuroDesk/neurocommand)
-- neurocontainers:![GitHub Repo stars neurocontainers](https://img.shields.io/github/last-commit/NeuroDesk/neurocontainers)
-- transparent-singularity:![GitHub Repo stars transparent-singularity](https://img.shields.io/github/last-commit/NeuroDesk/transparent-singularity)
-- example-notebooks:![GitHub Repo stars example-notebooks](https://img.shields.io/github/last-commit/NeuroDesk/example-notebooks)
-- neurodesk.github.io:![GitHub Repo stars example-notebooks](https://img.shields.io/github/last-commit/NeuroDesk/neurodesk.github.io)
-
-## Github open issues
-- neurodesktop:![GitHub Repo stars neurodesktop](https://img.shields.io/github/issues-raw/neurodesk/neurodesktop)
-- neurocommand:![GitHub Repo stars neurocommand](https://img.shields.io/github/issues-raw/NeuroDesk/neurocommand)
-- neurocontainers:![GitHub Repo stars neurocontainers](https://img.shields.io/github/issues-raw/NeuroDesk/neurocontainers)
-- transparent-singularity:![GitHub Repo stars transparent-singularity](https://img.shields.io/github/issues-raw/NeuroDesk/transparent-singularity)
-- example-notebooks:![GitHub Repo stars example-notebooks](https://img.shields.io/github/issues-raw/NeuroDesk/example-notebooks)
-- neurodesk.github.io:![GitHub Repo stars example-notebooks](https://img.shields.io/github/issues-raw/NeuroDesk/neurodesk.github.io)
-
-
-
-
-
+## Github metrics
+| Repository              | Stars                                                                      | Open issues                                                                     | Last Commit                                                                      |
+| ----------------------- | -------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- |
+| neurodesktop            | ![](https://img.shields.io/github/stars/neurodesk/neurodesktop)            | ![](https://img.shields.io/github/issues-raw/neurodesk/neurodesktop)            | ![](https://img.shields.io/github/last-commit/neurodesk/neurodesktop)            |
+| neurocommand            | ![](https://img.shields.io/github/stars/NeuroDesk/neurocommand)            | ![](https://img.shields.io/github/issues-raw/NeuroDesk/neurocommand)            | ![](https://img.shields.io/github/last-commit/NeuroDesk/neurocommand)            |
+| neurocontainers         | ![](https://img.shields.io/github/stars/NeuroDesk/neurocontainers)         | ![](https://img.shields.io/github/issues-raw/NeuroDesk/neurocontainers)         | ![](https://img.shields.io/github/last-commit/NeuroDesk/neurocontainers)         |
+| transparent-singularity | ![](https://img.shields.io/github/stars/NeuroDesk/transparent-singularity) | ![](https://img.shields.io/github/issues-raw/NeuroDesk/transparent-singularity) | ![](https://img.shields.io/github/last-commit/NeuroDesk/transparent-singularity) |
+| example-notebooks       | ![](https://img.shields.io/github/stars/NeuroDesk/example-notebooks)       | ![](https://img.shields.io/github/issues-raw/NeuroDesk/example-notebooks)       | ![](https://img.shields.io/github/last-commit/NeuroDesk/example-notebooks)       |
+| neurodesk.github.io     | ![](https://img.shields.io/github/stars/NeuroDesk/neurodesk.github.io)     | ![](https://img.shields.io/github/issues-raw/NeuroDesk/neurodesk.github.io)     | ![](https://img.shields.io/github/last-commit/NeuroDesk/neurodesk.github.io)     |
