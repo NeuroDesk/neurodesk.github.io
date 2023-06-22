@@ -1,7 +1,7 @@
 name: check broken links
 
 on:
-  repository_dispatch:
+  push:
   workflow_dispatch:
 
 permissions:
