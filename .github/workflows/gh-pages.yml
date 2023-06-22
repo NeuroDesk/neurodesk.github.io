@@ -85,3 +85,39 @@ jobs:
       #     algolia-app-id: ${{ secrets.ALGOLIA_APP_ID }}
       #     algolia-api-key: ${{ secrets.ALGOLIA_API_KEY }}
       #     site-url: 'https://www.neurodesk.org'
+
+  check-links:
+    runs-on: ubuntu-latest
+    needs: deploy
+    steps:
+      - uses: actions/checkout@master
+      - name: Setup Pages
+        id: pages
+        uses: actions/configure-pages@v2
+      - name: Create config file
+        run: |
+          echo ${{ steps.pages.outputs.base_url }}
+          echo '{
+              "replacementPatterns": [
+                  {
+                      "pattern": "^/",
+                      "replacement": "${{ steps.pages.outputs.base_url }}/"
+                  }
+              ],
+              "ignorePatterns": [
+                  {
+                      "pattern": "^https://twitter.com"
+                  },
+                  {
+                      "pattern": "^http://localhost"
+                  }
+              ],
+              "aliveStatusCodes": [429, 403, 200]
+          }' > config.json
+      - uses: gaurav-nelson/github-action-markdown-link-check@v1
+        # checks all markdown files from content/en including all subfolders
+        with:
+          use-quiet-mode: 'yes'
+          use-verbose-mode: 'yes'
+          config-file: '.github/workflows/config.json'
+          folder-path: 'content/en/'

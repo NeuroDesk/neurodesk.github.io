@@ -13,7 +13,7 @@ description: >
 ## Requirements:
 ### Required
 - python 3.6+ [https://docs.conda.io/en/latest/miniconda.html#linux-installers](https://docs.conda.io/en/latest/miniconda.html#linux-installers)
-- singularity [https://sylabs.io/guides/3.5/user-guide/quick_start.html](https://sylabs.io/guides/3.5/user-guide/quick_start.html)
+- singularity [https://docs.sylabs.io/guides/3.5/user-guide/quick_start.html](https://docs.sylabs.io/guides/3.5/user-guide/quick_start.html)
 - git
 
 ### Optional

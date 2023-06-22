@@ -1,20 +1,18 @@
-name: Link Checker
+name: Markdown Links Check
+# runs every monday at 9 am
 on:
     push:
     workflow_dispatch:
-permissions:
-  contents: read # to fetch code (actions/checkout)
-jobs:
-  linkchecker:
-    runs-on: ubuntu-latest
 
+jobs:
+  check-links:
+    runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
-      - name: lychee Link Checker
-        id: lychee
-        uses: lycheeverse/lychee-action@v1.8.0
+      - uses: actions/checkout@master
+      - uses: gaurav-nelson/github-action-markdown-link-check@v1
+        # checks all markdown files from /docs including all subfolders
         with:
-          args: --accept=200,401,403,429 --exclude-mail content/en --exclude-path layouts/404.html --exclude-path README.md --exclude http://localhost --exclude twitter.com --remap "https://iishiishii.github.io/neurodesk.github.io/ file://${GITHUB_WORKSPACE}/static"
-          fail: true
-        env:
-          GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
+          use-quiet-mode: 'yes'
+          use-verbose-mode: 'yes'
+          config-file: '.github/workflows/markdown.links.config.json'
+          folder-path: 'content/en/'

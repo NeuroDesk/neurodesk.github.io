@@ -1,0 +1,17 @@
+{
+    "replacementPatterns": [
+        {
+            "pattern": "^/",
+            "replacement": "https://iishiishii.github.io/neurodesk.github.io/"
+        }
+    ],
+    "ignorePatterns": [
+		{
+			"pattern": "^https://twitter.com"
+		},
+        {
+            "pattern": "^http://localhost"
+        }
+	],
+    "aliveStatusCodes": [429, 403, 200]
+}
