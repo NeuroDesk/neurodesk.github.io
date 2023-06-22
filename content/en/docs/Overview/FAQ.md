@@ -280,4 +280,4 @@ Post your question at https://github.com/orgs/NeuroDesk/discussions or open a [n
 
 
 ## How do I get my files into Neurodesk?
-It depends where you are running Neurodesk and where your files are. We provide many different ways from drag-and-drop, to cloud storage to file mounts in [Storage in Neurodesk](/docs/getting-started/storage).
+It depends where you are running Neurodesk and where your files are. We provide many different ways from drag-and-drop, to cloud storage to file mounts in [Storage in Neurodesk](/docs/getting-started/neurodesktop/storage).
