@@ -41,5 +41,5 @@ To use Neurodesk Lab, choose the link below closest to your location:
 
 ## How to transfer data onto Neurodesk Play and Lab
 
-We provide different ways from [drag-and-drop](/docs/getting-started/neurodesktop/storage/#drag-and-drop), to [cloud storage](/docs/getting-started/neurodesktop/storage/#drag-and-drop#cloud-storage) to transfer your files in and out of Neurodesk Play.
+We provide different ways from [drag-and-drop](/docs/getting-started/neurodesktop/storage/#drag-and-drop), to [cloud storage](/docs/getting-started/neurodesktop/storage/#cloud-storage) to transfer your files in and out of Neurodesk Play.
 
