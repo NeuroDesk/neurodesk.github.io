@@ -113,9 +113,9 @@ jobs:
                   }
               ],
               "aliveStatusCodes": [429, 403, 200]
-          }' > config.json
-          cat config.json
-          
+          }' > .github/workflows/config.json
+          cat .github/workflows/config.json
+
       - uses: gaurav-nelson/github-action-markdown-link-check@v1
         # checks all markdown files from content/en including all subfolders
         with:
