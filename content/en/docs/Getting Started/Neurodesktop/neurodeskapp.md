@@ -39,7 +39,7 @@ docker run hello-world
 
 If you have an existing Neurodesk App installation, please first uninstall it by following the uninstall instructions [here](#uninstalling-neurodesk-app). Then, install the app for your system:
 
-- Debian, Ubuntu Linux Installer: `sudo apt install -f NeurodeskApp-Setup-Debian.deb`
+- Debian, Ubuntu Linux Installer: `sudo apt install -f ./NeurodeskApp-Setup-Debian.deb`
 - Red Hat, Fedora, SUSE Linux Installer: `sudo rpm -i NeurodeskApp-Setup-Fedora.rpm`
 - Arch-based package via AUR: `yay neurodesk` (or follow instructions [here](https://wiki.archlinux.org/title/Arch_User_Repository#Installing_and_upgrading_packages))
 - macOS Intel Installer: Double click the downloaded dmg file, then drag the NeurodeskApp.app to the Applications folder; for starting the app: Right click on the NeurodeskApp.app and select "Open", Confirm by clicking on Open again to acknowledge that the developer cannot be verified (we are working on getting this verified).
