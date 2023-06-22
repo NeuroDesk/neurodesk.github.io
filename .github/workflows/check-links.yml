@@ -36,12 +36,11 @@ jobs:
       - name: Set baseURL
         run: sed -i "s|https://www.neurodesk.org/|${{ steps.pages.outputs.base_url }}/|g" config.toml
 
-      - name: Check broken links
-        env:
-          INPUT_URL: "${{ steps.pages.outputs.base_url }}" 
-          INPUT_CMD_PARAMS: '--buffer-size=20480 --max-response-body-size=1000000000 --rate-limit=1 --timeout=70 --ignore-fragments --color=always --skip-tls-verification --exclude="(https://arxiv.org/abs/2002.06129|https://www.docker.com/resources/what-container|https://www.sciencedirect.com/science/article/pii/S016502701630259X|https://www.aedapt.net|https://stackoverflow.com/questions/68792446/how-to-set-python3-as-default|https://github.com/login)"'
-        run: |
-          wget -qO- https://raw.githubusercontent.com/ruzickap/action-my-broken-link-checker/v2/entrypoint.sh | bash
+      - uses: BoundfoxStudios/action-hugo-link-check@v1
+        with:
+          hugo-root: content
+          hugo-content-dir: content/en
+          hugo-config: config.toml
 
       - name: Codespell
         uses: codespell-project/actions-codespell@v1
