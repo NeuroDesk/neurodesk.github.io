@@ -38,7 +38,7 @@ If you are running containers on Linux there is no performance penalty - on an H
 
 Rioux, Pierre, Gregory Kiar, Alexandre Hutton, Alan C. Evans, and Shawn T. Brown. ‘Deploying Large Fixed File Datasets with SquashFS and Singularity’. ArXiv:2002.06129 [Cs], 14 February 2020. https://arxiv.org/abs/2002.06129 ). 
 
-However, running Neurodesktop on Windows and Mac will have a performance penalty, because Linux runs in a Hypervisor on these systems.   
+However, running Neurodesktop on Windows and Mac will have a performance penalty, because Linux runs in a Hypervisor on these systems. Also, it is important to understand filesystem operation bottlenecks that can occur when accessing files across system boundaries (e.g. processing DICOM files stored on Windows inside Neurodesk).
 
 ## How can I see how many compute resources Neurodesk containers need?
 In Linux the containers run as normal processes and you can use htop and top to inspect the resource footprint. For Windows and Mac the information is not readily available, however, we have written a guide here: [Troubleshooting](https://www.neurodesk.org/docs/support/faq/#i-got-an-error-message-x-killed-or-not-enough-memory)
@@ -95,7 +95,8 @@ Then "Start My Server"
 <img width="248" alt="image" src="https://github.com/NeuroDesk/neurodesk.github.io/assets/4021595/efbf6a95-bd2a-451b-97f9-bf67a839fdcd">
 
 
-
+## How to restart a stuck Neurodesk when running locally in Docker or using the NeurodeskApp?
+Open Docker Desktop Dashboard. Find the container under "Containers" and delete the Container there.
 
 ## VScode
 
