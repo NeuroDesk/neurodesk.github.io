@@ -7,6 +7,9 @@ description: >-
      User metrics, analytics and service uptime
 ---
 
+## Docker metrics
+Total Neurodesktop container pulls: ![Docker Pulls](https://img.shields.io/docker/pulls/vnmd/neurodesktop)
+
 ## Github metrics
 | Repository                                                                      | Stars                                                                      | Open issues                                                                     | Last Commit                                                                      |
 | --------------------------------------------------------------------------------| -------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- |
@@ -26,7 +29,6 @@ description: >-
 {{% alert title="For service uptimes, use this link" color="info" %}}
 https://stats.uptimerobot.com/NBE38IZWZM
 {{% /alert %}}
-## Docker metrics
-Total Neurodesktop container pulls: ![Docker Pulls](https://img.shields.io/docker/pulls/vnmd/neurodesktop)
+
 
 
