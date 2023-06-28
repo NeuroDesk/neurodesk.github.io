@@ -12,6 +12,13 @@ description: >-
 Latest Version
 : {{< params/neurodesktop/jupyter_neurodesk_version >}}
 
+## 20230628
+- directories can now be deleted in jupyter interface even if they contain files
+- moved startup configurations out of .bashrc
+- removed redundant chown of homedirectory (e.g. affecting windows startup time)
+- added git extension to juputerlab
+- more robust handling of CVMFS edge cases
+
 ## 20230531
 - included neurodesktop version in hostname
 - removed apt lists
