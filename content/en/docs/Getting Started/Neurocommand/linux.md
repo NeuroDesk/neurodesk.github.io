@@ -63,7 +63,7 @@ _Removes symlinks_
 
 ## To update
 Run `git pull`  
-Run `bash build.sh`  # this updates the neurocommand but not the modules
+Run `bash build.sh`  # this updates the neurocommand but not the module
 _install.sh does not need to be run again_
 to update containers go into the neurodesktop directory and run `bash containers.sh` 
 Choose the module you want to update for example you want to update mrtrix3/3.0.2 module with the eddy_cuda fix:
