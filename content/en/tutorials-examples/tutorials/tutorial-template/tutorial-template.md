@@ -199,9 +199,9 @@ You can also add code snippets, e.g. `var foo = "bar";`, which will be shown inl
 To add screenshots to your tutorial, create a subfolder in /static with the same file structure as in your tutorial markdown file. Add your screenshot to this folder, keeping in mind that you may want to adjust your screenshot to a reasonable size before uploading. You can then embed these images in your tutorial using the following convention: 
 
 ```
-![EEGtut1](/static/tutorials-examples/tutorials/electrophysiology/EEG_Tutorial/EEGtut1.png 'EEGtut1') <!-- ![filename without extension](/subfolder_name/filename.png '[filename without extension')  -->
+![EEGtut1](/static/tutorials-examples/tutorials/electrophysiology/eeg_mne-python/EEGtut1.png 'EEGtut1') <!-- ![filename without extension](/subfolder_name/filename.png '[filename without extension')  -->
 ```
-![EEGtut1](/static/tutorials-examples/tutorials/electrophysiology/EEG_Tutorial/EEGtut1.png 'EEGtut1') <!-- ![filename without extension](/subfolder_name/filename.png '[filename without extension')  -->
+![EEGtut1](/static/tutorials-examples/tutorials/electrophysiology/eeg_mne-python/EEGtut1.png 'EEGtut1') <!-- ![filename without extension](/subfolder_name/filename.png '[filename without extension')  -->
 
 ----------------
 ### Alerts and warnings
