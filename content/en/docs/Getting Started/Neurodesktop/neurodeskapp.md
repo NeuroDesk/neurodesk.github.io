@@ -6,7 +6,7 @@ description: >
   A cross-platform desktop application for Neurodesk: The easiest way to use Neurodesktop
 ---
 
-<img style="float: right;" src="/getting-started/neurodeskapp/neurodesk-desktop.png" width="400">
+<img style="float: right;" src="/static/docs/getting-started/neurodeskapp/neurodesk-desktop.png" width="400">
 <!-- ![Neurodesk App](/static/docs/getting-started/neurodeskapp/neurodesk-desktop.png 'neurodeskapp') -->
 
 ### Minimum System Requirements
