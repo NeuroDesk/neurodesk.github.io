@@ -43,9 +43,9 @@ Neurodesk originates from various projects at the Centre for Advanced Imaging th
 
 ## Acknowledgments
 
-![nif](/overview/nif.png 'nif') ![uq](/overview/uq_logo.png 'uq')
+![nif](/static/docs/overview/nif.png 'nif') ![uq](/static/docs/overview/uq_logo.png 'uq')
 
-![swinburne](/overview/swinburne_uni_logo.png 'swinburne') ![liege](/overview/liege_uni_logo.png 'liege')
+![swinburne](/static/docs/overview/swinburne_uni_logo.png 'swinburne') ![liege](/static/docs/overview/liege_uni_logo.png 'liege')
 
 ## Funding
 Thank you to Oracle for Research for providing Oracle Cloud credits and related resources to support this project.
