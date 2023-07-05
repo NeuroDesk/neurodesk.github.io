@@ -66,13 +66,13 @@ Begin by creating a copy of our documentation that you can edit:
 2. [Fork](https://docs.github.com/en/get-started/quickstart/fork-a-repo) the repository.
 
 
-![1_fork](/tutorials/tutorial-template/1_fork.png 'Repo fork')
+![1_fork](/static/tutorials-examples/tutorials/tutorial-template/1_fork.png 'Repo fork')
 
 {{< alert title="Note" >}} _You should now have your own copy of the documentation, which you can alter without affecting our official documentation. You should see a panel stating "This branch is up to date with Neurodesk:main." If someone else makes a change to the official documentation, the statement will change to reflect this. You can bring your repository up to date by clicking "Sync fork"._ {{< /alert >}}
 
-![2_syncfork](/tutorials/tutorial-template/2_syncFork.png 'Sync fork')
+![2_syncfork](/static/tutorials-examples/tutorials/tutorial-template/2_syncFork.png 'Sync fork')
 
-![3_synced](/tutorials/tutorial-template/3_synced.png 'Sync status')
+![3_synced](/static/tutorials-examples/tutorials/tutorial-template/3_synced.png 'Sync status')
 
 ----------------
 ### Create your tutorial
@@ -84,7 +84,7 @@ git clone https://github.com/YOUR-USERNAME/neurodesk.github.io.git
 
 The URL for the repository can be copied by clicking on the button highlighted below:
 
-![4_clone](/tutorials/tutorial-template/4_clone.png 'Repo URL')
+![4_clone](/static/tutorials-examples/tutorials/tutorial-template/4_clone.png 'Repo URL')
 
 2. Now, you can open your copy of `neurodesk.github.io` using the editor of your choice (we recommend [vscode](https://code.visualstudio.com/)). Before making changes to the current repository, the best practice is to create a new [branch](https://www.atlassian.com/git/tutorials/using-branches) for avoiding version conflicts. 
 
@@ -100,7 +100,7 @@ git checkout tutorial-template
 ```bash 
 git branch
 ```
-![5_branch](/tutorials/tutorial-template/5_branch.png 'Branch check')
+![5_branch](/static/tutorials-examples/tutorials/tutorial-template/5_branch.png 'Branch check')
   
 
 3. Navigate to `neurodesk.github.io/content/en/tutorials-examples/tutorials/` and then navigate to the subfolder you believe your tutorial belongs in (e.g. "/functional_imaging"). 
@@ -124,17 +124,17 @@ You might have to correct some merge conflicts, but [vscode](https://learn.micro
 
 3. Navigate to your forked version of the repository on GitHub and switch branches for the one with your additions.
 
-![6_branchswitch](/tutorials/tutorial-template/6_switchbranch.png 'Switching branches')
+![6_branchswitch](/static/tutorials-examples/tutorials/tutorial-template/6_switchbranch.png 'Switching branches')
 
 4. Now, you can preview the changes before contributing them upstream. For this, if this is your first time to run the Action build, click on the "Actions" tab and enable the Actions ("I understand my tutorials..."). The first build will fail (due to a bug with the Github token), but the second build will work. You can run the workflow if clicking on each of them in the left sidebar.
 
-![7_run_github_workflow](/tutorials/tutorial-template/7_run_github_workflow.png 'Contribute')
+![7_run_github_workflow](/static/tutorials-examples/tutorials/tutorial-template/7_run_github_workflow.png 'Contribute')
 
 5. Then you need to open the settings of the repository and check that Pages points to gh-pages, and when clicking on the link, the site should be there.
 
 6. To contribute your changes, click "Compare & pull request" and then ["Create pull request"](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/about-pull-requests).
 
-![8_contribute](/tutorials/tutorial-template/8_contribute.png 'Contribute')
+![8_contribute](/static/tutorials-examples/tutorials/tutorial-template/8_contribute.png 'Contribute')
 
 
 7. Give your pull request a title (e.g. "Document PhysIO tutorial"), leave a comment briefly describing what you have done, and then create the pull request. 
@@ -198,10 +198,15 @@ You can also add code snippets, e.g. `var foo = "bar";`, which will be shown inl
 
 To add screenshots to your tutorial, create a subfolder in /static with the same file structure as in your tutorial markdown file. Add your screenshot to this folder, keeping in mind that you may want to adjust your screenshot to a reasonable size before uploading. You can then embed these images in your tutorial using the following convention: 
 
+For a `filename.png` in a `/content/en/tutorials-examples/subject/tutorial1/markdownfile.md` use
 ```
-![EEGtut1](/tutorials/electrophysiology/EEG_Tutorial/EEGtut1.png 'EEGtut1') <!-- ![filename without extension](/subfolder_name/filename.png '[filename without extension')  -->
+![filename](/static/...<fullpathhere>.../filename.png '[filename')
 ```
-![EEGtut1](/tutorials/electrophysiology/EEG_Tutorial/EEGtut1.png 'EEGtut1') <!-- ![filename without extension](/subfolder_name/filename.png '[filename without extension')  -->
+For example: `EEGtut1.png` in `/content/en/tutorials-examples/tutorials/electrophysiology/eeg_mne-python.md` would be
+```
+![EEGtut1](/static/tutorials-examples/tutorials/electrophysiology/eeg_mne-python/EEGtut1.png 'EEGtut1')
+```
+![EEGtut1](/static/tutorials-examples/tutorials/electrophysiology/eeg_mne-python/EEGtut1.png 'EEGtut1') <!-- ![filename without extension](/subfolder_name/filename.png '[filename without extension')  -->
 
 ----------------
 ### Alerts and warnings

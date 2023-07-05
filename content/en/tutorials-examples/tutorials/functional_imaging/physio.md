@@ -79,12 +79,12 @@ If you cannot find the example data there:
 ## Example: Running PhysIO in the GUI
 1. Open the PhysIO GUI (Neurodesk -> Functional Imaging -> physio -> physioGUI r7771, see screenshot:
 
-![PhysIO GUI in NeuroDesk](/tutorials/functional_imaging/physio/physio_screenshot1.jpg 'physio_screenshot')
+![PhysIO GUI in NeuroDesk](/static/tutorials-examples/tutorials/functional_imaging/physio/physio_screenshot1.jpg 'physio_screenshot')
 
 2. SPM should automatically open up (might take a while). Select 'fMRI' from the modality selection screen.
 3. Press the "Batch Editor" button (see screenshot with open Batch Editor, red highlights)
 
-![NeuroDesk with SPM Batch Editor PhysIO](/tutorials/functional_imaging/physio/physio_screenshot2.jpg 'physio_screenshot2')
+![NeuroDesk with SPM Batch Editor PhysIO](/static/tutorials-examples/tutorials/functional_imaging/physio/physio_screenshot2.jpg 'physio_screenshot2')
 
     - NB: If you later want to create a new PhysIO batch with all parameters, from scratch or explore the options, select from the Batch Editor Menu top row, SPM -> Tools -> TAPAS PhysIO Toolbox (see screenshot, read highlights)
 
@@ -98,7 +98,7 @@ If you cannot find the example data there:
 6. Press The green "Play" button in the top icon menu row of the Batch Editor Window
 7. Several output figures should appear, with the last being a grayscale plot of the nuisance regressor design matrix
 
-![Output Nuisance Regressor Matrix PhysIO](/tutorials/functional_imaging/physio/physio_screenshot3.jpg 'physio_screenshot3')
+![Output Nuisance Regressor Matrix PhysIO](/static/tutorials-examples/tutorials/functional_imaging/physio/physio_screenshot3.jpg 'physio_screenshot3')
 
 8. Congratulations, your first successful physiological noise model has been created! If you don't see the mentioned figure, chances are certain input files were not found (e.g., wrong file location specified). You can always check the text output in the "bash" window associated with the SPM window for any error messages.
 

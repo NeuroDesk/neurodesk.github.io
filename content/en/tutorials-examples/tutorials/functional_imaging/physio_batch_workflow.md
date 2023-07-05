@@ -48,7 +48,7 @@ Once I had my .log files and .txt motion regressors file, I followed the instruc
 
 I wound up with a Batch script for the PhysIO toolbox that looked a little bit like this: 
 
-![PhysIOBatch1](/tutorials/functional_imaging/PhysIO_Batch/PhysIOBatch1.png 'PhysIOBatch1') <!-- ![filename without extension](/subfolder_name/filename.png '[filename without extension')  -->
+![PhysIOBatch1](/static/tutorials-examples/tutorials/functional_imaging/PhysIO_Batch/PhysIOBatch1.png 'PhysIOBatch1') <!-- ![filename without extension](/subfolder_name/filename.png '[filename without extension')  -->
 
 # 2. Generalise the script for use with any participant
 
@@ -170,7 +170,7 @@ First make sure the details at the top of the script are correct. You can see th
 
 On Neurodesk, go to the PhysIO toolbox, but select the command line tool rather than the GUI interface ('physio r7771 instead of physioGUI r7771). This will take you to the container for the PhysIO toolbox <p>
 
-![PhysIOBatch2](/tutorials/functional_imaging/PhysIO_Batch/PhysIOBatch2.png 'PhysIOBatch2') <!-- ![filename without extension](/subfolder_name/filename.png '[filename without extension')  -->
+![PhysIOBatch2](/static/tutorials-examples/tutorials/functional_imaging/PhysIO_Batch/PhysIOBatch2.png 'PhysIOBatch2') <!-- ![filename without extension](/subfolder_name/filename.png '[filename without extension')  -->
 
 Now to run your PhysIO batch script, type the command:
 

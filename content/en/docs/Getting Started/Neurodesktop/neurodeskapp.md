@@ -6,8 +6,8 @@ description: >
   A cross-platform desktop application for Neurodesk: The easiest way to use Neurodesktop
 ---
 
-<img style="float: right;" src="/getting-started/neurodeskapp/neurodesk-desktop.png" width="400">
-<!-- ![Neurodesk App](/getting-started/neurodeskapp/neurodesk-desktop.png 'neurodeskapp') -->
+<img style="float: right;" src="/static/docs/getting-started/neurodeskapp/neurodesk-desktop.png" width="400">
+<!-- ![Neurodesk App](/static/docs/getting-started/neurodeskapp/neurodesk-desktop.png 'neurodeskapp') -->
 
 ### Minimum System Requirements
 1. At least 5GB free space for neurodesktop base image
@@ -59,7 +59,7 @@ Sessions represent local project launches and connections to existing Neurodesk 
 
 You can start a new session by using the links at the Start section of the Welcome Page.
 
-![Start](/getting-started/neurodeskapp/start-session.svg "Start session")
+![Start](/static/docs/getting-started/neurodeskapp/start-session.svg "Start session")
 
 - `Open Local Neurodesk..` creates a new session in the default working directory.
 - `Connect to remote Neurodesk server..` creates a session by connecting to a remote Neurodesk server.
@@ -76,13 +76,13 @@ This will show a Jupyterlab interface. There are two options to interact with Ne
 - By clicking the `NeurodeskApp` icon on the right. This will launch a new window to start a Neurodesk interface.
 - By module loading containers on the left bar. You can interact with loaded modules through the command line interface.
 
-![Local](/getting-started/neurodeskapp/connect-to-local.png "Connect to local")
+![Local](/static/docs/getting-started/neurodeskapp/connect-to-local.png "Connect to local")
 
 ## Connecting to a remote Neurodesk Server
 
  It can also connect to an existing Neurodesk server instance that is running remotely. In order to connect to a server, click the `Connect to remote Neurodesk server..` button in the Start section of the Welcome Page.
 
-![Server](/getting-started/neurodeskapp/connect-to-server.png "Connect to server")
+![Server](/static/docs/getting-started/neurodeskapp/connect-to-server.png "Connect to server")
 
 
 This will launch a dialog that automatically lists the remote Neurodesk server instances.
@@ -93,7 +93,7 @@ If the `Persist session data` option is checked, then the session information is
 
 You can delete the stored session data manually at any time by using the `Clear History` option in the Privacy tab of Settings dialog.
 
-![Settings](/getting-started/neurodeskapp/settings-privacy.png "Clear History")
+![Settings](/static/docs/getting-started/neurodeskapp/settings-privacy.png "Clear History")
 
 ## Configuration and data files
 
@@ -107,7 +107,7 @@ Neurodesk App stores its data in the following locations:
 
 - By choice, in the settings window below, select `Additional Directory` on the left side bar, click `Change` button to select the local directory, then click `Apply & restart`. The next time you start the app, the data from the local directory can be found in /home/jovyan/data.
 
-![Additional Directory](/getting-started/neurodeskapp/additional_dir.png "Add data")
+![Additional Directory](/static/docs/getting-started/neurodeskapp/additional_dir.png "Add data")
 
 ## Uninstalling Neurodesk App
 
