@@ -35,14 +35,14 @@ There are a few differences between the open-source version of Neurodesk and wha
 5) Provide your email address and password.
 
 6) Click on create a Workspace (you only need to do this when you sign in for the first time).
-![create_worksapce](/static/docs/getting-started/neurodesktop/create_worksapce.png)
+![create_worksapce](/getting-started/neurodesktop/create_worksapce.png)
 
 7) Fill form 'Apply for new Workspace' and submit.
-![apply_for_workspace](/static/docs/getting-started/neurodesktop/apply_for_workspace.png)
+![apply_for_workspace](/getting-started/neurodesktop/apply_for_workspace.png)
 
 
 8) Click on "EXPLORE".
-![Explore](/static/docs/getting-started/neurodesktop/Explore.png)
+![Explore](/getting-started/neurodesktop/Explore.png)
 
 10) Click "VIEW DETAILS" under Neurodesktop:
 
