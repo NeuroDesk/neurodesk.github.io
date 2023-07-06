@@ -38,7 +38,7 @@ docker run --shm-size=1gb -it --privileged --user=root --name neurodesktop -v C:
 <!-- neurodesktop version found in neurodesk.github.io/data/neurodesktop.toml -->
 2. Once neurodesktop is downloaded, leave the terminal open and check which server neurodesktop running on (Avoid pressing CTRL+C). ]
 
-![image](/static/docs/getting-started/neurodeskapp/terminal_token.png)
+![image](/getting-started/neurodeskapp/terminal_token.png)
 
 3. To access neurodesktop, open your web browser and type in one of the URLs provided in your terminal (e.g. `http://127.0.0.1:8888/lab?token=your_unique_token`).
 
@@ -97,13 +97,13 @@ If you want to connect via RDP using a different port, replace 3390 in the previ
 Open Windows Remote Desktop Connection and connect to Computer `localhost:3390` as shown below. 
 
 
-![win-rdp-1](/static/docs/getting-started/neurodesktop/win-rdp-1.png 'win-rdp-1')
+![win-rdp-1](/getting-started/neurodesktop/win-rdp-1.png 'win-rdp-1')
 
 Resolution and multi-monitor settings can be set from the Display tab. 
 
 Once ready, click Connect. This will take you to the following prompt
 
-![win-rdp-1](/static/docs/getting-started/neurodesktop/win-rdp-2.png 'win-rdp-2')
+![win-rdp-1](/getting-started/neurodesktop/win-rdp-2.png 'win-rdp-2')
 
 Use the following details to login
 
@@ -143,9 +143,9 @@ Download the Tiger VNC client (`vncviewer64-1.12.0.exe`) from https://sourceforg
 
 Run the VNC Client and connect to `localhost::5901`
 
-![tigervncclient](/static/docs/getting-started/neurodesktop/vnc/tigervncclient.png 'tigervncclient')
+![tigervncclient](/getting-started/neurodesktop/vnc/tigervncclient.png 'tigervncclient')
 
 Enter `password` and click Ok.
 
-![tigervncclient-password](/static/docs/getting-started/neurodesktop/vnc/tigervncclient-password.png 'tigervncclient-password')
+![tigervncclient-password](/getting-started/neurodesktop/vnc/tigervncclient-password.png 'tigervncclient-password')
 

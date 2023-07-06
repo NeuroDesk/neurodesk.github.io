@@ -46,7 +46,7 @@ chmod a+rwx ~/neurodesktop-storage
 
 2. Once neurodesktop is downloaded, leave the terminal open and check the server neurodesktop is running on (Avoid pressing CTRL+C). For example,
 
-![image](/static/docs/getting-started/neurodeskapp/terminal_token.png)
+![image](/getting-started/neurodeskapp/terminal_token.png)
 
 
 {{< alert color="info" >}}
@@ -188,8 +188,8 @@ ssh -L 5901:127.0.0.1:5901 USER@IP
 
 Run the VNC Client and connect to `localhost::5901`
 
-![tigervncclient](/static/docs/getting-started/neurodesktop/vnc/tigervncclient.png 'tigervncclient')
+![tigervncclient](/getting-started/neurodesktop/vnc/tigervncclient.png 'tigervncclient')
 
 Enter `password` and click Ok.
 
-![tigervncclient-password](/static/docs/getting-started/neurodesktop/vnc/tigervncclient-password.png 'tigervncclient-password')
+![tigervncclient-password](/getting-started/neurodesktop/vnc/tigervncclient-password.png 'tigervncclient-password')
