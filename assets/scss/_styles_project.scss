@@ -1,0 +1,16 @@
+
+.fixed-top {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 10;
+}
+
+footer {
+    min-height: 110px;
+
+    @include media-breakpoint-down(md) {
+        min-height: 140px;
+    }
+}
