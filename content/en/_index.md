@@ -1,8 +1,7 @@
-+++
-title = "Neurodesk"
-linkTitle = "Neurodesk"
-
-+++
+---
+title: Neurodesk
+linktitle: Neurodesk
+---
 
 <section class="row td-box -bg-dark justify-content-left h-auto col-big-desktop">
 	<div class="col-sm-10 col-md-4 col-lg-1 order-xs-first order-sm-first order-md-last text-center my-auto">
@@ -11,7 +10,6 @@ linkTitle = "Neurodesk"
 	<div class="col-md-8 col-lg-first order-xs-2 order-sm-2 order-md-2 my-auto">
 		<h2>Quick start</h2>
 		<h3>A flexible and scalable data analysis environment for reproducible <a class="section-header" href="applications">neuroimaging</a> with Neurodesk.</h3>
-		
 		<div class="mx-auto mt-5">
 			<a class="btn btn-lg btn-light mr-0 mb-4" target="_blank" href="docs/support/faq/#what-is-neurodesk">
 			 What is Neurodesk ?</a>
@@ -38,11 +36,9 @@ linkTitle = "Neurodesk"
 	</p>
 	</div>
 	<div class="container-fluid quick-starts">
-
 		<div class="container">
 			<div class="row">
 				<div class="col-md-10 start-locally-col">
-
 					<div class="row">
 						<div class="col-md-3 headings">
 							<!-- <div class="col-md-12 title-block">
@@ -64,9 +60,7 @@ linkTitle = "Neurodesk"
 								<div class="option-text command-text">Instructions:</div>
 							</div>
 						</div>
-
 						<div class="col-md-9">
-
 							<div class="row platform">
 								<div class="col-md-12 title-block mobile-heading">
 									<div class="option-text">Compute Platform</div>
@@ -84,7 +78,6 @@ linkTitle = "Neurodesk"
 									<div class="option-text">Google Colab</div>
 								</div>
 							</div>
-
 							<div class="row os">
 								<div class="col-md-12 title-block mobile-heading">
 									<div class="option-text">Operating System</div>
@@ -99,7 +92,6 @@ linkTitle = "Neurodesk"
 									<div class="option-text">Windows</div>
 								</div>
 							</div>
-
 							<div class="row interface">
 								<div class="col-md-12 title-block mobile-heading">
 									<div class="option-text">Interface</div>
@@ -117,7 +109,6 @@ linkTitle = "Neurodesk"
 									<div class="option-text">VSCode</div>
 								</div>
 							</div>
-
 							<div class="row processor">
 								<div class="col-md-12 title-block mobile-heading">
 									<div class="option-text">Processor</div>
@@ -132,7 +123,6 @@ linkTitle = "Neurodesk"
 									<div class="option-text">GPU</div>
 								</div>
 							</div>
-
 							<div class="row instruction">
 							<div class="col-md-12 title-block command-mobile-heading">
 								<div class="option-text">Instructions:</div>
@@ -150,11 +140,8 @@ linkTitle = "Neurodesk"
 	</div>
 </section>	
 
-
 <section class="row -bg-white justify-content-left h-auto col-big-desktop">
-
 	<div class="container-fluid community-start">
-
 			<div class="row">
 				<div class="col-10 col-sm-9 col-md-10 col-lg-3 col-xl-2 community-title">
 					<h2 >Community</h2>
@@ -218,15 +205,12 @@ linkTitle = "Neurodesk"
 		<h2 >Neurodesk Components</h2>
 		<p class="lead mt-2">Details of each component within the Neurodesk project.<br /> Neurodesk makes it easy for beginners and experts to use neuroimaging tools for desktop, hpc, web, and cloud.</p>
 	</div>
-	
 	<div class="component-start container-fluid ">
-
 			<div class="row">
 				<div class="col-12 col-xl-11 component-col">
 					<div class="row">
 						<div class="col-10 col-md-4 col-lg-4">
 							<div class="component-card containers">
-								
 								<a class="component-click-btn" href="/docs/getting-started/neurocontainers/">
 									<div class="card-body">
 										<i class="fas fa-layer-group"></i>
@@ -241,7 +225,6 @@ linkTitle = "Neurodesk"
 						</div>
 						<div class="col-10 col-md-4 col-lg-4">
 							<div class="component-card command">
-								
 								<a class="component-click-btn" href="/docs/getting-started/neurocommand/">
 									<div class="card-body">
 										<i class="fas fa-terminal"></i>
@@ -262,7 +245,6 @@ linkTitle = "Neurodesk"
 													$ bash containers.sh</br />
 													$ module use $PWD/local/containers/modules
 												</span>
-
 											</div>
 										</div>
 									</div>
@@ -271,12 +253,10 @@ linkTitle = "Neurodesk"
 						</div>
 						<div class="col-10 col-md-4 col-lg-4">
 							<div class="component-card desktop">
-								
 								<a class="component-click-btn" href="/docs/getting-started/neurodesktop/">
 									<div class="card-body"">
 										<i class="fa fa-window-maximize"></i>
 										<h4>Neurodesktop</h4>	
-										
 										<p class="card-summary">Fully featured desktop in a container</p>
 									</div>
 									<div class="image-wrapper">
@@ -305,7 +285,6 @@ linkTitle = "Neurodesk"
 			</div>
 		</div>
 	</div>
-
 	<div class="td-box">
 		<h2>Funding</h2>
 	</div>
@@ -317,8 +296,6 @@ linkTitle = "Neurodesk"
 			</div>
 		</div>
 	</div>
-
 </section>
 
 <script src="/static/js/command.js"></script>
-<!-- <script src="/js/fake_terminal.js"></script> -->
