@@ -1,5 +1,5 @@
 baseURL = "https://www.neurodesk.org/"
-title = "NeuroDesk"
+title = "Neurodesk"
 canonifyURLs=true
 
 enableRobotsTXT = true
@@ -54,12 +54,12 @@ id = "G-4Z9774J59Y"
 
 [languages]
 [languages.en]
-title = "NeuroDesk"
+title = "Neurodesk"
 languageName ="English"
 # Weight used for sorting.
 weight = 1
 [languages.en.params]
-description = "NeuroDesk"
+description = "Neurodesk"
 # [languages.no]
 # title = "Goldydocs"
 # description = "Docsy er operativsystem for skyen"
