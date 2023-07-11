@@ -150,7 +150,7 @@ linktitle: Neurodesk
 			<div class="col-11 col-sm-11 col-md-10 col-lg-7 col-xl-8 community-col">
 				<div class="row community">
 					<div class="col-6 col-md-5 col-lg-6 col-xl-3">
-						<div class="community-card">
+						<div class="card community-card">
 							<a href="docs/overview/faq/#what-is-neurodesk">
 								<div class="card-body">
 										<i class=" fas fa-question-circle"></i>
@@ -161,7 +161,7 @@ linktitle: Neurodesk
 						</div>
 					</div>
 					<div class="col-6 col-md-5 col-lg-6 col-xl-3">
-						<div class="community-card">
+						<div class="card community-card">
 							<a target="_blank" href="https://github.com/orgs/NeuroDesk/discussions">
 								<div class="card-body">
 									<i class="fa fa-envelope"></i>
@@ -173,7 +173,7 @@ linktitle: Neurodesk
 						</div>
 					</div>
 					<div class="col-6 col-md-5 col-lg-6 col-xl-3">
-						<div class="community-card">
+						<div class="card community-card">
 							<a href="/developers/contributors">
 								<div class="card-body">
 									<i class="fa fa-users"></i>

@@ -53,13 +53,13 @@ p.lead.mt-2 {
   h2,
   h3,
   p.lead.mt-2 {
-    margin-left: 80px;
-    margin-right: 80px;
+    margin-left: 60px;
+    margin-right: 60px;
     margin-bottom: 20px;
 
     @include nav-menu-desktop {
-      margin-left: 20px;
-      margin-right: 20px;
+      margin-left: 10px;
+      margin-right: 50px;
       margin-bottom: 10px;
     }
   }
@@ -222,12 +222,12 @@ p.lead.mt-2 {
   }
 
   .title-block:before {
-    display: block;
+    display: flex;
     content: ".";
     color: transparent;
     border-left: 2px solid $smoky_grey;
     height: 100%;
-    position: absolute;
+    padding-left: 10px;
     left: 0;
   }
 
@@ -239,6 +239,7 @@ p.lead.mt-2 {
     word-wrap: break-word;
     display: table-cell;
     vertical-align: middle;
+    width: 100%;
 
     a {
       font-size: 100%;
@@ -352,6 +353,16 @@ p.lead.mt-2 {
     align-items: center;
     font-weight: 400;
     color: $black;
+  }
+
+  .row.interface > .mobile-heading,
+  .row.os > .mobile-heading,
+  .row.country > .mobile-heading,
+  .row.platform > .mobile-heading,
+  .row.processor > .mobile-heading,
+  .row.instruction > * {
+    padding-left: 0;
+    padding-right: 0;
   }
 
   .headings {
@@ -576,6 +587,7 @@ p.lead.mt-2 {
     height: rem(200px);
     word-wrap: normal;
     background: $light_white;
+    padding-top: 20px;
 
     @include desktop {
       margin-bottom: rem(15px);
