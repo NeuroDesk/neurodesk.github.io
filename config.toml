@@ -199,10 +199,10 @@ enable = false
     #     desc = "Practical questions and curated answers"
 # Developer relevant links. These will show up on right side of footer and in the community page if you have one.
 [[params.links.developer]]
-	name = "Analytics"
-	url = "https://lookerstudio.google.com/embed/reporting/1b5d3da0-7a67-4440-bc3c-95bd6fd94f18/page/2VKTD"
+	name = "Metrics"
+	url = "docs/overview/metrics"
 	icon = "fa fa-signal"
-    desc = "Analytics"
+    desc = "Metrics"
 #[[params.links.developer]]
 	# name = "Slack"
 	# url = "https://example.org/slack"
