@@ -14,7 +14,10 @@ footer {
   }
 }
 
-
+iframe {
+  aspect-ratio: 16/9;
+  width: 80%;
+}
 
 a.section-header {
   color: $white;

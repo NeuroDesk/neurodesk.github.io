@@ -22,7 +22,7 @@ Total Neurodesktop container pulls: ![Docker Pulls](https://img.shields.io/docke
 
 ## User metrics
 
-<iframe width=90% height=500px src="https://lookerstudio.google.com/embed/reporting/1b5d3da0-7a67-4440-bc3c-95bd6fd94f18/page/2VKTD" frameborder="0" style="border:0"></iframe>
+<iframe src="https://lookerstudio.google.com/embed/reporting/1b5d3da0-7a67-4440-bc3c-95bd6fd94f18/page/2VKTD" frameborder="0" style="border:0"></iframe>
 
 ## Uptime metrics
 
