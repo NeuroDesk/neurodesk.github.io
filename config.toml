@@ -1,5 +1,5 @@
 baseURL = "https://www.neurodesk.org/"
-title = "NeuroDesk"
+title = "Neurodesk"
 canonifyURLs=true
 
 enableRobotsTXT = true
@@ -18,14 +18,14 @@ enableMissingTranslationPlaceholders = true
 
 disableKinds = ["taxonomy", "taxonomyTerm"]
 
-# Highlighting config
-pygmentsCodeFences = false
-pygmentsUseClasses = false
-# Use the new Chroma Go highlighter in Hugo.
-pygmentsUseClassic = false
-#pygmentsOptions = "linenos=table"
-# See https://help.farbox.com/pygments.html
-pygmentsStyle = "tango"
+# # Highlighting config
+# pygmentsCodeFences = false
+# pygmentsUseClasses = false
+# # Use the new Chroma Go highlighter in Hugo.
+# pygmentsUseClassic = false
+# #pygmentsOptions = "linenos=table"
+# # See https://help.farbox.com/pygments.html
+# pygmentsStyle = "tango"
 
 # Configure how URLs look like per section.
 [permalinks]
@@ -54,12 +54,12 @@ id = "G-4Z9774J59Y"
 
 [languages]
 [languages.en]
-title = "NeuroDesk"
+title = "Neurodesk"
 languageName ="English"
 # Weight used for sorting.
 weight = 1
 [languages.en.params]
-description = "NeuroDesk"
+description = "Neurodesk"
 # [languages.no]
 # title = "Goldydocs"
 # description = "Docsy er operativsystem for skyen"
@@ -82,9 +82,9 @@ description = "NeuroDesk"
       unsafe = true
   [markup.highlight]
     # See a complete list of available styles at https://xyproto.github.io/splash/docs/all.html
-    # style = "tango"
+    style = "github-dark"
     # Uncomment if you want your chosen highlight style used for code blocks without a specified language
-    guessSyntax = "false"
+    guessSyntax = "true"
 
   [markup.tableOfContents]
     endLevel = 3
@@ -144,7 +144,7 @@ algolia_docsearch = true
 offlineSearch = false
 
 # Enable syntax highlighting and copy buttons on code blocks with Prism
-prism_syntax_highlighting = true
+prism_syntax_highlighting = false
 
 # User interface configuration
 [params.ui]
