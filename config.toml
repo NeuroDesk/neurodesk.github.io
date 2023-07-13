@@ -200,7 +200,7 @@ enable = false
 # Developer relevant links. These will show up on right side of footer and in the community page if you have one.
 [[params.links.developer]]
 	name = "Metrics"
-	url = "docs/overview/metrics"
+	url = "/docs/overview/metrics"
 	icon = "fa fa-signal"
     desc = "Metrics"
 #[[params.links.developer]]
