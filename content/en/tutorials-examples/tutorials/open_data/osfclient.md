@@ -32,6 +32,12 @@ osf upload -r . osfstorage/data
 
 ```
 
+# Setup an OSF token
+
+You can generate an OSF token under your user [settings](https://osf.io/settings/tokens). Then, set the OSF token as an environment variable:
+```Bash
+export OSF_TOKEN=YOURTOKEN
+```
 
 # Access a dataset
 
