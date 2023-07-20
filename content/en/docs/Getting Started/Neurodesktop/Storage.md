@@ -114,6 +114,9 @@ globusconnectpersonal -gui
 
 # If the connection fails, reset the permissions on the key file:
 chmod 600 /home/jovyan/.globusonline/lta/relay-anonymous-key.pem
+
+# If the connection still fails, start the client like this to get more information
+globusconnectpersonal -debug
 ```
 
 Then add the directories you want to share with globus, by opening File -> Preferences:
