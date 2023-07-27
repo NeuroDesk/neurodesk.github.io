@@ -24,6 +24,6 @@ Once you've chosen your setup, follow the instructions provided in the link. For
 ![startup](/static/tutorials-examples/startup_table.png)
 
 ## 4. Video tutorial
-See below for a 3-minute tutorial on Installation, Usage and Data Access with Neurodesktop
+See below for a 4-minute tutorial on Installation, Usage and Data Access with Neurodesktop
 
-{{< youtube tHbNosYUV4U >}}
+{{< youtube BffOZcV2oaY >}}
