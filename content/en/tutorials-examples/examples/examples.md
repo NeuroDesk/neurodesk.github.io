@@ -6,6 +6,8 @@ type: examples
 description: >
   Examples
 redirect_url: https://www.neurodesk.org/example-notebooks/intro.html
+aliases:
+- /tutorials-examples/examples/
 ---
 
 
