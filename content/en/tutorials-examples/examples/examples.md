@@ -2,9 +2,12 @@
 title: "Examples"
 linkTitle: "Examples"
 weight: 10
+type: examples
 description: >
   Examples
+redirect_url: https://www.neurodesk.org/example-notebooks/intro.html
 ---
+
 
 [Install Neurodesk](https://www.neurodesk.org/docs/getting-started) and load these example notebooks
 
