@@ -46,6 +46,15 @@ If you contributed to the project please list yourself here with a description o
 - user testing
 - neurodesk paper lead author
 
+## Thuy Dao
+- https://github.com/iishiishii
+- Application search tool with lunr
+- platform independent GUI application (Neurodeskapp)
+- application container development (civet)
+- documentation (github workflow)
+- automated building and testing of example documentation from jupyter notebooks
+- development of interactive container building tool
+
 ## Oren Civier
 - https://github.com/civier
 - Funding: ARDC Australian Electrophysiology Data Analytics PlaTform (AEDAPT) (CI for $566k AUD) - contributing to initial conceptualisation, EOI writeup, scope of project, proposal writeup, teaming up with the Australian Imaging Service (AIS), recruiting collaborators, assisting collaborators with case studies
@@ -95,13 +104,6 @@ If you contributed to the project please list yourself here with a description o
 ## Paris Lyons
 - design of Neurodesk Logo
 - project management of AEDAPT project
-
-## Thuy Dao
-- https://github.com/iishiishii
-- Application search tool with lunr
-- proof of concept for GUI
-- application container development (civet)
-- documentation (github workflow)
 
 ## Ashley Stewart
 - https://github.com/astewartau
