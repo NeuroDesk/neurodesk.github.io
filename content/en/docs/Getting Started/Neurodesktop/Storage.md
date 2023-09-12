@@ -53,8 +53,7 @@ If you are starting Neurodesk through the command line, here is an example for W
 docker run --shm-size=1gb -it --privileged --user=root --name neurodesktop -v C:/neurodesktop-storage:/neurodesktop-storage -v D:/moredata:/data -p 8888:8888 -e NEURODESKTOP_VERSION={{< params/neurodesktop/jupyter_neurodesk_version >}} vnmd/neurodesktop:{{< params/neurodesktop/jupyter_neurodesk_version >}}
 ```
 
-> Note for Windows users: Connecting network shares from Windows to Neurodesk can cause problems, so be careful when attempting this. Also, be aware that processing large amounts of files stored on a Windows filesystem inside Neurodesk will come with a performance penality due to the file system translation in the background.
-
+> Note for Windows users: Connecting network shares from Windows to Neurodesk can cause problems, so be careful when attempting this. Also, be aware that processing large amounts of files stored on a Windows filesystem inside Neurodesk will come with a performance penality due to the file system translation in the background. One option to get around these problems is to directly accessing your storage infrastructure inside Neurodesk.
 
 ## Cloud storage
 Another way to get your data into Neurodesktop is to use a cloud storage provider like CloudStor, Dropbox, OneDrive and their sync tools like OwnCloud, Nextcloud or very flexible tools like rclone or davfs2. Another good option could be to utilize Globus for large amounts of data. 
