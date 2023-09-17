@@ -155,18 +155,6 @@ sudo docker run \
 
 <!-- neurodesktop version found in neurodesk.github.io/data/neurodesktop.toml -->
 
-Then inside the neurodesktop container run:
-```bash
-sudo apt update
-sudo apt install libcudart10.1
-```
-
-For a GPU with Nvidia driver Version > 495.29.05:
-```bash
-wget https://developer.download.nvidia.com/compute/cuda/11.5.0/local_installers/cuda_11.5.0_495.29.05_linux.run
-sudo sh ./cuda_11.5.0_495.29.05_linux.run
-```
-
 #### Running tensorflow (w/ GPU)
 ##### Using tensorflow (python)
 ```bash
