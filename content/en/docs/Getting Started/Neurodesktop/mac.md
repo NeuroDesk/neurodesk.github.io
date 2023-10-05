@@ -8,23 +8,23 @@ description: >
   Install neurodesktop on MacOS
 ---
 
-## Minimum System Requirements
-1. At least 3GB free space for neurodesktop base image
-2. An Intel Mac. M1/ARM Macs are not yet supported.
-3. Docker requirements. Details found under https://docs.docker.com/get-docker/
-
 ## Quickstart
 ### 1. Install Docker
 Install Docker from here: https://docs.docker.com/get-docker/ 
 
 {{< alert color="warning" >}}
-Docker for MacOS by default runs with 2GB Memory. For actual workloads, 4GB Memory minimum for docker is highly recommended
-{{< /alert >}}
-
-1. Open the Docker Desktop and Navigate to the Install Docker Desktop tab. Instructions found at https://docs.docker.com/desktop/install/mac-install/
-
+Docker for MacOS by default runs with 2GB Memory. For actual workloads, 4GB Memory minimum for docker is highly recommended. You need to adjust this: 
+1. Open the Docker Desktop and Navigate to the Settings. Then navigate to the "Resources" section. 
 2. Increase the Memory slider from 2.00 GB to 4.00 GB (or greater)
 3. Increase Swap slider from 1GB to 2GB (or greater)
+{{< /alert >}}
+
+{{< alert color="warning" >}}
+For best performance on ARM Apple Silicon Hardware (M1/M2) you need to enable Rosetta support in Docker:
+1. Open the Docker Desktop and Navigate to the Settings. Then navigate to the "Features in development" section. 
+2. Activate "Use Rosetta for x86/amd64 emulation on Apple Silicon
+3. Click "Apply & Restart"
+{{< /alert >}}
 
 ### 2. Run Neurodesktop
 Use one of the following options to run Neurodesktop:
