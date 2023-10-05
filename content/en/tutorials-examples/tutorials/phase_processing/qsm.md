@@ -18,7 +18,7 @@ description: >
 <!-- -->
 
 > _An example notebook can be found here:_
-> https://github.com/NeuroDesk/example-notebooks/blob/main/structural_imaging/qsmxt_example.ipynb
+> https://github.com/NeuroDesk/example-notebooks/blob/main/books/structural_imaging/qsmxt_example.ipynb
 >
 
 ## Quantitative Susceptibility Mapping in Neurodesk with QSMxT
