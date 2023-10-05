@@ -14,9 +14,9 @@ var archInfoMap = new Map([
 ]);
 
 var archProcessorMap = new Map([
-  ['x86', {title: "x86", platforms: new Set(['hpc','cloud','local', 'nectar', 'colab']), oss: new Set(['linux','macos', 'windows'])}],
-  ['gpu', {title: "GPU", platforms: new Set(['hpc','cloud','local', 'nectar', 'colab']), oss: new Set(['linux','macos', 'windows'])}],
-  ['arm', {title: "ARM", platforms: new Set([]), oss: new Set([])}],
+  ['x86', {title: "x86", platforms: new Set(['hpc','cloud','local', 'nectar', 'colab']), oss: new Set(['linux','macos', 'windows']), interface: new Set(['gui', 'cmd', 'container', 'vscode'])}],
+  ['gpu', {title: "GPU", platforms: new Set(['hpc','cloud','local', 'nectar', 'colab']), oss: new Set(['linux','macos', 'windows']), interface: new Set(['gui', 'cmd', 'container', 'vscode'])}],
+  ['arm', {title: "ARM", platforms: new Set(['local']), oss: new Set(['linux', 'macos']), interface: new Set(['gui'])}],
 ]);
 
 var archInterfaceMap = new Map([
@@ -26,18 +26,14 @@ var archInterfaceMap = new Map([
   ['vscode', {title: "VSCode", platforms: new Set(['hpc','local', 'cloud']), oss: new Set(['linux','macos', 'windows'])}],
 ]);
 
-// let default_country="Australia based researcher";
-
 var default_selected_os = getDefaultSelectedOS();
 var opts = {
-  // country: 'aus',
   platform: 'local',
   os: default_selected_os,
   interface: 'gui',
   processor: 'x86'
 };
 
-// var country = $(".country > .option");
 var os = $(".os > .option");
 var platform = $(".platform > .option");
 var interface = $(".interface > .option");
@@ -98,7 +94,7 @@ function getDefaultSelectedOS() {
 
 
 // Disable processors not supported on OS
-function disableUnsupportedPlatforms(infomap, category, val) {
+function disableUnsupportedPlatforms(infomap, category1, val1, category2, val2, category3, val3) {
   for (const [arch_key, info] of infomap) {
     var elems = document.querySelectorAll('[id^="'+arch_key+'"]');
     if (elems == null) {
@@ -106,11 +102,15 @@ function disableUnsupportedPlatforms(infomap, category, val) {
       return;
     }
     for (var i=0; i < elems.length;i++) {
-      var supported = info[category].has(val);
+      var supported = info[category1].has(val1) && (category2 == null || info[category2].has(val2)) && (category3 == null || info[category3].has(val3));
       elems[i].style.textDecoration = supported ? "" : "line-through";
       if (!supported) {
         $(elems[i]).removeClass("option");
         $(elems[i]).addClass("option-unsupported");
+      }
+      else {
+        $(elems[i]).removeClass("option-unsupported");
+        $(elems[i]).addClass("option");
       }
     }
   }
@@ -155,14 +155,13 @@ function selectedOption(option, selection, category) {
   opts.platform.toLowerCase())
   commandMessage(buildMatcher());
   disableUnsupportedPlatforms(archInterfaceMap,"platforms",opts.platform);
-  disableUnsupportedPlatforms(archProcessorMap,"oss",opts.os);
+  disableUnsupportedPlatforms(archProcessorMap,"platforms",opts.platform, "interface",opts.interface, "oss",opts.os);
   if (selection.classList.contains("option")) {
     $("#command").addClass("command-container-matched");
     setTimeout(function() {
       $("#command").removeClass("command-container-matched");
     }, 500);
   }
-  // disableUnsupportedPlatforms(archInfoMap, "countries", opts.country);
 }
 
 
@@ -175,57 +174,7 @@ function buildMatcher() {
     opts.os.toLowerCase() +
     "," +
     opts.platform.toLowerCase()
-    // "," +
-    // opts.country.toLowerCase()
   );
-}
-
-function copyButton() {
-  if(!document.queryCommandSupported('copy')) {
-    return;
-  }
-
-  function flashCopyMessage(el, msg) {
-    el.textContent = msg;
-    setTimeout(function() {
-      el.textContent = "Copy";
-    }, 1000);
-  }
-
-  function selectText(node) {
-    var selection = window.getSelection();
-    var range = document.createRange();
-    range.selectNodeContents(node);
-    selection.removeAllRanges();
-    selection.addRange(range);
-    return selection;
-  }
-
-  function addCopyButton(containerEl) {
-    var copyBtn = document.createElement("button");
-    copyBtn.className = "highlight-copy-btn";
-    copyBtn.textContent = "Copy";
-
-    var codeEl = containerEl.firstElementChild;
-    copyBtn.addEventListener('click', function() {
-      try {
-        var selection = selectText(codeEl);
-        document.execCommand('copy');
-        selection.removeAllRanges();
-
-        flashCopyMessage(copyBtn, 'Copied!')
-      } catch(e) {
-        console && console.log(e);
-        flashCopyMessage(copyBtn, 'Failed :\'(')
-      }
-    });
-
-    containerEl.appendChild(copyBtn);
-  }
-
-  // Add copy button to code blocks
-  var highlightBlocks = document.getElementsByClassName('highlight');
-  Array.prototype.forEach.call(highlightBlocks, addCopyButton);
 }
 
 function commandMessage(key) {
@@ -353,6 +302,8 @@ function commandMessage(key) {
     // "gpu,gui,macos,hpc": 'Follow the instruction at <br /> <a target="_blank" href="https://www.neurodesk.org/docs/getting-started/neurodesktop/linux/#gpu-support">https://www.neurodesk.org/docs/getting-started/neurodesktop/linux/#gpu-support</a>', 
     "gpu,cmd,windows,hpc": 'Follow the instruction at <br /> <a target="_blank" href="https://www.neurodesk.org/docs/getting-started/neurodesktop/linux/#gpu-support">https://www.neurodesk.org/docs/getting-started/neurodesktop/linux/#gpu-support</a>', 
     "gpu,cmd,macos,hpc": 'Follow the instruction at <br /> <a target="_blank" href="https://www.neurodesk.org/docs/getting-started/neurodesktop/linux/#gpu-support">https://www.neurodesk.org/docs/getting-started/neurodesktop/linux/#gpu-support</a>', 
+    "arm,gui,linux,local": 'Follow the instruction at <br /> <a target="_blank" href="https://www.neurodesk.org/docs/getting-started/neurodesktop/linux/#1-optional-only-for-arm64-hardware">https://www.neurodesk.org/docs/getting-started/neurodesktop/linux/#1-optional-only-for-arm64-hardware</a>', 
+    "arm,gui,macos,local": 'Follow the instruction at <br /> <a target="_blank" href="https://www.neurodesk.org/docs/getting-started/neurodesktop/linux/#1-optional-only-for-arm64-hardware">https://www.neurodesk.org/docs/getting-started/neurodesktop/linux/#1-optional-only-for-arm64-hardware</a>', 
   };
 
   if (!object.hasOwnProperty(key)) {
