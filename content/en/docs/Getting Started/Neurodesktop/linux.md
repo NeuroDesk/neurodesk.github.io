@@ -13,20 +13,33 @@ description: >
 2. Docker requirements. Details found under https://docs.docker.com/get-docker/
 
 ## Quickstart
-### 1. Install Docker/Podman
-Install Docker from here: https://docs.docker.com/get-docker/. Additional information available [below](#installing-docker). Neurodesk also works with Podman.
+### 0. Install Docker/Podman
+Install Docker from here: https://docs.docker.com/get-docker/. Additional information available [below](#installing-docker). Neurodesk also works with Podman (https://podman.io/).
+
+### 1. Optional: only for ARM64 hardware
+Neurodesk supports ARM64 hardware through binfmt
+
+To enable Neurodesk on ARM64 hardware run this setup step:
+```bash
+sudo docker run --privileged --rm tonistiigi/binfmt --install all
+```
 
 ### 2. Run Neurodesktop
-Before the first run, create a local folder where the downloaded applications will be stored, e.g. `~/neurodesktop-storage`
+Before the first run, create a local folder where the downloaded applications will be stored, e.g. `mkdir ~/neurodesktop-storage`
 
 Then use one of the following options to run Neurodesktop:
 
-
-#### Option 1 (Recommended): Neurodesk-App
+#### Option 1 (Recommended for local installations): Neurodesk-App
 Instructions on installing and using the app: https://www.neurodesk.org/docs/getting-started/neurodesktop/neurodeskapp/
 
-#### Option 2 (Advanced): Using Terminal
-1. Open a terminal, and type the following command to automatically download the neurodesktop container and run it
+#### Option 2 (Advanced and for remote installations): Using Terminal
+
+0. If the Linux machine is remote (e.g. in the cloud), connect to the machine with a port forwarding first:
+```bash
+ssh -L 8888:127.0.0.1:8888 USER@IP
+```
+
+1. then start neurodesktop:
 
 ```bash
 sudo docker run \
