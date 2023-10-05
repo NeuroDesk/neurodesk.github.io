@@ -14,9 +14,9 @@ var archInfoMap = new Map([
 ]);
 
 var archProcessorMap = new Map([
-  ['x86', {title: "x86", platforms: new Set(['hpc','cloud','local', 'nectar', 'colab']), oss: new Set(['linux','macos', 'windows'])}],
-  ['gpu', {title: "GPU", platforms: new Set(['hpc','cloud','local', 'nectar', 'colab']), oss: new Set(['linux','macos', 'windows'])}],
-  ['arm', {title: "ARM", platforms: new Set([]), oss: new Set([])}],
+  ['x86', {title: "x86", platforms: new Set(['hpc','cloud','local', 'nectar', 'colab']), oss: new Set(['linux','macos', 'windows']), interface: new Set(['gui', 'cmd', 'container', 'vscode'])}],
+  ['gpu', {title: "GPU", platforms: new Set(['hpc','cloud','local', 'nectar', 'colab']), oss: new Set(['linux','macos', 'windows']), interface: new Set(['gui', 'cmd', 'container', 'vscode'])}],
+  ['arm', {title: "ARM", platforms: new Set(['local']), oss: new Set(['linux', 'macos']), interface: new Set(['gui'])}],
 ]);
 
 var archInterfaceMap = new Map([
@@ -112,6 +112,10 @@ function disableUnsupportedPlatforms(infomap, category, val) {
         $(elems[i]).removeClass("option");
         $(elems[i]).addClass("option-unsupported");
       }
+      else {
+        $(elems[i]).removeClass("option-unsupported");
+        $(elems[i]).addClass("option");
+      }
     }
   }
 }
@@ -156,6 +160,7 @@ function selectedOption(option, selection, category) {
   commandMessage(buildMatcher());
   disableUnsupportedPlatforms(archInterfaceMap,"platforms",opts.platform);
   disableUnsupportedPlatforms(archProcessorMap,"oss",opts.os);
+  disableUnsupportedPlatforms(archProcessorMap,"interface",opts.interface);
   if (selection.classList.contains("option")) {
     $("#command").addClass("command-container-matched");
     setTimeout(function() {
@@ -353,6 +358,8 @@ function commandMessage(key) {
     // "gpu,gui,macos,hpc": 'Follow the instruction at <br /> <a target="_blank" href="https://www.neurodesk.org/docs/getting-started/neurodesktop/linux/#gpu-support">https://www.neurodesk.org/docs/getting-started/neurodesktop/linux/#gpu-support</a>', 
     "gpu,cmd,windows,hpc": 'Follow the instruction at <br /> <a target="_blank" href="https://www.neurodesk.org/docs/getting-started/neurodesktop/linux/#gpu-support">https://www.neurodesk.org/docs/getting-started/neurodesktop/linux/#gpu-support</a>', 
     "gpu,cmd,macos,hpc": 'Follow the instruction at <br /> <a target="_blank" href="https://www.neurodesk.org/docs/getting-started/neurodesktop/linux/#gpu-support">https://www.neurodesk.org/docs/getting-started/neurodesktop/linux/#gpu-support</a>', 
+    "arm,gui,linux,local": 'Follow the instruction at <br /> <a target="_blank" href="https://www.neurodesk.org/docs/getting-started/neurodesktop/linux/#1-optional-only-for-arm64-hardware">https://www.neurodesk.org/docs/getting-started/neurodesktop/linux/#1-optional-only-for-arm64-hardware</a>', 
+    "arm,gui,macos,local": 'Follow the instruction at <br /> <a target="_blank" href="https://www.neurodesk.org/docs/getting-started/neurodesktop/linux/#1-optional-only-for-arm64-hardware">https://www.neurodesk.org/docs/getting-started/neurodesktop/linux/#1-optional-only-for-arm64-hardware</a>', 
   };
 
   if (!object.hasOwnProperty(key)) {
