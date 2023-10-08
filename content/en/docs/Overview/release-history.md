@@ -12,6 +12,14 @@ description: >-
 Latest Version
 : {{< params/neurodesktop/jupyter_neurodesk_version >}}
 
+## 2023-09-20
+- the neurodesktop image is now multi-arch and supports x86 and ARM64
+- fixed recursive link creation in /data
+- switched to new cvmfs server geolocation DNS steering policy system: cvmfs[1,2,3].neurodesk.org resolve to 3 servers per region which are compared for speed by the client on startup
+- fixed recursive execution of bash shell inside a singularity container
+- fixed empty username
+- switched release tag naming scheme to YYYY-MM-DD instead of YYYYMMDD for better readability
+
 ## 20230628
 - directories can now be deleted in jupyter interface even if they contain files
 - moved startup configurations out of .bashrc
