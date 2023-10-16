@@ -39,13 +39,13 @@ bash Part2_EvaluateMRSI.sh [ARGUMENTS]
 
 After starting Neurodesk, a JupyterLab instance should open. You can either work from here or open a desktop environment by clicking `Neurodesktop` under `Notebooks`. This tutorial uses the desktop.
 
-![JupyterLab](../../../../../static/tutorials-examples/tutorials/spectroscopy/mrsiproc/jupyterlab.png 'JupyterLab')
+![JupyterLab](/static/tutorials-examples/tutorials/spectroscopy/mrsiproc/jupyterlab.png 'JupyterLab')
 
 ## Running MRSI reconstruction
 
 Open vscode and create and open a new folder under `neurodesktop-storage`
 
-![Open Folder](../../../../../static/tutorials-examples/tutorials/spectroscopy/mrsiproc/open_folder.png 'Open Folder')
+![Open Folder](/static/tutorials-examples/tutorials/spectroscopy/mrsiproc/open_folder.png 'Open Folder')
 
 {{< alert title="Info" >}}
 
@@ -152,7 +152,13 @@ Then run the script with
 bash run_mrsi_part1.sh
 ```
 
+![Run MRSI](/static/tutorials-examples/tutorials/spectroscopy/mrsiproc/run_mrsi.png 'Run MRSI')
 
+This can take several hours for reconstruction and LCModel processing.
+
+## Part 2
+
+Continue with the same process for part 2  
 Template file for part 2
 
 ```
