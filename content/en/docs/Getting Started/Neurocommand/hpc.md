@@ -40,12 +40,18 @@ pip3 install -r neurodesk/requirements.txt --user
 bash build.sh --cli
 bash containers.sh
 export SINGULARITY_BINDPATH=$PWD
+# OR
 export APPTAINER_BINDPATH=$PWD
 ```
-### Containers
-- If these steps were successful, all Neurodesk containers will be listed
-- Copy and paste the line for your desired container(s)
+### Install Containers
+- If these steps were successful, the help will be displayed
+- Install all or only specific containers by following the instructions displayed
 
+### To download all containers (be careful - there are a lot of containers!)
+Run 
+```bash
+bash containers.sh --all
+```
 
 ### Adding your containers to lmod
 - To add each container to module search path, run the following: 
@@ -58,11 +64,12 @@ module use $PWD/local/containers/modules/
  module use ~/neurocommand/local/containers/modules/
  ```
 
-- It is very important to set the SINGULARITY_BINDPATH variable in your .bashrc as well. This variable needs to contain all directories you want to access with the Neurodesk tools:
+- It is very important to set the SINGULARITY_BINDPATH or the APPTAINER_BINDPATH variable in your .bashrc as well. This variable needs to contain a comma-separated list of directories you want to access with the Neurodesk tools:
 
 e.g.:
 ```bash
 export SINGULARITY_BINDPATH=/scratch/,/data/
+export APPTAINER_BINDPATH=/scratch/,/data/
 ```
  
 - to see the installed containers at the top of the list (neurodesk containers will take preference over system modules with the same name), run:
@@ -91,8 +98,4 @@ bash containers.sh
 ~/neurocommand/local/fetch_containers.sh mrtrix3 3.0.2 20221108 mrview $@
 ```
 
-### To download all containers
-Run 
-```bash
-bash containers.sh --all
-```
+
