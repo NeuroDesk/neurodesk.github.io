@@ -15,8 +15,6 @@ description: >
 - python 3.6+ [https://docs.conda.io/en/latest/miniconda.html#linux-installers](https://docs.conda.io/en/latest/miniconda.html#linux-installers)
 - singularity [https://docs.sylabs.io/guides/3.5/user-guide/quick_start.html](https://docs.sylabs.io/guides/3.5/user-guide/quick_start.html)
 - git
-
-### Optional
 - lmod [https://lmod.readthedocs.io/en/latest/](https://lmod.readthedocs.io/en/latest/)
 
 ### command line mode (e.g. running on an HPC or CVL)  
@@ -60,6 +58,18 @@ _Creates symlinks to menu files in installation dir_
   
 `sudo bash uninstall.sh` to uninstall  
 _Removes symlinks_  
+
+### For user-specific desktop menus in a shared Linux environment
+```
+mkdir -p $HOME/.config/menus
+mkdir -p $HOME/.local/share/applications
+mkdir -p $HOME/.local/share/desktop-directories
+ln -sfn /PATH_TO_YOUR_INSTALLATION/neurocommand/local/xfce-applications.menu $HOME/.config/menus
+ln -sfn /PATH_TO_YOUR_INSTALLATION/neurocommand/local/neurodesk-applications.menu $HOME/.config/menus
+ln -sfn /PATH_TO_YOUR_INSTALLATION/neurocommand/local/applications $HOME/.local/share/applications/neurodesk
+ln -sfn /PATH_TO_YOUR_INSTALLATION/neurocommand/local/desktop-directories $HOME/.local/share/desktop-directories/neurodesk
+```
+
 
 ## To update
 Run `git pull`  
