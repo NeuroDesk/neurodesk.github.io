@@ -72,7 +72,7 @@ Here, we create a new bash file with the default settings and execute it. Copy t
 ```
 #!/bin/bash
 # There are two script to process the mrsi data
-# First run this script, then Run_MRSI_Part2
+# First run this script, then run the part 2 script
 
 ml mrsiproc/0.1.0
 
@@ -91,7 +91,8 @@ Part1_ProcessMRSI.sh \
 -b fid_1.300000ms.basis \
 -o /neurodesktop-storage/mrsi_proc/ProcessResults/test_files \
 -j LCModel_Control_Template.m \
--m "dreid"
+-m "dreid" \
+-L "L2,0.2"
 
 ## HINT
 # To change the number of threads used by LCModel, change the number in the LCModel_Control_Template.m file (default 8)
@@ -168,8 +169,10 @@ ml mrsiproc/0.1.0
 
 Part2_EvaluateMRSI.sh \
 -o neurodesktop-storage/mrsi_proc/ProcessResults/test_files \
--n 2.0 \
--N \"Nifti\"
+-S "Glu,Gln,Raw-abs-csi" \
+-N Nifti \
+-R \
+-b
 
 
 ## The OPTIONS are
