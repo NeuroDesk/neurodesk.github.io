@@ -29,7 +29,7 @@ This tutorial documents how to create conda environments on Neurodesk.
 
 ## Conda environment
 
-Conda is promptly available on Neurodesk. The default environment is not persistent across sessions, but you can create your own environment, which will be stored in your homedirectory, by following these steps:
+The default conda environment is not persistent across sessions, so this means any packages you install in the standard environment will disappear after you restart the Jupyterlab instance. However, you can create your own conda environment, which will be stored in your homedirectory, by following the steps on this page. This method can also be used to install additional kernels, such as an R kernel.
 
 1. In a Terminal window, type in:
 
