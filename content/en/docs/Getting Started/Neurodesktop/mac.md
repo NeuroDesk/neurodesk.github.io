@@ -37,6 +37,18 @@ Create a local folder where the downloaded applications will be stored, e.g. ~/n
 
 1. Open a terminal, and type the following command to automatically download the neurodesktop container and run it
 
+1.a) with a persistent home directory:
+```shell
+docker volume create neurodesk-home \
+docker run \
+--shm-size=1gb -it --privileged --user=root --name neurodesktop \
+-v ~/neurodesktop-storage:/neurodesktop-storage \
+--mount source=neurodesk-home,target=/home/jovyan \
+-e NB_UID="$(id -u)" -e NB_GID="$(id -g)" \
+-p 8888:8888 -e NEURODESKTOP_VERSION={{< params/neurodesktop/jupyter_neurodesk_version >}} vnmd/neurodesktop:{{< params/neurodesktop/jupyter_neurodesk_version >}}
+```
+
+1.b) without a persistent home directory:
 ```shell
 docker run \
 --shm-size=1gb -it --privileged --user=root --name neurodesktop \
@@ -44,6 +56,7 @@ docker run \
 -e NB_UID="$(id -u)" -e NB_GID="$(id -g)" \
 -p 8888:8888 -e NEURODESKTOP_VERSION={{< params/neurodesktop/jupyter_neurodesk_version >}} vnmd/neurodesktop:{{< params/neurodesktop/jupyter_neurodesk_version >}}
 ```
+
 <!-- neurodesktop version found in neurodesk.github.io/data/neurodesktop.toml -->
 
 {{< alert color="warning" >}}
