@@ -20,8 +20,25 @@ base="""sudo docker run \\
   -e NB_UID="$(id -u)" -e NB_GID="$(id -g)" \\
   -p 8888:8888"""
 
+[linux-home]
+base="""docker volume create neurodesk-home \\
+  sudo docker run \\
+  --shm-size=1gb -it --privileged --user=root --name neurodesktop \\
+  -v ~/neurodesktop-storage:/neurodesktop-storage \\
+  --mount source=neurodesk-home,target=/home/jovyan \
+  -e NB_UID="$(id -u)" -e NB_GID="$(id -g)" \\
+  -p 8888:8888"""
+
 [windows]
 base="""docker run \
 --shm-size=1gb -it --privileged --user=root --name neurodesktop \
 -v C:/neurodesktop-storage:/neurodesktop-storage \
+-p 8888:8888"""
+
+[windows-home]
+base="""docker volume create neurodesk-home \\
+docker run \
+--shm-size=1gb -it --privileged --user=root --name neurodesktop \
+-v C:/neurodesktop-storage:/neurodesktop-storage \
+--mount source=neurodesk-home,target=/home/jovyan \
 -p 8888:8888"""
