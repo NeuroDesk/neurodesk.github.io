@@ -27,7 +27,7 @@ description: >
 
 This tutorial documents how to create conda environments on Neurodesk. 
 
-## Conda environment
+## Conda/Mamba environment
 
 The default conda environment is not persistent across sessions, so this means any packages you install in the standard environment will disappear after you restart the Jupyterlab instance. However, you can create your own conda environment, which will be stored in your homedirectory, by following the steps on this page. This method can also be used to install additional kernels, such as an R kernel.
 
@@ -37,10 +37,14 @@ The default conda environment is not persistent across sessions, so this means a
 
 For *Python*:
 ```bash
+mamba create -n myenv ipykernel
+#OR
 conda create -n myenv ipykernel
 ```
 or for *R*:
 ```bash
+mamba create -n r_env r-irkernel
+#OR
 conda create -n r_env r-irkernel
 ```
 
@@ -53,10 +57,12 @@ conda install ipykernel
 2. To check the list of environments you have created, run the following:
 
 ```bash
+mamba env list
+#OR
 conda env list
 ```
 
-3. To activate your conda environment and install required packages from a provided txt file, run:
+3. To activate your conda environment and install the required packages from a provided txt file, run:
 
 ```bash
 conda activate myenv
