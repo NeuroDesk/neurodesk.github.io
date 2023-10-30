@@ -105,6 +105,11 @@ https://www.thewindowsclub.com/open-chrome-edge-or-firefox-browser-in-full-scree
 The browser can be closed anytime, and Neurodesktop will continue running in the background. To reconnect to Neurodesktop, simply start over from step 3 above.
 {{< /alert >}}
 
+{{< alert color="info">}}
+If you are using conda environments and you are installing packages or even new kernels, make sure to read this: https://www.neurodesk.org/tutorials-examples/tutorials/programming/conda/
+{{< /alert >}}
+
+
 ## Deleting neurodesktop:
 When done processing your data it is important to stop and remove the container - otherwise the next start or container update will give an error ("... The container name "/neurodesktop" is already in use...")
 
