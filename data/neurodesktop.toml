@@ -11,7 +11,7 @@ jupyter_neurodesk_version = "2023-10-29"
 rdpport="-p 3390:3389"
 vncport="-p 5901:5901"
 vncflag="--vnc"
-xz
+
 [linux]
 base="""sudo docker run \\
   --shm-size=1gb -it --privileged --user=root --name neurodesktop \\
