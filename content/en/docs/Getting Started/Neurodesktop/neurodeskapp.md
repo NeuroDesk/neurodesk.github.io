@@ -109,6 +109,10 @@ Neurodesk App stores its data in the following locations:
 
 ![Additional Directory](/static/docs/getting-started/neurodeskapp/additional_dir.png "Add data")
 
+{{< alert color="info">}}
+If you are using conda environments and you are installing packages or even new kernels, make sure to read this: https://www.neurodesk.org/tutorials-examples/tutorials/programming/conda/
+{{< /alert >}}
+
 ## Uninstalling Neurodesk App
 
 ### Debian, Ubuntu Linux
