@@ -109,6 +109,10 @@ The browser can be closed anytime, and Neurodesktop will continue running in the
 If you are using conda environments and you are installing packages or even new kernels, make sure to read this: https://www.neurodesk.org/tutorials-examples/tutorials/programming/conda/
 {{< /alert >}}
 
+{{< alert color="info">}}
+If you want to use Neurodesk in combination with a reverse proxy, make sure to activate proxy_buffering off as described here: https://guacamole.apache.org/doc/gug/reverse-proxy.html
+{{< /alert >}}
+
 
 ## Deleting neurodesktop:
 When done processing your data it is important to stop and remove the container - otherwise the next start or container update will give an error ("... The container name "/neurodesktop" is already in use...")
