@@ -28,7 +28,7 @@ The steps used for this tutorial were from:
 ### Reference: 
 The single subject data (T1w structural and diffusion) used in this tutorial has been minimally preprocessed and was downloaded from:
 
-https://db.humanconnectome.org/
+https://humanconnectome.org/
 
 ### Download demo data:
 - https://1drv.ms/u/s!AjZJgBZ_P9UO8nWvAFwQyKQnrroe?e=6qmRlQ 
