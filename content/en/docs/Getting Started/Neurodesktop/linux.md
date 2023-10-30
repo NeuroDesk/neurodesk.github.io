@@ -43,7 +43,7 @@ ssh -L 8888:127.0.0.1:8888 USER@IP
 
 1.a) with a persistent home directory:
 ```bash
-docker volume create neurodesk-home \
+docker volume create neurodesk-home &&
 sudo docker run \
   --shm-size=1gb -it --privileged --user=root --name neurodesktop \
   -v ~/neurodesktop-storage:/neurodesktop-storage \
