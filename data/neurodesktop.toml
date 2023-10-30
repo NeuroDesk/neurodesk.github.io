@@ -6,13 +6,12 @@
 # To use, add the respective shortcodes to markdown
 # e.g. {{< params/neurodesktop/jupyter_neurodesk_version >}}
 
-jupyter_neurodesk_version = "2023-09-20"
-neurodesk_desktop_release = "1.0.0"
+jupyter_neurodesk_version = "2023-10-29"
 
 rdpport="-p 3390:3389"
 vncport="-p 5901:5901"
 vncflag="--vnc"
-
+xz
 [linux]
 base="""sudo docker run \\
   --shm-size=1gb -it --privileged --user=root --name neurodesktop \\
