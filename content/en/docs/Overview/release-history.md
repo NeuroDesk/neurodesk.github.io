@@ -12,6 +12,9 @@ description: >-
 Latest Version
 : {{< params/neurodesktop/jupyter_neurodesk_version >}}
 
+## 2023-10-29
+- bugfix: conda and mamba environments are now initialized correctly when neurodesktop starts up (not just in jupyter)
+
 ## 2023-09-20
 - the neurodesktop image is now multi-arch and supports x86 and ARM64
 - fixed recursive link creation in /data
