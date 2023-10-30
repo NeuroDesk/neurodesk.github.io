@@ -39,7 +39,7 @@ Create a local folder where the downloaded applications will be stored, e.g. ~/n
 
 1.a) with a persistent home directory:
 ```shell
-docker volume create neurodesk-home \
+docker volume create neurodesk-home &&
 docker run \
 --shm-size=1gb -it --privileged --user=root --name neurodesktop \
 -v ~/neurodesktop-storage:/neurodesktop-storage \
