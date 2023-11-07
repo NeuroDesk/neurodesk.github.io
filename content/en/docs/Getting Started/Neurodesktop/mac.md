@@ -20,8 +20,9 @@ Docker for MacOS by default runs with 2GB Memory. For actual workloads, 4GB Memo
 {{< /alert >}}
 
 {{< alert color="warning" >}}
-For best performance on ARM Apple Silicon Hardware (M1/M2) you need to enable Rosetta support in Docker:
-1. Open the Docker Desktop and Navigate to the Settings. Then navigate to the "Features in development" section. 
+For best performance on ARM Apple Silicon Hardware (M1/M2/M3) you need to enable Rosetta support in Docker:
+0. If you are running Docker newer than 4.25.0 (126437) then you don't need to do anything as it's enabled by default already.
+1. For Docker versions older than 4.25.0 (126437): Open the Docker Desktop and Navigate to the Settings. Then navigate to the "Features in development" section. 
 2. Activate "Use Rosetta for x86/amd64 emulation on Apple Silicon
 3. Click "Apply & Restart"
 {{< /alert >}}
