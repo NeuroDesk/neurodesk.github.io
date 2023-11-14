@@ -5,7 +5,7 @@ weight: 3
 aliases:
 - /docs/neurodesktop/getting-started/play
 description: >
-  Play and Lab are publicly available services for running Neurodesk straight from the browser
+  Neurodesk Play is a publicly available service for accessing Neurodesk without any setup
 ---
 
 ## Neurodesk Play
