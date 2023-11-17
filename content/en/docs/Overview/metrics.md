@@ -19,6 +19,7 @@ Total Neurodesktop container pulls: ![Docker Pulls](https://img.shields.io/docke
 | [transparent-singularity](https://github.com/NeuroDesk/transparent-singularity) | ![](https://img.shields.io/github/stars/NeuroDesk/transparent-singularity) | ![](https://img.shields.io/github/issues-raw/NeuroDesk/transparent-singularity) | ![](https://img.shields.io/github/last-commit/NeuroDesk/transparent-singularity) |
 | [example-notebooks](https://github.com/NeuroDesk/example-notebooks)             | ![](https://img.shields.io/github/stars/NeuroDesk/example-notebooks)       | ![](https://img.shields.io/github/issues-raw/NeuroDesk/example-notebooks)       | ![](https://img.shields.io/github/last-commit/NeuroDesk/example-notebooks)       |
 | [neurodesk.github.io](https://github.com/NeuroDesk/neurodesk.github.io)         | ![](https://img.shields.io/github/stars/NeuroDesk/neurodesk.github.io)     | ![](https://img.shields.io/github/issues-raw/NeuroDesk/neurodesk.github.io)     | ![](https://img.shields.io/github/last-commit/NeuroDesk/neurodesk.github.io)     |
+| [neurodesk-app](https://github.com/NeuroDesk/neurodesk-app)                     | ![](https://img.shields.io/github/stars/NeuroDesk/neurodesk-app)           | ![](https://img.shields.io/github/issues-raw/NeuroDesk/neurodesk-app)           | ![](https://img.shields.io/github/last-commit/NeuroDesk/neurodesk-app)           |
 
 ## User metrics
 
