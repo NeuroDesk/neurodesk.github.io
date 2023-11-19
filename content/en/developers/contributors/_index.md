@@ -169,6 +169,9 @@ If you contributed to the project please list yourself here with a description o
 ## Monika Doerig
 - fsl nipype fMRI example
 
+## Marcel Zwiers
+- https://github.com/marcelzwiers
+- bidscoin
 
 ## Steering Committee members without code contributions:
 -	Ryan Sullivan, University of Sydney, Key User, Steering Committee
