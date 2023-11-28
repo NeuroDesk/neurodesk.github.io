@@ -12,6 +12,10 @@ description: >-
 Latest Version
 : {{< params/neurodesktop/jupyter_neurodesk_version >}}
 
+## 2023-11-28
+- fixed a bug where the /proc/cpuinfo file under ARM did not contain a MHz entry, which stopped Matlab from starting up
+- fixed a bug where the SINGULARITY_BINDPATH was not send in a jupyter notebook file
+
 ## 2023-10-29
 - bugfix: conda and mamba environments are now initialized correctly when neurodesktop starts up (not just in jupyter)
 
