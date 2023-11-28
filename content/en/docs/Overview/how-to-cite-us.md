@@ -26,7 +26,7 @@ Here are some example excerts of how to cite Neurodesk:
 
 “TGV QSM (v1.0.0_20210629, Langkammer et al, 2015) was run in Neurodesk (v20220302, Renton et al, 2022)”
 
-"EEGlab (2020.0_20211026, Delorme & Makeig, 2004) was run in Neurodesk (v20220302, Renton et al, 2022) using part of the AEDAPT project [https://www.aedapt.net/](https://www.aedapt.net)”
+"EEGlab (2020.0_20211026, Delorme & Makeig, 2004) was run in Neurodesk (v20220302, Renton et al, 2022) using part of the AEDAPT project.”
 
 ### References
 1. Langkammer, C; Bredies, K; Poser, BA; Barth, M; Reishofer, G; Fan, AP; Bilgic, B; Fazekas, F; Mainero; C; Ropele, S. Fast Quantitative Susceptibility Mapping using 3D EPI and Total Generalized Variation. Neuroimage. 2015 May 1;111:622-30. doi: [10.1016/j.neuroimage.2015.02.041](https://doi.org/10.1016/j.neuroimage.2015.02.041)
