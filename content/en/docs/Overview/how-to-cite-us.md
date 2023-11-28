@@ -18,9 +18,6 @@ To guarantee reproducibility, we recommend specifying the name, version number a
 
 In addition to citing Neurodesk, please remember to cite any papers associated with the tools you use. You find this information in the [README.m](https://github.com/NeuroDesk/neurocontainers/tree/master/recipes) for each tool, or when opening the application through the menu in Neurodesktop.
 
-## Citing EEG/MEG related tools
-If you used any EEG/MEG/electrophysiology tools, please also link to the [AEDAPT website](https://www.aedapt.net/). 
-
 ## Examples
 Here are some example excerts of how to cite Neurodesk:
 
