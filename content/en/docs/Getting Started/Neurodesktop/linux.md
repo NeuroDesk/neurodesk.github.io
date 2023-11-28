@@ -194,7 +194,7 @@ sudo docker run \
 #### Running tensorflow (w/ GPU)
 ##### Using tensorflow (python)
 ```bash
-conda install tensorflow-gpu
+mamba install tensorflow-gpu
 python
 ```
 ```python
