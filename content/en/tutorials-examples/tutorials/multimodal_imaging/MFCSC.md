@@ -2,20 +2,162 @@
 title: "Using MFCSC"
 linkTitle: "MFCSC"
 weight: 1
-tags: ["muktimodal", "documentation", "preprocessing"]
+tags: ["multimodal", "documentation", "preprocessing"]
 author: Oren Civier
 aliases:
 - /tutorials/functional_imaging/fmriprep_cvl
 - /tutorials-examples/tutorials/functional_imaging/fmriprep_cvl
 description: > 
-  A guide for using MFCSC to integrate connectomes from different modalities
+  A tutorial for using MFCSC to integrate connectomes from different modalities
 ---
 
 
-> _This tutorial was created by Kelly G. Garner._ 
+> _This tutorial was created by Oren Civier._ 
 >
-> Github: [@kel_github](https://github.com/kel-github)
+> Github: [@kel_github](https://github.com/civier)
+> Email: orenciv@gmail.com
+> Profile: https://anif.org.au/team/oren-civier/
 >
+
+----------
+
+More details on MFCSC and this tutorial can be found in the following paper:
+
+> Civier O, Sourty M, Calamante F (2023) MFCSC: Novel method to calculate mismatch between functional and structural brain connectomes, and its application for detecting hemispheric functional specialisations. Scientific Reports
+https://doi.org/10.1038/s41598-022-17213-z
+
+In short, MFCSC calculates the mismatch between connectomes generated from different imaging modalities. It does it by normalising the connectomes to a common space calculated at group level, and taking into account the role of indirect connectivity in shaping the functional connectomes.
+
+
+**TUTORIAL FOR CONNECTOMES FROM fMRI AND dMRI** 
+
+1. Download the "Input" folder from the OSF repository (https://osf.io/d7j9n/files/osfstorage)
+
+2. Launch mfcsc from either "Neurodesk"-->"Diffusion Imaging --> mfsc --> mfcsc 1.1" or "Neurodesk"-->"Functional Imaging --> mfcsc --> mfcsc 1.1" in the start menu. 
+
+3. Run the following command with **input** being the directory where the input data was downloaded to, and **outputdir** being the directory where the output should be written to:
+
+    mfcsc input/FC_SC_list.txt input/FC input/SC outputdir
+
+4. After MFCSC finishes running, the content of **outputdir** should be identical to the "output" folder in the OSF repository
+   It contains connectomes that encode the mismatch between functional and structural connectivity (mFCSC) for every connection.
+
+
+**TUTORIAL FOR CONNECTOMES FROM fMRI AND dMRI** 
+
+1. Download the "Input" folder from the OSF repository (https://osf.io/d7j9n/files/osfstorage)
+
+2. Launch mfcsc from either "Neurodesk"-->"Diffusion Imaging --> mfsc --> mfcsc 1.1" or "Neurodesk"-->"Functional Imaging --> mfcsc --> mfcsc 1.1" in the start menu. 
+
+3. Run the following command with **input** being the directory where the input data was downloaded to, and **outputdir** being the directory where the output should be written to:
+
+    mfcsc input/FC_SC_list.txt input/FC input/SC outputdir
+
+4. After MFCSC finishes running, the content of **outputdir** should be identical to the "output" folder in the OSF repository
+   It contains connectomes that encode the mismatch between functional and structural connectivity (mFCSC) for every connection.
+
+
+**testlat** (test laterality) is a matlab function that compares the mismatch between FC and SC in the left hemisphere to the mismatch in the right hemisphere. It is a proof-of-concept application that shows how MFCSC can be used to study brain organisation, in this case -- learning more on hemispheric functional specialisations.
+
+In Civier, Sourty and Calamante (2023), we used MFCSC and testlat on the functional and structural connectomes of 50 participants from the Human Connectome Project (HCP) database.
+
+Follow these steps to reproduce our results:
+
+1. Follow the instructions in the TESTING MFCSC INSTALLATION section below in order to generate MFCSC matrices for the 50 participants. The matrices will be generated in **outputdir**.
+
+2. Within the Matlab IDE, go to the folder where mfcsc.m is located, and change to the 'test' subfolder. The 'test' subfolder includes the Matlab code file testlat.m
+
+3. Run the following command in Matlab:
+
+Mac/Linux
+
+    testlat('../outputdir','testlast_outputdir')
+
+Windows
+
+    testlat('..\outputdir','testlast_outputdir')
+
+4. The output of testlat will be generated in testlat_ootputdir. Detailed explanation of the outputs is available at https://github.com/civier/mfcsc/blob/main/test/testlat.m
+
+5. Examine the outputs to make sure they agree with our results. Specifically, the sig_*_labels.txt files should include the same label pairs listed in table S1 of the Supplementary material of Civier, Sourty and Calamante (2023) (https://doi.org/10.1038/s41598-022-17213-z).
+
+**Important notice:** sig_neg_L_st_R.txt will include one extra label pair compared with table S1(d):
+
+ctx-lh-medialorbitofrontal - Left-Amygdala
+
+The difference is due a slight difference in the implementation between the code provided here and that used for the paper. Here the linear regression inside each individual includes all connections where direct SC is the shortest structural path, even if that is the case in *only one of the hemispheres*. In contrast, in the paper, the linear regression only includes the connections where direct SC is the shortest structural path in *both hemispheres*.
+
+----------
+
+
+----------
+
+**CITATIONS**
+
+When using MFCSC and/or the example application (testlat), authors should cite:
+
+> Civier O, Sourty M, Calamante F (2023) MFCSC: Novel method to calculate mismatch between functional and structural brain connectomes, and its application for detecting hemispheric functional specialisations. Scientific Reports
+https://doi.org/10.1038/s41598-022-17213-z
+ 
+> Rubinov M, Sporns O (2010) Complex network measures of brain
+connectivity: Uses and interpretations. NeuroImage 52:1059-69.
+
+When using the structural connectivity matrices, authors should cite:
+
+> Civier O, Smith RE, Yeh CH, Connelly A, Calamante F (2019) Is removal of weak connections necessary for graph-theoretical analysis of dense weighted structural connectomes from diffusion MRI? NeuroImage http://doi.org/10.1016/j.neuroimage.2019.02.039
+
+... and include the following acknowledgment:
+
+> Data were provided by the Human Connectome Project, WU-Minn Consortium (Principal Investigators: David Van Essen and Kamil Ugurbil; 1U54MH091657) funded by the 16 NIH Institutes and Centers that support the NIH Blueprint for Neuroscience Research; and by the McDonnell Center for Systems Neuroscience at Washington University, St. Louis, MO.
+
+	
+When using the functional connectivity matrices, authors should cite:
+	
+
+> Civier O, Sourty M, Calamante F (2023) MFCSC: Novel method to calculate mismatch between functional and structural brain connectomes, and its application for detecting hemispheric functional specialisations. Scientific Reports https://doi.org/10.1038/s41598-022-17213-z
+
+... and include the following acknowledgment:
+
+> Data were provided by the Human Connectome Project, WU-Minn Consortium (Principal Investigators: David Van Essen and Kamil Ugurbil; 1U54MH091657) funded by the 16 NIH Institutes and Centers that support the NIH Blueprint for Neuroscience Research; and by the McDonnell Center for Systems Neuroscience at Washington University, St. Louis, MO.
+
+-----------------
+
+**ACKNOWLEDGMENTS**
+
+National Health and Medical Research Council of Australia (grant numbers APP1091593 andAPP1117724)
+
+Australian Research Council (grant number DP170101815)
+
+National Imaging Facility (NIF), a National Collaborative Research Infrastructure Strategy (NCRIS) capability at Swinburne Neuroimaging, Swinburne University of Technology.
+
+Victorian Government’s Operational Infrastructure Support
+
+Melbourne Bioinformatics at the University of Melbourne (grant number UOM0048)
+
+Sydney Informatics Hub and the University of Sydney’s high performance computing cluster Artemis
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 > This workflow documents how to use fmriprep with neurodesk and provides some details that may help you troubleshoot some common problems I found along the way. 
 
