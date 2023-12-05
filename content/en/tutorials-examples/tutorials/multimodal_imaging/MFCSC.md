@@ -31,63 +31,37 @@ In short, MFCSC calculates the mismatch between connectomes generated from diffe
 
 **TUTORIAL FOR CONNECTOMES FROM fMRI AND dMRI** 
 
-1. Download the "Input" folder from the OSF repository (https://osf.io/d7j9n/files/osfstorage)
+1. Download the "input" folder from the OSF repository (https://osf.io/d7j9n/files/osfstorage)
 
 2. Launch mfcsc from either "Neurodesk"-->"Diffusion Imaging --> mfsc --> mfcsc 1.1" or "Neurodesk"-->"Functional Imaging --> mfcsc --> mfcsc 1.1" in the start menu. 
 
 3. Run the following command with **input** being the directory where the input data was downloaded to, and **outputdir** being the directory where the output should be written to:
-
+```
     mfcsc input/FC_SC_list.txt input/FC input/SC outputdir
+```
 
-4. After MFCSC finishes running, the content of **outputdir** should be identical to the "output" folder in the OSF repository
+4. After MFCSC finishes running, the content of **outputdir** should be identical to the "output" folder in the OSF repository (https://osf.io/d7j9n/files/osfstorage)
    It contains connectomes that encode the mismatch between functional and structural connectivity (mFCSC) for every connection.
 
 
-**TUTORIAL FOR CONNECTOMES FROM fMRI AND dMRI** 
+**TUTORIAL FOR CONNECTOMES FROM MEG AND dMRI** 
 
-1. Download the "Input" folder from the OSF repository (https://osf.io/d7j9n/files/osfstorage)
+1. Use the MEG connectivity tutorial to generate functional connectomes from your MEG data using MNE tools on Neurodesk (Tutorial in progress: https://github.com/benmslade/neurodesk.github.io/blob/main/content/en/tutorials/electrophysiology/meg_connectivity.md)
+   
+2. Use the structul connectivity tutorial to generate structural connectomes from your dMRI data using MRtrix tools on Neurodesk (https://www.neurodesk.org/tutorials-examples/tutorials/structural_imaging/structuralconnectivity/)
 
-2. Launch mfcsc from either "Neurodesk"-->"Diffusion Imaging --> mfsc --> mfcsc 1.1" or "Neurodesk"-->"Functional Imaging --> mfcsc --> mfcsc 1.1" in the start menu. 
+3. Launch mfcsc from either "Neurodesk"-->"Diffusion Imaging --> mfsc --> mfcsc 1.1" or "Neurodesk"-->"Functional Imaging --> mfcsc --> mfcsc 1.1" in the start menu. 
 
-3. Run the following command with **input** being the directory where the input data was downloaded to, and **outputdir** being the directory where the output should be written to:
+4. Copy the MEG connectomes into input/MEG and the structural connectomes into input/SC
 
-    mfcsc input/FC_SC_list.txt input/FC input/SC outputdir
+5. Create an input/MEG_SC_list.txt file that lists the pairing between MEG and structural connectomes
 
-4. After MFCSC finishes running, the content of **outputdir** should be identical to the "output" folder in the OSF repository
-   It contains connectomes that encode the mismatch between functional and structural connectivity (mFCSC) for every connection.
+6. Run the following command with **input** being the directory where the input data was downloaded to, and **outputdir** being the directory where the output should be written to:
+```
+    mfcsc input/MEG_SC_list.txt input/MEG input/SC outputdir
+```
 
-
-**testlat** (test laterality) is a matlab function that compares the mismatch between FC and SC in the left hemisphere to the mismatch in the right hemisphere. It is a proof-of-concept application that shows how MFCSC can be used to study brain organisation, in this case -- learning more on hemispheric functional specialisations.
-
-In Civier, Sourty and Calamante (2023), we used MFCSC and testlat on the functional and structural connectomes of 50 participants from the Human Connectome Project (HCP) database.
-
-Follow these steps to reproduce our results:
-
-1. Follow the instructions in the TESTING MFCSC INSTALLATION section below in order to generate MFCSC matrices for the 50 participants. The matrices will be generated in **outputdir**.
-
-2. Within the Matlab IDE, go to the folder where mfcsc.m is located, and change to the 'test' subfolder. The 'test' subfolder includes the Matlab code file testlat.m
-
-3. Run the following command in Matlab:
-
-Mac/Linux
-
-    testlat('../outputdir','testlast_outputdir')
-
-Windows
-
-    testlat('..\outputdir','testlast_outputdir')
-
-4. The output of testlat will be generated in testlat_ootputdir. Detailed explanation of the outputs is available at https://github.com/civier/mfcsc/blob/main/test/testlat.m
-
-5. Examine the outputs to make sure they agree with our results. Specifically, the sig_*_labels.txt files should include the same label pairs listed in table S1 of the Supplementary material of Civier, Sourty and Calamante (2023) (https://doi.org/10.1038/s41598-022-17213-z).
-
-**Important notice:** sig_neg_L_st_R.txt will include one extra label pair compared with table S1(d):
-
-ctx-lh-medialorbitofrontal - Left-Amygdala
-
-The difference is due a slight difference in the implementation between the code provided here and that used for the paper. Here the linear regression inside each individual includes all connections where direct SC is the shortest structural path, even if that is the case in *only one of the hemispheres*. In contrast, in the paper, the linear regression only includes the connections where direct SC is the shortest structural path in *both hemispheres*.
-
-----------
+7. After MFCSC finishes running, **outputdir** will  contains connectomes that encode the mismatch between MEG and structural connectivity (mFCSC) for every connection.
 
 
 ----------
@@ -102,7 +76,7 @@ https://doi.org/10.1038/s41598-022-17213-z
 > Rubinov M, Sporns O (2010) Complex network measures of brain
 connectivity: Uses and interpretations. NeuroImage 52:1059-69.
 
-When using the structural connectivity matrices, authors should cite:
+When using the structural connectivity matrices from OSF, authors should cite:
 
 > Civier O, Smith RE, Yeh CH, Connelly A, Calamante F (2019) Is removal of weak connections necessary for graph-theoretical analysis of dense weighted structural connectomes from diffusion MRI? NeuroImage http://doi.org/10.1016/j.neuroimage.2019.02.039
 
@@ -111,7 +85,7 @@ When using the structural connectivity matrices, authors should cite:
 > Data were provided by the Human Connectome Project, WU-Minn Consortium (Principal Investigators: David Van Essen and Kamil Ugurbil; 1U54MH091657) funded by the 16 NIH Institutes and Centers that support the NIH Blueprint for Neuroscience Research; and by the McDonnell Center for Systems Neuroscience at Washington University, St. Louis, MO.
 
 	
-When using the functional connectivity matrices, authors should cite:
+When using the functional connectivity matrices from OSF, authors should cite:
 	
 
 > Civier O, Sourty M, Calamante F (2023) MFCSC: Novel method to calculate mismatch between functional and structural brain connectomes, and its application for detecting hemispheric functional specialisations. Scientific Reports https://doi.org/10.1038/s41598-022-17213-z
@@ -123,7 +97,7 @@ When using the functional connectivity matrices, authors should cite:
 -----------------
 
 **ACKNOWLEDGMENTS**
-
+    
 National Health and Medical Research Council of Australia (grant numbers APP1091593 andAPP1117724)
 
 Australian Research Council (grant number DP170101815)
@@ -136,100 +110,7 @@ Melbourne Bioinformatics at the University of Melbourne (grant number UOM0048)
 
 Sydney Informatics Hub and the University of Sydney’s high performance computing cluster Artemis
 
+Australian Electrophysiology Data Analytics PlaTform (AEDAPT); Australian Research Data Commons
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-> This workflow documents how to use fmriprep with neurodesk and provides some details that may help you troubleshoot some common problems I found along the way. 
-
-<!-- Following line adds a link to getting set up with Neurodesk -->
-{{< params/neurodesktop/getting_set_up >}}
-<!-- -->
-
-> _An example notebook can be found here:_
-> https://github.com/NeuroDesk/example-notebooks/blob/main/books/functional_imaging/fmriprep_example.ipynb
->
----
-
-# Assumptions
-
-- [ ] Your data is already in [BIDS format](https://bids.neuroimaging.io/)
-- [ ] You plan to run fmriprep using Neurodesk
-- [ ] You have a copy of the freesurfer license file (freesurfer.txt), that can be read from the file system using Neurodesk
-
----
-
-# Steps
-
-## Launch Neurodesk
-
-From the launcher, click the Neurodesktop icon:
-
-![launch_neurodesk](/static/tutorials-examples/tutorials/functional_imaging/fmriprep/launch_neurodesk.png 'launch_neurodesk') <!-- ![filename without extension](/static/tutorials-examples/tutorials/functional_imaging/subfolder_name/filename.png '[filename without extension')  -->
-
-## Open fmriprep 
-
-Now you're in Neurodesk, use the menus to first open the neurodesk options
-
-![neurodesk_menu](/static/tutorials-examples/tutorials/functional_imaging/fmriprep/neurodesk_menu.png 'neurodesk_menu') <!-- ![filename without extension](/static/tutorials-examples/tutorials/functional_imaging/subfolder_name/filename.png '[filename without extension')  -->
-
-and then select fMRIPrep. Note that the latest version will be the lowest on the dropdown list:
-
-![open_fmriprep](/static/tutorials-examples/tutorials/functional_imaging/fmriprep/open_fmriprep.png 'open_fmriprep') <!-- ![filename without extension](/static/tutorials-examples/tutorials/functional_imaging/subfolder_name/filename.png '[filename without extension')  -->
-
-This will open a terminal window where fMRIPrep is ready and waiting at your fingertips - woohoo!
-
-![fmriprep_bash](/static/tutorials-examples/tutorials/functional_imaging/fmriprep/fmriprep_bash.png 'fmriprep_bash') <!-- ![filename without extension](/static/tutorials-examples/tutorials/functional_imaging/subfolder_name/filename.png '[filename without extension')  -->
-
-
-## Setting up fmriprep command
-
-You can now enter your fmriprep command straight into the command line in the newly opened terminal. Here is a quick guide to the command I have used with the options I have found most useful. Note that fMRIPrep requests the path to the freesurfer license file, which should be somewhere in your system for neurodesk to read - e.g. in 'neurodesktop-storage'.
-
-```bash
-
-export ITK_GLOBAL_DEFAULT_NUMBER_OF_THREADS=6 # specify the number of threads you want to use
-
-fmriprep /path/to/your/data \ # this is the top level of your data folder
-         /path/to/your/data/derivatives \ # where you want fmriprep output to be saved
-         participant \ # this tells fmriprep to analyse at the participant level
-         --fs-license-file /path/to/your/freesurfer.txt \ # where the freesurfer license file is
-         --output-spaces T1w MNI152NLin2009cAsym fsaverage fsnative \ 
-         --participant-label 01 \ # put what ever participant labels you want to analyse
-         --nprocs 6 --mem 10000 \ # fmriprep can be greedy on the hpc, make sure it is not
-         --skip_bids_validation \ # its normally fine to skip this but do make sure your data are BIDS enough
-         -v # be verbal fmriprep, tell me what you are doing
-```
-
-
-Then hit return and fMRIPrep should now be merrily working away on your data :)
-
----
-
-## Some common pitfalls I have learned from my mistakes (and sometimes from others)
-
-1. If fmriprep hangs it could well be that you are out of disk space. Sometimes this is because fmriprep created a work directory in your home folder which is often limited on the HPC. Make sure fmriprep knows to use a work drectory in your scratch. you can specify this in the fmriprep command by using -w /path/to/the/work/directory/you/made
-
-2. I learned the following from TomCat (@thomshaw92) - fMRIPrep can get confused between subjects when run in parallel. Parallelise with caution.
-
-3. If running on a HPC, make sure to set the processor and memory limits, if not your job will get killed because it hogs all the resources.
 
