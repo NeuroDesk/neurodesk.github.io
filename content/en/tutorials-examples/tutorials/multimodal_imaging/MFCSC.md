@@ -14,7 +14,7 @@ description: >
 
 > _This tutorial was created by Oren Civier._ 
 >
-> Github: [@kel_github](https://github.com/civier)
+> Github: [@civier]
 > Email: orenciv@gmail.com
 > Profile: https://anif.org.au/team/oren-civier/
 >
@@ -68,7 +68,7 @@ In short, MFCSC calculates the mismatch between connectomes generated from diffe
 
 **CITATIONS**
 
-When using MFCSC and/or the example application (testlat), authors should cite:
+When using MFCSC, authors should cite:
 
 > Civier O, Sourty M, Calamante F (2023) MFCSC: Novel method to calculate mismatch between functional and structural brain connectomes, and its application for detecting hemispheric functional specialisations. Scientific Reports
 https://doi.org/10.1038/s41598-022-17213-z
