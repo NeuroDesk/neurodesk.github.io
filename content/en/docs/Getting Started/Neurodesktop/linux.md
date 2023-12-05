@@ -173,7 +173,6 @@ echo \
   $(. /etc/os-release && echo "$VERSION_CODENAME") stable" | \
   sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
 sudo apt-get update
-sudo apt install nvidia-container-toolkit -y
 ```
 
 ## GPU support
@@ -182,6 +181,12 @@ sudo apt install nvidia-container-toolkit -y
 ```bash
 sudo yum install nvidia-container-toolkit -y
 ```
+
+### Ubuntu/Debian (apt-based)
+```bash
+sudo apt install nvidia-container-toolkit -y
+```
+
 ### Running neurodesktop container with GPU
 ```bash
 sudo docker run \
