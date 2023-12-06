@@ -2,11 +2,8 @@
 title: "Using MFCSC"
 linkTitle: "MFCSC"
 weight: 1
-tags: ["multimodal", "documentation", "preprocessing"]
+tags: ["multimodal", "preprocessing"]
 author: Oren Civier
-aliases:
-- /tutorials/functional_imaging/fmriprep_cvl
-- /tutorials-examples/tutorials/functional_imaging/fmriprep_cvl
 description: > 
   A tutorial for using MFCSC to integrate connectomes from different modalities
 ---
