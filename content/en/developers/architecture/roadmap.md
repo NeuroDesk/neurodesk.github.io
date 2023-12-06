@@ -13,14 +13,12 @@ The larger themes and subthemes are:
 
 # Streamlining container build and release process
 ## Improving the workflow of how users can add new applications to Neurodesk
-
 Adding new applications to Neurodesk requires multiple steps and back-and-forth between contributors and maintainers. We are aiming to simplify this process by developing an interactive workflow based on our current interactive container builder and the existing github workflows. 
 
 Some issues in this theme are:
 - https://github.com/NeuroDesk/neurocontainers/issues/127
 
 ## Standardizing the container deployment
-
 Currently, deploying the application containers happens through a connection of various custom scripts distributed across various repositories (apps.json in neurocommand repository, neurocontainers, transparent singularity). 
 We would like to adopt community standard tools, like SHPC, that can perform some of these tasks. The goal is to remove duplication of effort and maintenance. 
 
@@ -32,7 +30,6 @@ Some issues in this theme are:
 - https://github.com/NeuroDesk/neurocontainers/issues/504
 
 ## Reuse and citability of containers
-
 Currently, there is no good way of describing and citing the individual software containers. We want to increase the reusability and citability of the software containers.
 
 Some issues in this theme are:
@@ -52,14 +49,12 @@ Some issues in this theme are:
 - https://github.com/NeuroDesk/neurodesk.github.io/issues/37
 
 ## Facilitating the use of Neurodesk in teaching and workshops
-
 Neurodesk is a great fit for teaching Neuroimaging methods. Currently, however, it's not easy to run a custom Neurodesk instance for a larger group. We would like to make it easier for users to deploy Neurodesk for classes and workshops with a shared data storage location and we would love to support advanced features for cost saving (e.g. autoscaling, support of ARM processors) on various cloud providers (e.g. Google Cloud, Amazon, Azure, OpenStack, OpenShift). 
 
 
 
 # Support of advanced workflows
 ## Deeper Integration of containers and jupyter notebook system
-
 We want to integrate the software containers deeper into the jupyter notebook system. Ideally, it is possible to use a jupyter kernel from within a software container.
 
 Some issues in this theme are:
