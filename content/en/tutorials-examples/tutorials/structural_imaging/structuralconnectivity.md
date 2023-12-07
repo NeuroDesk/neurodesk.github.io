@@ -26,14 +26,16 @@ The steps used for this tutorial were from:
 
 ## Data Description
 ### Reference: 
-The single subject data (T1w structural and diffusion) used in this tutorial has been minimally preprocessed and was downloaded from:
+The single subject data (T1w structural and diffusion) used in this tutorial has been minimally preprocessed and was downloaded from the open available source:
 
-https://humanconnectome.org/
+db.humanconnectome.org
+
 
 ### Download demo data:
-- https://1drv.ms/u/s!AjZJgBZ_P9UO8nWvAFwQyKQnrroe?e=6qmRlQ 
-- https://1drv.ms/u/s!AjZJgBZ_P9UO8nblYQyUVsibqggs?e=mkwLpQ
-
+Demo data can also be downloaded using these links below.
+- https://drive.google.com/file/d/1bj-Tz2xLGn0L05CveOYnzTgkewc_IU5F/view?usp=drive_link [T1w structural data]
+- https://drive.google.com/file/d/193ZaUmXbT59IoXoAJ-Y1pf_wgdSHdKpR/view?usp=drive_link [Diffusion data]
+ 
 
 ## Assumptions:
 - You have neurodesk already running from your chrome browser.
