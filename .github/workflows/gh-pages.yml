@@ -5,8 +5,8 @@ on:
     branches: ["main"]
   repository_dispatch:
   workflow_dispatch:
-  schedule: ## Run at 12.am daily to check for broken links automatically
-    - cron: '0 0 * * *'
+#  schedule: ## Run at 12.am daily to check for broken links automatically
+ #   - cron: '0 0 * * *'
 
 permissions:
   contents: read
