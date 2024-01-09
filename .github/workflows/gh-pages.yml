@@ -122,6 +122,6 @@ jobs:
         # checks all markdown files from content/en including all subfolders
         with:
           use-quiet-mode: 'yes'
-          use-verbose-mode: 'yes'
+          use-verbose-mode: 'no'
           config-file: '.github/workflows/config.json'
           folder-path: 'content/en/'
