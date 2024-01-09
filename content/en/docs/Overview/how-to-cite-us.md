@@ -13,6 +13,8 @@ Please cite the [Neurodesk paper](https://www.nature.com/articles/s41592-023-021
 
 Renton, A.I., Dao, T.T., Johnstone, T., Civier, O., Sullivan, R. P., White, D. J., ... Narayanan, A. & Bollmann, S. Neurodesk: an accessible, flexible and portable data analysis environment for reproducible neuroimaging. Nat Methods (2024). https://doi.org/10.1038/s41592-023-02145-x
 
+Check our preprint here [Neurodesk Preprint](https://www.biorxiv.org/content/10.1101/2022.12.23.521691v2)
+
 ## Citing specific tools
 To guarantee reproducibility, we recommend specifying the name, version number and builddate for any containerised applications used through Neurodesk. You can find this information [here](https://www.neurodesk.org/docs/overview/applications/). 
 
