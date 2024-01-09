@@ -19,14 +19,14 @@ To guarantee reproducibility, we recommend specifying the name, version number a
 In addition to citing Neurodesk, please remember to cite any papers associated with the tools you use. You find this information in the [README.m](https://github.com/NeuroDesk/neurocontainers/tree/master/recipes) for each tool, or when opening the application through the menu in Neurodesktop.
 
 ## Citing EEG/MEG related tools
-If you used any EEG/MEG/electrophysiology tools, please also link to the [AEDAPT website](https://www.aedapt.net/). 
+If you used any EEG/MEG/electrophysiology tools, please also cite the AEDAPT project. 
 
 ## Examples
 Here are some example excerts of how to cite Neurodesk:
 
 “TGV QSM (v1.0.0_20210629, Langkammer et al, 2015) was run in Neurodesk (v20220302, Renton et al, 2022)”
 
-"EEGlab (2020.0_20211026, Delorme & Makeig, 2004) was run in Neurodesk (v20220302, Renton et al, 2022) part of the ["AEDAPT"](https://www.aedapt.net/) project.”
+"EEGlab (2020.0_20211026, Delorme & Makeig, 2004) was run in Neurodesk (v20220302, Renton et al, 2022) part of the AEDAPT project.”
 
 ### References
 1. Langkammer, C; Bredies, K; Poser, BA; Barth, M; Reishofer, G; Fan, AP; Bilgic, B; Fazekas, F; Mainero; C; Ropele, S. Fast Quantitative Susceptibility Mapping using 3D EPI and Total Generalized Variation. Neuroimage. 2015 May 1;111:622-30. doi: [10.1016/j.neuroimage.2015.02.041](https://doi.org/10.1016/j.neuroimage.2015.02.041)
