@@ -12,6 +12,10 @@ description: >-
 Latest Version
 : {{< params/neurodesktop/jupyter_neurodesk_version >}}
 
+## 2024-01-12
+- fixed fsl GUI error, when starting fsl in VNC mode (the USER was not exported)
+- removed c.ServerApp.root_dir setting because it was causing an error when clicking on the Home button. Now it's not possible to navigate outside of the homedirectory anymore in the side panel.
+
 ## 2023-11-28
 - fixed a bug where the /proc/cpuinfo file under ARM did not contain a MHz entry, which stopped Matlab from starting up
 - fixed a bug where the SINGULARITY_BINDPATH was not send in a jupyter notebook file
