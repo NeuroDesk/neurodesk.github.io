@@ -25,6 +25,7 @@ For best performance on ARM Apple Silicon Hardware (M1/M2/M3) you need to enable
 1. For Docker versions older than 4.25.0 (126437): Open the Docker Desktop and Navigate to the Settings. Then navigate to the "Features in development" section. 
 2. Activate "Use Rosetta for x86/amd64 emulation on Apple Silicon
 3. Click "Apply & Restart"
+4. Current limitations of running Neurodesk through Rosetta emulation on MacOS: FSLeyes is not starting up and fails with an error; external applications cannot be called from Matlab.
 {{< /alert >}}
 
 ### 2. Run Neurodesktop
