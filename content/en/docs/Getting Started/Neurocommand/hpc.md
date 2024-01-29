@@ -5,7 +5,7 @@ weight: 4
 aliases:
 - /docs/getting-started/neurodesktop/hpc
 description: >
-  Run neurodesktop in a high performance computing environment
+  Run neurodesktop in a high-performance computing environment
 ---
 
 ## Ways of using Neurocommand in Linux:
@@ -13,18 +13,21 @@ description: >
 2) or you can install Neurocommand as described here: 
 
 ## Requirements:
-### Required
+### Required for installation
 - python 3.6+ [https://docs.conda.io/en/latest/miniconda.html#linux-installers](https://docs.conda.io/en/latest/miniconda.html#linux-installers)
 - singularity [https://docs.sylabs.io/guides/3.5/user-guide/quick_start.html](https://docs.sylabs.io/guides/3.5/user-guide/quick_start.html)
 - git
 
-### Optional
+### Required for use
+- singularity [https://docs.sylabs.io/guides/3.5/user-guide/quick_start.html](https://docs.sylabs.io/guides/3.5/user-guide/quick_start.html)
+
+### Optional, but recommended
 - lmod [https://lmod.readthedocs.io/en/latest/](https://docs.sylabs.io/guides/3.5/user-guide/quick_start.html)
 
 ### NB: Your HPC will likely have lmod and Singularity already installed - check with your sysadmin
 
 ### Command line mode (e.g. running on an HPC or CVL)  
-- Load singularity and for best performance it should be 3.x e.g.
+- Load singularity and for best performance, it should be 3.x e.g.
 ```bash
 module load singularity/3.5.0
 ``` 
@@ -32,7 +35,7 @@ module load singularity/3.5.0
 ```bash
 module load aria2c
 ```
-- To install the repository, run the following (make sure to clone this to a directory with enough storage, write permissions and NOT a symbolic link (to be sure run cd \`pwd -P\`)!)
+- To install the repository, run the following (make sure to clone this to a directory with enough storage, write permissions and NOT a symbolic link (to be sure run cd \`pwd -P\`)!). It is recommended to perform this setup in a Python venv or conda environment:
 ```bash
 git clone https://github.com/NeuroDesk/neurocommand.git 
 cd neurocommand 
@@ -44,7 +47,7 @@ export SINGULARITY_BINDPATH=$PWD
 export APPTAINER_BINDPATH=$PWD
 ```
 ### Install Containers
-- If these steps were successful, the help will be displayed
+- If these steps are successful, the help will be displayed
 - Install all or only specific containers by following the instructions displayed
 
 ### To download all containers (be careful - there are a lot of containers!)
@@ -54,11 +57,11 @@ bash containers.sh --all
 ```
 
 ### Adding your containers to lmod
-- To add each container to module search path, run the following: 
+- To add each container to the module search path, run the following: 
 ```bash
 module use $PWD/local/containers/modules/
 ```
-- It may be a good idea to add this to your .bashrc if this is working. When adding to your .bashrc you will need to replace $PWD to point to the correct path, i.e.
+- It may be a good idea to add this to your .bashrc if it works. When adding to your .bashrc you will need to replace $PWD to point to the correct path, i.e.
  
  ```bash
  module use ~/neurocommand/local/containers/modules/
