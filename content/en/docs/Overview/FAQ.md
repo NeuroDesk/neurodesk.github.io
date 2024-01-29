@@ -118,7 +118,7 @@ This seems to be a bug in Guacamole and RDP in combination with certain browsers
 ### How do I copy and paste text?
 You can copy and paste text within Neurodesktop and between Neurodektop and your host computer using the regular keyboard shortcuts (CTRL+C, CTRL+X, and CTRL+V). Note however that some applications (e.g., command-line terminal) are using other keyboard shortcuts. You can usually find them in the "Edit" menu of the relevant application.
 
-Note for Mac Users: You will need to use a combination of CTRL and Command shortcuts in order to copy and paste text between Neurodesktop and the host computer. For example, copy text from your Mac with Command+C and then paste it into Neurodesktop using CTRL+V. For the other way around, you'd use CTRL+C in Neurodesktop and then Command+V on the Mac.
+Note for Mac Users: The Safari Browser is currently not compatible for copy and paste with Guacamole. Please either use the Neurodeskapp or a Edge/Firefox on MacOS. You will need to use a combination of CTRL and Command shortcuts in order to copy and paste text between Neurodesktop and the host computer. For example, copy text from your Mac with Command+C and then paste it into Neurodesktop using CTRL+V. For the other way around, you'd use CTRL+C in Neurodesktop and then Command+V on the Mac.
 
 ### I cannot copy and paste text within Neurodesktop using keyboard shortcuts
 If you're using Mac, you might be trying to use Mac keyboard shortcuts, but Neurodesktop is using Linux keyboard shortcuts (CTRL+C and CTRL+V)
