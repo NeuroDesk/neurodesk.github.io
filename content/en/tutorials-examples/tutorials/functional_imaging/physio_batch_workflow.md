@@ -44,7 +44,7 @@ To work with PhysIO toolbox, your motion parameters need to be in the .txt forma
 
 I made some simple functions in python that would extract my desired movement regressors and save them to the space separated .txt file as is required by SPM. They can be found [here](https://github.com/kel-github/imaging_cert_value_7T_pipeline/tree/master/physiol_regress/get_movement_regressors).
 
-Once I had my .log files and .txt motion regressors file, I followed the instructions [here](https://gitlab.ethz.ch/physio/physio-doc/-/wikis/QUICKSTART) to get going with the Batch editor, and used [this paper](https://www.sciencedirect.com/science/article/pii/S016502701630259X) to aid my understanding of how to complete the fields requested by the Batch editor. 
+Once I had my .log files and .txt motion regressors file, I followed the instructions [here](https://gitlab.ethz.ch/physio/physio-doc/-/wikis/QUICKSTART) to get going with the Batch editor, and used [this paper](https://doi.org/10.1016/j.jneumeth.2016.10.019) to aid my understanding of how to complete the fields requested by the Batch editor. 
 
 I wound up with a Batch script for the PhysIO toolbox that looked a little bit like this: 
 
