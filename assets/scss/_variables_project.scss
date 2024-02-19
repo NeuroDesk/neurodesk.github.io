@@ -36,7 +36,7 @@ $desktop_header_height: 90px;
 $mobile_header_height: 68px;
 $desktop_footer_height: 560px;
 $site_horizontal_padding: 30px;
-$link-decoration: none !default;
+
 
 @mixin desktop {
   @media screen and (min-width: 768px) { @content; }
