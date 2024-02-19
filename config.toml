@@ -16,7 +16,7 @@ defaultContentLanguageInSubdir = false
 # Useful when translating.
 enableMissingTranslationPlaceholders = true
 
-disableKinds = ["taxonomy", "taxonomyTerm"]
+disableKinds = ["taxonomy"]
 
 # # Highlighting config
 # pygmentsCodeFences = false
@@ -138,7 +138,7 @@ github_branch= "main"
 # gcs_engine_id = "5b38591c9187748b9"
 
 # Enable Algolia DocSearch
-algolia_docsearch = true
+params.search.algolia = true
 
 # Enable Lunr.js offline search
 offlineSearch = false
