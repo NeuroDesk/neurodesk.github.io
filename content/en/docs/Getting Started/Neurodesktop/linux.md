@@ -14,10 +14,10 @@ description: >
 
 ## Quickstart
 ### 0. Install Docker/Podman
-Install Docker from here: https://docs.docker.com/get-docker/. Additional information available [below](#installing-docker). Neurodesk also works with Podman (https://podman.io/).
+Install Docker from here: https://docs.docker.com/get-docker/. Additional information is available [below](#installing-docker). Neurodesk also works with Podman (https://podman.io/).
 
-#### Ubuntu 20.04
-In Ubuntu 20.10 or newer versions, the packages to install Podman are included to download in the standard repository of the system. However, for Ubuntu 20.04, therefore, we manually have to add the repository of Podman. 
+{{< alert color="info">}}
+In Ubuntu 20.10 or newer versions, the packages to install Podman are included to download in the standard repository of the system. However, for Ubuntu 20.04, we manually have to add the repository of Podman. 
 ```bash
 sudo apt update && sudo apt upgrade -y
 sudo apt install curl
@@ -26,6 +26,7 @@ curl -L "https://download.opensuse.org/repositories/devel:/kubic:/libcontainers:
 sudo apt update
 sudo apt-get -y install podman
 ```
+{{< /alert >}}
 
 ### 1. Optional: only for ARM64 hardware
 Neurodesk supports ARM64 hardware through binfmt
