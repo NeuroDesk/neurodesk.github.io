@@ -30,6 +30,7 @@ description: >
 - Load singularity and for best performance, it should be 3.x e.g.
 ```bash
 module load singularity/3.5.0
+# Note: Some HPCs install singularity/apptainer on the compute nodes directly (e.g. Bunya at UQ), so you don't need to do this step then.
 ``` 
 - Load or install aria2 to optimize the download performance of our containers (THIS IS OPTIONAL)
 ```bash
@@ -48,10 +49,19 @@ export APPTAINER_BINDPATH=$PWD
 ```
 ### Install Containers
 - If these steps are successful, the help will be displayed
-- Install all or only specific containers by following the instructions displayed
+- Install all or only specific containers by following the instructions, e.g.:
 
-### To download all containers (be careful - there are a lot of containers!)
-Run 
+To search for containers that have "itksnap" in the name:
+```bash
+bash containers.sh itksnap
+```
+
+Then you can copy and paste the specific install command or you can install all containers with that name:
+```bash
+bash containers.sh --itksnap
+```
+
+To download all containers (be careful - there are a lot of containers!):
 ```bash
 bash containers.sh --all
 ```
@@ -67,12 +77,13 @@ module use $PWD/local/containers/modules/
  module use ~/neurocommand/local/containers/modules/
  ```
 
-- It is very important to set the SINGULARITY_BINDPATH or the APPTAINER_BINDPATH variable in your .bashrc as well. This variable needs to contain a comma-separated list of directories you want to access with the Neurodesk tools:
+- It is very important to also set the SINGULARITY_BINDPATH or the APPTAINER_BINDPATH variable in your .bashrc. This variable must contain a comma-separated list of directories you want to access with the Neurodesk tools. 
 
 e.g.:
 ```bash
 export SINGULARITY_BINDPATH=/scratch/,/data/
 export APPTAINER_BINDPATH=/scratch/,/data/
+#Note: User the correct line depending on your installation. Do not add a directory that does not exist, otherwise the containers will not start!
 ```
  
 - to see the installed containers at the top of the list (neurodesk containers will take preference over system modules with the same name), run:
