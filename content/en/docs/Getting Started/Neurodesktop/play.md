@@ -14,9 +14,9 @@ description: >
 - Does **NOT** preserve files from previous sessions
 
 To use Neurodesk Play, choose the link below closest to your location:
-- [Australia](https://play-sydney.neurodesk.org/v2/gh/neurodesk/neurodesktop/main)
-- [US](https://play-iowa.neurodesk.org/v2/gh/neurodesk/neurodesktop/main)
-- [Europe](https://play-frankfurt.neurodesk.org/v2/gh/neurodesk/neurodesktop/main)
+- [Australia](https://play-sydney.neurodesk.org)
+- [US](https://play-iowa.neurodesk.org)
+- [Europe](https://play-frankfurt.neurodesk.org)
 
 ## How to transfer data onto Neurodesk Play
 
