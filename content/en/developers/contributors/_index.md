@@ -10,7 +10,7 @@ If you contributed to the project please list yourself here with a description o
 - https://github.com/NeuroDesk/neurodesktop/graphs/contributors
 - https://github.com/NeuroDesk/neurocommand/graphs/contributors
 - https://github.com/NeuroDesk/neurocontainers/graphs/contributors
-- https://github.com/NeuroDesk/neurodesk.github.io/graphs/contributoArs
+- https://github.com/NeuroDesk/neurodesk.github.io/graphs/contributors
 - https://github.com/NeuroDesk/transparent-singularity/graphs/contributors
 
 
