@@ -137,14 +137,20 @@ github_branch= "main"
 # Google Custom Search Engine ID. Remove or comment out to disable search.
 # gcs_engine_id = "5b38591c9187748b9"
 
-# Enable Algolia DocSearch
-algolia_docsearch = true
+# # Enable Algolia DocSearch
+# algolia_docsearch = true
 
-# Enable Lunr.js offline search
-offlineSearch = false
+# # Enable Lunr.js offline search
+# offlineSearch = false
 
 # Enable syntax highlighting and copy buttons on code blocks with Prism
 prism_syntax_highlighting = false
+
+[params.search]
+[params.search.algolia]
+appId = "P5JEPQ5LZ2"
+apiKey = "56c6d9a954f7df2a98dcedb2763af8c4"
+indexName = "neurodesk"
 
 # User interface configuration
 [params.ui]
@@ -153,7 +159,7 @@ sidebar_menu_compact = false
 #  Set to true to disable breadcrumb navigation.
 breadcrumb_disable = false
 #  Set to true to hide the sidebar search box (the top nav search box will still be displayed if search is enabled)
-sidebar_search_disable = false
+sidebar_search_disable = true
 #  Set to false if you don't want to display a logo (/assets/icons/logo.svg) in the top nav bar
 navbar_logo = false
 # Set to true to disable the About link in the site footer
