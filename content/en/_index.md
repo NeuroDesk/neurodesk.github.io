@@ -11,20 +11,20 @@ linktitle: Neurodesk
 		<h2>Quick start</h2>
 		<h3>A flexible and scalable data analysis environment for reproducible neuroimaging with Neurodesk.</h3>
 		<div class="mx-auto mt-5">
-			<a class="btn btn-lg btn-light mr-0 mb-4" target="_blank" href="docs/support/faq/#what-is-neurodesk">
+			<a class="btn btn-lg btn-light me-1 mb-4" target="_blank" href="docs/support/faq/#what-is-neurodesk">
 				What is Neurodesk ?</a>
-			<a class="btn btn-lg btn-light mr-0 mb-4" target="_blank" href="docs/getting-started/neurodesktop/play">
+			<a class="btn btn-lg btn-light me-1 mb-4" target="_blank" href="docs/getting-started/neurodesktop/play">
 				<i class="fa fa-play"></i> Play </a>
-			<a class="btn btn-lg btn-light mr-0 mb-4" target="_blank" href="docs/getting-started/neurodesktop/nectar">
+			<a class="btn btn-lg btn-light me-1 mb-4" target="_blank" href="docs/getting-started/neurodesktop/nectar">
 				<i class="fa fa-display"></i> Nectar </a>
-			<a class="btn btn-lg btn-light mr-0 mb-4" target="_blank"
+			<a class="btn btn-lg btn-light me-1 mb-4" target="_blank"
 				href="docs/getting-started/neurocontainers/googlecolab/">
 				<i class="fab fa-google"></i> Google Colab </a>
-			<a class="btn btn-lg btn-light mr-0 mb-4" target="_blank" href="docs/getting-started/neurodesktop/windows">
+			<a class="btn btn-lg btn-light me-1 mb-4" target="_blank" href="docs/getting-started/neurodesktop/windows">
 				<i class="fab fa-windows"></i> Windows </a>
-			<a class="btn btn-lg btn-light mr-0 mb-4" target="_blank" href="docs/getting-started/neurodesktop/mac">
+			<a class="btn btn-lg btn-light me-1 mb-4" target="_blank" href="docs/getting-started/neurodesktop/mac">
 				<i class="fab fa-apple"></i> MacOS </a>
-			<a class="btn btn-lg btn-light mr-0 mb-4" target="_blank" href="docs/getting-started/neurodesktop/linux">
+			<a class="btn btn-lg btn-light me-1 mb-4" target="_blank" href="docs/getting-started/neurodesktop/linux">
 				<i class="fab fa-linux"></i> Linux </a>
 		</div>
 	</div>
