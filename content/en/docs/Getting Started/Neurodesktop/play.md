@@ -13,10 +13,12 @@ description: >
 - No login or sign-up required
 - Does **NOT** preserve files from previous sessions
 
+<!-- markdown-link-check-disable -->
 To use Neurodesk Play, choose the link below closest to your location:
 - [Australia](https://play-sydney.neurodesk.org)
 - [US](https://play-iowa.neurodesk.org)
 - [Europe](https://play-frankfurt.neurodesk.org)
+<!-- markdown-link-check-enable -->
 
 ## How to transfer data onto Neurodesk Play
 
