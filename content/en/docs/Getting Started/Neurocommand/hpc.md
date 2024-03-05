@@ -88,7 +88,7 @@ export APPTAINER_BINDPATH=/scratch/,/data/
  
 - to see the installed containers at the top of the list (neurodesk containers will take preference over system modules with the same name), run:
 ```bash
-module load --ignore_cache avail
+module --ignore_cache avail
 ```
 
 ### Starting a new shell
