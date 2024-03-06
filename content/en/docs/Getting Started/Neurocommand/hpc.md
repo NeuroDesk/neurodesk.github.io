@@ -99,7 +99,7 @@ module --ignore_cache avail
 Run 
 ```bash
 git pull
-bash build.sh
+bash build.sh --cli
 ```  
 - this updates the neurocommand but not the modules
 - _install.sh does not need to be run again_
@@ -110,6 +110,11 @@ bash containers.sh
  Choose the module you want to update for example you want to update mrtrix3/3.0.2 module with the eddy_cuda fix:
 ```bash
 ~/neurocommand/local/fetch_containers.sh mrtrix3 3.0.2 20221108 mrview $@
+```
+
+or run this to update all containers
+```
+bash containers.sh --all
 ```
 
 
