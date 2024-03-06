@@ -34,10 +34,11 @@ This tutorial documents how to use Connectome Workbench on NeuroDesk for visuali
 
 ![1_balsa](/static/tutorials-examples/tutorials/functional_imaging/connectomeworkbench/1_balsa.png '1_balsa')
 
+<!-- markdown-link-check-disable -->
 3. Login and download the scene files containing the retinotopic maps available at: https://balsa.wustl.edu/study/9Zkk. 
 
 ![2_balsa](/static/tutorials-examples/tutorials/functional_imaging/connectomeworkbench/2_balsa.png '2_balsa')
-
+<!-- markdown-link-check-enable -->
 
 These files include preprocessed collated data from 181 participants, including retinotopic, curvature, midthickness, and myelin maps. 
 
