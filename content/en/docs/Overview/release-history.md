@@ -12,6 +12,10 @@ description: >-
 Latest Version
 : {{< params/neurodesktop/jupyter_neurodesk_version >}}
 
+## 2024-03-27
+- Switched from singularity to apptainer
+- added (brkraw) and fixed multiple tools (mrtrix3, julia)
+
 ## 2024-01-12
 - fixed fsl GUI error, when starting fsl in VNC mode (the USER was not exported)
 - removed c.ServerApp.root_dir setting because it was causing an error when clicking on the Home button. Now it's not possible to navigate outside of the homedirectory anymore in the side panel.
