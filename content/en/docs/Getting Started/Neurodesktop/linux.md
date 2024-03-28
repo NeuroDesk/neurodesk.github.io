@@ -13,8 +13,11 @@ description: >
 2. Docker requirements. Details found under https://docs.docker.com/get-docker/
 
 ## Quickstart
-### 0. Install Docker/Podman
-Install Docker from here: https://docs.docker.com/get-docker/. Additional information is available [below](#installing-docker). Neurodesk also works with Podman (https://podman.io/).
+### 0. Install Docker or Podman
+Install Docker from here: https://docs.docker.com/get-docker/. Additional information is available [below](#installing-docker). 
+Alternatively, Neurodesk also works with Podman (https://podman.io/).
+
+To set up Neurodesk on Ubuntu, ensure both Podman client and server are installed. Follow the Podman installation instructions provided at https://podman.io/docs/installation for server setup. 
 
 {{< alert color="info">}}
 In Ubuntu 20.10 or newer versions, the packages to install Podman are included to download in the standard repository of the system. However, for Ubuntu 20.04, we manually have to add the repository of Podman. 
@@ -27,6 +30,16 @@ sudo apt update
 sudo apt-get -y install podman
 ```
 {{< /alert >}}
+
+For the client setup, execute the following commands.
+
+```bash
+systemctl --user --now enable podman.socket
+sudo loginctl enable-linger $USER
+ssh-keygen -t ed25519 -f ~/.ssh/id_ed25519
+cat  ~/.ssh/id_ed25519.pub | cat >> ~/.ssh/authorized_keys
+podman system connection add development --identity ~/.ssh/id_ed25519 ssh://$USER@$HOSTNAME/run/user/$UID/podman/podman.sock
+```
 
 ### 1. Optional: only for ARM64 hardware
 Neurodesk supports ARM64 hardware through binfmt

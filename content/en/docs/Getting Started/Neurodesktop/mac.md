@@ -9,7 +9,7 @@ description: >
 ---
 
 ## Quickstart
-### 1. Install Docker
+### 1. Install Docker or Podman
 Install Docker from here: https://docs.docker.com/get-docker/ 
 
 {{< alert color="warning" >}}
@@ -27,6 +27,8 @@ For best performance on ARM Apple Silicon Hardware (M1/M2/M3) you need to enable
 3. Click "Apply & Restart"
 4. Current limitations of running Neurodesk through Rosetta emulation on MacOS: FSLeyes, SPM, and EEGLAB are not starting up (Deactivate Rosetta to use these); external applications cannot be called from Matlab.
 {{< /alert >}}
+
+Alternatively, Neurodesk also works with Podman, follow the Podman installation instructions provided at https://podman.io/docs/installation.
 
 ### 2. Run Neurodesktop
 Use one of the following options to run Neurodesktop:

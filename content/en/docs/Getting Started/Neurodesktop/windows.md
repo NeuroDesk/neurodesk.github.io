@@ -20,7 +20,7 @@ Install Docker from here: https://docs.docker.com/get-docker/
 The docker installation will reboot your computer a few times. There might be warnings regarding WSL2 and this also might require a few more installation steps that unfortunately differ for every system. Please get in touch if you are stuck and have a look at our troubleshooting page. Here is a detailed instruction on how Neurodesk was installed on Windows VMs from the team at Technion: [Detailed Docker & Neurodesk installation instruction Windows
 ](https://github.com/NeuroDesk/neurodesk.github.io/blob/main/static/docs/getting-started/neurodesktop/Neurodesk_Windows_Technion.pdf){{< /alert >}}
 
-Alternatively, Neurodesk also works with podman: https://podman.io/
+Alternatively, Neurodesk also works with Podman, follow the Podman installation instructions provided at https://podman.io/docs/installation.
 
 ### 2. Run Neurodesktop
 Use one of the following options to run Neurodesktop:
