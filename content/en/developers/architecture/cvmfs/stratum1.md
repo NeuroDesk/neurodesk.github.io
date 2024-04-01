@@ -48,7 +48,7 @@ NQIDAQAB
 -----END PUBLIC KEY-----" | sudo tee /etc/cvmfs/keys/ardc.edu.au/neurodesk.ardc.edu.au.pub
 
 
-sudo cvmfs_server add-replica -o $USER http://203.101.226.164/cvmfs/neurodesk.ardc.edu.au /etc/cvmfs/keys/ardc.edu.au
+sudo cvmfs_server add-replica -o $USER http://stratum0.neurodesk.cloud.edu.au/cvmfs/neurodesk.ardc.edu.au /etc/cvmfs/keys/ardc.edu.au
 
 # CVMFS will store everything in /srv/cvmfs so make sure there is enough space or create a symlink to a bigger storage volume
 # e.g.:
