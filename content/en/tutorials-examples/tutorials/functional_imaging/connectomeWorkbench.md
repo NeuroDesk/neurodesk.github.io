@@ -29,12 +29,12 @@ This tutorial documents how to use Connectome Workbench on NeuroDesk for visuali
 
 1. First, make sure you register for the Human Connectome Project Open Access Data: https://www.humanconnectome.org/study/hcp-young-adult/data-use-terms
 
-
+<!-- markdown-link-check-disable -->
 2. Register to the BALSA database: https://balsa.wustl.edu/. 
 
 ![1_balsa](/static/tutorials-examples/tutorials/functional_imaging/connectomeworkbench/1_balsa.png '1_balsa')
 
-<!-- markdown-link-check-disable -->
+
 3. Login and download the scene files containing the retinotopic maps available at: https://balsa.wustl.edu/study/9Zkk. 
 
 ![2_balsa](/static/tutorials-examples/tutorials/functional_imaging/connectomeworkbench/2_balsa.png '2_balsa')
