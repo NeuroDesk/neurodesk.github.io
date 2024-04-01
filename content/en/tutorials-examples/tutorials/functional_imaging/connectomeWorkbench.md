@@ -27,9 +27,10 @@ This tutorial documents how to use Connectome Workbench on NeuroDesk for visuali
 
 ## Download data
 
+<!-- markdown-link-check-disable -->
 1. First, make sure you register for the Human Connectome Project Open Access Data: https://www.humanconnectome.org/study/hcp-young-adult/data-use-terms
 
-<!-- markdown-link-check-disable -->
+
 2. Register to the BALSA database: https://balsa.wustl.edu/. 
 
 ![1_balsa](/static/tutorials-examples/tutorials/functional_imaging/connectomeworkbench/1_balsa.png '1_balsa')
