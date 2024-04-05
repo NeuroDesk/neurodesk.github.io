@@ -117,4 +117,21 @@ or run this to update all containers
 bash containers.sh --all
 ```
 
+# Example clusters
+## UQ Bunya
+Neurodesk is already installed at UQ's Bunya supercomputer. To access neurodesk tools run:
+```
+module use /sw/local/rocky8/noarch/neuro/software/neurocommand/local/containers/modules/
+export APPTAINER_BINDPATH=/scratch,/QRISdata
+```
+
+Now you can list all modules (Neurodesk modules are the first ones in the list):
+```
+ml av
+```
+
+Or you can module load any tool you need:
+```
+ml qsmxt/6.4.1
+```
 
