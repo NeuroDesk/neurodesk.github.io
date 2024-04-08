@@ -15,7 +15,7 @@ description: >
 
 <!-- markdown-link-check-disable -->
 To use Neurodesk Play, choose the link below closest to your location:
-- [Australia](https://play-sydney.neurodesk.org)
+- [Australia](https://play.neurodesk.cloud.edu.au)
 - [US](https://play-iowa.neurodesk.org)
 - [Europe](https://play-frankfurt.neurodesk.org)
 <!-- markdown-link-check-enable -->
