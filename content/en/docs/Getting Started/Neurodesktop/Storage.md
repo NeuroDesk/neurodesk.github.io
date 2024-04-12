@@ -67,7 +67,7 @@ Another option is to directly mount webdav storage. Here is an example how to mo
 ```bash
 sudo mount -t davfs https://yourOwnCloudInstance.com/plus/remote.php/webdav/ /data/
 ```
-It then asks you for a username and password, which you can generate in the settings: https://yourOwnCloudInstance.com/plus/settings/personal?sectionid=security
+It then asks you for a username and password, which you can generate in the settings: yourOwnCloudInstance/plus/settings/personal?sectionid=security
 
 ### Rclone
 Rclone is a command line tool that enables interaction with various cloud services. Here is an example how to setup rclone with an OwnCloud account:
@@ -78,7 +78,7 @@ Rclone is a command line tool that enables interaction with various cloud servic
 - For the “Storage” option choose: `webdav`
 - As “url” set: `https://yourOwnCloudInstance.com/plus/remote.php/webdav/`
 - As “vendor” set OwnCloud: `2`
-- Set your OwnCloud username after generating an access token https://yourOwnCloudInstance.com/plus/settings/personal?sectionid=security
+- Set your OwnCloud username after generating an access token yourOwnCloudInstance/plus/settings/personal?sectionid=security
 - Choose to type in your own password: y
 - Enter the Password / Token from the OwnCloud App passwords page and confirm it again:
 - Leave blank the bearer_token: `<hit Enter>`
