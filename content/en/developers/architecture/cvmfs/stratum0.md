@@ -92,7 +92,7 @@ dQIDAQAB
 ## Next iteration of this:
 ### use object storage?
 - current implementation uses block storage, but this makes increasing the volume size a bit more work
-- we couldn't get object storage to work on Oracle as it assumes AWS S3
+- we couldn't get object storage to work on Oracle as it assumes AWS S3 -> Try again on AWS
 
 ### Optimize settings for repositories for Container Images
 

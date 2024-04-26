@@ -49,9 +49,7 @@ Neurodesk originates from various projects at the Centre for Advanced Imaging th
 ![swinburne](/static/docs/overview/swinburne_uni_logo.png 'swinburne') ![liege](/static/docs/overview/liege_uni_logo.png 'liege')
 
 ## Funding
-Thank you to Oracle for Research for providing Oracle Cloud credits and related resources to support this project.
-
-![oracle](https://user-images.githubusercontent.com/4021595/119061922-db877080-ba18-11eb-9882-d53a25ec88ee.png)
+Thank you to Google Cloud and AWS for providing cloud credits to support this project since 2024. We thank Oracle for Research for supporting our project from 2022 to 2023.
 
 This project is supported by an Australian Research Data Commons (ARDC) Platform project “Australian
 Electrophysiology Data Analytics PlaTform (AEDAPT)”.
