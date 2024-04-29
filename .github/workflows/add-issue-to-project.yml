@@ -11,7 +11,7 @@ jobs:
     runs-on: ubuntu-latest
     name: Assign to Project
     steps:
-      - uses: actions/add-to-project@v0.4.0
+      - uses: actions/add-to-project@v1.0.1
         with:
           project-url: https://github.com/orgs/NeuroDesk/projects/9
           github-token: ${{ secrets.PAT }}
