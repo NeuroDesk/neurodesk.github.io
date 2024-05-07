@@ -23,7 +23,7 @@ export container=itksnap_3.8.0_20201208
 
 Then download the containers. One way is to use CURL:
 ```shell
-curl -X GET https://d15yxasja65rk8.cloudfront.net/${container}.simg -O
+curl -X GET https://d15yxasja65rk8.cloudfront.net/$container.simg -O
 ```
 
 ## Singularity Containers and GPUs
