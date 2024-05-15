@@ -10,9 +10,9 @@ description: >
 <!-- ![Neurodesk App](/static/docs/getting-started/neurodeskapp/neurodesk-desktop.png 'neurodeskapp') -->
 
 ### Minimum System Requirements
+
 1. At least 5GB free space for neurodesktop base image
 2. Docker requirements.
-
 
 ## Installing Docker
 
@@ -23,17 +23,24 @@ The Neurodesk App requires Docker to be installed on your computer. If you alrea
 - [Docker Engine for Linux](https://docs.docker.com/engine/install/)
 
 After installation, open a terminal (Linux/macOS) or command prompt (Windows) and run the following command to verify that Docker is working correctly:
+
 ```bash
 docker --version
 docker run hello-world
 ```
 
 ## Downloading Neurodesk App
-- [Debian, Ubuntu Linux Installer](https://github.com/NeuroDesk/neurodesk-app/releases/latest/download/NeurodeskApp-Setup-Debian.deb )
-- [Red Hat, Fedora, SUSE Linux Installer](https://github.com/NeuroDesk/neurodesk-app/releases/latest/download/NeurodeskApp-Setup-Fedora.rpm )
-- [Arch-based package via AUR](https://aur.archlinux.org/packages/neurodeskapp-bin )
-- [macOS Intel Installer](https://github.com/NeuroDesk/neurodesk-app/releases/latest/download/NeurodeskApp-Setup-macOS-x64.dmg ), [macOS Apple silicon Installer](https://github.com/neurodesk/neurodesk-app/releases/latest/download/NeurodeskApp-Setup-macOS-arm64.dmg )
-- [Windows Installer](https://github.com/NeuroDesk/neurodesk-app/releases/latest/download/NeurodeskApp-Setup-Windows.exe )
+
+- [Debian, Ubuntu Linux Installer](https://github.com/NeuroDesk/neurodesk-app/releases/latest/download/NeurodeskApp-Setup-Debian.deb)
+- [Red Hat, Fedora, SUSE Linux Installer](https://github.com/NeuroDesk/neurodesk-app/releases/latest/download/NeurodeskApp-Setup-Fedora.rpm)
+- [Arch-based package via AUR](https://aur.archlinux.org/packages/neurodeskapp-bin)
+- [macOS Intel Installer](https://github.com/NeuroDesk/neurodesk-app/releases/latest/download/NeurodeskApp-Setup-macOS-x64.dmg), [macOS Apple silicon Installer](https://github.com/neurodesk/neurodesk-app/releases/latest/download/NeurodeskApp-Setup-macOS-arm64.dmg)
+- [Windows Installer](https://github.com/NeuroDesk/neurodesk-app/releases/latest/download/NeurodeskApp-Setup-Windows.exe)
+
+{{< alert color="info" >}}
+**On Microsoft edge**, follow these steps to download the executable file:
+![Microsoft Edge](/static/docs/getting-started/neurodeskapp/neurodeskapp-edge-download.png)
+{{< /alert >}}
 
 ## Installing Neurodesk App
 
@@ -66,7 +73,6 @@ You can start a new session by using the links at the Start section of the Welco
 
 Previously opened sessions are stored as part of application data and they are listed on the Welcome Page. Clicking an item in the `Recent sessions` list restores the selected session.
 
-
 ## Connecting to local Neurodesk
 
 Neurodesk App creates new Neurodesk sessions by launching a locally running Neurodesk server and connecting to it. To open a local instance, click the `Open Local Neurodesk..` button in the Start section of the Welcome Page.
@@ -80,10 +86,9 @@ This will show a Jupyterlab interface. There are two options to interact with Ne
 
 ## Connecting to a remote Neurodesk Server
 
- It can also connect to an existing Neurodesk server instance that is running remotely. In order to connect to a server, click the `Connect to remote Neurodesk server..` button in the Start section of the Welcome Page.
+It can also connect to an existing Neurodesk server instance that is running remotely. In order to connect to a server, click the `Connect to remote Neurodesk server..` button in the Start section of the Welcome Page.
 
 ![Server](/static/docs/getting-started/neurodeskapp/connect-to-server.png "Connect to server")
-
 
 This will launch a dialog that automatically lists the remote Neurodesk server instances.
 
@@ -151,4 +156,3 @@ rm -rf ~/Library/Application\ Support/neurodeskapp # to remove user data
 On Windows, go to `Windows Apps & Features` dialog using `Start Menu` -> `Settings` -> `Apps` and uninstall Neurodesk App as shown below.
 
 In order to remove application cache, delete `C:\Users\<username>\AppData\Roaming\neurodeskapp` directory.
-
