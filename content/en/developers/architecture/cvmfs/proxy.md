@@ -8,13 +8,6 @@ description: >
 
 If you want more speed in a region one way could be to setup another Stratum 1 server or a proxy. We currently don't run any proxy servers but it would be important for using it on a cluster.
 
-```cmd
-docker run --shm-size=1gb -it --privileged --user=root --name neurodesktop `
--v C:/neurodesktop-storage:/neurodesktop-storage -p 8888:8888 `
--e NEURODESKTOP_VERSION={{< params/neurodesktop/jupyter_neurodesk_version >}} `
-vnmd/neurodesktop:{{< params/neurodesktop/jupyter_neurodesk_version >}}
-```
-
 # Setup a CVMFS proxy server
 ```bash
 sudo yum install -y squid
