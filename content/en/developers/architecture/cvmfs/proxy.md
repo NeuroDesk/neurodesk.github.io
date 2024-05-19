@@ -56,3 +56,8 @@ sudo systemctl enable squid
 sudo systemctl status squid
 sudo systemctl restart squid
 ```
+
+Then add the proxy to the cvmfs config:
+```
+CVMFS_HTTP_PROXY="http://proxy-address:3128"
+```
