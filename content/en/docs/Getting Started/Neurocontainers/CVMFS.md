@@ -224,3 +224,15 @@ ml fsl
 fslmaths
 ```
 
+## Troubleshooting and diagnostics
+```bash
+# Check servers
+sudo cvmfs_talk -i neurodesk.ardc.edu.au host probe
+sudo cvmfs_talk -i neurodesk.ardc.edu.au host info
+
+# Change settings
+sudo vi /etc/cvmfs/config.d/neurodesk.ardc.edu.au.conf
+sudo cvmfs_config umount
+sudo service autofs stop
+sudo mount -t cvmfs neurodesk.ardc.edu.au /cvmfs/neurodesk.ardc.edu.au
+```
