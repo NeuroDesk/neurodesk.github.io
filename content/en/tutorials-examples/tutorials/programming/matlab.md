@@ -29,7 +29,15 @@ This tutorial documents how to set up your matlab license on Neurodesk.
 
 ## Matlab license
 
-1. In the application menu, navigate to Neurodesk → Programming → matlab → matlabGUI 2022a
+0. Note: You need your own Matlab license to use Matlab in Neurodesk. You can either login to your matlab account or you can provide an institutional network license server if your neurodesk runs within your institution network and ran reach your license server.
+
+1. a) Institutional network license
+run the following command once and replace the address of your license server and the license number
+```bash
+mkdir -p /home/jovyan/Downloads && echo -e "SERVER rtlicense1.university.edu D1234560F6 27007\nUSE_SERVER" > /home/jovyan/Downloads/network.lic
+```
+
+1. b) Mathworks account: In the application menu, navigate to Neurodesk → Programming → matlab → matlabGUI 2022a
 
 ![1_menu](/static/tutorials-examples/tutorials/programming/matlab/0_appmenu.png '1_menu')
 
