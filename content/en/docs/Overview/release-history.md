@@ -12,6 +12,25 @@ description: >-
 Latest Version
 : {{< params/neurodesktop/jupyter_neurodesk_version >}}
 
+## 2024-05-25
+- add new CVMFS CDN servers
+- add jupyter_scheduler and ipycanvas
+- update guacamole version to 1.5.5 and tomcat to 9.0.87
+- add rise extension for presentations
+- https://github.com/NeuroDesk/neurocommand/releases/tag/2024-05-25
+- fixed brkraw by @stebo85 in #268
+- QSMxT: v6.4.1 by @astewartau in #270
+- update mrtrix3 by @stebo85 in #271
+- QSMxT: v6.4.2 by @astewartau in #272
+- QSMxT: v6.4.3 by @astewartau in #274
+- update bidscoin to 4.3.2 by @stebo85 in #275
+- update fmriprep by @stebo85 in #277
+- add julia 1.9.4 by @stebo85 in #280
+- update dsi_studio by @stebo85 in #283
+- add glmsingle by @stebo85 in #284
+- ants 2.5.1 20240429 by @stebo85 in #285
+- QSMxT: v6.4.4 by @astewartau in #287
+
 ## 2024-03-27
 - Switched from singularity to apptainer
 - added (brkraw) and fixed multiple tools (mrtrix3, julia)
