@@ -33,6 +33,15 @@ You can check out the complete list of [these applications](/docs/overview/appli
 ## Can I run Neurodesk on an HPC without Docker?
 Yes, our project aims to run on the hardware you have access to. However, without docker support you cannot use our desktop interface [NeuroDesktop](/docs/getting-started/neurodesktop) but you can still use the command line interface [NeuroCommand on HPC](https://www.neurodesk.org/docs/getting-started/neurocommand). This works well for batch processing on HPCs once you developed your pipeline in our desktop interface. If your HPC provides a desktop interface you can use all our graphical applications without any issues and the GUIs even work via SSH x-forwarding - it's not the most performant experience, but it works well enough.
 
+## How can I export a jupyter notebook as a PDF?
+By default we don't have all extensions installed to do this to keep the neurodesktop small. So you will see an error when trying to do File -> Save and Export Notebook As ... -> Webpdf
+
+To get webpdf export to work, open a terminal and run:
+```
+pip install nbconvert[webpdf]
+playwright install chromium
+```
+
 ## Is there reduced performance when using containers?
 If you are running containers on Linux there is no performance penalty - on an HPC with a Lustre filesystem it can even be faster to run our containers than running natively on the filesystem (because meta data operations are shifted to the compute node - more information can be found here: 
 
