@@ -75,6 +75,17 @@ sudo docker run \
   --mount source=neurodesk-home,target=/home/jovyan \
   -e NB_UID="$(id -u)" -e NB_GID="$(id -g)" \
   -p 8888:8888 \
+  -e NEURODESKTOP_VERSION={{< params/neurodesktop/jupyter_neurodesk_version >}} vnmd/neurodesktop:{{< params/neurodesktop/jupyter_neurodesk_version >}}
+```
+or for podman:
+```bash
+podman volume create neurodesk-home &&
+sudo podman run \
+  --shm-size=1gb -it --privileged --user=root --name neurodesktop \
+  -v ~/neurodesktop-storage:/neurodesktop-storage \
+  --mount source=neurodesk-home,target=/home/jovyan \
+  -e NB_UID="$(id -u)" -e NB_GID="$(id -g)" \
+  -p 8888:8888 \
   -e NEURODESKTOP_VERSION={{< params/neurodesktop/jupyter_neurodesk_version >}} docker://vnmd/neurodesktop:{{< params/neurodesktop/jupyter_neurodesk_version >}}
 ```
 
@@ -85,7 +96,7 @@ sudo docker run \
   -v ~/neurodesktop-storage:/neurodesktop-storage \
   -e NB_UID="$(id -u)" -e NB_GID="$(id -g)" \
   -p 8888:8888 \
-  -e NEURODESKTOP_VERSION={{< params/neurodesktop/jupyter_neurodesk_version >}} docker://vnmd/neurodesktop:{{< params/neurodesktop/jupyter_neurodesk_version >}}
+  -e NEURODESKTOP_VERSION={{< params/neurodesktop/jupyter_neurodesk_version >}} vnmd/neurodesktop:{{< params/neurodesktop/jupyter_neurodesk_version >}}
 ```
 
 
