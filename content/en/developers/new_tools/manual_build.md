@@ -14,36 +14,12 @@ Refer to [neurodocker](https://github.com/NeuroDesk/neurodocker) for more inform
 ### Environment Requirements
 - Linux environment where you have admin privileges (i.e., can run 'sudo')
 - Docker
-- Recent Python3 Version  
-  Search for "python_requires" in https://github.com/NeuroDesk/neurodocker/blob/master/setup.cfg for minimal version of Python3 required. 
-- If you also have Python2 installed, follow these instructions to ensure the 'python' command launches python3: https://stackoverflow.com/questions/68792446/how-to-set-python3-as-default
+- Python `>=3.8`. If you have lower Python version, create a virtual environment `conda create -n neurodocker python=3.8 -y` and activate it `conda activate neurodocker`. 
 - If you have several versions of Python3 installed in the environment, typing 'python' in the terminal should launch a version with equal or higher version number  
 - Python pip3  
   This should be launched by 'python -m pip'
 - git
 
-### Install Neurodocker
-Neurodocker is the dependency we use to build containers.
-1. (optional) Sync upstream repository:  
-  If you have the permissions to do so: Press "Fetch upstream" in https://github.com/NeuroDesk/neurodocker to check if our fork of Neurodocker is already up-to-date. Otherwise, open an issue in https://github.com/NeuroDesk/neurocontainers/issues, requesting to pull-in latest changes from Neurodocker upstream into our fork of Neurodocker. One of the admins will attend the issue and perform the operation.  
-2. (optional) Add a new neurodocker tool:  
-  If relevant to your project, add an option to neurodocker that installs new software (https://github.com/NeuroDesk/neurodocker) and create a pull request to neurodocker's main repository (add new tool in a branch!).  
-3. Clone our fork of Neurodocker:
-   ```bash
-   git clone https://github.com/NeuroDesk/neurodocker/
-   ```
-4. Install neurodocker:  
-   ```bash
-   cd neurodocker  
-   python -m pip install .
-   cd ..
-   ```
-5. Append line to .bashrc for adding the path:
-   ```bash
-   echo 'export PATH=${PATH}:${HOME}/.local/bin' >> ${HOME}/.bashrc
-   ```
-6. Close the terminal, and reopen it for the updated PATH to take effect
-   
 
 ### Fork the Neurocontainers repository  
 -  Fork neurocontainers and setup github actions.  
