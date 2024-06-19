@@ -61,6 +61,11 @@ Then you can copy and paste the specific install command or you can install all 
 bash containers.sh --itksnap
 ```
 
+By default, this will install all available versions of the container. To only install a single version, you can use:
+```bash
+./local/fetch_containers.sh itksnap 4.0.2 20240117
+```
+
 To download all containers (be careful - there are a lot of containers!):
 ```bash
 bash containers.sh --all
