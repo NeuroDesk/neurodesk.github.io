@@ -20,12 +20,12 @@ Docker for MacOS by default runs with 2GB Memory. For actual workloads, 4GB Memo
 {{< /alert >}}
 
 {{< alert color="warning" >}}
-For best performance on ARM Apple Silicon Hardware (M1/M2/M3) you need to enable Rosetta support in Docker:
+For higher performance on ARM Apple Silicon Hardware (M1/M2/M3) you can enable Rosetta 2 support in Docker, but be careful: Many GUI applications will not work yet with Rosetta 2 emulation:
 0. If you are running Docker newer than 4.25.0 (126437) then you don't need to do anything as it's enabled by default already.
 1. For Docker versions older than 4.25.0 (126437): Open the Docker Desktop and Navigate to the Settings. Then navigate to the "Features in development" section. 
 2. Activate "Use Rosetta for x86/amd64 emulation on Apple Silicon
 3. Click "Apply & Restart"
-4. Current limitations of running Neurodesk through Rosetta emulation on MacOS: FSLeyes, SPM, and EEGLAB are not starting up (Deactivate Rosetta to use these); external applications cannot be called from Matlab.
+4. Current limitations of running Neurodesk through Rosetta 2 emulation on MacOS with Apple Silicon: FSLeyes, SPM12, CAT12, MRICOGL MRVIEW, Matlab, Brainstorm, and EEGLAB are not starting up (Deactivate Rosetta to use these); external applications cannot be called from Matlab.
 {{< /alert >}}
 
 Alternatively, Neurodesk also works with Podman, follow the Podman installation instructions provided at https://podman.io/docs/installation.
