@@ -279,6 +279,7 @@ linktitle: Neurodesk
 	<div class="td-box">
 		<h2>Acknowledgments</h2>
 	</div>
+	<div>This work benefited from services and resources provided by the EGI Federation with the dedicated support of CESNET-MCC.</div>
 	<div class="container-fluid extra-info">
 		<div class="row">
 			<div class="col-md-10 funding-col">
