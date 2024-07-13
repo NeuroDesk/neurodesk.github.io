@@ -66,7 +66,6 @@ ssh -L 8888:127.0.0.1:8888 USER@IP
 
 1. then start neurodesktop:
 
-1.a) with a persistent home directory:
 ```bash
 docker volume create neurodesk-home &&
 sudo docker run \
@@ -87,16 +86,6 @@ sudo podman run \
   -e NB_UID="$(id -u)" -e NB_GID="$(id -g)" \
   -p 8888:8888 \
   -e NEURODESKTOP_VERSION={{< params/neurodesktop/jupyter_neurodesk_version >}} docker://vnmd/neurodesktop:{{< params/neurodesktop/jupyter_neurodesk_version >}}
-```
-
-1.b) without a persistent home directory:
-```bash
-sudo docker run \
-  --shm-size=1gb -it --privileged --user=root --name neurodesktop \
-  -v ~/neurodesktop-storage:/neurodesktop-storage \
-  -e NB_UID="$(id -u)" -e NB_GID="$(id -g)" \
-  -p 8888:8888 \
-  -e NEURODESKTOP_VERSION={{< params/neurodesktop/jupyter_neurodesk_version >}} vnmd/neurodesktop:{{< params/neurodesktop/jupyter_neurodesk_version >}}
 ```
 
 
