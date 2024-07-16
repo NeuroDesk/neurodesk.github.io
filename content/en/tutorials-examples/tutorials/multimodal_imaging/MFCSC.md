@@ -13,7 +13,6 @@ description: >
 >
 > Github: [@civier]
 > Email: orenciv@gmail.com
-> Profile: https://anif.org.au/team/oren-civier/
 >
 
 ----------
