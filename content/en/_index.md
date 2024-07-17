@@ -280,7 +280,7 @@ linktitle: Neurodesk
 		<h2>Acknowledgments</h2>
 	</div>
 	<div class="container-fluid extra-info">
-		<div>This work benefited from services and resources provided by the EGI Federation with the dedicated support of CESNET-MCC.</div>
+		<div>This work benefited from services and resources provided by the EGI Federation with the dedicated support of CESNET-MCC. Thank you to Google Cloud and AWS for providing cloud credits to support this project since 2024. We thank Oracle for Research for supporting our project from 2022 to 2023.</div>
 		<div class="row">
 			<div class="col-md-10 funding-col">
 				<img src="/static/docs/overview/nif.png">
