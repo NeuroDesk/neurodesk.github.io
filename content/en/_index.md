@@ -285,6 +285,7 @@ linktitle: Neurodesk
 			<div class="col-md-10 funding-col">
 				<img src="/static/docs/overview/nif.png">
 				<img src="/static/docs/overview/uq_logo.png ">
+				<img src="/static/docs/overview/aws.png ">
 				<img src="/static/docs/overview/swinburne_uni_logo.png">
 				<img src="/static/docs/overview/liege_uni_logo.png">
 			</div>
