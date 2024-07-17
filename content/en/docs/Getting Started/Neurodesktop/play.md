@@ -16,8 +16,8 @@ description: >
 <!-- markdown-link-check-disable -->
 To use Neurodesk Play, choose the link below closest to your location:
 - [Australia](https://play.neurodesk.cloud.edu.au)
-- [US](https://play-iowa.neurodesk.org)
-- [Europe](https://play-frankfurt.neurodesk.org)
+- [US](https://play-america.neurodesk.org)
+- [Europe](https://play-europe.neurodesk.org)
 <!-- markdown-link-check-enable -->
 
 ## How to transfer data onto Neurodesk Play
