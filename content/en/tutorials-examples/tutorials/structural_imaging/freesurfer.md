@@ -29,6 +29,7 @@ Setup FreeSurfer:
 ml freesurfer/7.3.2
 mkdir ~/freesurfer-output
 export SINGULARITYENV_SUBJECTS_DIR=~/freesurfer-output
+export APPTAINERENV_SUBJECTS_DIR=~/freesurfer-output
 ```
 
 Run Recon all pipeline:
