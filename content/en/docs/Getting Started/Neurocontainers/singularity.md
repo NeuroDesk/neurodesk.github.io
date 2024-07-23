@@ -23,14 +23,14 @@ export container=itksnap_3.8.0_20201208
 
 Then download the containers. One way is to use CURL:
 ```shell
-curl -X GET https://d15yxasja65rk8.cloudfront.net/$container.simg -O
+curl -X GET https://neurocontainers.neurodesk.org/$container.simg -O
 ```
 
 ## Singularity Containers and GPUs
 Some of our containers contain GPU-accelerated applications. Here is an example that tests the GPU accelerated program eddy in FSL:
 
 ```shell
-curl -X GET https://d15yxasja65rk8.cloudfront.net/fsl_6.0.5.1_20221016.simg -O
+curl -X GET https://neurocontainers.neurodesk.org/fsl_6.0.5.1_20221016.simg -O
 git clone https://github.com/neurolabusc/gpu_test.git
 singularity shell --nv fsl_6.0.5.1_20221016.simg
 cd gpu_test/etest/
