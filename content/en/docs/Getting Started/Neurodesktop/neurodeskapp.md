@@ -14,7 +14,25 @@ description: >
 1. At least 5GB free space for neurodesktop base image
 2. Docker requirements.
 
+## Downloading Neurodesk App
+
+- [Debian, Ubuntu Linux Installer](https://github.com/NeuroDesk/neurodesk-app/releases/latest/download/NeurodeskApp-Setup-Debian.deb)
+- [Red Hat, Fedora, SUSE Linux Installer](https://github.com/NeuroDesk/neurodesk-app/releases/latest/download/NeurodeskApp-Setup-Fedora.rpm)
+- [Arch-based package via AUR](https://aur.archlinux.org/packages/neurodeskapp-bin)
+- [macOS Intel Installer](https://github.com/NeuroDesk/neurodesk-app/releases/latest/download/NeurodeskApp-Setup-macOS-x64.dmg), [macOS Apple silicon Installer](https://github.com/neurodesk/neurodesk-app/releases/latest/download/NeurodeskApp-Setup-macOS-arm64.dmg)
+- [Windows Installer](https://github.com/NeuroDesk/neurodesk-app/releases/latest/download/NeurodeskApp-Setup-Windows.exe)
+
+{{< alert color="info" >}}
+**On Microsoft edge**, follow these steps to download the executable file:
+![Microsoft Edge](/static/docs/getting-started/neurodeskapp/neurodeskapp-edge-download.png)
+{{< /alert >}}
+
 ## Installing Docker
+
+{{< alert color="info" >}}
+Docker is required for starting a local instance of Neurodesk.<br>
+If only connecting to a remote Neurodesk servers, you may **skip Installing Docker**
+{{< /alert >}}
 
 The Neurodesk App requires Docker to be installed on your computer. If you already have Docker installed, you can skip this step.
 
@@ -28,19 +46,6 @@ After installation, open a terminal (Linux/macOS) or command prompt (Windows) an
 docker --version
 docker run hello-world
 ```
-
-## Downloading Neurodesk App
-
-- [Debian, Ubuntu Linux Installer](https://github.com/NeuroDesk/neurodesk-app/releases/latest/download/NeurodeskApp-Setup-Debian.deb)
-- [Red Hat, Fedora, SUSE Linux Installer](https://github.com/NeuroDesk/neurodesk-app/releases/latest/download/NeurodeskApp-Setup-Fedora.rpm)
-- [Arch-based package via AUR](https://aur.archlinux.org/packages/neurodeskapp-bin)
-- [macOS Intel Installer](https://github.com/NeuroDesk/neurodesk-app/releases/latest/download/NeurodeskApp-Setup-macOS-x64.dmg), [macOS Apple silicon Installer](https://github.com/neurodesk/neurodesk-app/releases/latest/download/NeurodeskApp-Setup-macOS-arm64.dmg)
-- [Windows Installer](https://github.com/NeuroDesk/neurodesk-app/releases/latest/download/NeurodeskApp-Setup-Windows.exe)
-
-{{< alert color="info" >}}
-**On Microsoft edge**, follow these steps to download the executable file:
-![Microsoft Edge](/static/docs/getting-started/neurodeskapp/neurodeskapp-edge-download.png)
-{{< /alert >}}
 
 ## Installing Neurodesk App
 
