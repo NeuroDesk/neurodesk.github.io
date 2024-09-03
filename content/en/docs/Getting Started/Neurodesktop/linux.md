@@ -70,7 +70,6 @@ ssh -L 8888:127.0.0.1:8888 USER@IP
 docker volume create neurodesk-home &&
 sudo docker run \
   --shm-size=1gb -it --privileged --user=root --name neurodesktop \
-  --dns 8.8.8.8 \
   -v ~/neurodesktop-storage:/neurodesktop-storage \
   --mount source=neurodesk-home,target=/home/jovyan \
   -e NB_UID="$(id -u)" -e NB_GID="$(id -g)" \
@@ -100,7 +99,18 @@ chmod a+rwx ~/neurodesktop-storage
 {{< /alert >}}
 
 {{< alert color="warning">}}
-The Docker command uses the DNS server `8.8.8.8` (Google Public DNS). If that's not assessable on your network or causes problems then you can remove `--dns 8.8.8.8` from the command.
+If you get error that's not assessable on your network or causes problems then you can try to use the DNS server `8.8.8.8` (Google Public DNS) in the Docker command.
+```bash
+docker volume create neurodesk-home &&
+sudo docker run \
+  --shm-size=1gb -it --privileged --user=root --name neurodesktop \
+  --dns 8.8.8.8 \
+  -v ~/neurodesktop-storage:/neurodesktop-storage \
+  --mount source=neurodesk-home,target=/home/jovyan \
+  -e NB_UID="$(id -u)" -e NB_GID="$(id -g)" \
+  -p 8888:8888 \
+  -e NEURODESKTOP_VERSION={{< params/neurodesktop/jupyter_neurodesk_version >}} vnmd/neurodesktop:{{< params/neurodesktop/jupyter_neurodesk_version >}}
+```
 {{< /alert >}}
 
 2. Once neurodesktop is downloaded, leave the terminal open and check which server neurodesktop is running on (Avoid pressing CTRL+C). 
@@ -221,7 +231,6 @@ sudo apt install nvidia-container-toolkit -y
 ```bash
 sudo docker run \
   --shm-size=1gb -it --privileged --user=root --name neurodesktop \
-  --dns 8.8.8.8 \
   -v ~/neurodesktop-storage:/neurodesktop-storage \
   -e NB_UID="$(id -u)" -e NB_GID="$(id -g)" \
   --gpus all \
