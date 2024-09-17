@@ -43,6 +43,7 @@ Here is an example how to publish a dataset on the OSF:
 
 # create sibling
 datalad create-sibling-osf --title best-study-ever -s osf
+git config --global --add datalad.extensions.load next
 
 # push
 datalad push --to osf
