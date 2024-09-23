@@ -15,7 +15,7 @@ description: >
 ## Quickstart
 ### 0. Install Docker or Podman
 Install Docker from here: https://docs.docker.com/get-docker/. Additional information is available [below](#installing-docker). 
-Alternatively, Neurodesk also works with Podman (https://podman.io/).
+Alternatively, Neurodesk also works with Podman (https://podman.io).
 
 To set up Neurodesk on Ubuntu, ensure both Podman client and server are installed. Follow the Podman installation instructions provided at https://podman.io/docs/installation for server setup. 
 
