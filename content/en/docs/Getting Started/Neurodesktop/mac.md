@@ -11,6 +11,15 @@ description: >
 ## Quickstart
 ### 1. Install Docker or Podman
 Install Docker from here: https://docs.docker.com/get-docker/ 
+Alternatively, Neurodesk also works with Podman, follow the Podman installation instructions provided at https://podman.io/docs/installation.
+
+{{< alert color="warning" >}}
+Docker currently has a bug on ARM Apple Silicon Hardware (M1/M2/M3/M4) - the workaround is to install Podman: https://podman.io/docs/installation
+
+and then select Podman in the Options of the Neurodesk App:
+<img width="696" alt="image" src="https://github.com/user-attachments/assets/623334ad-2f65-40bc-9131-c9d271ec4210">
+
+{{< /alert >}}
 
 {{< alert color="warning" >}}
 Docker for MacOS by default runs with 2GB Memory. For actual workloads, 4GB Memory minimum for docker is highly recommended. You need to adjust this: 
@@ -19,16 +28,8 @@ Docker for MacOS by default runs with 2GB Memory. For actual workloads, 4GB Memo
 3. Increase Swap slider from 1GB to 2GB (or greater)
 {{< /alert >}}
 
-{{< alert color="warning" >}}
-For higher performance on ARM Apple Silicon Hardware (M1/M2/M3) you can enable Rosetta 2 support in Docker, but be careful: Many GUI applications will not work yet with Rosetta 2 emulation:
-0. If you are running Docker newer than 4.25.0 (126437) then you don't need to do anything as it's enabled by default already.
-1. For Docker versions older than 4.25.0 (126437): Open the Docker Desktop and Navigate to the Settings. Then navigate to the "Features in development" section. 
-2. Activate "Use Rosetta for x86/amd64 emulation on Apple Silicon
-3. Click "Apply & Restart"
-4. Current limitations of running Neurodesk through Rosetta 2 emulation on MacOS with Apple Silicon: FSLeyes, SPM12, CAT12, MRICOGL MRVIEW, Matlab, Brainstorm, and EEGLAB are not starting up (Deactivate Rosetta to use these); external applications cannot be called from Matlab.
-{{< /alert >}}
 
-Alternatively, Neurodesk also works with Podman, follow the Podman installation instructions provided at https://podman.io/docs/installation.
+
 
 ### 2. Run Neurodesktop
 Use one of the following options to run Neurodesktop:
