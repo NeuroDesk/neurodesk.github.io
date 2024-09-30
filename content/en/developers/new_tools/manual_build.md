@@ -26,29 +26,25 @@ Refer to [neurodocker](https://github.com/NeuroDesk/neurodocker) for more inform
 
 
 ### Create a new app
-1. Copy the directory template and rename to NEWAPP in `neurocontainers/recipes` (NEWAPP being the name of the application to be displayed in Neurodesk's menu; notice it shouldn't have any special characters):
+1. Copy the directory template and rename to your application name in `neurocontainers/recipes` (this name will be displayed in Neurodesk's menu; notice it shouldn't have any special characters and needs to be small caps):
    ```bash
    cd neurocontainers/recipes
-   cp -R template NEWAPP
+   cp -R template myapp
    ```
 
 2. Create your Container Files:  
-   Modify `build.sh` in `neurocontainers/recipes/NEWAPP` to build your application and update `README.md` (make sure the version is correct in the README!). Notice that the example build script in the template has instructions to build a container for datalad, that may or may not suite your exact needs
+   Modify `build.sh` in `neurocontainers/recipes/myapp` to build your application and update `README.md` (make sure the version is correct in the README!).
    ```bash
-   cd NEWAPP
+   cd myapp
    (edit build.sh as required)
    (edit README.md as required)
    ```
-   Upload your application to object storage first if needed, so you can then download it in `build.sh` (ask for instructions about this if you don't know the key, and never share it anywhere public!)
+   If your application needs external files, please upload them to an online storage accessible via a URL and then download them again in the recipe. You can also send us your files and we will store them for you.
 
-3. Building containers
-
-   Any NEWAPP under the `recipes/` directory are built and pushed automatically via github actions
-
-4. Build and test the container locally 
+3. Build and test the container locally 
    1. run the build script with the debug flag:
       ```bash
-      cd recipes/NEWAPP
+      cd recipes/myapp
       chmod +x build.sh
       ./build.sh -ds
       ```
@@ -58,14 +54,13 @@ Refer to [neurodocker](https://github.com/NeuroDesk/neurodocker) for more inform
       
       For example, to open an interactive shell in a container (with the home folder /root bound to /root on host), you may run:
       ```bash
-      sudo docker run -it -v /root:/root --entrypoint /bin/bash NEWAPP_VERSION:TAG
+      sudo docker run -it -v /root:/root --entrypoint /bin/bash myapp_VERSION:TAG
       ```
       with VERSION being the version of the app, and TAG the version tag of the container (run 'sudo docker image list' to find the tag)
-   3. if your application requires a Matlab Runtime and you get an error about shared library "libmwlaunchermain.so" not found, check which version of the runtime was installed by the build script
 
-5. Update changes in local git repository
+4. Update changes in local git repository
    ```bash
-   git add .github/workflows/NEWAPP.yml recipes/NEWAPP/test.sh recipes/NEWAPP/build.sh recipes/NEWAPP/README.md
+   git add .github/workflows/myapp.yml recipes/myapp/test.sh recipes/myapp/build.sh recipes/myapp/README.md
    git config user.email "the email that you use for github"
    git config user.name "your name"
    git commit
@@ -134,14 +129,6 @@ Verify that user has write permission to /neurocommand/local
    This step consumes a lot of disk storage (up to tens of Gigs). Please be aware that if your storage is limited, the fetch_and_run.sh command may fail.
    {{% /alert %}}
 
-
-   {{% alert title="Depreciation notice" color="warning" %}}
-   For VNM users use:
-   ```bash
-   bash /neurodesk/local/fetch_and_run.sh toolName toolVersion buildDate
-   ml toolName/toolVersion
-   ```
-   {{% /alert %}}
 
 7. Test the new container. Run some commands, to see all is good  
    If the container doesn't work yet, it's sometimes useful to try and troubleshoot it and install missing libraries. This can be achieved by running it in a writable mode with fakeroot enabled:
