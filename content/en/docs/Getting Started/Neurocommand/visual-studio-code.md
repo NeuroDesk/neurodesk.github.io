@@ -12,13 +12,14 @@ The following guide is for connecting to Neurodesktop using a VS Code installati
 > Please see additional instructions below if Neurodesktop is running remotely  (i.e. Cloud, HPC, VM)
 
 ## Pre-requisites
+<!-- markdown-link-check-disable -->
 Visual Studio Code _(https://code.visualstudio.com)_ installed on your host. Standalone version should work fine
-
 Install the following VS Code extensions:
 - [x] [Docker extension](https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-docker) (Required)
 - [ ] [Remote development extension pack](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.vscode-remote-extensionpack). Includes the following extensions
   - [x] [Remote - Containers](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers) (Required)
   - [ ] [Remote - WSL](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-wsl) (For windows hosts)
+<!-- markdown-link-check-enable -->
 
 ## Connecting to Neurodesktop
 
