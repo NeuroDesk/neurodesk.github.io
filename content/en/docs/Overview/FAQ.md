@@ -45,7 +45,9 @@ playwright install chromium
 ## Is there reduced performance when using containers?
 If you are running containers on Linux there is no performance penalty - on an HPC with a Lustre filesystem it can even be faster to run our containers than running natively on the filesystem (because meta data operations are shifted to the compute node - more information can be found here: 
 
+<!-- markdown-link-check-disable -->
 Rioux, Pierre, Gregory Kiar, Alexandre Hutton, Alan C. Evans, and Shawn T. Brown. ‘Deploying Large Fixed File Datasets with SquashFS and Singularity’. ArXiv:2002.06129 [Cs], 14 February 2020. https://arxiv.org/abs/2002.06129 ). 
+<!-- markdown-link-check-enable -->
 
 However, running Neurodesktop on Windows and Mac will have a performance penalty, because Linux runs in a Hypervisor on these systems. Also, it is important to understand filesystem operation bottlenecks that can occur when accessing files across system boundaries (e.g. processing DICOM files stored on Windows inside Neurodesk).
 
