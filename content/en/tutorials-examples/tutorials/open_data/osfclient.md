@@ -20,6 +20,13 @@ description: >
 
 The osfclient is an open-source tool to publish and access open datasets on the Open Science Framework (OSF): http://osf.io/
 
+# Setup an OSF token
+
+You can generate an OSF token under your user [settings](https://osf.io/settings/tokens). Then, set the OSF token as an environment variable:
+```Bash
+export OSF_TOKEN=YOURTOKEN
+```
+
 # Publish a dataset
 
 Here is an example how to publish a dataset on the OSF:
@@ -30,13 +37,6 @@ osf init
 # now copy your data into the directory, cd into the directory and then run:
 osf upload -r . osfstorage/data
 
-```
-
-# Setup an OSF token
-
-You can generate an OSF token under your user [settings](https://osf.io/settings/tokens). Then, set the OSF token as an environment variable:
-```Bash
-export OSF_TOKEN=YOURTOKEN
 ```
 
 # Access a dataset
