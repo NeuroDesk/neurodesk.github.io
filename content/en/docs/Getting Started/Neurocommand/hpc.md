@@ -131,7 +131,7 @@ salloc --nodes=1 --ntasks-per-node=1 --cpus-per-task=1 --mem=5G --job-name=TinyI
 ```
 <!-- markdown-link-check-enable -->
 
-Then load the neurodesk modules:
+Then use the neurodesk modules:
 ```
 module use /sw/local/rocky8/noarch/neuro/software/neurocommand/local/containers/modules/
 export APPTAINER_BINDPATH=/scratch,/QRISdata
@@ -147,3 +147,9 @@ Or you can module load any tool you need:
 ml qsmxt/6.4.1
 ```
 
+If you want to use GUI applications (fsleyes, afni, suma, ...) you need to overwrite the temporary directory to be /tmp (otherwise you get an error that it cannot connect to the DISPLAY):
+```
+export TMPDIR=/tmp 
+```
+
+If you are missing a new application please contact mail.neurodesk@gmail.com and ask for the neurodesk installation to be updated on Bunya!
