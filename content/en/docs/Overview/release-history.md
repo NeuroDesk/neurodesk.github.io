@@ -12,6 +12,37 @@ description: >-
 Latest Version
 : {{< params/neurodesktop/jupyter_neurodesk_version >}}
 
+## 2024-10-16
+- add jupyter-resource-usage plugin
+- disable VNC
+- remove updating of example directory on startup
+- update jupyter-server-proxy
+- add more CVMFS servers
+- Added relion 4.0.1.sm61 20240528
+- update aslprep to 0.7.0
+- update deepretinotpy to 1.0.5
+- add quickshear
+- add nighres 1.5.1
+- update bidscoin 4.3.3 and 4.4.0
+- Added bart 0.9.00
+- updated QSMxT to 7.1.0
+- Added mrtrix3src (latest version)
+- update VesselBoost to ver 1.0.0 by @KMarshallX in #301
+- add qmrlab 
+- added niimath
+- updated fsl to 6.0.7.8
+- update aslprep to 0.7.2
+- update ants to 2.5.3
+- updated spinalcordtoolbox to 6.4 
+- Update afni to 24.2.07 
+- add dcm2niix 
+- add micapipe 0.2.3 
+- added brainnetviewer 
+- Added brainlifecli 
+- update fmriprep to 24.1.0 
+- Update dsistudio 2024.06.12 
+- add vmtk 1.5.0
+
 ## 2024-05-25
 - add new CVMFS CDN servers
 - add jupyter_scheduler and ipycanvas
