@@ -25,7 +25,7 @@ jobs:
   build:
     runs-on: ubuntu-latest
     env:
-      HUGO_VERSION: 0.123.6
+      HUGO_VERSION: 0.112.7
     steps:
       - name: Install Hugo CLI
         run: |
@@ -41,8 +41,8 @@ jobs:
         id: pages
         uses: actions/configure-pages@v2
 
-      # - name: Set baseURL
-      #   run: sed -i "s|https://www.neurodesk.org/|${{ steps.pages.outputs.base_url }}/|g" config.toml
+      - name: Set baseURL
+        run: sed -i "s|https://www.neurodesk.org/|${{ steps.pages.outputs.base_url }}/|g" config.toml
 
       - name: Install dependencies
         run: | 
@@ -57,7 +57,6 @@ jobs:
           hugo \
             --minify \
             --baseURL "${{ steps.pages.outputs.base_url }}/"
-          ls -l public
 
       - name: Add custom domain
         if: github.repository == 'NeuroDesk/neurodesk.github.io'
