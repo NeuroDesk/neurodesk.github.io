@@ -42,7 +42,8 @@ jobs:
         uses: actions/configure-pages@v2
 
       - name: Set baseURL
-        run: sed -i "s|https://www.neurodesk.org/|${{ steps.pages.outputs.base_url }}/|g" config.toml
+        if: github.repository != 'NeuroDesk/neurodesk.github.io'  
+        run: sed -i "s|https://www.neurodesk.org/|${{ github.event.repository.name }}/|g" config.toml
 
       - name: Install dependencies
         run: | 
