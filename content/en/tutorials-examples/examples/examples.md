@@ -2,7 +2,7 @@
 title: "Examples"
 linkTitle: "Examples"
 weight: 10
-type: examples
+type: redirect
 description: >
   Examples
 redirect_url: https://www.neurodesk.org/example-notebooks/intro.html

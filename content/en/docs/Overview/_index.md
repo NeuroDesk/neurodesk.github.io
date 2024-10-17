@@ -42,21 +42,6 @@ Neurodesk originates from various projects at the Centre for Advanced Imaging th
 
 1. National Academies of Sciences, Engineering, and Medicine. 2019. Reproducibility and Replicability in Science. Washington, DC: The National Academies Press. https://doi.org/10.17226/25303.
 
-## Acknowledgments
-This work benefited from services and resources provided by the EGI Federation with the dedicated support of CESNET-MCC.
-
-![nif](/static/docs/overview/nif.png 'nif') ![uq](/static/docs/overview/uq_logo.png 'uq')
-
-![swinburne](/static/docs/overview/swinburne_uni_logo.png 'swinburne') ![liege](/static/docs/overview/liege_uni_logo.png 'liege') ![aws](/static/docs/overview/aws.png 'aws')
-
-## Funding
-Thank you to Google Cloud and AWS for providing cloud credits to support this project since 2024. We thank Oracle for Research for supporting our project from 2022 to 2023.
-
-This project is supported by an Australian Research Data Commons (ARDC) Platform project “Australian
-Electrophysiology Data Analytics PlaTform (AEDAPT)”.
-
-<img src="https://user-images.githubusercontent.com/4021595/119062104-3caf4400-ba19-11eb-8211-e2e9ce831a16.png" width="250">
-
 MIT License
 
 Copyright (c) 2021 NeuroDesk

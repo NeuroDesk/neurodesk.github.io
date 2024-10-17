@@ -1,9 +1,10 @@
 ---
 title: "Nectar Virtual Desktop Service"
 linkTitle: "Nectar Desktops"
-weight: 4
+weight: 10
 aliases:
 - /docs/neurodesktop/getting-started/nectar
+- /docs/getting-started/neurodesktop/nectar
 description: >
   Run neurodesktop in the Nectar Virtual Desktop Service
 ---

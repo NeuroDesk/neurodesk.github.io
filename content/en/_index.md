@@ -13,19 +13,10 @@ linktitle: Neurodesk
 		<div class="mx-auto mt-5">
 			<a class="btn btn-lg btn-light me-1 mb-4" target="_blank" href="docs/support/faq/#what-is-neurodesk">
 				What is Neurodesk ?</a>
-			<a class="btn btn-lg btn-light me-1 mb-4" target="_blank" href="docs/getting-started/neurodesktop/play">
-				<i class="fa fa-play"></i> Play </a>
-			<a class="btn btn-lg btn-light me-1 mb-4" target="_blank" href="docs/getting-started/neurodesktop/nectar">
-				<i class="fa fa-display"></i> Nectar </a>
-			<a class="btn btn-lg btn-light me-1 mb-4" target="_blank"
-				href="docs/getting-started/neurocontainers/googlecolab/">
-				<i class="fab fa-google"></i> Google Colab </a>
-			<a class="btn btn-lg btn-light me-1 mb-4" target="_blank" href="docs/getting-started/neurodesktop/windows">
-				<i class="fab fa-windows"></i> Windows </a>
-			<a class="btn btn-lg btn-light me-1 mb-4" target="_blank" href="docs/getting-started/neurodesktop/mac">
-				<i class="fab fa-apple"></i> MacOS </a>
-			<a class="btn btn-lg btn-light me-1 mb-4" target="_blank" href="docs/getting-started/neurodesktop/linux">
-				<i class="fab fa-linux"></i> Linux </a>
+			<a class="btn btn-lg btn-light me-1 mb-4" target="_blank" href="docs/getting-started/local">
+				<i class="fa fa-laptop"></i> Local </a>
+			<a class="btn btn-lg btn-light me-1 mb-4" target="_blank" href="docs/getting-started/hosted">
+				<i class="fa fa-cloud"></i> Hosted </a>
 		</div>
 	</div>
 </section>
@@ -275,22 +266,7 @@ linktitle: Neurodesk
 	</div>
 </section>
 
-<section class="row td-box -bg-white justify-content-left h-auto col-big-desktop">
-	<div class="td-box">
-		<h2>Acknowledgments</h2>
-	</div>
-	<div class="container-fluid extra-info">
-		<div>This work benefited from services and resources provided by the EGI Federation with the dedicated support of CESNET-MCC. Thank you to Google Cloud and AWS for providing cloud credits to support this project since 2024. We thank Oracle for Research for supporting our project from 2022 to 2023.</div>
-		<div class="row">
-			<div class="col-md-10 funding-col">
-				<img src="/static/docs/overview/nif.png">
-				<img src="/static/docs/overview/uq_logo.png ">
-				<img src="/static/docs/overview/aws.png ">
-				<img src="/static/docs/overview/swinburne_uni_logo.png">
-				<img src="/static/docs/overview/liege_uni_logo.png">
-			</div>
-		</div>
-	</div>
+<!-- <section class="row td-box -bg-white justify-content-left h-auto col-big-desktop">
 	<div class="td-box">
 		<h2>Funding</h2>
 	</div>
@@ -304,6 +280,6 @@ linktitle: Neurodesk
 			</div>
 		</div>
 	</div>
-</section>
+</section> -->
 
 <script src="/static/js/command.js"></script>
