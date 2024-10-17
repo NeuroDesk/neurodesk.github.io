@@ -41,9 +41,8 @@ jobs:
         id: pages
         uses: actions/configure-pages@v2
 
-      - name: Set baseURL
-        if: github.repository != 'NeuroDesk/neurodesk.github.io'  
-        run: sed -i "s|https://www.neurodesk.org/|${{ github.event.repository.name }}/|g" config.toml
+      # - name: Set baseURL
+      #   run: sed -i "s|https://www.neurodesk.org/|${{ steps.pages.outputs.base_url }}/|g" config.toml
 
       - name: Install dependencies
         run: | 
@@ -58,6 +57,7 @@ jobs:
           hugo \
             --minify \
             --baseURL "${{ steps.pages.outputs.base_url }}/"
+          ls -l public
 
       - name: Add custom domain
         if: github.repository == 'NeuroDesk/neurodesk.github.io'
