@@ -63,7 +63,7 @@ jobs:
         run: cp ./static/CNAME ./public/CNAME
 
       - name: Upload artifact
-        uses: actions/upload-pages-artifact@v3.0.1
+        uses: actions/upload-pages-artifact@v1
         with:
           path: ./public
 
