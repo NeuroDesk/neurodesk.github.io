@@ -266,20 +266,4 @@ linktitle: Neurodesk
 	</div>
 </section>
 
-<!-- <section class="row td-box -bg-white justify-content-left h-auto col-big-desktop">
-	<div class="td-box">
-		<h2>Funding</h2>
-	</div>
-	<div class="container-fluid extra-info">
-		<div class="row">
-			<div class="col-md-10 funding-col">
-				<img src="https://user-images.githubusercontent.com/4021595/119061922-db877080-ba18-11eb-9882-d53a25ec88ee.png"
-					width="250">
-				<img src="https://user-images.githubusercontent.com/4021595/119062104-3caf4400-ba19-11eb-8211-e2e9ce831a16.png"
-					width="250">
-			</div>
-		</div>
-	</div>
-</section> -->
-
 <script src="/static/js/command.js"></script>
