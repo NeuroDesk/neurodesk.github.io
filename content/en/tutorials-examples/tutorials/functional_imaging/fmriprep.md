@@ -24,7 +24,7 @@ description: >
 <!-- -->
 
 > _An example notebook can be found here:_
-> https://github.com/NeuroDesk/example-notebooks/blob/main/books/functional_imaging/fmriprep_example.ipynb
+> https://github.com/NeuroDesk/example-notebooks/blob/main/books/functional_imaging/fmriprep.ipynb
 >
 ---
 
