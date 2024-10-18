@@ -224,6 +224,11 @@ enable = false
 	url = "https://stats.uptimerobot.com/NBE38IZWZM"
  	icon = "fa fa-circle"
     desc = "Uptime"
+[[params.links.user]]
+	name = "Acknowledgements"
+	url = "/docs/overview/acknowledgement/"
+ 	icon = "fa fa-handshake"
+    desc = "Acknowledgements support and fundings for the project"
 
 [[menu.main]]
     name = "GitHub"
