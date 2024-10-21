@@ -44,4 +44,4 @@ https://colab.research.google.com/drive/1g5cnZxj1llRaHmOs4xSglqsXnFkQYuol?usp=sh
 This is a google colab notebook that shows how to integrate with google drive and contains an example how to run fMRIprep in google colab:
 https://colab.research.google.com/drive/11wVBkjNvrzo2TkUAILtWnPumAeFAfqkl?usp=sharing
 
-and more examples can be found here: https://github.com/NeuroDesk/example-notebooks/
+and more examples can be found [in our example library](https://www.neurodesk.org/example-notebooks/intro.html)
