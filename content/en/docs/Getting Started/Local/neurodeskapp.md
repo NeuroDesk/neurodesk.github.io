@@ -2,6 +2,8 @@
 title: "Neurodesk App"
 linkTitle: "Neurodesk App"
 weight: 1
+aliases:
+- /docs/getting-started/neurodesktop/neurodeskapp/
 description: >
   A cross-platform desktop application for Neurodesk: The easiest way to use Neurodesktop
 ---

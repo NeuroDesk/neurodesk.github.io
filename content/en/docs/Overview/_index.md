@@ -20,7 +20,7 @@ To read more about Docker containers, visit [the Docker webpage](https://www.doc
 #### More information: 
 - A 2 minute video explaining Neurodesk: [Neurodesk in 2 minutes](https://www.youtube.com/watch?v=JLv_5fycugw)
 - A 4 minute video getting started with Neurodesk: [Neurodesk in 4 minutes](https://www.youtube.com/watch?v=BffOZcV2oaY&ab_channel=NeuroDesk)
-- An online *interactive demo* you can try RIGHT NOW in your browser: https://neurodesk.github.io/docs/getting-started/neurodesktop/play/
+- An online interactive demo you can try RIGHT NOW in your browser: https://play.neurodesk.org/
 
 #### In-depth information:
 - A 15 minute video explaining what Neurodesk is: [Neurodesk in 15 minutes](https://youtu.be/2ATgTOsiGdY)
@@ -28,6 +28,7 @@ To read more about Docker containers, visit [the Docker webpage](https://www.doc
 - A 35 minute video explaining the technical details of Neurodesk: [Neurodesk in 35 minutes - behind the scenes](https://youtu.be/V5gAA9NiX_s)
 - A 50 minute video explaining the goals and implementation details of Neurodesk, Neurodesktop and AEDAPT: [ARDC TechTalk](https://drive.google.com/file/d/1Dmtj6jpE1jcAt63kv2KhPL7WuuQxnsPg/view),[Slides](https://docs.google.com/presentation/d/15a_Uj_ZqL4OH9xd_QFtGk4HFWTqzqkcYXzPfz2fSw0s/present?slide=id.g11ecd613955_0_543)
 - A 1 hour video showcasing Neurodesk live and explaining the background: [ReproNim Webinar](https://www.youtube.com/watch?v=HY-TqE6I2oo)
+- A video explaining using Neurodesk for open data and open analysis: [OHBM Webinar](https://youtu.be/RTy5iVHHGO8?si=1XWcBuDlC7jdzhSo&t=3350)
 
 ## What applications are included in Neurodesk?
 You can check out the complete list of [these applications](/docs/overview/applications)
@@ -41,21 +42,6 @@ Neurodesk originates from various projects at the Centre for Advanced Imaging th
 ## References
 
 1. National Academies of Sciences, Engineering, and Medicine. 2019. Reproducibility and Replicability in Science. Washington, DC: The National Academies Press. https://doi.org/10.17226/25303.
-
-## Acknowledgments
-This work benefited from services and resources provided by the EGI Federation with the dedicated support of CESNET-MCC.
-
-![nif](/static/docs/overview/nif.png 'nif') ![uq](/static/docs/overview/uq_logo.png 'uq')
-
-![swinburne](/static/docs/overview/swinburne_uni_logo.png 'swinburne') ![liege](/static/docs/overview/liege_uni_logo.png 'liege') ![aws](/static/docs/overview/aws.png 'aws')
-
-## Funding
-Thank you to Google Cloud and AWS for providing cloud credits to support this project since 2024. We thank Oracle for Research for supporting our project from 2022 to 2023.
-
-This project is supported by an Australian Research Data Commons (ARDC) Platform project “Australian
-Electrophysiology Data Analytics PlaTform (AEDAPT)”.
-
-<img src="https://user-images.githubusercontent.com/4021595/119062104-3caf4400-ba19-11eb-8211-e2e9ce831a16.png" width="250">
 
 MIT License
 
