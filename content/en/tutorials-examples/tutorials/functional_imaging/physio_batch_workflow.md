@@ -2,7 +2,7 @@
 title: "A batch scripting example for PhysIO toolbox"
 linkTitle: "PhysIO_Batch"
 weight: 1
-tags: ["template", "documentation"]
+tags: ["fMRI", "documentation"]
 author: Kelly G. Garner
 aliases:
 - /tutorials/functional_imaging/physio_batch_workflow
