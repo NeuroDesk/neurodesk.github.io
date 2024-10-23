@@ -12,6 +12,13 @@ description: >-
 Latest Version
 : {{< params/neurodesktop/jupyter_neurodesk_version >}}
 
+## 2024-10-22
+- use cloudfront distribution only
+- workaround for kernel bug on arm64
+- add ipywidgets ipyvolume jupyterlab_widgets
+- add fsl 6.0.7.14
+- add QSMxT v7.2.1 
+
 ## 2024-10-16
 - add jupyter-resource-usage plugin
 - disable VNC
