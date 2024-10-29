@@ -115,9 +115,21 @@ Neurodesk App stores data in ~/neurodesktop-storage for Linux and Mac, or C:/neu
 
 Neurodesk App stores its data in the following locations:
 
-- By default, /home/jovyan/neurodesktop-storage in the app (which is bound with local directory ~/neurodesktop-storage in Unix or C:/neurodesktop-storage in Windows)
+- By default, /home/jovyan/neurodesktop-storage in the app (which is bound with local directory ~/neurodesktop-storage in Unix/MacOS or C:/neurodesktop-storage in Windows)
 
 - By choice, in the settings window below, select `Additional Directory` on the left side bar, click `Change` button to select the local directory, then click `Apply & restart`. The next time you start the app, the data from the local directory can be found in /home/jovyan/data.
+
+{{< alert color="info">}}
+If you are using Windows it is currently not possible to mount external hard drives. We recommend copying data from the external drive to your local disk first and then processing it in Neurodesk. 
+{{< /alert >}}
+
+\{{< alert color="info">}}
+If you are using MacOS and Docker. Mounting an external hard drive will work out of the box. If you are using Podman you have to modify the Podman settings with the following commands: 
+```
+podman machine reset -f   
+podman machine init --rootful --now -v /Volumes:/Volumes -v $HOME:$HOME podman-machine-default
+```
+{{< /alert >}}
 
 ![Additional Directory](/static/docs/getting-started/neurodeskapp/additional_dir.png "Add data")
 
