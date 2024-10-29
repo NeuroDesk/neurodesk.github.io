@@ -17,7 +17,9 @@ Alternatively, Neurodesk also works with Podman, follow the Podman installation 
 Docker currently has a bug on ARM Apple Silicon Hardware (M1/M2/M3/M4) - the workaround is to install Podman: https://podman.io/docs/installation
 
 and then select Podman in the Options of the Neurodesk App:
-<img width="696" alt="image" src="https://github.com/user-attachments/assets/623334ad-2f65-40bc-9131-c9d271ec4210">
+![Screenshot 2024-10-29 at 3 15 51 PM](https://github.com/user-attachments/assets/6546bd5e-71c2-4bdf-bda4-f3a5eaa90616)
+
+<img width="696" alt="select-podman" src="https://github.com/user-attachments/assets/623334ad-2f65-40bc-9131-c9d271ec4210">
 
 {{< /alert >}}
 
