@@ -123,8 +123,8 @@ Neurodesk App stores its data in the following locations:
 If you are using Windows it is currently not possible to mount external hard drives. We recommend copying data from the external drive to your local disk first and then processing it in Neurodesk. 
 {{< /alert >}}
 
-\{{< alert color="info">}}
-If you are using MacOS and Docker. Mounting an external hard drive will work out of the box. If you are using Podman you have to modify the Podman settings with the following commands: 
+{{< alert color="info">}}
+If you are using MacOS and Docker mounting an external hard drive will work out of the box. If you are using Podman you have to modify the Podman machine settings with the following commands once and then set the path in the Neurodesk App: 
 ```
 podman machine reset -f   
 podman machine init --rootful --now -v /Volumes:/Volumes -v $HOME:$HOME podman-machine-default
