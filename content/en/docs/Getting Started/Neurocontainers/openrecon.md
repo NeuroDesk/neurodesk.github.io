@@ -6,7 +6,7 @@ description: >
 ---
 
 ## 1) add the installation of the Python MRD server to any recipe in https://github.com/NeuroDesk/neurocontainers
-Make sure to adjust invertcontrast.py to your pipeline needs
+Make sure to adjust invertcontrast.py to your pipeline needs (or replace/rename other files from the [Python MRD server](https://github.com/kspaceKelvin/python-ismrmrd-server):
 ```bash
 --workdir='/opt/code' \
 --install build-essential libxslt1.1 libhdf5-103 libboost-program-options1.74.0 libpugixml1v5 vim dos2unix git cmake g++ libhdf5-dev libxml2-dev libxslt1-dev libboost-all-dev libfftw3-dev libpugixml-dev \
