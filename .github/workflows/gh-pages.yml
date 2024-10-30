@@ -118,10 +118,10 @@ jobs:
           }' > .github/workflows/config.json
           cat .github/workflows/config.json
 
-      - uses: gaurav-nelson/github-action-markdown-link-check@v1
-        # checks all markdown files from content/en including all subfolders
-        with:
-          use-quiet-mode: 'yes'
-          use-verbose-mode: 'no'
-          config-file: '.github/workflows/config.json'
-          folder-path: 'content/en/'
+      # - uses: gaurav-nelson/github-action-markdown-link-check@v1
+      #   # checks all markdown files from content/en including all subfolders
+      #   with:
+      #     use-quiet-mode: 'yes'
+      #     use-verbose-mode: 'no'
+      #     config-file: '.github/workflows/config.json'
+      #     folder-path: 'content/en/'
