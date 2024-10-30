@@ -31,16 +31,6 @@ sudo apt-get -y install podman
 ```
 {{< /alert >}}
 
-For the client setup, execute the following commands.
-
-```bash
-systemctl --user --now enable podman.socket
-sudo loginctl enable-linger $USER
-ssh-keygen -t ed25519 -f ~/.ssh/id_ed25519
-cat  ~/.ssh/id_ed25519.pub | cat >> ~/.ssh/authorized_keys
-podman system connection add development --identity ~/.ssh/id_ed25519 ssh://$USER@$HOSTNAME/run/user/$UID/podman/podman.sock
-```
-
 ### 1. Optional: only for ARM64 hardware
 Neurodesk supports ARM64 hardware through binfmt
 
