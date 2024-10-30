@@ -1,7 +1,7 @@
 dirs:
   - content/en/
 ignorePatterns:
-  - pattern: '^https://twitter.com
+  - pattern: '^https://twitter.com'
   - pattern: '^http://localhost'
 useGitIgnore: true
 aliveStatusCodes:
