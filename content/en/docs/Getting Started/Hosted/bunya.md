@@ -29,3 +29,10 @@ Or you can module load any tool you need:
 ```
 ml qsmxt/6.4.1
 ```
+
+If you want to use GUI applications (fsleyes, afni, suma, ...) you need to overwrite the temporary directory to be /tmp (otherwise you get an error that it cannot connect to the DISPLAY):
+```
+export TMPDIR=/tmp 
+```
+
+If you are missing an application, please contact mail.neurodesk@gmail.com and ask for the neurodesk installation to be updated on Bunya :)
