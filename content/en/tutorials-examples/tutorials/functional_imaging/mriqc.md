@@ -30,6 +30,10 @@ description: >
 - [ ] Your data is already in [BIDS format](https://bids.neuroimaging.io/)
 - [ ] You plan to run mriqc using Neurodesk
 
+NOTE: MRIQC has its $HOME variable hardcoded to be /home/mriqc. This leads to problems on some HPCs. A workaround is to run this before mriqc:
+```
+export neurodesk_singularity_opts="--home $HOME:/home"
+```
 ---
 
 # Steps
