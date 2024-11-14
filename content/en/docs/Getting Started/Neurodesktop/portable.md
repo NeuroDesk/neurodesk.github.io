@@ -1,11 +1,11 @@
 ---
 title: "Portable"
-linkTitle: "Portable Unprivlaged NeuroDesktop"
+linkTitle: "Portable Unprivileged NeuroDesktop"
 weight: 1
 aliases:
 - /docs/getting-started/neurodesktop/portable/
 description: >
-  An experimental unprivlaged option for running NeuroDesktop without Docker or Podman.
+  An experimental unprivileged option for running NeuroDesktop without Docker or Podman.
 ---
 
 ### Minimum System Requirements
@@ -34,15 +34,15 @@ TinyRange (https://github.com/tinyrange/tinyrange) is a lightweight runtime for 
 
 ## Installing TinyRange
 
-- Just unzip the archive to some local path on your computer. It's recomended not to extract it to a network drive.
+- Unzip the archive to some local path on your computer. It's recommended not to extract it to a network drive.
 - Open a terminal in the extracted archive and run `./tinyrange login`.
 - Once you see the `tinyrange:~#` type `exit`.
 
 ## Running NeuroDesktop
 
-- Just open a terminal in the TinyRange folder and run `./tinyrange login -c https://github.com/NeuroDesk/neurodesktop/raw/refs/heads/main/neurodesk.yml`
-- The container will start up like normal.
-- Use Control+C to exit.
+- Open a terminal in the TinyRange folder and run `./tinyrange login -c https://github.com/NeuroDesk/neurodesktop/raw/refs/heads/main/neurodesk.yml`
+- Neurodesktop will start up. Copy and paste the Jupyterhub link at the end of the output to a browser.
+- Use Control+C in the terminal to exit.
 
 ### Folder Sharing
 
@@ -60,6 +60,6 @@ The folder share is currently **Read-Only**.
 
 ### Enabling Hardware Acceleration
 
-- **Windows:** This requires admin privilages. Search in your start menu for "Turn Windows features on or off.". Find "Hyper-V Hypervisor" or "Windows Hypervisor Platform" and make sure it's enabled. Then restart your computer.
+- **Windows:** This requires admin privileges. Search in your start menu for "Turn Windows features on or off.". Find "Hyper-V Hypervisor" or "Windows Hypervisor Platform" and make sure it's enabled. Then restart your computer.
 - **Ubuntu/Other Linux:** It should already work out of the box. If not make sure your user account has permission to read/write `/dev/kvm`.
 - **MacOS:** No extra steps required. It already works.
