@@ -15,7 +15,7 @@ description: >
 
 ## Downloading TinyRange
 
-TinyRange (https://github.com/tinyrange/tinyrange) is a lightweight runtime 
+TinyRange (https://github.com/tinyrange/tinyrange) is a lightweight runtime for running Virtual Machines and Containers. It runs without admin privilages and doesn't need Docker or Podman installed to work.
 
 - **Windows:** https://github.com/tinyrange/tinyrange/releases/download/v0.1.1/tinyrange-windows-amd64.zip
 <!-- - **MacOS:** https://github.com/tinyrange/tinyrange/releases/download/v0.1.1/tinyrange-darwin-arm64.zip -->
