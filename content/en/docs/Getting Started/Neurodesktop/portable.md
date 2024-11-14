@@ -1,6 +1,6 @@
 ---
-title: "Portable"
-linkTitle: "Portable Unprivileged NeuroDesktop"
+title: "Portable Unprivileged NeuroDesktop"
+linkTitle: "Portable"
 weight: 1
 aliases:
 - /docs/getting-started/neurodesktop/portable/
