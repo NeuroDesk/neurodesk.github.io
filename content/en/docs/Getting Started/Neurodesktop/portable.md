@@ -17,10 +17,10 @@ description: >
 
 TinyRange (https://github.com/tinyrange/tinyrange) is a lightweight runtime for running Virtual Machines and Containers. It runs without admin privilages and doesn't need Docker or Podman installed to work.
 
-- **Windows:** https://github.com/tinyrange/tinyrange/releases/download/v0.1.1/tinyrange-windows-amd64.zip
-<!-- - **MacOS:** https://github.com/tinyrange/tinyrange/releases/download/v0.1.1/tinyrange-darwin-arm64.zip -->
-- **Linux (x86_64):** https://github.com/tinyrange/tinyrange/releases/download/v0.1.1/tinyrange-linux-amd64.zip
-<!-- - **Linux (arm64):** https://github.com/tinyrange/tinyrange/releases/download/v0.1.1/tinyrange-linux-arm64.zip -->
+- **Windows:** https://github.com/tinyrange/tinyrange/releases/download/v0.1.2/tinyrange-windows-amd64.zip
+- **MacOS:** https://github.com/tinyrange/tinyrange/releases/download/v0.1.2/tinyrange-darwin-arm64.zip
+- **Linux (x86_64):** https://github.com/tinyrange/tinyrange/releases/download/v0.1.2/tinyrange-linux-amd64.zip
+- **Linux (arm64):** https://github.com/tinyrange/tinyrange/releases/download/v0.1.2/tinyrange-linux-arm64.zip
 
 {{< alert color="info" >}}
 **Windows on ARM:** TinyRange is not currently supported on Windows for ARM (Copilot+ Laptops with ARM64/Snapdragon CPUs)
@@ -30,7 +30,7 @@ TinyRange (https://github.com/tinyrange/tinyrange) is a lightweight runtime for 
 
 - **Windows:** TinyRange already includes QEMU so you can skip this step.
 - **Ubuntu:** `sudo apt install qemu-kvm`
-<!-- - **MacOS:** `brew install qemu` -->
+- **MacOS:** `brew install qemu`
 
 ## Installing TinyRange
 
@@ -62,4 +62,4 @@ The folder share is currently **Read-Only**.
 
 - **Windows:** This requires admin privilages. Search in your start menu for "Turn Windows features on or off.". Find "Hyper-V Hypervisor" or "Windows Hypervisor Platform" and make sure it's enabled. Then restart your computer.
 - **Ubuntu/Other Linux:** It should already work out of the box. If not make sure your user account has permission to read/write `/dev/kvm`.
-<!-- - **MacOS:** No extra steps required. It already works. -->
+- **MacOS:** No extra steps required. It already works.
