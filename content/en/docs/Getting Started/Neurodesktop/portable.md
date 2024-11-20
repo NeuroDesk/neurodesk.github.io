@@ -48,6 +48,11 @@ TinyRange (https://github.com/tinyrange/tinyrange) is a lightweight runtime for 
 
 Use `--mount ~/neurodesktop-storage` to share `neurodesktop-storage`.
 
+For example:
+```
+./tinyrange login -c https://github.com/NeuroDesk/neurodesktop/raw/refs/heads/main/neurodesk.yml --mount ~/neurodesktop-storage
+```
+
 {{< alert color="info" >}}
 The folder share is currently **Read-Only**. This will be fixed in the next update. To exchange files use the Jupyter Filebrowser upload and download functionality for now.
 {{< /alert >}}
