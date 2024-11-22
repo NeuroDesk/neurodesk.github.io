@@ -15,7 +15,7 @@ description: >
 
 ## Downloading TinyRange
 
-TinyRange (https://github.com/tinyrange/tinyrange) is a lightweight runtime for running Virtual Machines and Containers. It runs without admin privilages and doesn't need Docker or Podman installed to work.
+TinyRange (https://github.com/tinyrange/tinyrange) is a lightweight runtime for running Virtual Machines and Containers. It runs without admin privileges and doesn't need Docker or Podman installed to work.
 
 - **Windows:** https://github.com/tinyrange/tinyrange/releases/download/v0.1.4/tinyrange-windows-amd64.zip
 - **MacOS:** https://github.com/tinyrange/tinyrange/releases/download/v0.1.4/tinyrange-darwin-arm64.zip
@@ -35,22 +35,25 @@ TinyRange (https://github.com/tinyrange/tinyrange) is a lightweight runtime for 
 ## Installing TinyRange
 
 - Unzip the archive to some local path on your computer. It's recommended not to extract it to a network drive.
-- Open a terminal in the extracted archive and run `./tinyrange login`.
+- Open a terminal in the extracted archive and run `./tinyrange login` or `tinyrange login` on Windows.
 - Once you see the `tinyrange:~#` type `exit`.
 
 ## Running NeuroDesktop
 
-- Open a terminal in the TinyRange folder and run `./tinyrange login -c https://github.com/NeuroDesk/neurodesktop/raw/refs/heads/main/neurodesk.yml`
-- Neurodesktop will start up. Copy and paste the Jupyterhub link at the end of the output to a browser.
+- Open a terminal in the TinyRange folder and run `./tinyrange login -c https://github.com/NeuroDesk/neurodesktop/raw/refs/heads/main/neurodesk.yml` or `tinyrange login -c https://github.com/NeuroDesk/neurodesktop/raw/refs/heads/main/neurodesk.yml` on Windows
+- Neurodesktop will start up. Copy and paste the Jupyterhub link (starting with 127.0.0.1) at the end of the output to a browser.
 - Use Control+C in the terminal to exit.
 
 ### Folder Sharing
 
-Use `--mount ~/neurodesktop-storage` to share `neurodesktop-storage`.
+Use `--mount ~/neurodesktop-storage` to share `neurodesktop-storage` (in Linux and MacOS)
+Use `--mount C:/neurodesktop-storage` to share `C:/neurodesktop-storage` (in Linux and MacOS) 
+
+The mounted directories will be visible under /shared inside Neurodesk. 
 
 For example:
 ```
-./tinyrange login -c https://github.com/NeuroDesk/neurodesktop/raw/refs/heads/main/neurodesk.yml --mount ~/neurodesktop-storage
+./tinyrange login -c https://github.com/NeuroDesk/neurodesktop/raw/refs/heads/main/neurodesk.yml --mount C:/neurodesktop-storage
 ```
 
 {{< alert color="info" >}}
