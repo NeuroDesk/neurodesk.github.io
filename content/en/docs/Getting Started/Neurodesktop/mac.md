@@ -14,16 +14,6 @@ Install Docker from here: https://docs.docker.com/get-docker/
 Alternatively, Neurodesk also works with Podman, follow the Podman installation instructions provided at https://podman.io/docs/installation.
 
 {{< alert color="warning" >}}
-Docker currently has a bug on ARM Apple Silicon Hardware (M1/M2/M3/M4) - the workaround is to install Podman: https://podman.io/docs/installation
-
-and then select Podman in the Options of the Neurodesk App:
-![Screenshot 2024-10-29 at 3 15 51 PM](https://github.com/user-attachments/assets/6546bd5e-71c2-4bdf-bda4-f3a5eaa90616)
-
-<img width="696" alt="select-podman" src="https://github.com/user-attachments/assets/623334ad-2f65-40bc-9131-c9d271ec4210">
-
-{{< /alert >}}
-
-{{< alert color="warning" >}}
 Docker for MacOS by default runs with 2GB Memory. For actual workloads, 4GB Memory minimum for docker is highly recommended. You need to adjust this: 
 1. Open the Docker Desktop and Navigate to the Settings. Then navigate to the "Resources" section. 
 2. Increase the Memory slider from 2.00 GB to 4.00 GB (or greater)
@@ -55,10 +45,6 @@ docker run \
 ```
 
 <!-- neurodesktop version found in neurodesk.github.io/data/neurodesktop.toml -->
-
-{{< alert color="warning" >}}
-There is a bug in docker 3.3.0 for Mac that makes this command not run correctly so that there is no application menu when the desktop is started. Update your docker version if you see this!
-{{< /alert >}}
 
 If you get errors in neurodesktop then check if the ~/neurodesktop-storage directory is writable for all users. If it is not, run `chmod a+rwx ~/neurodesktop-storage`
 
