@@ -14,7 +14,7 @@ description: >
 
 > _This tutorial was created by Kelly G. Garner._ 
 >
-> Github: [@kel_github](https://github.com/kel-github)
+> Github: [@kel_github](https://github.com/garner-code)
 >
 
 > This workflow documents how to use MRIQC with neurodesk and provides some details that may help you troubleshoot some common problems I found along the way. 

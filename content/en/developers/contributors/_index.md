@@ -97,7 +97,7 @@ If you contributed to the project please list yourself here with a description o
 - bugfixes in neurodesktop, added tool for diskusage, checking of new version script
 
 ## Kelly Garner
-- https://github.com/kel-github
+- https://github.com/garner-code
 - tutorials (fmriprep, mriqc, physio batch)
 - user testing on MacOS
 

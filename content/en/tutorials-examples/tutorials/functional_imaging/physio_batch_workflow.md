@@ -34,7 +34,7 @@ This tutorial assumes the following:
 4. That you have a file that contains the motion regressors you plan to use in your GLM. I'll talk below a bit about what I did with the output given by fmriprep (e.g. ..._desc-confounds_timeseries.tsv')
 5. That you can use SPM12 and the PhysIO GUI to initialise your batch code
 
-NB. You can see the code generated from this tutorial [here](https://github.com/kel-github/imaging_cert_value_7T_pipeline/tree/master/physiol_regress) <p> 
+NB. You can see the code generated from this tutorial [here](https://github.com/garner-code/imaging_cert_value_7T_pipeline/tree/master/physiol_regress) <p> 
 
 # 1. Generate an example script for batching
 
@@ -42,7 +42,7 @@ First you will create an example batch script that is specific to one of your pa
 
 To work with PhysIO toolbox, your motion parameters need to be in the .txt format as required by SPM.  
 
-I made some simple functions in python that would extract my desired movement regressors and save them to the space separated .txt file as is required by SPM. They can be found [here](https://github.com/kel-github/imaging_cert_value_7T_pipeline/tree/master/physiol_regress/get_movement_regressors).
+I made some simple functions in python that would extract my desired movement regressors and save them to the space separated .txt file as is required by SPM. They can be found [here](https://github.com/garner-code/imaging_cert_value_7T_pipeline/tree/master/physiol_regress/get_movement_regressors).
 
 Once I had my .log files and .txt motion regressors file, I followed the instructions [here](https://gitlab.ethz.ch/physio/physio-doc/-/wikis/QUICKSTART) to get going with the Batch editor, and used [this paper](https://doi.org/10.1016/j.jneumeth.2016.10.019) to aid my understanding of how to complete the fields requested by the Batch editor. 
 
@@ -72,7 +72,7 @@ Now that you have an example script that contains the specific details for a sin
 %    participant (.txt, formatted for SPM)
 ```
 
-To see the functions that produce this information, you can go to this [repo here](https://github.com/kel-github/imaging_cert_value_7T_pipeline/tree/master/physiol_regress) 
+To see the functions that produce this information, you can go to this [repo here](https://github.com/garner-code/imaging_cert_value_7T_pipeline/tree/master/physiol_regress) 
 
 - Next I amended the batch script to load a given participant's info file and to retrieve this information for the required fields in the batch. The batch script winds up looking like this:
 

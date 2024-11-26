@@ -70,12 +70,13 @@ jobs:
 
   check-links:
     runs-on: ubuntu-latest
+    needs: build
     steps:
       - uses: actions/checkout@v4
       - name: Run linkspector
         uses: umbrelladocs/action-linkspector@v1
         with:
-          fail_on_error: false
+          fail_on_error: true
           reporter: github-check
           config_file: .linkspector.yml
           filter_mode: nofilter
@@ -85,7 +86,7 @@ jobs:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
-    needs: build
+    needs: check-links
     steps:
       - name: Deploy to GitHub Pages
         id: deployment

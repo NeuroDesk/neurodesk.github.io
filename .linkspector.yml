@@ -10,4 +10,4 @@ aliveStatusCodes:
   - 204
 replacementPatterns:
   - pattern: "^/"
-    replacement: "${{ steps.pages.outputs.base_url }}/"
+    replacement: "https://neurodesk.org/"
