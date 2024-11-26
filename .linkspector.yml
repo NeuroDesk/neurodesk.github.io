@@ -1,2 +1,15 @@
 dirs:
   - content/en/
+ignorePatterns:
+  - pattern: '^https://twitter.com'
+  - pattern: '^http://localhost'
+useGitIgnore: true
+aliveStatusCodes:
+  - 200
+  - 201
+  - 204
+replacementPatterns:
+  - pattern: "^/"
+    replacement: "${{ steps.pages.outputs.base_url }}/"
+filter_mode: nofilter
+fail_on_error: true

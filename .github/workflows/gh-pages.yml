@@ -67,6 +67,14 @@ jobs:
         with:
           path: ./public
 
+      - name: Run linkspector
+        uses: umbrelladocs/action-linkspector@v1
+        with:
+          fail_on_error: true
+          reporter: github-check
+          config_file: .linkspector.yml
+  
+
   deploy:
     environment:
       name: github-pages
@@ -125,9 +133,3 @@ jobs:
       #     use-verbose-mode: 'no'
       #     config-file: '.github/workflows/config.json'
       #     folder-path: 'content/en/'
-      - name: Run linkspector
-        uses: umbrelladocs/action-linkspector@v1
-        with:
-          fail_on_error: true
-          reporter: github-check
-          config_file: .linkspector.yml
