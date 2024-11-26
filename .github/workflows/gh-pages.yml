@@ -125,9 +125,10 @@ jobs:
       #     use-verbose-mode: 'no'
       #     config-file: '.github/workflows/config.json'
       #     folder-path: 'content/en/'
-      # - name: Run linkspector
-      #   uses: umbrelladocs/action-linkspector@v1
-      #   with:
-      #     github_token: ${{ secrets.github_token }}
-      #     fail_on_error: true
-      #     config_file: .linkspector.yml
+      - name: Run linkspector
+        uses: umbrelladocs/action-linkspector@v1
+        with:
+          github_token: ${{ secrets.github_token }}
+          fail_on_error: true
+          reporter: github-check
+          config_file: .linkspector.yml

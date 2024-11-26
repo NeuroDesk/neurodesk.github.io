@@ -11,3 +11,5 @@ aliveStatusCodes:
 replacementPatterns:
   - pattern: "^/"
     replacement: "${{ steps.pages.outputs.base_url }}/"
+filter_mode: nofilter
+fail_on_error: true
