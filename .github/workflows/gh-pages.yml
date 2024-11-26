@@ -73,6 +73,7 @@ jobs:
           fail_on_error: true
           reporter: github-check
           config_file: .linkspector.yml
+          filter_mode: nofilter
   
 
   deploy:
