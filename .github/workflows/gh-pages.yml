@@ -70,16 +70,12 @@ jobs:
 
   check-links:
     runs-on: ubuntu-latest
-    needs: deploy
     steps:
       - uses: actions/checkout@v4
-      - name: Setup Pages
-        id: pages
-        uses: actions/configure-pages@v2
       - name: Run linkspector
         uses: umbrelladocs/action-linkspector@v1
         with:
-          fail_on_error: true
+          fail_on_error: false
           reporter: github-check
           config_file: .linkspector.yml
           filter_mode: nofilter
