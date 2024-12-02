@@ -237,7 +237,7 @@ sudo touch /var/log/cvmfs_debug.log
 sudo chown cvmfs /var/log/cvmfs_debug.log
 
 sudo vi /etc/cvmfs/config.d/neurodesk.ardc.edu.au.conf
-echo "CVMFS_DEBUGLOG=/var/log/cvmfs_debug.log" | sudo tee -a /etc/cvmfs/default.local
+echo -e "\nCVMFS_DEBUGLOG=/var/log/cvmfs_debug.log" | sudo tee -a /etc/cvmfs/default.local
 cat /etc/cvmfs/default.local
 sudo cvmfs_config umount
 sudo service autofs stop
