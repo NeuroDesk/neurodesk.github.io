@@ -231,8 +231,20 @@ sudo cvmfs_talk -i neurodesk.ardc.edu.au host probe
 sudo cvmfs_talk -i neurodesk.ardc.edu.au host info
 
 # Change settings
+sudo touch /var/log/cvmfs_debug.log.cachemgr
+sudo chown cvmfs /var/log/cvmfs_debug.log.cachemgr
+sudo touch /var/log/cvmfs_debug.log
+sudo chown cvmfs /var/log/cvmfs_debug.log
+
 sudo vi /etc/cvmfs/config.d/neurodesk.ardc.edu.au.conf
+echo "CVMFS_DEBUGLOG=/var/log/cvmfs_debug.log" | sudo tee -a /etc/cvmfs/default.local
+cat /etc/cvmfs/default.local
 sudo cvmfs_config umount
 sudo service autofs stop
 sudo mount -t cvmfs neurodesk.ardc.edu.au /cvmfs/neurodesk.ardc.edu.au
+# check if new settings are applied correctly:
+cvmfs_config showconfig neurodesk.ardc.edu.au
+
+cat /var/log/cvmfs_debug.log
+cat /var/log/cvmfs_debug.log.cachemgr 
 ```
