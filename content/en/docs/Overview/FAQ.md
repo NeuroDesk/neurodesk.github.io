@@ -30,6 +30,14 @@ You can check out the complete list of [these applications](/docs/overview/appli
 ## How should I cite the tools I am using and Neurodesk itself?
 [See here](/docs/overview/how-to-cite-us)
 
+## Can I change the desktop resolution?
+Yes, 
+
+In a VNC session run `lxrandr` to change the desktop resolution
+<img width="907" alt="image" src="https://github.com/user-attachments/assets/548941cb-6f7d-47ba-87c0-844fa20da19a">
+
+In an RDP session refresh the webpage to adjust to the new window size
+
 ## Can I run Neurodesk on an HPC without Docker?
 Yes, our project aims to run on the hardware you have access to. However, without docker support you cannot use our desktop interface [NeuroDesktop](/docs/getting-started/neurodesktop) but you can still use the command line interface [NeuroCommand on HPC](https://www.neurodesk.org/docs/getting-started/neurocommand). This works well for batch processing on HPCs once you developed your pipeline in our desktop interface. If your HPC provides a desktop interface you can use all our graphical applications without any issues and the GUIs even work via SSH x-forwarding - it's not the most performant experience, but it works well enough.
 
