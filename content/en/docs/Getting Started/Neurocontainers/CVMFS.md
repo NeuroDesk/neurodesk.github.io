@@ -40,7 +40,7 @@ NQIDAQAB
 
 echo "CVMFS_USE_GEOAPI=no" | sudo tee /etc/cvmfs/config.d/neurodesk.ardc.edu.au.conf
 
-echo 'CVMFS_SERVER_URL="http://cvmfs.neurodesk.org/cvmfs/@fqrn@"' | sudo tee -a /etc/cvmfs/config.d/neurodesk.ardc.edu.au.conf 
+echo 'CVMFS_SERVER_URL="http://s1perth-cvmfs.openhtc.io/cvmfs/@fqrn@;http://s1fnal-cvmfs.openhtc.io:8080/cvmfs/@fqrn@;http://s1sampa-cvmfs.openhtc.io:8080/cvmfs/@fqrn@;http://s1osggoc-cvmfs.openhtc.io:8080/cvmfs/@fqrn@;http://s1brisbane-cvmfs.openhtc.io/cvmfs/@fqrn@;http://s1nikhef-cvmfs.openhtc.io/cvmfs/@fqrn@;http://cvmfs.neurodesk.org/cvmfs/@fqrn@;http://ec2-3-72-92-91.eu-central-1.compute.amazonaws.com/cvmfs/@fqrn@;http://s1bnl-cvmfs.openhtc.io/cvmfs/@fqrn@"' | sudo tee -a /etc/cvmfs/config.d/neurodesk.ardc.edu.au.conf 
 
 echo 'CVMFS_KEYS_DIR="/etc/cvmfs/keys/ardc.edu.au/"' | sudo tee -a /etc/cvmfs/config.d/neurodesk.ardc.edu.au.conf
 
@@ -49,6 +49,61 @@ echo "CVMFS_QUOTA_LIMIT=5000" | sudo tee -a  /etc/cvmfs/default.local
 
 sudo cvmfs_config setup
 ```
+
+We use the following CVMFS server setup:
+
+These CVMFS Stratum 1 servers are hosted by the Open Science Grid and every server has a Cloudflare CDN alias that is correctly located through the Maxmind GEOAPI service in the CVMFS client: 
+- Illinois, USA:             s1fnal-cvmfs.openhtc.io:8080     -> cvmfs-s1fnal.opensciencegrid.org:8000
+- Sao Paulo, Brazil:         s1sampa-cvmfs.openhtc.io:8080    -> sampacs01.if.usp.br:8000
+- Lincoln, Nebraska, USA:    s1osggoc-cvmfs.openhtc.io:8080   -> cvmfs-s1goc.opensciencegrid.org:8000
+- Netherlands, Europe:       s1nikhef-cvmfs.openhtc.io        -> cvmfs01.nikhef.nl:8000
+- US:                        s1bnl-cvmfs.openhtc.io:8080      -> cvmfs-s1bnl.opensciencegrid.org:8000
+
+This CVMFS Stratum 1 server is hosted by ARDC Nectar Cloud and also has a Cloudflare CDN alias.
+- Brisbane, Queensland, Australia: s1brisbane-cvmfs.openhtc.io -> cvmfs-brisbane.neurodesk.org
+
+This CVMFS Stratum 1 server is hosted by Pawseys Nimbus Cloud and also has a Cloudflare CDN alias.
+- Perth, Western Australia, Australia: s1perth-cvmfs.openhtc.io -> cvmfs-perth.neurodesk.org
+
+This CVMFS Stratum 1 server is hosted by AWS:
+- Frankfurt, Germany: ec2-3-72-92-91.eu-central-1.compute.amazonaws.com
+
+Then we have a Cloudfront CDN setup on AWS, which works by having one geolocation-steered domain:
+cvmfs-geoproximity.neurodesk.org:
+- 153.02 (Longitude),-27.46 (Latitude) -> cvmfs-brisbane.neurodesk.org
+- 115.86,-31.95 -> cvmfs-perth.neurodesk.org
+- -88.30,41.84 -> cvmfs-s1fnal.opensciencegrid.org
+- -96.66,40.83 -> cvmfs-s1goc.opensciencegrid.org
+- 4.90,52.37 -> cvmfs01.nikhef.nl
+- 8.68,50.11 -> ec2-3-72-92-91.eu-central-1.compute.amazonaws.com
+- -46.63,-23.54 -> sampacs01.if.usp.br
+
+This domain is then used as a Cloudfront origin and can be accessed under cvmfs.neurodesk.org
+
+Then we have 3 direct URLS without CDNs as well that are geolocation-steered:
+cvmfs1.neurodesk.org:
+South America -> sampacs01.if.usp.br
+North America -> cvmfs-s1fnal.opensciencegrid.org
+Default -> cvmfs-brisbane.neurodesk.org
+Europe -> ec2-3-72-92-91.eu-central-1.compute.amazonaws.com
+Asia -> cvmfs-perth.neurodesk.org
+
+cvmfs2.neurodesk.org:
+North America -> cvmfs-s1goc.opensciencegrid.org
+Europe -> cvmfs01.nikhef.nl
+Default -> cvmfs-s1goc.opensciencegrid.org
+
+cvmfs3.neurodesk.org:
+North America -> cvmfs-s1bnl.opensciencegrid.org
+Asia -> cvmfs-brisbane.neurodesk.org
+Default -> cvmfs-s1bnl.opensciencegrid.org
+Oceania -> cvmfs-perth.neurodesk.org
+
+These servers are currently NOT working and are NOT YET mirroring our repository (we are waiting for RAL to come back online, then the others will mirror that):
+- UK:                     s1ral-cvmfs.openhtc.io:8080       -> cvmfs-egi.gridpp.rl.ac.uk:8000
+- Swinburne, Australia:   s1swinburne-cvmfs.openhtc.io:8080 -> cvmfs-s1.hpc.swin.edu.au:8000
+- China:                  s1ihep-cvmfs.openhtc.io:8080      -> cvmfs-stratum-one.ihep.ac.cn:8000
+
 ### For WSL users
 You will need to run this for each new WSL session:
 ```bash
@@ -60,7 +115,6 @@ sudo cvmfs_config chksetup
 
 ls /cvmfs/neurodesk.ardc.edu.au
 
-sudo cvmfs_talk -i neurodesk.ardc.edu.au host probe
 sudo cvmfs_talk -i neurodesk.ardc.edu.au host info
 
 cvmfs_config stat -v neurodesk.ardc.edu.au
