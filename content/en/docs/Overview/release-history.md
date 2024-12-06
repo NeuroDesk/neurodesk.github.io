@@ -12,6 +12,19 @@ description: >-
 Latest Version
 : {{< params/neurodesktop/jupyter_neurodesk_version >}}
 
+## 2024-12-06
+- updated QSMxT: v7.2.2 
+- add heudiconv 1.3.1 
+- add mriqc 24.0.2 20241108 
+- add samsrfx v10.003 
+- add palmettobug 0.0.1 20241119
+- add neurodock/pydesigner 
+- Update dcm2niix version to 20241125 
+- changed CVMFS servers
+- added -w workaround for docker on apple silicon into dockerfile
+- add static strace to /opt for container debugging
+- enabled VNC again and fix RDP auto resizing
+
 ## 2024-10-22
 - use cloudfront distribution only
 - workaround for kernel bug on arm64
