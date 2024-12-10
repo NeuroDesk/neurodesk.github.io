@@ -1,1 +1,12 @@
-{{- getJSON "https://raw.githubusercontent.com/NeuroDesk/neurocommand/main/cvmfs/applist.json" | jsonify -}}
+{{ $data := dict }}
+{{ $url := "https://raw.githubusercontent.com/NeuroDesk/neurocommand/main/cvmfs/applist.json" }}
+{{ with resources.GetRemote $url }}
+  {{ with .Err }}
+    {{ errorf "%s" . }}
+  {{ else }}
+    {{ $data = . | transform.Unmarshal }}
+  {{ end }}
+{{ else }}
+  {{ errorf "Unable to get remote resource %q" $url }}
+{{ end }}
+{{ $data | jsonify }}
