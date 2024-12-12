@@ -5,7 +5,7 @@ weight: 1
 aliases:
 - /docs/getting-started/neurodesktop/portable/
 description: >
-  An experimental unprivileged option for running NeuroDesktop without Docker or Podman.
+  An unprivileged option for running NeuroDesktop without Docker or Podman.
 ---
 
 ### Minimum System Requirements
@@ -17,10 +17,10 @@ description: >
 
 TinyRange (https://github.com/tinyrange/tinyrange) is a lightweight runtime for running Virtual Machines and Containers. It runs without admin privileges and doesn't need Docker or Podman installed to work.
 
-- **Windows:** https://github.com/tinyrange/tinyrange/releases/download/v0.1.4/tinyrange-windows-amd64.zip
-- **MacOS:** https://github.com/tinyrange/tinyrange/releases/download/v0.1.4/tinyrange-darwin-arm64.zip
-- **Linux (x86_64):** https://github.com/tinyrange/tinyrange/releases/download/v0.1.4/tinyrange-linux-amd64.zip
-- **Linux (arm64):** https://github.com/tinyrange/tinyrange/releases/download/v0.1.4/tinyrange-linux-arm64.zip
+- **Windows:** https://github.com/tinyrange/tinyrange/releases/download/v0.1.7/tinyrange-windows-amd64.zip
+- **MacOS:** https://github.com/tinyrange/tinyrange/releases/download/v0.1.7/tinyrange-darwin-arm64.zip
+- **Linux (x86_64):** https://github.com/tinyrange/tinyrange/releases/download/v0.1.7/tinyrange-linux-amd64.zip
+- **Linux (arm64):** https://github.com/tinyrange/tinyrange/releases/download/v0.1.7/tinyrange-linux-arm64.zip
 
 {{< alert color="info" >}}
 **Windows on ARM:** TinyRange is not currently supported on Windows for ARM (Copilot+ Laptops with ARM64/Snapdragon CPUs)
@@ -40,25 +40,23 @@ TinyRange (https://github.com/tinyrange/tinyrange) is a lightweight runtime for 
 
 ## Running NeuroDesktop
 
-- Open a terminal in the TinyRange folder and run `./tinyrange login -c https://github.com/NeuroDesk/neurodesktop/raw/refs/heads/main/neurodesk.yml` or `tinyrange login -c https://github.com/NeuroDesk/neurodesktop/raw/refs/heads/main/neurodesk.yml` on Windows
+- Open a terminal in the TinyRange folder and run
+- **Windows:** `tinyrange login -c https://github.com/NeuroDesk/neurodesktop/raw/refs/heads/main/neurodesk.yml` 
+- **Linux/MacOS:** `./tinyrange login -c https://github.com/NeuroDesk/neurodesktop/raw/refs/heads/main/neurodesk.yml`
 - Neurodesktop will start up. Copy and paste the Jupyterhub link (starting with 127.0.0.1) at the end of the output to a browser.
 - Use Control+C in the terminal to exit.
 
 ### Folder Sharing
 
-Use `--mount ~/neurodesktop-storage` to share `neurodesktop-storage` (in Linux and MacOS)
-Use `--mount C:/neurodesktop-storage` to share `C:/neurodesktop-storage` (in Linux and MacOS) 
+**Windows:** add `--mount-rw C:/neurodesktop-storage` to the tinyrange login command to share `C:/neurodesktop-storage`
+**Linux/MacOS:** add `--mount-rw ~/neurodesktop-storage` to the tinyrange login command  to share `~/neurodesktop-storage`
 
 The mounted directories will be visible under /shared inside Neurodesk. 
 
 For example:
 ```
-./tinyrange login -c https://github.com/NeuroDesk/neurodesktop/raw/refs/heads/main/neurodesk.yml --mount C:/neurodesktop-storage
+./tinyrange login -c https://github.com/NeuroDesk/neurodesktop/raw/refs/heads/main/neurodesk.yml --mount-rw C:/neurodesktop-storage
 ```
-
-{{< alert color="info" >}}
-The folder share is currently **Read-Only**. This will be fixed in the next update. To exchange files use the Jupyter Filebrowser upload and download functionality for now.
-{{< /alert >}}
 
 ### Changing CPU Cores, RAM, and/or Storage
 
@@ -68,6 +66,6 @@ The folder share is currently **Read-Only**. This will be fixed in the next upda
 
 ### Enabling Hardware Acceleration
 
-- **Windows:** This requires admin privileges. Search in your start menu for "Turn Windows features on or off.". Find "Hyper-V Hypervisor" or "Windows Hypervisor Platform" and make sure it's enabled. Then restart your computer.
+- **Windows:** This might require admin privileges in some cases. Search in your start menu for "Turn Windows features on or off.". Find "Hyper-V Hypervisor" or "Windows Hypervisor Platform" and make sure it's enabled. Then restart your computer.
 - **Ubuntu/Other Linux:** It should already work out of the box. If not make sure your user account has permission to read/write `/dev/kvm`.
 - **MacOS:** No extra steps required. It already works.
