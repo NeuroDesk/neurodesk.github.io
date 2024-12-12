@@ -48,8 +48,8 @@ TinyRange (https://github.com/tinyrange/tinyrange) is a lightweight runtime for 
 
 ### Folder Sharing
 
-**Windows:** add `--mount-rw C:/neurodesktop-storage` to the tinyrange login command to share `C:/neurodesktop-storage`
-**Linux/MacOS:** add `--mount-rw ~/neurodesktop-storage` to the tinyrange login command  to share `~/neurodesktop-storage`
+- **Windows:** add `--mount-rw C:/neurodesktop-storage` to the tinyrange login command to share `C:/neurodesktop-storage`
+- **Linux/MacOS:** add `--mount-rw ~/neurodesktop-storage` to the tinyrange login command  to share `~/neurodesktop-storage`
 
 The mounted directories will be visible under /shared inside Neurodesk. 
 
