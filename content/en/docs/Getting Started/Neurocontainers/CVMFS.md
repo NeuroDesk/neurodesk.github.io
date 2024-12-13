@@ -40,7 +40,7 @@ NQIDAQAB
 
 echo "CVMFS_USE_GEOAPI=yes" | sudo tee /etc/cvmfs/config.d/neurodesk.ardc.edu.au.conf
 
-echo 'CVMFS_SERVER_URL="http://s1perth-cvmfs.openhtc.io/cvmfs/@fqrn@;http://s1fnal-cvmfs.openhtc.io:8080/cvmfs/@fqrn@;http://s1sampa-cvmfs.openhtc.io:8080/cvmfs/@fqrn@;http://s1osggoc-cvmfs.openhtc.io:8080/cvmfs/@fqrn@;http://s1brisbane-cvmfs.openhtc.io/cvmfs/@fqrn@;http://s1nikhef-cvmfs.openhtc.io/cvmfs/@fqrn@;http://cvmfs.neurodesk.org/cvmfs/@fqrn@;http://ec2-3-72-92-91.eu-central-1.compute.amazonaws.com/cvmfs/@fqrn@;http://s1bnl-cvmfs.openhtc.io/cvmfs/@fqrn@"' | sudo tee -a /etc/cvmfs/config.d/neurodesk.ardc.edu.au.conf 
+echo 'CVMFS_SERVER_URL="http://s1perth-cvmfs.openhtc.io/cvmfs/@fqrn@;http://s1fnal-cvmfs.openhtc.io:8080/cvmfs/@fqrn@;http://s1sampa-cvmfs.openhtc.io:8080/cvmfs/@fqrn@;http://s1osggoc-cvmfs.openhtc.io:8080/cvmfs/@fqrn@;http://s1brisbane-cvmfs.openhtc.io/cvmfs/@fqrn@;http://s1nikhef-cvmfs.openhtc.io:8080/cvmfs/@fqrn@;http://cvmfs.neurodesk.org/cvmfs/@fqrn@;http://cvmfs-frankfurt.neurodesk.org/cvmfs/@fqrn@;http://s1bnl-cvmfs.openhtc.io/cvmfs/@fqrn@"' | sudo tee -a /etc/cvmfs/config.d/neurodesk.ardc.edu.au.conf 
 
 echo 'CVMFS_KEYS_DIR="/etc/cvmfs/keys/ardc.edu.au/"' | sudo tee -a /etc/cvmfs/config.d/neurodesk.ardc.edu.au.conf
 
@@ -50,13 +50,13 @@ echo "CVMFS_QUOTA_LIMIT=5000" | sudo tee -a  /etc/cvmfs/default.local
 sudo cvmfs_config setup
 ```
 
-We use the following CVMFS server setup:
+You can use the list above, but you can also pick a subset of servers that are close to you or fit your usecase better. To better understand what to choose, we use the following CVMFS server setup:
 
 These CVMFS Stratum 1 servers are hosted by the Open Science Grid and every server has a Cloudflare CDN alias that is correctly located through the Maxmind GEOAPI service in the CVMFS client: 
 - Illinois, USA:             s1fnal-cvmfs.openhtc.io:8080     -> cvmfs-s1fnal.opensciencegrid.org:8000
 - Sao Paulo, Brazil:         s1sampa-cvmfs.openhtc.io:8080    -> sampacs01.if.usp.br:8000
 - Lincoln, Nebraska, USA:    s1osggoc-cvmfs.openhtc.io:8080   -> cvmfs-s1goc.opensciencegrid.org:8000
-- Netherlands, Europe:       s1nikhef-cvmfs.openhtc.io        -> cvmfs01.nikhef.nl:8000
+- Netherlands, Europe:       s1nikhef-cvmfs.openhtc.io:8080   -> cvmfs01.nikhef.nl:8000
 - US:                        s1bnl-cvmfs.openhtc.io:8080      -> cvmfs-s1bnl.opensciencegrid.org:8000
 
 This CVMFS Stratum 1 server is hosted by ARDC Nectar Cloud and also has a Cloudflare CDN alias.
@@ -66,7 +66,7 @@ This CVMFS Stratum 1 server is hosted by Pawseys Nimbus Cloud and also has a Clo
 - Perth, Western Australia, Australia: s1perth-cvmfs.openhtc.io -> cvmfs-perth.neurodesk.org
 
 This CVMFS Stratum 1 server is hosted by AWS:
-- Frankfurt, Germany: ec2-3-72-92-91.eu-central-1.compute.amazonaws.com
+- Frankfurt, Germany: cvmfs-frankfurt.neurodesk.org -> ec2-3-72-92-91.eu-central-1.compute.amazonaws.com
 
 Then we have a Cloudfront CDN setup on AWS, which works by having one geolocation-steered domain:
 cvmfs-geoproximity.neurodesk.org:
