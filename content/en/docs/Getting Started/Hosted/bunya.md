@@ -3,7 +3,7 @@ title: "Bunya"
 linkTitle: "Bunya"
 weight: 2
 description: >
-  Use Neurodesk on Bunya
+  Use Neurodesk on Bunya (only for researchers with access to Bunya!)
 ---
 
 
