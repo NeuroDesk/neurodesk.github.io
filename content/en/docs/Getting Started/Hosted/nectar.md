@@ -6,7 +6,7 @@ aliases:
 - /docs/neurodesktop/getting-started/nectar
 - /docs/getting-started/neurodesktop/nectar
 description: >
-  Run neurodesktop in the Nectar Virtual Desktop Service
+  Run neurodesktop in the Nectar Virtual Desktop Service (For all Australian Researchers)
 ---
 
 {{< alert title="Note" color="info">}}
