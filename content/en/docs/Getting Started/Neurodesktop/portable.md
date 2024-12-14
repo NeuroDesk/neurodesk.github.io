@@ -53,9 +53,9 @@ TinyRange (https://github.com/tinyrange/tinyrange) is a lightweight runtime for 
 
 The mounted directories will be visible under /shared inside Neurodesk. 
 
-For example:
+For example on Windows run:
 ```
-./tinyrange login -c https://github.com/NeuroDesk/neurodesktop/raw/refs/heads/main/neurodesk.yml --mount-rw C:/neurodesktop-storage
+tinyrange login -c https://github.com/NeuroDesk/neurodesktop/raw/refs/heads/main/neurodesk.yml --mount-rw C:/neurodesktop-storage
 ```
 
 ### Changing CPU Cores, RAM, and/or Storage
