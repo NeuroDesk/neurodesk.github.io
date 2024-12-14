@@ -17,10 +17,15 @@ description: >
 
 TinyRange (https://github.com/tinyrange/tinyrange) is a lightweight runtime for running Virtual Machines and Containers. It runs without admin privileges and doesn't need Docker or Podman installed to work.
 
-- **Windows (x86_64):** https://github.com/tinyrange/tinyrange/releases/download/v0.1.7/tinyrange-windows-amd64.zip
-- **MacOS (arm64):** https://github.com/tinyrange/tinyrange/releases/download/v0.1.7/tinyrange-darwin-arm64.zip
-- **Linux (x86_64):** https://github.com/tinyrange/tinyrange/releases/download/v0.1.7/tinyrange-linux-amd64.zip
-- **Linux (arm64):** https://github.com/tinyrange/tinyrange/releases/download/v0.1.7/tinyrange-linux-arm64.zip
+- **Windows (x86_64):** https://github.com/tinyrange/tinyrange/releases/download/v0.1.8/tinyrange-windows-amd64.zip
+- **MacOS (arm64):** https://github.com/tinyrange/tinyrange/releases/download/v0.1.8/tinyrange-darwin-arm64.zip
+- **Linux (x86_64):** https://github.com/tinyrange/tinyrange/releases/download/v0.1.8/tinyrange-linux-amd64.zip
+- **Linux (arm64):** https://github.com/tinyrange/tinyrange/releases/download/v0.1.8/tinyrange-linux-arm64.zip
+
+If you already have a tinyrange installation you can also try an in place update
+```
+tinyrange update --confirm
+```
 
 {{< alert color="info" >}}
 **Windows on ARM:** TinyRange is not currently supported on Windows for ARM (Copilot+ Laptops with ARM64/Snapdragon CPUs)
