@@ -14,7 +14,7 @@ Refer to [neurodocker](https://github.com/NeuroDesk/neurodocker) for more inform
 ### Environment Requirements
 - Linux environment where you have admin privileges (i.e., can run 'sudo')
 - Docker
-- Python `>=3.8`. If you have lower Python version, create a virtual environment `conda create -n neurodocker python=3.8 -y` and activate it `conda activate neurodocker`. 
+- Python `>=3.9`. If you have lower Python version, create a virtual environment `conda create -n neurodocker python=3.9 -y` and activate it `conda activate neurodocker`. 
 - If you have several versions of Python3 installed in the environment, typing 'python' in the terminal should launch a version with equal or higher version number  
 - Python pip3  
   This should be launched by 'python -m pip'
