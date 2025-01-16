@@ -10,11 +10,18 @@ The stratum 1 servers for the desktop are configured here: https://github.com/Ne
 
 If you want more speed in a region one way could be to setup another Stratum 1 server or a proxy. 
 
-# Setup a Stratum 1 server:
+# Setup a Stratum 1 server (This setup works best on Rocky Linux 9):
 ```bash
 sudo yum install -y https://ecsft.cern.ch/dist/cvmfs/cvmfs-release/cvmfs-release-latest.noarch.rpm
-sudo yum install -y cvmfs-server squid
+sudo yum install -y cvmfs-server squid tmux
 sudo yum install -y python3-mod_wsgi 
+
+sudo dnf install dnf-automatic -y
+sudo systemctl enable dnf-automatic-install.timer
+sudo systemctl status dnf-automatic-install
+sudo systemctl cat dnf-automatic-install.timer
+
+tmux new -s cvmfs
 
 sudo sed -i 's/Listen 80/Listen 127.0.0.1:8080/' /etc/httpd/conf/httpd.conf
 
@@ -32,7 +39,8 @@ sudo systemctl start squid
 sudo systemctl enable httpd
 sudo systemctl enable squid
 
-echo 'CVMFS_GEO_LICENSE_KEY=kGepdzqbAP4fjf5X' | sudo tee -a /etc/cvmfs/server.local
+echo 'CVMFS_GEO_ACCOUNT_ID=APPLY_FOR_ONE_THIS_IS_a_SIX_DIGIT_NUMBER' | sudo tee -a /etc/cvmfs/server.local
+echo 'CVMFS_GEO_LICENSE_KEY=APPLY_FOR_ONE_THIS_IS_a_password' | sudo tee -a /etc/cvmfs/server.local
 sudo chmod 600 /etc/cvmfs/server.local
 
 sudo mkdir -p /etc/cvmfs/keys/ardc.edu.au/
@@ -79,4 +87,8 @@ sudo systemctl stop firewalld
 # make sure that port 80 is open in the real firewall
 
 sudo cvmfs_server update-geodb
+
+#test
+curl --head http://YOUR_IP_OR_DNS/cvmfs/neurodesk.ardc.edu.au/.cvmfspublished
+
 ```
