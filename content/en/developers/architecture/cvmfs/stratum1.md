@@ -20,6 +20,8 @@ sudo dnf install dnf-automatic -y
 sudo systemctl enable dnf-automatic-install.timer
 sudo systemctl status dnf-automatic-install
 sudo systemctl cat dnf-automatic-install.timer
+sudo vi /etc/dnf/automatic.conf
+# check if automatic updates are downloaded and applied
 
 tmux new -s cvmfs
 
