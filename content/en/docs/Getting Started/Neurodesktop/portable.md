@@ -56,7 +56,7 @@ tinyrange update --confirm
 - **Windows:** add `--mount-rw C:/neurodesktop-storage` to the tinyrange login command to share `C:/neurodesktop-storage`
 - **Linux/MacOS:** add `--mount-rw ~/neurodesktop-storage` to the tinyrange login command  to share `~/neurodesktop-storage`
 
-The mounted directories will be visible under /share inside Neurodesk. 
+The mounted directories will be visible under /data inside Neurodesk. 
 
 For example, on Windows run:
 ```
