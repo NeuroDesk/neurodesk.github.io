@@ -58,9 +58,14 @@ tinyrange update --confirm
 
 The mounted directories will be visible under /shared inside Neurodesk. 
 
-For example on Windows run:
+For example, on Windows run:
 ```
 tinyrange login -c https://github.com/NeuroDesk/neurodesktop/raw/refs/heads/main/neurodesk.yml --mount-rw C:/neurodesktop-storage
+```
+
+on MacOS/Linux run:
+```
+./tinyrange login -c https://github.com/NeuroDesk/neurodesktop/raw/refs/heads/main/neurodesk.yml --mount-rw ~/neurodesktop-storage
 ```
 
 ### Changing CPU Cores, RAM, and/or Storage
