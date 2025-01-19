@@ -55,9 +55,9 @@ You can use the list above, but you can also pick a subset of servers that are c
 These CVMFS Stratum 1 servers are hosted by the Open Science Grid and every server has a Cloudflare CDN alias that is correctly located through the Maxmind GEOAPI service in the CVMFS client: 
 - Illinois, USA:             s1fnal-cvmfs.openhtc.io:8080     -> cvmfs-s1fnal.opensciencegrid.org:8000
 - Sao Paulo, Brazil:         s1sampa-cvmfs.openhtc.io:8080    -> sampacs01.if.usp.br:8000
-- Lincoln, Nebraska, USA:    s1osggoc-cvmfs.openhtc.io:8080   -> cvmfs-s1goc.opensciencegrid.org:8000
+- Nebraska, USA:             s1osggoc-cvmfs.openhtc.io:8080   -> cvmfs-s1goc.opensciencegrid.org:8000
 - Netherlands, Europe:       s1nikhef-cvmfs.openhtc.io:8080   -> cvmfs01.nikhef.nl:8000
-- US:                        s1bnl-cvmfs.openhtc.io:8080      -> cvmfs-s1bnl.opensciencegrid.org:8000
+- New York, US:              s1bnl-cvmfs.openhtc.io:8080      -> cvmfs-s1bnl.opensciencegrid.org:8000
 
 This CVMFS Stratum 1 server is hosted by ARDC Nectar Cloud and also has a Cloudflare CDN alias.
 - Brisbane, Queensland, Australia: s1brisbane-cvmfs.openhtc.io -> cvmfs-brisbane.neurodesk.org
