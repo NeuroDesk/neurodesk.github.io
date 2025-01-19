@@ -68,6 +68,9 @@ This CVMFS Stratum 1 server is hosted by Pawseys Nimbus Cloud and also has a Clo
 This CVMFS Stratum 1 server is hosted by AWS:
 - Frankfurt, Germany: cvmfs-frankfurt.neurodesk.org -> ec2-3-72-92-91.eu-central-1.compute.amazonaws.com
 
+This CMVFS Stratum 1 server is hosted by Jetstream:
+- Indiana, US: cvmfs-jetstream.neurodesk.org -> 149.165.172.188 
+
 Then we have a Cloudfront CDN setup on AWS, which works by having one geolocation-steered domain:
 cvmfs-geoproximity.neurodesk.org:
 - 153.02 (Longitude),-27.46 (Latitude) -> cvmfs-brisbane.neurodesk.org
@@ -77,6 +80,9 @@ cvmfs-geoproximity.neurodesk.org:
 - 4.90,52.37 -> cvmfs01.nikhef.nl
 - 8.68,50.11 -> ec2-3-72-92-91.eu-central-1.compute.amazonaws.com
 - -46.63,-23.54 -> sampacs01.if.usp.br
+- -86.45,39.22 -> cvmfs-jetstream.neurodesk.org
+
+- Every location has a health check attached to it and doesn't forward to it if the destination is not working.
 
 This domain is then used as a Cloudfront origin and can be accessed under cvmfs.neurodesk.org
 
