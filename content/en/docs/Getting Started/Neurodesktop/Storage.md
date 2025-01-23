@@ -128,7 +128,9 @@ Then you can go to the globus file-manager https://app.globus.org/file-manager a
 ### Mount volume using SSHFS
 It is theoretically possible to mount an SSH target inside Neurodesktop, but it's not a very reliable way of mounting storage:
 ```bash
-sshfs -o allow_root USER@TARGET_HOST:TARGET_PATH SOURCE_PATH
+sudo mkdir /mnt/data_mount
+sudo chmod a+rwx /mnt/data_mount
+sshfs -o allow_root USER@TARGET_HOST:TARGET_PATH /mnt/data_mount
 ```
 
 A better option is to use `scp` and copy data from an SSH endpoint:
