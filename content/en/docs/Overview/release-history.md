@@ -12,6 +12,17 @@ description: >-
 Latest Version
 : {{< params/neurodesktop/jupyter_neurodesk_version >}}
 
+## 2025-01-24
+- new Quay.io jupyter baseimage
+- update version in neurodesk.yml 
+- Change TinyRange share path to /data instead of /share 
+- Added workaround for JVM bug on Apple M4
+- added docker fix for MacOS to desktop
+- updated deep retinotopy version by
+- update matlab 2024b
+- add matlab 2023b 
+- add matlab 2022b 
+
 ## 2024-12-06
 - updated QSMxT: v7.2.2 
 - add heudiconv 1.3.1 
