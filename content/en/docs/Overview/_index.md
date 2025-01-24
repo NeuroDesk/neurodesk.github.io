@@ -29,6 +29,9 @@ To read more about Docker containers, visit [the Docker webpage](https://www.doc
 - A 50 minute video explaining the goals and implementation details of Neurodesk, Neurodesktop and AEDAPT: [ARDC TechTalk](https://drive.google.com/file/d/1Dmtj6jpE1jcAt63kv2KhPL7WuuQxnsPg/view),[Slides](https://docs.google.com/presentation/d/15a_Uj_ZqL4OH9xd_QFtGk4HFWTqzqkcYXzPfz2fSw0s/present?slide=id.g11ecd613955_0_543)
 - A 1 hour video showcasing Neurodesk live and explaining the background: [ReproNim Webinar](https://www.youtube.com/watch?v=HY-TqE6I2oo)
 - A video explaining using Neurodesk for open data and open analysis: [OHBM Webinar](https://youtu.be/RTy5iVHHGO8?si=1XWcBuDlC7jdzhSo&t=3350)
+- A video on Neurodesk's development journey and lessons learned: [MRItogether 2024, journey](https://www.youtube.com/watch?v=KJh_cr1uAi0&list=PLeDygc8TN_J5TKU7Z06ucjkvsfEYI6_AJ&index=7)
+- A Neurodesk overview and live demo: [MRItogether 2024, live demo](https://www.youtube.com/watch?v=B7GmyHpJUDo&list=PLeDygc8TN_J5TKU7Z06ucjkvsfEYI6_AJ&index=17)
+- A video on how data can be converted into BIDS using Neurodesk: [MRItogether 2024, bids](https://www.youtube.com/watch?v=uXrgS3FOzAg&list=PLeDygc8TN_J5TKU7Z06ucjkvsfEYI6_AJ&index=19)
 
 ## What applications are included in Neurodesk?
 You can check out the complete list of [these applications](/docs/overview/applications)
