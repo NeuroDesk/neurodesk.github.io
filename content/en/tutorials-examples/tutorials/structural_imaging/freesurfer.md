@@ -37,6 +37,11 @@ Run Recon all pipeline:
 recon-all -subject test-subject -i ~/sub-01_ses-01_7T_T1w_defaced.nii.gz -all
 ```
 
+When using Freesurfer >8.0.0:
+```
+FS_ALLOW_DEEP=1
+```
+
 ## Alternative instructions for using Freesurfer via the Neurodesk application menu
 ### Download demo data
 Open a terminal and run:
