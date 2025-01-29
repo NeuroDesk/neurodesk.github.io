@@ -12,6 +12,10 @@ description: >-
 Latest Version
 : {{< params/neurodesktop/jupyter_neurodesk_version >}}
 
+## 2025-01-29
+- fixed bug in JVM bugfix - parameters only worked for arm64, not x86
+- add freesurfer 8.0.0
+
 ## 2025-01-24
 - new Quay.io jupyter baseimage
 - update version in neurodesk.yml 
