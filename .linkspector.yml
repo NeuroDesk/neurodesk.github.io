@@ -3,6 +3,7 @@ dirs:
 ignorePatterns:
   - pattern: '^https://twitter.com'
   - pattern: '^http://localhost'
+  - pattern: '^https://www.biorxiv.org/content/'
 useGitIgnore: true
 aliveStatusCodes:
   - 200
