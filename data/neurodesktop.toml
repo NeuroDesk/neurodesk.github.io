@@ -6,7 +6,7 @@
 # To use, add the respective shortcodes to markdown
 # e.g. {{< params/neurodesktop/jupyter_neurodesk_version >}}
 
-jupyter_neurodesk_version = "2025-01-24"
+jupyter_neurodesk_version = "2025-01-29"
 
 rdpport="-p 3390:3389"
 vncport="-p 5901:5901"
