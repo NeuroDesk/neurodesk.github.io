@@ -27,9 +27,10 @@ osf -p bt4ez fetch osfstorage/TOMCAT_DIB/sub-01/ses-01_7T/anat/sub-01_ses-01_7T_
 Setup FreeSurfer:
 ```
 ml freesurfer/7.3.2
-mkdir ~/freesurfer-output
-export SINGULARITYENV_SUBJECTS_DIR=~/freesurfer-output
-export APPTAINERENV_SUBJECTS_DIR=~/freesurfer-output
+export SUBJECTS_DIR=$PWD/freesurfer-output
+mkdir $SUBJECTS_DIR
+export SINGULARITYENV_SUBJECTS_DIR=$SUBJECTS_DIR
+export APPTAINERENV_SUBJECTS_DIR=$SUBJECTS_DIR
 ```
 
 Run Recon all pipeline:
@@ -39,7 +40,9 @@ recon-all -subject test-subject -i ~/sub-01_ses-01_7T_T1w_defaced.nii.gz -all
 
 When using Freesurfer >8.0.0:
 ```
-FS_ALLOW_DEEP=1
+export FS_ALLOW_DEEP=1
+export APPTAINERENV_FS_ALLOW_DEEP=$FS_ALLOW_DEEP
+export SINGULARITYENV_FS_ALLOW_DEEP=$FS_ALLOW_DEEP
 ```
 
 ## Alternative instructions for using Freesurfer via the Neurodesk application menu
