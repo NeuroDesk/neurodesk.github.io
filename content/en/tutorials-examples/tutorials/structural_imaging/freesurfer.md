@@ -45,6 +45,11 @@ export APPTAINERENV_FS_ALLOW_DEEP=$FS_ALLOW_DEEP
 export SINGULARITYENV_FS_ALLOW_DEEP=$FS_ALLOW_DEEP
 ```
 
+When running on a GPU, make sure to check if this is set:
+```
+export neurodesk_singularity_opts='--nv'
+```
+
 ## Alternative instructions for using Freesurfer via the Neurodesk application menu
 ### Download demo data
 Open a terminal and run:
