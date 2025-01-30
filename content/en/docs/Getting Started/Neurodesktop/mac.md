@@ -58,11 +58,11 @@ If you get errors in neurodesktop then check if the ~/neurodesktop-storage direc
 We recommend using Chrome over Firefox as it has an option to hide the Toolbar in full screen mode (go to the menu bar, click on View, and uncheck "Always Show Toolbar in Full Screen"). This allows for Neurodesktop to fully utilise the whole of your screen.
 {{< /alert >}}
 
-3. If prompted, press on "Desktop Auto-Resolution" under "ALL CONNECTIONS"
+4. If prompted, press on "Desktop Auto-Resolution" under "ALL CONNECTIONS"
 
-4. If it is the first time you use Neurodesktop, wait until the desktop appears (it may take a few seconds). Otherwise, it should appear instantaneously.
+5. If it is the first time you use Neurodesktop, wait until the desktop appears (it may take a few seconds). Otherwise, it should appear instantaneously.
 
-5. Neurodesk is ready to use! See the tutorials page for advice on how to use Neurodesk.     
+6. Neurodesk is ready to use! See the tutorials page for advice on how to use Neurodesk.     
 
 {{< alert color="info" >}}
 The browser can be closed anytime, and Neurodesktop will continue to run in the background. To reconnect to Neurodesktop, simply start over from step 3 above.
