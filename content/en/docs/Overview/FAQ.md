@@ -193,6 +193,13 @@ If it still does not work, please report the problem and we will do our best to 
 
 ## Docker, WSL, Memory
 
+### Docker: Shows an error that unprivileged user namespaces are not enabled.
+This can be activated by running
+```
+echo "kernel.apparmor_restrict_unprivileged_userns = 0" >/etc/sysctl.d/99-userns.conf
+sysctl --system
+```
+
 ### Docker: Cannot connect to the Docker daemon at unix:///var/run/docker.sock. Is the docker daemon running?.
 This is usually a docker-related error, not related to neurodesktop itself. To troubleshoot docker, we can try a simpler container first:
 ```bash
