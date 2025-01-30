@@ -21,7 +21,7 @@ description: >
 ## FreeSurfer Example using module load (e.g. on an HPC)
 Download data:
 ```
-osf -p bt4ez fetch osfstorage/TOMCAT_DIB/sub-01/ses-01_7T/anat/sub-01_ses-01_7T_T1w_defaced.nii.gz ./sub-01_ses-01_7T_T1w_defaced.nii.gz
+osf -p bt4ez fetch osfstorage/TOMCAT_DIB/sub-01/ses-01_7T/anat/sub-01_ses-01_7T_T1w_defaced.nii.gz sub-01_ses-01_7T_T1w_defaced.nii.gz
 ```
 
 Setup FreeSurfer:
@@ -35,7 +35,7 @@ export APPTAINERENV_SUBJECTS_DIR=$SUBJECTS_DIR
 
 Run Recon all pipeline:
 ```
-recon-all -subject test-subject -i ~/sub-01_ses-01_7T_T1w_defaced.nii.gz -all
+recon-all -subject test-subject -i sub-01_ses-01_7T_T1w_defaced.nii.gz -all
 ```
 
 When using Freesurfer >8.0.0:
