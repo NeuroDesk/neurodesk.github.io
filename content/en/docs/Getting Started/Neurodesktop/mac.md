@@ -58,7 +58,7 @@ If you get errors in neurodesktop then check if the ~/neurodesktop-storage direc
 We recommend using Chrome over Firefox as it has an option to hide the Toolbar in full screen mode (go to the menu bar, click on View, and uncheck "Always Show Toolbar in Full Screen"). This allows for Neurodesktop to fully utilise the whole of your screen.
 {{< /alert >}}
 
-4. If prompted, press on "Desktop Auto-Resolution" under "ALL CONNECTIONS"
+4. If prompted, press on "Desktop RDP - changes resolution by resizing window and waiting for refresh" or "Desktop VNC - changes resolution by running lxrandr on a terminal" under "ALL CONNECTIONS"
 
 5. If it is the first time you use Neurodesktop, wait until the desktop appears (it may take a few seconds). Otherwise, it should appear instantaneously.
 
