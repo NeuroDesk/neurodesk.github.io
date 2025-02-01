@@ -205,4 +205,4 @@ rm -rf ~/Library/Application\ Support/neurodeskapp # to remove user data
 
 On Windows, go to `Windows Apps & Features` dialog using `Start Menu` -> `Settings` -> `Apps` and uninstall Neurodesk App as shown below.
 
-In order to remove application cache, delete `C:\Users\<username>\AppData\Roaming\neurodeskapp` directory.
+In order to remove application cache, delete `C:\Users\<username>\AppData\Roaming\neurodeskapp` directory. The AppData directory is a hidden directory - so make sure to activate hidden Items in the Windows explorer under View -> Show -> Hidden Items
