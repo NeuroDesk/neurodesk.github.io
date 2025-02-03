@@ -64,7 +64,7 @@ Then, add your email address and password from your MathWorks account (which you
 6. To launch the GUI, navigate through the application menu to Neurodesk → Programming → matlab → matlabGUI 2022a
 
 ## Calling Neurodesk tools from within Matlab
-This is a new feature and doesn't work yet on Neurodesk for Apple Silicon. Make sure to run the latest version of Neurodesk and hit the update Button in the Application menu to ensure this works. You can use Neurodesk software within Matlab by adding the specific Neurodesk container to your execution Path. For the example of adding the FSL package, this can be done as follows in Matlab:
+You can use Neurodesk software within Matlab by adding the specific Neurodesk container to your execution Path. For the example of adding the FSL package, this can be done as follows in Matlab:
 
 ```
 setenv("PATH",getenv("PATH") + ":/cvmfs/neurodesk.ardc.edu.au/containers/fsl_6.0.7.4_20231005");
