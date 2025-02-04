@@ -19,7 +19,7 @@ If you have privileged access → Use Docker or Podman Engine
 
 If you do NOT have privileged access → Use TinyRange Engine, or run remote instance
 
-<img style="float: right;" src="/static/docs/getting-started/neurodeskapp/engine-options.png" width="400">
+<img src="/static/docs/getting-started/neurodeskapp/engine-options.png" width="400">
 
 ### Minimum System Requirements
 
@@ -32,8 +32,10 @@ If you do NOT have privileged access → Use TinyRange Engine, or run remote ins
 
 ## Downloading Neurodesk App
 
-- [Debian, Ubuntu Linux Installer](https://github.com/NeuroDesk/neurodesk-app/releases/latest/download/NeurodeskApp-Setup-Debian.deb)
-- [Red Hat, Fedora, SUSE Linux Installer](https://github.com/NeuroDesk/neurodesk-app/releases/latest/download/NeurodeskApp-Setup-Fedora.rpm)
+- [Debian, Ubuntu Linux Installer x64](https://github.com/NeuroDesk/neurodesk-app/releases/latest/download/NeurodeskApp-Setup-Debian-x64.deb)
+- [Red Hat, Fedora, SUSE Linux Installer x64](https://github.com/NeuroDesk/neurodesk-app/releases/latest/download/NeurodeskApp-Setup-Fedora-x64.rpm)
+- [Debian, Ubuntu Linux Installer arm64](https://github.com/NeuroDesk/neurodesk-app/releases/download/v1.8.0/NeurodeskApp-Setup-Debian-arm64.deb)
+- [Red Hat, Fedora, SUSE Linux Installer arm64](https://github.com/NeuroDesk/neurodesk-app/releases/latest/download/NeurodeskApp-Setup-Fedora-arm64.rpm)
 - [Arch-based package via AUR](https://aur.archlinux.org/packages/neurodeskapp-bin)
 - [macOS Intel Installer](https://github.com/NeuroDesk/neurodesk-app/releases/latest/download/NeurodeskApp-Setup-macOS-x64.dmg), [macOS Apple silicon Installer](https://github.com/neurodesk/neurodesk-app/releases/latest/download/NeurodeskApp-Setup-macOS-arm64.dmg)
 - [Windows Installer](https://github.com/NeuroDesk/neurodesk-app/releases/latest/download/NeurodeskApp-Setup-Windows.exe)
@@ -63,21 +65,19 @@ docker --version
 docker run hello-world
 ```
 
-## Install QEMU and Go
+## Install QEMU 
+For Linux, QEMU can be installed with `apt install qemu-system-x86_64` on Debian derived distributions and `dnf install qemu-system-x86_64` on Red Hat derived distributions.
 
-QEMU can be installed with `apt install qemu-system-x86_64` on Debian derived distributions and `dnf install qemu-system-x86_64` on Red Hat derived distributions.
-
-For go, download the latest **stable version** from the [official website](https://go.dev/dl/) and follow the [installation instructions](https://go.dev/doc/install).
+For macOS, QEMU can be installed with `brew install qemu`.
 
 Once installed, open a terminal (Linux/macOS) or command prompt (Windows) and run the following command to verify:
 
 ```bash
 qemu-system-x86_64 --version
-go version
 ```
 
 {{< alert color="info" >}}
-If you are using Windows, you only need to install Go.
+For Windows, QEMU is packaged in the application so users don't need to install it.
 {{< /alert >}}
 
 ## Installing Neurodesk App
