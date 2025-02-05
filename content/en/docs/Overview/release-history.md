@@ -12,6 +12,12 @@ description: >-
 Latest Version
 : {{< params/neurodesktop/jupyter_neurodesk_version >}}
 
+## 2025-02-04
+- add latency check for cvmfs direct vs CDN
+- add fsl 6.0.7.16 
+- update freesurfer 8.0.0 and nighres 
+- add dicomtools container 
+
 ## 2025-01-29
 - fixed bug in JVM bugfix - parameters only worked for arm64, not x86
 - add freesurfer 8.0.0
