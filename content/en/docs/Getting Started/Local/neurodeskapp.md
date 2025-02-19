@@ -168,6 +168,31 @@ podman machine init --rootful --now -v /Volumes:/Volumes -v $HOME:$HOME podman-m
 If you are using conda environments and you are installing packages or even new kernels, make sure to read this: https://www.neurodesk.org/tutorials-examples/tutorials/programming/conda/
 {{< /alert >}}
 
+## Troubleshooting Neurodesk App on Ubuntu 24.04
+
+If you see the error "FATAL:setuid_sandbox_host.cc(158)] The SUID sandbox helper binary was found, but is not configured correctly. Rather than run without sandboxing I'm aborting now. You need to make sure that /opt/NeurodeskApp/chrome-sandbox is owned by root and has mode 4755.
+Trace/breakpoint trap (core dumped)" this is caused by a recent change in Ubuntu 24.04.
+
+A temporary workaround: Create the file /etc/apparmor.d/neurodeskapp
+ With this content:
+
+```
+# This profile allows everything and only exists to give the
+# application a name instead of having the label "unconfined"
+
+abi <abi/4.0>,
+include <tunables/global>
+
+profile neurodeskapp "/opt/NeurodeskApp/neurodeskapp" flags=(unconfined) {
+  userns,
+
+  # Site-specific additions and overrides. See local/README for details.
+  include if exists <local/neurodeskapp>
+}
+```
+
+Then restart your computer. Then try to start the neurodesk app again.
+
 ## Uninstalling Neurodesk App
 
 ### Debian, Ubuntu Linux
