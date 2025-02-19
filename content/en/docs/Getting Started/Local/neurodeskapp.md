@@ -168,7 +168,21 @@ podman machine init --rootful --now -v /Volumes:/Volumes -v $HOME:$HOME podman-m
 If you are using conda environments and you are installing packages or even new kernels, make sure to read this: https://www.neurodesk.org/tutorials-examples/tutorials/programming/conda/
 {{< /alert >}}
 
-## Troubleshooting Neurodesk App on Ubuntu 24.04
+## Troubleshooting Neurodesk App
+
+### /var/run/docker.sock: connect: permission denied, docker
+
+This means that docker is not correctly setup yet, run:
+```
+sudo groupadd docker
+sudo usermod -aG docker $USER
+newgrp docker
+
+sudo chown root:docker /var/run/docker.sock
+sudo chmod 666 /var/run/docker.sock
+```
+
+### FATAL:setuid_sandbox_host.cc(158)
 
 If you see the error "FATAL:setuid_sandbox_host.cc(158)] The SUID sandbox helper binary was found, but is not configured correctly. Rather than run without sandboxing I'm aborting now. You need to make sure that /opt/NeurodeskApp/chrome-sandbox is owned by root and has mode 4755.
 Trace/breakpoint trap (core dumped)" this is caused by a recent change in Ubuntu 24.04.
