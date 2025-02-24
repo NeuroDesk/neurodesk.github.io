@@ -59,7 +59,7 @@ ssh -L 8888:127.0.0.1:8888 USER@IP
 ```bash
 docker volume create neurodesk-home &&
 sudo docker run \
-  --shm-size=1gb -it --privileged --user=root --name neurodesktop \
+  --shm-size=1gb -it --security-opt apparmor=neurodeskapp --privileged --user=root --name neurodesktop \
   -v ~/neurodesktop-storage:/neurodesktop-storage \
   --mount source=neurodesk-home,target=/home/jovyan \
   -e NB_UID="$(id -u)" -e NB_GID="$(id -g)" \
