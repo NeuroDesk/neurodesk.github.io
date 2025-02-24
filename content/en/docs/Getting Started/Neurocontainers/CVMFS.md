@@ -21,6 +21,11 @@ sudo apt-get install build-essential
 sudo apt-get install cvmfs
 ```
 
+Ubuntu 24.04 might have an issue with this, so try installing dependies manually:
+```
+sudo apt install libattr1=1:2.5.2-1build1 libuuid1=2.39.3-9ubuntu6
+```
+
 ## Configure CVMFS
 
 Once installed create the keys and configure the servers used:
@@ -155,7 +160,8 @@ e.g for Ubuntu/Debian install apptainer:
 sudo apt-get install -y software-properties-common
 sudo add-apt-repository -y ppa:apptainer/ppa
 sudo apt-get update
-sudo apt-get install -y apptainer 
+sudo apt-get install -y apptainer
+sudo apt-get install -y apptainer-suid
 ```
 
 e.g. for Ubuntu/Debian install singularity:
