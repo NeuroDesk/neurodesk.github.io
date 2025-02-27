@@ -29,9 +29,12 @@ This work benefits from services and resources provided by the EGI Federation wi
 <img src="/static/docs/overview/indiana_university_logo.jpeg" width="100">
 
 
-Thank you to Google Cloud and AWS for providing cloud credits to support this project since 2024. We thank Oracle for Research for supporting our project from 2022 to 2023.
+Thank you to AWS for providing cloud credits to support this project since 2024. 
 
 <img src="/static/docs/overview/aws.png" width="150">
+
+We thank Google Cloud for supporting our project from 2024 to 2025 and we thank Oracle for Research for supporting our project from 2022 to 2023.
+
 <img src="/static/docs/overview/google_cloud.png" width="200">
 <img src="/static/docs/overview/oracle.png" width="150">
 
