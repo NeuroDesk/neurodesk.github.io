@@ -12,6 +12,21 @@ description: >-
 Latest Version
 : {{< params/neurodesktop/jupyter_neurodesk_version >}}
 
+
+# 2025-03-05
+- added support for downloading containers offline, can be activated by setting CVMFS_DISABLE=true
+- changed from apptainer -w flag to overlay directory because it works with SIMG files
+- tweaks in chown of files in homedirectory (#268 #269)
+- disable automatic GPU flag --nv because it is causing problems on newer host OSs like Ubuntu 24.04
+- update bidscoin to 4.5.0
+- update aslprep to 0.7.5 
+- add synthstrip 7.4.1
+- add pydeface 2.0.2 
+- automate zenodo doi creation and update to applist.json
+- add fmriprep 24.1.1 20250214
+- update QSMxT to v7.3.1 
+- update QSMxT to v7.3.2 
+
 ## 2025-02-04
 - add latency check for cvmfs direct vs CDN
 - add fsl 6.0.7.16 
