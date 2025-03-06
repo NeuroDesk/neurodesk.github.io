@@ -12,6 +12,9 @@ description: >-
 Latest Version
 : {{< params/neurodesktop/jupyter_neurodesk_version >}}
 
+# 2025-03-06
+- add overlay directory on startup
+- only link from cvmfs if cvmfs is not disabled
 
 # 2025-03-05
 - added support for downloading containers offline, can be activated by setting CVMFS_DISABLE=true
