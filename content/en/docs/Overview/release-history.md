@@ -12,6 +12,9 @@ description: >-
 Latest Version
 : {{< params/neurodesktop/jupyter_neurodesk_version >}}
 
+# 2025-03-07
+- fixed bug: CVMFS_DISABLED=false also disabled it.
+
 # 2025-03-06
 - add overlay directory on startup
 - only link from cvmfs if cvmfs is not disabled
