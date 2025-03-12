@@ -12,6 +12,10 @@ description: >-
 Latest Version
 : {{< params/neurodesktop/jupyter_neurodesk_version >}}
 
+# 2025-03-12
+- fixed bug: apptainer didn't mount binfmt, which was resulting in simg files not working in offline mode on apple silicon
+- added neurodesk copilot dependencies
+
 # 2025-03-07
 - fixed bug: CVMFS_DISABLED=false also disabled it.
 
