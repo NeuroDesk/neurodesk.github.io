@@ -32,13 +32,13 @@ If you do NOT have privileged access → Use TinyRange Engine, or run remote ins
 
 ## Downloading Neurodesk App
 
-- [Debian, Ubuntu Linux Installer x64](https://github.com/NeuroDesk/neurodesk-app/releases/latest/download/NeurodeskApp-Setup-Debian-x64.deb "target=_blank")
-- [Red Hat, Fedora, SUSE Linux Installer x64](https://github.com/NeuroDesk/neurodesk-app/releases/latest/download/NeurodeskApp-Setup-Fedora-x64.rpm "target=_blank")
-- [Debian, Ubuntu Linux Installer arm64](https://github.com/NeuroDesk/neurodesk-app/releases/download/v1.8.0/NeurodeskApp-Setup-Debian-arm64.deb "target=_blank")
-- [Red Hat, Fedora, SUSE Linux Installer arm64](https://github.com/NeuroDesk/neurodesk-app/releases/latest/download/NeurodeskApp-Setup-Fedora-arm64.rpm "target=_blank")
-- [Arch-based package via AUR](https://aur.archlinux.org/packages/neurodeskapp-bin "target=_blank")
-- [macOS Intel Installer](https://github.com/NeuroDesk/neurodesk-app/releases/latest/download/NeurodeskApp-Setup-macOS-x64.dmg "target=_blank"), [macOS Apple silicon Installer](https://github.com/neurodesk/neurodesk-app/releases/latest/download/NeurodeskApp-Setup-macOS-arm64.dmg "target=_blank")
-- [Windows Installer](https://github.com/NeuroDesk/neurodesk-app/releases/latest/download/NeurodeskApp-Setup-Windows.exe "target=_blank")
+- [Debian, Ubuntu Linux Installer x64](https://github.com/NeuroDesk/neurodesk-app/releases/latest/download/NeurodeskApp-Setup-Debian-x64.deb)
+- [Red Hat, Fedora, SUSE Linux Installer x64](https://github.com/NeuroDesk/neurodesk-app/releases/latest/download/NeurodeskApp-Setup-Fedora-x64.rpm)
+- [Debian, Ubuntu Linux Installer arm64](https://github.com/NeuroDesk/neurodesk-app/releases/download/v1.8.0/NeurodeskApp-Setup-Debian-arm64.deb)
+- [Red Hat, Fedora, SUSE Linux Installer arm64](https://github.com/NeuroDesk/neurodesk-app/releases/latest/download/NeurodeskApp-Setup-Fedora-arm64.rpm)
+- [Arch-based package via AUR](https://aur.archlinux.org/packages/neurodeskapp-bin)
+- [macOS Intel Installer](https://github.com/NeuroDesk/neurodesk-app/releases/latest/download/NeurodeskApp-Setup-macOS-x64.dmg), [macOS Apple silicon Installer](https://github.com/neurodesk/neurodesk-app/releases/latest/download/NeurodeskApp-Setup-macOS-arm64.dmg)
+- [Windows Installer](https://github.com/NeuroDesk/neurodesk-app/releases/latest/download/NeurodeskApp-Setup-Windows.exe)
 
 {{< alert color="info" >}}
 **On Microsoft edge**, follow these steps to download the executable file:
@@ -54,9 +54,9 @@ If only connecting to a remote Neurodesk servers, you may **skip Installing Dock
 
 The Neurodesk App requires Docker to be installed on your computer. If you already have Docker installed, you can skip this step.
 
-- [Docker Desktop for Windows](https://docs.docker.com/docker-for-windows/install/ "target=_blank")
-- [Docker Desktop for Mac](https://docs.docker.com/docker-for-mac/install/ "target=_blank")
-- [Docker Engine for Linux](https://docs.docker.com/engine/install/ "target=_blank")
+- [Docker Desktop for Windows](https://docs.docker.com/docker-for-windows/install/)
+- [Docker Desktop for Mac](https://docs.docker.com/docker-for-mac/install/)
+- [Docker Engine for Linux](https://docs.docker.com/engine/install/)
 
 After installation, open a terminal (Linux/macOS) or command prompt (Windows) and run the following command to verify that Docker is working correctly:
 
@@ -86,7 +86,7 @@ If you have an existing Neurodesk App installation, please first uninstall it by
 
 - Debian, Ubuntu Linux Installer: `sudo apt install -f ./NeurodeskApp-Setup-Debian.deb`
 - Red Hat, Fedora, SUSE Linux Installer: `sudo rpm -i NeurodeskApp-Setup-Fedora.rpm`
-- Arch-based package via AUR: `yay neurodesk` (or follow instructions [here](https://wiki.archlinux.org/title/Arch_User_Repository#Installing_and_upgrading_packages "target=_blank"))
+- Arch-based package via AUR: `yay neurodesk` (or follow instructions [here](https://wiki.archlinux.org/title/Arch_User_Repository#Installing_and_upgrading_packages))
 - macOS Installer: Double click the downloaded dmg file, then drag the NeurodeskApp.app to the Applications folder; for starting the app: Right click on the NeurodeskApp.app and select "Open". For Apple Silicon systems (M1/M2): Make sure to enable Rosetta support in the docker settings for best performance!
 - Windows Installer: Double click the downloaded exe file; Accept to install from an unknown publisher with Yes; then accept the license agreement and click finish at the end.
 
