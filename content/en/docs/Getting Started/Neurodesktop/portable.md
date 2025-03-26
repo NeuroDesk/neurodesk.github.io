@@ -76,6 +76,6 @@ on MacOS/Linux run:
 
 ### Enabling Hardware Acceleration
 
-- **Windows:** This might require admin privileges in some cases. Search in your start menu for "Turn Windows features on or off.". Find "Hyper-V Hypervisor" or "Windows Hypervisor Platform" and make sure it's enabled. Alternatively, run `dism /online /add-feature /featurename:"HypervisorPlatform"` Then restart your computer. To test if it's working correctly run: `tinyrange.exe env check-hv`
+- **Windows:** This might require admin privileges in some cases. Search in your start menu for "Turn Windows features on or off.". Find "Hyper-V Hypervisor" or "Windows Hypervisor Platform" and make sure it's enabled. Alternatively, run `dism /online /enable-feature /featurename:"HypervisorPlatform"` in an Administrator shell. Then restart your computer. To test if it's working correctly run: `tinyrange.exe env check-hv`
 - **Ubuntu/Other Linux:** It should already work out of the box. If not make sure your user account has permission to read/write `/dev/kvm`.
 - **MacOS:** No extra steps required. It already works.
