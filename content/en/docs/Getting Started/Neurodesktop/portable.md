@@ -17,10 +17,10 @@ description: >
 
 TinyRange (https://github.com/tinyrange/tinyrange) is a lightweight runtime for running Virtual Machines and Containers. It runs without admin privileges and doesn't need Docker or Podman installed to work.
 
-- **Windows (x86_64):** https://github.com/tinyrange/tinyrange/releases/download/v0.1.8/tinyrange-windows-amd64.zip
-- **MacOS (arm64):** https://github.com/tinyrange/tinyrange/releases/download/v0.1.8/tinyrange-darwin-arm64.zip
-- **Linux (x86_64):** https://github.com/tinyrange/tinyrange/releases/download/v0.1.8/tinyrange-linux-amd64.zip
-- **Linux (arm64):** https://github.com/tinyrange/tinyrange/releases/download/v0.1.8/tinyrange-linux-arm64.zip
+- **Windows (x86_64):** https://github.com/tinyrange/tinyrange/releases/download/v0.2.13/tinyrange-windows-amd64.zip
+- **MacOS (arm64):** https://github.com/tinyrange/tinyrange/releases/download/v0.2.13/tinyrange-darwin-arm64.zip
+- **Linux (x86_64):** https://github.com/tinyrange/tinyrange/releases/download/v0.2.13/tinyrange-linux-amd64.zip
+- **Linux (arm64):** https://github.com/tinyrange/tinyrange/releases/download/v0.2.13/tinyrange-linux-arm64.zip
 
 If you already have a tinyrange installation you can also try an in place update
 ```
@@ -76,6 +76,6 @@ on MacOS/Linux run:
 
 ### Enabling Hardware Acceleration
 
-- **Windows:** This might require admin privileges in some cases. Search in your start menu for "Turn Windows features on or off.". Find "Hyper-V Hypervisor" or "Windows Hypervisor Platform" and make sure it's enabled. Then restart your computer.
+- **Windows:** This might require admin privileges in some cases. Search in your start menu for "Turn Windows features on or off.". Find "Hyper-V Hypervisor" or "Windows Hypervisor Platform" and make sure it's enabled. Then restart your computer. To test if it's working correctly run: `tinyrange.exe env check-hv`
 - **Ubuntu/Other Linux:** It should already work out of the box. If not make sure your user account has permission to read/write `/dev/kvm`.
 - **MacOS:** No extra steps required. It already works.
