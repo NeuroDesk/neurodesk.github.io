@@ -26,7 +26,7 @@ description: >
 {{< /alert >}}
 
 ## Setup Instructions:
-### **Install command line** (e.g. running on Linux, HPC or CVL)
+### **Install command line** (e.g. running on Linux or HPC)
 1. Load singularity
 For optimal performance, ensure you are using Singularity version 3.x:
 ```bash
