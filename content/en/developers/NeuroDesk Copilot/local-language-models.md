@@ -8,37 +8,28 @@ description: >
 
 ##  Neurodesk Copilot: Using Locally hosted LLMs inside Neurodesk Environment
 
-### Step 1: Install Jupyter AI and Jupyter lab
-
-```bash
-conda create -n jupyter-ai python=3.12
-conda activate jupyter-ai
-pip install jupyterlab gitpython
-pip install 'jupyter-ai[all]'
-```
-
-### Step 2: Deploying Neurodesk Copilot model with Ollama for Linux (For Windows and Mac users: download Ollama from https://ollama.com/)
-```bash
-curl -fsSL https://ollama.com/install.sh | sh 
-git clone https://github.com/jnikhilreddy/jupyter-ai-neurodesk.git
-cd jupyter-ai-neurodesk/
-wget https://huggingface.co/jnikhilreddy/neurodesk-gguf/resolve/main/neurodesk.gguf?download=true -O neurodesk.gguf
-ollama create  neurodesk -f ./Modelfile  
-#Optional: To make Neurodesk copilot faster (quantize the Neurodesk model): ollama create --quantize q4_K_M neurodesk -f ./Modelfile 
-ollama run neurodesk
-```
+### Configuring LLM Provider and models
 
 
-Start Jupyter lab with Neurodesk Copilot
-```bash
-jupyter lab 
-```
+NeuroDesk Copilot allows you to harness the capabilities of **local** Large Language Models (LLMs) for code autocompletion and chat-based assistance, directly within your NeuroDesk environment. This guide demonstrates how to configure **Ollama** as your local LLM provider and get started with chat and inline code completion. You can configure the model provider and model options using the Notebook Intelligence Settings dialog. You can access this dialog from JupyterLab Settings menu -> Notebook Intelligence Settings, using `/settings` command in Copilot Chat or by using the command palette. 
 
-### Step 3: Choose Neurodesk copilot in Jupyter AI: Press on settings and choose Ollama and neurodesk model and save settings
+### Step 1: Choose Ollama and Neurodesk copilot: type /settings in chat interface and choose Ollama and neurodesk model and save settings
 ![Choose Jupyter-AI settings](/static/developers/LLM_support/jupyter-ai.png)
-![Enable Neurodesk copilot in Jupyter-AI settings](/static/developers/LLM_support/jupyter-ai-settings.png)
+
+###  Step 2: Use chat interface
+
+1. Open the Chat feature in NeuroDesk and type your query or command. Examples:
+   - **“Explain how to import MRI dataset in python.”**
+   - **“Help me debug my data-loading function.”**  
+2. Press Enter. NeuroDesk Copilot will respond with explanations, tips, or suggested code.
+
+![Chat feature](/static/developers/LLM_support/chat-demo.png)
+
+###  Step 3: Code completion
+
+1. Begin typing your code within a cell in NeuroDesk. As you type, Copilot provides inline suggestions. You can accept suggestions by pressing **Tab** key. 
+2. If the suggestion isn’t relevant, continue typing or press **Escape** to dismiss it.  
+
+![Code completion](/static/developers/LLM_support/completion.png)
 
 Feel free to update the settings to disable auto completer to manual invocation in Settings -> Settings Editor -> Inline Completer
-
-
-
