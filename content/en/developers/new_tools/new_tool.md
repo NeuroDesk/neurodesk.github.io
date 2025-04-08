@@ -2,6 +2,8 @@
 title: "New tool"
 linkTitle: "New tool"
 weight: 3
+alaises:
+- /developers/new_tools/manual_build
 description: >-
      How to contribute a new container.
 ---
