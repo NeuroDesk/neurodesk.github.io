@@ -14,5 +14,11 @@ In the recipes repository, find the folder corresponding to the app you'd wish t
 
 <img src="/static/developers/new_tools/update_tool/neurocontainers-recipes-connectomeworkbench.png" width="650">
 
+Clicking on the pen on the top right allows all external users to fork the repository and then send a pull request. After creating the fork, you can now make changes to the file. 
+
+<img src="/static/developers/new_tools/update_tool/neurocontainers-recipes-connectomeworkbench-build.png" width="650">
+
+In order to test the changes, we recommend lauching a Codespace 
+
 ---
 More detailed documentation can be found here: https://github.com/NeuroDesk/neurocontainers/tree/main/builder
