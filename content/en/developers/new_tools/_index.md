@@ -2,7 +2,7 @@
 title: "How to add new tools"
 linkTitle: "How to add new tools"
 weight: 4
-alaises:
+aliases:
 - /developers/add_tool
 - /developers/new_tools/add_tool
 description: >
