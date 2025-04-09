@@ -59,7 +59,7 @@ This opens an editable environment directly in your browser.
 
 <img src="/static/developers/new_tools/update_tool/codespace.png" width="650">
 
-In the terminal, run the following lines to configure your codespace
+In the terminal, run the following lines to configure your codespace environment.
 ```shell
 python3 -m venv env
 source env/bin/activate
