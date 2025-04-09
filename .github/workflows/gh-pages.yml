@@ -60,6 +60,8 @@ jobs:
               --minify \
               --baseURL "https://www.neurodesk.org/"
           else
+            # Temporary fix for css paths in forks. This breaks some images and links. Needs to be fixed
+            sed -i "s|canonifyURLs=true|canonifyURLs=false|g" config.toml
             # Construct the base URL for forks
             BASE_URL="https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}/"
             echo "Building for fork/preview domain: ${BASE_URL}"
