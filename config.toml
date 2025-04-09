@@ -1,6 +1,6 @@
 baseURL = "https://www.neurodesk.org/"
 title = "Neurodesk"
-canonifyURLs=true
+canonifyURLs=false
 
 enableRobotsTXT = true
 
