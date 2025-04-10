@@ -22,4 +22,8 @@ sudo docker run \
   -e NEURODESKTOP_VERSION={{< params/neurodesktop/jupyter_neurodesk_version >}} ghcr.io/neurodesk/neurodesktop/neurodesktop:{{< params/neurodesktop/jupyter_neurodesk_version >}}
 ```
 
-Then open Neurodesktop in the browser by following the link displayed
+Then open Neurodesktop in the browser by clicking the "Open in Browser" Button displayed
+![alt text](/static/docs/getting-started/hosted/github_codespace_open.png)
+
+The token for authentication is displayed in the terminal:
+![alt text](/static/docs/getting-started/hosted/ghc_terminal.png)
