@@ -94,6 +94,27 @@ sudo podman run \
 
 <!-- neurodesktop version found in neurodesk.github.io/data/neurodesktop.toml -->
 
+
+{{< alert color="warning">}}
+If you run Ubuntu > 23.10 you need to create this apparmor profile under /etc/apparmor.d/neurodeskapp
+```bash
+# This profile allows everything and only exists to give the
+# application a name instead of having the label "unconfined"
+
+abi <abi/4.0>,
+include <tunables/global>
+
+profile neurodeskapp "/opt/NeurodeskApp/neurodeskapp" flags=(unconfined) {
+  userns,
+
+  # Site-specific additions and overrides. See local/README for details.
+  include if exists <local/neurodeskapp>
+}
+```
+
+```
+{{< /alert >}}
+
 {{< alert color="warning">}}
 If you get errors in neurodesktop then check if the ~/neurodesktop-storage directory is writable to all users. Otherwise run:
 ```bash
