@@ -38,7 +38,7 @@ flexibility and, overarchingly, reproducibility. This guide ensures visual consi
 
 | Color Name | Hex Code | RGB Code | Usage |
 |------------|----------|-----------|-------|
-| Black <span style="color:#6aa329;">◼︎</span> | `#0c0e0a` | `(5, 8, 2)` | Regular text |
+| Black <span style="color:#0c0e0a;">◼︎</span> | `#0c0e0a` | `(5, 8, 2)` | Regular text |
 | Darkest green <span style="color:#161c10;">◼︎</span> | `#161c10` | `(16, 24 6)` | Successful selection |
 | Muted olive green <span style="color:#1e2a16;">◼︎</span> | `#1e2a16` | `(26, 41, 10)` |  |
 | Dark olive green <span style="color:#4f7b38;">◼︎</span> | `#4f7b38` | `(79, 122, 31)` |  |
