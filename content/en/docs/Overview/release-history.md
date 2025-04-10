@@ -12,6 +12,13 @@ description: >-
 Latest Version
 : {{< params/neurodesktop/jupyter_neurodesk_version >}}
 
+# 2025-04-08
+- fix internet test with dns lookup instead of ping
+- replaced bidscoin 4.6.0 with 4.6.1 which fixes a GUI bug
+- add dcm2bids 
+- update QSMxT to v8.0.2 
+- update qsiprep to 1.0.1 
+
 # 2025-03-14
 - fixed bug: startup process was setting variables in different places
 
