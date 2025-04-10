@@ -66,6 +66,19 @@ sudo docker run \
   -p 8888:8888 \
   -e NEURODESKTOP_VERSION={{< params/neurodesktop/jupyter_neurodesk_version >}} vnmd/neurodesktop:{{< params/neurodesktop/jupyter_neurodesk_version >}}
 ```
+
+or use the github container registry (in case docker hub is down or blocked in your firewall):
+```bash
+docker volume create neurodesk-home &&
+sudo docker run \
+  --shm-size=1gb -it --security-opt apparmor=neurodeskapp --privileged --user=root --name neurodesktop \
+  -v ~/neurodesktop-storage:/neurodesktop-storage \
+  --mount source=neurodesk-home,target=/home/jovyan \
+  -e NB_UID="$(id -u)" -e NB_GID="$(id -g)" \
+  -p 8888:8888 \
+  -e NEURODESKTOP_VERSION={{< params/neurodesktop/jupyter_neurodesk_version >}} ghcr.io/neurodesk/neurodesktop/neurodesktop:{{< params/neurodesktop/jupyter_neurodesk_version >}}
+```
+
 or for podman:
 ```bash
 podman volume create neurodesk-home &&
@@ -80,6 +93,27 @@ sudo podman run \
 
 
 <!-- neurodesktop version found in neurodesk.github.io/data/neurodesktop.toml -->
+
+
+{{< alert color="warning">}}
+If you run Ubuntu > 23.10 you need to create this apparmor profile under /etc/apparmor.d/neurodeskapp
+```bash
+# This profile allows everything and only exists to give the
+# application a name instead of having the label "unconfined"
+
+abi <abi/4.0>,
+include <tunables/global>
+
+profile neurodeskapp "/opt/NeurodeskApp/neurodeskapp" flags=(unconfined) {
+  userns,
+
+  # Site-specific additions and overrides. See local/README for details.
+  include if exists <local/neurodeskapp>
+}
+```
+
+```
+{{< /alert >}}
 
 {{< alert color="warning">}}
 If you get errors in neurodesktop then check if the ~/neurodesktop-storage directory is writable to all users. Otherwise run:
