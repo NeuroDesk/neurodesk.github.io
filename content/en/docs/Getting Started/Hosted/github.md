@@ -1,6 +1,6 @@
 ---
 title: "Github Codespaces"
-linkTitle: "Github Codespaces"
+linkTitle: "Github"
 weight: 1
 description: >
   Use Neurodesk on GitHub Codespaces
