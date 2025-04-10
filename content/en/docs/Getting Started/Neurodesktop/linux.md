@@ -66,6 +66,19 @@ sudo docker run \
   -p 8888:8888 \
   -e NEURODESKTOP_VERSION={{< params/neurodesktop/jupyter_neurodesk_version >}} vnmd/neurodesktop:{{< params/neurodesktop/jupyter_neurodesk_version >}}
 ```
+
+or use the github container registry (in case docker hub is down or blocked in your firewall):
+```bash
+docker volume create neurodesk-home &&
+sudo docker run \
+  --shm-size=1gb -it --security-opt apparmor=neurodeskapp --privileged --user=root --name neurodesktop \
+  -v ~/neurodesktop-storage:/neurodesktop-storage \
+  --mount source=neurodesk-home,target=/home/jovyan \
+  -e NB_UID="$(id -u)" -e NB_GID="$(id -g)" \
+  -p 8888:8888 \
+  -e NEURODESKTOP_VERSION={{< params/neurodesktop/jupyter_neurodesk_version >}} ghcr.io/neurodesk/neurodesktop/neurodesktop:{{< params/neurodesktop/jupyter_neurodesk_version >}}
+```
+
 or for podman:
 ```bash
 podman volume create neurodesk-home &&
