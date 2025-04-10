@@ -8,7 +8,7 @@ description: >
 
 
 Start a GitHub Codespace in the repository of your choice:
-![Start GitHub Codespace]((/static/docs/getting-started/hosted/github_codespace.png)
+![Start GitHub Codespace](/static/docs/getting-started/hosted/github_codespace.png)
 
 Then start the neurodesktop container in a terminal:
 ```bash
