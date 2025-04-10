@@ -194,7 +194,7 @@ linktitle: Neurodesk
 	</div>
 </section>
 
-<section class="row -bg-primary justify-content-left h-auto col-big-desktop">
+<section class="row -bg-light justify-content-left h-auto col-big-desktop">
 	<div class="td-box">
 		<h2>Neurodesk Components</h2>
 		<p class="lead mt-2">Details of each component within the Neurodesk project.<br /> Neurodesk makes it easy for
