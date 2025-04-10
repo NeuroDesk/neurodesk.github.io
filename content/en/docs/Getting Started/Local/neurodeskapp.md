@@ -8,7 +8,7 @@ description: >
   A cross-platform desktop application for Neurodesk: The easiest way to use Neurodesktop
 ---
 
-<img style="float: right;" src="/static/docs/getting-started/neurodeskapp/neurodesk-desktop.png" width="400">
+<img style="float: right;" src="/neurodesk.github.io/static/docs/getting-started/neurodeskapp/neurodesk-desktop.png" width="400">
 <!-- ![Neurodesk App](/static/docs/getting-started/neurodeskapp/neurodesk-desktop.png 'neurodeskapp') -->
 
 ### Determine System Privileges
@@ -19,7 +19,7 @@ If you have privileged access → Use Docker or Podman Engine
 
 If you do NOT have privileged access → Use TinyRange Engine, or run remote instance
 
-<img src="/static/docs/getting-started/neurodeskapp/engine-options.png" width="400">
+<img src="/neurodesk.github.io/static/docs/getting-started/neurodeskapp/engine-options.png" width="400">
 
 ### Minimum System Requirements
 

@@ -213,21 +213,21 @@ linktitle: Neurodesk
 									<p class="card-summary">Software container library</p>
 								</div>
 								<div class="image-wrapper">
-									<img src="/static/favicons/neurocontainer.png" alt="neurocontainer" />
+									<img src="/neurodesk.github.io/static/favicons/neurocontainer.png" alt="neurocontainer" />
 								</div>
 							</a>
 						</div>
 					</div>
 					<div class="col-10 col-md-4 col-lg-4">
 						<div class="component-card command">
-							<a class="component-click-btn" href="/docs/getting-started/neurocommand/">
+							<a class="component-click-btn" href="/neurodesk.github.io/docs/getting-started/neurocommand/">
 								<div class="card-body">
 									<i class="fas fa-terminal"></i>
 									<h4>Neurocommand</h4>
 									<p class="card-summary">Core installer</p>
 								</div>
 								<div class="image-wrapper">
-									<img class="neurocommand" src="/static/favicons/neurocommand.png"
+									<img class="neurocommand" src="/neurodesk.github.io/static/favicons/neurocommand.png"
 										alt="Neurocommand" />
 									<div class="fake">
 										<div class=fakeMenu>
@@ -257,7 +257,7 @@ linktitle: Neurodesk
 									<p class="card-summary">Fully featured desktop in a container</p>
 								</div>
 								<div class="image-wrapper">
-									<img src="/static/favicons/neurodesktop.png" alt="Neurodesktop" />
+									<img src="/neurodesk.github.io/static/favicons/neurodesktop.png" alt="Neurodesktop" />
 								</div>
 							</a>
 						</div>
@@ -268,4 +268,4 @@ linktitle: Neurodesk
 	</div>
 </section>
 
-<script src="/static/js/command.js"></script>
+<script src="/neurodesk.github.io/static/js/command.js"></script>
