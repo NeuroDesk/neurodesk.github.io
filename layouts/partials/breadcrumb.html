@@ -1,0 +1,55 @@
+{{ $isSingle := true -}}
+{{ with .Parent -}}
+  {{ $isSingle = .IsHome -}}
+{{ end -}}
+
+{{ if .File -}}
+{{ $path := strings.TrimPrefix (add hugo.WorkingDir "/") $.File.Filename -}}
+{{ $gh_repo := $.Param "github_repo" -}}
+{{ $gh_url := $.Param "github_url" -}}
+{{ $gh_subdir := $.Param "github_subdir" | default "" -}}
+{{ $gh_project_repo := $.Param "github_project_repo" -}}
+{{ $gh_branch := $.Param "github_branch" | default "main" -}}
+
+  {{/* Adjust $path based on path_base_for_github_subdir */ -}}
+  {{ $ghs_base := $.Param "path_base_for_github_subdir" -}}
+  {{ $ghs_rename := "" -}}
+  {{ if reflect.IsMap $ghs_base -}}
+    {{ $ghs_rename = $ghs_base.to -}}
+    {{ $ghs_base = $ghs_base.from -}}
+  {{ end -}}
+  {{ with $ghs_base -}}
+    {{ $path = replaceRE . $ghs_rename $path -}}
+  {{ end -}}
+
+  {{ $gh_repo_path := printf "%s/%s/%s" $gh_branch $gh_subdir $path -}}
+  {{ $gh_repo_path = replaceRE "//+" "/" $gh_repo_path -}}
+  {{ $editURL := printf "%s/edit/%s" $gh_repo $gh_repo_path -}}
+
+  <nav aria-label="breadcrumb" class="td-breadcrumbs
+  {{- if $isSingle }} td-breadcrumbs__single {{- end }}">
+    <ol class="breadcrumb">
+    {{- template "breadcrumbnav" (dict "p1" . "p2" .) }}&nbsp;<a href="{{ $editURL }}" class="td-page-meta--edit td-page-meta__edit" target="_blank" rel="noopener"><i class="fa-solid fa-pen-to-square fa-fw"></i></a>
+    </ol>
+    </nav>
+
+{{ end -}}
+
+{{- define "breadcrumbnav" -}}
+  {{ if .p1.Parent -}}
+    {{ if not .p1.Parent.IsHome -}}
+      {{ template "breadcrumbnav" (dict "p1" .p1.Parent "p2" .p2 )  -}}
+    {{ end -}}
+  {{ else if not .p1.IsHome -}}
+    {{ template "breadcrumbnav" (dict "p1" .p1.Site.Home "p2" .p2 )  -}}
+  {{ end -}}
+  {{ $isActive :=  eq .p1 .p2 }}
+  <li class="breadcrumb-item{{ if $isActive }} active{{ end }}"
+      {{- if $isActive }} aria-current="page"{{ end }}>
+    {{ if $isActive -}}
+      {{ .p1.LinkTitle -}}
+    {{ else -}}
+      <a href="{{ .p1.RelPermalink }}">{{ .p1.LinkTitle }}</a>
+    {{- end -}}
+  </li>
+{{- end -}}
