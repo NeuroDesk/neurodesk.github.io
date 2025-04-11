@@ -5,7 +5,7 @@ linktitle: Neurodesk
 
 <section class="row td-box -bg-dark justify-content-left h-auto col-big-desktop">
 	<div class="col-sm-10 col-md-4 col-lg-1 order-xs-first order-sm-first order-md-last text-center my-auto">
-		<img src="/static/favicons/neurodesk.org-vertical-dark-background.png" style="height:250px" alt="neurodesk logo" />
+		<img src="/static/favicons/neurodesk_vertical.svg" style="height:250px" alt="neurodesk logo" />
 	</div>
 	<div class="col-md-8 col-lg-first order-xs-2 order-sm-2 order-md-2 my-auto">
 		<h2>Quick start</h2>
