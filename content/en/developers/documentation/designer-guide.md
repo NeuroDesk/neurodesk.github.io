@@ -44,7 +44,7 @@ flexibility and, overarchingly, reproducibility. This guide ensures visual consi
 | Dark olive green <span style="color:#4f7b38;">◼︎</span> | `#4f7b38` | `(79, 122, 31)` | Selected buttons, Hyperlinks |
 | Light green <span style="color:#b7d886;">◼︎</span> | `#b7d886` | `(181, 224, 133)` | Hover over a button |
 | Lighter green <span style="color:#d3e7b6;">◼︎</span> | `#d3e7b6` | `(211, 237, 182)` |  |
-| Verdant Haze <span style="color:#e6f1d6;">◼︎</span> | `#e6f1d6` | `(230, 245, 214)` | Unseletected buttons |
+| Verdant Haze <span style="color:#e6f1d6;">◼︎</span> | `#e6f1d6` | `(230, 245, 214)` | Unselected buttons |
 | Pale Lime Green <span style="color:#f0f7e7;">◼︎</span> | `#f0f7e7` | `(240, 249, 231)` |  |
 | White <span style="color:#ffffff;">◼︎</span> | `#ffffff` | `(255, 255, 255)` |  |
 
