@@ -38,11 +38,11 @@ flexibility and, overarchingly, reproducibility. This guide ensures visual consi
 
 | Color Name | Hex Code | RGB Code | Usage |
 |------------|----------|-----------|-------|
-| Black <span style="color:#0c0e0a;">◼︎</span> | `#0c0e0a` | `(5, 8, 2)` | Regular text |
+| Black <span style="color:#0c0e0a;">◼︎</span> | `#0c0e0a` | `(5, 8, 2)` | Regular text, menu bar |
 | Darkest green <span style="color:#161c10;">◼︎</span> | `#161c10` | `(16, 24 6)` | Successful selection |
-| Muted olive green <span style="color:#1e2a16;">◼︎</span> | `#1e2a16` | `(26, 41, 10)` |  |
-| Dark olive green <span style="color:#4f7b38;">◼︎</span> | `#4f7b38` | `(79, 122, 31)` |  |
-| Light green <span style="color:#b7d886;">◼︎</span> | `#b7d886` | `(181, 224, 133)` |  |
+| Muted olive green <span style="color:#1e2a16;">◼︎</span> | `#1e2a16` | `(26, 41, 10)` | Accent background |
+| Dark olive green <span style="color:#4f7b38;">◼︎</span> | `#4f7b38` | `(79, 122, 31)` | Selected buttons, Hyperlinks |
+| Light green <span style="color:#b7d886;">◼︎</span> | `#b7d886` | `(181, 224, 133)` | Hover over a button |
 | Lighter green <span style="color:#d3e7b6;">◼︎</span> | `#d3e7b6` | `(211, 237, 182)` |  |
 | Verdant Haze <span style="color:#e6f1d6;">◼︎</span> | `#e6f1d6` | `(230, 245, 214)` | Unseletected buttons |
 | Pale Lime Green <span style="color:#f0f7e7;">◼︎</span> | `#f0f7e7` | `(240, 249, 231)` |  |
