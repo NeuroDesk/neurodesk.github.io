@@ -3,15 +3,15 @@ title: Neurodesk
 linktitle: Neurodesk
 ---
 
-<section class="row td-box -bg-dark justify-content-left h-auto col-big-desktop">
+<section class="row td-box -bg-secondary justify-content-left h-auto col-big-desktop">
 	<div class="col-sm-10 col-md-4 col-lg-1 order-xs-first order-sm-first order-md-last text-center my-auto">
-		<img src="/static/favicons/neurodesk_vertical.svg" style="height:250px" alt="neurodesk logo" />
+		<img src="/static/favicons/neurodesk-logo.svg" style="height:250px" alt="neurodesk logo" />
 	</div>
 	<div class="col-md-8 col-lg-first order-xs-2 order-sm-2 order-md-2 my-auto">
 		<h2>Quick start</h2>
 		<h3>A flexible and scalable data analysis environment for reproducible neuroimaging with Neurodesk.</h3>
 		<div class="mx-auto mt-5">
-			<a class="btn btn-lg btn-primary me-1 mb-4" target="_blank" href="docs/support/faq/#what-is-neurodesk">
+			<a class="btn btn-lg btn-light me-1 mb-4" target="_blank" href="docs/support/faq/#what-is-neurodesk">
 				What is Neurodesk ?</a>
 			<a class="btn btn-lg btn-light me-1 mb-4" target="_blank" href="docs/getting-started/local">
 				<i class="fa fa-laptop"></i> Local </a>
