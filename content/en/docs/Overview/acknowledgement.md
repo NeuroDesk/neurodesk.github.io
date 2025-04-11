@@ -9,8 +9,8 @@ description: >
 
 This work is supported by the Wellcome Trust with a Wellcome Discretionary Award as part of the Chan Zuckerberg Initiative (CZI), The Kavli Foundation and Wellcome’s Essential Open Source Software for Science (Cycle 6) Program [313306/Z/24/Z]
 
-<img src="/neurodesk.github.io/static/docs/overview/Wellcome_Trust_logo.png" width="150">
-<img src="/neurodesk.github.io/static/docs/overview/czi_logo.png" width="250">
+<img src="/static/docs/overview/Wellcome_Trust_logo.png" width="150">
+<img src="/static/docs/overview/czi_logo.png" width="250">
 
 
 This project was supported by an Australian Research Data Commons (ARDC) Platform project “Australian
@@ -25,16 +25,16 @@ Electrophysiology Data Analytics PlaTform (AEDAPT)”.
 
 This work benefits from services and resources provided by the EGI Federation with the dedicated support of CESNET-MCC, Indiana University's Jetstream2 cloud and Australian Research Data Commons Nectar cloud.
 
-<img src="/neurodesk.github.io/static/docs/overview/EGI_Federation_logo.png" width="150">
-<img src="/neurodesk.github.io/static/docs/overview/indiana_university_logo.jpeg" width="100">
+<img src="/static/docs/overview/EGI_Federation_logo.png" width="150">
+<img src="/static/docs/overview/indiana_university_logo.jpeg" width="100">
 
 
 Thank you to AWS for providing cloud credits to support this project since 2024. 
 
-<img src="/neurodesk.github.io/static/docs/overview/aws.png" width="150">
+<img src="/static/docs/overview/aws.png" width="150">
 
 We thank Google Cloud for supporting our project from 2024 to 2025 and we thank Oracle for Research for supporting our project from 2022 to 2023.
 
-<img src="/neurodesk.github.io/static/docs/overview/google_cloud.png" width="200">
-<img src="/neurodesk.github.io/static/docs/overview/oracle.png" width="150">
+<img src="/static/docs/overview/google_cloud.png" width="200">
+<img src="/static/docs/overview/oracle.png" width="150">
 

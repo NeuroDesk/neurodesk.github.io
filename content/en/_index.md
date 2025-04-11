@@ -5,7 +5,7 @@ linktitle: Neurodesk
 
 <section class="row td-box -bg-dark justify-content-left h-auto col-big-desktop">
 	<div class="col-sm-10 col-md-4 col-lg-1 order-xs-first order-sm-first order-md-last text-center my-auto">
-		<img src="/neurodesk.github.io/static/favicons/neurodesk.org-vertical-dark-background.png" style="height:250px" alt="neurodesk logo" />
+		<img src="/static/favicons/neurodesk.org-vertical-dark-background.png" style="height:250px" alt="neurodesk logo" />
 	</div>
 	<div class="col-md-8 col-lg-first order-xs-2 order-sm-2 order-md-2 my-auto">
 		<h2>Quick start</h2>
@@ -213,7 +213,7 @@ linktitle: Neurodesk
 									<p class="card-summary">Software container library</p>
 								</div>
 								<div class="image-wrapper">
-									<img src="/neurodesk.github.io/static/favicons/neurocontainer.png" alt="neurocontainer" />
+									<img src="/static/favicons/neurocontainer.png" alt="neurocontainer" />
 								</div>
 							</a>
 						</div>
@@ -227,7 +227,7 @@ linktitle: Neurodesk
 									<p class="card-summary">Core installer</p>
 								</div>
 								<div class="image-wrapper">
-									<img class="neurocommand" src="/neurodesk.github.io/static/favicons/neurocommand.png"
+									<img class="neurocommand" src="/static/favicons/neurocommand.png"
 										alt="Neurocommand" />
 									<div class="fake">
 										<div class=fakeMenu>
@@ -257,7 +257,7 @@ linktitle: Neurodesk
 									<p class="card-summary">Fully featured desktop in a container</p>
 								</div>
 								<div class="image-wrapper">
-									<img src="/neurodesk.github.io/static/favicons/neurodesktop.png" alt="Neurodesktop" />
+									<img src="/static/favicons/neurodesktop.png" alt="Neurodesktop" />
 								</div>
 							</a>
 						</div>
@@ -268,4 +268,4 @@ linktitle: Neurodesk
 	</div>
 </section>
 
-<script src="/neurodesk.github.io/static/js/command.js"></script>
+<script src="/static/js/command.js"></script>
