@@ -89,7 +89,7 @@ p.lead.mt-2 {
 
 
 .quick-starts {
-  background: $light_white;
+  background: $light;
 
   .container {
     @include very-very-big-desktop {
@@ -168,7 +168,7 @@ p.lead.mt-2 {
 
 
   .option {
-    border: 2px solid $light_white;
+    border: 2px solid $light;
     padding: rem(10px);
     padding-left: calc(9px + 0.330625vw);
     font-size: calc(9px + 0.330625vw);
