@@ -26,12 +26,13 @@
     // @extend .navbar-expand;
   
     background: $primary;
-    min-height: 4rem;
+    min-height: 1rem;
     margin: 0;
     z-index: 32;
   
     .navbar-brand {
       text-transform: none;
+      // padding-left: 0.5rem;
   
       &__name {
         font-weight: $font-weight-bold;

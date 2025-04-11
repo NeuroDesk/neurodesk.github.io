@@ -3,27 +3,31 @@ title: Neurodesk
 linktitle: Neurodesk
 ---
 
-<section class="row td-box -bg-dark justify-content-left h-auto col-big-desktop">
-	<div class="col-sm-10 col-md-4 col-lg-1 order-xs-first order-sm-first order-md-last text-center my-auto">
-		<img src="/static/favicons/neurodesk_logo.svg" style="height:250px;filter:brightness(2.5)" alt="neurodesk logo" />
-	</div>
-	<div class="col-md-8 col-lg-first order-xs-2 order-sm-2 order-md-2 my-auto">
-		<h2>Quick start</h2>
-		<h3>A flexible and scalable data analysis environment for reproducible neuroimaging with Neurodesk.</h3>
-		<div class="mx-auto mt-5">
-			<a class="btn btn-lg btn-light me-1 mb-4" target="_blank" href="docs/support/faq/#what-is-neurodesk">
-				What is Neurodesk ?</a>
-			<a class="btn btn-lg btn-light me-1 mb-4" target="_blank" href="docs/getting-started/local">
-				<i class="fa fa-laptop"></i> Local </a>
-			<a class="btn btn-lg btn-light me-1 mb-4" target="_blank" href="docs/getting-started/hosted">
-				<i class="fa fa-cloud"></i> Hosted </a>
-			<a class="btn btn-lg btn-light me-1 mb-4" target="_blank" href="tutorials-examples/examples/examples">
-				<i class="fa fa-book"></i> Examples </a>
-		</div>
-	</div>
+<section class="row td-box -bg-secondary justify-content-left h-auto col-big-desktop">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-md-8 order-md-1">
+                <h1 class="mt-0 mt-md-5 pb-2">Flexible. Scalable. Reproducible.</h1>
+                <h2>Environment for Imaging Analysis</h2>
+                <div class="mt-4 mb-5">
+                    <a class="btn btn-lg btn-light me-2 mb-3" href="docs/support/faq/#what-is-neurodesk">
+                        What is Neurodesk?</a>
+                    <a class="btn btn-lg btn-light me-2 mb-3" href="docs/getting-started/local">
+                        <i class="fa fa-laptop"></i> Local</a>
+                    <a class="btn btn-lg btn-light me-2 mb-3" href="docs/getting-started/hosted">
+                        <i class="fa fa-cloud"></i> Hosted</a>
+                    <a class="btn btn-lg btn-light me-2 mb-3" href="tutorials-examples/examples/examples">
+                        <i class="fa fa-book"></i> Examples</a>
+                </div>
+            </div>
+            <div class="col-md-4 order-md-2 text-center">
+                <img src="/static/favicons/neurodesk-logo.svg" style="height:250px; max-width:100%;" alt="Neurodesk logo" />
+            </div>
+        </div>
+    </div>
 </section>
 
-<section id="startup" class="row -bg-white justify-content-left h-auto col-big-desktop">
+<section id="startup" class="row -bg-light justify-content-left h-auto col-big-desktop">
 	<div class="td-box">
 		<h2>Get started with Neurodesk</h2>
 		<p class="lead mt-2">Select your setups and follow further instructions in the provided link.
@@ -131,7 +135,7 @@ linktitle: Neurodesk
 	</div>
 </section>
 
-<section class="row -bg-white justify-content-left h-auto col-big-desktop">
+<section class="row -bg-secondary justify-content-left h-auto col-big-desktop">
 	<div class="container-fluid community-start">
 		<div class="row">
 			<div class="col-10 col-sm-9 col-md-10 col-lg-3 col-xl-2 community-title">
@@ -194,7 +198,7 @@ linktitle: Neurodesk
 	</div>
 </section>
 
-<section class="row -bg-white justify-content-left h-auto col-big-desktop">
+<section class="row -bg-light justify-content-left h-auto col-big-desktop">
 	<div class="td-box">
 		<h2>Neurodesk Components</h2>
 		<p class="lead mt-2">Details of each component within the Neurodesk project.<br /> Neurodesk makes it easy for
@@ -220,7 +224,7 @@ linktitle: Neurodesk
 					</div>
 					<div class="col-10 col-md-4 col-lg-4">
 						<div class="component-card command">
-							<a class="component-click-btn" href="/docs/getting-started/neurocommand/">
+							<a class="component-click-btn" href="/neurodesk.github.io/docs/getting-started/neurocommand/">
 								<div class="card-body">
 									<i class="fas fa-terminal"></i>
 									<h4>Neurocommand</h4>
