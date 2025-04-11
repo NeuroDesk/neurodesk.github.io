@@ -32,6 +32,18 @@ $medium_smoky_grey: #2c2c2c;
 $light_white: #ffffff;
 $mid_gray: #838282;
 
+// Hyperlink colors
+$link-color: #4f7b38 !default;
+$link-hover-color: #1e2a16 !default;
+
+// Docsy-specific link variables
+$td-link-color: #4f7b38 !default;
+$td-link-color-hover: #1e2a16 !default;
+
+// Sidebar and content links
+$td-sidebar-nav-link-color: #4f7b38 !default;
+$td-sidebar-nav-link-color-hover: #1e2a16 !default;
+
 $desktop_header_height: 90px;
 $mobile_header_height: 68px;
 $desktop_footer_height: 560px;
