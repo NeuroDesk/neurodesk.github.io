@@ -1,9 +1,11 @@
 ---
 title: "Acknowledgments"
 linkTitle: "Acknowledgments"
-description: >   Recognition of contributors, supporters, and the lands on which we work.
-
+aliases:
+description: >-
+     Recognition of contributors, supporters, and the lands on which we work.
 ---
+
 
 # Acknowledgement
 
