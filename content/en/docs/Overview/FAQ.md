@@ -11,7 +11,7 @@ description: >
 {{< toc >}}
 
 ## **General Overview**
-## What is Neurodesk?
+### What is Neurodesk?
 Neurodesk provides a containerised data analysis environment to facilitate reproducible analysis of neuroimaging data. Analysis pipelines for neuroimaging data typically rely on specific versions of packages and software, and are dependent on their native operating system. These dependencies mean that a working analysis pipeline may fail or produce different results on a new computer, or even on the same computer after a software update. Neurodesk provides a platform in which anyone, anywhere, using any computer can reproduce your original research findings given the original data and analysis code. 
 
 More information: 
@@ -25,26 +25,26 @@ In-depth information:
 - A 35 minute video explaining the technical details of Neurodesk: [Neurodesk in 35 minutes - behind the scenes](https://youtu.be/V5gAA9NiX_s)
 - A 1 hour video showcasing Neurodesk live and explaining the background: [ReproNim Webinar](https://www.youtube.com/watch?v=HY-TqE6I2oo)
 
-## What applications are included in Neurodesk?
+### What applications are included in Neurodesk?
 You can check out the complete list of [these applications](/docs/overview/applications)
 
-## How should I cite the tools I am using and Neurodesk itself?
+### How should I cite the tools I am using and Neurodesk itself?
 [See here](/docs/overview/how-to-cite-us)
 
 ## **Using Neurodesktop**
-## Can I change the desktop resolution?
+### Can I change the desktop resolution?
 Yes. 
 In a Desktop RDP session, simply zoom or resize the window and the resolution will be adjusted.
 In a Desktop VNC session, open a Terminal (LXTerminal) from the bottom toolbar and run `lxrandr` to change the desktop resolution
 <img width="700" alt="image" src="https://github.com/user-attachments/assets/548941cb-6f7d-47ba-87c0-844fa20da19a">
 
-## Can I run Neurodesk on an HPC without Docker?
+### Can I run Neurodesk on an HPC without Docker?
 Yes, our project aims to run on the hardware you have access to. However, without docker support you cannot use our desktop interface [NeuroDesktop](/docs/getting-started/neurodesktop) but you can still use the command line interface [NeuroCommand on HPC](https://www.neurodesk.org/docs/getting-started/neurocommand). This works well for batch processing on HPCs once you developed your pipeline in our desktop interface. If your HPC provides a desktop interface you can use all our graphical applications without any issues and the GUIs even work via SSH x-forwarding - it's not the most performant experience, but it works well enough.
 
-## How do I get my files into Neurodesk?
+### How do I get my files into Neurodesk?
 It depends where you are running Neurodesk and where your files are. We provide many different ways from drag-and-drop, to cloud storage to file mounts in [Storage in Neurodesk](/docs/getting-started/neurodesktop/storage).
 
-## Can I export a jupyter notebook as a PDF?
+### Can I export a jupyter notebook as a PDF?
 By default we don't have all extensions installed to do this to keep the neurodesktop small. So you will see an error when trying to do File -> Save and Export Notebook As ... -> Webpdf
 
 To get webpdf export to work, open a terminal and run:
@@ -53,7 +53,7 @@ pip install nbconvert[webpdf]
 playwright install chromium
 ```
 
-## Is there reduced performance when using containers?
+### Is there reduced performance when using containers?
 If you are running containers on Linux there is no performance penalty - on an HPC with a Lustre filesystem it can even be faster to run our containers than running natively on the filesystem (because meta data operations are shifted to the compute node - more information can be found here: 
 
 <!-- markdown-link-check-disable -->
@@ -62,18 +62,18 @@ Rioux, Pierre, Gregory Kiar, Alexandre Hutton, Alan C. Evans, and Shawn T. Brown
 
 However, running Neurodesktop on Windows and Mac will have a performance penalty, because Linux runs in a Hypervisor on these systems. Also, it is important to understand filesystem operation bottlenecks that can occur when accessing files across system boundaries (e.g. processing DICOM files stored on Windows inside Neurodesk).
 
-## How can I see how many compute resources Neurodesk containers need?
+### How can I see how many compute resources Neurodesk containers need?
 In Linux the containers run as normal processes and you can use htop and top to inspect the resource footprint. For Windows and Mac the information is not readily available, however, we have written a guide here: [Troubleshooting](https://www.neurodesk.org/docs/support/faq/#i-got-an-error-message-x-killed-or-not-enough-memory)
 
-## Can I just use the containers without neurodesktop or neurocommand?
+### Can I just use the containers without neurodesktop or neurocommand?
 Yes, there are multiple ways of using the containers directly and we provide an overview here: https://www.neurodesk.org/docs/getting-started/neurocontainers/
 
-## Can I keep my modifications in the container?
+### Can I keep my modifications in the container?
 We designed neurodesk with reproducibility as a main goal, so the desktop containers should not be modified if one aims for full reproducibility. However, there is one good option to keep your settings across different container versions: You can write a shell script that installs additional packages and modifies the environment so it's perfect for you. This script can then be re-executed in a new desktop version and will enable a reproducible customization.
 
 Another option is to "save" your docker container including all changes you made. This could be useful when your changes are too difficult to write a shell script or when you do not care about reproducibility as much and you just want to get the job done. To do this you can commit (https://docs.docker.com/engine/reference/commandline/commit/) your container and by uploading the container to your own docker hub you could even share it. 
 
-## Can I force a complete container download to my system?
+### Can I force a complete container download to my system?
 To increase speed and reliability of Neurodesktop we mount the application containers from a CVMFS mount and download only the files required to run your current task. Although we aim to keep everything on there reproducible, there might be a reason that you want to fully download the containers to your system. You can force this behaviour by adding another parameter to the docker call: `-e CVMFS_DISABLE=true`
 
 For windows an example would look like this:
@@ -81,7 +81,7 @@ For windows an example would look like this:
 docker run --shm-size=1gb -it --privileged --user=root --name neurodesktop -v C:/neurodesktop-storage:/neurodesktop-storage -e CVMFS_DISABLE=true -p 8888:8888 -e NEURODESKTOP_VERSION={{< params/neurodesktop/jupyter_neurodesk_version >}} vnmd/neurodesktop:{{< params/neurodesktop/jupyter_neurodesk_version >}}
 ```
 
-## How to restart a Neurodesk Lab session?
+### How to restart a Neurodesk Lab session?
 
 In the jupyter menu, click on File -> Hub Control Panel:
 
@@ -98,11 +98,11 @@ Then "Start My Server"
 <img width="200" alt="image" src="https://github.com/NeuroDesk/neurodesk.github.io/assets/4021595/efbf6a95-bd2a-451b-97f9-bf67a839fdcd">
 
 
-## How to restart a stuck Neurodesk when running locally in Docker or using the NeurodeskApp?
+### How to restart a stuck Neurodesk when running locally in Docker or using the NeurodeskApp?
 Open Docker Desktop Dashboard. Find the container under "Containers" and delete the Container there.
 
 ## **Troubleshooting Common Issues**
-## Freeview 7.2.0 crashes when I open files
+### Freeview 7.2.0 crashes when I open files
 Freeview (and Freesurfer!) need a valid license to work and we are not allowed to distribute a license with Neurodesk!
 
 You can follow these steps to run freeview 7.2.0 and open your files:
@@ -115,13 +115,13 @@ echo "export FS_LICENSE=~/.license" >> ~/.bashrc
 then start freeview 7.2.0 and it should all work perfectly.
 ```
 
-## Matlab asks me to reactivate after restarting the desktop
+### Matlab asks me to reactivate after restarting the desktop
 There is one workaround for this problem. Fix the mac address for your session by including this in your docker command:
 ```
 --mac-address 02:42:ac:11:00:02 
 ```
 
-## Trouble installing neurodesk images
+### Trouble installing neurodesk images
 This may be a memory issue. First, ensure that there is enough free space on the disk. If there is, try resetting docker settings and data. To do this:
 
 1. Open the docker engine
@@ -134,10 +134,10 @@ If you are still experiencing issues after this, you may need to update docker t
 
 ![Docker_update](/static/docs/overview/faq/Docker_update.png 'Docker_update')
 
-## I got an error message 'X killed' or not enough memory
+### I got an error message 'X killed' or not enough memory
 This may be due to Docker not having access to enough RAM from your host computer.
 
-## How to empty trash bin in Neurodesktop
+### How to empty trash bin in Neurodesktop
 
 If you have deleted files using the Neurodesktop GUI but your storage is not yet emptied, execute the following command in the terminal.
 
@@ -146,23 +146,23 @@ rm -rf ~/.local/share/Trash/
 ```
 
 ## **Keyboard, Clipboard, and Language Support**
-## Keyboard and Multi-Language support
-### I am using a European keyboard layout and I cannot type symbols that require the ALT-GR key (like @ or \\)
+### Keyboard and Multi-Language support
+#### I am using a European keyboard layout and I cannot type symbols that require the ALT-GR key (like @ or \\)
 This seems to be a bug in Guacamole and RDP in combination with certain browsers. There are a few workarounds you can try:
 1) Use the connection option "Desktop Fixed-Resolution (VNC)" instead of Desktop Auto-Resolution (RDP)
 2) connect to the desktop using an RDP client instead of the browser (https://www.neurodesk.org/docs/getting-started/neurodesktop/windows/#using-an-rdp-client)
 
-## Copy-Paste and Clipboard issues
-### How do I copy and paste text?
+### Clipboard issues
+#### How do I copy and paste text?
 You can copy and paste text within Neurodesktop and between Neurodektop and your host computer using the regular keyboard shortcuts (CTRL+C, CTRL+X, and CTRL+V). Note however that some applications (e.g., command-line terminal) are using other keyboard shortcuts. You can usually find them in the "Edit" menu of the relevant application.
 
 Note for Mac Users: The Safari Browser is currently not compatible for copy and paste with Guacamole. Please either use the Neurodeskapp or a Edge/Firefox on MacOS. You will need to use a combination of CTRL and Command shortcuts in order to copy and paste text between Neurodesktop and the host computer. For example, copy text from your Mac with Command+C and then paste it into Neurodesktop using CTRL+V. For the other way around, you'd use CTRL+C in Neurodesktop and then Command+V on the Mac.
 
-### I cannot copy and paste text within Neurodesktop using keyboard shortcuts
+#### I cannot copy and paste text within Neurodesktop using keyboard shortcuts
 If you're using Mac, you might be trying to use Mac keyboard shortcuts, but Neurodesktop is using Linux keyboard shortcuts (CTRL+C and CTRL+V)
 If you use the terminal, please see "I fixed my internet browser clipboard, but copy or paste still do not work in the terminal" below.
 
-### Copying text from my host computer and pasting it inside Neurodesktop doesn't work in Firefox
+#### Copying text from my host computer and pasting it inside Neurodesktop doesn't work in Firefox
 This is a "feature" of firefox and you can disable this "feature":
 
 - navigate to `about:config` and "Accept the Risk and Continue" ("about:config" needs to be entered in the address bar of firefox and hit enter)
@@ -175,7 +175,7 @@ Then close firefox and restart. Then the clipboard should work as one would expe
 
 If the clipboard still does not work, check "I fixed my internet browser clipboard, but ..." sections below.
 
-### Copy and paste between my host computer and Neurodesktop (or vice versa) doesn't work in Chrome or Edge
+#### Copy and paste between my host computer and Neurodesktop (or vice versa) doesn't work in Chrome or Edge
 The browsers have a security feature to protect you from something stealing your clipboard content. Depending on your security settings you have to enable it explicitly - it's a little icon in the browser address bar that looks like a clipboard.
 
 After pressing the icon, you should choose the option shown below in the dialog that opens. After pressing "Done", close the current browser tab and open a new one for the changes to take effect.
@@ -184,13 +184,13 @@ After pressing the icon, you should choose the option shown below in the dialog 
 
 If the clipboard still does not work, check "I fixed my internet browser clipboard, but ..." sections below.
 
-### I fixed my internet browser clipboard, but copy or paste still do not work in the terminal
+#### I fixed my internet browser clipboard, but copy or paste still do not work in the terminal
 The terminal is using special keyboard shortcuts, Shift+CTRL+C for copy, and Shift+CTRL+V for paste. Alternatively, you can copy and paste text by using the terminal's "Edit" menu.
 
-### I fixed my internet browser clipboard, but copy or paste still do not work in the file browser
+#### I fixed my internet browser clipboard, but copy or paste still do not work in the file browser
 The copy and paste options in the "Edit" menu of the file browser are used to copy and paste files, not text. To copy and paste text from/into the file browser application (e.g., copy a path into the path field in the top), use the CTRL+C and CTRL+V keyboard shortcuts.
 
-### I fixed my internet browser clipboard, but copy or paste still do not work in a specific/all applications
+#### I fixed my internet browser clipboard, but copy or paste still do not work in a specific/all applications
 If you're using Mac, you might be trying to use Mac keyboard shortcuts, but Neurodesktop is using Linux keyboard shortcuts.
 For more details, read the "Note for Mac users" [here](https://www.neurodesk.org/docs/support/faq/#how-top-copy-and-paste-text).
 
@@ -211,15 +211,15 @@ If it still does not work, please report the problem and we will do our best to 
 9. In the message that you write, please specify your operating system, your internet browser, the application in question, and if you can copy/paste to Mousepad and how?
 
 ## **Docker, WSL, Memory**
-## Docker
-### Docker: Shows an error that unprivileged user namespaces are not enabled.
+### Docker
+#### Docker: Shows an error that unprivileged user namespaces are not enabled.
 This can be activated by running
 ```
 echo "kernel.apparmor_restrict_unprivileged_userns = 0" >/etc/sysctl.d/99-userns.conf
 sysctl --system
 ```
 
-### Docker: Cannot connect to the Docker daemon at unix:///var/run/docker.sock. Is the docker daemon running?.
+#### Docker: Cannot connect to the Docker daemon at unix:///var/run/docker.sock. Is the docker daemon running?.
 This is usually a docker-related error, not related to neurodesktop itself. To troubleshoot docker, we can try a simpler container first:
 bash
 docker run hello-world
@@ -232,8 +232,8 @@ Try the following solutions (in this order, until the above command works)
 4. Close and open the terminal and retry.
 5. Log out and login again, or restart the machine (current user environment does not fully know docker is running)
 
-## Windows 
-### Windows users: WSL not installed properly
+### Windows 
+#### Windows users: WSL not installed properly
 
 The Docker engine relies on the Windows subsystem for Linux ([WSL]( https://docs.microsoft.com/en-us/windows/wsl/install-win10)) to run on a windows machine. 
 
@@ -249,13 +249,13 @@ However, if WSL is missing or incorrectly configured, the _Resources_ tab of the
 
 If this is the case, follow the manual install instructions to install [WSL 2]( https://docs.microsoft.com/en-us/windows/wsl/install-win10) (including installation of Ubuntu through Microsoft Store). 
 
-###  Windows users: Not enough free space on the partition in Windows and WSL2
+####  Windows users: Not enough free space on the partition in Windows and WSL2
 This could help: https://yjmantilla.github.io/tutorials/wsl2-move-vhdx.html
 
-###  Windows users: Failure to connect to Neurodesktop in Firefox
+####  Windows users: Failure to connect to Neurodesktop in Firefox
 We recommend using Microsoft Edge or Google Chrome to access Neurodesktop. 
 
-#### If you are using Docker on Windows 10 with the WSL2 backend
+##### If you are using Docker on Windows 10 with the WSL2 backend
 then this is managed by Windows settings. Try the following steps to check how much RAM Docker has access to and increase the amount if necessary.
 1. Run Docker
 2. Open a terminal (ie. Powershell) in the PC you want to use to run Neurodesktop (not in Neurodesktop itself) and type the following command:
@@ -283,29 +283,29 @@ Total Memory: **.**GiB
      This will list any running distributions. For the update to be successful, WSL needs to have completely stopped running (ie. no distributions running)
      - Restart Docker and rerun steps 1-3 to confirm it was successful
 
-#### If you are not using WSL2, you can check and manage your RAM allocation in the Docker desktop application.
+##### If you are not using WSL2, you can check and manage your RAM allocation in the Docker desktop application.
 1. Open the Docker application and navigate to settings > resources > advances
 2. Scroll down to the Memory option and use the sliding bar to adjust the setting
 3. Click apply and restart
 
 *RAM requirements will vary based on the tools/data you are using. If the system you're using has limited RAM, test out a few different amounts by running the above steps and then your analyses in Neurodesktop. Version 20220208 onwards has a memory monitor in the taskbar - you can use this to check how much memory Neurodesktop has access to and how much is being used by the analyses being run.
 
-## MacOS
-### If you are using Docker on MacOS 
+### MacOS
+#### If you are using Docker on MacOS 
 1. The memory amount is managed via the Docker settings:
 ![image](https://user-images.githubusercontent.com/4021595/154880061-cff2dde0-632d-4d8c-b627-28df6b074f48.png)
 
-## **VScode**
-## Vscode is not starting up (or starts many many copies of itself ...)
+### **VScode**
+#### Vscode is not starting up (or starts many many copies of itself ...)
 This problem seems to be caused by a corrupted config directory. To fix this, run:
 ```
 rm -rf ~/.config/Code
 ```
 
 ## **Contributing & Support**
-## How can I contribute new containers?
+### How can I contribute new containers?
 We are still working on making this easier, but here is the current workflow to [add new applications](/developers/new_tools).
 
-## I couldn't find the information I was looking for. Where can I get additional assistance?
+### I couldn't find the information I was looking for. Where can I get additional assistance?
 Neurodesk is an open-source project that is always evolving. If you are experiencing an issue not listed here, you can reach out to us on Github.
 Post your question at https://github.com/orgs/NeuroDesk/discussions or open a [new issue](https://github.com/NeuroDesk/neurodesk.github.io/issues), so that we can aim to solve it and update our help documentation. 
