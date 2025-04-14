@@ -6,7 +6,7 @@ description: >
   Guidelines for visual consistency, colors, typography, logos, and imagery across Neurodesk platforms.
 ---
 
-# NeuroDesk Design Style Guide
+# Neurodesk Design Style Guide
 
 This style guide provides clear standards to ensure visual consistency across all Neurodesk platforms and materials.
 
@@ -31,8 +31,8 @@ Use these logos on light or neutral backgrounds.
     <a href="/static/logos/neurodesk.png" download>Download PNG</a>
     </div>
     <div style="text-align: center;">
-      <img src="/static/logos/neurodesk.org.png" width="200"><br>
-      <a href="/static/logos/neurodesk.org.png" download>Download PNG</a>
+      <img src="/static/logos/.org.png" width="200"><br>
+      <a href="/static/logos/.org.png" download>Download PNG</a>
     </div>
   </div>
 </div>
