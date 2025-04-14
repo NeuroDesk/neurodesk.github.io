@@ -11,22 +11,106 @@ description: >
 This style guide provides clear standards to ensure visual consistency across all Neurodesk platforms and materials.
 
 ## Brand Overview
-Neurodesk is a Neurodesk, a community-oriented open-source solution for neuroimaging analysis with four guiding principles: accessibility, portability,
-flexibility and, overarchingly, reproducibility. This guide ensures visual consistency across all Neurodesk products and documentation.
+Neurodesk is a community-oriented open-source solution for neuroimaging analysis with four guiding principles: accessibility, portability, flexibility and, overarchingly, reproducibility. This guide ensures visual consistency across all Neurodesk products and documentation.
 
-## Logo Usage _(TBC)_
+## Logo Usage 
 
-⚠️ Work in Progress: This section will provide detailed logo guidelines once finalized.
+Below are official Neurodesk logos available for download. Please refer to the examples below for acceptable usage.
 
-### Acceptable Logo Usage _(TBC)_
+---
 
-- Examples of acceptable usage (size, orientation, backgrounds).
+### Acceptable Logo Usage
 
-### Improper Logo Usage _(TBC)_
+Use these logos on light or neutral backgrounds.
 
-- What to avoid (stretching, recoloring, busy backgrounds).
+<div style="background-color:#ffffff; padding: 20px; border-radius: 6px; margin-bottom: 30px;">
+  <h4 style="color: white; margin-top: 0;">Simple logo</h4>
+  <div style="display: flex; flex-wrap: wrap; gap: 20px; align-items: center;">
+      <div style="text-align: center;">
+      <img src="/static/logos/neurodesk.png" width="200"><br>
+    <a href="/static/logos/neurodesk.png" download>Download PNG</a>
+    </div>
+    <div style="text-align: center;">
+      <img src="/static/logos/neurodesk.org.png" width="200"><br>
+      <a href="/static/logos/neurodesk.org.png" download>Download PNG</a>
+    </div>
+  </div>
+</div>
+
+<div style="background-color:#0c0e0a; padding: 20px; border-radius: 6px; margin-bottom: 30px;">
+  <h4 style="color: white; margin-top: 0;">Inclusivity & Pride logo</h4>
+  <div style="display: flex; flex-wrap: wrap; gap: 20px; align-items: center;">
+    <div style="text-align: center;">
+      <img src="/static/logos/neurodesk-pride.png" width="200"><br>
+      <a href="/static/logos/neurodesk-pride.png" download>Download PNG</a>
+    </div>
+    <div style="text-align: center;">
+      <img src="/static/logos/neurodesk.org-pride.png" width="200"><br>
+      <a href="/static/logos/neurodesk.org-pride.png" download>Download PNG</a>
+    </div>
+  </div>
+</div>
+
+<div style="background-color:#0c0e0a; padding: 20px; border-radius: 6px; margin-bottom: 30px;">
+  <h4 style="color: white; margin-top: 0;">Horizontal format logo</h4>
+  <div style="text-align: center;">
+    <img src="/static/logos/neurodesk.org_horizontal.png" width="200"><br>
+    <a href="/static/logos/neurodesk.org_horizontal.png" download>Download PNG</a>
+  </div>
+</div>
+
+---
+
+#### Logos for Dark Backgrounds
+
+These logos are optimized for use on dark backgrounds:
+
+<div style="background-color:#0c0e0a; padding: 20px; border-radius: 6px; margin-bottom: 30px;">
+  <h4 style="color: white; margin-top: 0;">Simple logo</h4>
+  <div style="display: flex; flex-wrap: wrap; gap: 20px; align-items: center;">
+    <div style="text-align: center;">
+      <img src="/static/logos/neurodesk-on-dark.png" width="200"><br>
+      <a href="/static/logos/neurodesk-on-dark.png" download>Download PNG</a>
+    </div>
+    <div style="text-align: center;">
+      <img src="/static/logos/neurodesk.org-on-dark.png" width="200"><br>
+      <a href="/static/logos/neurodesk.org-on-dark.png" download>Download PNG</a>
+    </div>
+  </div>
+</div>
+
+<div style="background-color:#0c0e0a; padding: 20px; border-radius: 6px; margin-bottom: 30px;">
+  <h4 style="color: white; margin-top: 0;">Inclusivity & Pride logo</h4>
+  <div style="display: flex; flex-wrap: wrap; gap: 20px; align-items: center;">
+    <div style="text-align: center;">
+      <img src="/static/logos/neurodesk-pride-on-dark.png" width="200"><br>
+      <a href="/static/logos/neurodesk-pride-on-dark.png" download>Download PNG</a>
+    </div>
+    <div style="text-align: center;">
+      <img src="/static/logos/neurodesk.org-pride-on-dark.png" width="200"><br>
+      <a href="/static/logos/neurodesk.org-pride-on-dark.png" download>Download PNG</a>
+    </div>
+  </div>
+</div>
+
+---
+
+#### Other Variants
+
+**No image**
+<div style="display: flex; flex-wrap: wrap; gap: 20px; align-items: center; margin-top: 10px;">
+  <div>
+    <img src="/static/logos/neurodesk.org-no-logo.png" width="200"><br>
+    <a href="/static/logos/neurodesk.org-no-logo.png" download>Download PNG</a>
+  </div>
+</div>
+
+---
 
 ## Color Palette
+You can download the official Neurodesk color palette file for design use:
+
+- [Download Neurodesk Color Palette (AI format)](/static/logos/Neurodesk-color-palette.ai)
 
 ### Primary Colors
 
