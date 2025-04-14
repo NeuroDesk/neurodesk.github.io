@@ -140,6 +140,26 @@ You can download the official Neurodesk color palette file for design use:
 | Pale Lime Green <span style="color:#f0f7e7;">◼︎</span> | `#f0f7e7` | `(240, 249, 231)` |  |
 | White <span style="color:#ffffff;">◼︎</span> | `#ffffff` | `(255, 255, 255)` |  |
 
+## Naming and Capitalization Guidelines
+To ensure consistency in our branding, please follow the guidelines below when referring to Neurodesk and its associated tools.
+
+### Correct Usage
+
+- **Neurodesk** — Capitalize only the first letter.
+  - neurodesk or NEURODESK may be used if better suited in the context.
+- Use **"Neurodesk"** to refer to the overall project, platform, or community.
+- Use consistent casing in product names:
+  - **Neurodesktop**
+  - **Neurocommand**
+  - **Neurocontainers**
+  - **NeurodeskApp**
+
+### Do Not Use
+Avoid the following incorrect variations:
+- neuroDesk
+- neurodesk in titles or headings
+- NeuroDesk
+
 ## Typography
 
 ### Font Families
