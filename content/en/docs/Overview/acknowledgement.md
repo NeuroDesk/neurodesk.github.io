@@ -63,3 +63,9 @@ We are also grateful for:
   <img src="/static/docs/overview/google_cloud.png" width="200">
   <img src="/static/docs/overview/oracle.png" width="150">
 </div>
+
+## Citations and Credit
+
+If you use NeuroDesk in your work, please cite us Neurodesk and the tools you use appropriately. See the full citation guide here: [**How to Cite NeuroDesk**](/docs/overview/how-to-cite-us/)
+
+
