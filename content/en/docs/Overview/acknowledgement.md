@@ -66,6 +66,6 @@ We are also grateful for:
 
 ## Citations and Credit
 
-If you use NeuroDesk in your work, please cite us Neurodesk and the tools you use appropriately. See the full citation guide here: [**How to Cite NeuroDesk**](/docs/overview/how-to-cite-us/)
+If you use Neurodesk in your work, please cite us and the tools you use appropriately. See the full citation guide here: [**How to Cite Neurodesk**](/docs/overview/how-to-cite-us/)
 
 
