@@ -10,7 +10,7 @@ description: >
 
 {{< toc >}}
 
-## General Overview
+## **General Overview**
 ## What is Neurodesk?
 Neurodesk provides a containerised data analysis environment to facilitate reproducible analysis of neuroimaging data. Analysis pipelines for neuroimaging data typically rely on specific versions of packages and software, and are dependent on their native operating system. These dependencies mean that a working analysis pipeline may fail or produce different results on a new computer, or even on the same computer after a software update. Neurodesk provides a platform in which anyone, anywhere, using any computer can reproduce your original research findings given the original data and analysis code. 
 
@@ -31,7 +31,7 @@ You can check out the complete list of [these applications](/docs/overview/appli
 ## How should I cite the tools I am using and Neurodesk itself?
 [See here](/docs/overview/how-to-cite-us)
 
-## Using Neurodesktop
+## **Using Neurodesktop**
 ## Can I change the desktop resolution?
 Yes. 
 In a Desktop RDP session, simply zoom or resize the window and the resolution will be adjusted.
@@ -101,7 +101,7 @@ Then "Start My Server"
 ## How to restart a stuck Neurodesk when running locally in Docker or using the NeurodeskApp?
 Open Docker Desktop Dashboard. Find the container under "Containers" and delete the Container there.
 
-## Troubleshooting Common Issues
+## **Troubleshooting Common Issues**
 ## Freeview 7.2.0 crashes when I open files
 Freeview (and Freesurfer!) need a valid license to work and we are not allowed to distribute a license with Neurodesk!
 
@@ -145,7 +145,7 @@ If you have deleted files using the Neurodesktop GUI but your storage is not yet
 rm -rf ~/.local/share/Trash/
 ```
 
-## Keyboard, Clipboard, and Language Support
+## **Keyboard, Clipboard, and Language Support**
 ## Keyboard and Multi-Language support
 ### I am using a European keyboard layout and I cannot type symbols that require the ALT-GR key (like @ or \\)
 This seems to be a bug in Guacamole and RDP in combination with certain browsers. There are a few workarounds you can try:
@@ -210,7 +210,7 @@ If it still does not work, please report the problem and we will do our best to 
 8. Press "New Discussion" button
 9. In the message that you write, please specify your operating system, your internet browser, the application in question, and if you can copy/paste to Mousepad and how?
 
-## Docker, WSL, Memory
+## **Docker, WSL, Memory**
 ## Docker
 ### Docker: Shows an error that unprivileged user namespaces are not enabled.
 This can be activated by running
@@ -295,14 +295,14 @@ Total Memory: **.**GiB
 1. The memory amount is managed via the Docker settings:
 ![image](https://user-images.githubusercontent.com/4021595/154880061-cff2dde0-632d-4d8c-b627-28df6b074f48.png)
 
-## VScode
+## **VScode**
 ## Vscode is not starting up (or starts many many copies of itself ...)
 This problem seems to be caused by a corrupted config directory. To fix this, run:
 ```
 rm -rf ~/.config/Code
 ```
 
-## Contributing & Support
+## **Contributing & Support**
 ## How can I contribute new containers?
 We are still working on making this easier, but here is the current workflow to [add new applications](/developers/new_tools).
 
