@@ -4,10 +4,13 @@ linkTitle: "DataLad"
 aliases:
 - /docs/getting-started/neurocontainers/datalad
 description: >
-  Neurodesktop containers can be used with datalad
+  Use Neurodesktop containers with DataLad and ReproNim's containerized workflows.
 ---
 
-## install datalad, datalad-containers, and ReproNim containers repo
+# Using Neurodesk Containers with DataLad
+This page explains how to use [DataLad](https://www.datalad.org/) and the [ReproNim containers](https://github.com/ReproNim/containers) with Neurodesk tools.
+
+## Install DataLad, datalad-container, and the ReproNim containers repository
 ```bash
 conda install datalad
 pip install datalad_container
@@ -15,17 +18,18 @@ datalad install https://github.com/ReproNim/containers.git
 cd containers
 ```
 
-## get a list of all available default containers
+## List all default available containers
 ```bash
 datalad containers-list
 ```
 
-## download and run the latest container version
+## Download and run the latest container version
 ```bash
 datalad containers-run -n neurodesk-romeo
 ```
 
 ## Change version of container
+You can change which version of a container is used in two ways:
 
 ### Option 1: change version in .datalad/config
 ```bash
@@ -43,4 +47,3 @@ scripts/freeze_versions neurodesk-romeo=3.2.4
 datalad save -m 'downgraded version of romeo to 3.2.4'
 datalad containers-run -n neurodesk-romeo
 ```
-
