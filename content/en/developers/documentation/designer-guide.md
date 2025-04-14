@@ -37,7 +37,7 @@ Use these logos on light or neutral backgrounds.
   </div>
 </div>
 
-<div style="background-color:#0c0e0a; padding: 20px; border-radius: 6px; margin-bottom: 30px;">
+<div style="background-color:#ffffff; padding: 20px; border-radius: 6px; margin-bottom: 30px;">
   <h4 style="color: white; margin-top: 0;">Inclusivity & Pride logo</h4>
   <div style="display: flex; flex-wrap: wrap; gap: 20px; align-items: center;">
     <div style="text-align: center;">
@@ -51,7 +51,7 @@ Use these logos on light or neutral backgrounds.
   </div>
 </div>
 
-<div style="background-color:#0c0e0a; padding: 20px; border-radius: 6px; margin-bottom: 30px;">
+<div style="background-color:#ffffff; padding: 20px; border-radius: 6px; margin-bottom: 30px;">
   <h4 style="color: white; margin-top: 0;">Horizontal format logo</h4>
   <div style="text-align: center;">
     <img src="/static/logos/neurodesk.org_horizontal.png" width="200"><br>
@@ -65,7 +65,7 @@ Use these logos on light or neutral backgrounds.
 
 These logos are optimized for use on dark backgrounds:
 
-<div style="background-color:#0c0e0a; padding: 20px; border-radius: 6px; margin-bottom: 30px;">
+<div style="background-color:#0c0e0a; padding: 20px; border-radius: 6px; margin-bottom: 30px; display: inline-block; margin-left: auto; margin-right: auto;">
   <h4 style="color: white; margin-top: 0;">Simple logo</h4>
   <div style="display: flex; flex-wrap: wrap; gap: 20px; align-items: center;">
     <div style="text-align: center;">
@@ -79,7 +79,7 @@ These logos are optimized for use on dark backgrounds:
   </div>
 </div>
 
-<div style="background-color:#0c0e0a; padding: 20px; border-radius: 6px; margin-bottom: 30px;">
+<div style="background-color:#0c0e0a; padding: 20px; border-radius: 6px; margin-bottom: 30px; display: inline-block; margin-left: auto; margin-right: auto;">
   <h4 style="color: white; margin-top: 0;">Inclusivity & Pride logo</h4>
   <div style="display: flex; flex-wrap: wrap; gap: 20px; align-items: center;">
     <div style="text-align: center;">
