@@ -198,7 +198,14 @@ linktitle: Neurodesk
 	</div>
 </section>
 
-<section class="row -bg-light justify-content-left h-auto col-big-desktop">
+<section
+  id="startup"
+  class="row -bg-light justify-content-left h-auto col-big-desktop"
+  style="
+    background-image: url('/static/favicons/background-bottom.svg');
+    background-repeat: no-repeat;
+    background-position: bottom center;
+    background-size: 100% auto;">
 	<div class="td-box">
 		<h2>Neurodesk Components</h2>
 		<p class="lead mt-2">Details of each component within the Neurodesk project.<br /> Neurodesk makes it easy for
@@ -224,6 +231,7 @@ linktitle: Neurodesk
 					</div>
 					<div class="col-10 col-md-4 col-lg-4">
 						<div class="component-card command">
+							<a class="component-click-btn" href="/neurodesk.github.io/docs/getting-started/neurocommand/">
 							<a class="component-click-btn" href="/neurodesk.github.io/docs/getting-started/neurocommand/">
 								<div class="card-body">
 									<i class="fas fa-terminal"></i>

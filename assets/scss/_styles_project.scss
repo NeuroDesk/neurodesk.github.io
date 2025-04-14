@@ -89,7 +89,7 @@ p.lead.mt-2 {
 
 
 .quick-starts {
-  background: $light;
+  // background: $light;
 
   .container {
     @include very-very-big-desktop {
@@ -235,7 +235,7 @@ p.lead.mt-2 {
   }
 
   #command {
-    color: $command_block_black;
+    color: $dark_grey;
     background-color: $light_grey;
     padding: rem(10px);
     border: 2px solid $light_white;
@@ -246,7 +246,7 @@ p.lead.mt-2 {
 
     a {
       font-size: 100%;
-      color: $command_block_black;
+      color: $dark_grey;
 
       &:hover {
         color: $slate;
@@ -289,7 +289,7 @@ p.lead.mt-2 {
     color: $command_block_black;
 
     .command-text {
-      color: $black;
+      color: $dark_grey;
     }
   }
 
