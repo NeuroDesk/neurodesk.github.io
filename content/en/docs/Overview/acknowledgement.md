@@ -6,9 +6,6 @@ description: >-
      Recognition of contributors, supporters, and the lands on which we work.
 ---
 
-
-# Acknowledgement
-
 We are deeply grateful to all the individuals, institutions, and communities that support the Neurodesk project through their time, expertise, infrastructure, and resources.
 
 ## Cultural and Land Acknowledgement
