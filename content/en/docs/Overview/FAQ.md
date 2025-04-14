@@ -221,7 +221,7 @@ sysctl --system
 
 #### Docker: Cannot connect to the Docker daemon at unix:///var/run/docker.sock. Is the docker daemon running?.
 This is usually a docker-related error, not related to neurodesktop itself. To troubleshoot docker, we can try a simpler container first:
-bash
+```bash
 docker run hello-world
 ```
 Try the following solutions (in this order, until the above command works)
@@ -295,7 +295,7 @@ Total Memory: **.**GiB
 1. The memory amount is managed via the Docker settings:
 ![image](https://user-images.githubusercontent.com/4021595/154880061-cff2dde0-632d-4d8c-b627-28df6b074f48.png)
 
-### **VScode**
+## **VScode**
 #### Vscode is not starting up (or starts many many copies of itself ...)
 This problem seems to be caused by a corrupted config directory. To fix this, run:
 ```
