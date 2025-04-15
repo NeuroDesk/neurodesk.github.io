@@ -62,6 +62,10 @@ Use these logos on light or neutral backgrounds.
       <img src="/static/logos/neurodesk.org_horizontal.png" width="200"><br>
       <a href="/static/logos/neurodesk.org_horizontal.png" download>Download PNG</a>
     </div>
+    <div style="text-align: left;">
+      <img src="/static/logos/neurodesk_horizontal.png" width="200"><br>
+      <a href="/static/logos/neurodesk_horizontal.png" download>Download PNG</a>
+    </div>
   </div>
 </div>
 
