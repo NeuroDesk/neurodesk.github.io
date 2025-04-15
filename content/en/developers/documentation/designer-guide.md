@@ -164,7 +164,7 @@ Avoid the following incorrect variations:
 
 ### Font Families
 
-- **Logo:** Bank gothic 
+- **Logo:** [Neurorich](https://github.com/micmas/Neurorich-font)
 - **Headings:** Pontano 
 - **Body Text:** Pontano  
-- **Code blocks:** Consolas
+- **Code blocks:** Menlo
