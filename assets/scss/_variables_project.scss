@@ -89,7 +89,7 @@ $link-decoration: none !default;
 }
 
 @mixin code_font_family {
-  font-family: IBMPlexMono,SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace;
+  font-family: Menlo,Monaco,"Courier New",monospace;
 }
 
 @mixin clearfix {
