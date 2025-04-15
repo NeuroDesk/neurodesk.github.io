@@ -58,11 +58,11 @@ Use these logos on light or neutral backgrounds.
 <div style="text-align: left;">
   <div style="background-color:#ffffff; padding: 20px; border-radius: 6px; margin-bottom: 30px;">
     <h4 style="color:#0c0e0a; margin-top: 0;">Horizontal format logo</h4>
-    <div style="text-align: left;">
+    <div style="text-align: center;">
       <img src="/static/logos/neurodesk.org_horizontal.png" width="200"><br>
       <a href="/static/logos/neurodesk.org_horizontal.png" download>Download PNG</a>
     </div>
-    <div style="text-align: left;">
+    <div style="text-align: center;">
       <img src="/static/logos/neurodesk_horizontal.png" width="200"><br>
       <a href="/static/logos/neurodesk_horizontal.png" download>Download PNG</a>
     </div>
