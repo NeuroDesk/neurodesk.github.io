@@ -111,8 +111,6 @@ profile neurodeskapp "/opt/NeurodeskApp/neurodeskapp" flags=(unconfined) {
   include if exists <local/neurodeskapp>
 }
 ```
-
-```
 {{< /alert >}}
 
 {{< alert color="warning">}}
