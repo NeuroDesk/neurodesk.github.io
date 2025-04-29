@@ -1,0 +1,157 @@
+// Search
+
+.td-navbar {
+    // Target the main button Algolia injects
+    .DocSearch-Button {
+      background-color: rgba(255, 255, 255, 0.1) !important;
+      border: 0px solid rgba(255, 255, 255, 0.3) !important;
+      border-radius: 20px !important;
+      color: #fff !important;
+      padding: 0.25rem 0.75rem !important;
+      height: auto;
+      margin-left: 0.5rem;
+  
+      // Style the placeholder text inside the button
+      .DocSearch-Button-Placeholder {
+        color: rgba(255, 255, 255, 0.8) !important;
+        font-size: 1rem;
+        font-style: normal;
+      }
+  
+      // Style the search icon inside the button
+      .DocSearch-Search-Icon {
+        color: rgba(255, 255, 255, 0.8) !important;
+        width: 16px !important;
+        height: 16px !important;
+        stroke-width: 1.5 !important;
+      }
+  
+      // Style hover/focus states
+      &:hover {
+        background-color: rgba(255, 255, 255, 0.2) !important;
+        box-shadow: none !important;
+        border-color: rgba(255, 255, 255, 0.5) !important;
+      }
+    }
+}
+  
+.td-search {
+  background: transparent;
+  position: relative;
+  width: 100%;
+
+  // Search icon
+  &__icon {
+    // Vertically center the content.
+    display: flex;
+    align-items: center;
+    height: 100%;
+
+    // Position this on the left of the input.
+    position: absolute;
+    left: 0.75em;
+
+    // Click-through to the underlying input.
+    pointer-events: none;
+
+    &:before {
+      @extend .fa;
+      content: fa-content($fa-var-search);
+    }
+
+    // Styling adjustments for the navbar
+    @at-root {
+      .td-navbar & {
+        color: inherit;
+      }
+    }
+  }
+
+  // Search input element
+  &__input {
+    width: 100%;
+    text-indent: 1.25em;
+
+    &:not(:focus) {
+      background: transparent;
+    }
+
+    &.form-control:focus {
+      border-color: tint-color($primary, 95%);
+      box-shadow: 0 0 0 2px tint-color($primary, 40%);
+      color: var(--bs-body-color);
+    }
+
+    // Styling adjustments for the navbar
+    @at-root {
+      .td-navbar & {
+        border: none;
+        color: inherit;
+
+        @include placeholder {
+          color: inherit;
+        }
+      }
+    }
+  }
+
+  // Hide icon on focus
+  &:focus-within {
+    .td-search__icon {
+      display: none;
+    }
+
+    .td-search-input {
+      text-indent: 0px;
+    }
+  }
+
+  &:not(:focus-within) {
+    color: $input-placeholder-color;
+  }
+}
+
+.td-sidebar .td-search--algolia {
+  display: block;
+  padding: 0 0.5rem;
+  > button {
+    margin: 0;
+    width: 100%;
+  }
+}
+
+// Offline search
+
+.td-search--offline {
+  &:focus-within {
+    // Don't hide the search icon on focus: this gives better UX when user
+    // explores content of search-results popup and focus is lost.
+
+    .td-search__icon {
+      display: flex;
+      color: $input-placeholder-color;
+    }
+  }
+}
+
+.td-offline-search-results {
+  max-width: 90%;
+
+  .card {
+    margin-bottom: $spacer * 0.5;
+
+    .card-header {
+      font-weight: bold;
+    }
+  }
+
+  &__close-button {
+    // cursor: pointer;
+    float: right;
+
+    &:after {
+      @extend .fas;
+      content: fa-content($fa-var-times);
+    }
+  }
+}

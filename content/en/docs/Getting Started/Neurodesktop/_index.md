@@ -12,4 +12,6 @@ description: >
 ## Video tutorial
 See below for a 4 minute tutorial on Installation, Usage and Data Access with Neurodesktop
 
-{{< youtube BffOZcV2oaY >}}
+<div style="max-width: 700px; margin-bottom: 20px;">
+  {{< youtube BffOZcV2oaY >}}
+</div>

@@ -14,7 +14,8 @@ To use these applications through the Neurodesk platform, find the correct instr
 
 Neurodesktop comes packaged with:
 - programming software (e.g., Visual Studio Code, python, git)
-- workflow systems (Nipype)-data synchronization utilities (Rsync, Rclone, Nextcloud, Owncloud)
+- workflow systems (Nipype)
+- data synchronization utilities (Rsync, Rclone, Nextcloud, Owncloud)
 - system management tools (Lmod, Singularity, Htop)
 - additional resources (Imagemagic, Firefox, OpenSSH client)
 - access to Neurocontainers via the Neurodesk menu (see list below)

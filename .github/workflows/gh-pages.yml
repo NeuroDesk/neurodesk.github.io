@@ -60,8 +60,12 @@ jobs:
               --minify \
               --baseURL "https://www.neurodesk.org/"
           else
-            # Temporary fix for css paths in forks. This breaks some images and links. Needs to be fixed
+            # Temporary fix for css paths in forks
             sed -i "s|canonifyURLs=true|canonifyURLs=false|g" config.toml
+            sed -i "s|/static/|/neurodesk.github.io/static/|g" content/en/_index.md
+            sed -i "s|/static/|/neurodesk.github.io/static/|g" content/en/docs/Getting\ Started/Local/neurodeskapp.md
+            sed -i "s|/static/|/neurodesk.github.io/static/|g" content/en/docs/Overview/acknowledgement.md
+            sed -i "s|/static/|/neurodesk.github.io/static/|g" content/en/docs/Overview/metrics.md
             # Construct the base URL for forks
             BASE_URL="https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}/"
             echo "Building for fork/preview domain: ${BASE_URL}"
