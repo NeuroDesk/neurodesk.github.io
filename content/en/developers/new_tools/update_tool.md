@@ -68,7 +68,10 @@ pip install -r requirements.txt
 ```
 This will install a series of packages to allow you to make changes to neurocontainers.
 
-You will also need to download the YAML extension by navigating to the Extensions tab using icon on the left of your screen and searching for YAML. Click the install button.
+<div style="margin-left: 2em;">
+
+### YAML extension
+The first time you use a codespace, you will also need to download the YAML extension by navigating to the Extensions tab using icon on the left of your screen and searching for YAML. Click the install button.
 
 <img src="/static/developers/new_tools/update_tool/install-yaml1.png" width="650">
 <br><br>
@@ -79,20 +82,20 @@ There will be a security pop-up where you will need to click "Trust Publisher & 
 
 There will be another pop-up asking whether you allow the developers to collect data. You may click "Agree" or "Deny"
 <img src="/static/developers/new_tools/update_tool/install-yaml3.png" width="650">
+</div>
 
+## 4. Make Changes to the desired Container
+Navigate back to the Explorer tab using the icon on the left of your screen.
 
-## 4. Make Changes to Your Container
-Navigate back to the Explorer tab using icon on the left of your screen.
-
-Using either the terminal at the bottom of your codespace or the left panel, navigate to the build.yaml file of the tool you wish to update. 
+Using either the terminal at the bottom of your Codespace or the file browser on the left, navigate to the `build.yaml` file of the tool you wish to update.
 
 {{< alert color="info" >}}
-In this example, we are updating the **Connectome Workbench** tool.
+In this example, we are updating the [**Connectome Workbench**](https://neuro.debian.net/pkgs/connectome-workbench.html) tool.
 {{< /alert >}}
 
-In the Recipe folder, you will find a folder corresponding to each tool in Neurodesk and within each folder, you will find a corresponding build.yaml file. 
+Each tool has its own folder inside the `recipes/` directory, and inside that folder, you will find the corresponding `build.yaml` file.
 
-- Using the GUI, you can simply navigate to that file in the left panel of your screen. 
+- Using the GUI (file browser): Navigate manually to `recipes/connectomeworkbench/`.
 - Using the terminal, you can use:
 ```shell
 cd recipes/connectomeworkbench/ #or whichever other neurocontainer you want to update
@@ -100,7 +103,106 @@ cd recipes/connectomeworkbench/ #or whichever other neurocontainer you want to u
 <img src="/static/developers/new_tools/update_tool/codespace-recipe.png" width="650">
 <br><br>
 
+### Editing the `build.yaml`
+Open the `build.yaml` file. Make the necessary updates to:
+- Software version numbers
+- Dependencies
+- Download links
+- Build instructions (if needed)
 
-our Neurodesk team will revise you changes, make sure they work and commit the changes to Neurodesk, allowing all users to benefit. 
+In this example, when we go to the [Connectome Workbench website](https://www.humanconnectome.org/software/get-connectome-workbench#download), we can see that the latest version available is Connectome Workbench v2.0.1.
+
+<img src="/static/developers/new_tools/update_tool/connectome-workbench201.png" width="650">
+<br><br>
+
+To update Neurocontainer version, simply change the `version:` to 2.0.1
+
+<img src="/static/developers/new_tools/update_tool/buildyaml-change.png" width="650">
+<br><br>
+
+If you are unsure how to structure the `build.yaml`, please refer to the examples provided in the [Neurocontainers builder documentation](https://github.com/NeuroDesk/neurocontainers/tree/main/builder).
+
+{{< alert color="warning" >}} Important:
+Keep your formatting strict! YAML files are indentation-sensitive. Use spaces, not tabs. {{< /alert >}}
+
+Once you have made your changes, save the file.
+
+## Validate Your Changes
+Before committing, make sure your changes are valid.
+
+In the terminal, run:
+```shell
+./builder/build.py generate connectomeworkbench #Replace connectomeworkbench with the name of the folder you updated
+
+#This second step can take some time
+./builder/build.py generate connectomeworkbench --recreate --build --test #Replace connectomeworkbench with the name of the folder you updated
+```
+
+This script will:
+- Parse your `build.yaml`
+- Check for syntax errors
+- Show the build steps without actually building the full container
+
+You will be able to see the progress for each of the building steps. 
+<img src="/static/developers/new_tools/update_tool/buildyaml-building.png" width="650">
+<br><br>
+
+If there are errors, correct them before proceeding.
+
+Once you see `Docker image built successfully at connectomeworkbench:2.0.1`, you are ready to commit and push your changes.
+
+
+## Commit and Push Your Changes
+Once you have validated your `build.yaml`, it’s time to save and upload your work.
+
+In the terminal:
+```shell
+git status
+```
+to check which files were changed.
+
+<img src="/static/developers/new_tools/update_tool/git-status.png" width="650">
+<br><br>
+
+If only this reflects the changes you've made, then stage, commit, and push your changes:
+```shell
+git add recipes/connectomeworkbench/build.yaml #Replace connectomeworkbench with the name of the folder you updated
+git commit -m "Update connectomeworkbench container: updated version 2.0.1" #Adapt commit message
+git push
+```
+
+Make sure your commit message is clear and descriptive, for example:
+
+`Update Connectome Workbench container to version 1.5.0` Adjust the commit message based on the updates you made to the neurocontainer. 
+
+## Create a Pull Request
+After pushing your changes:
+1. Go back to your forked repository on GitHub.
+2. You should see a banner saying "This branch is X commits ahead of `NeuroDesk/neurocontainers:main`". 
+
+<div style="margin-left: 2em;">
+You can either click on **X commit ahead of** to view the differences between your repository and the Neurodesk repository and then **Create pull request**
+
+<img src="/static/developers/new_tools/update_tool/commits-ahead.png" width="650">
+<br><br>
+or 
+<br><br>
+
+click on **Contribute** > **Open pull request**.
+
+<img src="/static/developers/new_tools/update_tool/create-pull.png" width="650">
+<br><br>
+</div>
+
+3. In the Pull Request:
+- Provide a clear title (e.g., Update Connectome Workbench to v1.5.0)
+- Write a brief description of what you changed (version bump, new dependencies, etc.)
+- Create the pull request.
+
+<img src="/static/developers/new_tools/update_tool/pull-request.png" width="650">
+<br><br>
+
+
+Our Neurodesk team will review your proposed update, test the updated container to make sure it work and merge your changes to Neurodesk if everything works correctly, allowing all users to benefit. 
 ---
 More detailed documentation can be found here: https://github.com/NeuroDesk/neurocontainers/tree/main/builder
