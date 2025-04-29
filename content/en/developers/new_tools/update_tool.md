@@ -58,6 +58,7 @@ Most neurocontainers run smoothly on a **2-core** machine. For containers with h
 This opens an editable environment directly in your browser.
 
 <img src="/static/developers/new_tools/update_tool/codespace.png" width="650">
+<br><br>
 
 In the terminal, run the following lines to configure your codespace environment.
 ```shell
@@ -65,10 +66,40 @@ python3 -m venv env
 source env/bin/activate
 pip install -r requirements.txt
 ```
+This will install a series of packages to allow you to make changes to neurocontainers.
+
+You will also need to download the YAML extension by navigating to the Extensions tab using icon on the left of your screen and searching for YAML. Click the install button.
+
+<img src="/static/developers/new_tools/update_tool/install-yaml1.png" width="650">
+<br><br>
+
+There will be a security pop-up where you will need to click "Trust Publisher & Install"
+<img src="/static/developers/new_tools/update_tool/install-yaml2.png" width="650">
+<br><br>
+
+There will be another pop-up asking whether you allow the developers to collect data. You may click "Agree" or "Deny"
+<img src="/static/developers/new_tools/update_tool/install-yaml3.png" width="650">
+
 
 ## 4. Make Changes to Your Container
+Navigate back to the Explorer tab using icon on the left of your screen.
 
-Using either the terminal or the left panel, navigate to the build.yaml file within the neurocontainer you wish to update. 
+Using either the terminal at the bottom of your codespace or the left panel, navigate to the build.yaml file of the tool you wish to update. 
+
+{{< alert color="info" >}}
+In this example, we are updating the **Connectome Workbench** tool.
+{{< /alert >}}
+
+In the Recipe folder, you will find a folder corresponding to each tool in Neurodesk and within each folder, you will find a corresponding build.yaml file. 
+
+- Using the GUI, you can simply navigate to that file in the left panel of your screen. 
+- Using the terminal, you can use:
+```shell
+cd recipes/connectomeworkbench/ #or whichever other neurocontainer you want to update
+```
+<img src="/static/developers/new_tools/update_tool/codespace-recipe.png" width="650">
+<br><br>
+
 
 our Neurodesk team will revise you changes, make sure they work and commit the changes to Neurodesk, allowing all users to benefit. 
 ---
