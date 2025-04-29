@@ -170,7 +170,7 @@ Avoid the following incorrect variations:
 
 ### Font Families
 
-- **Logo:** [Neurorich](https://github.com/micmas/Neurorich-font)
+- **Logo:** [Scirich](https://github.com/micmas/Scirich-font)
 - **Headings:** Pontano 
 - **Body Text:** Pontano  
 - **Code blocks:** Menlo
