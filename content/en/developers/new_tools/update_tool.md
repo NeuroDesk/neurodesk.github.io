@@ -212,7 +212,7 @@ Our Neurodesk team will review your proposed update, test the updated container 
 
 1. Access the [Neurodesk Containers repository](https://github.com/NeuroDesk/neurocontainers)
 2. Fork the repository
-3. Using your XX of preference, make changes to the desired container
+3. Using your preferred development environment (such as VS Code locally or GitHub Codespaces), make changes to the desired container
 Each tool has its own folder inside the `recipes/` directory, and inside that folder, you will find the corresponding `build.yaml` file.
 <div style="margin-left: 2em;">
 
