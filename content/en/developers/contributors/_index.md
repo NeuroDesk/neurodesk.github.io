@@ -6,16 +6,22 @@ description: >
     This section acknowledges the contributions made to the project.
 ---
 
-If you contributed to the project please list yourself here with a description of your contribution. We try to update this page based on the git commit history:
-- https://github.com/NeuroDesk/neurodesktop/graphs/contributors
-- https://github.com/NeuroDesk/neurocommand/graphs/contributors
-- https://github.com/NeuroDesk/neurocontainers/graphs/contributors
-- https://github.com/NeuroDesk/neurodesk.github.io/graphs/contributors
-- https://github.com/NeuroDesk/transparent-singularity/graphs/contributors
+If you contributed to the project please list yourself here with a description of your contribution. 
+
+We try to update this page based on the git commit history:
+- [Neurodesk Contributors](https://github.com/NeuroDesk/neurodesktop/graphs/contributors)
+- [Neurocommand Contributors](https://github.com/NeuroDesk/neurocommand/graphs/contributors)
+- [Neurocontainers Contributors](https://github.com/NeuroDesk/neurocontainers/graphs/contributors)
+- [Neurodesk Website Contributors](https://github.com/NeuroDesk/neurodesk.github.io/graphs/contributors)
+- [Transparent Singularity Contributors](https://github.com/NeuroDesk/transparent-singularity/graphs/contributors)
 
 
-## Steffen Bollmann 
-- https://github.com/stebo85
+Active contributors: [Steffen](#steffen-bollmann----stebo85), [Aswin](#aswin-narayanan----aswinnarayanan), 
+
+## **Steffen Bollmann** - <img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" width="25" alt="GitHub logo"> <a href="https://github.com/stebo85" target="_blank" rel="noopener noreferrer">stebo85</a>
+
+### University of Queensland, Australia
+
 - funding: Oracle Cloud (114k AUD), ECR Knowledge Exchange & Translation Fund (42k AUD), ARDC (CI for $566k AUD)
 - system architecture
 - CVMFS container deployment
@@ -28,8 +34,10 @@ If you contributed to the project please list yourself here with a description o
 - google colab support
 - outreach (e.g. Mastodon, talks at conferences, youtube videos)
 
-## Aswin Narayanan
-- https://github.com/aswinnarayanan
+## **Aswin Narayanan** - <img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" width="25" alt="GitHub logo"> <a href="https://github.com/aswinnarayanan" target="_blank" rel="noopener noreferrer">aswinnarayanan</a>
+
+### National Imaging Facility, Australia
+
 - funding: ARDC (CI for $566k AUD)
 - Neurocontainer devops
 - Neurodesktop development
@@ -38,16 +46,19 @@ If you contributed to the project please list yourself here with a description o
 - Jupyter notebook support
 - Hugo website build and documentation
 
-## Angela Renton
-- https://github.com/air2310
+## **Angela Renton** - <img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" width="25" alt="GitHub logo"> <a href="https://github.com/air2310" target="_blank" rel="noopener noreferrer">air2310</a>
+### AFFILIATION
+
 - Tutorials (MNE-Python, Tutorial template)
 - graphics for website (layer diagram)
 - documentation
 - user testing
-- neurodesk paper lead author
+- [neurodesk paper](https://doi.org/10.1038/s41592-023-02145-x) lead author
 
-## Thuy Dao
-- https://github.com/iishiishii
+## **Thuy Dao** - <img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" width="25" alt="GitHub logo"> <a href="https://github.com/iishiishii" target="_blank" rel="noopener noreferrer">iishiishii</a>
+
+### University of Queensland, Australia
+
 - Application search tool with lunr
 - platform independent GUI application (Neurodeskapp)
 - application container development (civet)
