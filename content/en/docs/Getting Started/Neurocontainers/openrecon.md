@@ -5,6 +5,12 @@ description: >
   Neurodesktop containers can be used in Open Recon
 ---
 
+These instructions were tested on GitHub Codespaces, and we recommend this as a starting point. For a local setup Python3 and you need to install neurodocker and add it to your path:
+```
+pip install neurodocker
+export PATH=$PATH:~/.local/bin/
+```
+
 ## 1) add the installation of the Python MRD server to any recipe in [https://github.com/NeuroDesk/neurocontainers](https://github.com/NeuroDesk/neurocontainers/tree/main/recipes)
 Make sure to adjust invertcontrast.py to your pipeline needs (or replace/rename other files from the [Python MRD server](https://github.com/kspaceKelvin/python-ismrmrd-server):
 ```bash
@@ -59,7 +65,12 @@ Make sure to adjust invertcontrast.py to your pipeline needs (or replace/rename 
           - find /opt/code/python-ismrmrd-server -name "*.sh" | xargs dos2unix
 ```
 
-here is a good example: https://github.com/NeuroDesk/neurocontainers/tree/main/recipes/vesselboost
+here is an example: [https://github.com/NeuroDesk/neurocontainers/tree/main/recipes/vesselboost](https://github.com/NeuroDesk/neurocontainers/tree/main/recipes/openreconexample)
+
+Then build the recipe:
+```
+./builder/build.py generate openreconexample --recreate --build --login
+```
 
 ## 2) test the tool inside the container on its own first and then test through MRD server 
 convert dicom data to mrd test data:
@@ -76,4 +87,4 @@ python3 /opt/code/python-ismrmrd-server/client.py -G dataset -o openrecon_output
 ```
 
 ## 3) submit the container to the https://github.com/NeuroDesk/openrecon/ repository
-follow the template instructions
+here is an example: https://github.com/NeuroDesk/openrecon/tree/main/recipes/openreconexample
