@@ -7,7 +7,7 @@ description: >
 ---
 
 <div style="border-left: 4px solid #4CAF50; background-color: #f0fdf4; padding: 1em; margin: 1em 0;">
-If you contributed to the project please list yourself here with a description of your contribution. Please consult XXX for the template. 
+If you contributed to the project please list yourself here with a description of your contribution. 
 </div>
 
 
