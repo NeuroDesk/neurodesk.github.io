@@ -3,7 +3,7 @@ title: "Contributors"
 linkTitle: "Contributors"
 weight: 1
 description: >
-    This section acknowledges the contributions made to the project.
+    This section acknowledges the contributions made to the project. Please consult the [template](https://github.com/NeuroDesk/neurodesk.github.io/blob/main/.github/content-templates/contributor-format.md) to add your contributions. 
 ---
 
 <div style="border-left: 4px solid #4CAF50; background-color: #f0fdf4; padding: 1em; margin: 1em 0;">
