@@ -7,7 +7,7 @@ description: >
 ---
 
 <div style="border-left: 4px solid #4CAF50; background-color: #f0fdf4; padding: 1em; margin: 1em 0;">
-If you contributed to the project please list yourself here with a description of your contribution. Please consult the [template](https://github.com/NeuroDesk/neurodesk.github.io/blob/main/.github/content-templates/contributor-format.md) to add your contributions. 
+If you contributed to the project please list yourself here with a description of your contribution.
 </div>
 
 
