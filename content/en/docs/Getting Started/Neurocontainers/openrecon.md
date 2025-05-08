@@ -5,10 +5,10 @@ description: >
   Neurodesktop containers can be used in Open Recon
 ---
 
-These instructions were tested on GitHub Codespaces, and we recommend this as a starting point. For a local setup Python3 and you need to install neurodocker and add it to your path:
+These instructions were tested on GitHub Codespaces, and we recommend this as a starting point. For a local setup you need Python3 and you need to install neurodocker and add it to your path:
 ```
-pip install neurodocker
-export PATH=$PATH:~/.local/bin/
+python -m pip install neurodocker
+export PATH=$PATH:~/.local/lib/python3.12/site-packages/bin
 ```
 
 ## 1) add the installation of the Python MRD server to any recipe in [https://github.com/NeuroDesk/neurocontainers](https://github.com/NeuroDesk/neurocontainers/tree/main/recipes)
