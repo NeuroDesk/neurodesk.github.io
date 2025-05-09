@@ -69,7 +69,7 @@ here is an example: [https://github.com/NeuroDesk/neurocontainers/tree/main/reci
 
 Then build the recipe:
 ```
-./builder/build.py generate openreconexample --recreate --build --login
+./builder/build.py generate openreconexample --recreate --build --login --architecture x86_64
 ```
 
 ## 2) test the tool inside the container on its own first and then test through MRD server 
