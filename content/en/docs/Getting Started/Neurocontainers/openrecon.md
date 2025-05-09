@@ -65,7 +65,7 @@ Make sure to adjust invertcontrast.py to your pipeline needs (or replace/rename 
           - find /opt/code/python-ismrmrd-server -name "*.sh" | xargs dos2unix
 ```
 
-here is an example: [https://github.com/NeuroDesk/neurocontainers/tree/main/recipes/vesselboost](https://github.com/NeuroDesk/neurocontainers/tree/main/recipes/openreconexample)
+here is an example: https://github.com/NeuroDesk/neurocontainers/tree/main/recipes/openreconexample
 
 Then build the recipe:
 ```
