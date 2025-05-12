@@ -16,4 +16,6 @@ httpHeaders:
   - url:
       - https://github.com
     headers:
-      Authorization: Bearer ${{ secrets.GITHUB_TOKEN }}
+      Authorization: ${{ secrets.GITHUB_TOKEN }}
+excludedFiles:
+- 'content/en/developers/contributors/_index.md'
