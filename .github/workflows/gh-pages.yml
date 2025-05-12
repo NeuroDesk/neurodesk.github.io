@@ -88,10 +88,10 @@ jobs:
     needs: build
     steps:
       - uses: actions/checkout@v4
-        with:
-          token: ${{ secrets.ACCESS_TOKEN }}
       - name: Run linkspector
         uses: umbrelladocs/action-linkspector@v1
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           fail_on_error: true
           reporter: github-check
