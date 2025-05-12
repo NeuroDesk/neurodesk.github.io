@@ -12,3 +12,8 @@ aliveStatusCodes:
 replacementPatterns:
   - pattern: "^/"
     replacement: "https://neurodesk.org/"
+httpHeaders:
+  - url:
+      - https://github.com
+    headers:
+      Authorization: Bearer ${{ secrets.GITHUB_TOKEN }}
