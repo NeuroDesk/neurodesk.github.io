@@ -39,6 +39,10 @@ osf upload -r . osfstorage/data
 
 ```
 
+### Note for those who have used ORCID to create their account / log in
+You can still use OSF to upload, but you need to use the TOKEN as the username in osf init (from testing, you don't need to export the OSF_TOKEN variable).
+It won't ask you for a password. 
+
 # Access a dataset
 
 To download a dataset from the OSF:
