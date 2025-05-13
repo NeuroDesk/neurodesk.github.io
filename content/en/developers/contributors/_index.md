@@ -161,9 +161,10 @@ Active contributors: [Steffen](#steffen-bollmann----stebo85), [Aswin](#aswin-nar
 - application container development (delphi, slicer, deepretinotopy)
 
 ## **Fernanda Ribeiro** - <img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" width="25" alt="GitHub logo"> <a href="https://github.com/felenitaribeiro" target="_blank" rel="noopener noreferrer">felenitaribeiro</a>
-### AFFILIATION, LOCATION
+### Justus-Liebig University Giessen, Germany; University of Queensland, Australia
 
 - application container development (deepretinotopy)
+- documentation
 
 ## **Jeryn Chang** - <img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" width="25" alt="GitHub logo"> <a href="https://github.com/Cadaei-Yuvxvs" target="_blank" rel="noopener noreferrer">Cadaei-Yuvxvs</a>
 ### AFFILIATION, LOCATION
