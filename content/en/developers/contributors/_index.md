@@ -203,7 +203,7 @@ Active contributors: [Steffen](#steffen-bollmann----stebo85), [Aswin](#aswin-nar
 ## **Monika Doerig** - <img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" width="25" alt="GitHub logo"> <a href="https://github.com/MoniDoerig" target="_blank" rel="noopener noreferrer">MoniDoerig</a>
 ### University of Queensland, Australia
 
-- fsl nipype fMRI example
+- interactive examples (fsl nipype fMRI)
 
 ## **Marcel Zwiers** - <img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" width="25" alt="GitHub logo"> <a href="https://github.com/marcelzwiers" target="_blank" rel="noopener noreferrer">marcelzwiers</a>
 ### AFFILIATION, LOCATION
