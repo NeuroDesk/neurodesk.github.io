@@ -278,6 +278,7 @@
         })
         const doi_tag = document.createElement('a');
         doi_tag.classList.add('taxonomy-term');
+        doi_tag.classList.add('doi');
         let doi_node = document.createTextNode(item.doi);
         doi_tag.appendChild(doi_node);
         app.appendChild(doi_tag);
