@@ -6,27 +6,32 @@ from pathlib import Path
 def get_app_categories(app):
     """
     Get the categories of the app
+    Args:
+        app (str): Application name
+    Returns:
+        list: List of categories
     """
     url = "https://raw.githubusercontent.com/NeuroDesk/neurocommand/refs/heads/main/neurodesk/apps.json"
     response = requests.get(url).json()
     print(f"Fetching categories for {app}")
     for key, value in response.items():
-        print(f"Checking {key} {value}")
         if app in key:
-            print(f"Found categories for {app}")
             return response[key]['categories']
         else:
             for sub_key, sub_value in value['apps'].items():
                 if app in sub_key:
-                    print(f"Found categories for {sub_key}")
                     return response[key]['categories']
     print(f"Categories not found for {app}")
     return []
     
 def write_to_file(zenodo_token, filename):
     """
-    Fetch the list of DOIs from Zenodo
+    Write the list of DOIs from Zenodo to applist.json
+    Args:
+        zenodo_token (str): Zenodo token
+        filename (str): Filename to write to
     """
+    # Fetch the list of DOIs from Zenodo
     page = 1
     params = {
         "access_token": zenodo_token,
@@ -56,9 +61,9 @@ def write_to_file(zenodo_token, filename):
         # print(f"Fetched {len(response.json())} packages from Github", response.json())
         depositions.extend(response.json())
 
+    # Write application, categories, doi, and doi_url to applist.json file
     my_dict = {}
     val = []
-
     for deposition in depositions:
         if 'title' not in deposition or 'doi' not in deposition or 'doi_url' not in deposition:
             print(f"Skipping DOI: {deposition['title']}")
@@ -75,7 +80,7 @@ def write_to_file(zenodo_token, filename):
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(
-        prog="Get Github Packages with Tags or Published DOIs from Zenodo",
+        prog="Get Published DOIs from Zenodo",
     )
 
     parser.add_argument("--zenodo_token", type=str, required=True, help="Zenodo token")
