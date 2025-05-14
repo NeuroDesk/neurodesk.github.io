@@ -38,6 +38,11 @@ jobs:
         with:
           submodules: recursive
 
+      - name: Set up Python 3.10
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.10'
+
       - name: Setup Pages
         id: pages
         uses: actions/configure-pages@v2
@@ -48,6 +53,10 @@ jobs:
       - name: Install dependencies
         run: | 
           npm install
+
+      - name: Write applist.json
+        run: |
+          python .github/workflows/write-app-json.py --zenodo_token ${{ secrets.ZENODO_TOKEN }} --zenodo_id ${{ secrets.ZENODO_ID }} --github_token ${{ secrets.GITHUB_TOKEN }} --github_user ${{ github.actor }} --github_repo ${{ github.event.repository.name }} --github_branch ${{ github.ref_name }} --github_sha ${{ github.sha }}
 
       - name: Build with Hugo
         env:
