@@ -203,7 +203,8 @@ Active contributors: [Steffen](#steffen-bollmann----stebo85), [Aswin](#aswin-nar
 ## **Monika Doerig** - <img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" width="25" alt="GitHub logo"> <a href="https://github.com/MoniDoerig" target="_blank" rel="noopener noreferrer">MoniDoerig</a>
 ### University of Queensland, Australia
 
-- interactive examples (fsl nipype fMRI)
+- Interactive notebook examples (Workflows: MRIQC, pyBIDS, Nipype on Neurodesk, RISE Slideshow of a Jupyter Notebook; Structural Imaging: Brain extraction with different software packages; Diffusion Imaging: MRtrix; Functional Imaging: AFNI, FSL, FSL's fMRI Data Analysis via Nipype)
+- Co-organization of the Neurodesk Workshop in Zurich, Switzerland (2024), and presentation of "Nipype on Neurodesk" 
 
 ## **Marcel Zwiers** - <img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" width="25" alt="GitHub logo"> <a href="https://github.com/marcelzwiers" target="_blank" rel="noopener noreferrer">marcelzwiers</a>
 ### AFFILIATION, LOCATION
