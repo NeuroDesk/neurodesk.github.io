@@ -6,11 +6,13 @@ aliases:
 - /docs/Neurodesktop/release-history
 - /docs/support/release-history
 description: >-
-     Previous releases of neurodesktop
+     Previous releases of Neurodesktop. 
 ---
 
 Latest Version
 : {{< params/neurodesktop/jupyter_neurodesk_version >}}
+
+Please consult [this page](https://github.com/NeuroDesk/neurodesk.github.io/blob/main/.github/content-templates/release-history-template.md) for the template for new releases.
 
 ## 2025-04-08
 ### New Features
