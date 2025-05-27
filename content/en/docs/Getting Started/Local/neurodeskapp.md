@@ -28,7 +28,7 @@ If you do NOT have privileged access → Use TinyRange Engine, or run remote ins
 
 - With privileged access: Docker or Podman to run respective engines
 
-- Without privileged access: QEMU and Go to use TinyRange Engine
+- Without privileged access: TinyRange Engine (included with Neurodesk App)
 
 ## Downloading Neurodesk App
 
@@ -64,21 +64,6 @@ After installation, open a terminal (Linux/macOS) or command prompt (Windows) an
 docker --version
 docker run hello-world
 ```
-
-## Install QEMU 
-For Linux, QEMU can be installed with `apt install qemu-system-x86_64` on Debian derived distributions and `dnf install qemu-system-x86_64` on Red Hat derived distributions.
-
-For macOS, QEMU can be installed with `brew install qemu`.
-
-Once installed, open a terminal (Linux/macOS) or command prompt (Windows) and run the following command to verify:
-
-```bash
-qemu-system-x86_64 --version
-```
-
-{{< alert color="info" >}}
-For Windows, QEMU is packaged in the application so users don't need to install it.
-{{< /alert >}}
 
 ## Installing Neurodesk App
 
