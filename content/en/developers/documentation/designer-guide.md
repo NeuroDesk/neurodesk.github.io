@@ -184,13 +184,13 @@ To be uploaded
 ### Poster Template
 
 <div style="display: flex; align-items: center; gap: 16px; flex-wrap: wrap;">
-  <a href="/template-presentations/Neurodesk-vertical-poster.potx" download>
+  <a href="/static/template-presentations/Neurodesk-vertical-poster.potx" download>
     📄 Download Neurodesk Vertical Poster Template (.pptx)
   </a>
 
   <div style="border-left: 1px solid #ccc; height: 1.2em;"></div>
 
-  <a href="/template-presentations/Neurodesk-horizontal-poster.potx" download>
+  <a href="/static/template-presentations/Neurodesk-horizontal-poster.potx" download>
     📄 Download Neurodesk Horizontal Poster Template (.pptx)
   </a>
 </div>
