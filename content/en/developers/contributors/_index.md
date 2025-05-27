@@ -6,13 +6,13 @@ description: >
     This section acknowledges the contributions made to the project. 
 ---
 
-<div style="border-left: 4px solid #4CAF50; background-color: #f0fdf4; padding: 1em; margin: 1em 0;">
+<div style="border-left: 4px solid #4CAF50; background-color: #f0fdf4; padding: 1em 1em 0.1em 1em; margin: 1em 0;">
   If you contributed to the project, please list yourself here with a description of your contribution.
+
   Please consult
   <a href="https://github.com/NeuroDesk/neurodesk.github.io/blob/main/.github/content-templates/contributor-format.md" target="_blank" rel="noopener noreferrer">
     this page
-  </a>
-  for the contributor's template. Simply copy the code and insert your information.
+  </a> for the contributor's template. Simply copy the code and insert your information.
 </div>
 
 
