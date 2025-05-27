@@ -8,8 +8,44 @@ description: >-
 
 Updating an existing container is quite easy with this new build system. Here is a step-by-step on how to procede. 
 
-_There's a [condensed version](#condensed-version) at the bottom of the page._
+_There's a [detailled version](#detailled-version) at the below including screenshots and an example._
+<br></br>
 
+---
+## Condensed version
+
+1. Access the [Neurodesk Containers repository](https://github.com/NeuroDesk/neurocontainers)
+2. Fork the repository
+3. Using your preferred development environment (such as VS Code locally or GitHub Codespaces), make changes to the desired container.
+
+<div style="margin-left: 2em;">
+
+Each tool has its own folder inside the `recipes/` directory, and inside that folder, you will find the corresponding `build.yaml` file.
+
+**Editing the `build.yaml`**
+
+Open the `build.yaml` file. Make the necessary updates to:
+- Software version numbers
+- Dependencies
+- Download links
+- Build instructions (if needed)
+</div>
+
+4. Validate your changes
+
+Make sure your changes are valid.
+In the terminal, run:
+```shell
+./builder/build.py generate <toolname> 
+
+#This second step can take some time
+./builder/build.py generate <toolname> --recreate --build --test 
+```
+5. Commit and push your changes
+6. Create a pull request
+---
+
+## Detailled version
 ## 1. Access the Neurodesk Containers
 
 Navigate to the [Neurocontainers repository](https://github.com/NeuroDesk/neurocontainers):
@@ -207,34 +243,5 @@ click on **Contribute** > **Open pull request**.
 
 Our Neurodesk team will review your proposed update, test the updated container to make sure it work and merge your changes to Neurodesk if everything works correctly, allowing all users to benefit. 
 
----
-## Condensed version
-
-1. Access the [Neurodesk Containers repository](https://github.com/NeuroDesk/neurocontainers)
-2. Fork the repository
-3. Using your XX of preference, make changes to the desired container
-Each tool has its own folder inside the `recipes/` directory, and inside that folder, you will find the corresponding `build.yaml` file.
-<div style="margin-left: 2em;">
-
-**Editing the `build.yaml`**
-
-Open the `build.yaml` file. Make the necessary updates to:
-- Software version numbers
-- Dependencies
-- Download links
-- Build instructions (if needed)
-</div>
-
-4. Validate Your Changes
-Make sure your changes are valid.
-In the terminal, run:
-```shell
-./builder/build.py generate <toolname> 
-
-#This second step can take some time
-./builder/build.py generate <toolname> --recreate --build --test 
-```
-5. Commit and Push Your Changes
-6. Create a Pull Request
 ---
 More detailed documentation can be found here: https://github.com/NeuroDesk/neurocontainers/tree/main/builder

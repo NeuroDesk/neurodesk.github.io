@@ -2,7 +2,7 @@
 
 - [CONTRIBUTING](#contributing)
     - [Repo map](#repo-map)
-    - [Build locally](#build-locally)
+    - [How to Contribute](#how-to-contribute)
         - [Prerequisites](#prerequisites)
             - [node.js](#nodejs)
             - [Hugo](#hugo)
@@ -10,29 +10,40 @@
         - [Install javascripts dependencies](#install-javascripts-dependencies)
         - [Serve the website locally](#serve-the-website-locally)
 
+
+Thank you for your interest in contributing to the Neurodesk documentation and developer site!
+
+This repository contains the source code for the [Neurodesk developer documentation website](https://www.neurodesk.org). It is built with [Hugo](https://gohugo.io/) and the [Docsy theme](https://www.docsy.dev/).
+
+We welcome contributions to:
+
+- Correct or improve existing documentation
+- Update release histories or contributor lists
+
 ## Repo map
 
 ```bash
-├── .github              # for continuous integration and issue / PR templates
-│   └── workflows
-├── assets               # for javascript and CSS
+├── .github               # For continuous integration and issue / PR templates
+│   └── content-templates # Internal templates (e.g., release history, contributor format)
+│   └── workflows         # GitHub Actions workflows for CI/CD
+├── assets                # JavaScript and SCSS for custom styling
 │   ├── js
 │   └── scss
-├── content              # where you put the actual content
+├── content               # Website content written in Markdown
 │   └── en
-│       ├── admins       # folders will use layout defined in the "layouts" folder
-│       ├── docs         # or in the "themes/docsy/layouts" folders
+│       ├── admins        # Folders use layout from "layouts/" or "themes/docsy/layouts/"
+│       ├── docs         
 │       └── tutorials
-├── data
-├── layouts              # where we put the HTML code of how things are formatted
+├── data                  # Site configuration data used in templates or shortcodes
+├── layouts               # Custom HTML layout overrides
 │   ├── admins
 │   ├── blog
-│   ├── shortcodes       # can overrule layouts from "themes/docsy/layouts"
+│   ├── shortcodes        # Custom shortcodes for content components
 │   │   ├── blocks
 │   │   └── params
 │   └── tutorials
 └── themes
-    └── docsy            # docsy theme submodule: DO NOT TOUCH
+    └── docsy             # docsy theme submodule: DO NOT TOUCH
         ├── assets
         ├── .git
         ├── i18n
@@ -41,6 +52,19 @@
         ├── static
         └── userguide
 ```
+
+## How to Contribute
+
+1. **Fork the repository** to your Github profil
+2. **Clone your fork** and create a new branch for your changes
+3. Make your edits in Markdown files under `content/en/`
+4. Preview the site locally (see `[Local Hugo Docsy page](https://www.neurodesk.org/developers/documentation/local-hugo-docsy/)` for more detailed instructions)
+5. Submit a Pull Request
+
+Please follow our [content formatting templates](https://github.com/NeuroDesk/neurodesk.github.io/tree/main/.github/templates) when adding:
+- Release history sections
+- Contributor acknowledgments
+- Tool submission documentation (COMING SOON)
 
 ## Build locally
 

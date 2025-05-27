@@ -89,12 +89,13 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - name: Run linkspector
-        uses: umbrelladocs/action-linkspector@v1
+        uses: umbrelladocs/action-linkspector@v1  
         with:
           fail_on_error: true
           reporter: github-check
           config_file: .linkspector.yml
           filter_mode: nofilter
+          github_token: ${{ secrets.github_token }}
 
   deploy:
     environment:
