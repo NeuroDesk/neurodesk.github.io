@@ -69,7 +69,7 @@ docker run hello-world
 
 {{< alert color="info" >}}
 QEMU is only needed if your using TinyRange on macOS.
-It is not needed on Windows or Linux using TinyRange since it's included in the instal.
+It is not needed on Windows or Linux using TinyRange since it's included in the install.
 {{< /alert >}}
 
 The easist way to install QEMU on macOS is using [Homebrew](https://brew.sh/):
