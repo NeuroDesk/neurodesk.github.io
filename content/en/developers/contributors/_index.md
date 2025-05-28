@@ -25,9 +25,10 @@ We try to update this page based on the git commit history:
 - [Transparent Singularity Contributors](https://github.com/NeuroDesk/transparent-singularity/graphs/contributors)
 
 
-Active contributors: [Steffen](#steffen-bollmann----stebo85), [Aswin](#aswin-narayanan----aswinnarayanan), [Ashley](#ashley-stewart----astewartau), [Josh](#joshua-scarsbrook----vbitz), [Xincheng](#xincheng-ye----yexincheng), [Thuy](#thuy-dao----iishiishii), [Moni](#monika-doerig----monidoerig), [Michèle](#michèle-masson-trottier----micmas), [Marshall](#marshall-xu----kmarshallx)
+**Core team**: [Steffen](#steffen-bollmann----stebo85), [Aswin](#aswin-narayanan----aswinnarayanan), [Ashley](#ashley-stewart----astewartau), [Josh](#joshua-scarsbrook----vbitz), [Xincheng](#xincheng-ye----yexincheng), [Thuy](#thuy-dao----iishiishii), [Moni](#monika-doerig----monidoerig), [Michèle](#michèle-masson-trottier----micmas), [Marshall](#marshall-xu----kmarshallx)
 
 ## **Steffen Bollmann** - <img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" width="25" alt="GitHub logo"> <a href="https://github.com/stebo85" target="_blank" rel="noopener noreferrer">stebo85</a>
+
 ### University of Queensland, Australia
 
 - Funding: Oracle Cloud (114k AUD), ECR Knowledge Exchange & Translation Fund (42k AUD), ARDC (CI for $566k AUD)
@@ -53,15 +54,6 @@ Active contributors: [Steffen](#steffen-bollmann----stebo85), [Aswin](#aswin-nar
 - Jupyter notebook support
 - Hugo website build and documentation
 
-## **Angela Renton** - <img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" width="25" alt="GitHub logo"> <a href="https://github.com/air2310" target="_blank" rel="noopener noreferrer">air2310</a>
-### AFFILIATION, LOCATION
-
-- Tutorials (MNE-Python, Tutorial template)
-- graphics for website (layer diagram)
-- documentation
-- user testing
-- [neurodesk paper](https://doi.org/10.1038/s41592-023-02145-x) lead author
-
 ## **Thuy Dao** - <img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" width="25" alt="GitHub logo"> <a href="https://github.com/iishiishii" target="_blank" rel="noopener noreferrer">iishiishii</a>
 ### University of Queensland, Australia
 
@@ -72,8 +64,14 @@ Active contributors: [Steffen](#steffen-bollmann----stebo85), [Aswin](#aswin-nar
 - automated building and testing of example documentation from jupyter notebooks
 - development of interactive container building tool
 
+## **Joshua Scarsbrook** - <img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" width="25" alt="GitHub logo"> <a href="https://github.com/Vbitz" target="_blank" rel="noopener noreferrer">Vbitz</a>
+### University of Queensland, Australia
+
+- build.sh to build.yaml
+- neurocontainers
+
 ## **Oren Civier** - <img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" width="25" alt="GitHub logo"> <a href="https://github.com/civier" target="_blank" rel="noopener noreferrer">civier</a>
-### AFFILIATION, LOCATION
+### Swinburne University of Technology, Australia
 
 - Funding: ARDC Australian Electrophysiology Data Analytics PlaTform (AEDAPT) (CI for $566k AUD) - contributing to initial conceptualisation, EOI writeup, scope of project, proposal writeup, teaming up with the Australian Imaging Service (AIS), recruiting collaborators, assisting collaborators with case studies
 - Design: leading the Virtual Neuro Machine (VNM) hackathon project in the 2020 OHBM BrainHack, where the first version of Neurodesktop was developed
@@ -90,6 +88,41 @@ Active contributors: [Steffen](#steffen-bollmann----stebo85), [Aswin](#aswin-nar
 - Administration: one of Neurodesk/AEDAPT representatives in ARCOS, AIS and NECTAR Interactive Analytics committees and working groups
 - Papers: co-author Neurodesk manuscript (in preparation; contribution to initial outline, input on first draft), co-author proceedings of the OHBM Brainhack 2021 (to be published in Aperture)
 
+## **Tom Johnstone** - <img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" width="25" alt="GitHub logo"> <a href="https://github.com/TomEmotion" target="_blank" rel="noopener noreferrer">TomEmotion</a>
+### Swinburne University of Technology, Australia
+
+- Funding: ARDC (PI for $566k AUD)
+- Application Container (sigviewer)
+
+## **Monika Doerig** - <img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" width="25" alt="GitHub logo"> <a href="https://github.com/MoniDoerig" target="_blank" rel="noopener noreferrer">MoniDoerig</a>
+### University of Queensland, Australia
+
+- Interactive notebook examples (Workflows: MRIQC, pyBIDS, Nipype on Neurodesk, RISE Slideshow of a Jupyter Notebook; Structural Imaging: Brain extraction with different software packages; Diffusion Imaging: MRtrix; Functional Imaging: AFNI, FSL, FSL's fMRI Data Analysis via Nipype)
+- Co-organization of the Neurodesk Workshop in Zurich, Switzerland (2024), and presentation of "Nipype on Neurodesk" 
+
+## **Michèle Masson-Trottier** - <img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" width="25" alt="GitHub logo"> <a href="https://github.com/micmas" target="_blank" rel="noopener noreferrer">micmas</a>
+### The University of Queensland, Australia
+
+- Redesigning the Neurodesk logo
+- Redesigning neurodesk.github.io
+- User documentation
+
+## **Nikhil Kumar Jangamreddy** - <img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" width="25" alt="GitHub logo"> <a href="https://github.com/jnikhilreddy" target="_blank" rel="noopener noreferrer">jnikhilreddy</a>
+### The University of Queensland, Australia
+
+- Language models
+- Container building
+
+## **Angela Renton** - <img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" width="25" alt="GitHub logo"> <a href="https://github.com/air2310" target="_blank" rel="noopener noreferrer">air2310</a>
+### University of Queensland, Australia \ École Polytechnique Fédérale de Lausanne, Switzerland \ Université de Genèvre, Switzerland
+
+- Tutorials (MNE-Python, Tutorial template)
+- graphics for website (layer diagram)
+- documentation
+- user testing
+- [neurodesk paper](https://doi.org/10.1038/s41592-023-02145-x) lead author
+
+
 ## **Thomas Shaw** - <img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" width="25" alt="GitHub logo"> <a href="https://github.com/thomshaw92" target="_blank" rel="noopener noreferrer">thomshaw92</a>
 ### University of Queensland, Australia
 
@@ -98,38 +131,11 @@ Active contributors: [Steffen](#steffen-bollmann----stebo85), [Aswin](#aswin-nar
 - application container development (LASHiS, ASHS)
 - user testing
 
-## **Tom Johnstone** - <img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" width="25" alt="GitHub logo"> <a href="https://github.com/TomEmotion" target="_blank" rel="noopener noreferrer">TomEmotion</a>
-### AFFILIATION, LOCATION
+## **Fernanda Ribeiro** - <img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" width="25" alt="GitHub logo"> <a href="https://github.com/felenitaribeiro" target="_blank" rel="noopener noreferrer">felenitaribeiro</a>
+### Justus-Liebig University Giessen, Germany; University of Queensland, Australia
 
-- Funding: ARDC (PI for $566k AUD)
-- Application Container (sigviewer)
-
-## **Martin Grignard** - <img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" width="25" alt="GitHub logo"> <a href="https://github.com/MartinGrignard" target="_blank" rel="noopener noreferrer">MartinGrignard</a>
-### AFFILIATION, LOCATION
-
-- initial neurocommand prototype and menu system builder, including apps.json idea
-
-## **David White** - <img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" width="25" alt="GitHub logo"> <a href="https://github.com/DavidjWhite33" target="_blank" rel="noopener noreferrer">DavidjWhite33</a>
-### AFFILIATION, LOCATION
-
-- application container development (Brainstorm, eeglab, fieldtrip)
-
-## **Akshaiy Narayanan** - <img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" width="25" alt="GitHub logo"> <a href="https://github.com/Akshaiy91" target="_blank" rel="noopener noreferrer">Akshaiy91</a>
-### AFFILIATION, LOCATION
-
-- bugfixes in neurodesktop, added tool for diskusage, checking of new version script
-
-## **Kelly Garner** - <img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" width="25" alt="GitHub logo"> <a href="https://github.com/garner-code" target="_blank" rel="noopener noreferrer">garner-code</a>
-### AFFILIATION, LOCATION
-
-- tutorials (fmriprep, mriqc, physio batch)
-- user testing on MacOS
-
-## **Paris Lyons** - <img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" width="25" alt="GitHub logo"> <a href="https://github.com/" target="_blank" rel="noopener noreferrer"></a>
-### AFFILIATION, LOCATION
-
-- design of the first Neurodesk Logo
-- project management of AEDAPT project
+- application container development (deepretinotopy)
+- documentation
 
 ## **Ashley Stewart** - <img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" width="25" alt="GitHub logo"> <a href="https://github.com/astewartau" target="_blank" rel="noopener noreferrer">astewartau</a>
 ### University of Queensland, Australia
@@ -137,105 +143,108 @@ Active contributors: [Steffen](#steffen-bollmann----stebo85), [Aswin](#aswin-nar
 - application container development (qsmxt)
 - presentation of neurodesk at OHBM Brainhack 2022 and OHBM educational course 2022
 
-## **Lars Kasper** - <img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" width="25" alt="GitHub logo"> <a href="https://github.com/mrikasper" target="_blank" rel="noopener noreferrer">mrikasper</a>
-### AFFILIATION, LOCATION
-
-- tutorials (physio)
-- Application Container (physio)
-
-## **Judy D Zhu** - <img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" width="25" alt="GitHub logo"> <a href="https://github.com/JD-Zhu" target="_blank" rel="noopener noreferrer">JD-Zhu</a>
-### AFFILIATION, LOCATION
-
-- application containers (fieldtrip)
-- tutorials (fieldtrip)
-
-## **Korbinian Eckstein** - <img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" width="25" alt="GitHub logo"> <a href="https://github.com/korbinian90" target="_blank" rel="noopener noreferrer">korbinian90</a>
-### AFFILIATION, LOCATION
-
-- documentation
-- application container development (qsmxt, mrsi)
-
-## **Stefanie Evas** - <img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" width="25" alt="GitHub logo"> <a href="https://github.com/neuro-sevas" target="_blank" rel="noopener noreferrer">neuro-sevas</a>
-### AFFILIATION, LOCATION
-
-- documentation
-- application containers 
-
 ## **Xincheng Ye** - <img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" width="25" alt="GitHub logo"> <a href="https://github.com/yexincheng" target="_blank" rel="noopener noreferrer">yexincheng</a>
 ### University of Queensland, Australia
 
 - application container development (delphi, slicer, deepretinotopy)
 
-## **Fernanda Ribeiro** - <img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" width="25" alt="GitHub logo"> <a href="https://github.com/felenitaribeiro" target="_blank" rel="noopener noreferrer">felenitaribeiro</a>
-### Justus-Liebig University Giessen, Germany; University of Queensland, Australia
-
-- application container development (deepretinotopy)
-- documentation
-
-## **Jeryn Chang** - <img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" width="25" alt="GitHub logo"> <a href="https://github.com/Cadaei-Yuvxvs" target="_blank" rel="noopener noreferrer">Cadaei-Yuvxvs</a>
-### AFFILIATION, LOCATION
-
-- application container development (oshyx)
-
-## **Sin Kim** - <img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" width="25" alt="GitHub logo"> <a href="https://github.com/kimsin98" target="_blank" rel="noopener noreferrer">kimsin98</a>
-### AFFILIATION, LOCATION
-
-- tutorial (datalad)
-
-## **Jakub Kaczmarzyk** - <img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" width="25" alt="GitHub logo"> <a href="https://github.com/kaczmarj" target="_blank" rel="noopener noreferrer">kaczmarj</a>
-### AFFILIATION, LOCATION
-
-- proof of concept contributions
-
-## **Alan Hockings** - <img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" width="25" alt="GitHub logo"> <a href="https://github.com/ahockings" target="_blank" rel="noopener noreferrer">ahockings</a>
-### AFFILIATION, LOCATION
-
-- application container development (mricron)
-
-## **Aditya Garg** - <img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" width="25" alt="GitHub logo"> <a href="https://github.com/" target="_blank" rel="noopener noreferrer"></a>
-### AFFILIATION, LOCATION
-
-- application container development (hdbet)
-
-## **Kexin Lou** - <img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" width="25" alt="GitHub logo"> <a href="https://github.com/Kaxnn" target="_blank" rel="noopener noreferrer">Kaxnn</a>
-### AFFILIATION, LOCATION
-
-- application container development (mne/torch,esilpd)
-
-## **Renzo Huber** - <img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" width="25" alt="GitHub logo"> <a href="https://github.com/layerfMRI" target="_blank" rel="noopener noreferrer">layerfMRI</a>
-### AFFILIATION, LOCATION
-
-- application container development (laynii)
-
-## **Monika Doerig** - <img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" width="25" alt="GitHub logo"> <a href="https://github.com/MoniDoerig" target="_blank" rel="noopener noreferrer">MoniDoerig</a>
-### University of Queensland, Australia
-
-- Interactive notebook examples (Workflows: MRIQC, pyBIDS, Nipype on Neurodesk, RISE Slideshow of a Jupyter Notebook; Structural Imaging: Brain extraction with different software packages; Diffusion Imaging: MRtrix; Functional Imaging: AFNI, FSL, FSL's fMRI Data Analysis via Nipype)
-- Co-organization of the Neurodesk Workshop in Zurich, Switzerland (2024), and presentation of "Nipype on Neurodesk" 
-
-## **Marcel Zwiers** - <img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" width="25" alt="GitHub logo"> <a href="https://github.com/marcelzwiers" target="_blank" rel="noopener noreferrer">marcelzwiers</a>
-### AFFILIATION, LOCATION
-
-- bidscoin
-
-
-## **Michèle Masson-Trottier** - <img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" width="25" alt="GitHub logo"> <a href="https://github.com/micmas" target="_blank" rel="noopener noreferrer">micmas</a>
-### University of Queensland, Australia
-
-- Redesigning the Neurodesk logo
-- Redesigning neurodesk.github.io
-- Documentation
-
-## **Joshua Scarsbrook** - <img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" width="25" alt="GitHub logo"> <a href="https://github.com/Vbitz" target="_blank" rel="noopener noreferrer">Vbitz</a>
-### University of Queensland, Australia
-
-- build.sh to build.yaml
-- neurocontainers
-
 ## **Marshall Xu** - <img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" width="25" alt="GitHub logo"> <a href="https://github.com/KMarshallX" target="_blank" rel="noopener noreferrer">KMarshallX</a>
 ### University of Queensland, Australia
 
 - application container development (VesselBoost)
+
+## **David White** - <img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" width="25" alt="GitHub logo"> <a href="https://github.com/DavidjWhite33" target="_blank" rel="noopener noreferrer">DavidjWhite33</a>
+### Swinburne University of Technology, Australia
+
+- application container development (Brainstorm, eeglab, fieldtrip)
+
+## **Yaroslav Halchenko** - <img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" width="25" alt="GitHub logo"> <a href="https://github.com/yarikoptic" target="_blank" rel="noopener noreferrer">yarikoptic</a>
+### Dartmouth College, USA
+
+- datalad neurocontainers
+
+
+## **Martin Grignard** - <img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" width="25" alt="GitHub logo"> <a href="https://github.com/MartinGrignard" target="_blank" rel="noopener noreferrer">MartinGrignard</a>
+### University of Liège, Belgium
+
+- initial neurocommand prototype and menu system builder, including apps.json idea
+
+## **Akshaiy Narayanan** - <img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" width="25" alt="GitHub logo"> <a href="https://github.com/Akshaiy91" target="_blank" rel="noopener noreferrer">Akshaiy91</a>
+### The University of Auckland, New Zealand
+
+- bugfixes in neurodesktop, added tool for diskusage, checking of new version script
+
+## **Kelly Garner** - <img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" width="25" alt="GitHub logo"> <a href="https://github.com/garner-code" target="_blank" rel="noopener noreferrer">garner-code</a>
+### University of New South Wales, Australia. The University of Queensland, Australia
+
+- tutorials (fmriprep, mriqc, physio batch)
+- user testing on MacOS
+
+## **Paris Lyons** - <img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" width="25" alt="GitHub logo"> <a href="https://github.com/" target="_blank" rel="noopener noreferrer"></a>
+### Swinburne University of Technology, Australia
+
+- design of the first Neurodesk Logo
+- project management of AEDAPT project
+
+## **Lars Kasper** - <img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" width="25" alt="GitHub logo"> <a href="https://github.com/mrikasper" target="_blank" rel="noopener noreferrer">mrikasper</a>
+### University of Toronto, Canada \ University of Zurich and ETH Zurich, Zurich, Switzerland
+
+- tutorials (physio)
+- Application Container (physio)
+
+## **Judy D Zhu** - <img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" width="25" alt="GitHub logo"> <a href="https://github.com/JD-Zhu" target="_blank" rel="noopener noreferrer">JD-Zhu</a>
+### Macquarie University, Australia
+
+- application containers (fieldtrip)
+- tutorials (fieldtrip)
+
+## **Korbinian Eckstein** - <img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" width="25" alt="GitHub logo"> <a href="https://github.com/korbinian90" target="_blank" rel="noopener noreferrer">korbinian90</a>
+### The University of Queensland, Australia
+
+- documentation
+- application container development (qsmxt, mrsi)
+
+## **Stefanie Evas** - <img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" width="25" alt="GitHub logo"> <a href="https://github.com/neuro-sevas" target="_blank" rel="noopener noreferrer">neuro-sevas</a>
+### University of Adelaide, Australia \ CSIRO, Australia
+
+- documentation
+- application containers 
+
+## **Jeryn Chang** - <img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" width="25" alt="GitHub logo"> <a href="https://github.com/Cadaei-Yuvxvs" target="_blank" rel="noopener noreferrer">Cadaei-Yuvxvs</a>
+### The University of Queensland, Australia
+
+- application container development (oshyx)
+
+## **Sin Kim** - <img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" width="25" alt="GitHub logo"> <a href="https://github.com/kimsin98" target="_blank" rel="noopener noreferrer">kimsin98</a>
+### Korea Advanced Institute of Science & Technology, South Korea
+
+- tutorial (datalad)
+
+## **Jakub Kaczmarzyk** - <img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" width="25" alt="GitHub logo"> <a href="https://github.com/kaczmarj" target="_blank" rel="noopener noreferrer">kaczmarj</a>
+### Stony Brook University, USA
+
+- proof of concept contributions
+
+## **Alan Hockings** - <img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" width="25" alt="GitHub logo"> <a href="https://github.com/ahockings" target="_blank" rel="noopener noreferrer">ahockings</a>
+### The University of Queensland, Australia
+
+- application container development (mricron)
+
+## **Kexin Lou** - <img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" width="25" alt="GitHub logo"> <a href="https://github.com/Kaxnn" target="_blank" rel="noopener noreferrer">Kaxnn</a>
+### The University of Queensland, Australia
+
+- application container development (mne/torch,esilpd)
+
+## **Laurentius (Renzo) Huber** - <img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" width="25" alt="GitHub logo"> <a href="https://github.com/layerfMRI" target="_blank" rel="noopener noreferrer">layerfMRI</a>
+### National Institutes Health, USA
+
+- application container development (laynii)
+
+
+## **Marcel Zwiers** - <img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" width="25" alt="GitHub logo"> <a href="https://github.com/marcelzwiers" target="_blank" rel="noopener noreferrer">marcelzwiers</a>
+### Radboud University, Netherlands
+
+- bidscoin
 
 <div style="border-left: 4px solid #4CAF50; background-color: #ffffff; padding: 1em; margin: 1em 0;">
 
