@@ -51,8 +51,9 @@
 			{{ range .categories }}
 			<a class="taxonomy-term">{{ . }}</a>
 			{{ end }}
+			{{ if .doi }}
 			<a class="taxonomy-term doi" href={{ .doi_url }}>{{ .doi }}</a>
-
+			{{ end }}
 		</li>
 		{{ end }}
 		</ul>

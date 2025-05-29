@@ -12,18 +12,40 @@ def get_app_categories(app):
         list: List of categories
     """
     url = "https://raw.githubusercontent.com/NeuroDesk/neurocommand/refs/heads/main/neurodesk/apps.json"
-    response = requests.get(url).json()
-    print(f"Fetching categories for {app}")
-    for key, value in response.items():
+    response = requests.get(url)
+    if response.status_code != 200:
+        raise Exception(f"Failed to fetch apps: {menu_entries.status_code} {menu_entries.text}")
+    menu_entries = response.json()
+    for key, value in menu_entries.items():
         if app in key:
-            return response[key]['categories']
+            return menu_entries[key]['categories']
         else:
             for sub_key, sub_value in value['apps'].items():
                 if app in sub_key:
-                    return response[key]['categories']
+                    return menu_entries[key]['categories']
     print(f"Categories not found for {app}")
     return []
     
+def get_apps():
+    """
+    Get the categories of the app
+    Args:
+        app (str): Application name
+    Returns:
+        list: List of categories
+    """
+    url = "https://raw.githubusercontent.com/NeuroDesk/neurocommand/refs/heads/main/neurodesk/apps.json"
+    response = requests.get(url)
+    if response.status_code != 200:
+        raise Exception(f"Failed to fetch apps: {menu_entries.status_code} {menu_entries.text}")
+    menu_entries = response.json()
+    app_list = []
+    for menu_name, menu_data in menu_entries.items():
+        for app_name, app_data in menu_data.get("apps", {}).items():
+            IMAGENAME_VERSION = app_name.split(" ")[0] + "_" + app_name.split(" ")[-1] + "_" + app_data.get("version")
+            app_list.append(IMAGENAME_VERSION)
+    return app_list
+
 def write_to_file(zenodo_token, filename):
     """
     Write the list of DOIs from Zenodo to applist.json
@@ -60,20 +82,26 @@ def write_to_file(zenodo_token, filename):
             raise Exception(f"Failed to fetch DOIs: {response.status_code} {response.text}")
         # print(f"Fetched {len(response.json())} packages from Github", response.json())
         depositions.extend(response.json())
-
+    app_list = get_apps()
     # Write application, categories, doi, and doi_url to applist.json file
     my_dict = {}
     val = []
-    for deposition in depositions:
-        if 'title' not in deposition or 'doi' not in deposition or 'doi_url' not in deposition:
-            print(f"Skipping DOI: {deposition['title']}")
-            continue
-        print(f"Processing DOI: {deposition['title']}")
-        categories = get_app_categories(deposition['title'].split("_")[0])
-        title = deposition['title']
-        doi = deposition['doi']
-        doi_url = deposition['doi_url']
-        val.append({"application": title, "categories": categories, "doi": doi, "doi_url": doi_url})
+    for app in app_list:
+
+        categories = get_app_categories(app.split("_")[0])
+
+        for deposition in depositions:
+            if 'title' not in deposition or 'doi' not in deposition or 'doi_url' not in deposition:
+                print(f"Skipping DOI: {deposition['title']}")
+                continue
+            if app in deposition['title']:
+                print(f"Processing DOI: {deposition['title']}")
+                doi = deposition['doi']
+                doi_url = deposition['doi_url']
+                val.append({"application": app, "categories": categories, "doi": doi, "doi_url": doi_url})
+            else:
+                val.append({"application": app, "categories": categories})
+
     my_dict['list'] = val
     with open(filename, 'w') as fp:     
         json.dump(my_dict, fp, sort_keys=True, indent=4)
