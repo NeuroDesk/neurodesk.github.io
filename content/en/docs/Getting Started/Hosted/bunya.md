@@ -35,6 +35,11 @@ If you want to use GUI applications (fsleyes, afni, suma, ...) you need to overw
 export TMPDIR=/tmp 
 ```
 
+NOTE: If you are using AFNI on Bunya then the default detach behavior will cause SIGBUS errors and a crash. To fix this run AFNI with:
+```
+afni -no_detach
+```
+
 NOTE: MRIQC has its $HOME variable hardcoded to be /home/mriqc. This leads to problems on Bunya. A workaround is to run this before mriqc:
 ```
 export neurodesk_singularity_opts="--home $HOME:/home"
