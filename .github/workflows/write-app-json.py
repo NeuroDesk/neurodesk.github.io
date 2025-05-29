@@ -42,8 +42,9 @@ def get_apps():
     app_list = []
     for menu_name, menu_data in menu_entries.items():
         for app_name, app_data in menu_data.get("apps", {}).items():
-            IMAGENAME_VERSION = app_name.split(" ")[0] + "_" + app_name.split(" ")[-1] + "_" + app_data.get("version")
-            app_list.append(IMAGENAME_VERSION)
+            if app_data.get("exec") == "":
+                IMAGENAME_VERSION = app_name.split(" ")[0] + "_" + app_name.split(" ")[-1] + "_" + app_data.get("version")
+                app_list.append(IMAGENAME_VERSION)
     return app_list
 
 def write_to_file(zenodo_token, filename):
@@ -99,8 +100,8 @@ def write_to_file(zenodo_token, filename):
                 doi = deposition['doi']
                 doi_url = deposition['doi_url']
                 val.append({"application": app, "categories": categories, "doi": doi, "doi_url": doi_url})
-            else:
-                val.append({"application": app, "categories": categories})
+                break
+        val.append({"application": app, "categories": categories})
 
     my_dict['list'] = val
     with open(filename, 'w') as fp:     
