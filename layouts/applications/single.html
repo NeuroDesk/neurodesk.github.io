@@ -32,26 +32,28 @@
 		<ul id="list">
 
 		{{ $applist := dict }}
-		{{ $url := "https://raw.githubusercontent.com/NeuroDesk/neurocommand/main/cvmfs/applist.json" }}
-		{{ with resources.GetRemote $url }}
+		{{ $url := "js/applist.json" }}
+		{{ with resources.Get $url }}
 		{{ with .Err }}
 			{{ errorf "%s" . }}
 		{{ else }}
 			{{ $applist = . | transform.Unmarshal }}
 		{{ end }}
 		{{ else }}
-		{{ errorf "Unable to get remote resource %q" $url }}
+		{{ errorf "Unable to get resource %q" $url }}
 		{{ end }}
 
 
-		{{/*  {{ $applist := getJSON "https://raw.githubusercontent.com/NeuroDesk/neurocommand/main/cvmfs/applist.json" }}  */}}
+		{{/*  {{ $applist := getJSON "applist.json" }}  */}}
 		{{ range $applist.list }}
 		<li>	
 			{{ .application }} 
 			{{ range .categories }}
 			<a class="taxonomy-term">{{ . }}</a>
 			{{ end }}
-	
+			{{ if .doi }}
+			<a class="taxonomy-term doi" href={{ .doi_url }}>{{ .doi }}</a>
+			{{ end }}
 		</li>
 		{{ end }}
 		</ul>

@@ -51,6 +51,7 @@
                     // With "boost" you can add weighting for specific (default weighting without boost: 1)
                     this.field('title', { boost: 5 });
                     this.field('categories', { boost: 3 });
+                    this.field('doi', { boost: 3 });
                     this.field('tags', { boost: 3 });
                     // this.field('projects', { boost: 3 }); // example for an individual toxonomy called projects
                     this.field('description', { boost: 2 });
@@ -247,9 +248,11 @@
         const title = item.application;
         const categories = item.categories.join();
         console.log(categories);
-   
+        const doi = item.doi;
+        const doi_url = item.doi_url;
+
           return (
-              title.match(regexQuery) || categories.match(regexQuery)
+              title.match(regexQuery) || categories.match(regexQuery) || doi.match(regexQuery) || doi_url.match(regexQuery)
           );
         
       });
@@ -273,6 +276,14 @@
             tag.appendChild(cat);
             app.appendChild(tag);
         })
+        if (item.doi) {
+            const doi_tag = document.createElement('a');
+            doi_tag.classList.add('taxonomy-term');
+            doi_tag.classList.add('doi');
+            let doi_node = document.createTextNode(item.doi);
+            doi_tag.appendChild(doi_node);
+            app.appendChild(doi_tag);
+        }
         
         newList.appendChild(app);
       });
