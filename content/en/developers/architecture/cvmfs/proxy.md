@@ -29,7 +29,7 @@ acl stratum_ones dstdomain .neurodesk.org .openhtc.io .cern.ch .gridpp.rl.ac.uk 
 http_port 3128
 
 # Deny access to anything which is not part of our stratum_ones ACL.
-http_access deny !stratum_ones
+http_access allow stratum_ones
 
 # Only allow access from our local machines
 #http_access allow local_nodes
