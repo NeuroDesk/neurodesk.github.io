@@ -23,8 +23,7 @@ sudo vi /etc/squid/squid.conf
 #acl local_nodes src YOUR_CLIENT_IPS
 
 # Destination domains that are allowed
-acl stratum_ones dstdomain .neurodesk.org
-#acl stratum_ones dstdom_regex YOUR_REGEX
+acl stratum_ones dstdomain .neurodesk.org .openhtc.io .cern.ch .gridpp.rl.ac.uk .opensciencegrid.org
 
 # Squid port
 http_port 3128
