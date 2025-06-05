@@ -255,7 +255,7 @@ trap - 1 2 3
 ```
 
 ### Make the module system usable in the shell
-Add the following lines to your `~/.bashrc` file:
+Add the following lines to your `~/.bashrc` file or to `/etc/bash.bashrc` for a global install:
 ```bash
 if [ -f '/usr/share/module.sh' ]; then source /usr/share/module.sh; fi
 
