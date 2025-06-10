@@ -10,5 +10,6 @@ description: >-
 
 We just launched our new container build system. Some documentation can already be found here: https://github.com/NeuroDesk/neurocontainers/tree/main/builder
 
-More will follow here soon!
+We have also released a web browser UI to create your own Neurocontainer: https://www.neurodesk.org/neurocontainers-ui/
 
+We are currently building the documentation for this
