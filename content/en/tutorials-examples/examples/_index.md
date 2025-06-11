@@ -1,7 +1,7 @@
 ---
 title: "Examples"
-linkTitle: "Examples"
-weight: 10
+linkTitle: "Examples Notebooks library"
+weight: 1
 # description: >
 #   Examples
 # type: redirect

@@ -1,7 +1,7 @@
 ---
 title: "Release History"
 linkTitle: "Release History"
-weight: 10
+weight: 7
 aliases:
 - /docs/Neurodesktop/release-history
 - /docs/support/release-history

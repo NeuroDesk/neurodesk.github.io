@@ -26,7 +26,7 @@ To read more about Docker containers, visit [the Docker webpage](https://www.doc
 - A 15 minute video explaining what Neurodesk is: [Neurodesk in 15 minutes](https://youtu.be/2ATgTOsiGdY)
 - A 30 minute video explaining Open Data processing in Neurodesk: [MRItogether data management](https://www.youtube.com/live/bbSDNSzLftI?feature=share&t=1159)
 - A 35 minute video explaining the technical details of Neurodesk: [Neurodesk in 35 minutes - behind the scenes](https://youtu.be/V5gAA9NiX_s)
-- A 50 minute video explaining the goals and implementation details of Neurodesk, Neurodesktop and AEDAPT: [ARDC TechTalk](https://drive.google.com/file/d/1Dmtj6jpE1jcAt63kv2KhPL7WuuQxnsPg/view),[Slides](https://docs.google.com/presentation/d/15a_Uj_ZqL4OH9xd_QFtGk4HFWTqzqkcYXzPfz2fSw0s/present?slide=id.g11ecd613955_0_543)
+- A 50 minute video explaining the goals and implementation details of Neurodesk, Neurodesktop and AEDAPT: [ARDC TechTalk](https://drive.google.com/file/d/1Dmtj6jpE1jcAt63kv2KhPL7WuuQxnsPg/view), [Slides](https://docs.google.com/presentation/d/15a_Uj_ZqL4OH9xd_QFtGk4HFWTqzqkcYXzPfz2fSw0s/present?slide=id.g11ecd613955_0_543)
 - A 1 hour video showcasing Neurodesk live and explaining the background: [ReproNim Webinar](https://www.youtube.com/watch?v=HY-TqE6I2oo)
 - A video explaining using Neurodesk for open data and open analysis: [OHBM Webinar](https://youtu.be/RTy5iVHHGO8?si=1XWcBuDlC7jdzhSo&t=3350)
 - A video on Neurodesk's development journey and lessons learned: [MRItogether 2024, journey](https://www.youtube.com/watch?v=KJh_cr1uAi0&list=PLeDygc8TN_J5TKU7Z06ucjkvsfEYI6_AJ&index=7)

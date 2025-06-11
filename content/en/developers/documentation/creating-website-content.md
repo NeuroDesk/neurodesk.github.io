@@ -1,55 +1,16 @@
 ---
-title: "Template for tutorial creation"
-linkTitle: "Tutorial template"
-weight: 1
-tags: ["template", "documentation"]
-author: Angela I. Renton
+title: "Contribute to Neurodesk.org"
+linkTitle: "Contribute Content"
+weight: 2
+author: Angela I. Renton, updated by Michèle Masson-Trottier
 aliases:
-- /tutorials/tutorial-template/
-- /developers/documentation/workflowtemplate
-description: > 
-  Follow this template to contribute your own tutorial to the Neurodesk documentation.
+- /tutorials/tutorial-template
+tags: ["template", "documentation"]
+description: >
+  A brief guide for contributing new content in Markdown through Github.
 ---
 
-<!--
-Begin setting up your tutorial by filling in the details in the description above. This controls how your tutorial is named and displayed in the Neurodesk documentation. The details are as follows:
-
-title: A title for your tutorial
-linkTitle: A shortened version of the title for the menu
-weight: This controls where in the menu your tutorial will appear; you can leave this set to 1 for default sorting 
-tags: List any number of tags to help others find this tutorial. i.e. "eeg", "mvpa", "statistics"
-description: > a short description of your tutorial. This will form the subheading for the tutorial page. 
-
-Once you've filled out those details, you can delete this comment block. 
--->
-
-> _This tutorial was created by Name P. Namington._ 
->
-> Email: n.namington@institution.edu.au
->
-> Github: @Namesgit
->
-> Twitter: @Nameshandle
->
-<!-- Fill in your personal details above so that we can credit the tutorial to you. Feel free to add any additional contact details i.e. website, or remove those that are irrelevant -->
-
-<!-- Following line adds a link to getting set up with Neurodesk -->
-{{< params/neurodesktop/getting_set_up >}}
-<!-- -->
-
-> _An example notebook can be found here:_
-> https://github.com/NeuroDesk/example-notebooks/
->
-
-## How to contribute a new tutorial
-
-Welcome to the tutorial template, which you can use to contribute your neurodesk tutorial to our documentation. We aim to collect a wide variety of tutorials and examples representing the spectrum of tools available under the neurodesk architecture and the diversity in how researchers might apply them. 
-- **Tutorials:** We kindly ask you to add a concise step-by-step guide for using specific neuroimaging software on neurodesk with screenshots for visual aid. 
-- **Examples:** If you want to provide more descriptive details for running specific pipelines, we highly recommend contributing an example (in the form of a Jupyter notebook) to our documentation.
-
-In either case, make sure that all steps of the tutorial work before submitting. 
-
-### Table of contents
+## Table of contents
 
 * [Create your own copy of *NeuroDesk/neurodesk.github.io* repository](#create-your-own-copy-of-neurodeskneurodeskgithubio-repository)
 * [Create your tutorial](#create-your-tutorial)
@@ -60,15 +21,17 @@ In either case, make sure that all steps of the tutorial work before submitting.
 * [Tables](#tables)
 * [Lists](#lists)
 
-### Create your own copy of *NeuroDesk/neurodesk.github.io* repository
+### Create your own copy of *NeuroDesk/neurodesk.github.io* repository where you will be able to make modifications
+
 Begin by creating a copy of our documentation that you can edit:
 1. Visit the GitHub repository for the [Neurodesk documentation](https://github.com/NeuroDesk/neurodesk.github.io).
-2. [Fork](https://docs.github.com/en/get-started/quickstart/fork-a-repo) the repository.
+2. [**Fork**](https://docs.github.com/en/get-started/quickstart/fork-a-repo) the repository.
 
 
 ![1_fork](/static/tutorials-examples/tutorials/tutorial-template/1_fork.png 'Repo fork')
 
-{{< alert title="Note" >}} _You should now have your own copy of the documentation, which you can alter without affecting our official documentation. You should see a panel stating "This branch is up to date with Neurodesk:main." If someone else makes a change to the official documentation, the statement will change to reflect this. You can bring your repository up to date by clicking "Sync fork"._ {{< /alert >}}
+
+{{< alert title="Forking" >}} You will now have your own copy of the documentation that you can alter without affecting our official documentation. You will see a panel stating _"This branch is up to date with Neurodesk:main."_ If someone else makes a change to the official documentation, the statement will change to reflect this. You can bring your repository up to date by clicking _"Sync fork"._ {{< /alert >}}
 
 ![2_syncfork](/static/tutorials-examples/tutorials/tutorial-template/2_syncFork.png 'Sync fork')
 
@@ -76,10 +39,26 @@ Begin by creating a copy of our documentation that you can edit:
 
 ----------------
 ### Create your tutorial
-1. [Clone](https://docs.github.com/en/get-started/quickstart/fork-a-repo#cloning-your-forked-repository) your forked version of our documentation to a location of your choice on your computer. 
+1. [**Clone**](https://docs.github.com/en/get-started/quickstart/fork-a-repo#cloning-your-forked-repository) your forked version of our documentation to a location of your choice on your computer. 
+
+This step is the same for macOS, Windows, and Linux.
+
+#### Using SSH
+```bash
+git clone --recurse-submodules git@github.com:NeuroDesk/neurodesk.github.io.git
+```
+or 
+#### Using HTTPS
+```bash
+git clone --recurse-submodules https://github.com/NeuroDesk/neurodesk.github.io.git
+```
+
+#### If you cloned without --recurse-submodules
+
+Run the following command to pull submodules
 
 ```bash
-git clone https://github.com/YOUR-USERNAME/neurodesk.github.io.git
+git submodule update --init --recursive --remote
 ```
 
 The URL for the repository can be copied by clicking on the button highlighted below:
@@ -88,9 +67,9 @@ The URL for the repository can be copied by clicking on the button highlighted b
 
 <!-- markdown-link-check-disable -->
 
+
 2. Now, you can open your copy of `neurodesk.github.io` using the editor of your choice (we recommend [vscode](https://code.visualstudio.com/)). Before making changes to the current repository, the best practice is to create a new [branch](https://www.atlassian.com/git/tutorials/using-branches) for avoiding version conflicts. 
 <!-- markdown-link-check-enable -->
-
 
   - Create a branch:
 ```bash
@@ -107,7 +86,7 @@ git branch
 ![5_branch](/static/tutorials-examples/tutorials/tutorial-template/5_branch.png 'Branch check')
   
 
-3. Navigate to `neurodesk.github.io/content/en/tutorials-examples/tutorials/` and then navigate to the subfolder you believe your tutorial belongs in (e.g. "/functional_imaging"). 
+3. Within your cloned environment, navigate to `neurodesk.github.io/content/en/tutorials-examples/tutorials/` and then navigate to the subfolder you believe your tutorial belongs in (e.g. "/functional_imaging"). 
 
 4. Create a new, appropriately named markdown file to house your tutorial (e.g. "physio.md"). Images need to be stored in the /static directory - please mirror the same directory structure as for your markdown files.
 
