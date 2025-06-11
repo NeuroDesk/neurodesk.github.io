@@ -14,7 +14,7 @@ Latest Version
 
 Please consult [this page](https://github.com/NeuroDesk/neurodesk.github.io/blob/main/.github/content-templates/release-history-template.md) for the template for new releases.
 
-## 2025-06-08
+## 2025-06-10
 ### New Features
 - upgrade to jupyterhub 5.3.0
 - added nbgitpuller, tcsh
