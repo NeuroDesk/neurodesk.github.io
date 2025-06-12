@@ -182,7 +182,7 @@ linktitle: Neurodesk
 					</div>
 					<div class="col-6 col-md-5 col-lg-6 col-xl-3">
 						<div class="card community-card">
-							<a href="/developers">
+							<a href="/overview/contribute/">
 								<div class="card-body">
 									<i class="fa fa-code"></i>
 									<h4>Contribution Guide</h4>

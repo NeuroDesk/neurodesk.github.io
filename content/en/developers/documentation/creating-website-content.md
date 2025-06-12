@@ -14,10 +14,11 @@ This applies if you with to submit a new tutorial or amend content on a page. Ou
 
 ## Table of contents
 
-* [Create your own copy of *NeuroDesk/neurodesk.github.io* repository](#create-your-own-copy-of-neurodeskneurodeskgithubio-repository)
-* [Create your new content](#create-your-tutorial)
-* [Contribute your new content to the official documentation](#contribute-your-new-tutorial-to-the-official-documentation)
+* [Create your own copy of *NeuroDesk/neurodesk.github.io* repository](#create-your-own-copy-of-neurodeskneurodeskgithubio-repository-where-you-will-be-able-to-make-modifications)
+* [Create your content or make your modifications](#create-your-content-or-make-your-modifications)
+* [Contribute your new content to the official documentation](#contribute-your-new-content-to-the-official-documentation)
 * [Formatting guidelines](#formatting-guidelines)
+* [Code blocks](#code-blocks)
 * [Images](#images)
 * [Alerts and warnings](#alerts-and-warnings)
 * [Tables](#tables)
