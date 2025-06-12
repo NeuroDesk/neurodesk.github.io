@@ -23,7 +23,7 @@ Help us build better neuroimaging infrastructure by writing code, improving our 
 
 Good documentation makes tools accessible. Contribute tutorials, usage guides, or improve existing documentation.
 
-- [Submit a tutorial](/tutorials-examples/tutorials/tutorial-template/tutorial-template/)
+- [Submit a tutorial](/tutorials-examples/contribute/contribute-tutorials/)
 - [Browse our Documentation Guide](/developers/documentation/)
 
 ### Create or Share Workflows
