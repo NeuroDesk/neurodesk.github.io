@@ -6,7 +6,9 @@ description: >-
      Step-by-step instructions on how to update an existing NeuroDesk tool container.
 ---
 
-Updating an existing container is quite easy with this new build system. Here is a step-by-step on how to procede. 
+Updating an existing container is quite easy with this new build system. 
+
+Here is a step-by-step on how to procede by modifying the .yaml file. It is also possible to edit the containers by using our newly released web browser UI : https://www.neurodesk.org/neurocontainers-ui/ 
 
 _There's a [detailled version](#detailled-version) below including screenshots and an example._
 <br></br>
@@ -246,3 +248,11 @@ Our Neurodesk team will review your proposed update, test the updated container 
 
 ---
 More detailed documentation can be found here: https://github.com/NeuroDesk/neurocontainers/tree/main/builder
+
+## Need Help?
+
+If you have questions or would like feedback before submitting:
+
+- Open a [discussion](https://github.com/NeuroDesk/neurodesk.github.io/discussions)
+
+We appreciate your contribution to the Neurodesk community and reproducible science.

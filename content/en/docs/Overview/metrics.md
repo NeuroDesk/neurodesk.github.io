@@ -1,7 +1,7 @@
 ---
 title: "Metrics"
 linkTitle: "Metrics"
-weight: 9
+weight: 7
 aliases:
 description: >-
      User metrics, analytics and service uptime

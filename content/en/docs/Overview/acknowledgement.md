@@ -1,6 +1,7 @@
 ---
 title: "Acknowledgments"
 linkTitle: "Acknowledgments"
+weight: 1
 aliases:
 description: >-
      Recognition of contributors, supporters, and the lands on which we work.

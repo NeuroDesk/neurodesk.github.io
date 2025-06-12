@@ -1,7 +1,7 @@
 ---
 title: "Neurodesk FAQ"
 linkTitle: "FAQ"
-weight: 5
+weight: 4
 aliases:
 - /docs/support/faq
 description: >

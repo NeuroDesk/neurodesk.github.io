@@ -1,85 +1,68 @@
 ---
-title: "Template for tutorial creation"
-linkTitle: "Tutorial template"
-weight: 1
-tags: ["template", "documentation"]
-author: Angela I. Renton
+title: "Contribute to Neurodesk.org"
+linkTitle: "Contribute Content"
+weight: 2
+author: Angela I. Renton, updated by Michèle Masson-Trottier
 aliases:
-- /tutorials/tutorial-template/
-- /developers/documentation/workflowtemplate
-description: > 
-  Follow this template to contribute your own tutorial to the Neurodesk documentation.
+- /tutorials/tutorial-template
+tags: ["template", "documentation"]
+description: >
+  A brief guide for contributing new content in Markdown through Github.
 ---
 
-<!--
-Begin setting up your tutorial by filling in the details in the description above. This controls how your tutorial is named and displayed in the Neurodesk documentation. The details are as follows:
+This applies if you with to submit a new tutorial or amend content on a page. Our website is mostly written in Markdown (.md files). We include the basics of writing in Markdown on this page.
 
-title: A title for your tutorial
-linkTitle: A shortened version of the title for the menu
-weight: This controls where in the menu your tutorial will appear; you can leave this set to 1 for default sorting 
-tags: List any number of tags to help others find this tutorial. i.e. "eeg", "mvpa", "statistics"
-description: > a short description of your tutorial. This will form the subheading for the tutorial page. 
-
-Once you've filled out those details, you can delete this comment block. 
--->
-
-> _This tutorial was created by Name P. Namington._ 
->
-> Email: n.namington@institution.edu.au
->
-> Github: @Namesgit
->
-> Twitter: @Nameshandle
->
-<!-- Fill in your personal details above so that we can credit the tutorial to you. Feel free to add any additional contact details i.e. website, or remove those that are irrelevant -->
-
-<!-- Following line adds a link to getting set up with Neurodesk -->
-{{< params/neurodesktop/getting_set_up >}}
-<!-- -->
-
-> _An example notebook can be found here:_
-> https://github.com/NeuroDesk/example-notebooks/
->
-
-## How to contribute a new tutorial
-
-Welcome to the tutorial template, which you can use to contribute your neurodesk tutorial to our documentation. We aim to collect a wide variety of tutorials and examples representing the spectrum of tools available under the neurodesk architecture and the diversity in how researchers might apply them. 
-- **Tutorials:** We kindly ask you to add a concise step-by-step guide for using specific neuroimaging software on neurodesk with screenshots for visual aid. 
-- **Examples:** If you want to provide more descriptive details for running specific pipelines, we highly recommend contributing an example (in the form of a Jupyter notebook) to our documentation.
-
-In either case, make sure that all steps of the tutorial work before submitting. 
-
-### Table of contents
+## Table of contents
 
 * [Create your own copy of *NeuroDesk/neurodesk.github.io* repository](#create-your-own-copy-of-neurodeskneurodeskgithubio-repository)
-* [Create your tutorial](#create-your-tutorial)
-* [Contribute your new tutorial to the official documentation](#contribute-your-new-tutorial-to-the-official-documentation)
+* [Create your new content](#create-your-tutorial)
+* [Contribute your new content to the official documentation](#contribute-your-new-tutorial-to-the-official-documentation)
 * [Formatting guidelines](#formatting-guidelines)
 * [Images](#images)
 * [Alerts and warnings](#alerts-and-warnings)
 * [Tables](#tables)
 * [Lists](#lists)
 
-### Create your own copy of *NeuroDesk/neurodesk.github.io* repository
+### Create your own copy of *NeuroDesk/neurodesk.github.io* repository where you will be able to make modifications
+
+
 Begin by creating a copy of our documentation that you can edit:
 1. Visit the GitHub repository for the [Neurodesk documentation](https://github.com/NeuroDesk/neurodesk.github.io).
-2. [Fork](https://docs.github.com/en/get-started/quickstart/fork-a-repo) the repository.
+2. [**Fork**](https://docs.github.com/en/get-started/quickstart/fork-a-repo) the repository.
 
 
 ![1_fork](/static/tutorials-examples/tutorials/tutorial-template/1_fork.png 'Repo fork')
 
-{{< alert title="Note" >}} _You should now have your own copy of the documentation, which you can alter without affecting our official documentation. You should see a panel stating "This branch is up to date with Neurodesk:main." If someone else makes a change to the official documentation, the statement will change to reflect this. You can bring your repository up to date by clicking "Sync fork"._ {{< /alert >}}
+
+{{< alert title="Why fork the repository?" >}} You will now have your own copy of the documentation that you can alter without affecting our official documentation. You will see a panel stating _"This branch is up to date with Neurodesk:main."_ If someone else makes a change to the official documentation, the statement will change to reflect this. You can bring your repository up to date by clicking _"Sync fork"._ {{< /alert >}}
 
 ![2_syncfork](/static/tutorials-examples/tutorials/tutorial-template/2_syncFork.png 'Sync fork')
+
 
 ![3_synced](/static/tutorials-examples/tutorials/tutorial-template/3_synced.png 'Sync status')
 
 ----------------
-### Create your tutorial
-1. [Clone](https://docs.github.com/en/get-started/quickstart/fork-a-repo#cloning-your-forked-repository) your forked version of our documentation to a location of your choice on your computer. 
+### Create your content or make your modifications
+1. [**Clone**](https://docs.github.com/en/get-started/quickstart/fork-a-repo#cloning-your-forked-repository) your forked version of our documentation to a location of your choice on your computer. 
+
+This step is the same for macOS, Windows, and Linux.
+
+#### Using SSH
+```bash
+git clone --recurse-submodules git@github.com:NeuroDesk/neurodesk.github.io.git
+```
+or 
+#### Using HTTPS
+```bash
+git clone --recurse-submodules https://github.com/NeuroDesk/neurodesk.github.io.git
+```
+
+#### If you cloned without --recurse-submodules
+
+Run the following command to pull submodules
 
 ```bash
-git clone https://github.com/YOUR-USERNAME/neurodesk.github.io.git
+git submodule update --init --recursive --remote
 ```
 
 The URL for the repository can be copied by clicking on the button highlighted below:
@@ -88,15 +71,15 @@ The URL for the repository can be copied by clicking on the button highlighted b
 
 <!-- markdown-link-check-disable -->
 
+
 2. Now, you can open your copy of `neurodesk.github.io` using the editor of your choice (we recommend [vscode](https://code.visualstudio.com/)). Before making changes to the current repository, the best practice is to create a new [branch](https://www.atlassian.com/git/tutorials/using-branches) for avoiding version conflicts. 
 <!-- markdown-link-check-enable -->
-
 
   - Create a branch:
 ```bash
 git branch tutorial-template
 ```
-  - Checkout the branch you want to use for the addition of your new tutorial
+  - Checkout the branch you want to use for the addition or changes you'd like to make
 ```bash
 git checkout tutorial-template
 ```
@@ -107,16 +90,18 @@ git branch
 ![5_branch](/static/tutorials-examples/tutorials/tutorial-template/5_branch.png 'Branch check')
   
 
-3. Navigate to `neurodesk.github.io/content/en/tutorials-examples/tutorials/` and then navigate to the subfolder you believe your tutorial belongs in (e.g. "/functional_imaging"). 
+3. Within your cloned environment, navigate to where you'd like to make your changes. 
 
-4. Create a new, appropriately named markdown file to house your tutorial (e.g. "physio.md"). Images need to be stored in the /static directory - please mirror the same directory structure as for your markdown files.
+For example, if you'd like to create new tutorial content, go in `neurodesk.github.io/content/en/tutorials-examples/tutorials/` and then navigate to the subfolder you believe your tutorial belongs in (e.g. "/functional_imaging")
 
-5. Open this file and populate it with your tutorial! You're also welcome to look at other tutorials already documented on our website for inspiration.
+4. Create a new, appropriately named markdown file to house your content (e.g. for a tutorial about physiology, you might call it "physio.md"). Images need to be stored in the [```/static```](https://github.com/neurodesk/neurodesk.github.io/tree/main/static) directory - please mirror the same directory structure as for your markdown files.
+
+5. Open this file and populate it with your content! You're also welcome to look at other tutorials already documented on our website for inspiration.
 
 ----------------
-### Contribute your new tutorial to the official documentation
+### Contribute your new content to the official documentation
 
-1. Once you are happy with your tutorial, to avoid merge conflicts, rebase your branch with the *main* branch, which should be synced with *NeuroDesk/neurodesk.github.io:main* (on GitHub check if your repo is synced and locally checkout the *main* branch and run *git pull*).
+1. Once you are happy with your content, to avoid merge conflicts, rebase your branch with the *main* branch, which should be synced with *NeuroDesk/neurodesk.github.io:main* (on GitHub check if your repo is synced and locally checkout the *main* branch and run *git pull*).
 
 ```bash
 git rebase main
@@ -143,14 +128,14 @@ You might have to correct some merge conflicts, but [vscode](https://learn.micro
 
 7. Give your pull request a title (e.g. "Document PhysIO tutorial"), leave a comment briefly describing what you have done, and then create the pull request. 
 
-8. Someone from the Neurodesk team will review and accept your tutorial, which will appear on our website soon! 
+8. Someone from the Neurodesk team will review and accept your changes, which will appear on our website soon! 
 
-Thanks so much for taking the time to contribute your tutorial to the Neurodesk community! If you have any feedback on the process, please let us know on [github discussions](https://github.com/orgs/NeuroDesk/discussions).
+Thanks so much for taking the time to contribute content to the Neurodesk community! If you have any feedback on the process, please let us know on [github discussions](https://github.com/orgs/NeuroDesk/discussions).
 
 ----------------
 ### Formatting guidelines
 
-As seen throughout this tutorial, you can embellish your text using markdown conventions; text can be **bold**, _italic_, or ~~strikethrough~~. You can also add [Links](https://www.neurodesk.org/), and you can organise your tutorial with headers, starting at level 2 (the page title is a level 1 header):
+As seen throughout this tutorial, you can embellish your text using markdown conventions; text can be **bold**, _italic_, or ~~strikethrough~~. You can also add [Links](https://www.neurodesk.org/), and you can organise your content with headers, starting at level 2 (the page title is a level 1 header):
 
 ## Level 2 heading
 
@@ -166,7 +151,7 @@ Even more detailed information.
 
 ### Code blocks
 
-You can add codeblocks to your tutorial as follows:
+You can add codeblocks to your content as follows:
 
 ```none
 # Some example code
@@ -200,7 +185,7 @@ You can also add code snippets, e.g. `var foo = "bar";`, which will be shown inl
 ----------------
 ### Images
 
-To add screenshots to your tutorial, create a subfolder in /static with the same file structure as in your tutorial markdown file. Add your screenshot to this folder, keeping in mind that you may want to adjust your screenshot to a reasonable size before uploading. You can then embed these images in your tutorial using the following convention: 
+To add screenshots and images to your content, create a subfolder in [`/static`](https://github.com/neurodesk/neurodesk.github.io/tree/main/static) with the same file structure as in your content markdown file. Add your screenshot to this folder, keeping in mind that you may want to adjust your screenshot to a reasonable size before uploading. You can then embed these images in your tutorial using the following convention: 
 
 For a `filename.png` in a `/content/en/tutorials-examples/subject/tutorial1/markdownfile.md` use
 ```
@@ -292,3 +277,10 @@ And a nested list:
   * .raw
   * .kdf
 
+## Need Help?
+
+If you have questions or would like feedback before submitting:
+
+- Open a [discussion](https://github.com/NeuroDesk/neurodesk.github.io/discussions)
+
+We appreciate your contribution to the Neurodesk community and reproducible science.

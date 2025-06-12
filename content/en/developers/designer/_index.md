@@ -1,7 +1,7 @@
 ---
 title: "Designer Guide"
 linkTitle: "Designer Guide"
-weight: 1
+weight: 5
 description: >
   Guidelines for visual consistency, colors, typography, logos, and imagery across Neurodesk platforms.
 ---
