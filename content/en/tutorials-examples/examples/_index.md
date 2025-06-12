@@ -1,6 +1,6 @@
 ---
 title: "Examples"
-linkTitle: "Examples Notebooks library"
+linkTitle: "Example Notebooks"
 weight: 1
 # description: >
 #   Examples

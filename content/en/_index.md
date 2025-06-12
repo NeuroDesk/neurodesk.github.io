@@ -16,7 +16,7 @@ linktitle: Neurodesk
                         <i class="fa fa-laptop"></i> Local</a>
                     <a class="btn btn-lg btn-light me-2 mb-3" href="docs/getting-started/hosted">
                         <i class="fa fa-cloud"></i> Hosted</a>
-                    <a class="btn btn-lg btn-light me-2 mb-3" href="tutorials-examples/examples/examples">
+                    <a class="btn btn-lg btn-light me-2 mb-3" href="tutorials-examples/examples">
                         <i class="fa fa-book"></i> Examples</a>
                 </div>
             </div>
