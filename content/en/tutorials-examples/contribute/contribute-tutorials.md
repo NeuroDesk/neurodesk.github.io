@@ -43,9 +43,9 @@ See existing [tutorial examples](/tutorials-examples/tutorials/) for reference.
 ---
 ## Saving and Submitting
 
-Follow the steps for [updating ]
+Follow the steps for [contributing content to Neurodesk.org](/content/en/developers/documentation/creating-website-content.md)
 
-1. Place your completed `.md` file in the appropriate folder under:
+1. Place your completed `.md` file in the appropriate subfolder under:
 
    [`/content/en/tutorials-examples/tutorials/`](https://github.com/NeuroDesk/neurodesk.github.io/tree/main/content/en/tutorials-examples/tutorials)
 

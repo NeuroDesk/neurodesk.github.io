@@ -3,7 +3,7 @@ title: "Template for tutorial creation"
 linkTitle: "Tutorial template"
 weight: 1
 tags: ["template", "documentation"]
-author: Angela I. Renton, updated by Michèle Masson-Trottier
+author: Angela I. Renton, updated by Michèle Masson-Trottier 
 aliases:
 - /tutorials/tutorial-template/
 - /developers/documentation/workflowtemplate
@@ -25,3 +25,4 @@ description: >
 {{< params/neurodesktop/getting_set_up >}}
 <!-- -->
 
+## Start your content here!

@@ -1,6 +1,6 @@
 ---
 title: "Tutorials"
-linkTitle: "Tutorial section"
+linkTitle: "Tutorials section"
 weight: 2
 aliases:
 - /tutorials
