@@ -31,17 +31,25 @@ export OSF_TOKEN=YOURTOKEN
 
 Here is an example how to publish a dataset on the OSF:
 ```Bash
+cd /path/to/dataset
 osf init
 # enter your OSF credentials and project ID
 
 # now copy your data into the directory, cd into the directory and then run:
-osf upload -r . osfstorage/data
+osf upload -r ./data osfstorage/data
+
+# beware, hidden files may need to be deleted
 
 ```
 
 ### Note for those who have used ORCID to create their account / log in
+
 You can still use OSF to upload, but you need to use the TOKEN as the username in osf init (from testing, you don't need to export the OSF_TOKEN variable).
 It won't ask you for a password. 
+
+### Note on storage for OSF
+
+The limits are now 5GB for private repo, 50gb for public repo as of 2025. 
 
 # Access a dataset
 

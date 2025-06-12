@@ -6,11 +6,29 @@ aliases:
 - /docs/Neurodesktop/release-history
 - /docs/support/release-history
 description: >-
-     Previous releases of neurodesktop
+     Previous releases of Neurodesktop. 
 ---
 
 Latest Version
 : {{< params/neurodesktop/jupyter_neurodesk_version >}}
+
+Please consult [this page](https://github.com/NeuroDesk/neurodesk.github.io/blob/main/.github/content-templates/release-history-template.md) for the template for new releases.
+
+## 2025-06-10
+### New Features
+- upgrade to jupyterhub 5.3.0
+- added nbgitpuller, tcsh
+- added neurodesk copilot: https://www.neurodesk.org/developers/neurodesk-copilot/
+- added qsirecon
+### Improvements
+- updated niivue (with breaking interface change!)
+- updated jupyter-lmod (with breaking interface change!)
+- moved cvmfs cache to home directory
+- updated background to new Neurodesk logo
+- updated ants to 2.6.0
+### Bug Fixes
+- split cvmfs in 3 different regions
+
 
 ## 2025-04-08
 ### New Features

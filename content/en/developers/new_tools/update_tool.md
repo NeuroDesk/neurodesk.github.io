@@ -8,7 +8,7 @@ description: >-
 
 Updating an existing container is quite easy with this new build system. Here is a step-by-step on how to procede. 
 
-_There's a [detailled version](#detailled-version) at the below including screenshots and an example._
+_There's a [detailled version](#detailled-version) below including screenshots and an example._
 <br></br>
 
 ---
@@ -115,6 +115,7 @@ The first time you use a codespace, you will also need to download the YAML exte
 <br><br>
 
 There will be a security pop-up where you will need to click "Trust Publisher & Install"
+
 <img src="/static/developers/new_tools/update_tool/install-yaml2.png" width="650">
 <br><br>
 

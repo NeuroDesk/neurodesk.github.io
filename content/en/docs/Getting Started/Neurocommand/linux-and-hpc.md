@@ -16,7 +16,7 @@ description: >
 2) or you can install Neurocommand as described here: 
 
 ## Requirements:
-- python 3.6+ [https://docs.conda.io/en/latest/miniconda.html#linux-installers](https://docs.conda.io/en/latest/miniconda.html#linux-installers)
+- python 3.6+ [https://www.anaconda.com/docs/getting-started/miniconda/install#linux-terminal-installer](https://www.anaconda.com/docs/getting-started/miniconda/install#linux-terminal-installer)
 - singularity [https://docs.sylabs.io/guides/3.5/user-guide/quick_start.html](https://docs.sylabs.io/guides/3.5/user-guide/quick_start.html)
 - git
 - lmod [https://lmod.readthedocs.io/en/latest/](https://lmod.readthedocs.io/en/latest/)
