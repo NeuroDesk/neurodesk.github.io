@@ -8,7 +8,9 @@ description: >
   A cross-platform desktop application for Neurodesk: The easiest way to use Neurodesktop
 ---
 
-<img style="float: right;" src="/static/docs/getting-started/neurodeskapp/neurodesk-desktop.png" width="400">
+<img style="float: right;" src="/static/docs/getting-started/neurodeskapp/neurodesk-desktop.png" width="750">
+
+
 <!-- ![Neurodesk App](/static/docs/getting-started/neurodeskapp/neurodesk-desktop.png 'neurodeskapp') -->
 
 ### Determine System Privileges
@@ -108,7 +110,7 @@ Sessions represent local project launches and connections to existing Neurodesk 
 
 You can start a new session by using the links at the Start section of the Welcome Page.
 
-![Start](/static/docs/getting-started/neurodeskapp/start-session.svg "Start session")
+![Start](/static/docs/getting-started/neurodeskapp/start-session.png "Start session")
 
 - `Open Local Neurodesk..` creates a new session in the default working directory.
 - `Connect to remote Neurodesk server..` creates a session by connecting to a remote Neurodesk server.

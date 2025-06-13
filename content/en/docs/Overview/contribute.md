@@ -30,7 +30,8 @@ Good documentation makes tools accessible. Contribute tutorials, usage guides, o
 
 Make it easier for others to use Neurodesk by sharing reproducible analysis pipelines or creating new workflows.
 
-- [Workflow examples](https://github.com/NeuroDesk/example-notebooks/tree/main)
+- [Submit an example notebook](/tutorials-examples/contribute/contribute-examples/) 
+    (feel free to have a look at the [workflow examples](https://github.com/NeuroDesk/example-notebooks/tree/main) already available)
 
 ### Donate
 

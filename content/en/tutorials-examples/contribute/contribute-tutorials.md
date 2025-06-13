@@ -43,7 +43,7 @@ See existing [tutorial examples](/tutorials-examples/tutorials/) for reference.
 ---
 ## Saving and Submitting
 
-Follow the steps for [contributing content to Neurodesk.org](/content/en/developers/documentation/creating-website-content.md)
+Follow the steps for [contributing content to Neurodesk.org](/developers/documentation/creating-website-content)
 
 1. Place your completed `.md` file in the appropriate subfolder under:
 
