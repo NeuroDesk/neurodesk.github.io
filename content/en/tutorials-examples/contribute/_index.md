@@ -20,7 +20,7 @@ Neurodesk welcomes community-contributed content. We aim to collect a wide varie
 To contribute a new tutorial or example notebook:
 
 1. **Start from the template**  
-   Use the [tutorial template](/tutorials-examples/tutorials/tutorial-template/) or the [example notebook template](https://github.com/Neurodesk/example-notebooks/blob/main/template.ipynb) as a starting point. They include recommended formatting and structure.
+   Use the [tutorial template](https://github.com/neurodesk/neurodesk.github.io/blob/main/.github/content-templates/tutorial-template.md) or the [example notebook template](https://github.com/Neurodesk/example-notebooks/blob/main/template.ipynb) as a starting point. They include recommended formatting and structure.
 
 2. **Follow the documentation style**  
    Write clearly and concisely. Include any necessary prerequisites, commands, and expected outputs.  

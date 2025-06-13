@@ -68,6 +68,6 @@ Each example notebook receives a DOI for formal citation via Zenodo, ensuring yo
 
 If you have questions or would like feedback before submitting:
 
-- Open a [discussion](https://github.com/Neurodesk/example-notebooks/discussions)
+- Open a [discussion](https://github.com/orgs/neurodesk/discussions)
 
 We look forward to your contributions and thank you for supporting open and reproducible neuroimaging.
