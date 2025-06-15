@@ -1,6 +1,6 @@
 ---
 title: "NeuroContainer Copilot using OpenAI Codex agent"
-linkTitle: "NeuroContainer Copilot"
+linkTitle: "OpenAI Codex agent"
 weight: 2
 description: >
   NeuroContainer Copilot: How to use LLM agents to automate NeuroContainer recipe generation in NeuroDesk ecosystem.
@@ -24,9 +24,8 @@ After logging in, you can see the Codex agent interface. You can create environm
 
 You can then start a new task, where you can provide the name of the tool you want to containerize, and the agent will generate a recipe for you. For example, if you want to containerize `hcp-asl`, you can provide following prompt: 
 
-```
-I want you to act as NeuroDesk recipe generator, compile the dependency lists required for the Github repository and install them in the neurodocker container format. Please follow the notation in https://github.com/NeuroDesk/neurocontainers/blob/main/builder/README.md carefully. Now create a docker build.yaml for recipes/hcp-asl/build.yaml based on the hcp-asl https://github.com/physimals/hcp-asl/blob/master/README.md repository README.md file, use neurocontainers GitHub repository it contains examples such as recipes/dsistudio/build.yaml. Note than if there are conda and pip install use appropriately. Please follow the notation in  https://github.com/NeuroDesk/neurocontainers/blob/main/builder/README.md properly. Run recipes/hcp-asl/build.yaml file and recursively modify the neurocontainers/recipes/hcp-asl/build.yaml file.
-```
+> I want you to act as NeuroDesk recipe generator, compile the dependency lists required for the Github repository and install them in the neurodocker container format. Please follow the notation in https://github.com/NeuroDesk/neurocontainers/blob/main/builder/README.md carefully. Now create a docker build.yaml for recipes/hcp-asl/build.yaml based on the hcp-asl https://github.com/physimals/hcp-asl/blob/master/README.md repository README.md file, use neurocontainers GitHub repository it contains examples such as recipes/dsistudio/build.yaml. Note than if there are conda and pip install use appropriately. Please follow the notation in https://github.com/NeuroDesk/neurocontainers/blob/main/builder/README.md properly. Run recipes/hcp-asl/build.yaml file and recursively modify the neurocontainers/recipes/hcp-asl/build.yaml file.
+
 
 Create a new task by clicking on the "New Task" button, and provide the prompt in the text box. You can also provide the link to the repository, so that the agent can access the documentation and code samples. Click on code to start the task.
 
